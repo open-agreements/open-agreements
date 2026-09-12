@@ -7,7 +7,7 @@ description: >-
 citation: 'Exxon Mobil Corp. v. Drennen, 452 S.W.3d 319 (Tex. 2014).'
 resource: >-
   https://www.courtlistener.com/opinion/2831439/exxon-mobil-corporation-v-william-t-drennen-iii/
-timestamp: '2026-06-30'
+timestamp: '2026-09-10'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/texas'

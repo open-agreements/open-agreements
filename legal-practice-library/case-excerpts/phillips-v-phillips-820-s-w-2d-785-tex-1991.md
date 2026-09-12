@@ -4,7 +4,7 @@ title: 'Phillips v. Phillips, 820 S.W.2d 785 (Tex. 1991)'
 description: 'Phillips v. Phillips, 820 S.W.2d 785 (Tex. 1991). — quoted in 1 document(s).'
 citation: 'Phillips v. Phillips, 820 S.W.2d 785 (Tex. 1991).'
 resource: 'https://www.courtlistener.com/opinion/1522113/phillips-v-phillips/'
-timestamp: '2026-06-30'
+timestamp: '2026-09-10'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/texas'

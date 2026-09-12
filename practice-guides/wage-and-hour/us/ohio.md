@@ -149,7 +149,7 @@ On the administrative side, the director of commerce may investigate wages and, 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from a Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Ohio*, OpenAgreements (last updated July 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/ohio.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from an Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Ohio*, OpenAgreements (last updated July 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/ohio.
 
 [^oh-stat-4111-02-duty]: **Ohio Rev. Code § 4111.02** — "Every employer, as defined in Section 34a of Article II, Ohio Constitution, shall pay each of the employer's employees at a wage rate of not less than the wage rate specified in Section 34a of Article II, Ohio Constitution." *Ohio Rev. Code § 4111.02.* <https://codes.ohio.gov/ohio-revised-code/section-4111.02>
 

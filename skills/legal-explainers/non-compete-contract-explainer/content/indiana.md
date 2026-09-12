@@ -2,7 +2,7 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-content_packaged_at: "2026-09-10"
+content_packaged_at: "2026-09-12"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-09-12 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Indiana[^about]
 
@@ -199,7 +199,7 @@ In *Ryan LLC v. Federal Trade Commission*, a federal court set the rule aside wi
 
 "The Non-Compete Rule, 16 C.F.R. § 910.1–.6, is hereby SET ASIDE and shall not be enforced or otherwise take effect on September 4, 2024, or thereafter."[^ryan-ftc-set-aside]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Indiana*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/indiana.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from an Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Indiana*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/indiana.
 
 [^krueger-strict-construction]: **Central Indiana Podiatry, P.C. v. Krueger** — "We construe these covenants strictly against the employer and will not enforce an unreasonable restriction." *Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).* <https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=We%20construe%20these%20covenants%20strictly,not%20enforce%20an%20unreasonable%20restriction.>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Arkansas"
 slug: arkansas
 countryCode: US
-content_packaged_at: "2026-09-10"
+content_packaged_at: "2026-09-12"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-09-12 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arkansas[^about]
 
@@ -183,7 +183,7 @@ Arkansas's covenant statute, Act 921 of 2015, governs employment covenants and e
 >
 > A seller covenant still has to be reasonable in time and scope, and Arkansas does not blue-pencil an overbroad restraint — but it is reviewed less searchingly than the employment covenants this guide otherwise covers. A restraint tied to the goodwill actually sold is what survives that review [^bendinger-sale-distinction].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arkansas*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/arkansas.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from an Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arkansas*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/arkansas.
 
 [^q1-aca-enforceable]: **Ark. Code Ann. § 4-75-101** — "A covenant not to compete agreement is enforceable if the agreement is ancillary to an employment relationship or part of an otherwise enforceable employment agreement or contract to the extent that: (1) The employer has a protectable business interest; and (2) The covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer." *Ark. Code Ann. § 4-75-101(a).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 

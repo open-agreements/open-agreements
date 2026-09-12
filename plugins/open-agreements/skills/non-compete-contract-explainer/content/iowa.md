@@ -2,7 +2,7 @@
 jurisdiction: "Iowa"
 slug: iowa
 countryCode: US
-content_packaged_at: "2026-09-10"
+content_packaged_at: "2026-09-12"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/iowa · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/iowa · **Snapshot as of:** 2026-09-12 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Iowa[^about]
 
@@ -193,7 +193,7 @@ Unlike some states, Iowa has not made its trade-secret statute the exclusive rou
 >
 > A non-compete is not the only route to protecting secrecy, and often not the strongest. Where the real concern is confidential information, targeted NDA, invention-assignment, and trade-secret provisions carry their own protection: chapter 550 supplies an injunction against actual or threatened misappropriation independent of any covenant [^q11-injunctive-relief], damages for actual loss and unjust enrichment [^q11-damages], and attorney fees where a claim is made in bad faith, an injunction-termination motion is made or resisted in bad faith, or misappropriation is willful and malicious [^q11-fees] — each available only where the information meets the statutory definition of a trade secret and reasonable secrecy efforts can be proved [^q11-trade-secret-definition]. Return, deletion, and certification of employer property are part of those reasonable secrecy efforts. Because chapter 550 does not preempt every tort theory involving trade secrets, a common-law claim can run alongside the statutory one [^q11-brandow-nonpreemption].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from a Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Iowa*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/iowa.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from an Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Iowa*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/iowa.
 
 [^q1-revere-three-prong]: **Revere Transducers, Inc. v. Deere & Co.** — "(1) Is the restriction reasonably necessary for the protection of the employer’s business; (2) is it unreasonably restrictive of the employee’s rights; and (3) is it prejudicial to the public interest?" *Revere Transducers, Inc. v. Deere & Co., 595 N.W.2d 751 (Iowa 1999).* <https://www.courtlistener.com/opinion/1989929/revere-transducers-inc-v-deere-co/#:~:text=(1)%20Is%20the%20restriction%20reasonably,prejudicial%20to%20the%20public%20interest%3F>
 

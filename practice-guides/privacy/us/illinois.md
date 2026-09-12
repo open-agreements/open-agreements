@@ -117,7 +117,7 @@ Where a federal sectoral regime applies, it supplies the contract terms directly
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Illinois Consumer Privacy Law (BIPA)*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/illinois.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from an Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Illinois Consumer Privacy Law (BIPA)*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/illinois.
 
 [^stat-bipa-5-findings]: **740 ILCS 14/5** — "The public welfare, security, and safety will be served by regulating the collection, use, safeguarding, handling, storage, retention, and destruction of biometric identifiers and information." *740 ILCS 14/5(g).* <https://www.ilga.gov/documents/legislation/ilcs/documents/074000140K5.htm>
 

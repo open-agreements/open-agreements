@@ -7,7 +7,7 @@ description: >-
 citation: 'FPL Energy, LLC v. TXU Portfolio Mgmt. Co., 426 S.W.3d 59 (Tex. 2014).'
 resource: >-
   https://www.courtlistener.com/opinion/5286853/fpl-energy-llc-v-txu-portfolio-management-co/
-timestamp: '2026-06-30'
+timestamp: '2026-09-10'
 document_references:
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/stay-or-pay/us'

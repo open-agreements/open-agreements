@@ -2,7 +2,7 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-content_packaged_at: "2026-09-10"
+content_packaged_at: "2026-09-12"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-09-12 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Idaho[^about]
 
@@ -197,7 +197,7 @@ The remedy is also different. A trade-secret injunction targets actual or threat
 >
 > Trade-secret protection survives independently of chapter 44-27, so where the real risk is misuse of secret information an Idaho Trade Secrets Act claim, resting on actual or threatened misappropriation, is often better tailored than a broad work ban that must clear the key-worker gate and reasonableness limits [^idaho-48-801-trade-secret-definition][^idaho-48-802-injunction]. That protection depends on demonstrated secrecy efforts and misappropriation evidence, so confidentiality, trade-secret, and non-compete obligations kept on separate footing each stand or fall on their own terms rather than dragging one another down.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from a Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Idaho*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/idaho.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from an Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Idaho*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/idaho.
 
 [^idaho-44-2701-key-employee-enforceable]: **Idaho Code § 44-2701** — "A key employee or key independent contractor may enter into a written agreement or covenant that protects the employer’s legitimate business interests and prohibits the key employee or key independent contractor from engaging in employment or a line of business that is in direct competition with the employer’s business after termination of employment, and the same shall be enforceable, if the agreement or covenant is reasonable as to its duration, geographical area, type of employment or line of business, and does not impose a greater restraint than is reasonably necessary to protect the employer’s legitimate business interests." *Idaho Code § 44-2701.* <https://legislature.idaho.gov/statutesrules/idstat/Title44/T44CH27/SECT44-2701/>
 

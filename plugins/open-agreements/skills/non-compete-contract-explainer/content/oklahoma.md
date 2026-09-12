@@ -2,7 +2,7 @@
 jurisdiction: "Oklahoma"
 slug: oklahoma
 countryCode: US
-content_packaged_at: "2026-09-10"
+content_packaged_at: "2026-09-12"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oklahoma · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oklahoma · **Snapshot as of:** 2026-09-12 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Oklahoma[^about]
 
@@ -155,7 +155,7 @@ The veto left the strict § 219A regime — and the *Autry* prohibition on reach
 
 "UPDATE: Oklahoma Governor Kevin Stitt vetoed this bill April 30, 2024, and the Legislature did not override the veto in the 2024 legislative session."[^mcafeetaft-sb1543-veto]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from a Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oklahoma*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oklahoma.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from an Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oklahoma*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oklahoma.
 
 [^stat-217-general-void]: **15 O.S. § 217** — "Every contract by which any one is restrained from exercising a lawful profession, trade or business of any kind, otherwise than as provided by Sections 218 and 219 of this title, or otherwise than as provided by Section 2 of this act, is to that extent void." *Okla. Stat. tit. 15, § 217.* <https://oksenate.gov/sites/default/files/2022-05/os15.pdf>
 

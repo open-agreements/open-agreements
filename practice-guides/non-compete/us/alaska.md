@@ -115,7 +115,7 @@ Garden leave is a general option rather than an Alaska-specific doctrine; no pub
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Alaska*, OpenAgreements (last updated June 1, 2026), https://openagreements.org/practice-guides/non-compete/us/alaska.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from an Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Alaska*, OpenAgreements (last updated June 1, 2026), https://openagreements.org/practice-guides/non-compete/us/alaska.
 
 [^decristofaro-disfavored-strictly-construed]: **DeCristofaro v. Security Nat. Bank** — "They are, therefore, strictly construed." *DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).* <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>
 
