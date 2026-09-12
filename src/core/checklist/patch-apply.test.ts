@@ -66,7 +66,7 @@ async function applyWithEvidence(
 ): Promise<ApplyChecklistPatchResult> {
   const slug = attachmentSlug(label);
 
-  await allureStep(`Given ${label} apply input`, async () => {
+  const beforeDocx = await allureStep(`Given ${label} apply input`, async () => {
     await allurePrettyJsonAttachment(`${slug}-apply-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-apply-input.json`, input);
     const docx = await renderChecklistDocx(input.checklist);
@@ -75,6 +75,7 @@ async function applyWithEvidence(
       docx,
       { title: 'Checklist before patch apply' },
     );
+    return docx;
   });
 
   const result = await allureStep(`When applyChecklistPatch runs for ${label}`, async () =>
@@ -84,7 +85,6 @@ async function applyWithEvidence(
   await allurePrettyJsonAttachment(`${slug}-apply-result-pretty.html`, result);
   await allureJsonAttachment(`${slug}-apply-result.json`, result);
   if (result.ok) {
-    const beforeDocx = await renderChecklistDocx(input.checklist);
     const afterDocx = await renderChecklistDocx(result.checklist);
     await attachChecklistDocxPreview(
       `${slug}-checklist-after-apply-word-like.html`,
