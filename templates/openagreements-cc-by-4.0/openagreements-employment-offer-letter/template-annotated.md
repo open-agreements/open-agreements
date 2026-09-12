@@ -39,7 +39,7 @@ Primary Work Location
 : [Primary work location and/or remote status]
 
 Governing Law
-: California
+: [Governing law state for the offer letter; must be selected explicitly for the employee’s circumstances]
 
 Offer Expiration Date
 : [Date by which the offer must be accepted]

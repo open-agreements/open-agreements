@@ -101,7 +101,9 @@ fields:
     section: Work Model
   - name: governing_law
     type: string
-    description: Governing law state for the offer letter
+    description: >-
+      Governing law defaults to the selected state; confirm it is appropriate
+      for the employee’s actual work location and non-waivable rights
     section: Legal
     default: New York
   - name: offer_expiration_date
@@ -166,7 +168,7 @@ Employment is expected to begin on the start date listed in Cover Terms, subject
 {% clause id="state-specific-employment-notices" %}
 ### New York Employment Notices
 
-Company will provide Employee any notices and statements required by applicable New York employment law. Nothing in this offer letter waives any non-waivable New York employment right.
+Company will provide Employee any notices and statements required by applicable New York employment law, including any required separate wage notice. This offer letter does not replace that notice. Nothing in this offer letter waives any non-waivable New York employment right.
 {% /clause %}
 
 {% clause id="bonus-opportunity" include-when="bonus_terms" %}

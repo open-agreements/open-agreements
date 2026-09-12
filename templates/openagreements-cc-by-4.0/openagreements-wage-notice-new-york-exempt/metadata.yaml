@@ -1,0 +1,105 @@
+name: Wage Notice (New York Exempt Employees)
+category: employment
+description: 'New York wage notice companion for employees who qualify as overtime-exempt. Based on NYDOL LS59. English-only: use for English-primary employees or a primary language for which NYDOL has no form. Use the official bilingual notice when NYDOL provides the employee’s language. Salary alone does not establish exemption.'
+source_url: https://dol.ny.gov/LS59-doc
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors with reference to New York Labor Law § 195(1) and NYDOL form LS59 (12/25). This is an independently authored notice, not an official Department of Labor form. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Employer Legal Name
+    section: Notice
+  - name: employer_dba
+    type: string
+    description: Doing Business As Names (or None)
+    section: Notice
+  - name: employer_physical_address
+    type: string
+    description: Employer Physical Address
+    section: Notice
+  - name: employer_mailing_address
+    type: string
+    description: Employer Mailing Address
+    section: Notice
+  - name: employer_phone
+    type: string
+    description: Employer Telephone
+    section: Notice
+  - name: employee_name
+    type: string
+    description: Employee Name
+    section: Notice
+  - name: notice_reason
+    type: string
+    description: Notice Given At Hiring or Before a Change
+    section: Notice
+  - name: pay_rate_and_basis
+    type: string
+    description: Pay Rate and Basis (amount and period)
+    section: Notice
+  - name: allowances
+    type: string
+    description: Allowances Claimed (None or type, amount and basis)
+    section: Notice
+  - name: regular_payday
+    type: string
+    description: Regular Payday
+    section: Notice
+  - name: pay_frequency
+    type: string
+    description: Pay Frequency
+    section: Notice
+  - name: exemption_basis
+    type: string
+    description: Overtime Exemption (confirm applicability)
+    section: Notice
+  - name: primary_language
+    type: string
+    description: Employee Primary Language
+    section: Notice
+  - name: notice_languages
+    type: string
+    description: Languages in Which This Notice Was Delivered
+    section: Notice
+  - name: preparer_name
+    type: string
+    description: Preparer Name
+    section: Notice
+  - name: preparer_title
+    type: string
+    description: Preparer Title
+    section: Notice
+priority_fields:
+  - employer_name
+  - employer_dba
+  - employer_physical_address
+  - employer_mailing_address
+  - employer_phone
+  - employee_name
+  - notice_reason
+  - pay_rate_and_basis
+  - allowances
+  - regular_payday
+  - pay_frequency
+  - exemption_basis
+  - primary_language
+  - notice_languages
+  - preparer_name
+  - preparer_title
+artifact_kind: notice
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - employer
+  - employee
+signature_roles:
+  - employee
+mutation_policy: fields_only
+maturity: experimental

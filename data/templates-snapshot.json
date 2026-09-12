@@ -16922,7 +16922,7 @@
       "tier": "internal",
       "display_name": "Employment Offer Letter",
       "category": "employment",
-      "description": "A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing.",
+      "description": "A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing. Select the governing law explicitly; use a state-specific offer when available and provide any separate required wage notice.",
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter",
       "source": "OpenAgreements",
@@ -17050,8 +17050,8 @@
           "type": "string",
           "required": false,
           "section": "Legal",
-          "description": "Governing law state for the offer letter",
-          "default": "California",
+          "description": "Governing law state for the offer letter; must be selected explicitly for the employee’s circumstances",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -17059,8 +17059,8 @@
           "type": "boolean",
           "required": false,
           "section": "Legal",
-          "description": "True when the employee primarily works in California, gating (via include-when) the California-Specific Terms clause (paid sick leave, workers' compensation, California Labor Code coverage). Default true because our user base skews California; when filling for an employee outside California, set this false to strip the California-specific clause.",
-          "default": "true",
+          "description": "True when the employee primarily works in California, gating (via include-when) the California-Specific Terms clause (paid sick leave, workers' compensation, California Labor Code coverage). Set true for a California employee. Default false; the employee’s work location, not the visitor’s IP address, determines whether California terms apply.",
+          "default": "false",
           "default_value_rationale": null
         },
         {
@@ -17207,7 +17207,7 @@
           "type": "string",
           "required": false,
           "section": "Legal",
-          "description": "Governing law state for the offer letter",
+          "description": "Governing law defaults to the selected state; confirm it is appropriate for the employee’s actual work location and non-waivable rights",
           "default": "California",
           "default_value_rationale": null
         },
@@ -17355,7 +17355,7 @@
           "type": "string",
           "required": false,
           "section": "Legal",
-          "description": "Governing law state for the offer letter",
+          "description": "Governing law defaults to the selected state; confirm it is appropriate for the employee’s actual work location and non-waivable rights",
           "default": "Florida",
           "default_value_rationale": null
         },
@@ -17503,7 +17503,7 @@
           "type": "string",
           "required": false,
           "section": "Legal",
-          "description": "Governing law state for the offer letter",
+          "description": "Governing law defaults to the selected state; confirm it is appropriate for the employee’s actual work location and non-waivable rights",
           "default": "Illinois",
           "default_value_rationale": null
         },
@@ -17651,7 +17651,7 @@
           "type": "string",
           "required": false,
           "section": "Legal",
-          "description": "Governing law state for the offer letter",
+          "description": "Governing law defaults to the selected state; confirm it is appropriate for the employee’s actual work location and non-waivable rights",
           "default": "Massachusetts",
           "default_value_rationale": null
         },
@@ -17799,7 +17799,7 @@
           "type": "string",
           "required": false,
           "section": "Legal",
-          "description": "Governing law state for the offer letter",
+          "description": "Governing law defaults to the selected state; confirm it is appropriate for the employee’s actual work location and non-waivable rights",
           "default": "New York",
           "default_value_rationale": null
         },
@@ -17947,7 +17947,7 @@
           "type": "string",
           "required": false,
           "section": "Legal",
-          "description": "Governing law state for the offer letter",
+          "description": "Governing law defaults to the selected state; confirm it is appropriate for the employee’s actual work location and non-waivable rights",
           "default": "Pennsylvania",
           "default_value_rationale": null
         },
@@ -18095,7 +18095,7 @@
           "type": "string",
           "required": false,
           "section": "Legal",
-          "description": "Governing law state for the offer letter",
+          "description": "Governing law defaults to the selected state; confirm it is appropriate for the employee’s actual work location and non-waivable rights",
           "default": "Texas",
           "default_value_rationale": null
         },
@@ -34035,6 +34035,168 @@
               "default_value_rationale": null
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "openagreements-wage-notice-new-york-exempt",
+      "tier": "internal",
+      "display_name": "Wage Notice (New York Exempt Employees)",
+      "category": "employment",
+      "description": "New York wage notice companion for employees who qualify as overtime-exempt. Based on NYDOL LS59. English-only: use for English-primary employees or a primary language for which NYDOL has no form. Use the official bilingual notice when NYDOL provides the employee’s language. Salary alone does not establish exemption.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://dol.ny.gov/LS59-doc",
+      "source": "dol.ny.gov",
+      "attribution_text": "Authored by OpenAgreements contributors with reference to New York Labor Law § 195(1) and NYDOL form LS59 (12/25). This is an independently authored notice, not an official Department of Labor form. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "employer_name",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Employer Legal Name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_dba",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Doing Business As Names (or None)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_physical_address",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Employer Physical Address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_mailing_address",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Employer Mailing Address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_phone",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Employer Telephone",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Employee Name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "notice_reason",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Notice Given At Hiring or Before a Change",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "pay_rate_and_basis",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Pay Rate and Basis (amount and period)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "allowances",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Allowances Claimed (None or type, amount and basis)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "regular_payday",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Regular Payday",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "pay_frequency",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Pay Frequency",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "exemption_basis",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Overtime Exemption (confirm applicability)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "primary_language",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Employee Primary Language",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "notice_languages",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Languages in Which This Notice Was Delivered",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "preparer_name",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Preparer Name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "preparer_title",
+          "type": "string",
+          "required": true,
+          "section": "Notice",
+          "description": "Preparer Title",
+          "default": null,
+          "default_value_rationale": null
         }
       ]
     },
