@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-09-12
+* **Update**: Maryland and Oklahoma: remove claims that rest on text struck before passage (#2235) (c738a7e)
+
 ## 2026-09-06
 * **Update**: Rename and reorder Colorado restrictive covenant notice (#2451) (67672ca)
 
