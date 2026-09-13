@@ -22,6 +22,22 @@ const MODEL_PATH = join(ROOT, 'concerto/openagreements-employee-ip-inventions-as
 const CONTRACT_MODEL_PATH = join(ROOT, 'concerto/deps/@models.accordproject.org.accordproject.contract.cto');
 const it = itAllure.epic('Platform & Distribution');
 
+function templateWithExtraFields(fields: Array<Record<string, unknown>>): string {
+  const templateDir = join(mkdtempSync(join(tmpdir(), 'oa-apap-fields-')), TEMPLATE_ID);
+  cpSync(TEMPLATE_DIR, templateDir, { recursive: true });
+  const metadataPath = join(templateDir, 'metadata.yaml');
+  const raw = yaml.load(readFileSync(metadataPath, 'utf8')) as { fields: Array<Record<string, unknown>> };
+  raw.fields.push(...fields);
+  writeFileSync(metadataPath, yaml.dump(raw, { lineWidth: -1 }));
+  return templateDir;
+}
+
+function modelFileWith(contents: string): string {
+  const path = join(mkdtempSync(join(tmpdir(), 'oa-apap-model-')), 'model.cto');
+  writeFileSync(path, contents);
+  return path;
+}
+
 const VALUES = {
   company_name: 'Example Labs, Inc.',
   company_signatory_name: 'Alex Smith',
@@ -84,8 +100,7 @@ describe('APAP interoperability — OpenAgreements CIIAA pilot', () => {
       .replace(/^\s*o Boolean personnel_nonsolicit_included [^\n]*\n/m, '')
       .replace(/^\}/m, '  o String retired_field optional\n}');
     expect(drifted).not.toBe(source);
-    const driftedPath = join(mkdtempSync(join(tmpdir(), 'oa-apap-drift-')), 'drifted.cto');
-    writeFileSync(driftedPath, drifted);
+    const driftedPath = modelFileWith(drifted);
 
     const template = exportTemplateToApap({
       templateDir: TEMPLATE_DIR,
@@ -107,17 +122,12 @@ describe('APAP interoperability — OpenAgreements CIIAA pilot', () => {
   });
 
   it('exports and accepts data for a field added upstream without a Concerto edit', () => {
-    const templateDir = join(mkdtempSync(join(tmpdir(), 'oa-apap-new-field-')), TEMPLATE_ID);
-    cpSync(TEMPLATE_DIR, templateDir, { recursive: true });
-    const metadataPath = join(templateDir, 'metadata.yaml');
-    const raw = yaml.load(readFileSync(metadataPath, 'utf8')) as { fields: Array<Record<string, unknown>> };
-    raw.fields.push(
+    const templateDir = templateWithExtraFields([
       { name: 'upstream_required_term', type: 'string', description: 'Added upstream with no default' },
       { name: 'upstream_clause_included', type: 'boolean', description: 'Added upstream', default: 'false' },
       { name: 'upstream_cure_days', type: 'number', description: 'Added upstream', default: '30' },
       { name: 'upstream_forum', type: 'enum', description: 'Added upstream', options: ['state court', 'arbitration'], default: 'state court' },
-    );
-    writeFileSync(metadataPath, yaml.dump(raw, { lineWidth: -1 }));
+    ]);
 
     const template = exportTemplateToApap({
       templateDir,
@@ -139,6 +149,34 @@ describe('APAP interoperability — OpenAgreements CIIAA pilot', () => {
     expect(data.upstream_clause_included).toBe(false);
     expect(data.upstream_cure_days).toBe(30);
     expect(data.upstream_forum).toBe('state_court');
+  });
+
+  it('maps list and fractional defaults, keeps one @template, and fails clearly on unsupported shapes', () => {
+    const exportWith = (templateDir: string, concertoModelPath = MODEL_PATH) => exportTemplateToApap({
+      templateDir, concertoModelPath, concertoDependencyPaths: [CONTRACT_MODEL_PATH],
+    });
+    const listAndFraction = templateWithExtraFields([
+      { name: 'upstream_tags', type: 'multiselect', description: 'Added upstream', options: ['alpha', 'beta'], default: '["alpha"]' },
+      { name: 'upstream_rate', type: 'number', description: 'Added upstream', default: '2.5' },
+    ]);
+    const model = exportWith(listAndFraction).templateModel.model.ctoFiles[0].contents;
+    expect(model).toMatch(/^ {2}o String\[\] upstream_tags$/m);
+    expect(model).toMatch(/^ {2}o Double upstream_rate default=2\.5$/m);
+
+    const source = readFileSync(MODEL_PATH, 'utf8');
+    const decorated = source.replace(/^(asset )/m, '@template\n$1');
+    const decoratedModel = exportWith(TEMPLATE_DIR, modelFileWith(decorated)).templateModel.model.ctoFiles[0].contents;
+    expect(decoratedModel.match(/^@template$/gm)).toHaveLength(1);
+
+    const rows = templateWithExtraFields([{
+      name: 'upstream_rows', type: 'array', description: 'Added upstream',
+      items: [{ name: 'label', type: 'string', description: 'Label' }],
+    }]);
+    expect(() => exportWith(rows)).toThrow('APAP export does not yet support array fields: upstream_rows');
+
+    const inlineBlock = source.replace(/\{\n[\s\S]*?\n\}/, '{ o String company_name }');
+    expect(() => exportWith(TEMPLATE_DIR, modelFileWith(inlineBlock)))
+      .toThrow('Concerto model has no single-line Contract declaration block');
   });
 
   it('round-trips APAP Concerto data into a filled DOCX', async () => {
