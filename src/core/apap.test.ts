@@ -1,10 +1,12 @@
-import { mkdtempSync, readFileSync } from 'node:fs';
+import { cpSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import AdmZip from 'adm-zip';
 import { describe, expect } from 'vitest';
 import { itAllure } from '../../integration-tests/helpers/allure-test.js';
+import { withRequiredSampleValues } from '../../integration-tests/helpers/apap-sample-values.js';
 import { loadMetadata } from './metadata.js';
+import yaml from 'js-yaml';
 import {
   canonicalMdocToApapTemplateMark,
   exportTemplateToApap,
@@ -19,6 +21,22 @@ const TEMPLATE_DIR = join(ROOT, 'templates/openagreements-cc-by-4.0', TEMPLATE_I
 const MODEL_PATH = join(ROOT, 'concerto/openagreements-employee-ip-inventions-assignment.cto');
 const CONTRACT_MODEL_PATH = join(ROOT, 'concerto/deps/@models.accordproject.org.accordproject.contract.cto');
 const it = itAllure.epic('Platform & Distribution');
+
+function templateWithExtraFields(fields: Array<Record<string, unknown>>): string {
+  const templateDir = join(mkdtempSync(join(tmpdir(), 'oa-apap-fields-')), TEMPLATE_ID);
+  cpSync(TEMPLATE_DIR, templateDir, { recursive: true });
+  const metadataPath = join(templateDir, 'metadata.yaml');
+  const raw = yaml.load(readFileSync(metadataPath, 'utf8')) as { fields: Array<Record<string, unknown>> };
+  raw.fields.push(...fields);
+  writeFileSync(metadataPath, yaml.dump(raw, { lineWidth: -1 }));
+  return templateDir;
+}
+
+function modelFileWith(contents: string): string {
+  const path = join(mkdtempSync(join(tmpdir(), 'oa-apap-model-')), 'model.cto');
+  writeFileSync(path, contents);
+  return path;
+}
 
 const VALUES = {
   company_name: 'Example Labs, Inc.',
@@ -75,15 +93,102 @@ describe('APAP interoperability — OpenAgreements CIIAA pilot', () => {
     );
   });
 
+  it('derives model properties from metadata when the Concerto source drifts', () => {
+    const source = readFileSync(MODEL_PATH, 'utf8');
+    const drifted = source
+      .replace(/^\s*o String company_name optional\n/m, '')
+      .replace(/^\s*o Boolean personnel_nonsolicit_included [^\n]*\n/m, '')
+      .replace(/^\}/m, '  o String retired_field optional\n}');
+    expect(drifted).not.toBe(source);
+    const driftedPath = modelFileWith(drifted);
+
+    const template = exportTemplateToApap({
+      templateDir: TEMPLATE_DIR,
+      concertoModelPath: driftedPath,
+      concertoDependencyPaths: [CONTRACT_MODEL_PATH],
+    });
+    const model = template.templateModel.model.ctoFiles[0].contents;
+    const metadata = loadMetadata(TEMPLATE_DIR);
+    const properties = [...model.matchAll(/^\s*o\s+\S+\s+(\w+)/gm)].map((match) => match[1]);
+    expect(properties).toEqual(metadata.fields.map((field) => field.name));
+    expect(model).toMatch(/^ {2}o String company_name$/m);
+    expect(model).toMatch(/^ {2}o Boolean personnel_nonsolicit_included default=true$/m);
+    expect(model).not.toContain('retired_field');
+    expect(model).not.toMatch(/\boptional\b/);
+    const excluded = metadata.fields.find((field) => field.name === 'excluded_inventions_statement');
+    expect(model).toContain(`o String excluded_inventions_statement default=${JSON.stringify(excluded?.default)}`);
+    expect(model).toMatch(/^namespace org\.openagreements\.custom\.employeeipinventionsassignment@1\.0\.0$/m);
+    expect(model).toMatch(/^@template\nasset EmployeeIpInventionsAssignment extends Contract \{$/m);
+  });
+
+  it('exports and accepts data for a field added upstream without a Concerto edit', () => {
+    const templateDir = templateWithExtraFields([
+      { name: 'upstream_required_term', type: 'string', description: 'Added upstream with no default' },
+      { name: 'upstream_clause_included', type: 'boolean', description: 'Added upstream', default: 'false' },
+      { name: 'upstream_cure_days', type: 'number', description: 'Added upstream', default: '30' },
+      { name: 'upstream_forum', type: 'enum', description: 'Added upstream', options: ['state court', 'arbitration'], default: 'state court' },
+    ]);
+
+    const template = exportTemplateToApap({
+      templateDir,
+      concertoModelPath: MODEL_PATH,
+      concertoDependencyPaths: [CONTRACT_MODEL_PATH],
+    });
+    const model = template.templateModel.model.ctoFiles[0].contents;
+    expect(model).toMatch(/^ {2}o String upstream_required_term$/m);
+    expect(model).toMatch(/^ {2}o Boolean upstream_clause_included default=false$/m);
+    expect(model).toMatch(/^ {2}o Double upstream_cure_days default=30\.0$/m);
+    expect(model).toMatch(/^ {2}o String upstream_forum default="state_court"$/m);
+
+    const metadata = loadMetadata(templateDir);
+    const data = toApapAgreementData(template, metadata, {
+      contractId: 'upstream-field',
+      values: withRequiredSampleValues(metadata.fields, VALUES),
+    });
+    expect(data.upstream_required_term).toBe('Example upstream required term');
+    expect(data.upstream_clause_included).toBe(false);
+    expect(data.upstream_cure_days).toBe(30);
+    expect(data.upstream_forum).toBe('state_court');
+  });
+
+  it('maps list and fractional defaults, keeps one @template, and fails clearly on unsupported shapes', () => {
+    const exportWith = (templateDir: string, concertoModelPath = MODEL_PATH) => exportTemplateToApap({
+      templateDir, concertoModelPath, concertoDependencyPaths: [CONTRACT_MODEL_PATH],
+    });
+    const listAndFraction = templateWithExtraFields([
+      { name: 'upstream_tags', type: 'multiselect', description: 'Added upstream', options: ['alpha', 'beta'], default: '["alpha"]' },
+      { name: 'upstream_rate', type: 'number', description: 'Added upstream', default: '2.5' },
+    ]);
+    const model = exportWith(listAndFraction).templateModel.model.ctoFiles[0].contents;
+    expect(model).toMatch(/^ {2}o String\[\] upstream_tags$/m);
+    expect(model).toMatch(/^ {2}o Double upstream_rate default=2\.5$/m);
+
+    const source = readFileSync(MODEL_PATH, 'utf8');
+    const decorated = source.replace(/^(asset )/m, '@template\n$1');
+    const decoratedModel = exportWith(TEMPLATE_DIR, modelFileWith(decorated)).templateModel.model.ctoFiles[0].contents;
+    expect(decoratedModel.match(/^@template$/gm)).toHaveLength(1);
+
+    const rows = templateWithExtraFields([{
+      name: 'upstream_rows', type: 'array', description: 'Added upstream',
+      items: [{ name: 'label', type: 'string', description: 'Label' }],
+    }]);
+    expect(() => exportWith(rows)).toThrow('APAP export does not yet support array fields: upstream_rows');
+
+    const inlineBlock = source.replace(/\{\n[\s\S]*?\n\}/, '{ o String company_name }');
+    expect(() => exportWith(TEMPLATE_DIR, modelFileWith(inlineBlock)))
+      .toThrow('Concerto model has no single-line Contract declaration block');
+  });
+
   it('round-trips APAP Concerto data into a filled DOCX', async () => {
     const template = exportTemplateToApap({
       templateDir: TEMPLATE_DIR,
       concertoModelPath: MODEL_PATH,
       concertoDependencyPaths: [CONTRACT_MODEL_PATH],
     });
-    const agreementData = toApapAgreementData(template, loadMetadata(TEMPLATE_DIR), {
+    const metadata = loadMetadata(TEMPLATE_DIR);
+    const agreementData = toApapAgreementData(template, metadata, {
       contractId: 'oa-ciiaa-001',
-      values: VALUES,
+      values: withRequiredSampleValues(metadata.fields, VALUES),
     });
     expect(agreementData.$class).toBe(template.templateModel.typeName);
     expect(agreementData.contractId).toBe('oa-ciiaa-001');
@@ -124,14 +229,15 @@ describe('APAP interoperability — OpenAgreements CIIAA pilot', () => {
       concertoDependencyPaths: [CONTRACT_MODEL_PATH],
     });
     const metadata = loadMetadata(TEMPLATE_DIR);
+    const values = withRequiredSampleValues(metadata.fields, VALUES);
     const defaultData = toApapAgreementData(template, metadata, {
-      contractId: 'defaults', values: VALUES,
+      contractId: 'defaults', values,
     });
     expect(defaultData.personnel_nonsolicit_included).toBe(true);
     expect(defaultData.future_employer_notice_included).toBe(true);
     const agreementData = toApapAgreementData(template, metadata, {
       contractId: 'opt-out',
-      values: { ...VALUES, personnel_nonsolicit_included: false, future_employer_notice_included: false },
+      values: { ...values, personnel_nonsolicit_included: false, future_employer_notice_included: false },
     });
     const outputPath = join(mkdtempSync(join(tmpdir(), 'oa-apap-opt-out-')), 'ciiaa.docx');
     await fillApapAgreementToDocx({ templateDir: TEMPLATE_DIR, agreementData, outputPath });
