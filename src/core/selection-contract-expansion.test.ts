@@ -85,4 +85,27 @@ describe('additional source-generated Common Paper contracts', () => {
     await expect(compileSelectionContract(join(root, 'common-paper-design-partner-agreement')))
       .rejects.toThrow('Unsupported source artifact/stage');
   });
+  for (const [id, prefixes, fieldCount] of [
+    ['common-paper-letter-of-intent', ['provider_signatory', 'customer_signatory'], 15],
+    ['common-paper-term-sheet', ['party_1_signatory', 'party_2_signatory'], 12],
+  ] as const) {
+    for (const first of ['entity', 'individual']) {
+      for (const second of ['entity', 'individual']) {
+        it(`${id}: ${first}/${second}`, async () => {
+          const { contract, text } = await compare(id, `${first}-${second}`, {
+            [`${prefixes[0]}_type`]: first, [`${prefixes[1]}_type`]: second,
+          });
+          expect(contract.metadata.fields).toHaveLength(fieldCount);
+          expect(contract.rules).toHaveLength(12);
+          expect(text.includes(`Synthetic ${prefixes[0]}_title`)).toBe(first === 'entity');
+          expect(text.includes(`Synthetic ${prefixes[1]}_title`)).toBe(second === 'entity');
+          expect(text).toContain(`Synthetic ${prefixes[0]}_name`);
+          expect(text).toContain(`Synthetic ${prefixes[1]}_name`);
+        });
+      }
+    }
+    it(`${id}: default/blank signatures`, async () => {
+      await compare(id, 'blank-defaults', {}, true);
+    });
+  }
 });

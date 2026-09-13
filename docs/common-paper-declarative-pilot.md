@@ -118,3 +118,42 @@ parity and independently extracted visible-text assertions are kept.
 Next difficult cases, such as Design Partner, remain blocked by preprocessing and
 checkbox-selection stages. No support for them is claimed by this batch. No Stella
 deployment, automatic catalog promotion or public changes occurred.
+
+## Second expansion — 2026-09-12
+
+Added generated contracts and verification for Common Paper **Letter of Intent**
+(15 input fields) and **Term Sheet** (12 input fields). Both reuse the existing v2
+role-signature profile unchanged: no new runtime branches or template-specific
+adapter code were needed. Each has four entity/individual signer combinations and
+a missing-input/default case, with all decompressed DOCX entries identical to the
+legacy engine. Independent visible-text assertions verify signer names and
+entity-only titles. Canonical metadata and DOCX sources remain unchanged.
+
+Current total: **six templates with pinned-source parity evidence**, **48 passing
+tests**, including **43 DOCX comparisons**. TypeScript, focused ESLint and diff
+checks pass. The new `src/core/selection-contract-inventory.test.ts` recursively
+scans 116 local template directories and writes ignored
+`.cache/common-paper-declarative/inventory.json`: six compile as unverified
+candidates and 110 are blocked by this bounded profile. A blocked entry is not
+necessarily defective; it is outside this compiler's supported behavior. The scan
+does not automatically promote candidates based on compilation alone.
+
+Reproduce the whole current suite:
+
+```sh
+node node_modules/vitest/vitest.mjs run src/core/selection-contract.test.ts src/core/selection-contract-expansion.test.ts src/core/selection-contract-inventory.test.ts --configLoader runner
+node node_modules/typescript/bin/tsc --noEmit
+node node_modules/eslint/bin/eslint.js src/core/selection-contract*.ts
+```
+
+New ignored artifacts are in `expansion/common-paper-letter-of-intent/` and
+`expansion/common-paper-term-sheet/` beneath the existing evidence directory.
+The `entity-individual.docx` sample from each was opened for visual review; inspect
+the filled commercial terms, both signer names, and suppression of the individual
+signer's title. No independent visual certification, legal-content revision,
+Stella deployment or public action is implied. Source hashes and rejection guards
+remain test-only evidence.
+
+The next expansion requires actual compiler capabilities: Design Partner has
+literal replacements and checkbox selections, which the current profile rejects.
+Those stages should be compiled and tested together before that template is counted.
