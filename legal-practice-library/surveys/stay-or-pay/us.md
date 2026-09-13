@@ -1,6 +1,6 @@
 ---
 type: Law Survey
-title: U.S. 50-State Stay-or-Pay & Employee Repayment Survey
+title: U.S. Stay-or-Pay & Employee Repayment Survey
 description: State-by-state comparison matrix for stay-or-pay.
 resource: 'https://openagreements.org/surveys/stay-or-pay/us'
 tags:
@@ -9,7 +9,7 @@ tags:
   - us
 ---
 
-# U.S. 50-State Stay-or-Pay & Employee Repayment Survey
+# U.S. Stay-or-Pay & Employee Repayment Survey
 
 # Schema
 

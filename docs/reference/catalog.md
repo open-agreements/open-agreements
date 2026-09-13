@@ -226,14 +226,14 @@ Side-by-side comparison tables across jurisdictions. The web pages also publish 
 | Survey | Markdown | HTML |
 |--------|----------|------|
 | U.S. 50-State Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/us.md) | [HTML](https://openagreements.org/surveys/non-compete/us) |
-| U.S. 50-State Stay-or-Pay & Employee Repayment Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/stay-or-pay/us.md) | [HTML](https://openagreements.org/surveys/stay-or-pay/us) |
-| U.S. 50-State Wage & Hour Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/wage-and-hour/us.md) | [HTML](https://openagreements.org/surveys/wage-and-hour/us) |
 | U.S. corporate-governance survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/corporate-governance/us.md) | [HTML](https://openagreements.org/surveys/corporate-governance/us) |
 | U.S. founder-separation survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/founder-separation/us.md) | [HTML](https://openagreements.org/surveys/founder-separation/us) |
 | U.S. invention-assignment survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/invention-assignment/us.md) | [HTML](https://openagreements.org/surveys/invention-assignment/us) |
 | U.S. legal-due-diligence survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/legal-due-diligence/us.md) | [HTML](https://openagreements.org/surveys/legal-due-diligence/us) |
 | U.S. sell-side-transaction-readiness survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/sell-side-transaction-readiness/us.md) | [HTML](https://openagreements.org/surveys/sell-side-transaction-readiness/us) |
 | U.S. State Consumer Privacy Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/privacy/us.md) | [HTML](https://openagreements.org/surveys/privacy/us) |
+| U.S. Stay-or-Pay & Employee Repayment Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/stay-or-pay/us.md) | [HTML](https://openagreements.org/surveys/stay-or-pay/us) |
+| U.S. Wage & Hour Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/wage-and-hour/us.md) | [HTML](https://openagreements.org/surveys/wage-and-hour/us) |
 | Worldwide Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/worldwide.md) | [HTML](https://openagreements.org/surveys/non-compete/worldwide) |
 
 ## Install an agent skill

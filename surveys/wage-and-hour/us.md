@@ -1,6 +1,6 @@
 ---
 type: Law Survey
-title: U.S. 50-State Wage & Hour Survey
+title: U.S. Wage & Hour Survey
 description: State-by-state comparison matrix for wage-and-hour.
 resource: 'https://openagreements.org/surveys/wage-and-hour/us'
 tags:
@@ -9,7 +9,7 @@ tags:
   - us
 ---
 
-# U.S. 50-State Wage & Hour Survey
+# U.S. Wage & Hour Survey
 
 # Schema
 
