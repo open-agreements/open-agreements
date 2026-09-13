@@ -1,6 +1,6 @@
 import { describe, expect } from 'vitest';
 import { readdirSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { dirname, join, relative } from 'node:path';
 import yaml from 'js-yaml';
 import {
   allureJsonAttachment,
@@ -100,7 +100,24 @@ describe('TemplateCapabilityManifestSchema', () => {
       expect(keys.filter((key) => !(key in parsed)), file).toEqual([]);
       expect(TemplateCapabilityManifestSchema.safeParse(parsed).success, file).toBe(true);
     }
-    expect(files).toHaveLength(116);
+    // Compare sets, not a total. Legal Explainer syncs templates into the paths
+    // listed in .openagreements-managed-paths.json and adds new ones there, so a
+    // pinned count broke every sync that shipped a template. The rest are
+    // authored in this repository and are declared here, where adding one is
+    // part of the same change. A managed template missing its metadata, or a
+    // directory that is neither synced nor declared, still fails.
+    const managed = (
+      JSON.parse(readFileSync(join(process.cwd(), '.openagreements-managed-paths.json'), 'utf-8')) as {
+        paths: string[];
+      }
+    ).paths.filter((entry) => entry.startsWith('templates/'));
+    const authoredHere = [
+      'templates/openagreements-cc0-1.0/openagreements-closing-checklist',
+      'templates/openagreements-cc0-1.0/openagreements-working-group-list',
+    ];
+    const found = files.map((file) => relative(process.cwd(), dirname(file)).replace(/\\/g, '/')).sort();
+    expect(managed.length).toBeGreaterThan(0);
+    expect(found).toEqual([...managed, ...authoredHere].sort());
   });
 
   it('rejects unknown capabilities and maturity values', async () => {
