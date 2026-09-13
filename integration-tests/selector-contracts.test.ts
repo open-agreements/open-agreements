@@ -1,6 +1,6 @@
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { existsSync, mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdtempSync, mkdirSync, readdirSync, writeFileSync, rmSync } from 'node:fs';
 import { homedir, tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
@@ -61,6 +61,22 @@ function cachedSourcePath(): string {
   return cachedSourcePathFor('nvca-stock-purchase-agreement');
 }
 
+/**
+ * Every `fields/*.json` file produced a manifest, and the template manifest migrates at
+ * least one key with no duplicates. Derived from the directory, never a pinned count.
+ */
+function expectCompleteSelectorContracts(
+  fieldSelectorDir: string,
+  manifests: readonly unknown[],
+  migratedKeys: readonly string[] | undefined,
+): void {
+  const manifestFiles = readdirSync(join(fieldSelectorDir, 'fields')).filter((file) => file.endsWith('.json'));
+  expect(manifestFiles.length).toBeGreaterThan(0);
+  expect(manifests).toHaveLength(manifestFiles.length);
+  expect(migratedKeys?.length ?? 0).toBeGreaterThan(0);
+  expect(new Set(migratedKeys).size).toBe(migratedKeys!.length);
+}
+
 /** First `{field_id}` tag in a replacement value (CoI values may carry trailing literal text). */
 function fieldOfValue(value: string): string | null {
   return value.match(/\{([a-zA-Z0-9_]+)\}/)?.[1] ?? null;
@@ -96,31 +112,10 @@ describe('loadSelectorContracts', () => {
     const fieldSelectorDir = resolveFieldSelectorDir('nvca-stock-purchase-agreement');
     const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
     const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
-    expect(manifests.map((m) => m.field_id).sort()).toEqual([
-      'agreement_date',
-      'company_name',
-      'investor_counsel',
-      'minimum_shares_initial_closing',
-      'optional_plural_suffix',
-      'par_value_per_share',
-      'purchase_price_per_share',
-      'series_designation',
-    ]);
-    // company_name (3) + the 11 migrated `>` keys = 14. `agreement_date` (#619) is a
-    // pure selector-contract with NO replacements.json entry / migrated key: it is
-    // date-typed (ISO input renders as a display date), so keeping it in the legacy
-    // value-map would make the runtime verifier compare raw ISO input against the
-    // formatted output — the same trade documented for the CoI date fields (#608).
-    expect(templateManifest?.migrated_keys).toHaveLength(14);
-    expect(templateManifest?.migrated_keys).toEqual(
-      expect.arrayContaining([
-        '[Insert Company Name]',
-        'SERIES > [___]',
-        'such Series > [__]',
-        'A minimum of > [_______]',
-        'expenses of > [_______]',
-      ]),
-    );
+    // The manifests and migrated keys are Legal Explainer content that the template
+    // sync replaces wholesale, so rather than pinning a list or a total, check that
+    // every manifest file loaded and that the migrated keys are real and distinct.
+    expectCompleteSelectorContracts(fieldSelectorDir, manifests, templateManifest?.migrated_keys);
     // every migrated key is a real replacements.json key (no typos / drift)
     for (const key of templateManifest!.migrated_keys) {
       expect(replacements, `migrated key ${JSON.stringify(key)} missing from replacements.json`).toHaveProperty([key]);
@@ -416,14 +411,10 @@ describe('loadSelectorContracts (CoI)', () => {
     const fieldSelectorDir = resolveFieldSelectorDir(COI);
     const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
     const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
-    // 31 field manifests; see header note for the deferrals. `original_incorporation_date` and
-    // `effective_date` (#608) are pure selector-contracts with NO migrated legacy keys — the 5 recital
-    // `[________ __, 20__]` keys that formerly backed `effective_date` were removed from both
-    // replacements.json and migrated_keys.
-    // Percentage rendering remains declarative in replacements.json; it does
-    // not need a selector manifest or migrated keys.
-    expect(manifests).toHaveLength(31);
-    expect(templateManifest?.migrated_keys).toHaveLength(63);
+    // `original_incorporation_date` and `effective_date` (#608) are pure selector-contracts
+    // with NO migrated legacy keys. Percentage rendering remains declarative in
+    // replacements.json; it does not need a selector manifest or migrated keys.
+    expectCompleteSelectorContracts(fieldSelectorDir, manifests, templateManifest?.migrated_keys);
     // every field_id is a real metadata field (loadSelectorContracts already enforces this, but assert
     // the join key explicitly) and every migrated key is a real replacements.json key (no drift/typos).
     const metaFields = new Set(fieldNames);
@@ -433,7 +424,7 @@ describe('loadSelectorContracts (CoI)', () => {
     for (const key of templateManifest!.migrated_keys) {
       expect(coiReplacements, `migrated key ${JSON.stringify(key)} missing`).toHaveProperty([key]);
     }
-    // every migrated key resolves to exactly one of the 28 manifest fields via its first `{tag}`.
+    // every migrated key resolves to one of the manifest fields via its first `{tag}`.
     const manifestIds = new Set(manifests.map((m) => m.field_id));
     for (const key of templateManifest!.migrated_keys) {
       const field = fieldOfValue((coiReplacements as Record<string, string>)[key]);

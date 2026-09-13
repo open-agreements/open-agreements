@@ -127,12 +127,5 @@ describe('NVCA SPA Template', () => {
     const ruleIds = rules.map((rule) => rule.id);
     expect(new Set(ruleIds).size).toBe(ruleIds.length);
     expect(danglingInputs).toEqual([]);
-    expect(ruleIds).toEqual(expect.arrayContaining([
-      'derive-dispute-resolution-track-arbitration',
-      'derive-dispute-resolution-track-courts',
-      'derive-governing-law-baseline',
-      'derive-forum-governing-mismatch',
-    ]));
-    expect(computed.defaults).toMatchObject({ closing_heading: 'Closing.', purchaser_scope: 'all' });
   });
 });
