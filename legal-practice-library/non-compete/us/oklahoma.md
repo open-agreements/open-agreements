@@ -136,7 +136,7 @@ The veto left the strict § 219A regime — and the *Autry* prohibition on reach
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from a Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oklahoma*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oklahoma.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from an Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oklahoma*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oklahoma.
 
 [^stat-217-general-void]: **15 O.S. § 217** — "Every contract by which any one is restrained from exercising a lawful profession, trade or business of any kind, otherwise than as provided by Sections 218 and 219 of this title, or otherwise than as provided by Section 2 of this act, is to that extent void." *Okla. Stat. tit. 15, § 217.* <https://oksenate.gov/sites/default/files/2022-05/os15.pdf>
 

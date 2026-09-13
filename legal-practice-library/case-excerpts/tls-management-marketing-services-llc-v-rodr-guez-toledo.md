@@ -9,7 +9,7 @@ citation: >-
   2020).
 resource: >-
   https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/
-timestamp: '2026-07-04'
+timestamp: '2026-09-09'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
@@ -56,5 +56,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-and-trade-secret-treatment`, `why-not-indefinite`
 - source_cards: `tls-rodriguez`
-- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [How Long Should a Trade-Secret Confidentiality Obligation Last?](../trade-secrets/us/confidentiality-duration.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [Trade-Secret Confidentiality Duration in the United States](../trade-secrets/us/confidentiality-duration.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/#:~:text=We%20reverse%20because%20TLS%20failed,broad%20as%20to%20be%20unenforceable.>

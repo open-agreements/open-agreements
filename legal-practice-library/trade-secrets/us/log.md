@@ -1,5 +1,9 @@
 # Us Update Log
 
+## 2026-09-11
+* **Update**: Clarify guide answers and put supporting sources beside the claims (#2639) (0e3cf23)
+* **Update**: Improve employment documents and qualify observed practice-guide answers (#2634) (d7a16df)
+
 ## 2026-07-05
 * **Update**: fix(trade-secrets): range-of-practice example + fair-to-Cooley benchmark copy (#1531) (#1560) (d90a594)
 

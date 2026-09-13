@@ -2,7 +2,7 @@
 jurisdiction: "Illinois"
 slug: illinois
 countryCode: US
-content_packaged_at: "2026-09-10"
+content_packaged_at: "2026-09-12"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/illinois · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/illinois · **Snapshot as of:** 2026-09-12 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Illinois[^about]
 
@@ -211,7 +211,7 @@ It is easy to conflate two different things: a covenant an *employee* signs, and
 
 So an inter-employer no-poach or wage-fixing arrangement can draw antitrust exposure independent of the IFWA's rules for employee covenants.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Illinois*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/illinois.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from an Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Illinois*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/illinois.
 
 [^ifwa-15-enforceability]: **820 ILCS 90/15** — "A covenant not to compete or a covenant not to solicit is illegal and void unless (1) the employee receives adequate consideration, (2) the covenant is ancillary to a valid employment relationship, (3) the covenant is no greater than is required for the protection of a legitimate business interest of the employer, (4) the covenant does not impose undue hardship on the employee, and (5) the covenant is not injurious to the public." *820 ILCS 90/15.* <https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K15.htm>
 

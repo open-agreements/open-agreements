@@ -2,7 +2,7 @@
 jurisdiction: "Oregon"
 slug: oregon
 countryCode: US
-content_packaged_at: "2026-09-10"
+content_packaged_at: "2026-09-12"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oregon · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oregon · **Snapshot as of:** 2026-09-12 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Oregon[^about]
 
@@ -296,7 +296,7 @@ Confidentiality and non-disparagement clauses have their own statutory limit. Th
 >
 > ORS 653.295(6) preserves the employer's trade-secret and proprietary-information remedies whatever happens to a non-compete, so confidentiality and trade-secret terms carry the secrecy interest on their own; but ORS 659A.370 makes a nondisclosure or nondisparagement provision an unlawful employment practice to the extent it has the purpose or effect of preventing an employee from disclosing or discussing discrimination, harassment, or sexual assault, so a confidentiality clause drawn wide enough to reach that conduct is unenforceable as to it [^q14-ors-653-295-preserve][^q14-ors-659a-370-wfa].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oregon*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oregon.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from an Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oregon*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oregon.
 
 [^q1-ors-653-295-void-unless]: **ORS 653.295** — "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer" *ORS 653.295(1).* <https://www.oregonlegislature.gov/bills_laws/ors/ors653.html>
 

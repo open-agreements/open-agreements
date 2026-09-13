@@ -150,7 +150,7 @@ Federal law adds a parallel remedy. Under the federal Fair Labor Standards Act, 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-19. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Illinois*, OpenAgreements (last updated July 19, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/illinois.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-19. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from an Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Illinois*, OpenAgreements (last updated July 19, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/illinois.
 
 [^ilcs-105-4a1]: **820 ILCS 105/4(a)(1)** — "on and after January 1, 2025, every employer shall pay to each of his or her employees who is 18 years of age or older in every occupation wages of not less than $15 per hour." *820 ILCS 105/4(a)(1)* <https://www.ilga.gov/documents/legislation/ilcs/documents/082001050K4.htm>
 

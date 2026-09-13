@@ -195,7 +195,7 @@ Because the legislature labeled its restrictive-covenant rules fundamental publi
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from a Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Alabama*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/alabama.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from an Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Alabama*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/alabama.
 
 [^ala-8-1-190-void]: **Ala. Code § 8-1-190** — "Every contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind otherwise than is provided by this section is to that extent void." *Ala. Code § 8-1-190(a).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 
