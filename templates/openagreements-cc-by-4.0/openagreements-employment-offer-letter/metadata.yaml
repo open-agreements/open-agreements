@@ -1,6 +1,6 @@
 name: Employment Offer Letter
 category: employment
-description: A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing.
+description: A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing. Select the governing law explicitly; use a state-specific offer when available and provide any separate required wage notice.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter
 version: '1.2'
 stability: experimental
@@ -63,13 +63,12 @@ fields:
     section: Work Model
   - name: governing_law
     type: string
-    description: Governing law state for the offer letter
-    default: California
+    description: Governing law state for the offer letter; must be selected explicitly for the employee’s circumstances
     section: Legal
   - name: california_specific_terms
     type: boolean
-    description: True when the employee primarily works in California, gating (via include-when) the California-Specific Terms clause (paid sick leave, workers' compensation, California Labor Code coverage). Default true because our user base skews California; when filling for an employee outside California, set this false to strip the California-specific clause.
-    default: true
+    description: True when the employee primarily works in California, gating (via include-when) the California-Specific Terms clause (paid sick leave, workers' compensation, California Labor Code coverage). Set true for a California employee. Default false; the employee’s work location, not the visitor’s IP address, determines whether California terms apply.
+    default: false
     section: Legal
   - name: offer_expiration_date
     type: date

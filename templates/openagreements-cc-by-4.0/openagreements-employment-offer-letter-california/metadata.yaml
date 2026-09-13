@@ -61,7 +61,7 @@ fields:
     section: Work Model
   - name: governing_law
     type: string
-    description: Governing law state for the offer letter
+    description: Governing law defaults to the selected state; confirm it is appropriate for the employee’s actual work location and non-waivable rights
     section: Legal
     default: California
   - name: offer_expiration_date

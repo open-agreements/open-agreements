@@ -60,7 +60,7 @@ Company will pay the base salary or hourly compensation listed in Cover Terms in
 
 ### New York Employment Notices
 
-Company will provide Employee any notices and statements required by applicable New York employment law. Nothing in this offer letter waives any non-waivable New York employment right.
+Company will provide Employee any notices and statements required by applicable New York employment law, including any required separate wage notice. This offer letter does not replace that notice. Nothing in this offer letter waives any non-waivable New York employment right.
 
 ### Bonus Opportunity
 
