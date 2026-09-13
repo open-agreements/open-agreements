@@ -18,15 +18,6 @@ import { loadComputedProfile } from './computed.js';
 import { loadFieldSelectorMetadata } from '../metadata.js';
 import { listFieldSelectorIds, resolveFieldSelectorDir } from '../../utils/paths.js';
 
-const NVCA_GOLDEN_HASHES: Record<string, string> = {
-  'nvca-certificate-of-incorporation': '721f94a610bcf09df9b8404a6109bf0995ddebd9fa4318bd62f5e070988494f8',
-  'nvca-indemnification-agreement': '378070ff3d36bffc460b6b7d95a29f1c950c88f724fe90484260108900ac0b9b',
-  'nvca-investors-rights-agreement': 'a9b0ba7216d1cdbd98c710a37f66dcf6a9ecef9de2dae4db649dd866f5a3b261',
-  'nvca-management-rights-letter': '5e27820907e815dbb139ff81943b6a9ee68cb06994a1b732de1f60aefd410ba9',
-  'nvca-rofr-co-sale-agreement': 'ad4cbf0df5ae3f71f496632ca9c84f221860fc187b39fe7919370e78c093f786',
-  'nvca-stock-purchase-agreement': 'c4c8835b56aa13071a6c89f430929ca484b376f219d930161da0fe44e92d1d99',
-  'nvca-voting-agreement': '9a3c754235b8a9c0439ce213c17954dddcdbe257a168e07f8e9e97b719ad8ebf',
-};
 const it = itAllure.epic('Discovery & Metadata');
 
 function validator(schema: JsonSchema) {
@@ -47,12 +38,16 @@ describe('field-selector caller-input JSON Schema', () => {
     expect(schema.properties).not.toHaveProperty('investor_amendment_consent_percentage_display');
   });
 
-  it('has an intentional golden for every published NVCA field-selector', () => {
-    expect(listFieldSelectorIds().sort()).toEqual(Object.keys(NVCA_GOLDEN_HASHES).sort());
-    for (const [id, expected] of Object.entries(NVCA_GOLDEN_HASHES)) {
+  it('publishes a valid, closed schema for every field-selector', () => {
+    // Each field-selector's fields are Legal Explainer content that the template
+    // sync replaces wholesale. A per-template hash of the generated schema failed
+    // every sync that changed a field, so this checks what every published schema
+    // must satisfy; the fixture golden below pins the generator's own output.
+    const ids = listFieldSelectorIds();
+    expect(ids.length).toBeGreaterThan(0);
+    for (const id of ids) {
       const schema = getFieldSelectorInputSchema(id, resolveFieldSelectorDir(id));
-      expect(canonicalSha256(schema), id).toBe(expected);
-      expect(() => validator(schema)).not.toThrow();
+      expect(() => validator(schema), id).not.toThrow();
       const validate = validator(schema);
       expect(validate({}), `${id} must enforce priority fields`).toBe(false);
       expect(validate({ unexpected_field: true }), `${id} must be closed`).toBe(false);
@@ -83,11 +78,11 @@ describe('field-selector caller-input JSON Schema', () => {
       resolveFieldSelectorDir('nvca-stock-purchase-agreement'),
     );
     const purchaser = ((schema.properties as Record<string, JsonSchema>).purchasers.items as JsonSchema);
+    const rowFields = loadFieldSelectorMetadata(resolveFieldSelectorDir('nvca-stock-purchase-agreement'))
+      .fields.find((field) => field.name === 'purchasers')?.items?.map((item) => item.name) ?? [];
+    expect(rowFields.length).toBeGreaterThan(0);
     expect(purchaser.additionalProperties).toBe(false);
-    expect(purchaser.required).toEqual([
-      'name_and_address', 'convertible_investment', 'convertible_shares',
-      'cash_purchase_price', 'cash_purchase_economics', 'cash_shares', 'total_shares',
-    ]);
+    expect(purchaser.required).toEqual(rowFields);
     const fields = purchaser.properties as Record<string, JsonSchema>;
     expect(fields.convertible_investment.type).toBe('number');
     expect(fields.name_and_address.type).toBe('string');
@@ -108,6 +103,9 @@ describe('field-selector caller-input JSON Schema', () => {
         ] },
       ], priority_fields: ['name', 'rows'], market_data_citations: [],
     }, null);
+    // Generator output for this fixed fixture. A change here is a change to the
+    // published schema format itself, independent of any template's fields.
+    expect(canonicalSha256(schema)).toBe('5e65e32920a689d2a0fb687c783234e9e252e37cb632eb87ae026b5f49782bd5');
     const validate = validator(schema);
     const valid = { name: 'Acme', closing_date: '2026-09-05', enabled: true, amount: 1.5, mode: 'a', rows: [{ label: 'A', shares: 10 }] };
     expect(validate(valid)).toBe(true);
