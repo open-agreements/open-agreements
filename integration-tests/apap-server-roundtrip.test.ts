@@ -5,6 +5,7 @@ import { randomUUID } from 'node:crypto';
 import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
+import { withRequiredSampleValues } from './helpers/apap-sample-values.js';
 import { loadMetadata } from '../src/core/metadata.js';
 import {
   exportTemplateToApap,
@@ -74,9 +75,10 @@ describe.skipIf(!APAP_BASE_URL)('APAP reference-server round trip', () => {
     });
     createdResources.push({ kind: 'templates', id: Number(registeredTemplate.id) });
 
-    const agreementData = toApapAgreementData(template, loadMetadata(TEMPLATE_DIR), {
+    const metadata = loadMetadata(TEMPLATE_DIR);
+    const agreementData = toApapAgreementData(template, metadata, {
       contractId: `oa-ciiaa-${runId}`,
-      values: {
+      values: withRequiredSampleValues(metadata.fields, {
         company_name: 'Example Labs, Inc.',
         company_signatory_name: 'Alex Smith',
         company_signatory_title: 'President',
@@ -88,7 +90,7 @@ describe.skipIf(!APAP_BASE_URL)('APAP reference-server round trip', () => {
         post_termination_assistance: 'reasonable assistance on reasonable notice',
         governing_law: 'New York',
         venue: 'state and federal courts located in New York County, New York',
-      },
+      }),
     });
     const createdAgreement = await requestJson('/agreements', {
       method: 'POST',

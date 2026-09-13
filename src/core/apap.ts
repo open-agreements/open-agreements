@@ -178,24 +178,49 @@ function assertEligible(metadata: TemplateMetadata, templateDir: string): void {
   if (!metadata.attribution_text) throw new Error('APAP export requires attribution_text');
 }
 
-function assertModelCoversCanonicalFields(cto: string, fields: FieldDefinition[]): void {
-  const missing = fields
-    .map((field) => field.name)
-    .filter((name) => !new RegExp(`\\bo\\s+[^\\n]+\\s+${name}(?:\\s|$)`).test(cto));
-  if (missing.length > 0) {
-    throw new Error(`Concerto model is missing canonical fields: ${missing.join(', ')}`);
+const CONCERTO_FIELD_TYPES: Record<Exclude<FieldDefinition['type'], 'array'>, string> = {
+  string: 'String',
+  date: 'String',
+  enum: 'String',
+  multiselect: 'String[]',
+  number: 'Double',
+  boolean: 'Boolean',
+};
+
+function concertoProperty(field: FieldDefinition): string {
+  if (field.type === 'array') {
+    throw new Error(`APAP export does not yet support array fields: ${field.name}`);
   }
+  const declaration = `o ${CONCERTO_FIELD_TYPES[field.type]} ${field.name}`;
+  if (field.default === undefined || field.type === 'multiselect') return declaration;
+  if (field.type === 'boolean') return `${declaration} default=${field.default === 'true'}`;
+  if (field.type === 'number') {
+    const value = Number(field.default);
+    return `${declaration} default=${Number.isInteger(value) ? value.toFixed(1) : String(value)}`;
+  }
+  const value = field.type === 'enum' ? concertoEnumValue(field.default) : field.default;
+  return `${declaration} default=${JSON.stringify(value)}`;
 }
 
+/**
+ * Build the APAP template model from the bundled Concerto source and the
+ * template's metadata. The source supplies the namespace, type name, imports
+ * and documentation; the contract's properties always come from metadata.yaml,
+ * the same source the fill pipeline and toApapAgreementData use. A field added,
+ * removed or re-defaulted in metadata therefore never needs a hand edit to the
+ * .cto file before the export works, and a stale source default is never
+ * advertised.
+ */
 function apapRequiredModel(cto: string, fields: FieldDefinition[]): string {
-  let result = apapCompatibleCto(cto);
-  if (!/^@template\s*$/m.test(result)) {
-    result = result.replace(/^(asset\s+[^\n]+\s+extends\s+Contract\s*\{)/m, '@template\n$1');
-  }
-  for (const field of fields) {
-    result = result.replace(new RegExp(`(\\bo\\s+[^\\n]+\\s+${field.name})\\s+optional\\b`), '$1');
-  }
-  return result;
+  const lines = apapCompatibleCto(cto).split('\n');
+  const start = lines.findIndex((line) => /^(?:asset|concept)\s+\S+\s+extends\s+Contract\s*\{\s*$/.test(line));
+  const end = lines.findIndex((line, index) => index > start && /^\}\s*$/.test(line));
+  if (start < 0 || end < 0) throw new Error('Concerto model has no single-line Contract declaration block');
+  const properties = fields.map((field) => `  ${concertoProperty(field)}`);
+  const result = [...lines.slice(0, start + 1), ...properties, ...lines.slice(end)].join('\n');
+  return /^@template\s*$/m.test(result)
+    ? result
+    : result.replace(/^((?:asset|concept)\s+\S+\s+extends\s+Contract\s*\{)/m, '@template\n$1');
 }
 
 /**
@@ -231,7 +256,6 @@ export function exportTemplateToApap(options: ExportApapTemplateOptions): ApapTe
   if (!existsSync(mdocPath)) throw new Error('APAP export requires canonical template.mdoc source');
 
   const concerto = readFileSync(options.concertoModelPath, 'utf8');
-  assertModelCoversCanonicalFields(concerto, metadata.fields);
   const { typeName } = extractNamespaceAndType(concerto);
   const templateId = basename(options.templateDir);
   const ctoFiles: ApapCtoFile[] = [{

@@ -98,9 +98,19 @@ function assertApapRuntime(cwd) {
       throw new Error(JSON.stringify(exported));
     }
 
+    // The template's fields come from the upstream content source and can gain a
+    // required field at any sync. Fill every property the exported model declares
+    // without a default, so the smoke checks the runtime rather than this list.
+    const sample = { String: 'Example', Boolean: false, Double: 1 };
+    const required = {};
+    for (const [, type, name, rest] of ctoFiles[0].contents.matchAll(/^\\s*o\\s+(\\w+)\\s+(\\w+)([^\\n]*)$/gm)) {
+      if (!/\\bdefault=|\\boptional\\b/.test(rest) && type in sample) required[name] = sample[type];
+    }
+
     const rendered = await callTool('create_apap_agreement_docx', {
       template_id: 'openagreements-confidentiality-invention-assignment-agreement',
       agreement_data: {
+        ...required,
         $class: template.templateModel.typeName,
         $identifier: 'oa-ciiaa-isolated-smoke',
         contractId: 'oa-ciiaa-isolated-smoke',
