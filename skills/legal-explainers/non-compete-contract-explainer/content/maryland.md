@@ -56,12 +56,7 @@ Maryland layers a statute on top of that common-law test. Labor and Employment �
 
 The wage line is keyed to the State minimum wage in § 3-413, which has been $15.00 per hour since January 1, 2024, so the covered ceiling is $22.50 per hour [^statute-minimum-wage]. A covenant against any employee at or below that 150% line is void [^statute-150-threshold].
 
-The 2024 amendment in House Bill 1388 added two occupation-based bans. The veterinary ban applies retroactively to agreements entered into on or before its effective date [^hb1388-vet-retroactive]. The statute also voids covenants for licensed health-occupations employees who provide direct patient care and earn $350,000 or less, and that health care expansion applies only to agreements executed on or after July 1, 2025 [^statute-healthcare-void][^hb1388-health-prospective].
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not rely on a § 3-716 covenant for a low-wage, veterinary, or covered health care worker. For those workers the covenant is void by statute, so the employer's protection has to come from confidentiality terms and trade-secret law, not from the non-compete [^statute-150-threshold][^statute-healthcare-void].
+The 2024 amendment in House Bill 1388 added two occupation-based bans. The statute voids covenants for licensed health-occupations employees who provide direct patient care and earn $350,000 or less, and that health care expansion applies only to agreements executed on or after July 1, 2025 [^statute-healthcare-void][^hb1388-health-prospective].
 
 ## How are non-competes capped for high-earning Maryland health care workers? {#healthcare-high-earners}
 
@@ -227,8 +222,6 @@ In *Anderson v. Truitt*, the Court of Appeals stated that where a seller's coven
 [^statute-healthcare-void]: **Md. Code, Lab. & Empl. § 3-716** — "employment in a position for which the employee: A. is required to be licensed under the Health Occupations Article; B. is employed in a position that provides direct patient care; and C. earns equal to or less than $350,000 in total annual compensation" *Md. Code, Lab. & Empl. § 3-716(a)(1)(i)2.* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716>
 
 [^statute-minimum-wage]: **Md. Code, Lab. & Empl. § 3-413** — "the State minimum wage rate is: (i) for the 12–month period beginning January 1, 2023, $13.25 per hour; and (ii) beginning January 1, 2024, $15.00 per hour." *Md. Code, Lab. & Empl. § 3-413(c)(1).* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-413>
-
-[^hb1388-vet-retroactive]: **2024 Md. Laws ch. 378 (H.B. 1388)** — "That this Act shall be construed to apply retroactively and shall be applied to and interpreted to affect an employment contract or a similar contract or agreement entered into on or before the effective date of this Act." *2024 Md. Laws ch. 378, § 2 (H.B. 1388).* <https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf>
 
 [^hb1388-health-prospective]: **2024 Md. Laws ch. 378 (H.B. 1388)** — "That § 3–716(a)(1)(i)2 and (b) of the Labor and Employment Article, as enacted by Section 1 of this Act, shall be construed to apply only to employment contracts or similar documents or agreements for employment executed on or after July 1, 2025." *2024 Md. Laws ch. 378, § 3 (H.B. 1388).* <https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf>
 

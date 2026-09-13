@@ -158,7 +158,7 @@
         "sectionId": "parties-and-cover-term-identification",
         "itemNumber": "1.2",
         "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#identify-effective-date",
-        "requirementGuidance": "The execution date does sorting work in Maryland: the health care expansion of the statute reaches only agreements executed on or after July 1, 2025, the architect category begins with agreements executed on or after October 1, 2026 and protects the licensed architect rather than an architect's staff, and the veterinary ban reaches backward to existing agreements. An undated covenant leaves the reviewer unable to tell which regime applies.",
+        "requirementGuidance": "The execution date does sorting work in Maryland: the health care expansion of the statute reaches only agreements executed on or after July 1, 2025, and the architect category begins with agreements executed on or after October 1, 2026 and protects the licensed architect rather than an architect's staff. An undated covenant leaves the reviewer unable to tell which regime applies.",
         "variants": [],
         "sources": [
           {
@@ -1179,7 +1179,7 @@
         "sectionId": "maryland-statutory-gates",
         "itemNumber": "19.2",
         "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#void-non-compete-for-veterinary-professionals",
-        "requirementGuidance": "A covenant is void for an employee licensed as a veterinary practitioner or veterinary technician, at any compensation level — and unlike the health care expansion, this ban reaches backward: the 2024 act construes it to apply to agreements entered into on or before its effective date. An old veterinary covenant in the file is not grandfathered; it is simply unenforceable.",
+        "requirementGuidance": "For a new employment agreement with a licensed veterinary practitioner or veterinary technician, omit any non-compete or conflict-of-interest provision that restricts employment with another employer or self-employment in the same or a similar business. The statutory ban applies at any compensation level.",
         "variants": [],
         "sources": [
           {
@@ -1192,18 +1192,6 @@
             "proposition": "Section 3-716 extends the void-as-against-public-policy rule to veterinary practitioners and technicians.",
             "verbatimQuote": "an employee licensed as a veterinary practitioner or veterinary technician under Title 2, Subtitle 3 of the Agriculture Article",
             "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-vet-ban-gate"
-          },
-          {
-            "sourceId": "md-hb1388-vet-retroactive-gate",
-            "authorityType": "primary-law",
-            "tier": "primary-source-backed",
-            "title": "2024 Md. Laws ch. 378 (H.B. 1388)",
-            "citation": "2024 Md. Laws ch. 378, § 2 (H.B. 1388).",
-            "url": "https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf",
-            "proposition": "House Bill 1388 makes the veterinary non-compete ban apply retroactively to existing agreements.",
-            "verbatimQuote": "That this Act shall be construed to apply retroactively and shall be applied to and interpreted to affect an employment contract or a similar contract or agreement entered into on or before the effective date of this Act.",
-            "date": "2024-04-25",
-            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hb1388-vet-retroactive-gate"
           }
         ]
       },
