@@ -1,5 +1,17 @@
 # Startup Financing Update Log
 
+## 2026-09-13
+* **Update**: Clarify charter guide source scope and cross-document guidance (ddf5fee)
+
+## 2026-09-12
+* **Update**: Support each charter guide lead answer with scoped source groups (18f9c5b)
+* **Update**: Add substantive NVCA Certificate of Incorporation companion guide (28b5b0e)
+* **Update**: Correct charter guide source scope and tranche guidance (6419940)
+* **Update**: Fix Markdoc encoding of statutory source-card attributes (ff3dbb5)
+
+## 2026-09-07
+* **Update**: Fix checklist Word filenames and prepare sourced NVCA charter review (#2538) (80e3ef7)
+
 ## 2026-08-31
 * **Update**: fix(topics): cite Carta directly for SAFE term split (#2346) (ae0e3a6)
 

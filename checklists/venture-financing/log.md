@@ -1,5 +1,19 @@
 # Venture Financing Update Log
 
+## 2026-09-13
+* **Update**: Keep charter category orientation thin and link SPA from its review item (917f674)
+* **Update**: Scope charter checklist evidence and correct advance-notice binding (b90bc71)
+
+## 2026-09-12
+* **Update**: Disambiguate the Seaport charter source fragment (38cb66d)
+* **Update**: Show filed charter evidence through citation chips (4a321cb)
+* **Update**: Keep charter citation chips inline for Markdown exports (592fa3c)
+* **Update**: Promote the sourced NVCA charter checklist and matching specification (752418b)
+* **Update**: Bind charter requirements to template inputs and correct review evidence (ab7b0ed)
+
+## 2026-09-07
+* **Update**: Fix checklist Word filenames and prepare sourced NVCA charter review (#2538) (80e3ef7)
+
 ## 2026-07-06
 * **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)
 
