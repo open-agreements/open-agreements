@@ -11,11 +11,11 @@ const evidence = resolve('.cache/common-paper-declarative/expansion');
 const parts = (file: string) => Object.fromEntries(new AdmZip(readFileSync(file)).getEntries()
   .filter(e => !e.isDirectory).map(e => [e.entryName, e.getData().toString('base64')]));
 
-async function compare(id: string, variant: string, overrides: Record<string, string>, blanks = false) {
+async function compare(id: string, variant: string, overrides: Record<string, string | boolean>, blanks = false) {
   const dir = join(root, id);
   const contract = await compileSelectionContract(dir);
-  const values: Record<string, string> = blanks ? {} : Object.fromEntries(contract.metadata.fields.map(f => [f.name,
-    f.default ?? (f.type === 'date' ? '2026-09-12' : f.type === 'enum' ? f.options![0] : `Synthetic ${f.name}`),
+  const values: Record<string, string | boolean> = blanks ? {} : Object.fromEntries(contract.metadata.fields.map(f => [f.name,
+    f.default ?? (f.type === 'boolean' ? false : f.type === 'date' ? '2026-09-12' : f.type === 'enum' ? f.options![0] : `Synthetic ${f.name}`),
   ]));
   Object.assign(values, overrides);
   const out = join(evidence, id);
@@ -81,10 +81,28 @@ describe('additional source-generated Common Paper contracts', () => {
       await compare(id, 'blank-defaults', {}, true);
     });
   }
-  it('still blocks unsupported preprocessing rather than counting it as converted', async () => {
-    await expect(compileSelectionContract(join(root, 'common-paper-design-partner-agreement')))
-      .rejects.toThrow('Unsupported source artifact/stage');
-  });
+  for (const selected of ['partner_feedback_sessions', 'partner_case_study', 'partner_private_list', 'partner_public_list', 'partner_reference', 'has_partner_other_details', 'provider_discount', 'provider_develop_functionality', 'has_provider_other_details']) {
+    it(`Design Partner independent checkbox ${selected}`, async () => {
+      const {contract, text} = await compare('common-paper-design-partner-agreement', selected, {[selected]: true});
+      expect(contract.replacements).toEqual({'[ # ]': '{free_text}', '[$__________]': '{discount_amount}'});
+      expect(contract.sourceHashes['replacements.json']).toHaveLength(64);
+      for (const option of contract.selections.groups.find(g => g.type === 'checkbox')!.options) {
+        const marker = option.marker.replace(/\{([a-z_]+)\}/g, (_, name: string) => `Synthetic ${name}`);
+        expect(text.includes(marker), marker).toBe(option.trigger !== 'default' && option.trigger.field === selected);
+      }
+    });
+  }
+  for (const hasFees of [true, false]) {
+    for (const type of ['entity', 'individual']) {
+      it(`Design Partner fees=${hasFees} signer=${type}`, async () => {
+        const {text} = await compare('common-paper-design-partner-agreement', `fees-${hasFees}-${type}`, {
+          has_fees: hasFees, provider_signatory_type: type, partner_signatory_type: type,
+        });
+        expect(text.includes('There are no Fees under this Agreement')).toBe(!hasFees);
+        expect(text.includes('Synthetic provider_signatory_title')).toBe(type === 'entity');
+      });
+    }
+  }
   for (const [id, prefixes, fieldCount] of [
     ['common-paper-letter-of-intent', ['provider_signatory', 'customer_signatory'], 15],
     ['common-paper-term-sheet', ['party_1_signatory', 'party_2_signatory'], 12],

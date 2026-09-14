@@ -1,5 +1,51 @@
 # Common Paper Mutual NDA — local compiler pilot, 2026-09-12
 
+## Current increment — 2026-09-14
+
+The local v3 profile (`oa-selection-signature-pilot-v3`) now supports strict
+boolean inputs, checkbox/equality selection triggers, and literal source-text
+replacements that resolve to declared scalar bindings. Replacements are compiled
+through the same clean/patch stages as the legacy engine before marker and command
+validation. Their source bytes are hash-pinned alongside metadata, selections and
+DOCX. Custom clean stages, formatted replacements, arbitrary expressions and
+unknown bindings remain rejected. This supersedes the older v2 limitations below;
+the dated entries remain historical evidence.
+
+Common Paper Design Partner is the seventh verified local template. Thirteen
+new exact decompressed-DOCX comparisons cover nine independently selected
+checkboxes and four fee/signer combinations. Independent visible-text checks
+confirm checkbox retention/removal, fee alternatives and entity-title suppression.
+These are targeted cases, not exhaustive combinations of all nine booleans.
+Five rejection tests cover string booleans, absent search text, unknown/injected
+replacement bindings and replacement-source drift. Total: 65 tests and 56 exact
+DOCX comparisons across seven templates; TypeScript, focused lint and diff checks
+pass. Inventory compilation still reports `compiled-unverified`, not automatic
+promotion of any source revision.
+
+Reproduce with the earlier three-file command plus
+`src/core/selection-contract-stages.test.ts`. Evidence regenerates in
+`.cache/common-paper-declarative/expansion/common-paper-design-partner-agreement/`.
+`partner_feedback_sessions.docx` was rendered to
+`/private/tmp/partner_feedback_sessions.pdf` and opened locally; its first page
+was inspected. It retains feedback sessions and no-fee alternatives, with other
+commitments removed and signature layout intact. Synthetic field-name values
+are test data, not client-ready drafting. No Word certification is claimed.
+
+The first typecheck found lost union narrowing inside an array callback; a local
+trigger binding fixed it. Tests now assert visible checkbox results separately
+from parity so a shared legacy defect cannot masquerade as correct selection.
+
+No canonical source DOCX/prose changed in this increment; no push, public PR,
+Stella import or deployment. This worktree still uses its reviewed, pinned engine
+baseline; today's successful current-upstream CLI demo is separate evidence and
+does not establish v3 compatibility with upstream 0.10.2. Next integration gates
+remain refreshing/re-verifying that baseline, a Stella end-to-end/import/update
+test, and the prioritized Privacy Policy compatibility audit (#2695).
+
+Historical correction: the typography fixes described below as local-only have
+since merged in legal-explainer PR #2691 with production verification on
+2026-09-14. This does not make the separate declarative adapter deployed.
+
 ## Outcome
 
 `src/core/selection-contract.ts` generates a data-only contract directly from the
