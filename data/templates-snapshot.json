@@ -6935,8 +6935,8 @@
           "type": "string",
           "required": true,
           "section": "Legal",
-          "description": "Courts with jurisdiction over disputes",
-          "default": "courts located in New Castle County, Delaware",
+          "description": "Place where the state and federal courts sit. Enter the place name only (e.g. \"New Castle County, Delaware\"); the template supplies \"The state and federal courts located in \".",
+          "default": "New Castle County, Delaware",
           "default_value_rationale": null
         },
         {
