@@ -80,8 +80,7 @@ fields:
     type: date
     description: >-
       Agreement date in the opening paragraph ("is made as of <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
-      "March 15, 2026") or a display-ready date string. Replaces the former agreement_date_month_day +
-      agreement_year_two_digits split pair; the selector consumes the whole "[________], 20[__]" slot.
+      "March 15, 2026") or a display-ready date string.
   - name: par_value_per_share
     type: string
     description: Par value per share inserted in the opening purchase clause
@@ -115,19 +114,19 @@ fields:
     default: "false"
   - name: purchaser_scope
     type: string
-    description: Convertible securities consent scope word — set by computed.json from bind_all_convertible_holders_to_convert
+    description: Computed consent-scope word from bind_all_convertible_holders_to_convert ("all" or "such"); do not supply directly
   - name: optional_plural_suffix
     type: string
-    description: Optional plural suffix — set by computed.json defaults
+    description: Computed "s" suffix for the Closing heading when closing_type is additional; do not supply directly
   - name: closing_heading
     type: string
-    description: Heading text — set by computed.json defaults
+    description: Computed closing heading from closing_type ("Initial Closing." or "Closing."); do not supply directly
   - name: initial_word_lower
     type: string
-    description: Lowercase qualifier — set by computed.json defaults and rules
+    description: Computed lowercase "initial " qualifier when closing_type is additional; do not supply directly
   - name: initial_word_title
     type: string
-    description: Titlecase qualifier — set by computed.json defaults and rules
+    description: Computed title-case "Initial " qualifier when closing_type is additional; do not supply directly
   - name: bind_all_convertible_holders_to_convert
     type: boolean
     description: Purchasers agree on behalf of all convertible security holders to convert (not just their own)
@@ -293,12 +292,11 @@ fields:
   - name: state
     type: string
     description: >-
-      State whose courts are named in the dispute-resolution courts alternative (proper noun, e.g. Delaware). Keep
-      consistent with state_lower, which drives the judicial-district defaults.
+      State whose courts are named in the dispute-resolution courts alternative (proper noun, e.g. Delaware)
     default: Delaware
   - name: state_lower
     type: string
-    description: State name (lowercase, e.g. delaware) — drives judicial-district defaults and audit rules; not rendered in the document text
+    description: The same state in lowercase (e.g. delaware), used to choose a default federal judicial district when none is entered; not printed in the agreement
   - name: specify_percentage
     type: string
     description: Specified percentage threshold, as a number only (for example, 60)
