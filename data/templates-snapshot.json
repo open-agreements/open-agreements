@@ -10938,7 +10938,7 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Complete percentage carrier set by computed.json from the number-only percentage input",
+          "description": "Computed complete percentage carrier from the number-only percentage input; do not supply directly",
           "default": null,
           "default_value_rationale": null
         },
@@ -11424,7 +11424,7 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Complete punctuation-bearing Section 1(d) carrier set by computed.json from the IPO-termination election",
+          "description": "Computed complete punctuation-bearing Section 1(d) carrier from the IPO-termination election; do not supply directly",
           "default": null,
           "default_value_rationale": null
         },
@@ -14544,7 +14544,7 @@
           "type": "date",
           "required": false,
           "section": null,
-          "description": "Agreement date in the opening paragraph (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string. Replaces the former agreement_date_month_day + agreement_year_two_digits split pair; the selector consumes the whole \"[________], 20[__]\" slot.",
+          "description": "Agreement date in the opening paragraph (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
@@ -14634,7 +14634,7 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Convertible securities consent scope word — set by computed.json from bind_all_convertible_holders_to_convert",
+          "description": "Computed consent-scope word from bind_all_convertible_holders_to_convert (\"all\" or \"such\"); do not supply directly",
           "default": null,
           "default_value_rationale": null
         },
@@ -14643,7 +14643,7 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Optional plural suffix — set by computed.json defaults",
+          "description": "Computed \"s\" suffix for the Closing heading when closing_type is additional; do not supply directly",
           "default": null,
           "default_value_rationale": null
         },
@@ -14652,7 +14652,7 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Heading text — set by computed.json defaults",
+          "description": "Computed closing heading from closing_type (\"Initial Closing.\" or \"Closing.\"); do not supply directly",
           "default": null,
           "default_value_rationale": null
         },
@@ -14661,7 +14661,7 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Lowercase qualifier — set by computed.json defaults and rules",
+          "description": "Computed lowercase \"initial \" qualifier when closing_type is additional; do not supply directly",
           "default": null,
           "default_value_rationale": null
         },
@@ -14670,7 +14670,7 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Titlecase qualifier — set by computed.json defaults and rules",
+          "description": "Computed title-case \"Initial \" qualifier when closing_type is additional; do not supply directly",
           "default": null,
           "default_value_rationale": null
         },
@@ -15112,7 +15112,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State whose courts are named in the dispute-resolution courts alternative (proper noun, e.g. Delaware). Keep consistent with state_lower, which drives the judicial-district defaults.",
+          "description": "State whose courts are named in the dispute-resolution courts alternative (proper noun, e.g. Delaware)",
           "default": "Delaware",
           "default_value_rationale": null
         },
@@ -15121,7 +15121,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State name (lowercase, e.g. delaware) — drives judicial-district defaults and audit rules; not rendered in the document text",
+          "description": "The same state in lowercase (e.g. delaware), used to choose a default federal judicial district when none is entered; not printed in the agreement",
           "default": null,
           "default_value_rationale": null
         },

@@ -89,7 +89,7 @@ fields:
       offering, subject to the source form's protection for proceedings based on pre-termination facts
   - name: appointing_stockholder_ipo_termination_carrier
     type: string
-    description: Complete punctuation-bearing Section 1(d) carrier set by computed.json from the IPO-termination election
+    description: Computed complete punctuation-bearing Section 1(d) carrier from the IPO-termination election; do not supply directly
   - name: signature_page_marker
     type: string
     description: Signature page marker text
