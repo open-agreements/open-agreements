@@ -1,0 +1,379 @@
+---
+template_id: openagreements-venture-financing-due-diligence-request-list
+name: Venture Financing Due Diligence Request List
+category: venture-financing
+description: >-
+  A starting request list for a priced preferred stock financing, structured
+  on the common venture diligence categories.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-venture-financing-due-diligence-request-list
+version: "1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Authored by OpenAgreements contributors. Adapted from the Cooley GO sample
+  venture capital due diligence request list, with supporting requests from
+  the National Venture Capital Association model stock purchase agreement,
+  K&L Gates and Carta forms. Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Venture Financing Due Diligence Request List
+  label: OpenAgreements Venture Financing Due Diligence Request List
+  version: "1.0"
+  license: Free to use under CC BY 4.0
+  defined_term_highlight_mode: none
+sections:
+  cover_terms:
+    section_label: Cover Sheet
+    heading_title: Cover Sheet
+  standard_terms:
+    section_label: Due Diligence Request List
+    heading_title: Due Diligence Request List
+  signature:
+    section_label: Response Protocol
+    heading_title: Response Protocol
+omitted_clauses: drop
+fields:
+  - name: requesting_firm_name
+    type: string
+    description: Name of the law firm sending the requests for the investors
+    section: Cover Sheet
+  - name: company_name
+    type: string
+    description: Legal name of the company issuing the securities
+    section: Cover Sheet
+  - name: request_date
+    type: date
+    description: Date the request list is delivered to the Company
+    section: Cover Sheet
+  - name: response_due_date
+    type: date
+    description: Date the first response is due
+    section: Cover Sheet
+  - name: company_contact_name
+    type: string
+    description: Name of the Company contact for diligence responses
+    section: Cover Sheet
+priority_fields:
+  - company_name
+  - requesting_firm_name
+  - response_due_date
+artifact_kind: checklist
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental
+---
+
+# Venture Financing Due Diligence Request List
+
+{% agreement-section type="cover_terms" %}
+## Cover Sheet
+
+{% cover-terms %}
+{% cover-term kind="row" label="Requesting Firm" field="requesting_firm_name" /%}
+{% cover-term kind="row" label="Company" field="company_name" /%}
+{% cover-term kind="row" label="Delivery Date" field="request_date" /%}
+{% cover-term kind="row" label="Response Due Date" field="response_due_date" /%}
+{% cover-term kind="row" label="Company Contact" field="company_contact_name" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+
+{% agreement-section type="standard_terms" %}
+## Due Diligence Request List
+
+{% clause id="parties-financing" %}
+### Parties
+
+"Company" means {% field name="company_name" /%}, the company issuing the securities. "Requesting Party" means the investors in this financing and their counsel. These requests concern a priced preferred stock financing.
+{% /clause %}
+
+{% clause id="instructions" %}
+### Instructions
+
+The Company should respond to each numbered request and identify documents already provided. Mark a request "Does Not Exist" or "Not Applicable" where appropriate. If circumstances change after a response, promptly notify the Requesting Party and supplement the response with the additional documents needed.
+{% /clause %}
+
+## Section A: Actions and Minutes
+
+{% clause id="request-a-1" %}
+### A.1 Stockholder records
+
+Provide all stockholder meeting minutes and written actions.
+{% /clause %}
+
+{% clause id="request-a-2" %}
+### A.2 Board and committee records
+
+Provide the minutes and written consents of the board and its committees since incorporation.
+{% /clause %}
+
+## Section B: Charter Documents
+
+{% clause id="request-b-1" %}
+### B.1 Certificate of incorporation
+
+Provide the current certificate or articles of incorporation and all amendments.
+{% /clause %}
+
+{% clause id="request-b-2" %}
+### B.2 Bylaws
+
+Provide the current bylaws.
+{% /clause %}
+
+## Section C: Capital Stock
+
+{% clause id="request-c-1" %}
+### C.1 Capitalization
+
+Provide a capitalization summary showing outstanding shares, convertible securities, options, warrants and similar instruments.
+{% /clause %}
+
+{% clause id="request-c-2" %}
+### C.2 Security holders
+
+Provide stockholder, optionholder and warrantholder lists showing issuance dates, original issuance prices, and the class and number of securities held, together with issuance agreements.
+{% /clause %}
+
+{% clause id="request-c-3" %}
+### C.3 Equity plans
+
+Provide equity incentive plans and the forms used for grants under those plans.
+{% /clause %}
+
+{% clause id="request-c-4" %}
+### C.4 Convertible instruments
+
+Provide signed simple agreements for future equity (SAFEs), convertible notes, warrants and other convertible instruments, including amendments and side letters. If none exist, indicate that in the response.
+{% /clause %}
+
+{% clause id="request-c-5" %}
+### C.5 Stockholder rights
+
+Provide agreements covering voting, share transfers, registration, preemptive rights, and rights of first offer or refusal.
+{% /clause %}
+
+{% clause id="request-c-6" %}
+### C.6 Stock transactions and vesting
+
+Provide stock purchase, repurchase, sale and issuance agreements, including founder stock purchase agreements, and summarize vesting schedules for stock and options subject to vesting.
+{% /clause %}
+
+{% clause id="request-c-7" %}
+### C.7 Securities compliance
+
+Provide evidence of qualification or exemption under federal and state securities laws for prior issuances and transfers.
+{% /clause %}
+
+{% clause id="request-c-8" %}
+### C.8 Equity promises
+
+Identify equity promises to officers, employees, directors or consultants that differ from the share amounts or terms recorded in board minutes or written consents.
+{% /clause %}
+
+{% clause id="request-c-9" %}
+### C.9 Agreements among stockholders
+
+Provide agreements among stockholders to which the Company is not a party that address the sale, voting or transfer of Company securities.
+{% /clause %}
+
+{% clause id="request-c-10" %}
+### C.10 Section 83(b) elections
+
+Provide copies of Section 83(b) elections and evidence of timely filing for restricted stock subject to vesting.
+{% /clause %}
+
+{% clause id="request-c-11" %}
+### C.11 Section 409A valuations
+
+Provide all Section 409A valuation reports.
+{% /clause %}
+
+{% clause id="request-c-12" %}
+### C.12 Conversion schedule
+
+Provide a holder-by-holder schedule of convertible securities converting in this financing, showing the outstanding amount, conversion price, and resulting number and class of shares for each holder. Identify any proposed amendments needed for conversion.
+{% /clause %}
+
+## Section D: Legal and Regulatory
+
+{% clause id="request-d-1" %}
+### D.1 Litigation and disputes
+
+Provide documents and correspondence concerning pending or threatened litigation, or disputes that could lead to litigation, involving the Company, its executive officers or directors.
+{% /clause %}
+
+{% clause id="request-d-2" %}
+### D.2 Orders and settlements
+
+Provide settlement agreements, consent decrees, injunctions, judgments and other orders.
+{% /clause %}
+
+## Section E: Intellectual Property
+
+{% clause id="request-e-1" %}
+### E.1 Invention and confidentiality forms
+
+Provide the proprietary information and inventions agreement forms used with current and former employees and consultants.
+{% /clause %}
+
+{% clause id="request-e-2" %}
+### E.2 Signed agreements and gaps
+
+Provide signed proprietary information and inventions agreements for key employees and consultants. List employees and consultants who have not signed, including periods when key employees or consultants worked without an agreement.
+{% /clause %}
+
+{% clause id="request-e-3" %}
+### E.3 Excluded inventions
+
+Provide proprietary information and inventions agreements that exclude any inventions or other rights from assignment to the Company.
+{% /clause %}
+
+{% clause id="request-e-4" %}
+### E.4 Technology transfers and development
+
+Provide documents transferring technology to the Company and agreements for technology development or purchases.
+{% /clause %}
+
+{% clause id="request-e-5" %}
+### E.5 Licenses and technology agreements
+
+Provide agreements concerning the Company’s or others’ patents, copyrights, trade secrets, proprietary information or technology, excluding agreements for standard or off-the-shelf products.
+{% /clause %}
+
+{% clause id="request-e-6" %}
+### E.6 Intellectual property lists and searches
+
+List patents, copyrights and trademarks, and provide any searches performed concerning them.
+{% /clause %}
+
+## Section F: Management, Employees and Consultants
+
+{% clause id="request-f-1" %}
+### F.1 Related-party arrangements
+
+Provide agreements, understandings and proposed transactions between the Company and its employees, officers, directors or affiliates, or their affiliates, including employment and indemnification agreements, loans and guarantees.
+{% /clause %}
+
+{% clause id="request-f-2" %}
+### F.2 Employment and consulting documents
+
+Provide employment, consulting and independent contractor agreements, and offer letters.
+{% /clause %}
+
+{% clause id="request-f-3" %}
+### F.3 Benefits and compensation plans
+
+Provide employee benefit, profit-sharing, deferred compensation and bonus plans or arrangements. Provide equity plans and grant forms under C.3.
+{% /clause %}
+
+{% clause id="request-f-4" %}
+### F.4 Officers and directors
+
+List the current officers and directors. Identify officers who devote less than all of their business time to the Company.
+{% /clause %}
+
+{% clause id="request-f-5" %}
+### F.5 Accrued compensation and expenses
+
+Provide a breakdown of unpaid accrued salary, paid time off and reimbursable expenses.
+{% /clause %}
+
+## Section G: Debt Financing
+
+{% clause id="request-g-1" %}
+### G.1 Debt documents
+
+Provide all debt instruments and credit agreements currently in effect, including lease financing.
+{% /clause %}
+
+{% clause id="request-g-2" %}
+### G.2 Guarantees
+
+Provide guarantees of obligations owed by third parties.
+{% /clause %}
+
+## Section H: Other Agreements
+
+{% clause id="request-h-1" %}
+### H.1 Property leases
+
+Provide real property leases with amendments and exhibits.
+{% /clause %}
+
+{% clause id="request-h-2" %}
+### H.2 Capital leases
+
+Provide agreements for capital leases.
+{% /clause %}
+
+{% clause id="request-h-3" %}
+### H.3 Standard forms
+
+Provide the Company’s standard agreement forms.
+{% /clause %}
+
+{% clause id="request-h-4" %}
+### H.4 Joint ventures and partnerships
+
+Provide agreements for joint ventures and partnerships.
+{% /clause %}
+
+{% clause id="request-h-5" %}
+### H.5 Management, services and marketing
+
+Provide agreements for management, services and marketing.
+{% /clause %}
+
+{% clause id="request-h-6" %}
+### H.6 Confidentiality
+
+Provide confidentiality and nondisclosure agreements.
+{% /clause %}
+
+{% clause id="request-h-7" %}
+### H.7 Financing consents
+
+Provide agreements requiring consent or approval for this financing. If none exist, indicate that in the response.
+{% /clause %}
+
+{% clause id="request-h-8" %}
+### H.8 Other material agreements
+
+Provide other agreements that are material to the Company’s business or outside its ordinary course of business.
+{% /clause %}
+
+## Section I: Miscellaneous and Financial Information
+
+{% clause id="request-i-1" %}
+### I.1 Business and financial studies
+
+Provide reports and studies prepared by the Company or outside consultants on the business or financial condition of the Company, its subsidiaries or its affiliates.
+{% /clause %}
+
+{% clause id="request-i-2" %}
+### I.2 Financial statements
+
+Provide the latest audited financial statements and the latest unaudited monthly financial statements.
+{% /clause %}
+
+{% clause id="request-i-3" %}
+### I.3 Business restrictions
+
+Describe contracts that restrict the Company’s ability to compete in a line of business or with another person or entity, or require the Company or a subsidiary to remain in a line of business.
+{% /clause %}
+
+{% clause id="request-i-4" %}
+### I.4 Business plan and offering materials
+
+Provide the latest business plan, offering memorandum or similar Company document.
+{% /clause %}
+
+{% /agreement-section %}
