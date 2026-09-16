@@ -38,6 +38,11 @@ type CaseReceipt = {
   legacy_sha256?: string;
   visible_text_sha256?: string;
   compared_entries?: number;
+  comparison_profile?: 'legacy-exact' | 'legacy-explicit-empty-selection-inputs';
+  normalized_selection_fields?: string[];
+  reference_input_sha256?: string;
+  reference_sha256?: string;
+  raw_legacy_differences?: string[];
 };
 export type ThirdpartyReceipt = {
   profile: typeof PROFILE;
@@ -292,6 +297,27 @@ function attributionChecks(sourcePath: string, outputPath: string): string[] {
   return attributionProofs(sourcePath).flatMap((proof) => output.includes(proof) ? [] : [`source attribution/license paragraph was not preserved: ${proof}`]);
 }
 
+/**
+ * Independent reference inputs for the adapter's explicit blank-selection
+ * semantics. Do not change the shared legacy engine, invent field values, or
+ * waive ZIP parity: compare against a real legacy fill with only source-declared
+ * presence-trigger placeholders answered explicitly empty. If that changes
+ * unrelated visible content, full-package comparison still blocks promotion.
+ */
+export function selectionReferenceInputs(contract: SelectionContract, supplied: Values): { values: Values; fields: string[] } {
+  const fields = new Set<string>();
+  for (const group of contract.selections.groups) for (const option of group.options) {
+    const trigger = option.trigger;
+    if (trigger === 'default' || trigger.equals !== undefined) continue;
+    const field = contract.metadata.fields.find(candidate => candidate.name === trigger.field);
+    if (field?.type !== 'string') continue;
+    const effective = Object.hasOwn(supplied, field.name) ? supplied[field.name] : field.default ?? '_______';
+    if (typeof effective === 'string' && effective.trim() === '_______') fields.add(field.name);
+  }
+  const names = [...fields].sort();
+  return { values: { ...supplied, ...Object.fromEntries(names.map(name => [name, ''])) }, fields: names };
+}
+
 export async function verifyThirdpartyTemplate(templateDir: string, evidenceRoot = THIRDPARTY_EVIDENCE_ROOT): Promise<ThirdpartyReceipt> {
   const templateId = basename(templateDir); const outputDir = join(evidenceRoot, templateId);
   rmSync(outputDir, { recursive: true, force: true }); mkdirSync(join(outputDir, 'cases'), { recursive: true });
@@ -347,10 +373,17 @@ export async function verifyThirdpartyTemplate(templateDir: string, evidenceRoot
     try {
       const next = await fillSelectionContract(templateDir, contract, testCase.values, declarative);
       const previous = await fillTemplate({ templateDir, values: testCase.values, outputPath: legacy });
-      const comparison = compareMeaningfulEntries(declarative, legacy); reasons.push(...comparison.reasons);
+      const reference = selectionReferenceInputs(contract, testCase.values);
+      const referencePath = reference.fields.length ? join(outputDir, 'cases', `${stem}.selection-reference.docx`) : legacy;
+      const expected = reference.fields.length
+        ? await fillTemplate({ templateDir, values: reference.values, outputPath: referencePath }) : previous;
+      const rawDifferences = compareMeaningfulEntries(declarative, legacy).reasons;
+      if (JSON.stringify(next.fieldsUsed) !== JSON.stringify(previous.fieldsUsed)) rawDifferences.push('raw legacy fieldsUsed differs');
+      const comparison = compareMeaningfulEntries(declarative, referencePath); reasons.push(...comparison.reasons);
       const declarativeText = bodyParagraphs(declarative); const legacyText = bodyParagraphs(legacy);
-      if (JSON.stringify(declarativeText) !== JSON.stringify(legacyText)) reasons.push('ordered visible body text differs from legacy output');
-      if (JSON.stringify(next.fieldsUsed) !== JSON.stringify(previous.fieldsUsed)) reasons.push('fieldsUsed differs from legacy output');
+      if (JSON.stringify(declarativeText) !== JSON.stringify(legacyText)) rawDifferences.push('raw legacy ordered body differs');
+      if (JSON.stringify(declarativeText) !== JSON.stringify(bodyParagraphs(referencePath))) reasons.push('ordered visible body text differs from reference output');
+      if (JSON.stringify(next.fieldsUsed) !== JSON.stringify(expected.fieldsUsed)) reasons.push('fieldsUsed differs from reference output');
       reasons.push(...await independentOutputChecks(declarative, contract, testCase.values));
       reasons.push(...attributionChecks(join(templateDir, 'template.docx'), declarative));
       receipts.push({
@@ -358,6 +391,10 @@ export async function verifyThirdpartyTemplate(templateDir: string, evidenceRoot
         values_sha256: sha256(JSON.stringify(testCase.values, Object.keys(testCase.values).sort())),
         declarative_sha256: sha256(readFileSync(declarative)), legacy_sha256: sha256(readFileSync(legacy)),
         visible_text_sha256: sha256(JSON.stringify(declarativeText)), compared_entries: comparison.count,
+        comparison_profile: reference.fields.length ? 'legacy-explicit-empty-selection-inputs' : 'legacy-exact',
+        normalized_selection_fields: reference.fields,
+        reference_input_sha256: sha256(canonical(reference.values)),
+        reference_sha256: sha256(readFileSync(referencePath)), raw_legacy_differences: rawDifferences,
       });
     } catch (error) {
       receipts.push({ id: testCase.id, purpose: testCase.purpose, status: 'blocked',
@@ -373,7 +410,7 @@ export async function verifyThirdpartyTemplate(templateDir: string, evidenceRoot
   const receipt: ThirdpartyReceipt = {
     profile: PROFILE, template_id: templateId, artifact_class: 'fillable', status,
     promotion: status === 'verified'
-      ? { eligible: true, reason: 'Every generated case passed declarative/legacy parity and independent artifact checks.' }
+      ? { eligible: true, reason: 'Every generated case passed full reference parity and independent artifact checks; any explicit-empty selection reference is identified per case.' }
       : { eligible: false, reason: sourceGuard[0] ?? `${blocked.length} generated case(s) blocked.` },
     source_hashes: contract.sourceHashes, compiled_contract_sha256: sha256(canonical(contract)), runtime,
     case_inventory: inventory(cases), cases: receipts,
@@ -413,7 +450,10 @@ async function main(): Promise<void> {
   if (blocked.length) process.exitCode = 1;
 }
 
-if (process.argv.slice(1).some((arg) => resolve(arg) === fileURLToPath(import.meta.url))) {
+if (
+  process.argv.slice(1).some((arg) => resolve(arg) === fileURLToPath(import.meta.url)) ||
+  (process.argv[1]?.includes('vite-node') === true && process.env.VITEST === undefined)
+) {
   void main().catch((error) => {
     console.error(error);
     process.exitCode = 1;

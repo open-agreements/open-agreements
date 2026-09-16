@@ -28,6 +28,56 @@ Per-template receipts, contract hashes, runtime hashes, and deterministic case i
 
 This is a read-only source and adapter audit. It does not authorize changing third-party legal prose. A compiler may promote a form only after every legal/render-affecting artifact is fingerprinted and its transformations are independently verified.
 
+## Final combined correction — 2026-09-16
+
+The earlier runtime checkpoint above is historical. The final integrated sweep
+retains **12 fillable / 107 passing cases, one static copy, and 12 blocked**.
+Its runtime digest is
+`6bc82221f4441ed13813e1b5584600b3410c92637bdfb07f481a86d2edd5c5e7`;
+verifier SHA-256 is
+`e46bf5a38fb4ae4e14798ba6e9ea876c921884eb87687cd083de39325cdb4786`.
+Log: `/private/tmp/oa-thirdparty-release-evidence.log`. The command exits one
+because blocked forms remain; this is not a claim of a wholly passing corpus.
+
+An initial global change treating `_______` as empty broke existing NVCA
+selection behavior. Commit `16468e5e` restored the legacy default and restricted
+the new semantics to the declarative adapter's selection data. All NVCA tests
+pass in the combined 1,959-test regression run. Full legacy comparison exposed
+intentional default-selection differences in Order Form and BAA: an unanswered
+custom date must not select the custom-date alternative merely because its
+placeholder is nonempty.
+
+The verifier now records the raw legacy fill and differences, then compares
+every meaningful ZIP entry, ordered paragraph, and fields-used list against an
+actual legacy fill whose source-declared presence-trigger placeholder inputs
+are explicitly empty. This is a named per-case reference profile, not a blanket
+parity waiver. Source-derived selected-option and attribution checks still run.
+Three focused reference-input tests cover actual Order Form/BAA behavior and
+the bounded normalization rule.
+
+The six replacement blockers are not all proven to conflate different legal
+facts. Further read-only source inspection distinguishes:
+
+- Design Partner and Order Form with SLA: confirmed unrelated numeric facts
+  share generic replacement keys, as documented below.
+- CSA with SLA: payment-days replacement also reaches SLA credit bands (11
+  occurrences). Partnership: one invoice-address replacement reaches both
+  Company and Partner invoice-address roles. Both need source-qualified mappings.
+- DPA: repeated greater-of-dollar and covered-claims replacements occur in
+  alternative CSA/non-CSA contexts. PSA: the same cap-multiplier replacement
+  occurs in General and Increased Cap cells. These may admit explicit bounded
+  occurrence annotations, but the present source does not prove a unique target.
+  They remain blocked, not labeled confirmed legal corruption.
+
+The other six need explicit group/cell locators, including multi-cell AI choices,
+reused material descriptions in SOW, and Pilot cap choices. No template-ID
+exception or unrestricted replace-all was added to force promotion.
+
+Attribution verification preserves source DOCX attribution where present and
+hashes metadata. Amendment declares attribution in metadata but has no matching
+attribution paragraph in its existing DOCX; the current verification does not
+invent one or certify source licensing compliance.
+
 ## Findings
 
 ### Bonterms
@@ -117,6 +167,19 @@ The replacement file SHA-256 is `4f7f2883d157fd040bd6c6b3d18d28371364a7221dd040c
 The three replacement hashes above exactly match `git show origin/main:<path>`.
 
 ## Reproduction
+
+Run the complete discovered 25-template inventory with the checkout's locked
+development runtime:
+
+```bash
+npm run verify:thirdparty-contracts
+```
+
+The command intentionally exits nonzero while any discovered form is blocked;
+the catalog receipt preserves all 25 in the denominator. **Corrected 2026-09-16:**
+the initial direct-entry guard silently did nothing under `vite-node`; it now
+supports that runner explicitly while remaining inert when imported by Vitest.
+An empty log and exit zero are not verification evidence.
 
 Show the current compiler blockers:
 

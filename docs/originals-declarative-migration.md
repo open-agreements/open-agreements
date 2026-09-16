@@ -97,9 +97,9 @@ inventory receipt at `.cache/original-contracts/catalog-receipt.json`.
 
 ```sh
 npm run build
-npx vite-node scripts/verify-original-contracts.ts
+npm run verify:original-contracts
 npx vitest run scripts/export-original-contracts.test.mjs
-node scripts/export-original-contracts.mjs --verified-only
+npm run export:original-contracts
 node scripts/fill-original-contract.mjs \
   --template openagreements-privacy-policy \
   --values /absolute/path/to/synthetic-values.json \
@@ -220,6 +220,58 @@ check, not a claim to have visually reviewed all six pages or all 81 forms.
 Hashes, gate evaluation, stale-evidence rejection, and mutation resistance are
 test evidence, not visually verifiable properties. These checks do not certify
 Microsoft Word pagination or the legal sufficiency of the source provisions.
+
+## Final combined checkpoint — 2026-09-16
+
+This supersedes the historical 998-case checkpoint above. All **81 originals
+are verified, across 1,077 passing verification cases, with zero blocked**.
+Cases include expected rejection of invalid inputs, not 1,077 generated DOCXs.
+The freshly rebuilt verified-only catalog contains all 81 originals.
+
+- Original runtime digest: `10130af5fba17fc653d52e33d8fc492dd125b72eb9d9de7002c0aff5b6989a21`.
+- Original verifier SHA-256: `7d6f00ce634f3f0e7959155991e32103717970fb58365965147ffb8537559294`.
+- Original sweep log: `/private/tmp/oa-originals-release-evidence.log`.
+- Combined full regression: **159 test files passed, four skipped; 1,959 tests
+  passed, eight skipped**, using `npm run test:run -- --maxWorkers=2`.
+  Log: `/private/tmp/oa-declarative-all-tests-final.log`.
+- Build, lint, validation, derived-artifact checks, documentation checks, and
+  diff whitespace checks passed. The inventory validator covers 106 bundled
+  templates, four external templates, and seven selectors.
+- `git diff --name-only 518040de -- templates external field-selectors` is empty:
+  no canonical legal prose, metadata, distributed DOCX, or external recipe changed.
+
+The combined third-party extension verifies 12 fillable forms across 107 cases,
+validates one zero-field static copy, and keeps 12 forms blocked. See
+`thirdparty-declarative-blockers.md` for exact classifications and the independently
+checked explicit-empty reference profile. A global placeholder-truthiness change
+initially broke seven NVCA regression tests; it was corrected in `16468e5e` by
+making the new selection behavior adapter-only. The final full suite includes
+those unchanged NVCA tests. No NVCA or YC source is redistributed by this work.
+
+### Corpus rendering and final review artifacts
+
+Every original's baseline DOCX was rendered using LibreOffice 26.2.5.2: **81/81
+PDFs, 351 pages**. Automated checks found the expected title and attribution in
+all 81 PDFs and all 118,606 extracted word boxes within page bounds (0.25-point
+tolerance). The reproducible audit is at
+`.cache/original-contracts/render-audit/audit.json`; that snapshot precedes the
+third-party-only selector correction and uses the same original renderer.
+Bounds checks do not prove absence of overlap or certify Word pagination.
+
+Visual sampling covered Privacy Policy and the first/last pages of generic and
+Florida employment offers. A claimed Florida name/date concatenation was a
+review false positive: direct inspection of the exact PNG, OOXML breaks, and
+PDF text established separate lines. The audit retains the superseded finding
+and dated correction; no source or renderer change was made for it.
+
+Three fresh fills from the final verified runtime are in
+`/Users/stevenobiajulu/Downloads/openagreements-declarative-review-2026-09-16/`:
+`privacy-policy.docx`, `board-consent.docx`, and `closing-checklist.docx`, with
+synthetic JSON inputs and PDF/PNG previews. All five final preview pages were
+visually inspected and the three PDFs opened. Check the privacy numbering and
+rights clauses, two separate director signature blocks, and exactly two document
+rows/one action/no phantom issue in the checklist. Attribution and headers are
+visible throughout. These are demonstrations, not client-ready legal advice.
 
 ## Remaining boundary
 
