@@ -1,5 +1,8 @@
 # Venture Financing Update Log
 
+## 2026-09-16
+* **Update**: content(templates): add a venture financing due diligence request list (#2693) (7597ba2)
+
 ## 2026-09-13
 * **Update**: Keep charter category orientation thin and link SPA from its review item (917f674)
 * **Update**: Scope charter checklist evidence and correct advance-notice binding (b90bc71)
