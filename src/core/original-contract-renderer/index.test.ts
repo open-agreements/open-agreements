@@ -21,6 +21,8 @@ attribution_text: Synthetic fixture only
 ${body}`;
 const xml = (buffer: Buffer) => new AdmZip(buffer).readAsText('word/document.xml');
 const part = (buffer: Buffer, name: string) => new AdmZip(buffer).readAsText(name);
+const parts = (buffer: Buffer, prefix: string) => new AdmZip(buffer).getEntries()
+  .filter(entry => entry.entryName.startsWith(prefix)).map(entry => entry.getData().toString('utf8'));
 const termStyles = (buffer: Buffer, term: string) => {
   const doc = new DOMParser().parseFromString(xml(buffer), 'application/xml');
   return Array.from(doc.getElementsByTagName('w:t')).filter(node => node.textContent === `“${term}”`).map(node => {
@@ -190,6 +192,63 @@ The person is {% field name="name" /%}.
     expect(result.compatibilityNotes).toEqual([
       'document.include_cloud_doc_line=true is a legacy-inert compatibility flag; the native DOCX profile emits no cloud-document line.',
     ]);
+  });
+
+  it('restores production section framing while keeping a filled policy header neutral', async () => {
+    const privacy = source(`# Privacy Policy
+
+This policy applies to {% field name="name" /%}.
+
+{% agreement-section type="standard_terms" %}
+## Privacy Policy
+{% clause id="use" %}
+### Use of Information
+We use information as described here.
+{% /clause %}
+{% /agreement-section %}
+{% agreement-section type="signature" %}
+## How to Contact Us
+Contact {% field name="name" /%}.
+{% /agreement-section %}`)
+      .replace('layout_id: cover-standard-signature-v1', 'layout_id: traditional-consent-v1')
+      .replace('  title: Synthetic verification instrument', `  title: Privacy Policy
+  label: OpenAgreements Consumer Privacy Policy
+  version: "0.1"
+  presentation: traditional`)
+      .replace('attribution_text: Synthetic fixture only', 'attribution_text: Adapted from the OpenAgreements privacy-policy specification. Licensed under CC BY 4.0.')
+      .replace('---\n# Privacy Policy', `sections:
+  cover_terms:
+    section_label: Policy Summary
+    heading_title: Policy Summary
+  standard_terms:
+    section_label: Privacy Policy
+    heading_title: Privacy Policy
+  signature:
+    section_label: Contact
+    heading_title: How to Contact Us
+---
+# Privacy Policy`);
+    const result = await renderOriginalMarkdoc(privacy, fields);
+    const documentXml = xml(result.buffer);
+    const styleXml = part(result.buffer, 'word/styles.xml');
+    const headerXml = parts(result.buffer, 'word/header');
+    const footerXml = parts(result.buffer, 'word/footer');
+
+    // These production values failed on the migrated renderer (264/160 body
+    // spacing, a label header, and no section-page framing).
+    expect(styleXml).toContain('<w:style w:type="paragraph" w:styleId="OABody">');
+    expect(styleXml).toContain('<w:spacing w:after="280" w:line="340"/>');
+    expect(styleXml).toContain('<w:color w:val="117086"/>');
+    expect(styleXml).toContain('<w:spacing w:after="120" w:before="320" w:line="340"/>');
+    expect(documentXml).not.toContain('<w:type w:val="nextPage"/>');
+    expect(headerXml).toHaveLength(1);
+    expect(headerXml.join('\n')).toContain('Privacy Policy');
+    expect(headerXml.join('\n')).toContain('<w:bottom w:val="single" w:color="107087" w:sz="8" w:space="0"/>');
+    expect(headerXml.join('\n')).not.toContain('OpenAgreements Consumer Privacy Policy');
+    expect(footerXml).toHaveLength(1);
+    expect(footerXml.join('\n')).toContain('OpenAgreements Consumer Privacy Policy (v0.1). Adapted from the OpenAgreements privacy-policy specification. Licensed under CC BY 4.0.');
+    expect(footerXml.join('\n')).toContain('<w:instrText xml:space="preserve">PAGE</w:instrText>');
+    expect(footerXml.join('\n')).toContain('<w:instrText xml:space="preserve">NUMPAGES</w:instrText>');
   });
 
   it.each([

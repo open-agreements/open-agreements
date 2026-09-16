@@ -2,7 +2,7 @@
 import Markdoc, { type Node } from '@markdoc/markdoc';
 import yaml from 'js-yaml';
 import { AlignmentType, BorderStyle, Document, Footer, Header, HeadingLevel, HeightRule, LevelFormat,
-  Packer, Paragraph, Table, TableCell, TableRow, TextRun, WidthType } from 'docx';
+  Packer, PageNumber, Paragraph, SectionType, Tab, TabStopType, Table, TableCell, TableRow, TextRun, WidthType } from 'docx';
 import type { FieldDefinition } from '../metadata.js';
 import type { ConfirmClauseDescriptor } from '../fill-pipeline.js';
 
@@ -69,6 +69,19 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
   const meta = front.document as Record<string, unknown> | undefined;
   if (!meta || typeof meta.title !== 'string') throw new Error('Canonical document title is required');
   for (const key of Object.keys(meta)) if (!DOCUMENT_KEYS.has(key)) throw new Error(`Unsupported canonical document setting: ${key}`);
+  const sectionMetadata = front.sections as Record<string, unknown> | undefined;
+  if (sectionMetadata !== undefined) {
+    for (const [section, value] of Object.entries(sectionMetadata)) {
+      if (!['cover_terms', 'standard_terms', 'signature'].includes(section) || !value || typeof value !== 'object' || Array.isArray(value)) {
+        throw new Error(`Invalid canonical section setting: ${section}`);
+      }
+      for (const [key, text] of Object.entries(value as Record<string, unknown>)) {
+        if (!['section_label', 'heading_title'].includes(key) || typeof text !== 'string' || !text.length) {
+          throw new Error(`Invalid canonical section setting: ${section}.${key}`);
+        }
+      }
+    }
+  }
   if (meta.presentation !== undefined && meta.presentation !== 'traditional') throw new Error('Unsupported document presentation');
   if (meta.defined_term_highlight_mode !== undefined && !['all_instances', 'definition_site_only', 'none'].includes(String(meta.defined_term_highlight_mode))) {
     throw new Error('Unsupported defined-term highlight mode');
@@ -210,8 +223,10 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
     }
     throw new Error(`Unsupported inline node: ${node.type}/${node.tag ?? ''}`);
   });
+  // Concrete values reproduce the production OA document profile. Keep the
+  // body style on ordinary paragraphs so Word retains its intended justification.
   const paragraph = (runs: TextRun[], extra: ConstructorParameters<typeof Paragraph>[0] = {}) => new Paragraph({
-    spacing: { after: 160, line: 264 }, children: runs, ...(typeof extra === 'object' ? extra : {}),
+    style: 'OABody', children: runs, ...(typeof extra === 'object' ? extra : {}),
   });
   const blocks = (nodes: Node[], inClause = false): Block[] => nodes.flatMap(node => {
     if (node.errors.length) throw new Error(`Malformed Markdoc: ${node.errors.map(error => error.message).join('; ')}`);
@@ -221,9 +236,10 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
       const level = node.attributes.level;
       if (![1, 2, 3].includes(level)) throw new Error(`Unsupported heading level: ${level}`);
       return [paragraph(inline(node.children, { font: level === 1 ? 'Georgia' : 'Arial',
-        size: level === 1 ? 46 : level === 2 ? 30 : 24, bold: level !== 1, color: level === 2 ? '117086' : '1D2021' }), {
+        size: level === 1 ? 52 : level === 2 ? 30 : 24, bold: level !== 1, color: level === 2 ? '117086' : '1D2021' }), {
+        style: level === 1 ? 'OATitle' : level === 2 ? 'OASectionHeading' : 'OASubHeading',
         heading: level === 1 ? HeadingLevel.TITLE : level === 2 ? HeadingLevel.HEADING_1 : HeadingLevel.HEADING_2,
-        keepNext: true, spacing: { before: level === 1 ? 80 : 220, after: 140 },
+        keepNext: true,
         ...(inClause && level === 3 ? { numbering: { reference: 'oa-clause', level: 0 } } : {}),
       })];
     }
@@ -337,6 +353,9 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
     }
     return wrap(gate, contents);
   });
+  // Keep source groups in their authored flow. In particular, a board consent's
+  // recitals lead directly into its resolutions; section metadata is navigation
+  // metadata, not an instruction to insert a page break.
   let children = blocks([root]);
   if (pending.length) {
     const globalGate = newGate({ anyOf: pending });
@@ -346,19 +365,27 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
     })])]), ...children];
   }
   if (!children.length) throw new Error('Canonical document has no rendered content');
+  const footerText = `${meta.label ?? meta.title}${meta.version ? ` (v${meta.version})` : ''}${front.attribution_text ?? meta.license ? `. ${String(front.attribution_text ?? meta.license)}` : ''}`;
+  const page = { size: { width: 12240, height: 15840 }, margin: { top: 936, bottom: 720, left: 1080, right: 1080, header: 360, footer: 432 } };
+  const header = (label: string) => new Header({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, spacing: { after: 0 },
+    border: { bottom: { style: BorderStyle.SINGLE, color: '107087', size: 8, space: 0 } }, children: [new TextRun({ text: label, font: 'Arial', size: 18, bold: true, allCaps: true, color: '107087' })] })] });
+  const footer = () => new Footer({ children: [new Paragraph({ spacing: { before: 0, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: 10080 }], children: [
+    new TextRun({ text: footerText, font: 'Arial', size: typeof meta.footer_font_size_half_points === 'number' ? meta.footer_font_size_half_points : 18, color: '494A4B' }), new Tab(),
+    new TextRun({ text: 'Page ', font: 'Arial', size: 18, color: '494A4B' }), new TextRun({ children: [PageNumber.CURRENT], font: 'Arial', size: 18, color: '494A4B' }),
+    new TextRun({ text: ' of ', font: 'Arial', size: 18, color: '494A4B' }), new TextRun({ children: [PageNumber.TOTAL_PAGES], font: 'Arial', size: 18, color: '494A4B' }),
+  ] })] });
   const document = new Document({ title: meta.title, creator: 'OpenAgreements',
-    styles: { default: { document: { run: { font: 'Arial', size: 22 }, paragraph: { spacing: { line: 264, after: 160 } } } }, paragraphStyles: [
-      { id: 'Title', name: 'Title', basedOn: 'Normal', run: { font: 'Georgia', size: 46, color: '1D2021' } },
-      { id: 'Heading1', name: 'Heading 1', basedOn: 'Normal', run: { font: 'Arial', size: 30, bold: true, color: '117086' } },
-      { id: 'Heading2', name: 'Heading 2', basedOn: 'Normal', run: { font: 'Arial', size: 24, bold: true } },
+    styles: { default: { document: { run: { font: 'Arial', size: 22 }, paragraph: { spacing: { line: 340, after: 280 } } } }, paragraphStyles: [
+      { id: 'OABody', name: 'OA Body', basedOn: 'Normal', next: 'OABody', run: { font: 'Arial', size: 22, color: '1D2021' }, paragraph: { spacing: { line: 340, after: 280 }, alignment: AlignmentType.JUSTIFIED } },
+      { id: 'OATitle', name: 'OA Title', basedOn: 'Normal', next: 'OABody', run: { font: 'Georgia', size: 52, color: '1D2021' }, paragraph: { keepNext: true, spacing: { before: 240, after: 210, line: 340 }, alignment: AlignmentType.LEFT } },
+      { id: 'OASectionHeading', name: 'OA Section Heading', basedOn: 'Normal', next: 'OABody', run: { font: 'Arial', size: 30, bold: true, color: '117086' }, paragraph: { keepNext: true, spacing: { before: 240, after: 120, line: 340 }, alignment: AlignmentType.LEFT } },
+      { id: 'OASubHeading', name: 'OA Sub Heading', basedOn: 'Normal', next: 'OABody', run: { font: 'Arial', size: 24, bold: true, color: '1D2021' }, paragraph: { keepNext: true, spacing: { before: 320, after: 120, line: 340 }, alignment: AlignmentType.LEFT } },
     ] },
     numbering: { config: [{ reference: 'oa-clause', levels: [{ level: 0, format: LevelFormat.DECIMAL, text: '%1.', alignment: AlignmentType.START }] }, ...listNumbering] },
-    sections: [{ properties: { page: { size: { width: 12240, height: 15840 }, margin: { top: 1080, bottom: 1080, left: 1440, right: 1440 } } },
-      headers: { default: new Header({ children: [new Paragraph({ children: [new TextRun({ text: String(meta.label ?? meta.title), font: 'Arial', size: 18, color: '555555' })] })] }) },
-      footers: { default: new Footer({ children: [new Paragraph({ children: [new TextRun({
-        text: `${meta.label ?? meta.title}${meta.version ? ` (v${meta.version})` : ''}${front.attribution_text ?? meta.license ? `. ${String(front.attribution_text ?? meta.license)}` : ''}`,
-        font: 'Arial', size: typeof meta.footer_font_size_half_points === 'number' ? meta.footer_font_size_half_points : 16, color: '555555',
-      })] })] }) }, children }],
+    // A single neutral source-title header avoids publisher attribution in a
+    // filled artifact while preserving continuous source flow across sections.
+    sections: [{ properties: { type: SectionType.CONTINUOUS, page },
+      headers: { default: header(String(meta.title)) }, footers: { default: footer() }, children }],
   });
   return { buffer: Buffer.from(await Packer.toBuffer(document)), profile: 'oa-original-markdoc-docx-v1', bindings, sourceBindings, syntheticGates, confirmClauses, clauses, compatibilityNotes };
 }
