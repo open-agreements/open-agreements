@@ -109,13 +109,17 @@ not visually verifiable properties.
 - The runtime still uses OpenAgreements' generic selection/fill pipeline and the
   original DOCX. This is a declarative adapter, **not a DOCX-free legal source** or
   a standalone portable Stella runtime. No arbitrary expression execution is added.
-- Source hashes cover metadata, selections and DOCX. Runtime recompilation rejects
-  changed sources/manifests. The compiler pins the reviewed legacy engine hash to
-  force compatibility review after engine changes; that conservative pilot gate
-  is not yet the long-term versioned profile/update protocol.
-- More complex preprocessing, array/IF DOCX commands, unrecognized signature conventions,
-  and extra source artifacts fail closed here. The profile does not replace or
-  restore the earlier catalog-wide compiler's conditions/arrays implementation.
+- Source hashes cover metadata, DOCX, selections, replacements, clean configuration,
+  and any strictly validated `source.json` provenance recipe. Runtime recompilation
+  rejects changed sources/manifests. A recipe is not fetched or replayed from an
+  absent external source at fill time; the bundled DOCX remains operational bytes.
+  The compiler pins the reviewed legacy engine hash to force compatibility review
+  after engine changes; that conservative pilot gate is not yet the long-term
+  versioned profile/update protocol.
+- Ambiguous literal replacements, more complex preprocessing, array/IF DOCX
+  commands, unrecognized signature conventions, and unknown source artifacts fail
+  closed here. The profile does not replace or restore the earlier catalog-wide
+  compiler's conditions/arrays implementation.
 - Generated contracts say `compiled-unverified`; this case's test evidence does
   not promote every future source revision automatically. A catalog promotion gate
   and source-revision-specific verification record remain needed.
