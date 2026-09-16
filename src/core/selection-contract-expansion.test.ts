@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
@@ -81,28 +81,45 @@ describe('additional source-generated Common Paper contracts', () => {
       await compare(id, 'blank-defaults', {}, true);
     });
   }
-  for (const selected of ['partner_feedback_sessions', 'partner_case_study', 'partner_private_list', 'partner_public_list', 'partner_reference', 'has_partner_other_details', 'provider_discount', 'provider_develop_functionality', 'has_provider_other_details']) {
-    it(`Design Partner independent checkbox ${selected}`, async () => {
-      const {contract, text} = await compare('common-paper-design-partner-agreement', selected, {[selected]: true});
-      expect(contract.replacements).toEqual({'[ # ]': '{free_text}', '[$__________]': '{discount_amount}'});
-      expect(contract.sourceHashes['replacements.json']).toHaveLength(64);
-      for (const option of contract.selections.groups.find(g => g.type === 'checkbox')!.options) {
-        const marker = option.marker.replace(/\{([a-z_]+)\}/g, (_, name: string) => `Synthetic ${name}`);
-        expect(text.includes(marker), marker).toBe(option.trigger !== 'default' && option.trigger.field === selected);
-      }
+  // Corrected 2026-09-16: earlier cases treated Design Partner as promotable.
+  // Its literal "[ # ]" recipe is ambiguous: the same token means feedback
+  // count, term length, and invoice days. The compiler must fail closed until
+  // the source recipe identifies each authored occurrence independently.
+  it('Design Partner fails closed on its ambiguous literal replacement without producing output', async () => {
+    const dir = join(root, 'common-paper-design-partner-agreement');
+    const blockedOutput = join(evidence, 'common-paper-design-partner-agreement', 'must-not-exist.docx');
+    mkdirSync(join(evidence, 'common-paper-design-partner-agreement'), { recursive: true });
+    expect(existsSync(blockedOutput)).toBe(false);
+    await expect(compileSelectionContract(dir)).rejects.toThrow('Literal replacement must match exactly one authored paragraph');
+    expect(existsSync(blockedOutput)).toBe(false);
+  });
+
+  it('banks the legacy Design Partner defect: free_text contaminates three unrelated authored numbers', async () => {
+    const dir = join(root, 'common-paper-design-partner-agreement');
+    const output = join(evidence, 'common-paper-design-partner-agreement', 'legacy-ambiguous-number-contamination.docx');
+    mkdirSync(join(evidence, 'common-paper-design-partner-agreement'), { recursive: true });
+    await fillTemplate({
+      templateDir: dir,
+      outputPath: output,
+      values: {
+        free_text: 'OA_AMBIGUOUS_NUMBER_SENTINEL',
+        discount_amount: '25%',
+        partner_feedback_sessions: true,
+        has_fees: true,
+        billing_period: 'month',
+        term_length_unit: 'months',
+      },
     });
-  }
-  for (const hasFees of [true, false]) {
-    for (const type of ['entity', 'individual']) {
-      it(`Design Partner fees=${hasFees} signer=${type}`, async () => {
-        const {text} = await compare('common-paper-design-partner-agreement', `fees-${hasFees}-${type}`, {
-          has_fees: hasFees, provider_signatory_type: type, partner_signatory_type: type,
-        });
-        expect(text.includes('There are no Fees under this Agreement')).toBe(!hasFees);
-        expect(text.includes('Synthetic provider_signatory_title')).toBe(type === 'entity');
-      });
-    }
-  }
+    const xml = new AdmZip(readFileSync(output)).readAsText('word/document.xml');
+    const doc = new DOMParser().parseFromString(xml, 'application/xml');
+    const paragraphs = Array.from(doc.getElementsByTagName('w:p')).map(paragraph =>
+      Array.from(paragraph.getElementsByTagName('w:t')).map(text => text.textContent).join(''));
+    const contaminated = paragraphs.filter(paragraph => paragraph.includes('OA_AMBIGUOUS_NUMBER_SENTINEL'));
+    expect(contaminated).toHaveLength(3);
+    expect(contaminated.some(paragraph => paragraph.includes('Feedback sessions'))).toBe(true);
+    expect(contaminated.some(paragraph => paragraph.includes('months'))).toBe(true);
+    expect(contaminated.some(paragraph => paragraph.includes('days from receipt of invoice'))).toBe(true);
+  });
   for (const [id, prefixes, fieldCount] of [
     ['common-paper-letter-of-intent', ['provider_signatory', 'customer_signatory'], 15],
     ['common-paper-term-sheet', ['party_1_signatory', 'party_2_signatory'], 12],
