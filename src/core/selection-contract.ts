@@ -275,7 +275,9 @@ export async function fillSelectionContract(templateDir: string, contract: unkno
     coerceBooleans: true, fixSmartQuotes: true, verify: verifyTemplateFill,
     computeDisplayFields: data => {
       const blank = (v: unknown) => typeof v === 'string' && v.trim() === BLANK_PLACEHOLDER;
-      const str = (key: string) => blank(data[key]) ? '' : String(data[key] ?? '');
+      // Match the legacy display engine: placeholders remain visible in ordinary
+      // source fields, but presence-map below treats them as absent.
+      const str = (key: string) => String(data[key] ?? '');
       const bool = (key: string) => data[key] === true;
       for (const rule of current.rules) {
         if (rule.op === 'blank-to-empty') {
@@ -291,8 +293,7 @@ export async function fillSelectionContract(templateDir: string, contract: unkno
           data[rule.target] = rule.sources.map(str).filter(Boolean).join(rule.separator);
         } else if (rule.op === 'presence-map') {
           const present = str(rule.source);
-          if (!present && blank(data[rule.source])) data[rule.source] = '';
-          data[rule.target] = present ? rule.present : rule.absent;
+          data[rule.target] = present && !blank(data[rule.source]) ? rule.present : rule.absent;
         } else {
           const k = rule.kind;
           if (k === 'order-date') data[rule.target] = bool('order_date_is_last_signature') ? '( x )\tDate of last signature on this Order Form' : `( x )\t${str('custom_order_date')}`;
