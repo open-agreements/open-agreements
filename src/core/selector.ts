@@ -531,15 +531,9 @@ function triggerFires(trigger: Trigger, data: Record<string, unknown>): boolean 
     return val !== undefined && val !== '' && String(val) === String(trigger.equals);
   }
 
-  // { field: "x" } — bounded nonblank predicate. Treat the pipeline's
-  // underscore placeholder as blank so an omitted optional string cannot turn
-  // on a clause merely because it is technically truthy.
+  // { field: "x" } — truthy check
   const val = data[trigger.field];
-  if (typeof val === 'string') {
-    const normalized = val.trim();
-    return normalized !== '' && normalized !== '_______' && normalized !== 'false';
-  }
-  return val !== undefined && val !== false;
+  return val !== undefined && val !== '' && val !== false && val !== 'false';
 }
 
 function groupApplies(group: z.infer<typeof GroupSchema>, data: Record<string, unknown>): boolean {

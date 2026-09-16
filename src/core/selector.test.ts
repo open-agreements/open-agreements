@@ -295,6 +295,23 @@ describe('applicable markerless selected actions', () => {
 // ---------------------------------------------------------------------------
 
 describe('standalone checkbox', () => {
+  it('preserves legacy truthiness for the fill placeholder', async () => {
+    const inputPath = buildTestDocx(table(tableRow(tableCell(para('[ ] Optional clause')))));
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'optional-clause',
+        type: 'checkbox',
+        standalone: true,
+        options: [{ marker: 'Optional clause', trigger: { field: 'optional_text' } }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, { optional_text: '_______' });
+
+    expect(extractText(outputPath)).toContain('Optional clause');
+  });
+
   it('removes unselected standalone option paragraph', async () => {
     const body = table(
       tableRow(

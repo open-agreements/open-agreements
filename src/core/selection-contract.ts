@@ -263,6 +263,12 @@ export type SelectionContract = Awaited<ReturnType<typeof compileSelectionContra
 
 /** Recompile and compare before interpreting: rejects tampered contracts and source drift. */
 export async function fillSelectionContract(templateDir: string, contract: unknown, values: Record<string, unknown>, outputPath: string) {
+  const valuePrototype = values !== null && typeof values === 'object' && !Array.isArray(values)
+    ? Object.getPrototypeOf(values)
+    : undefined;
+  if (valuePrototype !== Object.prototype && valuePrototype !== null) {
+    throw new Error('Invalid input: values must be a plain object');
+  }
   const current = await compileSelectionContract(templateDir);
   if (!isDeepStrictEqual(current, contract)) throw new Error('Contract/source mismatch; regenerate and verify');
   if ('capabilities' in current && current.capabilities?.staticUnparameterized) {
@@ -283,6 +289,7 @@ export async function fillSelectionContract(templateDir: string, contract: unkno
     fields: current.metadata.fields, priorityFieldNames: current.metadata.priority_fields,
     cleanPatch: current.replacements ? { cleanConfig: current.cleanConfig ?? loadCleanConfig(templateDir), replacements: current.replacements } : undefined,
     selectionsConfig: current.selections.groups.length ? current.selections : undefined, selectionsZeroMatchPolicy: 'error',
+    selectionBlankPlaceholderIsBlank: true,
     coerceBooleans: true, fixSmartQuotes: true, verify: verifyTemplateFill,
     computeDisplayFields: data => {
       const blank = (v: unknown) => typeof v === 'string' && v.trim() === BLANK_PLACEHOLDER;
