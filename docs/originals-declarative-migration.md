@@ -1,5 +1,20 @@
 # OpenAgreements-original declarative adapter migration
 
+## 2026-09-16 user-review correction
+
+The earlier visual checkpoint below did not establish production design parity.
+Steven identified a misleading publisher eyebrow, lost blue accents, and altered
+vertical spacing. Passing semantic checks and checking for clipping did not catch
+those differences. See [the feedback correction record](2026-09-16-rendering-feedback.md)
+for source comparisons, fixes, verification limits, and the separately owned site
+privacy-policy work. Earlier page counts describe the older renderer, not the
+corrected production-style profile.
+
+The statement below that source agreements remain unchanged describes the initial
+migration only. The subsequent board-consent correction intentionally changes the
+canonical source to version 1.3, separating each director's signing date from the
+effective date and removing the forced recital/resolution page boundary.
+
 ## Scope and source of truth
 
 Local migration work began 2026-09-15 (America/Chicago), against upstream
