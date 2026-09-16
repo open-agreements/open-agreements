@@ -144,11 +144,19 @@ export async function compileSelectionContract(templateDir: string) {
     const resolvedCells = g.standalone ? [] : (g.cellContext ? contextualCells : cells.filter(cell =>
       g.options.every(option => matchesInCell(cell, option.marker) === 1),
     ));
+    // Report a missing authored marker directly, before attempting group-cell
+    // resolution. Repeated markers are allowed only when the full group below
+    // identifies a single cell containing each option exactly once.
+    for (const option of g.options) {
+      if (text.filter(paragraph => optionPrefix.test(paragraph) && markerIn(paragraph, option.marker)).length === 0) {
+        throw new Error(`Selection marker must match exactly once: ${option.marker}`);
+      }
+    }
     const triggers = new Set<string>();
     const triggerFields = new Set<string>();
     for (const o of g.options) {
       const matchIn = (paragraphs: string[]) => paragraphs.filter(p => optionPrefix.test(p) && markerIn(p, o.marker)).length;
-      const matches = g.standalone ? matchIn(text) : matchIn(g.cellContext ? (contextualCells[0] ?? []) : text);
+      const matches = g.standalone ? matchIn(text) : 1;
       // The selector either receives one unique standalone paragraph, or a
       // complete set of options in one cell. Anything broader cannot be
       // resolved without a template-specific locator, so compilation fails.
@@ -167,6 +175,9 @@ export async function compileSelectionContract(templateDir: string) {
     }
     if (!g.standalone && resolvedCells.length !== 1) {
       throw new Error(`Selection group must resolve to exactly one DOCX table cell: ${g.id}`);
+    }
+    if (!g.standalone && g.options.some(option => matchesInCell(resolvedCells[0], option.marker) !== 1)) {
+      throw new Error(`Selection group must resolve each option exactly once: ${g.id}`);
     }
     if (g.type !== 'radio') continue;
     if (triggerFields.size !== 1) throw new Error('Radio alternatives must use one trigger field');

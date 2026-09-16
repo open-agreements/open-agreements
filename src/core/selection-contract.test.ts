@@ -13,6 +13,7 @@ const dpaSource = resolve('templates/common-paper-cc-by-4.0/common-paper-data-pr
 const icaSource = resolve('templates/common-paper-cc-by-4.0/common-paper-independent-contractor-agreement');
 const psaSource = resolve('templates/bonterms-cc0-1.0/bonterms-professional-services-agreement');
 const slaOrderFormSource = resolve('templates/common-paper-cc-by-4.0/common-paper-order-form-with-sla');
+const designPartnerSource = resolve('templates/common-paper-cc-by-4.0/common-paper-design-partner-agreement');
 const evidence = resolve('.cache/common-paper-declarative');
 const temporaryDirectories: string[] = [];
 const temporaryDirectory = (prefix: string) => {
@@ -148,6 +149,7 @@ describe('Common Paper source-generated selection contract pilot', () => {
   });
   it('rejects ambiguous literal replacements instead of preserving legacy SLA corruption', async () => {
     await expect(compileSelectionContract(slaOrderFormSource)).rejects.toThrow('Literal replacement must match exactly one authored paragraph');
+    await expect(compileSelectionContract(designPartnerSource)).rejects.toThrow('Literal replacement must match exactly one authored paragraph');
   });
   it('selects standalone checkboxes independently and does not prefix-match authored labels', async () => {
     const dir = temporaryDirectory('oa-standalone-');
