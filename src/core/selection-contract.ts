@@ -312,7 +312,15 @@ export async function fillSelectionContract(templateDir: string, contract: unkno
           else if (k === 'payment') data[rule.target] = bool('payment_by_invoice') ? `( x )\tPay by invoice\nProvider will invoice Customer ${str('payment_frequency')}.\nCustomer will pay each invoice within ${str('payment_terms_days')} days of ${str('payment_due_from')}.` : `( x )\tAutomatic payment\nCustomer authorizes Provider to charge the payment method on file ${str('payment_frequency')}.`;
           else if (k === 'renewal') data[rule.target] = bool('auto_renew') ? `( x )\tNon-Renewal Notice Date is ${str('non_renewal_notice_days')} days before the end of the current Subscription Period.` : '( x )\tThis Order does not automatically renew.';
           else if (k === 'effective-date') data[rule.target] = bool('effective_date_is_last_signature') ? '( x )\tDate of last Cover Page signature' : `( x )\t${str('custom_effective_date')}`;
-          else if (k === 'fees') data[rule.target] = [[bool('fee_is_per_unit'), `[ x ] ${str('fees')} per ${str('fee_unit')}`], [bool('fee_is_other'), `[ x ] Other fee structure: ${str('other_fee_structure')}`], [bool('fee_may_increase'), `[ x ] Fees may increase up to ${str('fee_increase_cap_pct')}% per renewal`], [bool('fee_will_increase'), `[ x ] Fees will increase ${str('fee_increase_fixed_pct')}% per renewal`], [bool('fee_inclusive_of_taxes'), '[ x ] Fees are inclusive of taxes (modifies Standard Terms Section 4.1)']].filter(([on]) => on).map(([, line]) => line).join('\n');
+          else if (k === 'fees') {
+            const lines: string[] = [];
+            if (bool('fee_is_per_unit')) lines.push(`[ x ] ${str('fees')} per ${str('fee_unit')}`);
+            if (bool('fee_is_other')) lines.push(`[ x ] Other fee structure: ${str('other_fee_structure')}`);
+            if (bool('fee_may_increase')) lines.push(`[ x ] Fees may increase up to ${str('fee_increase_cap_pct')}% per renewal`);
+            if (bool('fee_will_increase')) lines.push(`[ x ] Fees will increase ${str('fee_increase_fixed_pct')}% per renewal`);
+            if (bool('fee_inclusive_of_taxes')) lines.push('[ x ] Fees are inclusive of taxes (modifies Standard Terms Section 4.1)');
+            data[rule.target] = lines.join('\n');
+          }
           else if (k === 'claims') data[rule.target] = [[bool('has_provider_covered_claims'), '[ x ] Provider Covered Claims: [Any action, proceeding, or claim that the Cloud Service, when used by Customer as permitted under the Agreement, infringes or misappropriates a third party’s intellectual property rights.]'], [bool('has_customer_covered_claims'), '[ x ] Customer Covered Claims: [Any action, proceeding, or claim that (1) the Customer Content, when used according to the Agreement, infringes or misappropriates a third party’s intellectual property rights; or (2) results from the Customer’s breach of Section 2.4.]']].filter(([on]) => on).map(([, line]) => line).join('\n');
           else if (bool('general_cap_is_multiplier')) data[rule.target] = `( x )\t${str('general_cap_multiplier')}x the Fees paid or payable by Customer in the 12 month period immediately preceding the claim`;
           else if (bool('general_cap_is_dollar')) data[rule.target] = `( x )\t$${str('general_cap_dollar')}`;
