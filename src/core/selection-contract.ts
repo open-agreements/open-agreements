@@ -48,7 +48,11 @@ const selectionSchema = z.object({ groups: z.array(z.object({
 })).min(1).max(64) }).strict();
 
 type Rule = { op: 'signature-display'; source: string; target: string; typeField: string } |
-  { op: 'blank-to-empty'; target: string };
+  { op: 'blank-to-empty'; target: string } |
+  { op: 'copy-if-blank'; source: string; target: string } |
+  { op: 'join-nonblank'; sources: string[]; target: string; separator: string } |
+  { op: 'presence-map'; source: string; target: string; present: string; absent: string } |
+  { op: 'computed'; target: string; sources: string[]; kind: 'order-date' | 'pilot-fee' | 'fees' | 'payment' | 'renewal' | 'effective-date' | 'claims' | 'cap' };
 
 function paragraphs(bytes: Buffer): string[] {
   const zip = new AdmZip(bytes);
@@ -85,11 +89,7 @@ export async function compileSelectionContract(templateDir: string) {
   }
   const names = new Set(metadata.fields.map(f => f.name));
   if (names.size !== metadata.fields.length) throw new Error('Duplicate field');
-  const unimplemented = ['bonus_terms', 'equity_terms', 'order_date_display', 'pilot_fee_display', 'fees_display', 'payment_display', 'auto_renewal_display', 'effective_date_display', 'covered_claims_display', 'general_cap_display'];
-  for (const n of [1, 2]) {
-    unimplemented.push(`party_${n}_signatory_name_and_title`, `party_${n}_notice_email_check`, `party_${n}_notice_postal_check`);
-    if (names.has(`party_${n}_signatory_company`) && names.has(`party_${n}_name`)) throw new Error('Unsupported signatory company fallback');
-  }
+  const unimplemented = ['bonus_terms', 'equity_terms'];
   if (unimplemented.some(name => names.has(name))) throw new Error('Unsupported legacy computed-field family');
   const selections = existsSync(join(templateDir, 'selections.json'))
     ? selectionSchema.parse(JSON.parse(readFileSync(join(templateDir, 'selections.json'), 'utf8')))
@@ -224,15 +224,33 @@ export async function compileSelectionContract(templateDir: string) {
       if (names.has(target)) rules.push({ op: 'blank-to-empty', target });
     }
   }
+  // Generic family discovery for Bonterms-style signature displays.
+  for (const prefix of [...names].map(name => /^(party_\d+)_signatory_company$/.exec(name)?.[1]).filter((value): value is string => Boolean(value))) {
+    if (names.has(`${prefix}_name`)) rules.push({ op: 'copy-if-blank', source: `${prefix}_name`, target: `${prefix}_signatory_company` });
+    const nat = `${prefix}_signatory_name_and_title`;
+    if (names.has(nat) && names.has(`${prefix}_signatory_name`) && names.has(`${prefix}_signatory_title`)) rules.push({ op: 'join-nonblank', sources: [`${prefix}_signatory_name`, `${prefix}_signatory_title`], target: nat, separator: ', ' });
+    for (const [source, target] of [[`${prefix}_email`, `${prefix}_notice_email_check`], [`${prefix}_address`, `${prefix}_notice_postal_check`]] as const) if (names.has(source) && names.has(target)) rules.push({ op: 'presence-map', source, target, present: '☑', absent: '☐' });
+  }
+  const computedFamilies = [
+    ['order_date_display', 'order-date', ['order_date_is_last_signature', 'custom_order_date']],
+    ['pilot_fee_display', 'pilot-fee', ['pilot_is_free', 'pilot_fee']],
+    ['fees_display', 'fees', ['fee_is_per_unit', 'fees', 'fee_unit', 'fee_is_other', 'other_fee_structure', 'fee_may_increase', 'fee_increase_cap_pct', 'fee_will_increase', 'fee_increase_fixed_pct', 'fee_inclusive_of_taxes']],
+    ['payment_display', 'payment', ['payment_by_invoice', 'payment_frequency', 'payment_terms_days', 'payment_due_from']],
+    ['auto_renewal_display', 'renewal', ['auto_renew', 'non_renewal_notice_days']],
+    ['effective_date_display', 'effective-date', ['effective_date_is_last_signature', 'custom_effective_date']],
+    ['covered_claims_display', 'claims', ['has_provider_covered_claims', 'has_customer_covered_claims']],
+    ['general_cap_display', 'cap', ['general_cap_is_multiplier', 'general_cap_multiplier', 'general_cap_is_dollar', 'general_cap_dollar', 'general_cap_is_greater_of', 'general_cap_greater_dollar', 'general_cap_greater_multiplier']],
+  ] as const;
+  for (const [target, kind, sources] of computedFamilies) if (names.has(target) && sources.every(source => names.has(source))) rules.push({ op: 'computed', target, sources: [...sources], kind });
   const available = new Set([...names, ...rules.map(r => r.target)]);
   const commands = await listCommands(Uint8Array.from(docx).buffer, ['{', '}']);
-  if (!commands.length || commands.some(c => c.type !== 'INS' || !safeKey.test(c.code) || !available.has(c.code))) throw new Error('Unsupported or unresolved DOCX command');
-  const bindings = [...new Set(commands.map(c => c.code))].sort();
+  if (!commands.length || commands.some(c => (c.type === 'INS' || c.type === 'IF') ? (!safeKey.test(c.code) || !available.has(c.code)) : c.type !== 'END-IF')) throw new Error('Unsupported or unresolved DOCX command');
+  const bindings = [...new Set(commands.map(c => c.code).filter(Boolean))].sort();
   return {
     profile: 'oa-selection-signature-pilot-v3', status: 'compiled-unverified',
     sourceHashes: Object.fromEntries(['metadata.yaml', 'clean.json', 'selections.json', 'replacements.json', 'source.json', 'template.docx'].filter(name => existsSync(join(templateDir, name))).map(name => [name, digest(readFileSync(join(templateDir, name)))])),
     compatibility: { engineHash, ruleFamily: 'legacy-role-signature-v2', renderer: 'oa-unified-pipeline' },
-    metadata, selections, selectionEnums, replacements, cleanConfig, sourceRecipe, rules, bindings,
+    metadata, selections, selectionEnums, computedFields: [...new Set(rules.filter(rule => ['join-nonblank', 'presence-map', 'computed'].includes(rule.op)).map(rule => rule.target))].sort(), replacements, cleanConfig, sourceRecipe, rules, bindings,
   };
 }
 export type SelectionContract = Awaited<ReturnType<typeof compileSelectionContract>>;
@@ -241,9 +259,10 @@ export type SelectionContract = Awaited<ReturnType<typeof compileSelectionContra
 export async function fillSelectionContract(templateDir: string, contract: unknown, values: Record<string, unknown>, outputPath: string) {
   const current = await compileSelectionContract(templateDir);
   if (!isDeepStrictEqual(current, contract)) throw new Error('Contract/source mismatch; regenerate and verify');
+  const computedTargets = new Set(current.rules.filter((rule): rule is Extract<Rule, { op: 'join-nonblank' | 'presence-map' | 'computed' }> => ['join-nonblank', 'presence-map', 'computed'].includes(rule.op)).map(rule => rule.target));
   for (const [key, value] of Object.entries(values)) {
     const field = current.metadata.fields.find(f => f.name === key);
-    if (!field || (field.type === 'boolean' ? typeof value !== 'boolean' : typeof value !== 'string' || value.length > 10_000) ||
+    if (computedTargets.has(key) || !field || (field.type === 'boolean' ? typeof value !== 'boolean' : typeof value !== 'string' || value.length > 10_000) ||
       (field.type === 'enum' && !field.options?.includes(value as string)) ||
       (current.selectionEnums[key] && !current.selectionEnums[key].includes(value as string))) throw new Error(`Invalid input: ${key}`);
   }
@@ -256,14 +275,37 @@ export async function fillSelectionContract(templateDir: string, contract: unkno
     coerceBooleans: true, fixSmartQuotes: true, verify: verifyTemplateFill,
     computeDisplayFields: data => {
       const blank = (v: unknown) => typeof v === 'string' && v.trim() === BLANK_PLACEHOLDER;
+      const str = (key: string) => blank(data[key]) ? '' : String(data[key] ?? '');
+      const bool = (key: string) => data[key] === true;
       for (const rule of current.rules) {
         if (rule.op === 'blank-to-empty') {
           if (blank(data[rule.target])) data[rule.target] = '';
-        } else {
+        } else if (rule.op === 'signature-display') {
           const value = data[rule.source];
           const entity = data[rule.typeField] !== 'individual';
           data[rule.target] = entity && value && !blank(value) ? String(value) : '';
           if (!entity && value && !blank(value) && String(value).trim()) ignored.push(`${rule.source} ignored for individual`);
+        } else if (rule.op === 'copy-if-blank') {
+          if (blank(data[rule.target]) || !data[rule.target]) data[rule.target] = str(rule.source);
+        } else if (rule.op === 'join-nonblank') {
+          data[rule.target] = rule.sources.map(str).filter(Boolean).join(rule.separator);
+        } else if (rule.op === 'presence-map') {
+          const present = str(rule.source);
+          if (!present && blank(data[rule.source])) data[rule.source] = '';
+          data[rule.target] = present ? rule.present : rule.absent;
+        } else {
+          const k = rule.kind;
+          if (k === 'order-date') data[rule.target] = bool('order_date_is_last_signature') ? '( x )\tDate of last signature on this Order Form' : `( x )\t${str('custom_order_date')}`;
+          else if (k === 'pilot-fee') data[rule.target] = bool('pilot_is_free') ? '( x )\tFree trial' : `( x )\tFee for Pilot Period: ${str('pilot_fee')}`;
+          else if (k === 'payment') data[rule.target] = bool('payment_by_invoice') ? `( x )\tPay by invoice\nProvider will invoice Customer ${str('payment_frequency')}.\nCustomer will pay each invoice within ${str('payment_terms_days')} days of ${str('payment_due_from')}.` : `( x )\tAutomatic payment\nCustomer authorizes Provider to charge the payment method on file ${str('payment_frequency')}.`;
+          else if (k === 'renewal') data[rule.target] = bool('auto_renew') ? `( x )\tNon-Renewal Notice Date is ${str('non_renewal_notice_days')} days before the end of the current Subscription Period.` : '( x )\tThis Order does not automatically renew.';
+          else if (k === 'effective-date') data[rule.target] = bool('effective_date_is_last_signature') ? '( x )\tDate of last Cover Page signature' : `( x )\t${str('custom_effective_date')}`;
+          else if (k === 'fees') data[rule.target] = [[bool('fee_is_per_unit'), `[ x ] ${str('fees')} per ${str('fee_unit')}`], [bool('fee_is_other'), `[ x ] Other fee structure: ${str('other_fee_structure')}`], [bool('fee_may_increase'), `[ x ] Fees may increase up to ${str('fee_increase_cap_pct')}% per renewal`], [bool('fee_will_increase'), `[ x ] Fees will increase ${str('fee_increase_fixed_pct')}% per renewal`], [bool('fee_inclusive_of_taxes'), '[ x ] Fees are inclusive of taxes (modifies Standard Terms Section 4.1)']].filter(([on]) => on).map(([, line]) => line).join('\n');
+          else if (k === 'claims') data[rule.target] = [[bool('has_provider_covered_claims'), '[ x ] Provider Covered Claims: [Any action, proceeding, or claim that the Cloud Service, when used by Customer as permitted under the Agreement, infringes or misappropriates a third party’s intellectual property rights.]'], [bool('has_customer_covered_claims'), '[ x ] Customer Covered Claims: [Any action, proceeding, or claim that (1) the Customer Content, when used according to the Agreement, infringes or misappropriates a third party’s intellectual property rights; or (2) results from the Customer’s breach of Section 2.4.]']].filter(([on]) => on).map(([, line]) => line).join('\n');
+          else if (bool('general_cap_is_multiplier')) data[rule.target] = `( x )\t${str('general_cap_multiplier')}x the Fees paid or payable by Customer in the 12 month period immediately preceding the claim`;
+          else if (bool('general_cap_is_dollar')) data[rule.target] = `( x )\t$${str('general_cap_dollar')}`;
+          else if (bool('general_cap_is_greater_of')) data[rule.target] = `( x )\tThe greater of $${str('general_cap_greater_dollar')} or ${str('general_cap_greater_multiplier')}x the Fees paid or payable by Customer in the 12 month period immediately preceding the claim`;
+          else data[rule.target] = '';
         }
       }
     },
