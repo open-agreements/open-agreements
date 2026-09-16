@@ -12,6 +12,7 @@ const baaSource = resolve('templates/common-paper-cc-by-4.0/common-paper-busines
 const dpaSource = resolve('templates/common-paper-cc-by-4.0/common-paper-data-processing-agreement');
 const icaSource = resolve('templates/common-paper-cc-by-4.0/common-paper-independent-contractor-agreement');
 const psaSource = resolve('templates/bonterms-cc0-1.0/bonterms-professional-services-agreement');
+const slaOrderFormSource = resolve('templates/common-paper-cc-by-4.0/common-paper-order-form-with-sla');
 const evidence = resolve('.cache/common-paper-declarative');
 const temporaryDirectories: string[] = [];
 const temporaryDirectory = (prefix: string) => {
@@ -144,6 +145,9 @@ describe('Common Paper source-generated selection contract pilot', () => {
     const recipe = join(dir, 'source.json');
     writeFileSync(recipe, readFileSync(recipe, 'utf8').replace('psa-cover-page.docx', 'changed-cover-page.docx'));
     await expect(fillSelectionContract(dir, contract, {}, join(dir, 'output.docx'))).rejects.toThrow('Contract/source mismatch');
+  });
+  it('rejects ambiguous literal replacements instead of preserving legacy SLA corruption', async () => {
+    await expect(compileSelectionContract(slaOrderFormSource)).rejects.toThrow('Literal replacement must match exactly one authored paragraph');
   });
   it('selects standalone checkboxes independently and does not prefix-match authored labels', async () => {
     const dir = temporaryDirectory('oa-standalone-');

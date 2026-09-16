@@ -112,7 +112,10 @@ export async function compileSelectionContract(templateDir: string) {
     const originalText = paragraphs(docx);
     for (const [search, target] of Object.entries(replacements)) {
       const fields = [...target.matchAll(/\{([a-z][a-z0-9_]{0,99})\}/g)].map(match => match[1]);
-      if (!fields.length || fields.some(field => !names.has(field)) || !originalText.some(p => p.includes(search))) throw new Error('Unsupported or unmatched literal replacement');
+      const sourceMatches = originalText.filter(paragraph => paragraph.includes(search));
+      if (!fields.length || fields.some(field => !names.has(field)) || sourceMatches.length !== 1) {
+        throw new Error('Literal replacement must match exactly one authored paragraph');
+      }
     }
     const temp = mkdtempSync(join(tmpdir(), 'oa-contract-compile-'));
     try {
