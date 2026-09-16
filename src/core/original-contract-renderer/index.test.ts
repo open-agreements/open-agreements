@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import AdmZip from 'adm-zip';
+import { DOMParser } from '@xmldom/xmldom';
 import { listCommands } from 'docx-templates';
 import { renderOriginalMarkdoc } from './index.js';
 import type { FieldDefinition } from '../metadata.js';
@@ -19,6 +20,17 @@ attribution_text: Synthetic fixture only
 ---
 ${body}`;
 const xml = (buffer: Buffer) => new AdmZip(buffer).readAsText('word/document.xml');
+const part = (buffer: Buffer, name: string) => new AdmZip(buffer).readAsText(name);
+const termStyles = (buffer: Buffer, term: string) => {
+  const doc = new DOMParser().parseFromString(xml(buffer), 'application/xml');
+  return Array.from(doc.getElementsByTagName('w:t')).filter(node => node.textContent === `“${term}”`).map(node => {
+    const run = node.parentNode as Element;
+    return {
+      bold: run.getElementsByTagName('w:b').length > 0,
+      accent: Array.from(run.getElementsByTagName('w:color')).some(color => color.getAttribute('w:val') === '117086'),
+    };
+  });
+};
 
 describe('native canonical original renderer', () => {
   it('preserves inline fields, strong/emphasis, soft breaks and scoped fields', async () => {
@@ -153,5 +165,59 @@ The person is {% field name="name" /%}.
     expect(xml(result.buffer)).toContain('The person is ');
     await expect(renderOriginalMarkdoc(traditional.replace('## Hidden summary', '{% future-directive /%}'), fields)).rejects.toThrow('Unsupported canonical tag');
     await expect(renderOriginalMarkdoc(traditional.replace('field="name"', 'field="typo"'), fields)).rejects.toThrow('Unknown canonical field');
+  });
+
+  it('renders declared cover height, footer size, label, version, and attribution', async () => {
+    const configured = source(`{% agreement-section type="cover_terms" %}
+{% cover-terms %}
+{% cover-term kind="row" label="Name" field="name" /%}
+{% /cover-terms %}
+{% /agreement-section %}`)
+      .replace('  title: Synthetic verification instrument', `  title: Synthetic verification instrument
+  label: Synthetic Label
+  version: "2.7"
+  license: Synthetic License
+  cover_row_height: 913
+  footer_font_size_half_points: 23
+  defined_term_highlight_mode: none
+  include_cloud_doc_line: true`);
+    const result = await renderOriginalMarkdoc(configured, fields);
+    const documentXml = xml(result.buffer);
+    const footerXml = part(result.buffer, 'word/footer1.xml');
+    expect(documentXml).toContain('<w:trHeight w:val="913" w:hRule="atLeast"/>');
+    expect(footerXml).toContain('Synthetic Label (v2.7). Synthetic fixture only');
+    expect(footerXml).toContain('<w:sz w:val="23"/>');
+    expect(result.compatibilityNotes).toEqual([
+      'document.include_cloud_doc_line=true is a legacy-inert compatibility flag; the native DOCX profile emits no cloud-document line.',
+    ]);
+  });
+
+  it.each([
+    ['none', [{ bold: false, accent: false }, { bold: false, accent: false }]],
+    ['definition_site_only', [{ bold: true, accent: true }, { bold: false, accent: false }]],
+    ['all_instances', [{ bold: true, accent: true }, { bold: true, accent: true }]],
+  ] as const)('implements %s defined-term highlighting', async (mode, expected) => {
+    const configured = source(`{% agreement-section type="standard_terms" %}
+{% clause id="definitions" type="definitions" %}
+### Definitions
+[[Service]] means the hosted product.
+{% /clause %}
+{% clause id="use" %}
+### Use
+Customer may use the [[Service]].
+{% /clause %}
+{% /agreement-section %}`)
+      .replace('  title: Synthetic verification instrument', `  title: Synthetic verification instrument
+  defined_term_highlight_mode: ${mode}`);
+    expect(termStyles((await renderOriginalMarkdoc(configured, fields)).buffer, 'Service')).toEqual(expected);
+  });
+
+  it.each([
+    ['future document setting', source('Text.').replace('  title: Synthetic verification instrument', '  title: Synthetic verification instrument\n  future_layout_control: true'), 'Unsupported canonical document setting'],
+    ['future top-level setting', source('Text.').replace('style_id: openagreements-default-v1', 'style_id: openagreements-default-v1\nfuture_render_stage: enabled'), 'Unsupported canonical frontmatter setting'],
+    ['unknown highlight mode', source('Text.').replace('  title: Synthetic verification instrument', '  title: Synthetic verification instrument\n  defined_term_highlight_mode: future'), 'Unsupported defined-term highlight mode'],
+    ['changed cloud-line semantics', source('Text.').replace('  title: Synthetic verification instrument', '  title: Synthetic verification instrument\n  include_cloud_doc_line: false'), 'Unsupported include_cloud_doc_line value'],
+  ])('fails closed on %s', async (_name, configured, message) => {
+    await expect(renderOriginalMarkdoc(configured, fields)).rejects.toThrow(message);
   });
 });

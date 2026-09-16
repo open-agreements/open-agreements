@@ -1,7 +1,7 @@
 /** Bounded canonical Markdoc renderer; a new profile, not legacy pagination. */
 import Markdoc, { type Node } from '@markdoc/markdoc';
 import yaml from 'js-yaml';
-import { AlignmentType, BorderStyle, Document, Footer, Header, HeadingLevel, LevelFormat,
+import { AlignmentType, BorderStyle, Document, Footer, Header, HeadingLevel, HeightRule, LevelFormat,
   Packer, Paragraph, Table, TableCell, TableRow, TextRun, WidthType } from 'docx';
 import type { FieldDefinition } from '../metadata.js';
 import type { ConfirmClauseDescriptor } from '../fill-pipeline.js';
@@ -14,6 +14,7 @@ export interface OriginalRenderResult {
   sourceBindings: OriginalRenderBinding[]; syntheticGates: SyntheticGate[];
   confirmClauses: ConfirmClauseDescriptor[];
   clauses: Array<{ id: string; condition?: string; bodyLiteral: string }>;
+  compatibilityNotes: string[];
 }
 type Block = Paragraph | Table;
 type InlineStyle = { bold?: boolean; italics?: boolean; font?: string; size?: number; color?: string };
@@ -28,6 +29,16 @@ const ATTRIBUTES: Record<string, string[]> = {
   'signature-block': ['arrangement'], signer: ['id', 'kind', 'capacity', 'label'], repeat: ['field'],
 };
 const LAYOUTS = new Set(['cover-standard-signature-v1', 'traditional-consent-v1', 'checklist-list-v1', 'roster-list-v1']);
+const FRONTMATTER_KEYS = new Set([
+  'allow_derivatives', 'artifact_kind', 'artifact_type', 'attribution_text', 'capabilities', 'category',
+  'description', 'distribution', 'document', 'fields', 'layout_id', 'license', 'maturity', 'mutation_policy',
+  'name', 'omitted_clauses', 'party_roles', 'priority_fields', 'sections', 'signature_roles', 'source_url',
+  'style_id', 'template_id', 'version',
+]);
+const DOCUMENT_KEYS = new Set([
+  'title', 'label', 'version', 'license', 'defined_term_highlight_mode', 'include_cloud_doc_line',
+  'cover_row_height', 'footer_font_size_half_points', 'presentation',
+]);
 const definedTerms = (text: string) => text.replace(/\[\[([^\]\r\n]+)\]\]/g, '“$1”');
 function attr(node: Node, name: string, required = false): string | undefined {
   const value = node.attributes[name];
@@ -53,11 +64,37 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
   if (!match) throw new Error('Canonical source requires YAML frontmatter');
   const front = yaml.load(match[1]) as Record<string, unknown>;
   if (!front || !LAYOUTS.has(String(front.layout_id)) || front.style_id !== 'openagreements-default-v1') throw new Error('Unsupported canonical layout/style');
+  for (const key of Object.keys(front)) if (!FRONTMATTER_KEYS.has(key)) throw new Error(`Unsupported canonical frontmatter setting: ${key}`);
   if (front.omitted_clauses !== undefined && front.omitted_clauses !== 'drop') throw new Error('Unsupported omitted-clause policy');
   const meta = front.document as Record<string, unknown> | undefined;
   if (!meta || typeof meta.title !== 'string') throw new Error('Canonical document title is required');
+  for (const key of Object.keys(meta)) if (!DOCUMENT_KEYS.has(key)) throw new Error(`Unsupported canonical document setting: ${key}`);
   if (meta.presentation !== undefined && meta.presentation !== 'traditional') throw new Error('Unsupported document presentation');
+  if (meta.defined_term_highlight_mode !== undefined && !['all_instances', 'definition_site_only', 'none'].includes(String(meta.defined_term_highlight_mode))) {
+    throw new Error('Unsupported defined-term highlight mode');
+  }
+  // The native profile represents [[defined terms]] with typographic quotes
+  // and never applies background highlighting. These legacy highlight modes
+  // are therefore recognized compatibility declarations, not dropped prose.
+  // This source flag controls the hosted/cloud reading surface, not DOCX
+  // content. The bounded DOCX profile recognizes the only authored value so a
+  // future false/alternate semantic cannot be accepted and silently ignored.
+  if (meta.include_cloud_doc_line !== undefined && meta.include_cloud_doc_line !== true) throw new Error('Unsupported include_cloud_doc_line value');
+  const compatibilityNotes = meta.include_cloud_doc_line === true
+    ? ['document.include_cloud_doc_line=true is a legacy-inert compatibility flag; the native DOCX profile emits no cloud-document line.']
+    : [];
+  for (const key of ['cover_row_height', 'footer_font_size_half_points'] as const) {
+    const value = meta[key];
+    if (value !== undefined && (!Number.isInteger(value) || (value as number) <= 0 || (value as number) > 20_000)) {
+      throw new Error(`Invalid canonical document setting: ${key}`);
+    }
+  }
+  for (const key of ['label', 'version', 'license'] as const) {
+    const value = meta[key];
+    if (value !== undefined && (typeof value !== 'string' || !value.length)) throw new Error(`Invalid canonical document setting: ${key}`);
+  }
   const traditional = meta.presentation === 'traditional';
+  const definedTermMode = String(meta.defined_term_highlight_mode ?? 'all_instances');
   const root = Markdoc.parse(match[2]);
   const fieldMap = new Map(fields.map(field => [field.name, field]));
   // Audit even presentation-omitted sections. A new unsupported directive in
@@ -100,6 +137,7 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
   const confirmClauses: ConfirmClauseDescriptor[] = [];
   const clauses: OriginalRenderResult['clauses'] = [];
   const scopes: Scope[] = []; const pending: string[] = [];
+  const definitionScopes: boolean[] = [];
   const clauseIds = new Set<string>(); const signerIds = new Set<string>();
   const sections = new Set<string>(); const sectionStack: string[] = []; const tagStack: string[] = [];
   let sequence = 0; let listSequence = 0;
@@ -110,6 +148,16 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
   };
   const command = (value: string) => new Paragraph({ children: [new TextRun({ text: `{${value}}`, font: 'Arial', size: 22 })] });
   const run = (text: string, style: InlineStyle = {}) => new TextRun({ text: definedTerms(text), font: 'Arial', size: 22, ...style });
+  const markedRuns = (text: string, style: InlineStyle): TextRun[] => {
+    const parts = text.split(/(\[\[[^\]\r\n]+\]\])/g).filter(Boolean);
+    return parts.map(part => {
+      const match = /^\[\[([^\]\r\n]+)\]\]$/.exec(part);
+      const highlight = Boolean(match) && (definedTermMode === 'all_instances' ||
+        (definedTermMode === 'definition_site_only' && definitionScopes.includes(true)));
+      return new TextRun({ text: match ? `“${match[1]}”` : part, font: 'Arial', size: 22, ...style,
+        ...(highlight ? { bold: true, color: '117086' } : {}) });
+    });
+  };
   const fieldRun = (name: string, style: InlineStyle): TextRun => {
     const scope = scopes.at(-1);
     if (scope?.fields.has(name)) { scope.used.add(name); return run(`{$${scope.item}.${name}}`, style); }
@@ -141,7 +189,7 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
   };
   const inline = (nodes: Node[], style: InlineStyle = {}): TextRun[] => nodes.flatMap(node => {
     if (node.errors.length) throw new Error(`Malformed Markdoc: ${node.errors.map(error => error.message).join('; ')}`);
-    if (node.type === 'text') return [run(String(node.attributes.content), style)];
+    if (node.type === 'text') return markedRuns(String(node.attributes.content), style);
     if (node.type === 'softbreak') return tagStack.includes('signer')
       ? [run(' ', style), new TextRun({ break: 1, font: 'Arial', size: 22 })]
       : [run(' ', style)];
@@ -216,7 +264,9 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
       return wrap(gate, [new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, columnWidths: [3000, 6360],
         borders: { top: { style: BorderStyle.NONE }, left: { style: BorderStyle.NONE }, right: { style: BorderStyle.NONE },
           bottom: { style: BorderStyle.SINGLE, color: 'D7DEE1', size: 4 }, insideHorizontal: { style: BorderStyle.NONE }, insideVertical: { style: BorderStyle.NONE } },
-        rows: [new TableRow({ cantSplit: true, children: cells })],
+        rows: [new TableRow({ cantSplit: true,
+          ...(typeof meta.cover_row_height === 'number' ? { height: { value: meta.cover_row_height, rule: HeightRule.ATLEAST } } : {}),
+          children: cells })],
       })]);
     }
     if (name === 'repeat') {
@@ -259,10 +309,11 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
       if (value !== undefined && !['parameterized', 'while-trade-secret'].includes(value)) throw new Error('Unsupported requirement value');
     } else if (name === 'cover-terms' && (parent !== 'agreement-section' || sectionStack.at(-1) !== 'cover_terms')) throw new Error('cover-terms must be a cover-terms section child');
     const gate = condition(node); tagStack.push(name);
+    definitionScopes.push(name === 'clause' && node.attributes.type === 'definitions');
     const selectedChildren = traditional && name === 'agreement-section' && attr(node, 'type') === 'standard_terms'
       && node.children[0]?.type === 'heading' && literal(node.children[0]).trim() === meta.title
       ? node.children.slice(1) : node.children;
-    const contents = blocks(selectedChildren, inClause || name === 'clause'); tagStack.pop();
+    const contents = blocks(selectedChildren, inClause || name === 'clause'); definitionScopes.pop(); tagStack.pop();
     if (name === 'agreement-section') sectionStack.pop();
     if (name === 'signer') {
       const label = attr(node, 'label', true)!;
@@ -304,7 +355,10 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
     numbering: { config: [{ reference: 'oa-clause', levels: [{ level: 0, format: LevelFormat.DECIMAL, text: '%1.', alignment: AlignmentType.START }] }, ...listNumbering] },
     sections: [{ properties: { page: { size: { width: 12240, height: 15840 }, margin: { top: 1080, bottom: 1080, left: 1440, right: 1440 } } },
       headers: { default: new Header({ children: [new Paragraph({ children: [new TextRun({ text: String(meta.label ?? meta.title), font: 'Arial', size: 18, color: '555555' })] })] }) },
-      footers: { default: new Footer({ children: [new Paragraph({ children: [new TextRun({ text: String(front.attribution_text ?? meta.license ?? ''), font: 'Arial', size: 16, color: '555555' })] })] }) }, children }],
+      footers: { default: new Footer({ children: [new Paragraph({ children: [new TextRun({
+        text: `${meta.label ?? meta.title}${meta.version ? ` (v${meta.version})` : ''}${front.attribution_text ?? meta.license ? `. ${String(front.attribution_text ?? meta.license)}` : ''}`,
+        font: 'Arial', size: typeof meta.footer_font_size_half_points === 'number' ? meta.footer_font_size_half_points : 16, color: '555555',
+      })] })] }) }, children }],
   });
-  return { buffer: Buffer.from(await Packer.toBuffer(document)), profile: 'oa-original-markdoc-docx-v1', bindings, sourceBindings, syntheticGates, confirmClauses, clauses };
+  return { buffer: Buffer.from(await Packer.toBuffer(document)), profile: 'oa-original-markdoc-docx-v1', bindings, sourceBindings, syntheticGates, confirmClauses, clauses, compatibilityNotes };
 }
