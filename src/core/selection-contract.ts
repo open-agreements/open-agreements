@@ -325,7 +325,9 @@ export async function fillSelectionContract(templateDir: string, contract: unkno
           else if (bool('general_cap_is_multiplier')) data[rule.target] = `( x )\t${str('general_cap_multiplier')}x the Fees paid or payable by Customer in the 12 month period immediately preceding the claim`;
           else if (bool('general_cap_is_dollar')) data[rule.target] = `( x )\t$${str('general_cap_dollar')}`;
           else if (bool('general_cap_is_greater_of')) data[rule.target] = `( x )\tThe greater of $${str('general_cap_greater_dollar')} or ${str('general_cap_greater_multiplier')}x the Fees paid or payable by Customer in the 12 month period immediately preceding the claim`;
-          else data[rule.target] = '';
+          // Legacy behavior deliberately leaves the display field untouched
+          // when no cap alternative is selected; its placeholder cleanup then
+          // removes the same empty table paragraphs as the legacy fill path.
         }
       }
     },
