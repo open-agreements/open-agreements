@@ -151,6 +151,20 @@ describe('Common Paper source-generated selection contract pilot', () => {
     await expect(compileSelectionContract(slaOrderFormSource)).rejects.toThrow('Literal replacement must match exactly one authored paragraph');
     await expect(compileSelectionContract(designPartnerSource)).rejects.toThrow('Literal replacement must match exactly one authored paragraph');
   });
+  it('rejects two literal replacement occurrences in one authored paragraph', async () => {
+    const dir = temporaryDirectory('oa-same-paragraph-replacement-');
+    cpSync(source, dir, { recursive: true });
+    writeFileSync(join(dir, 'replacements.json'), JSON.stringify({ SAME_TOKEN: '{effective_date}' }));
+    const template = join(dir, 'template.docx');
+    const zip = new AdmZip(template);
+    const document = zip.getEntry('word/document.xml')!;
+    const xml = document.getData().toString('utf8').replace(
+      '</w:body>', '<w:p><w:r><w:t>SAME_TOKEN SAME_TOKEN</w:t></w:r></w:p></w:body>',
+    );
+    zip.updateFile('word/document.xml', Buffer.from(xml));
+    zip.writeZip(template);
+    await expect(compileSelectionContract(dir)).rejects.toThrow('Literal replacement must match exactly one authored paragraph');
+  });
   it('selects standalone checkboxes independently and does not prefix-match authored labels', async () => {
     const dir = temporaryDirectory('oa-standalone-');
     const output = join(dir, 'selected.docx');
