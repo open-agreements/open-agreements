@@ -59,10 +59,39 @@ async function probe(url, local) {
   if (served.$id !== url) {
     return `${url} served a document whose $id is ${JSON.stringify(served.$id)}`;
   }
-  if (served.schema_version !== local.schema_version) {
-    return `${url} serves schema_version ${JSON.stringify(served.schema_version)}, this repository has ${JSON.stringify(local.schema_version)}`;
+  // Compare the whole document, key order normalised. The previous check read
+  // `schema_version` off the root of both documents, where neither has it — a
+  // JSON Schema pins the instance version at properties.schema_version.const —
+  // so it compared undefined with undefined and passed whatever was served.
+  if (canonicalize(served) !== canonicalize(local)) {
+    return `${url} serves a document that differs from this repository's copy (${differingPaths(served, local).slice(0, 5).join(", ") || "formatting only"})`;
   }
   return null;
+}
+
+/** Stable JSON text: key order must not read as a difference. */
+function canonicalize(value) {
+  if (Array.isArray(value)) return `[${value.map(canonicalize).join(",")}]`;
+  if (value && typeof value === "object") {
+    return `{${Object.keys(value)
+      .sort()
+      .map((key) => `${JSON.stringify(key)}:${canonicalize(value[key])}`)
+      .join(",")}}`;
+  }
+  return JSON.stringify(value) ?? "null";
+}
+
+/** Dotted paths that differ, so the failure names what moved. */
+function differingPaths(served, local, prefix = "") {
+  if (canonicalize(served) === canonicalize(local)) return [];
+  const bothObjects =
+    served && local && typeof served === "object" && typeof local === "object" &&
+    !Array.isArray(served) && !Array.isArray(local);
+  if (!bothObjects) return [prefix || "(document)"];
+  const keys = new Set([...Object.keys(served), ...Object.keys(local)]);
+  return [...keys].sort().flatMap((key) =>
+    differingPaths(served[key], local[key], prefix ? `${prefix}.${key}` : key),
+  );
 }
 
 export async function probePublishedSchemas() {

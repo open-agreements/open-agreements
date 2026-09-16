@@ -5,6 +5,7 @@ import { resolve } from 'node:path';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { itAllure } from './helpers/allure-test.js';
+import { probePublishedSchemas } from '../scripts/probe_published_schemas.mjs';
 
 const it = itAllure.epic('Platform & Distribution');
 
@@ -123,5 +124,44 @@ describe('non-compete quality card', () => {
 describe('quality card publication', () => {
   it('is projected into the Claude marketplace plugin byte-for-byte', () => {
     expect(readFileSync(PLUGIN_CARD_PATH)).toEqual(readFileSync(CARD_PATH));
+  });
+});
+
+describe('published-schema probe', () => {
+  /** Serve `body` at every URL the probe requests, and report its verdict. */
+  async function probeAgainst(body: unknown): Promise<string | null> {
+    const original = globalThis.fetch;
+    globalThis.fetch = (async () =>
+      new Response(JSON.stringify(body), { status: 200 })) as typeof fetch;
+    try {
+      await probePublishedSchemas();
+      return null;
+    } catch (error) {
+      return (error as Error).message;
+    } finally {
+      globalThis.fetch = original;
+    }
+  }
+
+  it('accepts the schema this repository publishes', async () => {
+    expect(await probeAgainst(schema)).toBeNull();
+  });
+
+  it('rejects a served schema whose pinned instance version is wrong', async () => {
+    // The previous check compared `schema_version` at the document root, where
+    // a JSON Schema never carries it, so this exact document passed.
+    const wrong = structuredClone(schema);
+    wrong.properties.schema_version.const = 'WRONG';
+    expect(await probeAgainst(wrong)).toMatch(/properties\.schema_version/);
+  });
+
+  it('rejects a served schema that drops a required field', async () => {
+    const wrong = structuredClone(schema);
+    wrong.required = (wrong.required as string[]).filter((field) => field !== 'human_reviewed_at');
+    expect(await probeAgainst(wrong)).toMatch(/differs from this repository/);
+  });
+
+  it('treats key order as equivalent', async () => {
+    expect(await probeAgainst(Object.fromEntries(Object.entries(schema).reverse()))).toBeNull();
   });
 });
