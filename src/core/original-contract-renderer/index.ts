@@ -226,7 +226,7 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
   // Concrete values reproduce the production OA document profile. Keep the
   // body style on ordinary paragraphs so Word retains its intended justification.
   const paragraph = (runs: TextRun[], extra: ConstructorParameters<typeof Paragraph>[0] = {}) => new Paragraph({
-    style: 'OABody', children: runs, ...(typeof extra === 'object' ? extra : {}),
+    style: 'OABody', ...(tagStack.includes('signer') ? { keepNext: true } : {}), children: runs, ...(typeof extra === 'object' ? extra : {}),
   });
   const blocks = (nodes: Node[], inClause = false): Block[] => nodes.flatMap(node => {
     if (node.errors.length) throw new Error(`Malformed Markdoc: ${node.errors.map(error => error.message).join('; ')}`);
@@ -338,6 +338,10 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
       const authoredCaption = node.children[0] && ['paragraph', 'heading'].includes(node.children[0].type)
         && literal(node.children[0]).trim() === label;
       if (!authoredCaption) contents.unshift(paragraph([run(label, { bold: true })], { keepNext: true }));
+      // Keep one repeated signing unit together, rather than chaining every
+      // repeat item. The invisible terminator releases keepNext after this
+      // signer's final field so the following signer may start on a new page.
+      if (parent === 'repeat') contents.push(new Paragraph({ spacing: { after: 0, line: 1 }, children: [] }));
     }
     const confirm = attr(node, 'confirm');
     if (confirm) {

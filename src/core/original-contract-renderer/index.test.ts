@@ -112,6 +112,36 @@ Print Name: {% field name="name" /%}
     expect(xml(result.buffer).match(/>Employee<\/w:t>/g)).toHaveLength(1);
   });
 
+  it('keeps each repeated signer unit together without chaining the next signer', async () => {
+    const result = await renderOriginalMarkdoc(source(`{% agreement-section type="signature" %}
+{% signature-block arrangement="stacked-consent-signers" %}
+{% repeat field="people" %}
+{% signer id="person" kind="individual" capacity="personal" label="Director" %}
+Signature: _______________
+
+Print Name: {% field name="name" /%}
+
+Date: _______________
+{% /signer %}
+{% /repeat %}
+{% /signature-block %}
+{% /agreement-section %}`), fields);
+    const doc = new DOMParser().parseFromString(xml(result.buffer), 'application/xml');
+    const paragraphFor = (text: string) => {
+      const textNode = Array.from(doc.getElementsByTagName('w:t')).find(node => node.textContent === text)!;
+      return textNode.parentNode!.parentNode as Element;
+    };
+
+    // All visible paragraphs in one FOR instance carry keepNext, which moves
+    // the whole signer rather than leaving Date on the following page.
+    for (const text of ['Director', 'Signature: _______________', 'Print Name: ', 'Date: _______________']) {
+      expect(paragraphFor(text).getElementsByTagName('w:keepNext').length).toBe(1);
+    }
+    // This unstyled zero-height paragraph breaks the chain before the next
+    // repeated signer; without it every array item would be kept together.
+    expect(xml(result.buffer)).toContain('<w:spacing w:after="0" w:line="1"/>');
+  });
+
   it('emits applicable unconfirmed warnings and a cover warning without suppressing the recital', async () => {
     const confirmation: FieldDefinition = { name: 'confirmed', type: 'boolean', description: 'Synthetic confirmation', default: 'false',
       statutory_compliance_representation: true, confirm_note: 'Verify the prerequisite happened', authority_url: 'https://example.test/authority' };
