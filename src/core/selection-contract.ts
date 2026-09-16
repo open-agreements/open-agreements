@@ -112,8 +112,8 @@ export async function compileSelectionContract(templateDir: string) {
     const originalText = paragraphs(docx);
     for (const [search, target] of Object.entries(replacements)) {
       const fields = [...target.matchAll(/\{([a-z][a-z0-9_]{0,99})\}/g)].map(match => match[1]);
-      const sourceMatches = originalText.filter(paragraph => paragraph.includes(search));
-      if (!fields.length || fields.some(field => !names.has(field)) || sourceMatches.length !== 1) {
+      const sourceMatches = originalText.reduce((count, paragraph) => count + paragraph.split(search).length - 1, 0);
+      if (!fields.length || fields.some(field => !names.has(field)) || sourceMatches !== 1) {
         throw new Error('Literal replacement must match exactly one authored paragraph');
       }
     }

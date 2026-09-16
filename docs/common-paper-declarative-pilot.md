@@ -11,16 +11,19 @@ DOCX. Custom clean stages, formatted replacements, arbitrary expressions and
 unknown bindings remain rejected. This supersedes the older v2 limitations below;
 the dated entries remain historical evidence.
 
-Common Paper Design Partner is the seventh verified local template. Thirteen
-new exact decompressed-DOCX comparisons cover nine independently selected
-checkboxes and four fee/signer combinations. Independent visible-text checks
-confirm checkbox retention/removal, fee alternatives and entity-title suppression.
-These are targeted cases, not exhaustive combinations of all nine booleans.
-Five rejection tests cover string booleans, absent search text, unknown/injected
-replacement bindings and replacement-source drift. Total: 65 tests and 56 exact
-DOCX comparisons across seven templates; TypeScript, focused lint and diff checks
-pass. Inventory compilation still reports `compiled-unverified`, not automatic
-promotion of any source revision.
+> **Corrected 2026-09-16.** The Design Partner promotion is revoked. Its thirteen
+> exact decompressed-DOCX comparisons remain true historical evidence of parity
+> with the pre-existing legacy fill path, but do not establish fidelity: the
+> ambiguous `[ # ]` replacement substituted one value across unrelated feedback
+> count, term-length, and invoice-days contexts. The current compiler rejects
+> that source rather than preserving the shared defect. No source artifact or
+> legal prose changed; this corrects the prior promotion record in place.
+
+The historical Design Partner test run contained thirteen exact decompressed-DOCX
+comparisons covering nine independently selected checkboxes and four fee/signer
+combinations. Those targeted cases are retained as historical parity evidence,
+not current verification or promotion. Inventory compilation remains
+`compiled-unverified`, never automatic promotion of any source revision.
 
 Reproduce with the earlier three-file command plus
 `src/core/selection-contract-stages.test.ts`. Evidence regenerates in
