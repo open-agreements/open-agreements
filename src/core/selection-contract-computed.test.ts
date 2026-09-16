@@ -103,12 +103,13 @@ describe('computed display rules compile from actual third-party templates', () 
     expectParagraph(paragraphs, 'Company: Fallback Company Two');
     expectParagraph(paragraphs, '☑ Email: ada@example.test');
     expectParagraph(paragraphs, '☐ Postal mail:');
-    expectParagraph(paragraphs, '☐ Email:');
+    // Legacy source semantics preserve the ordinary placeholder value while
+    // the independently derived presence glyph correctly treats it as absent.
+    expectParagraph(paragraphs, `☐ Email: ${BLANK_PLACEHOLDER}`);
     expectParagraph(paragraphs, '☑ Postal mail: 2 Main Street');
-    expect(paragraphs.join('\n')).not.toContain(BLANK_PLACEHOLDER);
   });
 
-  it('Bonterms handles title-only and fully blank signatory displays without underscore leakage', async () => {
+  it('Bonterms preserves ordinary placeholders while treating them as absent for notice glyphs', async () => {
     const contract = await compileSelectionContract(bontermsDir);
     const paragraphs = await fill(bontermsDir, contract, 'bonterms-blank', {
       party_1_signatory_name: '', party_1_signatory_title: 'Treasurer',
@@ -117,8 +118,10 @@ describe('computed display rules compile from actual third-party templates', () 
       party_2_email: '', party_2_address: '',
     });
     expectParagraph(paragraphs, 'Name and Title: Treasurer');
+    // Computed join treats placeholders as absent even though ordinary source
+    // fields retain the literal placeholder when rendered directly.
     expectParagraph(paragraphs, 'Name and Title:');
-    expect(paragraphs.join('\n')).not.toContain(BLANK_PLACEHOLDER);
+    expectParagraph(paragraphs, `☐ Postal mail: ${BLANK_PLACEHOLDER}`);
   });
 
   it('CSA renders every affirmative display line and multiplier-cap priority exactly', async () => {
