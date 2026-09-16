@@ -247,6 +247,7 @@ Contact {% field name="name" /%}.
     expect(headerXml.join('\n')).not.toContain('OpenAgreements Consumer Privacy Policy');
     expect(footerXml).toHaveLength(1);
     expect(footerXml.join('\n')).toContain('OpenAgreements Consumer Privacy Policy (v0.1). Adapted from the OpenAgreements privacy-policy specification. Licensed under CC BY 4.0.');
+    expect(footerXml.join('\n')).toContain('<w:r><w:tab/></w:r>');
     expect(footerXml.join('\n')).toContain('<w:instrText xml:space="preserve">PAGE</w:instrText>');
     expect(footerXml.join('\n')).toContain('<w:instrText xml:space="preserve">NUMPAGES</w:instrText>');
   });

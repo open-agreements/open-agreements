@@ -370,7 +370,7 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
   const header = (label: string) => new Header({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, spacing: { after: 0 },
     border: { bottom: { style: BorderStyle.SINGLE, color: '107087', size: 8, space: 0 } }, children: [new TextRun({ text: label, font: 'Arial', size: 18, bold: true, allCaps: true, color: '107087' })] })] });
   const footer = () => new Footer({ children: [new Paragraph({ spacing: { before: 0, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: 10080 }], children: [
-    new TextRun({ text: footerText, font: 'Arial', size: typeof meta.footer_font_size_half_points === 'number' ? meta.footer_font_size_half_points : 18, color: '494A4B' }), new Tab(),
+    new TextRun({ text: footerText, font: 'Arial', size: typeof meta.footer_font_size_half_points === 'number' ? meta.footer_font_size_half_points : 18, color: '494A4B' }), new TextRun({ children: [new Tab()] }),
     new TextRun({ text: 'Page ', font: 'Arial', size: 18, color: '494A4B' }), new TextRun({ children: [PageNumber.CURRENT], font: 'Arial', size: 18, color: '494A4B' }),
     new TextRun({ text: ' of ', font: 'Arial', size: 18, color: '494A4B' }), new TextRun({ children: [PageNumber.TOTAL_PAGES], font: 'Arial', size: 18, color: '494A4B' }),
   ] })] });
