@@ -2,7 +2,7 @@
  * Not a general template engine or a claim that every catalog entry is complete.
  */
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, readdirSync, mkdtempSync, rmSync } from 'node:fs';
+import { copyFileSync, existsSync, readFileSync, readdirSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
@@ -244,6 +244,12 @@ export async function compileSelectionContract(templateDir: string) {
   for (const [target, kind, sources] of computedFamilies) if (names.has(target) && sources.every(source => names.has(source))) rules.push({ op: 'computed', target, sources: [...sources], kind });
   const available = new Set([...names, ...rules.map(r => r.target)]);
   const commands = await listCommands(Uint8Array.from(docx).buffer, ['{', '}']);
+  const staticUnparameterized = metadata.fields.length === 0 && selections.groups.length === 0 && !replacements && !cleanConfig && !sourceRecipe;
+  if (!commands.length && staticUnparameterized) return {
+    profile: 'oa-static-unparameterized-v1', status: 'compiled-unverified',
+    sourceHashes: Object.fromEntries(['metadata.yaml', 'template.docx'].map(name => [name, digest(readFileSync(join(templateDir, name)))])),
+    compatibility: { engineHash, ruleFamily: 'none', renderer: 'exact-byte-copy' }, metadata, selections, selectionEnums, computedFields: [], replacements, cleanConfig, sourceRecipe, rules, bindings: [], capabilities: { staticUnparameterized: true },
+  };
   if (!commands.length || commands.some(c => (c.type === 'INS' || c.type === 'IF') ? (!safeKey.test(c.code) || !available.has(c.code)) : c.type !== 'END-IF')) throw new Error('Unsupported or unresolved DOCX command');
   const bindings = [...new Set(commands.map(c => c.code).filter(Boolean))].sort();
   return {
@@ -259,6 +265,11 @@ export type SelectionContract = Awaited<ReturnType<typeof compileSelectionContra
 export async function fillSelectionContract(templateDir: string, contract: unknown, values: Record<string, unknown>, outputPath: string) {
   const current = await compileSelectionContract(templateDir);
   if (!isDeepStrictEqual(current, contract)) throw new Error('Contract/source mismatch; regenerate and verify');
+  if ('capabilities' in current && current.capabilities?.staticUnparameterized) {
+    if (Object.keys(values).length) throw new Error('Invalid input: static-unparameterized template has no fields');
+    copyFileSync(join(templateDir, 'template.docx'), outputPath);
+    return { outputPath, metadata: current.metadata, fieldsUsed: [], providedFieldsUsed: [], fillCommandCount: 0, warnings: [] };
+  }
   const computedTargets = new Set(current.rules.filter((rule): rule is Extract<Rule, { op: 'join-nonblank' | 'presence-map' | 'computed' }> => ['join-nonblank', 'presence-map', 'computed'].includes(rule.op)).map(rule => rule.target));
   for (const [key, value] of Object.entries(values)) {
     const field = current.metadata.fields.find(f => f.name === key);
