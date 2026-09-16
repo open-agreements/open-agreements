@@ -81,6 +81,7 @@ export async function exportOriginalCatalog({ outputDir, evidenceDir, verifiedOn
           version: contract.metadata.version, stability: contract.metadata.stability ?? 'experimental',
           status: verified ? 'verified' : 'compiled-unverified',
           requires_source_checkout: true, standalone_portable: false,
+          rendering_notes: contract.renderingNotes,
           contract: manifest, contract_sha256: digest(contract),
           canonical_field_count: contract.fields.length, public_field_count: contract.publicFields.length,
           public_fields: contract.publicFields,

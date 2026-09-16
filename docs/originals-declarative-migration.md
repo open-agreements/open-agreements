@@ -49,6 +49,23 @@ These are integration findings, not new legal conclusions. The source agreements
 and published DOCX artifacts are left unchanged. Raw logs, manifests, receipts,
 and filled synthetic examples belong under ignored `.cache/original-contracts/`.
 
+**Post-checkpoint correction, 2026-09-16:** independent review found that the
+adapter and its first oracle both treated the literal string `"false"` as a
+Boolean false, silently hiding a text-dependent clause. The employment-offer
+`bonus_terms` reproduction demonstrated actual content loss. Typed strings now
+use nonblank/non-placeholder presence, and every string-bound branch receives
+an exact `"false"` regression case. This is why agreement with an oracle sharing
+the same assumption was insufficient.
+
+The same review found ignored document-layout directives. The native profile
+now applies authored cover-row height, footer size, label/version, and the three
+defined-term visual modes; unknown future document/frontmatter settings fail
+closed. `include_cloud_doc_line: true` is an explicit **legacy-inert compatibility
+flag**, not a claimed cloud integration: no implementation exists in the older
+renderer and the inspected published employment DOCX contains no such line.
+The contract, catalog, and fill CLI expose this limitation as rendering notes;
+unverified alternative values are rejected. Source legal prose is unchanged.
+
 ## Verification and promotion rules
 
 - Every discovered form receives a verified or blocked receipt; none disappears
@@ -100,9 +117,11 @@ The independent oracle walks the canonical Markdoc AST and reconstructs the
 expected ordered body paragraphs, including static prose, substituted fields,
 conditional omissions, and each repeated row. It compares those expectations
 with `word/document.xml`, not the renderer's own flattened text or a legacy
-DOCX. Header/footer attribution was separately inspected in the three rendered
-samples; it is not part of the full-corpus paragraph oracle. The oracle independently
-evaluates derived gates and checks local/global confirmation warning cardinality.
+DOCX. Header/footer label, version, and attribution are now independently checked
+in their separate OOXML package parts for every generated case; removing the
+footer or changing the header is covered by adversarial mutation tests. The oracle
+independently evaluates derived gates and checks local/global confirmation warning
+cardinality. Representative rendered samples additionally check visual layout.
 
 `scripts/original-oracle-mutation.test.ts` proves that this oracle rejects
 deleted/duplicated unconditional prose, an injected row when the array is empty,
@@ -136,10 +155,12 @@ presentation rule separately. No legal text was changed.
 
 ## Execution status
 
-The original-form adapter checkpoint is complete locally: **81/81 discovered
+The first original-form adapter checkpoint completed locally: **81/81 discovered
 forms, 998/998 generated cases passed, zero blocked**, with 81 entries in the
 verified-only export. Privacy Policy has 44 cases; Florida has 39. A broader
-third-party batch is still being worked separately.
+third-party batch is still being worked separately. These are the pre-audit
+checkpoint counts and hashes, retained as history; the post-audit corrections
+above invalidate those receipts and require a fresh final sweep before delivery.
 
 Checkpoint receipt runtime digest:
 `52d06108c2abadf905ff40224b6e8e5942a32a2b931c03b77ffc6980f9a4fbff`.

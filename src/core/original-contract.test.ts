@@ -8,6 +8,7 @@ import { compileOriginalContract, fillOriginalContract } from './original-contra
 const PRIVACY = 'templates/openagreements-cc-by-4.0/openagreements-privacy-policy';
 const BOARD = 'templates/openagreements-cc-by-4.0/openagreements-board-consent-safe';
 const FLORIDA = 'templates/openagreements-cc-by-4.0/openagreements-restrictive-covenant-florida';
+const OFFER = 'templates/openagreements-cc-by-4.0/openagreements-employment-offer-letter';
 const temporary: string[] = [];
 const temp = () => { const path = mkdtempSync(join(tmpdir(), 'oa-original-test-')); temporary.push(path); return path; };
 const output = () => join(temp(), 'filled.docx');
@@ -15,6 +16,22 @@ afterEach(() => { for (const path of temporary.splice(0)) rmSync(path, { recursi
 const copiedPrivacy = () => { const path = join(temp(), 'privacy'); cpSync(PRIVACY, path, { recursive: true }); return path; };
 
 describe('original source contracts', () => {
+  it('preserves literal false text in string-gated clauses without treating it as Boolean false', async () => {
+    const contract = await compileOriginalContract(OFFER);
+    for (const text of ['false', ' false ', '0']) {
+      const path = output();
+      await fillOriginalContract(OFFER, contract, { bonus_terms: text }, path);
+      const xml = new AdmZip(path).readAsText('word/document.xml');
+      expect(xml).toContain('Bonus Opportunity');
+      expect(xml).toContain(`>${text}<`);
+    }
+    for (const text of ['', '   ', '_______']) {
+      const path = output();
+      await fillOriginalContract(OFFER, contract, { bonus_terms: text }, path);
+      expect(new AdmZip(path).readAsText('word/document.xml')).not.toContain('Bonus Opportunity');
+    }
+  });
+
   it('keeps the privacy canonical schema separate from its public projection', async () => {
     const contract = await compileOriginalContract(PRIVACY);
     expect(contract.fields).toHaveLength(35);

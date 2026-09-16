@@ -107,6 +107,9 @@ function truthyBranchCases(contract) {
     if (!field || derived.has(name) || !['string', 'date'].includes(field.type)) continue;
     cases.push({ id: `branch-${name}-empty`, purpose: `Truthy branch ${name} is inactive for an empty scalar.`, values: { ...base, [name]: '' }, mode: 'canonical-only' });
     cases.push({ id: `branch-${name}-present`, purpose: `Truthy branch ${name} is active for a non-empty scalar.`, values: { ...base, [name]: scalarValue(field, `branch-${name}`, 0) }, mode: 'canonical-only' });
+    if (field.type === 'string') {
+      cases.push({ id: `branch-${name}-literal-false`, purpose: `Literal string "false" is nonempty text, never Boolean false.`, values: { ...base, [name]: 'false' }, mode: 'canonical-only' });
+    }
   }
   return cases;
 }

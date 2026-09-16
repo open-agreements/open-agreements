@@ -43,6 +43,8 @@ export interface OriginalContract {
   sourceHashes: Record<string, string>;
   runtime: { hash: string; hashes: Record<string, string>; requiresRuntime: true; renderer: 'oa-generic-fill-pipeline' };
   capabilities: { requiresRuntime: true; genericFill: true; standalonePortable: false };
+  /** Explicit compatibility boundaries, not silently ignored source directives. */
+  renderingNotes: string[];
   source: { templateFile: 'canonical-generated.docx'; mdocFile: 'template.mdoc' };
   license: { license: string; allowDerivatives: boolean; distribution: string; attributionText?: string; sourceUrl?: string };
   /** Public metadata projection retained for compatibility and public callers. */
@@ -223,6 +225,7 @@ async function docxBindings(bytes: Buffer, fields: CanonicalField[]): Promise<Bi
 async function renderCanonicalDocx(templateDir: string, fields: CanonicalField[]) {
   return renderOriginalMarkdoc(readFileSync(join(templateDir, 'template.mdoc'), 'utf8'), fields) as unknown as {
     buffer: Buffer; bindings: Binding[]; sourceBindings: Binding[]; syntheticGates?: SyntheticGate[]; confirmClauses: ConfirmClauseDescriptor[];
+    compatibilityNotes?: string[];
   };
 }
 
@@ -283,6 +286,7 @@ export async function compileOriginalContract(templateDir: string): Promise<Orig
     profile: 'oa-original-source-contract-v1', status: 'compiled-unverified', sourceDeclarative: true,
     sourceHashes, runtime: currentRuntime(),
     capabilities: { requiresRuntime: true, genericFill: true, standalonePortable: false },
+    renderingNotes: rendered.compatibilityNotes ?? [],
     source: { templateFile: 'canonical-generated.docx', mdocFile: 'template.mdoc' },
     license: { license: metadata.license, allowDerivatives: metadata.allow_derivatives, distribution: metadata.distribution ?? 'bundled',
       ...(metadata.attribution_text ? { attributionText: metadata.attribution_text } : {}),
@@ -344,7 +348,9 @@ export async function fillOriginalContract(templateDir: string, contract: unknow
       confirmClauses: current.confirmClauses,
       computeDisplayFields: data => {
         for (const gate of current.derivedGates) data[gate.field] = evaluateGate(gate.expression, data);
-        const truth = (value: unknown) => value === true || (typeof value === 'string' && value.trim() !== '' && value.trim() !== '_______' && value !== 'false') || (typeof value === 'number' && Number.isFinite(value) && value !== 0);
+        // Typed strings are text, not Boolean coercions: the literal "false"
+        // still supplies nonempty content to a string-dependent clause.
+        const truth = (value: unknown) => value === true || (typeof value === 'string' && value.trim() !== '' && value.trim() !== '_______') || (typeof value === 'number' && Number.isFinite(value) && value !== 0);
         for (const gate of current.syntheticGates) {
           const all = (gate.allOf ?? []).every(name => truth(data[name]));
           const any = gate.anyOf === undefined || gate.anyOf.some(name => truth(data[name]));

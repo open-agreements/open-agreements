@@ -69,6 +69,33 @@ const row = (ordinal: number) => ({
 });
 
 describe('original semantic oracle mutation resistance', () => {
+  it('rejects missing attribution and altered running headers independently of body correctness', async () => {
+    const contract = await compileOriginalContract(ROSTER);
+    const values = rosterValues([]);
+    const path = output('running-parts');
+    await fillOriginalContract(ROSTER, contract, values, path);
+    expect(verifyOriginalSemanticOracle(ROSTER, contract, values, path)).toEqual([]);
+    const zip = new AdmZip(path);
+    const footer = zip.getEntries().find(entry => /^word\/footer\d+\.xml$/.test(entry.entryName));
+    if (!footer) throw new Error('Expected source-derived footer');
+    zip.deleteFile(footer.entryName);
+    zip.writeZip(path);
+    expect(verifyOriginalSemanticOracle(ROSTER, contract, values, path)).toEqual(expect.arrayContaining([
+      expect.stringContaining('source footer expected one package part'),
+    ]));
+
+    const headerPath = output('altered-header');
+    await fillOriginalContract(ROSTER, contract, values, headerPath);
+    const altered = new AdmZip(headerPath);
+    const header = altered.getEntries().find(entry => /^word\/header\d+\.xml$/.test(entry.entryName));
+    if (!header) throw new Error('Expected source-derived header');
+    altered.updateFile(header.entryName, Buffer.from(header.getData().toString('utf8').replace(/<w:t([^>]*)>[^<]*<\/w:t>/, '<w:t$1>Wrong source title</w:t>')));
+    altered.writeZip(headerPath);
+    expect(verifyOriginalSemanticOracle(ROSTER, contract, values, headerPath)).toEqual(expect.arrayContaining([
+      expect.stringContaining('source header text/attribution was not preserved'),
+    ]));
+  });
+
   it('rejects dropped and duplicated unconditional source prose', async () => {
     const contract = await compileOriginalContract(ROSTER);
     const values = rosterValues([]);

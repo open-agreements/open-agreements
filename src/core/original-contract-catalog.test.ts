@@ -80,6 +80,7 @@ describe('OpenAgreements original contract catalog', () => {
     expect(cases.map((item) => item.id)).toEqual(expect.arrayContaining([
       'branch-sensitive_data_categories-empty',
       'branch-sensitive_data_categories-present',
+      'branch-sensitive_data_categories-literal-false',
     ]));
     const inventory = expectedOriginalCaseInventory(contract);
     expect(inventory).toHaveLength(cases.length);

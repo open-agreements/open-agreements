@@ -266,6 +266,11 @@ function sourceConditionOracle(
   const output = renderedText(outputPath).replace(/\s+/g, ' ').trim();
   const reasons: string[] = [];
   const count = (haystack: string, needle: string): number => needle ? haystack.split(needle).length - 1 : 0;
+  const truth = (value: unknown): boolean => {
+    if (typeof value === 'boolean') return value;
+    if (typeof value === 'string') return !['', '_______'].includes(value.trim());
+    return typeof value === 'number' && Number.isFinite(value) && value !== 0;
+  };
   const literalChunks = (node: MarkdocNode): string[] => {
     if (node.type === 'text') return [String(node.attributes?.content ?? '').replace(/\[\[([^\]]+)\]\]/g, '“$1”').replace(/\s+/g, ' ').trim()];
     if (node.type === 'tag' && node.tag === 'field') return [];
@@ -276,7 +281,7 @@ function sourceConditionOracle(
       const confirmName = node.attributes.confirm;
       const field = contract.fields.find((candidate) => candidate.name === confirmName);
       const applicableName = typeof node.attributes['include-when'] === 'string' ? node.attributes['include-when'] : undefined;
-      const applicable = applicableName ? Boolean(effective[applicableName]) : true;
+      const applicable = applicableName ? truth(effective[applicableName]) : true;
       const confirmed = effective[confirmName] === true;
       for (const proof of [field?.confirm_note, field?.authority_url].filter((item): item is string => Boolean(item))) {
         const actual = count(output, proof);
@@ -286,7 +291,7 @@ function sourceConditionOracle(
     }
     if (node.type === 'tag' && node.tag === 'clause' && typeof node.attributes?.['include-when'] === 'string') {
       const condition = node.attributes['include-when'];
-      const active = Boolean(effective[condition]);
+      const active = truth(effective[condition]);
       const chunks = literalChunks(node).filter((text) => text.length >= 12);
       const heading = chunks[0];
       const uniqueHeading = heading && count(normalizedSource, heading) === 1 ? heading : undefined;
@@ -306,7 +311,7 @@ function sourceConditionOracle(
       const conditions = direct.length ? direct : any;
       const label = typeof node.attributes?.label === 'string' ? node.attributes.label : undefined;
       if (conditions.length && label && count(normalizedSource, label) === 1) {
-        const active = direct.length ? Boolean(effective[direct[0]]) : conditions.some((name) => Boolean(effective[name]));
+        const active = direct.length ? truth(effective[direct[0]]) : conditions.some((name) => truth(effective[name]));
         const actual = count(output, label);
         const expected = active ? 1 : 0;
         if (actual !== expected) reasons.push(`cover branch ${conditions.join(' OR ')} expected ${expected} label occurrence(s), found ${actual}: ${label}`);
@@ -316,10 +321,32 @@ function sourceConditionOracle(
   };
   walk(ast);
   const frontmatch = /^---\r?\n([\s\S]*?)\r?\n---/.exec(rawSource);
-  const front = yaml.load(frontmatch?.[1] ?? '') as { document?: { title?: string; presentation?: string } };
-  const truth = (value: unknown): boolean => value === true ||
-    (typeof value === 'string' && value.trim() !== '' && value.trim() !== '_______' && value !== 'false') ||
-    (typeof value === 'number' && Number.isFinite(value) && value !== 0);
+  const front = yaml.load(frontmatch?.[1] ?? '') as {
+    document?: { title?: string; label?: string; version?: string; license?: string; presentation?: string };
+    attribution_text?: string;
+  };
+  // Inspect separate package parts, not the combined visible text: attribution
+  // accidentally moved into the body is not a preserved running footer.
+  const parts = zipEntries(outputPath);
+  const footerLabel = front.document?.label ?? front.document?.title ?? '';
+  const footerVersion = front.document?.version ? ` (v${front.document.version})` : '';
+  const footerAttribution = front.attribution_text ?? front.document?.license;
+  for (const [kind, expectedText] of [
+    ['header', front.document?.label ?? front.document?.title ?? ''],
+    ['footer', `${footerLabel}${footerVersion}${footerAttribution ? `. ${footerAttribution}` : ''}`],
+  ] as const) {
+    const found = [...parts].filter(([name]) => new RegExp(`^word/${kind}\\d+\\.xml$`).test(name));
+    if (found.length !== 1) {
+      reasons.push(`source ${kind} expected one package part, found ${found.length}`);
+      continue;
+    }
+    const doc = new DOMParser().parseFromString(found[0][1].toString('utf8'), 'application/xml');
+    const textNodes = doc.getElementsByTagNameNS('http://schemas.openxmlformats.org/wordprocessingml/2006/main', 't');
+    let text = '';
+    for (let index = 0; index < textNodes.length; index++) text += textNodes[index].textContent ?? '';
+    const normalize = (value: string) => value.replace(/\s+/g, ' ').trim();
+    if (normalize(text) !== normalize(expectedText)) reasons.push(`source ${kind} text/attribution was not preserved`);
+  }
   const conditional = (node: MarkdocNode): boolean => {
     const one = node.attributes?.['include-when'];
     const any = node.attributes?.['include-when-any'];

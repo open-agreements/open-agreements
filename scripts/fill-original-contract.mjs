@@ -42,5 +42,6 @@ const result = await fillOriginalContract(matches[0], contract, values, output);
 console.log(JSON.stringify({
   template_id: options.template, output, verification_cases: receipt.summary.passed,
   fields_used: result.fieldsUsed, warnings: result.warnings,
+  rendering_notes: contract.renderingNotes,
   scope: 'Local canonical-renderer pilot; human review required before signing or publication.',
 }, null, 2));
