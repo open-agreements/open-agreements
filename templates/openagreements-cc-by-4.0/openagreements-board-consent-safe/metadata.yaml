@@ -2,7 +2,7 @@ name: Board Consent for SAFE Financing
 category: corporate-governance
 description: Action by unanimous written consent of the board of directors of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs).
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-board-consent-safe
-version: '1.2'
+version: '1.3'
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
@@ -30,6 +30,9 @@ fields:
       - name: name
         type: string
         description: Full name of a director signing the consent
+      - name: signing_date
+        type: date
+        description: Date this director signs the consent
 priority_fields:
   - company_name
   - effective_date

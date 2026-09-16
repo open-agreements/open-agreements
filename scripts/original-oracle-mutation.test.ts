@@ -8,6 +8,7 @@ import { generateVerificationCases, verifyOriginalSemanticOracle } from './verif
 
 const ROSTER = 'templates/openagreements-cc0-1.0/openagreements-working-group-list';
 const FLORIDA = 'templates/openagreements-cc-by-4.0/openagreements-restrictive-covenant-florida';
+const BOARD = 'templates/openagreements-cc-by-4.0/openagreements-board-consent-safe';
 const temporary: string[] = [];
 
 const output = (name: string): string => {
@@ -69,6 +70,19 @@ const row = (ordinal: number) => ({
 });
 
 describe('original semantic oracle mutation resistance', () => {
+  it('checks typed dates in repeated signer scope independently of the effective date', async () => {
+    const contract = await compileOriginalContract(BOARD);
+    const values = { company_name: 'Synthetic Company', purchase_amount: '1000', effective_date: '2026-09-30',
+      board_members: [{ name: 'First Director', signing_date: '2026-09-16' }, { name: 'Second Director', signing_date: '2026-09-18' }] };
+    const path = output('signer-dates');
+    await fillOriginalContract(BOARD, contract, values, path);
+    expect(verifyOriginalSemanticOracle(BOARD, contract, values, path)).toEqual([]);
+    mutateParagraph(path, 'September 18, 2026', paragraph => paragraph.replace('September 18, 2026', 'September 30, 2026'));
+    expect(verifyOriginalSemanticOracle(BOARD, contract, values, path)).toEqual(expect.arrayContaining([
+      expect.stringContaining('ordered body oracle mismatch'),
+    ]));
+  });
+
   it('rejects missing attribution and altered running headers independently of body correctness', async () => {
     const contract = await compileOriginalContract(ROSTER);
     const values = rosterValues([]);
@@ -93,6 +107,35 @@ describe('original semantic oracle mutation resistance', () => {
     altered.writeZip(headerPath);
     expect(verifyOriginalSemanticOracle(ROSTER, contract, values, headerPath)).toEqual(expect.arrayContaining([
       expect.stringContaining('source header text/attribution was not preserved'),
+    ]));
+  });
+
+  it('rejects publisher identity in the running header and missing page fields', async () => {
+    const contract = await compileOriginalContract(ROSTER);
+    const values = rosterValues([]);
+    const path = output('publisher-header');
+    await fillOriginalContract(ROSTER, contract, values, path);
+    expect(verifyOriginalSemanticOracle(ROSTER, contract, values, path)).toEqual([]);
+    const zip = new AdmZip(path);
+    const header = zip.getEntries().find(entry => /^word\/header\d+\.xml$/.test(entry.entryName));
+    if (!header) throw new Error('Expected neutral title header');
+    zip.updateFile(header.entryName, Buffer.from(header.getData().toString('utf8').replace(/<w:t([^>]*)>[^<]*<\/w:t>/, '<w:t$1>OpenAgreements publisher policy</w:t>')));
+    zip.writeZip(path);
+    expect(verifyOriginalSemanticOracle(ROSTER, contract, values, path)).toEqual(expect.arrayContaining([
+      expect.stringContaining('source header text/attribution was not preserved'),
+    ]));
+    const pagePath = output('missing-page-field');
+    await fillOriginalContract(ROSTER, contract, values, pagePath);
+    const paged = new AdmZip(pagePath);
+    const footer = paged.getEntries().find(entry => /^word\/footer\d+\.xml$/.test(entry.entryName));
+    if (!footer) throw new Error('Expected paged footer');
+    const before = footer.getData().toString('utf8');
+    const after = before.replace(/NUMPAGES/g, 'UNSUPPORTED_PAGE_FIELD');
+    expect(after).not.toBe(before);
+    paged.updateFile(footer.entryName, Buffer.from(after));
+    paged.writeZip(pagePath);
+    expect(verifyOriginalSemanticOracle(ROSTER, contract, values, pagePath)).toEqual(expect.arrayContaining([
+      expect.stringContaining('source footer requires one PAGE and one NUMPAGES field'),
     ]));
   });
 

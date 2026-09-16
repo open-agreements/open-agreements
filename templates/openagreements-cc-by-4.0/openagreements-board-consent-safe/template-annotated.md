@@ -6,6 +6,8 @@
 
 The undersigned, constituting all of the members of the Board of Directors (the "Board") of [Full legal name of the company], a Delaware corporation (the "Company"), pursuant to Section 141(f) of the Delaware General Corporation Law, hereby adopt the following resolutions by written consent:
 
+This Action by Written Consent is effective as of [Date the consent is effective].
+
 **WHEREAS**, the Board believes it is in the best interests of the Company to enter into one or more Simple Agreements for Future Equity (each, a "SAFE", and together, the "SAFEs"), providing for the sale of rights to future shares of the Company's capital stock for an aggregate purchase amount of up to $[Aggregate SAFE purchase amount (for example, "500,000")], in accordance with terms set forth therein.
 
 ## Resolutions
@@ -38,4 +40,4 @@ Signature: _______________
 
 Print Name: [Full name of a director signing the consent]
 
-Date: [Date the consent is effective]
+Date: [Date this director signs the consent]

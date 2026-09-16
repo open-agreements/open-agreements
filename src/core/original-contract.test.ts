@@ -70,6 +70,29 @@ describe('original source contracts', () => {
     expect(result.fillCommandCount).toBeGreaterThan(0);
   });
 
+  it('keeps each director signing date independent and never fills a missing date from effectiveness', async () => {
+    const contract = await compileOriginalContract(BOARD);
+    const path = output();
+    await fillOriginalContract(BOARD, contract, {
+      company_name: 'Acme, Inc.', effective_date: '2026-09-30', purchase_amount: '1000',
+      board_members: [
+        { name: 'Alex Example', signing_date: '2026-09-16' },
+        { name: 'Morgan Sample', signing_date: '2026-09-18' },
+        { name: 'Unsigned Director' },
+      ],
+    }, path);
+    const xml = new AdmZip(path).readAsText('word/document.xml');
+    const text = [...xml.matchAll(/<w:t(?:\s[^>]*)?>([\s\S]*?)<\/w:t>/g)].map(match => match[1]).join(' ');
+    expect(text).toContain('September 30, 2026');
+    expect(text.match(/September 30, 2026/g)).toHaveLength(1);
+    expect(text).toContain('September 16, 2026');
+    expect(text).toContain('September 18, 2026');
+    const missing = text.slice(text.indexOf('Unsigned Director'));
+    expect(missing).not.toMatch(/September|2026/);
+    expect(xml).not.toContain('w:type="page"');
+    expect(xml).not.toContain('w:val="nextPage"');
+  });
+
   it('rejects source drift and malformed derived-gate programs in a copied source bundle', async () => {
     const source = copiedPrivacy();
     const contract = await compileOriginalContract(source);

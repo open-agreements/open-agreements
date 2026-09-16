@@ -332,8 +332,10 @@ function sourceConditionOracle(
   const footerVersion = front.document?.version ? ` (v${front.document.version})` : '';
   const footerAttribution = front.attribution_text ?? front.document?.license;
   for (const [kind, expectedText] of [
-    ['header', front.document?.label ?? front.document?.title ?? ''],
-    ['footer', `${footerLabel}${footerVersion}${footerAttribution ? `. ${footerAttribution}` : ''}`],
+    // Publisher attribution belongs in the footer, not the filled document's
+    // identity. A neutral title avoids implying this is the publisher's policy.
+    ['header', front.document?.title ?? ''],
+    ['footer', `${footerLabel}${footerVersion}${footerAttribution ? `. ${footerAttribution}` : ''}Page  of `],
   ] as const) {
     const found = [...parts].filter(([name]) => new RegExp(`^word/${kind}\\d+\\.xml$`).test(name));
     if (found.length !== 1) {
@@ -346,6 +348,13 @@ function sourceConditionOracle(
     for (let index = 0; index < textNodes.length; index++) text += textNodes[index].textContent ?? '';
     const normalize = (value: string) => value.replace(/\s+/g, ' ').trim();
     if (normalize(text) !== normalize(expectedText)) reasons.push(`source ${kind} text/attribution was not preserved`);
+    if (kind === 'footer') {
+      const instructions = doc.getElementsByTagNameNS('http://schemas.openxmlformats.org/wordprocessingml/2006/main', 'instrText');
+      const fields = Array.from({ length: instructions.length }, (_, index) => instructions[index].textContent?.trim());
+      if (fields.filter(field => field === 'PAGE').length !== 1 || fields.filter(field => field === 'NUMPAGES').length !== 1) {
+        reasons.push('source footer requires one PAGE and one NUMPAGES field');
+      }
+    }
   }
   const conditional = (node: MarkdocNode): boolean => {
     const one = node.attributes?.['include-when'];
@@ -354,12 +363,14 @@ function sourceConditionOracle(
     if (Array.isArray(any)) return any.some((name) => typeof name === 'string' && truth(effective[name]));
     return true;
   };
+  let repeatedFieldTypes: Map<string, string> | undefined;
   const formatValue = (name: string, scope?: Values): string => {
-    const value = scope && Object.hasOwn(scope, name) ? scope[name] : effective[name];
+    const itemField = scope !== undefined && repeatedFieldTypes?.has(name);
+    const value = itemField ? scope?.[name] : effective[name];
     if (value === undefined || value === null) return '_______';
     if (value === '') return '';
-    const field = contract.fields.find((candidate) => candidate.name === name);
-    if (field?.type === 'date' && typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    const fieldType = itemField ? repeatedFieldTypes?.get(name) : contract.fields.find((candidate) => candidate.name === name)?.type;
+    if (fieldType === 'date' && typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
       const [year, month, day] = value.split('-').map(Number);
       return new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(year, month - 1, day)));
     }
@@ -400,8 +411,12 @@ function sourceConditionOracle(
         continue;
       }
       if (node.tag === 'repeat') {
-        const rows = effective[String(node.attributes?.field ?? '')];
+        const name = String(node.attributes?.field ?? '');
+        const rows = effective[name];
+        const previousTypes = repeatedFieldTypes;
+        repeatedFieldTypes = new Map((contract.fields.find(field => field.name === name)?.items ?? []).map(field => [field.name, field.type]));
         if (Array.isArray(rows)) for (const row of rows) blocks(node.children ?? [], row as Values, section);
+        repeatedFieldTypes = previousTypes;
         continue;
       }
       if (node.tag === 'signer') {

@@ -47,6 +47,7 @@ async function fillBoardConsent(signerCount: number): Promise<string[]> {
       purchase_amount: '500,000',
       board_members: Array.from({ length: signerCount }, (_value, index) => ({
         name: `Director ${index + 1}`,
+        signing_date: 'April 18, 2026',
       })),
     },
   });
@@ -104,7 +105,8 @@ describe('SAFE consent variable signer rendering', () => {
     it(`renders board consent with exactly ${signerCount} signature blocks`, async () => {
       const paragraphs = await fillBoardConsent(signerCount);
       const names = Array.from({ length: signerCount }, (_v, i) => `Director ${i + 1}`);
-      assertSignerBlocks(paragraphs, names, 'April 16, 2026');
+      assertSignerBlocks(paragraphs, names, 'April 18, 2026');
+      expect(paragraphs.join('\n').split('April 16, 2026')).toHaveLength(2);
       // Out-of-range signers must not render (loop iterates the array exactly).
       expect(paragraphs.join('\n')).not.toContain(`Director ${signerCount + 1}`);
     });
