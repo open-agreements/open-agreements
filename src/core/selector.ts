@@ -430,6 +430,12 @@ function hasOptionPrefix(text: string): boolean {
   return MARKER_RE.test(text);
 }
 
+/** Match authored option prose without treating one label as a prefix of another. */
+function hasOptionMarker(text: string, marker: string): boolean {
+  const escaped = normalizeQuotes(marker).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`${escaped}(?![A-Za-z0-9_])`).test(normalizeQuotes(text));
+}
+
 /** Update a paragraph's marker prefix to checked state. */
 function setChecked(para: Element, type: 'radio' | 'checkbox'): void {
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
@@ -525,9 +531,15 @@ function triggerFires(trigger: Trigger, data: Record<string, unknown>): boolean 
     return val !== undefined && val !== '' && String(val) === String(trigger.equals);
   }
 
-  // { field: "x" } — truthy check
+  // { field: "x" } — bounded nonblank predicate. Treat the pipeline's
+  // underscore placeholder as blank so an omitted optional string cannot turn
+  // on a clause merely because it is technically truthy.
   const val = data[trigger.field];
-  return val !== undefined && val !== '' && val !== false && val !== 'false';
+  if (typeof val === 'string') {
+    const normalized = val.trim();
+    return normalized !== '' && normalized !== '_______' && normalized !== 'false';
+  }
+  return val !== undefined && val !== false;
 }
 
 function groupApplies(group: z.infer<typeof GroupSchema>, data: Record<string, unknown>): boolean {
@@ -817,7 +829,7 @@ function processGroup(
     for (let pi = 0; pi < allParagraphs.length; pi++) {
       const para = allParagraphs[pi];
       const text = extractParagraphText(para);
-      if (text && hasOptionPrefix(text) && text.includes(option.marker)) {
+      if (text && hasOptionPrefix(text) && hasOptionMarker(text, option.marker)) {
         candidatesPerOption[oi].push({ para, optionIndex: oi });
       }
     }
@@ -1036,7 +1048,7 @@ function processStandaloneGroup(
     for (let pi = 0; pi < allParagraphs.length; pi++) {
       const para = allParagraphs[pi];
       const text = extractParagraphText(para);
-      if (text && hasOptionPrefix(text) && text.includes(option.marker)) {
+      if (text && hasOptionPrefix(text) && hasOptionMarker(text, option.marker)) {
         matchCounts[oi]++;
         if (!markerPara) markerPara = para;
       }
