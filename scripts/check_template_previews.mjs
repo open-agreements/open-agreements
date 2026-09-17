@@ -6,10 +6,17 @@ import { resolve } from "node:path";
 import {
   PREVIEWS_DIR,
   listOpenAgreementsRenderedTemplateIds,
+  listOpenAgreementsTemplateIds,
 } from "./lib/template-utils.mjs";
 
 function main() {
   const ownedTemplates = listOpenAgreementsRenderedTemplateIds();
+  const excludedCount = listOpenAgreementsTemplateIds().length - ownedTemplates.length;
+  console.log(`Preview coverage: ${ownedTemplates.length} OA-rendered template(s) examined; ${excludedCount} upstream-authored template(s) excluded (NOT EXAMINED).`);
+  if (ownedTemplates.length === 0) {
+    console.log('SKIPPED template preview gate: no OA-rendered templates; upstream previews require independent verification.');
+    return;
+  }
 
   const missing = [];
   for (const templateId of ownedTemplates) {
