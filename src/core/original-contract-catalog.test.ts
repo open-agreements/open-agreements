@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readdirSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { mkdtempSync } from 'node:fs';
@@ -20,7 +20,9 @@ describe('OpenAgreements original contract catalog', () => {
   it('discovers every filesystem template directory and fails closed on incomplete entries', () => {
     const discovered = discoverOriginalTemplateDirs();
     expect(discovered.length).toBeGreaterThan(0);
-    expect(discovered).toHaveLength(81);
+    const expected = ORIGINALS_ROOTS.flatMap(root => readdirSync(root, { withFileTypes: true })
+      .filter(entry => entry.isDirectory()).map(entry => join(root, entry.name))).sort();
+    expect(discovered).toEqual(expected);
     expect(discovered.map((dir) => basename(dir))).toContain('openagreements-privacy-policy');
     expect(new Set(discovered).size).toBe(discovered.length);
 
@@ -34,7 +36,7 @@ describe('OpenAgreements original contract catalog', () => {
     expect(() => discoverOriginalTemplateDirs(fixture)).toThrow(/incomplete.*template\.mdoc/);
   });
 
-  it('compiles all 81 discovered templates but keeps each unverified until evidence passes', async () => {
+  it('compiles all discovered templates but keeps each unverified until evidence passes', async () => {
     const discovered = discoverOriginalTemplateDirs();
     for (const templateDir of discovered) {
       const contract = await compileOriginalContract(templateDir);

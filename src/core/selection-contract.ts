@@ -17,7 +17,10 @@ import { patchDocument } from './field-selector/patcher.js';
 import { runFillPipeline } from './unified-pipeline.js';
 import { BLANK_PLACEHOLDER, verifyTemplateFill } from './fill-utils.js';
 
-const engineHash = '38facbeab04d647641ed42dcd501a12fbc0ea8e21261af600becb3de9465a329';
+// September 17: the opt-in canonical renderer changed this file's digest, not
+// the legacy signature rules. Re-pin only with full legacy-parity verification;
+// never compute the expected digest dynamically and silently waive this guard.
+const engineHash = '18c1d701c915e1451a63d998058d3f91411623fac87240a71329b4d3e6d20c21';
 const digest = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 const safeKey = /^[a-z][a-z0-9_]{0,99}$/;
 const optionPrefix = /^(?:\(\s*x?\s*\)|\[\s*x?\s*\]|[\u2610\u2611\u2612])/i;
