@@ -38,6 +38,36 @@ const termStyles = (buffer: Buffer, term: string) => {
 };
 
 describe('native canonical original renderer', () => {
+  it('starts actual signatures on a new page without separating recitals and resolutions', async () => {
+    const body = `# Board Consent
+
+Recitals stay with the resolutions.
+{% agreement-section type="standard_terms" %}
+## Resolutions
+{% clause id="approval" %}
+Approval text.
+{% /clause %}
+{% /agreement-section %}
+{% agreement-section type="signature" %}
+## Signatures
+{% signature-block arrangement="stacked-consent-signers" %}
+{% signer id="director" kind="individual" capacity="personal" label="Director" %}
+Signature: _______________
+Print Name: {% field name="name" /%}
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}`;
+    const result = await renderOriginalMarkdoc(source(body), fields);
+    const content = xml(result.buffer);
+    const breaks = [...content.matchAll(/<w:pageBreakBefore(?:\s[^>]*)?\s*\/>/g)];
+    expect(breaks).toHaveLength(1);
+    expect(breaks[0].index).toBeGreaterThan(content.indexOf('Approval text.'));
+    expect(breaks[0].index).toBeLessThan(content.indexOf('Signatures'));
+    expect(content).not.toContain('<w:type w:val="nextPage"/>');
+    const contact = body.replace('## Signatures', '## Contact')
+      .replace(/\{% signature-block[\s\S]*?\{% \/signature-block %\}/, 'Contact us.');
+    expect(xml((await renderOriginalMarkdoc(source(contact), fields)).buffer)).not.toContain('w:pageBreakBefore');
+  });
   it('preserves inline fields, strong/emphasis, soft breaks and scoped fields', async () => {
     const result = await renderOriginalMarkdoc(source(`# Fixture
 
