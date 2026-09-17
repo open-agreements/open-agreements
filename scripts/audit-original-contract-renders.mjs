@@ -26,6 +26,7 @@ import { pathToFileURL, fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 import { resolveLibreOfficeBinary } from './libreoffice_headless.mjs';
 import { receiptMatches } from './export-original-contracts.mjs';
+import { decodeXmlText } from './lib/xml-text.mjs';
 import { compileOriginalContract } from '../dist/core/original-contract.js';
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -133,7 +134,7 @@ function parseBbox(xml) {
     const words = [...match[2].matchAll(/<word\b([^>]*)>([\s\S]*?)<\/word>/g)].map((word) => {
       const wordAttrs = attrs(word[1]);
       return {
-        text: word[2].replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>'),
+        text: decodeXmlText(word[2]),
         x_min: Number(wordAttrs.xMin),
         y_min: Number(wordAttrs.yMin),
         x_max: Number(wordAttrs.xMax),

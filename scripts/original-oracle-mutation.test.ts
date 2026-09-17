@@ -5,6 +5,7 @@ import AdmZip from 'adm-zip';
 import { afterEach, describe, expect, it } from 'vitest';
 import { compileOriginalContract, fillOriginalContract } from '../src/core/original-contract.js';
 import { generateVerificationCases, verifyOriginalSemanticOracle } from './verify-original-contracts.js';
+import { decodeXmlText } from './lib/xml-text.mjs';
 
 const ROSTER = 'templates/openagreements-cc0-1.0/openagreements-working-group-list';
 const FLORIDA = 'templates/openagreements-cc-by-4.0/openagreements-restrictive-covenant-florida';
@@ -21,11 +22,7 @@ afterEach(() => {
   for (const directory of temporary.splice(0)) rmSync(directory, { recursive: true, force: true });
 });
 
-const decode = (value: string): string => value
-  .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-  .replace(/&quot;/g, '"').replace(/&apos;/g, "'");
-
-const paragraphText = (xml: string): string => decode(
+const paragraphText = (xml: string): string => decodeXmlText(
   [...xml.matchAll(/<w:t(?:\s[^>]*)?>([\s\S]*?)<\/w:t>/g)].map((match) => match[1]).join(''),
 );
 
@@ -70,6 +67,15 @@ const row = (ordinal: number) => ({
 });
 
 describe('original semantic oracle mutation resistance', () => {
+  it.each([
+    ['&amp; &lt; &gt; &quot; &apos;', '& < > " \''],
+    ['&amp;lt;script&amp;gt;', '&lt;script&gt;'],
+    ['&amp;quot; &amp;apos; &amp;amp;', '&quot; &apos; &amp;'],
+    ['&unknown; &#60; & bare', '&unknown; &#60; & bare'],
+  ])('decodes XML text exactly once: %s', (encoded, expected) => {
+    expect(decodeXmlText(encoded)).toBe(expected);
+  });
+
   it('checks typed dates in repeated signer scope independently of the effective date', async () => {
     const contract = await compileOriginalContract(BOARD);
     const values = { company_name: 'Synthetic Company', purchase_amount: '1000', effective_date: '2026-09-30',
