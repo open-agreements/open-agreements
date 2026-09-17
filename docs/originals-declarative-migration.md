@@ -98,7 +98,9 @@ unverified alternative values are rejected. Source legal prose is unchanged.
 - Unknown source syntax fails closed. License/attribution and public descriptions
   travel with the contract. Descriptions are not legal suitability determinations.
 - A local compiled manifest is **not** a portable standalone renderer, a shipped
-  API, or a live Stella catalog. The experimental runtime requires this checkout.
+  API, or a live Stella catalog. It requires the matching OpenAgreements runtime.
+  The September 17 CLI integration supports packaged installations as well as
+  a source checkout; it is not yet a published npm release.
 
 ## Local use
 
@@ -298,7 +300,29 @@ Unsupported new syntax fails closed rather than receiving an inherited verified
 label. The new document-layout profile is explicit and is not a claim of
 pixel-identical legacy DOCX output.
 
-The canonical sources and published template binaries are unchanged. Source
+The migration preserves operative source language except the separately reviewed
+board-consent correction (independent signing dates and effective date). Footer
+provenance is retained in source comments rather than rendered attribution.
+Published template binaries are not replaced by the experimental profile. Source
 legal review, source-specific stability graduation, and suitability advice are
 separate from renderer verification. NVCA and YC forms are not reclassified as
 redistributable originals or copied into this profile.
+
+## September 17 CLI integration
+
+The standard CLI retains its legacy default. Select the canonical renderer explicitly:
+
+```sh
+open-agreements fill openagreements-privacy-policy --declarative --data values.json -o filled.docx
+```
+
+This compiles the current canonical source, validates supplied values against its
+complete schema, and renders its conditions and arrays. It does not itself issue
+the all-fixture promotion receipt used by the verified-only catalog exporter.
+New unsupported source constructs fail closed. Renderer compatibility notes are
+returned as warnings; internal rendering gates are not reported as user fields.
+
+Package-isolation testing caught `docx` incorrectly classified as a development
+dependency. It is now a runtime dependency. Runtime discovery uses packaged
+`dist/core` JavaScript when repository `src/core` is absent; a published package
+does not require a repository lockfile or TypeScript sources.

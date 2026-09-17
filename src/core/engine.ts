@@ -286,7 +286,14 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     const contract = await compileOriginalContract(templateDir);
     const result = await fillOriginalContract(templateDir, contract, values, outputPath);
     if (options.postProcess) await options.postProcess(outputPath);
-    return { ...result, metadata: contract.metadata };
+    const publicFields = new Set(contract.fields.map(field => field.name));
+    return {
+      ...result,
+      fieldsUsed: result.fieldsUsed.filter(name => publicFields.has(name)),
+      providedFieldsUsed: result.providedFieldsUsed.filter(name => publicFields.has(name)),
+      warnings: [...result.warnings, ...contract.renderingNotes.map(note => `Rendering compatibility: ${note}`)],
+      metadata: contract.metadata,
+    };
   }
 
   const metadata = loadMetadata(templateDir);
