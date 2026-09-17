@@ -8,7 +8,7 @@ license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
 artifact_type: template
-attribution_text: Authored by OpenAgreements contributors. Drafting structure informed by publicly available Series Seed SAFE board consent materials. Licensed under CC BY 4.0.
+attribution_text: Licensed under CC BY 4.0.
 fields:
   - name: company_name
     type: string
