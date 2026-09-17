@@ -561,3 +561,17 @@ inspect actual emitted Allure JSON. The intermediate full run was deliberately
 interrupted before dependency installation; its exit 130 is not a pass.
 Final aligned full regression is still pending in
 `/private/tmp/oa-final-aligned-full-tests-20260917.log`; shipping remains held.
+
+**Completed 2026-09-17:** the final aligned full run exited 0: 1,968 tests
+passed, eight skipped, 160 passing files/four skipped, 443.42 seconds, with
+unchanged normal budgets and one worker. This final result supersedes the
+pending state, not the retained failed runs. DOCX structure also passed all
+191 files with zero findings, and isolated-package runtime checks passed;
+log `/private/tmp/oa-docx-structure-preship-20260917.log`.
+Astra's final addendum independently verified emitted labels and nested
+assertion attachments and passed the reviewed wrapper/dependency patch.
+Canonical board correction PR #2733 is open with merge-method automerge armed;
+its fresh local validation passed 5,843 tests/six skipped and all 33 tasks,
+and fresh build passed all 15 tasks (zero cache hits). No migration release,
+hosted catalogue, Stella rollout or successful production board deployment is
+claimed here; those boundaries remain distinct.
