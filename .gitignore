@@ -55,3 +55,7 @@ artifacts/
 ~$*.docx
 ~$*.xlsx
 ~$*.pptx
+
+# Regenerable local Common Paper declarative pilot evidence
+.cache/common-paper-declarative/
+.cache/original-contracts/

@@ -16145,6 +16145,15 @@
               "description": "Full name of a director signing the consent",
               "default": null,
               "default_value_rationale": null
+            },
+            {
+              "name": "signing_date",
+              "type": "date",
+              "required": false,
+              "section": null,
+              "description": "Date this director signs the consent",
+              "default": null,
+              "default_value_rationale": null
             }
           ]
         }

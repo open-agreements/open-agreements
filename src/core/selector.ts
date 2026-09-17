@@ -430,6 +430,12 @@ function hasOptionPrefix(text: string): boolean {
   return MARKER_RE.test(text);
 }
 
+/** Match authored option prose without treating one label as a prefix of another. */
+function hasOptionMarker(text: string, marker: string): boolean {
+  const escaped = normalizeQuotes(marker).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`${escaped}(?![A-Za-z0-9_])`).test(normalizeQuotes(text));
+}
+
 /** Update a paragraph's marker prefix to checked state. */
 function setChecked(para: Element, type: 'radio' | 'checkbox'): void {
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
@@ -817,7 +823,7 @@ function processGroup(
     for (let pi = 0; pi < allParagraphs.length; pi++) {
       const para = allParagraphs[pi];
       const text = extractParagraphText(para);
-      if (text && hasOptionPrefix(text) && text.includes(option.marker)) {
+      if (text && hasOptionPrefix(text) && hasOptionMarker(text, option.marker)) {
         candidatesPerOption[oi].push({ para, optionIndex: oi });
       }
     }
@@ -1036,7 +1042,7 @@ function processStandaloneGroup(
     for (let pi = 0; pi < allParagraphs.length; pi++) {
       const para = allParagraphs[pi];
       const text = extractParagraphText(para);
-      if (text && hasOptionPrefix(text) && text.includes(option.marker)) {
+      if (text && hasOptionPrefix(text) && hasOptionMarker(text, option.marker)) {
         matchCounts[oi]++;
         if (!markerPara) markerPara = para;
       }

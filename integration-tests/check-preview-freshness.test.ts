@@ -506,6 +506,15 @@ describe('manifest satisfaction', () => {
 // ── CLI smoke test ───────────────────────────────────────────────────────────
 
 describe('CLI main-guard', () => {
+  it('reports upstream exclusions as unexamined rather than claiming preview coverage', () => {
+    const result = spawnSync(process.execPath, [resolve(REPO_ROOT, 'scripts', 'check_template_previews.mjs')], {
+      cwd: REPO_ROOT, encoding: 'utf8',
+    });
+    expect(result.status).toBe(0);
+    expect(result.stdout).toMatch(/upstream-authored template\(s\) excluded \(NOT EXAMINED\)/);
+    expect(result.stdout).toMatch(/SKIPPED template preview gate: no OA-rendered templates/);
+    expect(result.stdout).not.toMatch(/PASS template preview gate: 0/);
+  });
   // After the #1249 content-first restructure every OA-owned template ships a
   // `template.mdoc` and is therefore UPSTREAM-AUTHORED: legal-explainer renders
   // it, so the OA-side preview-freshness gate skips it (see
@@ -532,6 +541,8 @@ describe('CLI main-guard', () => {
     });
     expect(result.status).toBe(0);
     expect(result.stdout).toMatch(/no render-affecting paths/);
+    expect(result.stdout).toMatch(/upstream-authored template\(s\) excluded \(NOT EXAMINED\)/);
+    expect(result.stdout).toMatch(/upstream-authored render changes are excluded/);
   });
 
   it('exits 0 on a clean diff (only README touched)', () => {

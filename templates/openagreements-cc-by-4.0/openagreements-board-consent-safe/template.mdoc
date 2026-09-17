@@ -7,7 +7,7 @@ description: >-
   corporation approving the issuance of one or more Simple Agreements for
   Future Equity (SAFEs).
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-board-consent-safe
-version: "1.2"
+version: "1.3"
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -21,8 +21,9 @@ style_id: openagreements-default-v1
 document:
   title: Board Consent for SAFE Financing
   label: OpenAgreements Board Consent for SAFE Financing
-  version: "1.2"
+  version: "1.3"
   license: Free to use under CC BY 4.0
+  presentation: traditional
   defined_term_highlight_mode: none
 sections:
   cover_terms:
@@ -55,6 +56,9 @@ fields:
       - name: name
         type: string
         description: Full name of a director signing the consent
+      - name: signing_date
+        type: date
+        description: Date this director signs the consent
 priority_fields:
   - company_name
   - effective_date
@@ -76,6 +80,8 @@ maturity: experimental
 # Board Consent for SAFE Financing
 
 The undersigned, constituting all of the members of the Board of Directors (the "Board") of {% field name="company_name" /%}, a Delaware corporation (the "Company"), pursuant to Section 141(f) of the Delaware General Corporation Law, hereby adopt the following resolutions by written consent:
+
+This Action by Written Consent is effective as of {% field name="effective_date" /%}.
 
 **WHEREAS**, the Board believes it is in the best interests of the Company to enter into one or more Simple Agreements for Future Equity (each, a "SAFE", and together, the "SAFEs"), providing for the sale of rights to future shares of the Company's capital stock for an aggregate purchase amount of up to ${% field name="purchase_amount" /%}, in accordance with terms set forth therein.
 
@@ -120,7 +126,7 @@ Signature: _______________
 
 Print Name: {% field name="name" /%}
 
-Date: {% field name="effective_date" /%}
+Date: {% field name="signing_date" /%}
 {% /signer %}
 {% /repeat %}
 {% /signature-block %}

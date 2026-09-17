@@ -37,6 +37,7 @@ export interface FillArgs {
   template: string;
   output?: string;
   values: Record<string, unknown>;
+  declarative?: boolean;
   memo?: FillMemoArgs;
 }
 
@@ -68,6 +69,10 @@ export async function runFill(args: FillArgs): Promise<void> {
   const isTemplate = templateDir !== undefined;
   const isExternal = !isTemplate && externalDir !== undefined;
   const isFieldSelector = !isTemplate && !isExternal && fieldSelectorDir !== undefined;
+
+  if (args.declarative && !isTemplate) {
+    throw new Error('--declarative requires a bundled first-party canonical template');
+  }
 
   if (!isTemplate && !isExternal && !isFieldSelector) {
     const available = getAvailableIds();
@@ -121,6 +126,7 @@ export async function runFill(args: FillArgs): Promise<void> {
         templateDir: templateDir!,
         values: args.values,
         outputPath: resolvedOutput,
+        declarative: args.declarative,
       });
       console.log(`Filled ${result.metadata.name}`);
       console.log(`Output: ${result.outputPath}`);

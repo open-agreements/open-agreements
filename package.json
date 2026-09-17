@@ -94,6 +94,9 @@
     "test:run": "npm run build && vitest run",
     "lint": "eslint src/",
     "validate": "node bin/open-agreements.js validate",
+    "verify:original-contracts": "vite-node scripts/verify-original-contracts.ts",
+    "export:original-contracts": "node scripts/export-original-contracts.mjs --verified-only",
+    "verify:thirdparty-contracts": "vite-node scripts/verify-thirdparty-contracts.ts",
     "prepare": "node scripts/prepare_package.mjs",
     "report:allure": "rm -rf ./allure-report && allure awesome ./allure-results --output ./allure-report --group-by epic,feature,story && node scripts/patch_allure_html_sanitizer.mjs --report-dir ./allure-report",
     "report:allure:open": "allure open ./allure-report",
@@ -137,11 +140,13 @@
   "author": "UseJunior <steven@usejunior.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "@markdoc/markdoc": "0.5.7",
     "@usejunior/docx-core": "^0.12.0",
     "@xmldom/xmldom": "^0.9.9",
     "adm-zip": "^0.5.16",
     "canonicalize": "^2.1.0",
     "commander": "^13.1.0",
+    "docx": "^9.5.1",
     "docx-templates": "^4.13.0",
     "jose": "^6.2.2",
     "js-yaml": "^4.1.0",
@@ -155,11 +160,11 @@
     "@types/node": "^22.13.0",
     "@usejunior/allure-test-factory": "*",
     "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/runner": "3.2.4",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "allure": "^3.7.0",
     "allure-vitest": "^3.4.5",
-    "docx": "^9.5.1",
     "eslint": "^9.19.0",
     "fast-xml-parser": "^4.5.3",
     "globals": "^14.0.0",
@@ -167,7 +172,7 @@
     "prismjs": "^1.30.0",
     "typescript": "^5.7.0",
     "typescript-eslint": "^8.54.0",
-    "vitest": "^3.2.4"
+    "vitest": "3.2.4"
   },
   "engines": {
     "node": ">=20"

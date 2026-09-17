@@ -714,9 +714,10 @@ export async function main(env) {
   );
 
   const triggered = expandTriggers(input.records, headOwnedIds, upstreamAuthoredIds);
+  console.log(`Preview freshness coverage: ${headOwnedIds.size} OA-rendered template(s) eligible; ${upstreamAuthoredIds.size} upstream-authored template(s) excluded (NOT EXAMINED).`);
   if (triggered.size === 0) {
     console.log(
-      "PASS preview-freshness gate: no render-affecting paths in diff."
+      "PASS preview-freshness gate: no render-affecting paths for OA-rendered templates in diff; upstream-authored render changes are excluded."
     );
     return;
   }

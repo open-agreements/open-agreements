@@ -25,6 +25,7 @@ import type { FieldDefinition, CleanConfig } from './metadata.js';
 import type { SelectionsConfig } from './selector.js';
 import type { VerifyResult } from './field-selector/types.js';
 import { applyReferenceFieldActions, type ReferenceFieldsConfig } from './field-selector/reference-fields.js';
+import { BLANK_PLACEHOLDER } from './fill-utils.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -64,6 +65,14 @@ export interface PipelineOptions {
    * condition is acceptable.
    */
   selectionsZeroMatchPolicy?: 'error' | 'warn';
+  /**
+   * Treat the fill pipeline's underscore placeholder as absent while evaluating
+   * selection triggers. This is opt-in because legacy template profiles use the
+   * placeholder's truthiness to preserve authored optional alternatives.
+   * The selection-only view is copied; fill substitutions still receive the
+   * original placeholder value.
+   */
+  selectionBlankPlaceholderIsBlank?: boolean;
 
   // prepareFillData options
   coerceBooleans?: boolean;             // default: false
@@ -181,6 +190,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     onSelectorResolved,
     selectionsConfig,
     selectionsZeroMatchPolicy = 'warn',
+    selectionBlankPlaceholderIsBlank = false,
     coerceBooleans = false,
     computeDisplayFields,
     fixSmartQuotes = false,
@@ -318,7 +328,13 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       const preSelectPath = join(tempDir, 'pre-select.docx');
       const postSelectPath = join(tempDir, 'post-select.docx');
       writeFileSync(preSelectPath, templateBuf);
-      const selectionsResult = await applySelections(preSelectPath, postSelectPath, selectionsConfig, data);
+      const selectionData = selectionBlankPlaceholderIsBlank
+        ? Object.fromEntries(Object.entries(data).map(([key, value]) => [
+            key,
+            typeof value === 'string' && value.trim() === BLANK_PLACEHOLDER ? '' : value,
+          ]))
+        : data;
+      const selectionsResult = await applySelections(preSelectPath, postSelectPath, selectionsConfig, selectionData);
       templateBuf = readFileSync(postSelectPath);
 
       // #720: an UNSELECTED selections option that was never actually removed is
