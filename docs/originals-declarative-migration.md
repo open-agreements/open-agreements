@@ -1,5 +1,14 @@
 # OpenAgreements-original declarative adapter migration
 
+## Latest checkpoint: 2026-09-17
+
+The local original-form migration covers **82/82 current originals**, with
+1,078 passing verification cases and 82 receipt-gated PDFs spanning 429 pages.
+The inventory below describes the initial 81-form checkpoint; refreshed main
+added one form. This is local implementation/verification, not a published npm,
+MCP, Stella or hosted-API rollout. Whole-suite timing limits and passing focused
+rechecks are recorded in the September 17 regression section.
+
 ## 2026-09-16 user-review correction
 
 The earlier visual checkpoint below did not establish production design parity.
@@ -321,6 +330,42 @@ complete schema, and renders its conditions and arrays. It does not itself issue
 the all-fixture promotion receipt used by the verified-only catalog exporter.
 New unsupported source constructs fail closed. Renderer compatibility notes are
 returned as warnings; internal rendering gates are not reported as user fields.
+
+### Before and now
+
+```text
+Before (original forms were already authored in Markdoc):
+  legal-explainer canonical .mdoc
+                |
+                v  projection / GitHub mirror (can lag)
+  open-agreements: DOCX + narrower public metadata
+                |
+                v  legacy placeholder filling / Stella field inference
+             filled DOCX
+
+Now (new local opt-in execution profile):
+  same canonical .mdoc, mirrored to open-agreements
+                |
+                v  compile all fields, conditions, repeat arrays
+        complete typed contract + rendering profile
+                |                         |
+                v                         v
+  source/runtime verification       validate user answers
+                |                         |
+                v                         v
+       verified-only catalog       evaluate branches / arrays
+                                          |
+                                          v
+                                  render styled filled DOCX
+```
+
+The CLI's new `--declarative` path works from both the source checkout and a
+packed, isolated installation. Legacy filling remains the default. A verified
+catalogue does not yet imply a live browsing endpoint or a Stella connection.
+Generic execution can consume source updates within supported syntax without
+per-template adapter edits, but mirror lag, source changes and new unsupported
+constructs still require explicit handling. NVCA/YC licensed external downloads
+remain on their existing source-fetch/recipe path, outside this originals profile.
 
 Package-isolation testing caught `docx` incorrectly classified as a development
 dependency. It is now a runtime dependency. Runtime discovery uses packaged
