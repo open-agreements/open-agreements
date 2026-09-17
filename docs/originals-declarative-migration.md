@@ -472,3 +472,53 @@ in those samples. The long Hawaii footer wraps legibly over two lines. These
 samples and automated bounds do not certify every page's visual layout or
 Microsoft Word behavior. The local new-format previews are in
 `/Users/stevenobiajulu/Downloads/openagreements-declarative-review-2026-09-17/`.
+
+## Footer fix shipped; migration publication handoff
+
+The user-authorized footer issue
+[#2726](https://github.com/UseJunior/legal-explainer/issues/2726) was closed by
+[#2727](https://github.com/UseJunior/legal-explainer/pull/2727), merge
+`d34adc76cdb4343f644e48192ed56ecee8e00f71`. The dedicated change touches only:
+
+- `content/agreements/openagreements-privacy-policy.mdoc`
+- `content/agreements/openagreements-board-consent-safe.mdoc`
+- Their two `content/oa-mirror-manifest/agreements/<slug>.json` manifests.
+
+Long drafting provenance moved from rendered `attribution_text` into source
+comments; attribution is now `Licensed under CC BY 4.0.` Credit, version and
+license remain. The website renderer already independently used the short
+“Free to use under” footer. The correction fixes canonical/public JSON metadata
+and the new renderer's metadata-driven footer, not previously long website
+footer text. Operative text was unchanged.
+
+[Post-merge proof](https://github.com/UseJunior/legal-explainer/pull/2727#issuecomment-5710712338):
+fresh validation passed all 33 tasks/5,828 tests (six skipped), plus the mutation
+guard probe; fresh build passed all 15 tasks with zero cache hits; projection
+check passed. Production deployment `dpl_FU8dY9PHFE2CYWKsEmqQPLbFjq44` is READY
+at the exact merge SHA with the `openagreements.org` alias. Both live metadata
+endpoints and real DOCX download paths passed footer assertions. Live DOCXs were
+rendered using explicitly pinned LibreOffice 26.2.5.2; first-page PNGs were
+inspected/opened locally. These footer-scoped fills leave unprovided terms and
+signers blank and do not claim delivery readiness. Evidence/logs remain under
+`/Users/stevenobiajulu/Downloads/footer-2726-postmerge-20260917/` and
+`/private/tmp/automerge-smoke-2727-*-20260917.log`.
+
+**Corrected 2026-09-17:** the initial proof comment's manually reconstructed
+completion excerpt listed several unrelated skill paths. The comment was
+corrected in place with a dated explanation; all 26 excerpt artifact paths were
+then asserted against the retained actual log. The underlying check counts,
+verdicts and rendered evidence did not change. Captured excerpts should be
+copied/generated and mechanically checked, not reconstructed from context.
+
+Only the two clean footer worktrees and merged footer branch were removed;
+primary/unrelated checkouts and this migration branch remain untouched.
+
+The **original-form migration is complete locally**, including fresh verified
+receipts, PDF audit and passing normal full regression. It is not published:
+the new CLI flag needs a release; the verified catalogue is not hosted or wired
+to Stella/MCP. The local board v1.3 source correction still needs its canonical
+legal-explainer PR/merge before publishing that mirrored source. Production
+board remains v1.2, with the known first-page gap and effective-date signature
+mapping. Next handoff: land that separate source correction, then review/open
+the migration PR and coordinate catalogue/release/Stella rollout. This report
+does not authorize those additional public actions or claim they occurred.
