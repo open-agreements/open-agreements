@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "skill": "legal-due-diligence-report",
-  "snapshotAsOf": "2026-09-16",
-  "sourceCommit": "7597ba2419edc273b1a0fc96b53e59d13e8d3766",
+  "snapshotAsOf": "2026-09-17",
+  "sourceCommit": "5dade8dfd4e4f1b79b8ddc5764232e3107f04752",
   "canonicalUrl": "https://openagreements.org/practice-guides/legal-due-diligence/us",
   "sourcePath": "content/pillars/legal-due-diligence.mdoc",
   "content": "content/practice-guide.md"

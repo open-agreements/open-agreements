@@ -385,7 +385,6 @@
       {
         "fieldKey": "qualified_financing_debt_proceeds_treatment",
         "fieldType": "enum",
-        "default": "excluding",
         "enumValues": [
           "including",
           "excluding"
