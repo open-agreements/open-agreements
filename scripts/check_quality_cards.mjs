@@ -198,16 +198,17 @@ function checkCardDates(card, file, relativePath, problems) {
   }
 
   // The schema is the authority on policy_days and reports it better than a
-  // derived date mismatch would; this check runs first, so stand aside.
+  // derived due date would, so skip THAT comparison when it is unusable — but
+  // only that one. Returning here instead would let a bad policy_days suppress
+  // the overstated-floor report, which is the failure this check exists for.
   const policyDays = card.freshness?.policy_days;
-  if (!Number.isInteger(policyDays) || policyDays < 1) return;
-
+  const derivable = Number.isInteger(policyDays) && policyDays >= 1;
   const expectedDue =
-    expected.law_checked_through === null ? null : addUtcDays(expected.law_checked_through, policyDays);
+    expected.law_checked_through === null ? null : derivable ? addUtcDays(expected.law_checked_through, policyDays) : null;
   const mismatches = [
     ["content_packaged_at", card.content_packaged_at, expected.content_packaged_at],
     ["law_checked_through", card.law_checked_through, expected.law_checked_through],
-    ["next_review_due", card.next_review_due, expectedDue],
+    ...(derivable ? [["next_review_due", card.next_review_due, expectedDue]] : []),
     ["coverage.jurisdictions", card.coverage?.jurisdictions, expected.jurisdictions],
   ].filter(([, actual, want]) => actual !== want);
 
