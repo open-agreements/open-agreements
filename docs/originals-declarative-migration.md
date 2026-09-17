@@ -436,6 +436,13 @@ all 25 tests (25.37s): `/private/tmp/oa-timeout-default-recheck-20260917.log`.
 These reruns cover every failed case, but the previous whole-run result remains
 a timeout-bearing run rather than being retroactively labelled a clean pass.
 
+**Final whole-suite gate:** a third complete run with the original normal
+budgets and one worker passed **160 files, 1,967 tests**, with four files/eight
+tests skipped and zero failures (1,975 discovered tests). Command:
+`caffeinate -i npm run test:run -- --maxWorkers=1 --minWorkers=1`.
+Evidence: `/private/tmp/oa-suite-final-normal-20260917.log`. The earlier failed
+logs remain part of the record; no legacy timeout configuration was modified.
+
 `scripts/audit-original-contract-renders.mjs` provides a reproducible baseline
 render audit. It requires a matching verified-only catalogue and current
 source/runtime-bound receipts, then checks extracted canonical titles, footer
