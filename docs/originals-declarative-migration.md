@@ -575,3 +575,20 @@ its fresh local validation passed 5,843 tests/six skipped and all 33 tasks,
 and fresh build passed all 15 tasks (zero cache hits). No migration release,
 hosted catalogue, Stella rollout or successful production board deployment is
 claimed here; those boundaries remain distinct.
+
+**Corrected 2026-09-17:** the pre-alignment receipts/render audit above cannot
+certify the final lockfile: `RUNTIME_FILES` includes `package-lock.json`.
+Verification receipts and the verified-only catalogue were regenerated after
+dependency alignment (82/82 passed); a distinct audit is running in
+`.cache/original-contracts/render-audit-20260917-final-aligned`. The earlier
+audit remains historical. Preserve receipt/runtime binding even when the
+dependency edit only affects test reporting.
+
+Migration PR #865 is open, with no automerge armed before canonical board
+PR #2733 and mirror synchronization. Its initial CodeQL scan found two
+double-decoding helpers: ampersand decoding followed by angle-entity decoding
+could transform literal `&amp;lt;` twice. Commit `da44fb91` replaces both with
+one shared, single-pass XML decoder; four regression cases plus six mutation
+tests passed, and Astra independently reviewed/executed that correction before
+push. CodeQL must pass on the corrected head; no security gate is waived.
+Unknown/numeric references are left unchanged, not newly advertised as decoded.
