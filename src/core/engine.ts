@@ -5,6 +5,7 @@ import { loadSelectionsConfig } from './selector.js';
 import { runFillPipeline } from './unified-pipeline.js';
 import { BLANK_PLACEHOLDER, verifyTemplateFill } from './fill-utils.js';
 import type { ConfirmClauseDescriptor } from './fill-pipeline.js';
+import { compileOriginalContract, fillOriginalContract } from './original-contract.js';
 
 /**
  * Distill `confirm=` clauses from a canonical template's compiled spec
@@ -36,6 +37,8 @@ export interface FillOptions {
   templateDir: string;
   values: Record<string, unknown>;
   outputPath: string;
+  /** Execute the complete canonical first-party source, including source-only fields. */
+  declarative?: boolean;
   postProcess?: (outputPath: string) => void | Promise<void>;
 }
 
@@ -278,6 +281,13 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
 
 export async function fillTemplate(options: FillOptions): Promise<FillResult> {
   const { templateDir, values, outputPath } = options;
+
+  if (options.declarative) {
+    const contract = await compileOriginalContract(templateDir);
+    const result = await fillOriginalContract(templateDir, contract, values, outputPath);
+    if (options.postProcess) await options.postProcess(outputPath);
+    return { ...result, metadata: contract.metadata };
+  }
 
   const metadata = loadMetadata(templateDir);
   const fieldNames = new Set(metadata.fields.map((f) => f.name));

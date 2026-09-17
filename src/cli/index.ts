@@ -53,6 +53,7 @@ export function createProgram(): Command {
     .option('-o, --output <path>', 'Output file path')
     .option('-d, --data <json-file>', 'JSON file with field values')
     .option('--values <json-file>', 'Alias for --data')
+    .option('--declarative', 'Render a first-party template from its complete canonical Markdoc source')
     .option('--set <key=value...>', 'Set a field value (repeatable)')
     .option('--memo [format]', 'Generate memo artifact(s): json, markdown, or both (default: both)')
     .option('--memo-json <path>', 'Output path for memo JSON')
@@ -65,6 +66,7 @@ export function createProgram(): Command {
         output?: string;
         data?: string;
         values?: string;
+        declarative?: boolean;
         set?: string[];
         memo?: string | boolean;
         memoJson?: string;
@@ -90,6 +92,7 @@ export function createProgram(): Command {
         template,
         output: opts.output,
         values,
+        declarative: opts.declarative,
         memo: buildMemoArgs(opts),
       });
     });

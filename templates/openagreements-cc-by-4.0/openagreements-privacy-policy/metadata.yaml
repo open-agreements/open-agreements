@@ -6,7 +6,7 @@ version: '0.1'
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-attribution_text: Adapted from the OpenAgreements privacy-policy specification. Licensed under CC BY 4.0.
+attribution_text: Licensed under CC BY 4.0.
 omitted_clauses: drop
 fields:
   - name: business_legal_name

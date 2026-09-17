@@ -78,12 +78,18 @@ function filesBelow(path: string): string[] {
   return output;
 }
 
-/** Hash all core source plus locked dependency declarations: conservative by design. */
+/** Hash repository source, or the installed package's executable runtime. */
 function currentRuntime(): OriginalContract['runtime'] {
   const rootPath = fileURLToPath(new URL('../..', import.meta.url));
+  const sourceRoot = join(rootPath, 'src/core');
+  const installed = !existsSync(sourceRoot);
+  const coreRoot = installed ? join(rootPath, 'dist/core') : sourceRoot;
   const paths = [
-    ...filesBelow(join(rootPath, 'src/core')).filter(p => p.endsWith('.ts') && !p.endsWith('.test.ts')),
-    join(rootPath, 'package.json'), join(rootPath, 'package-lock.json'),
+    ...filesBelow(coreRoot).filter(p => installed
+      ? p.endsWith('.js') && !p.endsWith('.test.js')
+      : p.endsWith('.ts') && !p.endsWith('.test.ts')),
+    ...['package.json', 'package-lock.json', 'runtime-capabilities.json']
+      .map(name => join(rootPath, name)).filter(path => existsSync(path)),
   ];
   const hashes = Object.fromEntries(paths.map(path => [relative(rootPath, path), sha256(readFileSync(path))]));
   return { hash: canonicalHash(hashes), hashes, requiresRuntime: true, renderer: 'oa-generic-fill-pipeline' };
