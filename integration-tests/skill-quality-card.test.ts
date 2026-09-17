@@ -6,6 +6,7 @@ import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { itAllure } from './helpers/allure-test.js';
 import { probePublishedSchemas } from '../scripts/probe_published_schemas.mjs';
+import { expectedCardDates, isCalendarDate } from '../scripts/check_quality_cards.mjs';
 
 const it = itAllure.epic('Platform & Distribution');
 
@@ -163,5 +164,46 @@ describe('published-schema probe', () => {
 
   it('treats key order as equivalent', async () => {
     expect(await probeAgainst(Object.fromEntries(Object.entries(schema).reverse()))).toBeNull();
+  });
+
+  it('names a field the served document gained, rather than blaming formatting', async () => {
+    // An absent key and a key holding null serialise alike, so the per-field
+    // walk used to find no difference and the message fell back to
+    // "formatting only" for a document that had genuinely grown a field.
+    const wrong = structuredClone(schema) as Record<string, unknown>;
+    wrong.deprecated = null;
+    const verdict = await probeAgainst(wrong);
+    expect(verdict).toMatch(/deprecated/);
+    expect(verdict).not.toMatch(/formatting only/);
+  });
+});
+
+describe('card dates against the bundle beside them', () => {
+  const manifest = (...laws: unknown[]) => ({
+    content_packaged_at: '2026-09-16',
+    jurisdictions: laws.map((law) => ({ law_checked_through: law })),
+  });
+
+  it('reports a date that is merely date-shaped', () => {
+    // Sorting strings makes "2026-2-01" land AFTER "2026-10-01", so the card
+    // would publish October as the floor for a bundle checked to February.
+    expect(expectedCardDates(manifest('2026-2-01', '2026-10-01')).malformed).toEqual(['"2026-2-01"']);
+  });
+
+  it('reports an impossible calendar date even when it is not the minimum', () => {
+    expect(expectedCardDates(manifest('2026-01-01', '2026-02-30')).malformed).toEqual(['"2026-02-30"']);
+  });
+
+  it('still treats a null jurisdiction date as unknown, not malformed', () => {
+    const expected = expectedCardDates(manifest('2026-04-14', null));
+    expect(expected.malformed).toEqual([]);
+    expect(expected.law_checked_through).toBeNull();
+  });
+
+  it('accepts real dates, including a leap day', () => {
+    expect(isCalendarDate('2028-02-29')).toBe(true);
+    expect(isCalendarDate('2026-02-29')).toBe(false);
+    expect(isCalendarDate('2026-13-01')).toBe(false);
+    expect(isCalendarDate(null)).toBe(false);
   });
 });

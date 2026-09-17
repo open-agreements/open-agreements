@@ -89,9 +89,14 @@ function differingPaths(served, local, prefix = "") {
     !Array.isArray(served) && !Array.isArray(local);
   if (!bothObjects) return [prefix || "(document)"];
   const keys = new Set([...Object.keys(served), ...Object.keys(local)]);
-  return [...keys].sort().flatMap((key) =>
-    differingPaths(served[key], local[key], prefix ? `${prefix}.${key}` : key),
-  );
+  return [...keys].sort().flatMap((key) => {
+    const path = prefix ? `${prefix}.${key}` : key;
+    // An absent key and a key holding null canonicalize alike, so recursing on
+    // the values would report no difference and the caller would fall back to
+    // "formatting only" for a document that genuinely gained or lost a field.
+    if (Object.hasOwn(served, key) !== Object.hasOwn(local, key)) return [path];
+    return differingPaths(served[key], local[key], path);
+  });
 }
 
 export async function probePublishedSchemas() {

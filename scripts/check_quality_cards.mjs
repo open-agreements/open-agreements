@@ -125,14 +125,37 @@ function checkSchemaLayout(problems) {
  * date unknown, because the earliest KNOWN date reads as coverage the bundle
  * does not have.
  */
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** Date-shaped is not the same as real: `2026-02-30` matches the shape. */
+export function isCalendarDate(value) {
+  if (typeof value !== "string" || !ISO_DATE.test(value)) return false;
+  const [y, m, d] = value.split("-").map(Number);
+  const round = new Date(Date.UTC(y, m - 1, d));
+  return (
+    round.getUTCFullYear() === y && round.getUTCMonth() === m - 1 && round.getUTCDate() === d
+  );
+}
+
 export function expectedCardDates(manifest) {
   const entries = manifest.jurisdictions;
   if (!Array.isArray(entries) || entries.length === 0) return null;
   const laws = entries.map((entry) => entry.law_checked_through);
+
+  // A present-but-malformed date is not an unknown date, and it must not reach
+  // the sort. These are strings, so the minimum is lexical: "2026-2-01" sorts
+  // AFTER "2026-10-01", and a card would then publish October as the floor for
+  // a bundle checked only through February. Refusing here is what stops the
+  // aggregate from claiming coverage nothing in the manifest supports.
+  const malformed = laws.filter(
+    (value) => value !== null && value !== undefined && !isCalendarDate(value),
+  );
+
   const lawCheckedThrough = laws.every((value) => typeof value === "string")
     ? laws.slice().sort()[0]
     : null;
   return {
+    malformed: [...new Set(malformed.map((value) => JSON.stringify(value)))].sort(),
     content_packaged_at: manifest.content_packaged_at,
     law_checked_through: lawCheckedThrough,
     jurisdictions: entries.length,
@@ -159,10 +182,28 @@ function checkCardDates(card, file, relativePath, problems) {
     return;
   }
 
+  if (expected.malformed.length > 0) {
+    problems.push(
+      `${relativePath}: ${manifestName} carries law_checked_through ${expected.malformed.join(", ")}, ` +
+        `which is not an ISO YYYY-MM-DD calendar date; the card's floor cannot be derived from it`,
+    );
+    return;
+  }
+  if (!isCalendarDate(expected.content_packaged_at)) {
+    problems.push(
+      `${relativePath}: ${manifestName} content_packaged_at is ${JSON.stringify(expected.content_packaged_at)}, ` +
+        `not an ISO YYYY-MM-DD calendar date`,
+    );
+    return;
+  }
+
+  // The schema is the authority on policy_days and reports it better than a
+  // derived date mismatch would; this check runs first, so stand aside.
+  const policyDays = card.freshness?.policy_days;
+  if (!Number.isInteger(policyDays) || policyDays < 1) return;
+
   const expectedDue =
-    expected.law_checked_through === null
-      ? null
-      : addUtcDays(expected.law_checked_through, card.freshness?.policy_days ?? 0);
+    expected.law_checked_through === null ? null : addUtcDays(expected.law_checked_through, policyDays);
   const mismatches = [
     ["content_packaged_at", card.content_packaged_at, expected.content_packaged_at],
     ["law_checked_through", card.law_checked_through, expected.law_checked_through],
