@@ -326,3 +326,97 @@ Package-isolation testing caught `docx` incorrectly classified as a development
 dependency. It is now a runtime dependency. Runtime discovery uses packaged
 `dist/core` JavaScript when repository `src/core` is absent; a published package
 does not require a repository lockfile or TypeScript sources.
+
+### Regression follow-through
+
+Refreshing main added the venture-financing due-diligence request list, bringing
+the actual original inventory to 82. Discovery tests now compare against an
+independently enumerated filesystem inventory rather than hard-coding 81.
+
+The first combined regression run reported 109 failures: 72 compatibility-hash
+guard rejections, two downstream missing-case assertions after that guard
+prevented receipt generation, one obsolete inventory count, and 34 timeouts
+across eight legacy integration files. A separate Vitest reporting RPC also
+timed out. These are recorded, not presented as a green full-suite result.
+The log is `/private/tmp/oa-suite-final.log`; classification parsed each numbered
+Vitest failure block and reconciled its totals to the final summary.
+
+`git diff e2724e64 -- src/core/engine.ts` confirmed the CLI integration added only
+an explicit opt-in branch and its import/type, leaving legacy signature rules
+unchanged. The expected SHA was deliberately re-pinned from
+`38facbeab04d647641ed42dcd501a12fbc0ea8e21261af600becb3de9465a329` to
+`18c1d701c915e1451a63d998058d3f91411623fac87240a71329b4d3e6d20c21`;
+the fail-closed guard remains. Eight focused suites exercised 80 passing tests
+and one skipped test. Their only remaining failure was the complete-corpus
+inventory scan exceeding the default five seconds. That scan passed in 10.03s
+with an explicit finite 30-second budget using the existing coverage multiplier.
+The two missing-case assertions pass again without changes to their assertions.
+
+This runtime change invalidated earlier promotion receipts. The new sweep and
+verified-only export completed with **82/82 originals, 1,078 cases passed, zero
+blocked**, superseding the older 81-original checkpoints. The full regression
+retry remains a separate gate; original receipts do not imply the full suite is
+green. Normal legacy integration timeouts have not been broadened.
+
+Matched NVCA IRA diagnostics used Node v26.8.1 and one worker without editing
+the existing tests. An isolated `origin/main` baseline at `131a015c` passed all
+nine tests with the default five-second budget (30.18s total). With an explicit
+diagnostic 20-second budget, the pilot passed 9/9 (35.43s total), and the same
+baseline passed 9/9 (57.24s total), including a 17.62s case. This shows timing
+variability also affects unchanged baseline code; host contention is an
+inference, not a proven cause. The diagnostic budget is not a claim that the
+normal whole-suite gate is green. Reproducible command:
+
+```sh
+npx vitest run integration-tests/nvca-ira-drafting-choice-coverage.test.ts --maxWorkers=1 --minWorkers=1 --testTimeout=20000
+```
+
+Logs: `/private/tmp/oa-main-nvca-default-20260917.log`,
+`/private/tmp/oa-pilot-nvca-20sec-20260917.log`, and
+`/private/tmp/oa-main-nvca-20sec-20260917.log`. The isolated baseline worktree
+remains at `/private/tmp/oa-main-nvca-baseline-20260917` for inspection.
+
+The second full run used one worker and unchanged normal legacy budgets:
+158 files passed, two failed, four skipped; 1,957 tests passed, ten failed,
+eight skipped (839.00s). All ten failures were five-second timeouts: eight
+NVCA IRA drafting-choice cases and two checklist idempotent-patch cases.
+No compatibility-hash, inventory or assertion failures remained. Evidence:
+`/private/tmp/oa-suite-final-retry.log`. A separate focused diagnostic uses
+`--testTimeout=20000`; it does not edit or replace the normal suite gate.
+That focused diagnostic passed all 25 tests in both affected suites (28.73s),
+including all ten cases that timed out in the whole run. Log:
+`/private/tmp/oa-timeout-focused-final-20260917.log`.
+An immediate focused rerun with the original five-second budgets also passed
+all 25 tests (25.37s): `/private/tmp/oa-timeout-default-recheck-20260917.log`.
+These reruns cover every failed case, but the previous whole-run result remains
+a timeout-bearing run rather than being retroactively labelled a clean pass.
+
+`scripts/audit-original-contract-renders.mjs` provides a reproducible baseline
+render audit. It requires a matching verified-only catalogue and current
+source/runtime-bound receipts, then checks extracted canonical titles, footer
+credit/license and page-bounded word geometry. It records potential box-overlap
+signals separately from visual inspection. Run with the trusted installed
+LibreOffice version explicitly pinned, for example:
+
+```sh
+OA_SOFFICE_PIN_VERSION=26.2.5.2 node scripts/audit-original-contract-renders.mjs
+```
+
+Final receipt-gated audit: **82/82 PDFs, 429 pages, zero missing titles or
+footers, zero out-of-page word boxes, zero automated near-complete box-overlap
+signals**. Evidence is ignored, reproducible output under
+`.cache/original-contracts/render-audit-20260917/audit.json`, with per-template
+PDFs and raw extraction/geometry. The audit records the LibreOffice binary hash
+and explicit 26.2.5.2 version pin; the repository's default pin was not changed.
+The first comparison incorrectly treated PDF-extracted wrapped compounds such
+as `Alabama-\nspecific` as different footer text. Joining the wrapped
+continuation while retaining the visible hyphen fixed that check; no document
+content was altered to accommodate the comparison.
+
+Visual sampling is separate: all six pages of the supplied privacy/board
+filled previews, and the audit's privacy first page and Hawaii covenant first
+page, were inspected locally. No clipping or overlapping content was observed
+in those samples. The long Hawaii footer wraps legibly over two lines. These
+samples and automated bounds do not certify every page's visual layout or
+Microsoft Word behavior. The local new-format previews are in
+`/Users/stevenobiajulu/Downloads/openagreements-declarative-review-2026-09-17/`.
