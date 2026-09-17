@@ -1,5 +1,8 @@
 # Au Update Log
 
+## 2026-09-17
+* **Update**: Accent practice-guide title topics (#2725) (a0aa350)
+
 ## 2026-06-29
 * **Update**: Backfill non-solicit / sale-of-business cells with body + source-cards (#1213) — HELD for legal review (#1216) (95a4b4c)
 * **Update**: Rename public "practice notes" → "practice guides" (#1245) (#1260) (99f3946)
