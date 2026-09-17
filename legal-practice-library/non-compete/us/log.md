@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-09-17
+* **Update**: Accent practice-guide title topics (#2725) (a0aa350)
+
 ## 2026-09-12
 * **Update**: Maryland and Oklahoma: remove claims that rest on text struck before passage (#2235) (c738a7e)
 
