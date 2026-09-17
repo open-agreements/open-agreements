@@ -160,6 +160,7 @@
     "@types/node": "^22.13.0",
     "@usejunior/allure-test-factory": "*",
     "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/runner": "3.2.4",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "allure": "^3.7.0",
@@ -171,7 +172,7 @@
     "prismjs": "^1.30.0",
     "typescript": "^5.7.0",
     "typescript-eslint": "^8.54.0",
-    "vitest": "^3.2.4"
+    "vitest": "3.2.4"
   },
   "engines": {
     "node": ">=20"

@@ -1,5 +1,6 @@
 import { execFileSync } from 'node:child_process';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -9,6 +10,8 @@ import {
   acquirePackageArtifactLock,
   type PackageArtifactLock,
 } from './helpers/package-artifact-lock.js';
+
+const it = itAllure.epic('Platform & Distribution').withLabels({ feature: 'Declarative contracts' });
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const BIN = join(ROOT, 'bin/open-agreements.js');

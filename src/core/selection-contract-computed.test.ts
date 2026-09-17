@@ -1,4 +1,5 @@
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { appendFileSync, cpSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
@@ -7,6 +8,8 @@ import { DOMParser } from '@xmldom/xmldom';
 import { getParagraphText } from '@usejunior/docx-core';
 import { compileSelectionContract, fillSelectionContract, type SelectionContract } from './selection-contract.js';
 import { BLANK_PLACEHOLDER } from './fill-utils.js';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 const bontermsDir = resolve('templates/bonterms-cc0-1.0/bonterms-mutual-nda');
 const csaDir = resolve('templates/common-paper-cc-by-4.0/common-paper-cloud-service-agreement');

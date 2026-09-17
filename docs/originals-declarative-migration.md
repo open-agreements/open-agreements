@@ -522,3 +522,42 @@ board remains v1.2, with the known first-page gap and effective-date signature
 mapping. Next handoff: land that separate source correction, then review/open
 the migration PR and coordinate catalogue/release/Stella rollout. This report
 does not authorize those additional public actions or claim they occurred.
+
+### 2026-09-17 pre-ship refresh (in progress)
+
+Steven subsequently authorized proceeding and required an Astra-medium,
+non-Fast review before shipping. That review executed the installed-package
+CLI fill and source/renderer tests; its retained analysis is
+`/Users/stevenobiajulu/Downloads/oa-pre-ship-astra-review-20260917-1305-analysis.md`.
+The canonical board correction remains separate and unpublished pending its
+full pre-push gates. Neither primary checkout was changed.
+
+Fresh originals verification passed 82/82 templates and 1,078 cases; the fresh
+receipt-bound PDF audit passed 82 documents/429 pages, with zero missing titles,
+missing footers or automated overlap signals. Logs are
+`/private/tmp/oa-fresh-originals-20260917-1315.log` and
+`/private/tmp/oa-render-preship-20260917.log`. This does not certify every page
+in Word or legal suitability for a particular transaction.
+
+**Corrected 2026-09-17:** the historical full-regression pass above does not
+certify today's integrated checkout. Today's first full run failed nine legacy
+five-second timeouts; an unchanged focused retry still failed three NVCA
+timeouts. Those failures remain recorded, not reclassified as passes.
+Logs: `/private/tmp/oa-full-tests-20260917-1315.log` and
+`/private/tmp/oa-legacy-timeouts-retry-20260917.log`.
+
+Preflight caught ten new test files lacking mandatory Allure wrappers. The
+wrapper correction passed 113 tests (one deliberately skipped), but emitted
+missing-context warnings. Astra independently found a preexisting dependency
+mismatch: Allure resolved runner 4.1.3 while Vitest executed runner 3.2.4.
+The static label gate cannot detect missing emitted labels or attachments.
+Exact-pinning Vitest and its direct runner to the already-executing 3.2.4
+deduplicates that peer dependency without changing test assertions or budgets.
+Build, lint and the static label gate pass; a changed renderer suite and an
+unchanged selector suite pass 79 tests without those context warnings. Logs:
+`/private/tmp/oa-allure-dependency-align-20260917.log` and
+`/private/tmp/oa-allure-runtime-proof-20260917.log`. Review must additionally
+inspect actual emitted Allure JSON. The intermediate full run was deliberately
+interrupted before dependency installation; its exit 130 is not a pass.
+Final aligned full regression is still pending in
+`/private/tmp/oa-final-aligned-full-tests-20260917.log`; shipping remains held.

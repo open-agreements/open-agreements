@@ -2,8 +2,11 @@ import { cpSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:f
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { compileOriginalContract, fillOriginalContract } from './original-contract.js';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 const PRIVACY = 'templates/openagreements-cc-by-4.0/openagreements-privacy-policy';
 const BOARD = 'templates/openagreements-cc-by-4.0/openagreements-board-consent-safe';

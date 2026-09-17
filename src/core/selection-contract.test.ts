@@ -1,4 +1,5 @@
-import { afterEach, describe, it, expect } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { readFileSync, writeFileSync, mkdtempSync, cpSync, existsSync, mkdirSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
@@ -6,6 +7,8 @@ import AdmZip from 'adm-zip';
 import { compileSelectionContract, fillSelectionContract } from './selection-contract.js';
 import { fillTemplate } from './engine.js';
 import { applySelections } from './selector.js';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 const source = resolve('templates/common-paper-cc-by-4.0/common-paper-mutual-nda');
 const baaSource = resolve('templates/common-paper-cc-by-4.0/common-paper-business-associate-agreement');

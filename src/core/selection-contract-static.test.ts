@@ -1,8 +1,11 @@
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { compileSelectionContract, fillSelectionContract } from './selection-contract.js';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 const source = resolve('templates/common-paper-cc-by-4.0/common-paper-software-license-agreement');
 const temporaryDirectories: string[] = [];

@@ -1,9 +1,12 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { listCommands } from 'docx-templates';
 import { renderOriginalMarkdoc } from './index.js';
 import type { FieldDefinition } from '../metadata.js';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 const fields: FieldDefinition[] = [
   { name: 'name', type: 'string', description: 'Global name' },

@@ -2,7 +2,8 @@ import { mkdirSync, writeFileSync, readdirSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { mkdtempSync } from 'node:fs';
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { loadMetadata, type FieldDefinition, type TemplateMetadata } from './metadata.js';
 import { compileOriginalContract } from './original-contract.js';
 import {
@@ -15,6 +16,8 @@ import {
   expectedOriginalCaseInventory,
   generateOriginalVerificationCases,
 } from '../../scripts/original-contract-cases.mjs';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 describe('OpenAgreements original contract catalog', () => {
   it('discovers every filesystem template directory and fails closed on incomplete entries', () => {
@@ -90,7 +93,7 @@ describe('OpenAgreements original contract catalog', () => {
     expect(inventory.every((item) => /^[a-f0-9]{64}$/.test(item.values_sha256))).toBe(true);
   });
 
-  it.runIf(process.env.RUN_ORIGINAL_CONTRACT_EVIDENCE === '1')(
+  (process.env.RUN_ORIGINAL_CONTRACT_EVIDENCE === '1' ? it : it.skip)(
     'produces passing, revision-tied evidence for the entire discovered catalog',
     async () => {
       const output = mkdtempSync(join(tmpdir(), 'oa-original-evidence-'));

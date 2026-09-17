@@ -1,10 +1,13 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { compileSelectionContract, fillSelectionContract } from './selection-contract.js';
 import { fillTemplate } from './engine.js';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 const root = resolve('templates/common-paper-cc-by-4.0');
 const evidence = resolve('.cache/common-paper-declarative/expansion');

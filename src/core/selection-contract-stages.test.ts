@@ -1,8 +1,11 @@
-import { expect, it } from 'vitest';
+import { expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { cpSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { compileSelectionContract, fillSelectionContract } from './selection-contract.js';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 const orderForm = resolve('templates/common-paper-cc-by-4.0/common-paper-order-form');
 const independentContractor = resolve('templates/common-paper-cc-by-4.0/common-paper-independent-contractor-agreement');

@@ -1,8 +1,11 @@
-import { it, expect } from 'vitest';
+import { expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { readdirSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { compileSelectionContract } from './selection-contract.js';
 import { seconds } from '../../integration-tests/helpers/timeouts.js';
+
+const it = itAllure.epic('Filling & Rendering').withLabels({ feature: 'Declarative contracts' });
 
 it('records bounded compiler coverage without promoting unverified candidates', async () => {
   const rows: { path: string; status: string; reason?: string }[] = [];
