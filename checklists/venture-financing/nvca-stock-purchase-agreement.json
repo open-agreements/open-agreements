@@ -594,9 +594,9 @@
             "title": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 2.7 (Agreements; Action)",
             "citation": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 2.7 (filed Mar. 31, 2015).",
             "url": "https://www.sec.gov/Archives/edgar/data/1390085/000104746915003027/a2223801zex-4_3.htm",
-            "deepLink": "https://www.sec.gov/Archives/edgar/data/1390085/000104746915003027/a2223801zex-4_3.htm#:~:text=that%20involve%20(i)%20obligations%20(contingent,Company%20in%20excess%20of%20%2450%2C000",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1390085/000104746915003027/a2223801zex-4_3.htm#:~:text=obligations%20(contingent%20or%20otherwise)%20of%2C,to%20infringements%20of%20proprietary%20rights.",
             "proposition": "Encapsion, Inc.'s Series A preferred stock purchase agreement sets the agreements-and-actions material-contract disclosure threshold at obligations or payments in excess of $50,000.",
-            "verbatimQuote": "that involve (i) obligations (contingent or otherwise) of, or payments to, the Company in excess of $50,000",
+            "verbatimQuote": "obligations (contingent or otherwise) of, or payments to, the Company in excess of $50,000, (ii) the license of any patent, copyright, trademark, trade secret or other proprietary right to or from the Company, (iii) the grant of rights to manufacture, produce, assemble, license, market, or sell its products to any other Person that limit the Company’s exclusive right to develop, manufacture, assemble, distribute, market or sell its products, or (iv) indemnification by the Company with respect to infringements of proprietary rights.",
             "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-edgar-material-contract-threshold"
           }
         ]
@@ -1573,9 +1573,10 @@
             "title": "Immunome, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (Amendments and Waivers)",
             "citation": "Immunome, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (filed Sept. 9, 2020).",
             "url": "https://www.sec.gov/Archives/edgar/data/1472012/000110465920103458/tm2025599d4_ex10-20.htm",
-            "deepLink": "https://www.sec.gov/Archives/edgar/data/1472012/000110465920103458/tm2025599d4_ex10-20.htm#:~:text=any%20term%20of%20this%20Agreement,2%2F3%25%20of%20the%20then%2Doutstanding%20Shares.",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1472012/000110465920103458/tm2025599d4_ex10-20.htm#:~:text=Except%20as%20set%20forth%20in%20Section%201.1(c)%2C,66%E2%85%94%25%20of%20the%20then%2Doutstanding%20Shares.",
             "proposition": "Immunome, Inc.'s Series A preferred stock purchase agreement sets the amendment-and-waiver threshold at a 66 2/3% supermajority of the then-outstanding Shares.",
-            "verbatimQuote": "any term of this Agreement may be amended, terminated or waived only with the written consent of (a) the Company and (b) the holders of at least 66 2/3% of the then-outstanding Shares.",
+            "verbatimQuote": "Except as set forth in Section 1.1(c), any term of this Agreement may be amended, terminated or waived only with the written consent of (a) the Company and (b) the holders of at least 66⅔% of the then-outstanding Shares.",
+            "pullQuoteLocator": "Except as set forth in Section 1.1(c),|66⅔% of the then-outstanding Shares.",
             "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-edgar-immunome-amendment"
           }
         ]

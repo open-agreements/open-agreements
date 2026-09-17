@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import AdmZip from 'adm-zip';
+import { DOMParser } from '@xmldom/xmldom';
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 
@@ -41,6 +42,18 @@ describe('documentation interface', () => {
       expect(documentXml).toContain('Northeast Logistics LLC');
       expect(documentXml).toContain('Evaluating a potential logistics relationship');
       expect(documentXml).not.toMatch(/\{\{[^}]+\}\}/);
+
+      const wordNamespace = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+      const document = new DOMParser().parseFromString(documentXml, 'text/xml');
+      const paragraphs = Array.from(document.getElementsByTagNameNS(wordNamespace, 'p')).map(
+        (paragraph) => Array.from(paragraph.getElementsByTagNameNS(wordNamespace, 't'))
+          .map((text) => text.textContent).join(''),
+      );
+      const jurisdictionHeading = paragraphs.indexOf('Jurisdiction');
+      expect(jurisdictionHeading).toBeGreaterThanOrEqual(0);
+      expect(paragraphs[jurisdictionHeading + 1]).toBe(
+        'The state and federal courts located in New Castle County, Delaware.',
+      );
 
       const documentedValues = JSON.parse(readFileSync(values, 'utf-8'));
       expect(documentedValues.party_1_email).toBe('jane@example.com');

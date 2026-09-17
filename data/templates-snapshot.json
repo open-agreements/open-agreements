@@ -34048,6 +34048,69 @@
       ]
     },
     {
+      "name": "openagreements-venture-financing-due-diligence-request-list",
+      "tier": "internal",
+      "display_name": "Venture Financing Due Diligence Request List",
+      "category": "venture-financing",
+      "description": "A starting request list for a priced preferred stock financing, structured on the common venture diligence categories.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-venture-financing-due-diligence-request-list",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Adapted from the Cooley GO sample venture capital due diligence request list, with supporting requests from the National Venture Capital Association model stock purchase agreement, K&L Gates and Carta forms. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "requesting_firm_name",
+          "type": "string",
+          "required": true,
+          "section": "Cover Sheet",
+          "description": "Name of the law firm sending the requests for the investors",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": "Cover Sheet",
+          "description": "Legal name of the company issuing the securities",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "request_date",
+          "type": "date",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Date the request list is delivered to the Company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "response_due_date",
+          "type": "date",
+          "required": true,
+          "section": "Cover Sheet",
+          "description": "Date the first response is due",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_contact_name",
+          "type": "string",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Name of the Company contact for diligence responses",
+          "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-wage-notice-new-york-exempt",
       "tier": "internal",
       "display_name": "Wage Notice (New York Exempt Employees)",

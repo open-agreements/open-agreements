@@ -38,7 +38,7 @@ Save the following as `mutual-nda.values.json`:
   "confidentiality_term": "1 year",
   "confidentiality_term_start": "Effective Date",
   "governing_law": "Delaware",
-  "jurisdiction": "courts located in New Castle County, Delaware",
+  "jurisdiction": "New Castle County, Delaware",
   "changes_to_standard_terms": "None.",
   "party_1_type": "entity",
   "party_1_name": "Jane Doe",
