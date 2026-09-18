@@ -331,6 +331,13 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
       ? node.children.slice(1) : node.children;
     const contents = blocks(selectedChildren, inClause || name === 'clause'); definitionScopes.pop(); tagStack.pop();
     if (name === 'agreement-section') sectionStack.pop();
+    // Corrected 2026-09-17: continuous operative sections must not erase the
+    // canonical dedicated signature page. Contact-only sections (e.g. privacy
+    // policies) do not contain a signature-block and remain continuous.
+    if (name === 'agreement-section' && attr(node, 'type') === 'signature'
+      && node.children.some(child => child.type === 'tag' && child.tag === 'signature-block')) {
+      contents.unshift(new Paragraph({ pageBreakBefore: true, spacing: { before: 0, after: 0, line: 1 }, children: [] }));
+    }
     if (name === 'signer') {
       const label = attr(node, 'label', true)!;
       // Some canonical signers already begin with an explicit party caption.
