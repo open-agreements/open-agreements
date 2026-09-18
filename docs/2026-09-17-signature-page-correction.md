@@ -38,3 +38,26 @@ Worktree: `/Users/stevenobiajulu/Projects/oa-signature-page-20260917`, branch
 Local correction only: not pushed, merged or released. Astra review, normal
 pre-push/full gates and a follow-up PR remain required before shipping. No
 Word/Pages compatibility or legal/delivery-readiness certificate claimed.
+
+## Pre-shipping follow-up — 2026-09-18
+
+Synced the isolated branch with current main `fcdd68e0`; the PR delta remains
+these three files. Astra medium, non-fast dynamic review of integrated
+`c1463332` passed with recorded limits: 27 focused tests after a required build,
+real board pagination and independent signer dates, and no leading blank page
+in an executed signature-only probe. Initial reviewer pre-build CLI failures
+remain recorded as setup failures, not passes. AST inventory shows 77 affected
+actual signature-block sections, one exempt privacy contact-only section, and
+no current empty/leading/conditional signature blocks. A syntactically empty
+block can produce a heading-only page: future-input hardening advisory, not
+proof of rendered signer presence or a current-corpus blocker.
+
+Default parallel preflight failed four unchanged NVCA IRA five-second timeout
+cases (1,969 passed/eight skipped). An unchanged-assertion, unchanged-budget
+single-worker rerun passed 1,973 tests/eight skipped, all 160 passing files/four
+skipped. All equivalent CI preflight checks, DOCX structure and isolated-package
+runtime checks passed. Logs `/private/tmp/oa-signature-preship-20260918.log` and
+`/private/tmp/oa-signature-preship-single-worker-20260918.log` retain both results.
+Current-runtime 82-template receipt/export/PDF refresh remains in progress;
+automerge must wait for it. This supersedes the local-only workflow state above,
+not its historical evidence. Review: `/Users/stevenobiajulu/Downloads/oa-signature-astra-review-20260918-analysis.md`.
