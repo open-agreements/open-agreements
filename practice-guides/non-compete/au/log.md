@@ -1,5 +1,8 @@
 # Au Update Log
 
+## 2026-09-18
+* **Update**: content: neutralize Australian guide cautions (#2739) (aeaab49)
+
 ## 2026-09-17
 * **Update**: Accent practice-guide title topics (#2725) (a0aa350)
 

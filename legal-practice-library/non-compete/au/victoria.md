@@ -111,7 +111,7 @@ A drafting device that extends the period by the length of any breach pushes the
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a clause that purports to extend the non-compete by the length of any breach. No clear Victorian authority validates tolling of the restraint period, and because the existence of the interest is tested as at the date of the contract — with reasonableness generally tested by reference to that date — an automatic extension may risk being treated as unreasonable [^wallis-assessed-at-time-tolling]. Treat the stated duration as the maximum, and address an actual breach through an injunction or a damages claim instead.
+> No clear Victorian authority validates tolling of the restraint period. Because the existence of the interest is tested as at the date of the contract, with reasonableness generally tested by reference to that date, an automatic extension may risk being treated as unreasonable [^wallis-assessed-at-time-tolling]. The stated duration is the period assessed at contracting, while an actual breach may give rise to an injunction or damages claim.
 
 ## How does Victoria treat customer non-solicitation covenants? {#customer-non-solicitation}
 
@@ -138,7 +138,7 @@ Because this is a future legislative matter, employers should treat the timeline
 > [!NOTE]
 > **Practice note.**
 >
-> Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in Victoria still turns on the common-law reasonableness test [^just-presumed-void-reform]. Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change.
+> As of June 2026 no Commonwealth statute bans employee non-competes. Enforceability in Victoria therefore continues to turn on the common-law reasonableness test [^just-presumed-void-reform]. The proposal's threshold, scope, and commencement remain subject to change until legislation is enacted.
 
 
 

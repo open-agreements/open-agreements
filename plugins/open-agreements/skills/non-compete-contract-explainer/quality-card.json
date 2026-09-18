@@ -2,11 +2,22 @@
   "$schema": "https://openagreements.org/schemas/skill-quality-card.schema.json",
   "schema_version": "2026-08-31",
   "skill": "non-compete-contract-explainer",
-  "content_packaged_at": "2026-06-24",
-  "law_checked_through": "2026-06-16",
+  "content_packaged_at": "2026-09-18",
+  "law_checked_through": "2026-04-14",
   "human_reviewed_at": null,
-  "next_review_due": "2026-12-13",
-  "coverage": {"jurisdictions": 68, "manifest": "manifest.json"},
-  "review": {"claim": "lawyer-reviewed", "reviewer_registry": "https://openagreements.org/editors", "verification": "https://openagreements.org/editors"},
-  "freshness": {"policy_days": 180, "check_script": "scripts/freshness-check.ts", "stale_issue_label": "freshness"}
+  "next_review_due": "2026-10-11",
+  "coverage": {
+    "jurisdictions": 68,
+    "manifest": "manifest.json"
+  },
+  "review": {
+    "claim": "lawyer-reviewed",
+    "reviewer_registry": "https://openagreements.org/editors",
+    "verification": "https://openagreements.org/editors"
+  },
+  "freshness": {
+    "policy_days": 180,
+    "check_script": "scripts/freshness-check.ts",
+    "stale_issue_label": "freshness"
+  }
 }

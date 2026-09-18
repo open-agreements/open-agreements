@@ -144,7 +144,7 @@ Because validity is fixed at the date of contract, a drafting device that extend
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a clause that purports to extend the non-compete by the length of any breach. No clear South Australian authority validates tolling of the restraint period, and because validity is judged at the date of entry into the contract, an automatic extension risks being treated as unreasonable [^dmytrenko-tested-at-contract-tolling]. Treat the stated duration as the maximum and address an actual breach through an injunction or a damages claim instead.
+> No clear South Australian authority validates tolling of the restraint period. Because validity is judged at the date of entry into the contract, an automatic extension risks being treated as unreasonable [^dmytrenko-tested-at-contract-tolling]. The stated duration is the period assessed at entry into the contract, while an actual breach may give rise to an injunction or damages claim.
 
 ## Do South Australian restraint rules differ for contractors and business sales? {#contractors-and-sale}
 
@@ -165,7 +165,7 @@ Because this is a future legislative matter, employers should treat the timeline
 > [!NOTE]
 > **Practice note.**
 >
-> Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in South Australia still turns on the common-law reasonableness test and the blue-pencil-only severance rule [^dmytrenko-still-governs]. Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change.
+> As of June 2026 no Commonwealth statute bans employee non-competes. Enforceability in South Australia therefore continues to turn on the common-law reasonableness test and the blue-pencil-only severance rule [^dmytrenko-still-governs]. The proposal's threshold, scope, and commencement remain subject to change until legislation is enacted.
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in South Australia, Australia. This article summarizes publicly available South Australia, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in South Australia*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/south-australia.
 

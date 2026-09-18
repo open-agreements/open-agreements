@@ -128,7 +128,7 @@ Because validity is fixed at the date of contract, a drafting device that extend
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a clause that purports to extend the non-compete by the length of any breach. No clear Queensland authority validates tolling of the restraint period, and because reasonableness is determined as at the date of the agreement, an automatic extension risks being treated as unreasonable [^autoparts-tested-at-contract-tolling]. Treat the stated duration as the maximum and address an actual breach through an injunction or a damages claim instead.
+> No clear Queensland authority validates tolling of the restraint period. Because reasonableness is determined as at the date of the agreement, an automatic extension risks being treated as unreasonable [^autoparts-tested-at-contract-tolling]. The stated duration is the period assessed for reasonableness, while an actual breach may give rise to an injunction or damages claim.
 
 ## How does Queensland treat customer non-solicitation covenants? {#customer-non-solicitation}
 

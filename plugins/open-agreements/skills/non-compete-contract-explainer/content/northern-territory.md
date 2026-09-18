@@ -130,7 +130,7 @@ Because validity is fixed when the restraint is agreed [^henderson-tested-at-dat
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a clause that purports to extend the non-compete by the length of any breach. No Northern Territory authority validates tolling of the restraint period, and because validity is decided as at the date of the agreement, an automatic extension risks being treated as unreasonable [^henderson-tested-at-date]. Treat the stated duration as the maximum and address an actual breach through an injunction or a damages claim instead.
+> No Northern Territory authority validates tolling of the restraint period. Because validity is decided as at the date of the agreement, an automatic extension risks being treated as unreasonable [^henderson-tested-at-date]. The stated duration is the period assessed at the agreement date, while an actual breach may give rise to an injunction or damages claim.
 
 ## Do Northern Territory restraint rules differ for contractors and business sales? {#contractors-and-sale}
 
@@ -151,7 +151,7 @@ Because this is a future legislative matter, employers should treat the timeline
 > [!NOTE]
 > **Practice note.**
 >
-> Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in the Northern Territory still turns on the common-law reasonableness test — under which an unreasonable restraint is simply void [^oamps-still-governs]. Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change.
+> As of June 2026 no Commonwealth statute bans employee non-competes. Enforceability in the Northern Territory therefore continues to turn on the common-law reasonableness test, under which an unreasonable restraint is simply void [^oamps-still-governs]. The proposal's threshold, scope, and commencement remain subject to change until legislation is enacted.
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Northern Territory, Australia. This article summarizes publicly available Northern Territory, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in the Northern Territory*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/northern-territory.
 
