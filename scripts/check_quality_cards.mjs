@@ -114,6 +114,111 @@ function checkSchemaLayout(problems) {
   }
 }
 
+/**
+ * The card's dates must be the ones the bundle beside it actually supports.
+ *
+ * The card is a static asset; the manifest is generated per publish. When the
+ * two drifted, the card claimed law checked through 2026-06-16 and a review due
+ * 2026-12-13 while the manifest held a jurisdiction checked only through
+ * 2026-04-14 — the card overstated freshness by two months. The aggregate rule
+ * is deliberately conservative: one unknown jurisdiction date makes the card's
+ * date unknown, because the earliest KNOWN date reads as coverage the bundle
+ * does not have.
+ */
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** Date-shaped is not the same as real: `2026-02-30` matches the shape. */
+export function isCalendarDate(value) {
+  if (typeof value !== "string" || !ISO_DATE.test(value)) return false;
+  const [y, m, d] = value.split("-").map(Number);
+  const round = new Date(Date.UTC(y, m - 1, d));
+  return (
+    round.getUTCFullYear() === y && round.getUTCMonth() === m - 1 && round.getUTCDate() === d
+  );
+}
+
+export function expectedCardDates(manifest) {
+  const entries = manifest.jurisdictions;
+  if (!Array.isArray(entries) || entries.length === 0) return null;
+  const laws = entries.map((entry) => entry.law_checked_through);
+
+  // A present-but-malformed date is not an unknown date, and it must not reach
+  // the sort. These are strings, so the minimum is lexical: "2026-2-01" sorts
+  // AFTER "2026-10-01", and a card would then publish October as the floor for
+  // a bundle checked only through February. Refusing here is what stops the
+  // aggregate from claiming coverage nothing in the manifest supports.
+  const malformed = laws.filter(
+    (value) => value !== null && value !== undefined && !isCalendarDate(value),
+  );
+
+  const lawCheckedThrough = laws.every((value) => typeof value === "string")
+    ? laws.slice().sort()[0]
+    : null;
+  return {
+    malformed: [...new Set(malformed.map((value) => JSON.stringify(value)))].sort(),
+    content_packaged_at: manifest.content_packaged_at,
+    law_checked_through: lawCheckedThrough,
+    jurisdictions: entries.length,
+  };
+}
+
+export function addUtcDays(date, days) {
+  const [y, m, d] = date.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d + days)).toISOString().slice(0, 10);
+}
+
+function checkCardDates(card, file, relativePath, problems) {
+  const manifestName = card.coverage?.manifest;
+  if (typeof manifestName !== "string") return;
+  const manifestPath = join(dirname(file), manifestName);
+  if (!existsSync(manifestPath)) {
+    problems.push(`${relativePath} names coverage.manifest ${JSON.stringify(manifestName)}, which does not exist beside it`);
+    return;
+  }
+
+  const expected = expectedCardDates(readJson(manifestPath));
+  if (!expected) {
+    problems.push(`${relativePath}: ${manifestName} lists no jurisdictions, so the card describes an empty bundle`);
+    return;
+  }
+
+  if (expected.malformed.length > 0) {
+    problems.push(
+      `${relativePath}: ${manifestName} carries law_checked_through ${expected.malformed.join(", ")}, ` +
+        `which is not an ISO YYYY-MM-DD calendar date; the card's floor cannot be derived from it`,
+    );
+    return;
+  }
+  if (!isCalendarDate(expected.content_packaged_at)) {
+    problems.push(
+      `${relativePath}: ${manifestName} content_packaged_at is ${JSON.stringify(expected.content_packaged_at)}, ` +
+        `not an ISO YYYY-MM-DD calendar date`,
+    );
+    return;
+  }
+
+  // The schema is the authority on policy_days and reports it better than a
+  // derived due date would, so skip THAT comparison when it is unusable — but
+  // only that one. Returning here instead would let a bad policy_days suppress
+  // the overstated-floor report, which is the failure this check exists for.
+  const policyDays = card.freshness?.policy_days;
+  const derivable = Number.isInteger(policyDays) && policyDays >= 1;
+  const expectedDue =
+    expected.law_checked_through === null ? null : derivable ? addUtcDays(expected.law_checked_through, policyDays) : null;
+  const mismatches = [
+    ["content_packaged_at", card.content_packaged_at, expected.content_packaged_at],
+    ["law_checked_through", card.law_checked_through, expected.law_checked_through],
+    ...(derivable ? [["next_review_due", card.next_review_due, expectedDue]] : []),
+    ["coverage.jurisdictions", card.coverage?.jurisdictions, expected.jurisdictions],
+  ].filter(([, actual, want]) => actual !== want);
+
+  for (const [field, actual, want] of mismatches) {
+    problems.push(
+      `${relativePath} ${field} is ${JSON.stringify(actual)}; ${manifestName} supports ${JSON.stringify(want)}`,
+    );
+  }
+}
+
 function checkCards(problems) {
   const cards = walk(skillsRoot, cardFileName);
   if (cards.length === 0) {
@@ -174,6 +279,8 @@ function checkCards(problems) {
       );
       continue;
     }
+
+    checkCardDates(card, file, relativePath, problems);
 
     let validate = validators.get(schemaFile);
     if (!validate) {
