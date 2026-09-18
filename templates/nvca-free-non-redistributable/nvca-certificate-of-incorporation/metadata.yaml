@@ -157,9 +157,11 @@ fields:
   - name: qualified_financing_debt_proceeds_treatment
     type: enum
     required: false
-    description: Whether proceeds previously received for debt cancelled or converted in the Qualified Financing count toward the optional gross-proceeds threshold
+    description: >-
+      Whether proceeds previously received for debt cancelled or converted in the Qualified Financing count toward the
+      optional gross-proceeds threshold. No default: this is a deal term. If a threshold is entered and this is left
+      blank, the NVCA [including/excluding] bracket stays unresolved in the output
     options: [including, excluding]
-    default: excluding
   - name: qualified_financing_proceeds_threshold_carrier
     type: string
     required: false
