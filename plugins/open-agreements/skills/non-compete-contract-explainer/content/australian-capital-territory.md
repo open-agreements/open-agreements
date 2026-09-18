@@ -132,7 +132,7 @@ The Territory's leading case is itself the best illustration of what happens ins
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a clause that purports to extend the non-compete by the length of any breach. No staged Australian Capital Territory authority validates tolling of the restraint period, and because validity is assessed at the time the contract is made, an automatic extension risks being treated as unreasonable [^steadfast-tested-at-contract-tolling]. Treat the stated duration as the maximum, move quickly if an injunction is needed — in the Territory's leading case the period expired before trial and the injunction claim fell away [^steadfast-injunction-elapsed] — and look to damages or an account of profits for a breach that outlasts the clause [^steadfast-account-remedy].
+> No staged Australian Capital Territory authority validates tolling of the restraint period. Because validity is assessed at the time the contract is made, an automatic extension risks being treated as unreasonable [^steadfast-tested-at-contract-tolling]. In the Territory's leading case, the restraint period expired before trial and the injunction claim fell away; the court instead ordered an account of profits [^steadfast-injunction-elapsed][^steadfast-account-remedy]. The stated duration is therefore the period assessed at contracting, while a breach that outlasts it may give rise to damages or an account of profits.
 
 ## Do Australian Capital Territory restraint rules differ for contractors and business sales? {#contractors-and-sale}
 
@@ -153,7 +153,7 @@ Because this is a future legislative matter, employers should treat the timeline
 > [!NOTE]
 > **Practice note.**
 >
-> Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in the Australian Capital Territory still turns on the common-law reasonableness test, assessed at the time the contract is made, with no statutory power to read an overbroad clause down [^steadfast-still-governs]. Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change.
+> As of June 2026 no Commonwealth statute bans employee non-competes. Enforceability in the Australian Capital Territory therefore continues to turn on the common-law reasonableness test, assessed at the time the contract is made, with no statutory power to read an overbroad clause down [^steadfast-still-governs]. The proposal's threshold, scope, and commencement remain subject to change until legislation is enacted.
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australian Capital Territory, Australia. This article summarizes publicly available Australian Capital Territory, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in the Australian Capital Territory*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory.
 

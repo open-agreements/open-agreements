@@ -118,7 +118,7 @@ The reasonableness of a restraint is judged as at the date the contract was made
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a clause that purports to extend the non-compete by the length of any breach. No clear New South Wales authority validates tolling of the restraint period, and because reasonableness is tested as at the date of the contract, an automatic extension risks being treated as unreasonable. Treat the stated duration as the maximum and address an actual breach through an injunction or a damages claim instead [^olson-tested-at-contract-tolling].
+> No clear New South Wales authority validates tolling of the restraint period. Because reasonableness is tested as at the date of the contract, an automatic extension risks being treated as unreasonable. The stated duration is the period assessed for reasonableness, while an actual breach may give rise to an injunction or damages claim [^olson-tested-at-contract-tolling].
 
 ## Do New South Wales restraint rules differ for contractors and business sales? {#contractors-and-sale}
 
@@ -139,7 +139,7 @@ Because this is a future legislative matter, employers should treat the timeline
 > [!NOTE]
 > **Practice note.**
 >
-> Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in New South Wales still turns on the common-law reasonableness test and the Restraints of Trade Act 1976 (NSW). Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change [^rota-s4-1-reform].
+> As of June 2026 no Commonwealth statute bans employee non-competes. Enforceability in New South Wales therefore continues to turn on the common-law reasonableness test and the Restraints of Trade Act 1976 (NSW). The proposal's threshold, scope, and commencement remain subject to change until legislation is enacted [^rota-s4-1-reform].
 
 
 
