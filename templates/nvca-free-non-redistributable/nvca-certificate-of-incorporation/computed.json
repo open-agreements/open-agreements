@@ -68,9 +68,20 @@
       "when_all": [
         { "field": "include_pay_to_play", "op": "eq", "value": true },
         { "field": "qualified_financing_min_gross_proceeds", "op": "defined" },
-        { "field": "qualified_financing_debt_proceeds_treatment", "op": "neq", "value": "including" }
+        { "field": "qualified_financing_debt_proceeds_treatment", "op": "eq", "value": "excluding" }
       ],
       "set_fill": { "qualified_financing_proceeds_threshold_carrier": " that would result in at least $${qualified_financing_min_gross_proceeds} in gross proceeds to the Corporation, excluding proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance" }
+    },
+    {
+      "id": "qualified-financing-threshold-debt-proceeds-unresolved",
+      "description": "Keep the NVCA [including/excluding] bracket when a threshold is entered but the debt-proceeds treatment is not chosen; never pick this deal term silently",
+      "when_all": [
+        { "field": "include_pay_to_play", "op": "eq", "value": true },
+        { "field": "qualified_financing_min_gross_proceeds", "op": "defined" },
+        { "field": "qualified_financing_debt_proceeds_treatment", "op": "neq", "value": "including" },
+        { "field": "qualified_financing_debt_proceeds_treatment", "op": "neq", "value": "excluding" }
+      ],
+      "set_fill": { "qualified_financing_proceeds_threshold_carrier": " that would result in at least $${qualified_financing_min_gross_proceeds} in gross proceeds to the Corporation, [including/excluding] proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance" }
     },
     {
       "id": "specified-percentage-carrier",
