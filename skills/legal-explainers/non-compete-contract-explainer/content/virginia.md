@@ -2,7 +2,7 @@
 jurisdiction: "Virginia"
 slug: virginia
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-07-03"
 human_reviewed_at: null
 next_review_due: "2026-12-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Virginia[^about]
 
@@ -164,7 +164,7 @@ That alternative has its own limits. The Virginia Uniform Trade Secrets Act defi
 >
 > Keep confidentiality and trade-secret covenants separate from a work ban. A clause labeled as confidentiality can still create non-compete risk if it restrains ordinary competition rather than protecting specific confidential, proprietary, or trade-secret information [^statute-nda-preserved][^vutsa-trade-secret-definition].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Virginia*, OpenAgreements (last updated July 3, 2026), https://openagreements.org/practice-guides/non-compete/us/virginia.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Virginia*, OpenAgreements (last updated July 3, 2026), https://openagreements.org/practice-guides/non-compete/us/virginia.
 
 [^statutory-ban-baseline]: **Va. Code § 40.1-28.7:8** — "No employer shall enter into, enforce, or threaten to enforce a covenant not to compete with any low-wage employee or health care professional." *Va. Code Ann. § 40.1-28.7:8(B).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Puerto Rico"
 slug: puerto-rico
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/puerto-rico · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/puerto-rico · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Puerto Rico[^about]
 
@@ -124,7 +124,7 @@ Two background developments matter for monitoring but do not change the Puerto R
 
 The practical takeaway is stability with a narrow margin. Because the framework is judicial, the most reliable signal of change would be a new Supreme Court decision rather than a bill, and *Reyes Ramis* remains the most recent word: the strict requirements apply to employer-employee covenants, with a single territorial or customer limit sufficing [^rr-current].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Puerto Rico. This article synthesizes Puerto Rico primary law and is not legal advice from a Puerto Rico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Puerto Rico*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/puerto-rico.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Puerto Rico. This article synthesizes Puerto Rico primary law and is not legal advice from a Puerto Rico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Puerto Rico*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/puerto-rico.
 
 [^ay-test]: **Arthur Young & Co. v. Vega III** — "Para ser razonable, un acuerdo de no competir debe reunir los siguientes requisitos: (1) debe ser necesario para proteger un interés legítimo del patrono, (2) no debe imponer al empleado una carga demasiado onerosa, (3) y no debe afectar demasiado al público." *Arthur Young & Co. v. Vega III, 136 D.P.R. 157 (1994).* <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 

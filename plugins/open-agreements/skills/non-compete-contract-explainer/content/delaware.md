@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Delaware[^about]
 
@@ -178,7 +178,7 @@ This is a narrow licensing rule, not a general employee non-compete statute. It 
 
 The through-line is not that Delaware became anti-enforcement. It is that Delaware separates contract forms carefully and demands fact-specific tailoring before enforcing true restraints on work.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Delaware*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/delaware.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Delaware*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/delaware.
 
 [^fp-uc-reasonableness-test]: **FP UC Holdings, LLC v. Hamilton** — "Instead, our courts carefully review the covenants to assure they ‘(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.’" *FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020).* <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D>
 

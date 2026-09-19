@@ -48,7 +48,7 @@ Every item below reads a draft board ratifying consent against DGCL § 204, the 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-02. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Delaware (DGCL) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Board Ratifying Consent Reviewer Checklist*, OpenAgreements (last updated July 2, 2026), https://openagreements.org/checklists/corporate-governance/board-ratifying-consent.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-02. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Delaware (DGCL) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Board Ratifying Consent Reviewer Checklist*, OpenAgreements (last updated July 2, 2026), https://openagreements.org/checklists/corporate-governance/board-ratifying-consent.
 
 [^q1-204-b1a]: **8 Del. C. § 204(b)(1)(A)** — "The defective corporate act or acts to be ratified;" *8 Del. C. § 204(b)(1)(A).* <https://delcode.delaware.gov/title8/c001/sc06/index.html>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maine[^about]
 
@@ -153,7 +153,7 @@ The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on A
 >
 > L.D. 2200's health-care-practitioner restriction applies to every non-compete entered into or renewed on or after its July 13, 2026 effective date, so the trigger is the made-or-renewed date rather than when a dispute arises [^ebg-ld2200-effective]. A covenant for a health-care worker that is signed, re-papered, or renewed on or after that date is measured against the restriction even where the original agreement predated it, and because the codified text can lag the amendment on the published § 599-A page, a covenant validated only against the pre-amendment wage-floor and veterinarian rules can miss the restriction that now governs it [^ebg-ld2200-effective].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Maine*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/maine.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Maine*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/maine.
 
 [^maine-599a-public-policy-narrow-interests]: **26 M.R.S. § 599-A — Noncompete agreements** — "Noncompete agreements are contrary to public policy and are enforceable only to the extent that they are reasonable and are no broader than necessary to protect one or more of the following legitimate business interests of the employer:" *26 M.R.S. § 599-A(2).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 

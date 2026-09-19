@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-04-14"
 human_reviewed_at: null
 next_review_due: "2026-10-11"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wyoming[^about]
 
@@ -199,7 +199,7 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 **2021–2022 backdrop:** Wyoming's common-law baseline was already demanding because of strict construction, consideration, and no-narrowing cases [^brown-consideration-backdrop][^malave-common-law-elements][^hassler-void-public-policy].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-14. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wyoming*, OpenAgreements (last updated April 14, 2026), https://openagreements.org/practice-guides/non-compete/us/wyoming.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-14. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wyoming*, OpenAgreements (last updated April 14, 2026), https://openagreements.org/practice-guides/non-compete/us/wyoming.
 
 [^wyo-1-23-voids-labor-noncompetes]: **Wyo. Stat. § 1-23-108(a)** — "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void." *Wyo. Stat. § 1-23-108(a) (2025) (SF 107, Enrolled Act No. 87).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 

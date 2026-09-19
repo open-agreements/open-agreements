@@ -159,7 +159,7 @@ The Federal Register notice records that a federal court held the rule unlawful 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Florida. This article synthesizes Florida primary law and is not legal advice from a Florida-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Florida*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/florida.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Florida. This article synthesizes Florida primary law and is not legal advice from a Florida-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Florida*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/florida.
 
 [^q1-542018-baseline]: **Fla. Stat. § 542.18** — "Every contract, combination, or conspiracy in restraint of trade or commerce in this state is unlawful." *Fla. Stat. § 542.18 (2025).* <https://www.flsenate.gov/Laws/Statutes/2025/542.18>
 

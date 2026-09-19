@@ -146,7 +146,7 @@ Texas employees also retain the full federal remedy: a private FLSA action for u
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Texas. This article synthesizes Texas primary law and is not legal advice from a Texas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Texas*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/texas.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Texas. This article synthesizes Texas primary law and is not legal advice from a Texas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Texas*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/texas.
 
 [^tex-lab-code-sec-62-051]: **Texas Labor Code Sec. 62.051** — "Except as provided by Section 62.057 , an employer shall pay to each employee the federal minimum wage under Section 6, Fair Labor Standards Act of 1938 (29 U.S.C. Section 206)." *Texas Labor Code Sec. 62.051.* <https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm>
 

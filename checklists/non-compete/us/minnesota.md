@@ -155,7 +155,7 @@ The seven items below exist only on this Minnesota page: the date screen that se
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Minnesota (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Minnesota*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/minnesota.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Minnesota (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Minnesota*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/minnesota.
 
 [^minn-ban-void-cover]: **Minn. Stat. § 181.988, subd. 2(a)** — "Any covenant not to compete contained in a contract or agreement is void and unenforceable." *Minn. Stat. § 181.988, subd. 2(a) (2025).* <https://www.revisor.mn.gov/statutes/cite/181.988>
 

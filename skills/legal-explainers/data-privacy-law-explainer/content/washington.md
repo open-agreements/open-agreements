@@ -2,7 +2,7 @@
 jurisdiction: "Washington"
 slug: washington
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/washington · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/washington · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Washington Consumer Privacy Law (My Health My Data Act)[^about]
 
@@ -116,7 +116,7 @@ The central open question for private suits is the CPA's injury element: plainti
 
 The breach statute carries its own, separate consumer remedy: an action to enforce chapter 19.255 may not be brought through the CPA's private-action section, but any consumer injured by a violation of that chapter may institute a civil action for damages directly under it [^q8-breach-pra]. So a notification failure adds direct consumer-suit exposure on top of the Attorney General's parens patriae authority.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Washington Consumer Privacy Law (My Health My Data Act)*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/washington.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Washington Consumer Privacy Law (My Health My Data Act)*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/washington.
 
 [^q1-regulated-entity]: **RCW 19.373.010(23)** — "‘Regulated entity’ means any legal entity that: (a) Conducts business in Washington, or produces or provides products or services that are targeted to consumers in Washington; and (b) alone or jointly with others, determines the purpose and means of collecting, processing, sharing, or selling of consumer health data." *Wash. Rev. Code § 19.373.010(23).* <https://app.leg.wa.gov/RCW/default.aspx?cite=19.373.010>
 

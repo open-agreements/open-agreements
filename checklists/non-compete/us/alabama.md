@@ -161,7 +161,7 @@ The seven items below exist only on this Alabama page: they implement the Restri
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Alabama (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Alabama*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/alabama.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Alabama (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Alabama*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/alabama.
 
 [^ala-192-signature-cover]: **Ala. Code § 8-1-192** — "In order to be valid, any contract or agreement executed pursuant to this article shall be reduced to writing, signed by all parties, and be supported by adequate consideration." *Ala. Code § 8-1-192.* <https://alison.legislature.state.al.us/code-of-alabama/8-1-192>
 

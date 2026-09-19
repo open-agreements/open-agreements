@@ -71,7 +71,7 @@ The earned-versus-forfeitable line points to a clear design choice. Frame the re
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Stay-or-Pay and Employee Repayment in New York*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/stay-or-pay/us/new-york.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Stay-or-Pay and Employee Repayment in New York*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/stay-or-pay/us/new-york.
 
 [^matter-of-william-mattar-p-c-v-riley-2025-ny-sli]: **Matter of William Mattar, P.C. v. Riley, 2025 NY Slip Op 02680** — "vested and mandatory as opposed to discretionary and forfeitable" *Matter of William Mattar, P.C. v. Riley, 2025 NY Slip Op 02680.* <https://www.courtlistener.com/opinion/10579969/matter-of-william-mattar-pc-v-riley#:~:text=vested%20and%20mandatory%20as%20opposed%20to%20discretionary%20and%20forfeitable>
 

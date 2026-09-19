@@ -156,7 +156,7 @@ The four items below exist only on this Kentucky page: the common-law fair-prote
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Kentucky (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Kentucky*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/kentucky.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Kentucky (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Kentucky*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/kentucky.
 
 [^ky-creech-incumbent-cover]: **Charles T. Creech, Inc. v. Brown** — "In short, Brown received no consideration from Creech in exchange for signing the Agreement or after he signed the Agreement." *Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014).* <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=In%20short%2C%20Brown%20received%20no,after%20he%20signed%20the%20Agreement.>
 

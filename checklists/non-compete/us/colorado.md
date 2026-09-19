@@ -161,7 +161,7 @@ The seven items below exist only on this Colorado page: they implement the statu
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Colorado (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Colorado*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/colorado.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Colorado (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Colorado*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/colorado.
 
 [^crs-threshold-execution-year]: **C.R.S. § 8-2-113** — "‘Threshold amount for highly compensated workers’ means the greater of the threshold amount for highly compensated workers as determined by the division of labor standards and statistics in the department of labor and employment: (A) As of August 10, 2022; or (B) At the time the covenant not to compete is executed by the parties." *C.R.S. § 8-2-113(2)(c)(II).* <https://olls.info/crs/crs2025-title-08.pdf>
 

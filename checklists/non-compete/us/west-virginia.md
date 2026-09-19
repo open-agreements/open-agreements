@@ -158,7 +158,7 @@ The five items below exist only on this West Virginia page: they implement the p
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for West Virginia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — West Virginia*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/west-virginia.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for West Virginia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — West Virginia*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/west-virginia.
 
 [^wv-reddy-burden-cover]: **Reddy v. Community Health Foundation of Man** — "The employer must first show that he has an interest requiring protection." *Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).* <https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20employer%20must%20first%20show,has%20an%20interest%20requiring%20protection.>
 

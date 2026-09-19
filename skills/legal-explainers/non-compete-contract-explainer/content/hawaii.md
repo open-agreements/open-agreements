@@ -2,7 +2,7 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Hawaii[^about]
 
@@ -157,7 +157,7 @@ That is not the same as permission to draft broadly. *Gagnon* refused enforcemen
 >
 > A Hawaii restriction stands on the minimum scope its protected interest supports, not on the expectation that a court will rescue an overbroad one. A court may trim an injunction to the contract and record before it, but *Gagnon* shows that a covenant lacking a legitimate ancillary purpose fails outright rather than being saved by narrower wording, so scope drawn beyond the interest is exposed rather than reformed [^narrowing-del-rosario-honolulu-limit][^narrowing-gagnon-legitimate-purpose-required].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Hawaii*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/hawaii.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Hawaii*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/hawaii.
 
 [^employee-hrs-480-4-baseline]: **HRS 480-4** — "Every contract, combination in the form of trust or otherwise, or conspiracy, in restraint of trade or commerce in the State, or in any section of this State is illegal." *Haw. Rev. Stat. 480-4(a).* <https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm>
 

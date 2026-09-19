@@ -2,7 +2,7 @@
 jurisdiction: "Queensland, Australia"
 slug: queensland
 countryCode: AU
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/queensland · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/queensland · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Queensland[^about]
 
@@ -172,7 +172,7 @@ The same High Court restraint-of-trade doctrine that governs Queensland non-comp
 >
 > Frame a Queensland employee non-solicit around a real interest — such as protecting confidential information — and keep its reach and duration no wider than that interest needs. A clause that just bars hiring former colleagues, untethered to a legitimate interest, risks being void with no statutory power to read it down [^qld-empns-aeci-interest].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Queensland, Australia. This article summarizes publicly available Queensland, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in Queensland*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/queensland.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Queensland, Australia. This article summarizes publicly available Queensland, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in Queensland*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/queensland.
 
 [^aeci-presumed-void]: **AECI Australia Pty Ltd v Convey** — "A term in a contract, which is a restraint of trade ('a restraint clause'), is presumed to be void as contrary to public policy." *AECI Australia Pty Ltd v Convey [2020] QSC 207 (Bradley J), quoting Just Group Ltd v Peck (2016) 344 ALR 162.* <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>
 

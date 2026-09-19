@@ -92,7 +92,7 @@ Firm guidance reads the statute to bar repayment outright for ordinary retention
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not California. This article synthesizes California primary law and is not legal advice from a California-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Stay-or-Pay and Employee Repayment in California*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/stay-or-pay/us/california.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not California. This article synthesizes California primary law and is not legal advice from a California-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Stay-or-Pay and Employee Repayment in California*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/stay-or-pay/us/california.
 
 [^california-business-and-professions-code-sec-166]: **California Business and Professions Code Sec. 16608(b)(1)(A)** — "requires the worker to pay" *California Business and Professions Code Sec. 16608(b)(1)(A).* <https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB692>
 

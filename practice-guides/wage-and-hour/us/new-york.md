@@ -137,7 +137,7 @@ Section 663 confirms the private civil action and carries the same 100% liquidat
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in New York*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/new-york.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in New York*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/new-york.
 
 [^ny-lab-law-sec-652]: **N.Y. Labor Law § 652** — "On and after January first, two thousand twenty-seven, every employer regardless of size shall pay to each of its employees for each hour worked in the city of New York, a wage of not less than the adjusted minimum wage rate established annually by the commissioner." *N.Y. Lab. Law § 652.* <https://www.nysenate.gov/legislation/laws/LAB/652>
 

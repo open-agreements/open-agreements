@@ -157,7 +157,7 @@ The five items below exist only on this Utah page: they implement the common-law
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Utah (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Utah*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/utah.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Utah (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Utah*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/utah.
 
 [^ut-hc-ban-cover]: **Utah Code § 34-51-201** — "On or after May 6, 2026, a person and a healthcare worker may not enter into a healthcare non-compete agreement." *Utah Code Ann. § 34-51-201(1)(b).* <https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html>
 

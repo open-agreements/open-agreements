@@ -145,7 +145,7 @@ The five items below exist only on this California page: they implement the clea
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for California (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — California*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/california.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for California (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — California*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/california.
 
 [^ca-16600-5-when-signed]: **Cal. Bus. & Prof. Code § 16600.5** — "Any contract that is void under this chapter is unenforceable regardless of where and when the contract was signed." *Cal. Bus. & Prof. Code § 16600.5(a).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5>
 

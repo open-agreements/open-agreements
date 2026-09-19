@@ -86,7 +86,7 @@ The source set still contains official EEOC materials tying AI to existing discr
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-19. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *AI hiring law compliance across NYC, Illinois, and Colorado*, OpenAgreements (last updated April 19, 2026), https://openagreements.org/practice-guides/ai-hiring/ai-hiring-law-compliance.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-19. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *AI hiring law compliance across NYC, Illinois, and Colorado*, OpenAgreements (last updated April 19, 2026), https://openagreements.org/practice-guides/ai-hiring/ai-hiring-law-compliance.
 
 [^new-york-city-administrative-code-20-871]: **New York City Administrative Code § 20-871** — "it shall be unlawful" *New York City Administrative Code § 20-871.* <https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-135843>
 

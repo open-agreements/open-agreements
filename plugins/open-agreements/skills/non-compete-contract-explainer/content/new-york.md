@@ -2,7 +2,7 @@
 jurisdiction: "New York"
 slug: new-york
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-york · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-york · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New York[^about]
 
@@ -220,7 +220,7 @@ This is the one place New York has a statutory non-compete prohibition rather th
 >
 > Confidentiality or non-disparagement language tightened by deleting the protected-activity carve-outs loses its safe footing. Under *McLaren Macomb*, merely offering an employee terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement provisions — violates the National Labor Relations Act, and the Board's reasoning turns on the breadth of the waiver, not the label of the document. The [OpenAgreements New York restrictive covenant form](/templates/openagreements-restrictive-covenant-new-york) carves Section 7 activity out of both its confidentiality and non-disparagement sections for this reason; a version that swept in wage discussion or other concerted activity would invite an unfair-labor-practice charge no matter how the covenant fares under New York law [^mclaren-macomb-protected-activity].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in New York*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/new-york.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in New York*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/new-york.
 
 [^bdo-reasonableness-standard]: **BDO Seidman v. Hirshberg** — "The modern, prevailing common-law standard of reasonableness for employee agreements not to compete applies a three-pronged test." *BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 388 (1999).* <https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=The%20modern%2C%20prevailing%20common%2Dlaw%20standard,compete%20applies%20a%20three%2Dpronged%20test.>
 

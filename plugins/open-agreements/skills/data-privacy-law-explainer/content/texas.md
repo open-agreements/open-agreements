@@ -2,7 +2,7 @@
 jurisdiction: "Texas"
 slug: texas
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-04"
 human_reviewed_at: null
 next_review_due: "2026-12-01"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/texas · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/texas · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Texas Consumer Privacy Law (TDPSA)[^about]
 
@@ -70,7 +70,7 @@ Consent under the statute means a clear affirmative act reflecting a freely give
 
 The practical consequence is that TDPSA exposure is regulatory, not class-action driven. The Attorney General must give written notice identifying the alleged violations and a 30-day window to cure before suing; a business that cures and certifies it has done so avoids the penalty. That posture is already live — the Attorney General has brought and announced TDPSA actions, including a suit over the covert sale of precise-geolocation driving data — so the cure period is a real off-ramp, not a reason to defer compliance.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Texas. This article synthesizes Texas primary law and is not legal advice from a Texas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Texas Consumer Privacy Law (TDPSA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/texas.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Texas. This article synthesizes Texas primary law and is not legal advice from a Texas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Texas Consumer Privacy Law (TDPSA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/texas.
 
 [^stat-002-apply]: **Tex. Bus. & Com. Code § 541.002** — "This chapter applies only to a person that: (1) conducts business in this state or produces a product or service consumed by residents of this state; (2) processes or engages in the sale of personal data; and (3) is not a small business as defined by the United States Small Business Administration, except to the extent that Section 541.107 applies to a person described by this subdivision." *Tex. Bus. & Com. Code § 541.002(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm>
 

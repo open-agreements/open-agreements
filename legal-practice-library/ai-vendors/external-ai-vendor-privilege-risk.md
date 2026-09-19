@@ -69,7 +69,7 @@ The ethics layer is not itself privilege law, but it will likely influence what 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Privilege risk when legal teams use external AI vendors*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Privilege risk when legal teams use external AI vendors*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk.
 
 [^federal-rule-of-evidence-502-b]: **Federal Rule of Evidence 502(b)** — "reasonable steps to prevent disclosure" *Federal Rule of Evidence 502(b).* <https://www.law.cornell.edu/rules/fre/rule_502#:~:text=reasonable%20steps%20to%20prevent%20disclosure>
 

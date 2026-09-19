@@ -76,7 +76,7 @@ Small and segmented hiring funnels are where this gap is sharpest. UGESP insists
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Defensible bias audits for HR AI tools*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-hiring/hr-ai-bias-audit-requirements.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Defensible bias audits for HR AI tools*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-hiring/hr-ai-bias-audit-requirements.
 
 [^new-york-city-department-of-consumer-and-worker]: **New York City Department of Consumer and Worker Protection, Automated Employm...** — "has been subject to a bias audit within one year of the use" *New York City Department of Consumer and Worker Protection, Automated Employment Decision Tools (AEDT).* <https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page>
 

@@ -161,7 +161,7 @@ The seven items below exist only on this Maryland page: they implement the statu
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Maryland (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Maryland*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/maryland.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Maryland (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Maryland*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/maryland.
 
 [^md-hb1388-health-prospective-cover]: **2024 Md. Laws ch. 378 (H.B. 1388)** — "That § 3–716(a)(1)(i)2 and (b) of the Labor and Employment Article, as enacted by Section 1 of this Act, shall be construed to apply only to employment contracts or similar documents or agreements for employment executed on or after July 1, 2025." *2024 Md. Laws ch. 378, § 3 (H.B. 1388).* <https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf>
 

@@ -137,7 +137,7 @@ Section 28-2-604 gives Montana courts a partial-void rule when a contract has di
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Montana. This article synthesizes Montana primary law and is not legal advice from a Montana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Montana*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/montana.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Montana. This article synthesizes Montana primary law and is not legal advice from a Montana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Montana*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/montana.
 
 [^montana-restraint-baseline]: **Mont. Code Ann. § 28-2-703** — "28-2-703. Contracts in restraint of trade generally void. Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void." *Mont. Code Ann. § 28-2-703.* <https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html>
 

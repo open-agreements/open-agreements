@@ -164,7 +164,7 @@ The nine items below exist only on this Washington page: they implement the void
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Washington (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Washington*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/washington.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Washington (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Washington*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/washington.
 
 [^wa-earnings-measure-1]: **RCW 49.62.010** — "annualized and calculated as of the earlier of the date enforcement of the noncompetition covenant is sought or the date of separation from employment" *RCW 49.62.010(1).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010>
 

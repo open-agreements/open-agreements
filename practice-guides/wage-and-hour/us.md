@@ -92,7 +92,7 @@ Each per-state note walks the same question set in the same order, so a policy c
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + 50-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law Across the United States: Minimum Wage, Overtime, Breaks, Final Pay, and Worker Classification*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/wage-and-hour/us.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + 50-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law Across the United States: Minimum Wage, Overtime, Breaks, Final Pay, and Worker Classification*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/wage-and-hour/us.
 
 [^tex-lab-code-sec-62-051]: **Tex. Lab. Code § 62.051** — "an employer shall pay to each employee the federal minimum wage under Section 6, Fair Labor Standards Act of 1938 (29 U.S.C. Section 206)." *Tex. Lab. Code § 62.051.* <https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm>
 

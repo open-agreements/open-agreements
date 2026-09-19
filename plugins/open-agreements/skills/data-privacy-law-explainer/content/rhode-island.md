@@ -2,7 +2,7 @@
 jurisdiction: "Rhode Island"
 slug: rhode-island
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/rhode-island · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/rhode-island · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Rhode Island Consumer Privacy Law (RIDTPPA)[^about]
 
@@ -70,7 +70,7 @@ This is an opt-in model: consent must be a clear, affirmative act and cannot be 
 
 A violation of the chapter is treated as a violation of the general regulatory provisions of commercial law and as a deceptive trade practice under Rhode Island law. The statute adds a targeted penalty for bad actors: anyone who intentionally discloses personal data to a shell company set up to circumvent the chapter, or otherwise discloses it in violation of the chapter, pays a fine of $100 to $500 per disclosure [^stat-8-fine]. Because there is no statutory cure period written into the section, the practical posture is to build the disclosure, consent, and contracting controls before a complaint reaches the Attorney General.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Rhode Island. This article synthesizes Rhode Island primary law and is not legal advice from a Rhode Island-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Rhode Island Consumer Privacy Law (RIDTPPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/rhode-island.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Rhode Island. This article synthesizes Rhode Island primary law and is not legal advice from a Rhode Island-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Rhode Island Consumer Privacy Law (RIDTPPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/rhode-island.
 
 [^stat-3-apply]: **R.I. Gen. Laws § 6-48.1-3** — "Any commercial website or internet service provider conducting business in Rhode Island or with customers in Rhode Island or otherwise subject to Rhode Island jurisdiction, shall designate a controller." *R.I. Gen. Laws § 6-48.1-3(a).* <https://webserver.rilegislature.gov/Statutes/TITLE6/6-48.1/6-48.1-3.htm>
 

@@ -294,6 +294,7 @@
 * [In re AutoNation, Inc.](in-re-autonation-inc.md) - In re AutoNation, Inc., 228 S.W.3d 663 (Tex. 2007). — quoted in 2 document(s).
 * [In re California Pizza Kitchen, Inc., 129 F.4th 667 (9th Cir. 2025)](in-re-california-pizza-kitchen-inc-129-f-4th-667-9th-cir-2025.md) - In re California Pizza Kitchen, Inc., 129 F.4th 667 (9th Cir. 2025). — quoted in 1 document(s).
 * [In re Commonwealth Development Authority](in-re-commonwealth-development-authority.md) - In re Commonwealth Development Authority, 2016 MP 4 (N. Mar. I. 2016). — quoted in 1 document(s).
+* [In re Trados — conflict-review flag](in-re-trados-conflict-review-flag.md) - In re Trados Inc. Shareholder Litigation (Del. Ch. 2013), introductory standard-of-review discussion. — quoted in 2 document(s).
 * [Inergy Propane, LLC v. Lundy](inergy-propane-llc-v-lundy.md) - Inergy Propane, LLC v. Lundy, 2009 OK CIV APP 8, 219 P.3d 547. — quoted in 3 document(s).
 * [Ingersoll-Rand Co. v. Ciavatta](ingersoll-rand-co-v-ciavatta.md) - Ingersoll-Rand Co. v. Ciavatta, 110 N.J. 609 (1988). — quoted in 3 document(s).
 * [Ingle v. Landis Tool Co.](ingle-v-landis-tool-co.md) - Ingle v. Landis Tool Co., 272 F. 464 (3d Cir. 1921). — quoted in 1 document(s).
@@ -346,6 +347,7 @@
 * [Man Financial (S) Pte Ltd v Wong Bark Chuan David](man-financial-s-pte-ltd-v-wong-bark-chuan-david.md) - Man Financial (S) Pte Ltd v Wong Bark Chuan David [2007] SGCA 53; [2008] 1 SLR(R) 663. — quoted in 1 document(s).
 * [Mann Frankfort Stein & Lipp Advisors, Inc. v. Fielding](mann-frankfort-stein-lipp-advisors-inc-v-fielding.md) - Mann Frankfort Stein & Lipp Advisors, Inc. v. Fielding, 289 S.W.3d 844 (Tex. 2009). — quoted in 2 document(s).
 * [Mano Vikrant Singh v Cargill TSF Asia Pte Ltd](mano-vikrant-singh-v-cargill-tsf-asia-pte-ltd.md) - Mano Vikrant Singh v Cargill TSF Asia Pte Ltd [2012] SGCA 42. — quoted in 1 document(s).
+* [Manti — qualified appraisal-waiver holding](manti-qualified-appraisal-waiver-holding.md) - Manti Holdings, LLC v. Authentix Acquisition Co., Inc. (Del. 2021), p. 46, majority opinion. — quoted in 2 document(s).
 * [Marsh USA Inc. v. Cook](marsh-usa-inc-v-cook.md) - Marsh USA Inc. v. Cook, 354 S.W.3d 764 (Tex. 2011). — quoted in 3 document(s).
 * [Mata v. Avianca, Inc., 678 F. Supp. 3d 443 (S.D.N.Y. 2023)](mata-v-avianca-inc-678-f-supp-3d-443-s-d-n-y-2023.md) - Mata v. Avianca, Inc., 678 F. Supp. 3d 443 (S.D.N.Y. 2023). — quoted in 1 document(s).
 * [Matter of Vega (Postmates Inc.)](matter-of-vega-postmates-inc.md) - Matter of Vega (Postmates Inc.), 35 N.Y.3d 131 (2020). — quoted in 1 document(s).
@@ -399,6 +401,7 @@
 * [National Rejectors, Inc. v. Trieman](national-rejectors-inc-v-trieman.md) - National Rejectors, Inc. v. Trieman, 409 S.W.2d 1 (Mo. banc 1966). — quoted in 1 document(s).
 * [Natural Organics, Inc. v. Kirkendall](natural-organics-inc-v-kirkendall.md) - Natural Organics, Inc. v. Kirkendall, 52 A.D.3d 488 (2d Dep't 2008). — quoted in 2 document(s).
 * [Neville Jeffress Advertising Pty Ltd v Barlow (No 2)](neville-jeffress-advertising-pty-ltd-v-barlow-no-2.md) - Neville Jeffress Advertising Pty Ltd v Barlow (No 2) [1993] TASSC 113 (Zeeman J), citing Herbert Morris Ltd v Saxelby [1916] 1 AC 688 and Lindner v Murdock's Garage (1950) 83 CLR 628. — quoted in 1 document(s).
+* [New Enterprise Associates v. Rich — intentional-harm limit](new-enterprise-associates-v-rich-intentional-harm-limit.md) - New Enterprise Associates 14, L.P. v. Rich (Del. Ch. 2023), concluding covenant analysis — quoted in 2 document(s).
 * [New York State Courts, Kliger v. Fairmont Ins. Brokers LLC](new-york-state-courts-kliger-v-fairmont-ins-brokers-llc.md) - New York State Courts, Kliger v. Fairmont Ins. Brokers LLC. — quoted in 1 document(s).
 * [Nike, Inc. v. McCarthy](nike-inc-v-mccarthy.md) - Nike, Inc. v. McCarthy, 379 F.3d 576 (9th Cir. 2004). — quoted in 2 document(s).
 * [Niranjan Shankar Golikari v. Century Spinning & Mfg. Co.](niranjan-shankar-golikari-v-century-spinning-mfg-co.md) - Niranjan Shankar Golikari v. Century Spinning & Mfg. Co., AIR 1967 SC 1098. — quoted in 1 document(s).

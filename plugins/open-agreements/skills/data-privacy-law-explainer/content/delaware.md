@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/delaware · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/delaware · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Delaware Consumer Privacy Law (DPDPA)[^about]
 
@@ -70,7 +70,7 @@ This is the opt-in model that the Virginia-family privacy laws share — consent
 
 Unlike Virginia's permanent cure period, Delaware's sunset on January 1, 2026. Since then, whether to offer a controller a chance to cure is left to the Department's discretion, weighed against factors such as the number of violations and the likelihood of injury to the public — so a covered business can no longer count on a guaranteed off-ramp. The practical posture is to build the notice, consent, and contracting controls up front rather than rely on a cure window that may not be offered.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Delaware Consumer Privacy Law (DPDPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/delaware.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Delaware Consumer Privacy Law (DPDPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/delaware.
 
 [^stat-103-apply]: **Del. Code tit. 6 § 12D-103** — "This chapter applies to persons that conduct business in the State or persons that produce products or services that are targeted to residents of the State and that during the preceding calendar year did any of the following: (1) Controlled or processed the personal data of not less than 35,000 consumers, excluding personal data controlled or processed solely for the purpose of completing a payment transaction. (2) Controlled or processed the personal data of not less than 10,000 consumers and derived more than 20% of their gross revenue from the sale of personal data." *Del. Code tit. 6 § 12D-103(a).* <https://delcode.delaware.gov/title6/c012d/index.html>
 

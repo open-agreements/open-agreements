@@ -2,7 +2,7 @@
 jurisdiction: "Mississippi"
 slug: mississippi
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/mississippi · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/mississippi · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Mississippi Consumer Privacy Law[^about]
 
@@ -89,7 +89,7 @@ That consumer-protection remedy is not a general privacy class-action statute. A
 
 For privacy disputes, the practical distinction is this: a missed breach-notice duty belongs to the Attorney General under § 75-24-29, while a consumer-facing privacy misrepresentation may fit § 75-24-5 and § 75-24-15 only if the plaintiff can satisfy the statute's purchase-or-lease, personal/family/household-purpose, ascertainable-loss, and procedural requirements.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Mississippi. This article synthesizes Mississippi primary law and is not legal advice from a Mississippi-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Mississippi Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/mississippi.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Mississippi. This article synthesizes Mississippi primary law and is not legal advice from a Mississippi-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Mississippi Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/mississippi.
 
 [^ms-breach-scope]: **Miss. Code Ann. § 75-24-29** — "This section applies to any person who conducts business in this state and who, in the ordinary course of the person’s business functions, owns, licenses or maintains personal information of any resident of this state." *Miss. Code Ann. § 75-24-29(1).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=%2Fshared%2Fdocument%2Fstatutes-legislation%2Furn%3AcontentItem%3A627R-MSW3-GXJ9-31CB-00008-00>
 
