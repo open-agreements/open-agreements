@@ -2,7 +2,7 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wisconsin[^about]
 
@@ -254,7 +254,7 @@ A trade-secret claim does not depend on a signed covenant and is not subject to 
 >
 > A protection program resting on a non-compete alone is only as durable as the covenant, while trade-secret safeguards — access controls, confidentiality designations, and exit procedures — do not depend on § 103.465. Wis. Stat. § 134.90 protects qualifying secrets regardless of a covenant's survival, but only where the information meets the statutory definition and was kept reasonably secret, so a program that neglects those safeguards leaves the secrets exposed if the covenant is void [^q12-wutsa].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wisconsin. This article synthesizes Wisconsin primary law and is not legal advice from a Wisconsin-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wisconsin*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/wisconsin.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wisconsin. This article synthesizes Wisconsin primary law and is not legal advice from a Wisconsin-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wisconsin*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/wisconsin.
 
 [^q1-103465-core]: **Wis. Stat. § 103.465** — "A covenant by an assistant, servant or agent not to compete with his or her employer or principal during the term of the employment or agency, or after the termination of that employment or agency, within a specified territory and during a specified time is lawful and enforceable only if the restrictions imposed are reasonably necessary for the protection of the employer or principal." *Wis. Stat. § 103.465.* <https://docs.legis.wisconsin.gov/statutes/statutes/103/465>
 

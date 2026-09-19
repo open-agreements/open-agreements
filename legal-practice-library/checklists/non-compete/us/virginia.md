@@ -164,7 +164,7 @@ Review every item below the way a Virginia court would: first ask whether Va. Co
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-03. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Virginia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Virginia*, OpenAgreements (last updated July 3, 2026), https://openagreements.org/checklists/non-compete/us/virginia.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-03. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Virginia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Virginia*, OpenAgreements (last updated July 3, 2026), https://openagreements.org/checklists/non-compete/us/virginia.
 
 [^va-gate-ban]: **Va. Code § 40.1-28.7:8** — "No employer shall enter into, enforce, or threaten to enforce a covenant not to compete with any low-wage employee or health care professional." *Va. Code Ann. § 40.1-28.7:8(B).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 

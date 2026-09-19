@@ -180,7 +180,7 @@ Signed on March 23, 2026 and effective June 30, 2027, ESHB 1155 (chapter 149, La
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Washington*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/washington.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Washington*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/washington.
 
 [^rcw-020-void-conditions]: **RCW 49.62.020** — "Unless the employee's earnings from the party seeking enforcement, when annualized, exceed one hundred thousand dollars per year." *RCW 49.62.020(1)(b).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020>
 

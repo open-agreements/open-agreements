@@ -42,7 +42,7 @@ Every item below reads a draft stockholder ratifying consent against DGCL § 204
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-02. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Delaware (DGCL) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Stockholder Ratifying Consent Reviewer Checklist*, OpenAgreements (last updated July 2, 2026), https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-02. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Delaware (DGCL) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Stockholder Ratifying Consent Reviewer Checklist*, OpenAgreements (last updated July 2, 2026), https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent.
 
 [^q1-204c]: **8 Del. C. § 204(c)** — "Each defective corporate act ratified pursuant to paragraph (b)(1) of this section shall be submitted to stockholders for approval as provided in subsection (d) of this section" *8 Del. C. § 204(c).* <https://delcode.delaware.gov/title8/c001/sc06/index.html>
 

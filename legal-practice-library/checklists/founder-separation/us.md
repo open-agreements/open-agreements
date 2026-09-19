@@ -55,7 +55,7 @@ Two cautions recur throughout. First, the board *cannot* remove a non-resigning 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-01. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Delaware (DGCL) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Founder Separation Reviewer Checklist*, OpenAgreements (last updated July 1, 2026), https://openagreements.org/checklists/founder-separation/us.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-01. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Delaware (DGCL) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Founder Separation Reviewer Checklist*, OpenAgreements (last updated July 1, 2026), https://openagreements.org/checklists/founder-separation/us.
 
 [^q1-dgcl-141b]: **8 Del. C. § 141(b)** — "A resignation is effective when the resignation is delivered unless the resignation specifies a later effective date or an effective date determined upon the happening of an event or events." *8 Del. C. § 141(b).* <https://delcode.delaware.gov/title8/c001/sc04>
 

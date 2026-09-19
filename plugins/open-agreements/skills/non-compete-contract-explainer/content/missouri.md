@@ -2,7 +2,7 @@
 jurisdiction: "Missouri"
 slug: missouri
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/missouri · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/missouri · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Missouri[^about]
 
@@ -183,7 +183,7 @@ A liquidated-damages provision is valid in Missouri when the amount is a reasona
 >
 > A liquidated-damages clause holds in Missouri only as a genuine, reasonable forecast of hard-to-measure harm; one set as a deterrent penalty is unenforceable, leaving actual damages to be proven the hard way. Relief that rides solely on the covenant fails with the covenant, so a separate confidentiality and trade-secret strategy under the Uniform Trade Secrets Act supplies an independent path to relief that survives even where the covenant is narrow or unenforceable [^mayer-liquidated-damages][^mutsa-contractual-remedies].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Missouri. This article synthesizes Missouri primary law and is not legal advice from a Missouri-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Missouri*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/missouri.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Missouri. This article synthesizes Missouri primary law and is not legal advice from a Missouri-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Missouri*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/missouri.
 
 [^copeland-reasonable-standard]: **Healthcare Services of the Ozarks, Inc. v. Copeland** — "In practical terms, a non-compete agreement is reasonable if it is no more restrictive than is necessary to protect the legitimate interests of the employer." *Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006).* <https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20practical%20terms%2C%20a%20non%2Dcompete,legitimate%20interests%20of%20the%20employer.>
 

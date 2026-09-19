@@ -1,5 +1,20 @@
 # Startup Financing Update Log
 
+## 2026-09-18
+* **Update**: fix(nvca): resolve purchaser-guide source and answer findings (05630cd)
+* **Update**: fix(guides): remove misplaced indemnity closing chip (13b732e)
+* **Update**: fix(guides): quote Manti qualified holding (328aba6)
+* **Update**: fix(guides): resolve remaining NVCA source-context findings (581a29a)
+* **Update**: fix(nvca): label the guide’s related agreement clearly (963fa41)
+* **Update**: fix(guides): support standalone NVCA answers (a8d50df)
+* **Update**: fix(guides): make NVCA sale and dispute answers self-contained (e8ed5fc)
+
+## 2026-09-17
+* **Update**: Publish purchaser-focused NVCA SPA companion guide (2e61f90)
+* **Update**: fix(nvca): answer QSBS and Rule 506 review questions directly (8d2b267)
+* **Update**: Add three NVCA companion practice guides (8e9ebcc)
+* **Update**: fix(guides): clarify NVCA answers before locators (d8eb862)
+
 ## 2026-09-13
 * **Update**: Clarify charter guide source scope and cross-document guidance (ddf5fee)
 

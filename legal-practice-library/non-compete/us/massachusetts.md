@@ -184,7 +184,7 @@ Because so many workers and covenants fall outside the act — laid-off employee
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Massachusetts*, OpenAgreements (last updated July 11, 2026), https://openagreements.org/practice-guides/non-compete/us/massachusetts.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Massachusetts*, OpenAgreements (last updated July 11, 2026), https://openagreements.org/practice-guides/non-compete/us/massachusetts.
 
 [^mnaa-validity]: **Mass. Gen. Laws ch. 149, § 24L** — "To be valid and enforceable, a noncompetition agreement must meet the minimum requirements of paragraphs (i) through (viii)." *Mass. Gen. Laws ch. 149, § 24L(b).* <https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L>
 

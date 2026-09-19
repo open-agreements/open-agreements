@@ -2,7 +2,7 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wisconsin · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wisconsin · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Wisconsin Consumer Privacy Law[^about]
 
@@ -85,7 +85,7 @@ The § 100.18 action is the workhorse for false statements about data practices,
 
 Two sectoral private actions are stronger than anything general-purpose in Wisconsin. The patient health-care-records statute makes a person who knowingly and willfully violates the records-confidentiality rules liable for actual damages plus exemplary damages of up to $25,000 and attorney fees, with a negligence tier capped at $1,000 in exemplary damages [^q5-health-pra]. And a financial institution, medical business, or tax preparation business that disposes of records in violation of the disposal statute is liable to the affected person for resulting damages [^q5-disposal-liability]. The net effect for most businesses: Wisconsin consumer-privacy litigation arrives through the privacy tort, the pecuniary-loss UDAP action, or post-breach negligence claims that use § 134.98 noncompliance as evidence — not through a statutory privacy class action of the kind comprehensive-law states authorize.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wisconsin. This article synthesizes Wisconsin primary law and is not legal advice from a Wisconsin-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wisconsin Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/wisconsin.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wisconsin. This article synthesizes Wisconsin primary law and is not legal advice from a Wisconsin-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wisconsin Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/wisconsin.
 
 [^breach-entity]: **Wis. Stat. § 134.98(1)(a)** — "‘Entity’ means a person, other than an individual, that does any of the following: a. Conducts business in this state and maintains personal information in the ordinary course of business. b. Licenses personal information in this state. c. Maintains for a resident of this state a depository account as defined in s. 815.18 (2) (e) . d. Lends money to a resident of this state. 2. ‘Entity’ includes all of the following: a. The state and any office, department, independent agency, authority, institution, association, society, or other body in state government created or authorized to be created by the constitution or any law, including the legislature and the courts. b. A city, village, town, or county." *Wis. Stat. § 134.98(1)(a).* <https://docs.legis.wisconsin.gov/statutes/statutes/134/98>
 

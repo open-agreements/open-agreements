@@ -2,7 +2,7 @@
 jurisdiction: "Maryland"
 slug: maryland
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maryland · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maryland · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maryland[^about]
 
@@ -207,7 +207,7 @@ In *Anderson v. Truitt*, the Court of Appeals stated that where a seller's coven
 >
 > *Anderson* (1930) and the earlier *Guerand v. Dandelet* are the on-point Maryland seller authorities; the modern Maryland non-compete cases (Becker, Deuerling) are all employment covenants. *Anderson* stated the rule in a suit it ultimately dismissed on other grounds, so treat it as persuasive rather than a square holding, and confirm it still holds before relying on it in a close case [^anderson-matter-of-course].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Maryland*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/maryland.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Maryland*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/maryland.
 
 [^seneca-four-part-test]: **Seneca One Finance, Inc. v. Bloshuk** — "In Maryland, a restrictive employment covenant will only be enforced if it meets four requirements: ‘(1) the employer must have a legally protected interest, (2) the restrictive covenant must be no wider in scope and duration than is reasonably necessary to protect the employer’s interest, (3) the covenant cannot impose an undue hardship on the employee, and (4) the covenant cannot violate public policy.’" *Seneca One Fin., Inc. v. Bloshuk, 214 F. Supp. 3d 457 (D. Md. 2016).* <https://www.courtlistener.com/opinion/7322313/seneca-one-finance-inc-v-bloshuk/#:~:text=In%20Maryland%2C%20a%20restrictive%20employment,covenant%20cannot%20violate%20public%20policy.%E2%80%9D>
 

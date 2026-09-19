@@ -185,7 +185,7 @@ Publication, third-party contact, paid records, filings, and representation of t
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-03. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for United States coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Sell-Side Transaction Readiness for Small and Lower-Middle-Market Businesses*, OpenAgreements (last updated September 3, 2026), https://openagreements.org/practice-guides/sell-side-transaction-readiness/us.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-03. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for United States coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Sell-Side Transaction Readiness for Small and Lower-Middle-Market Businesses*, OpenAgreements (last updated September 3, 2026), https://openagreements.org/practice-guides/sell-side-transaction-readiness/us.
 
 [^ss1-orrick-data-room]: **Orrick — UK Tech Exit Series: Preparing a Data Room** — "This allows you to identify and rectify issues before a potential buyer carries out due diligence." *Orrick, UK Tech Exit Series — Preparing a Data Room (Aug. 14, 2024).* <https://www.orrick.com/en/Insights/2024/08/Tech-Exit-Series-Preparing-a-Data-Room>
 

@@ -74,7 +74,7 @@ The final unsettled point is definitional. Providers increasingly separate `cust
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Data residency options for AI-assisted legal review*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/data-residency-options.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Data residency options for AI-assisted legal review*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/data-residency-options.
 
 [^regulation-eu-2016-679-art-44]: **Regulation (EU) 2016/679, art. 44** — "shall take place only if" *Regulation (EU) 2016/679, art. 44.* <https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=OJ%3AJOL_2016_119_R_0001>
 

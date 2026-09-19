@@ -157,7 +157,7 @@ The private remedy under the minimum wage chapter is stated in terms of making t
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-08-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Washington*, OpenAgreements (last updated August 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/washington.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-08-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Washington*, OpenAgreements (last updated August 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/washington.
 
 [^lni-minimum-wage-coverage]: **Wash. Dep't of Labor & Indus., Minimum Wage** — "Washington employers must pay most employees at least the minimum wage for every hour worked." *Wash. Dep't of Labor & Indus., Minimum Wage* <https://lni.wa.gov/workers-rights/wages/minimum-wage/>
 

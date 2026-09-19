@@ -72,7 +72,7 @@ The second consequence is timing compression. In a live case, the business deadl
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Consequences of switching outside counsel*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/outside-counsel/switching-counsel-consequences.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Consequences of switching outside counsel*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/outside-counsel/switching-counsel-consequences.
 
 [^american-bar-association-model-rule-1-16-d]: **American Bar Association, Model Rule 1.16(d)** — "take steps to the extent reasonably practicable to protect a client's interests" *American Bar Association, Model Rule 1.16(d).* <https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_16_declining_or_terminating_representation/>
 

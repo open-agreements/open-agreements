@@ -1,0 +1,1532 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "external": true,
+      "title": "CC BY 4.0"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/nvca-indemnification-agreement",
+      "type": "text/html",
+      "title": "Model Indemnification Agreement"
+    },
+    {
+      "rel": "contract-api",
+      "href": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement/contract-api.json",
+      "type": "application/json",
+      "title": "Contract API field dictionary and requirement bindings"
+    }
+  ],
+  "data": {
+    "topic": "venture-financing",
+    "slug": "nvca-indemnification-agreement",
+    "frontmatter": {
+      "title": "NVCA Indemnification Agreement Reviewer Checklist",
+      "description": "Review indemnification, advancement, determination procedures, insurance priority and exclusions in the July 2020 NVCA model.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "July 2020 NVCA model for a Delaware corporation; limited statutory and registration context",
+      "lastReviewed": "2026-09-16",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 23,
+    "fieldsSource": {
+      "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+      "version": "2020",
+      "sha256": "f9b61b4d99e245573de41d9469925b4332f871ec0e6ac6593055cdfe17825300"
+    },
+    "fillableFields": [
+      {
+        "fieldKey": "company_name",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "indemnitee_name",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "agreement_effective_date",
+        "fieldType": "date",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "indemnitee_role_scope",
+        "fieldType": "enum",
+        "default": "directors_or_officers",
+        "enumValues": [
+          "directors",
+          "officers",
+          "directors_or_officers"
+        ],
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "bylaws_name",
+        "fieldType": "string",
+        "default": "Bylaws",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "certificate_name",
+        "fieldType": "string",
+        "default": "Certificate of Incorporation",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "appointing_stockholder_name",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "include_appointing_stockholder_ipo_termination",
+        "fieldType": "boolean",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "fund_sponsor_name",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "indemnitee_address",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "company_notice_address",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "company_notice_attention",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "company_signatory_name",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "company_signatory_title",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "process_agent_name",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      },
+      {
+        "fieldKey": "process_agent_address",
+        "fieldType": "string",
+        "occurrenceCount": 0
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "scope-and-capacity",
+        "label": "Scope and Capacity"
+      },
+      {
+        "sectionId": "proceeding-type",
+        "label": "Proceeding Type"
+      },
+      {
+        "sectionId": "successful-and-partial-claims",
+        "label": "Successful and Partial Claims"
+      },
+      {
+        "sectionId": "appointing-stockholder",
+        "label": "Appointing Stockholder"
+      },
+      {
+        "sectionId": "additional-indemnity",
+        "label": "Additional Indemnity"
+      },
+      {
+        "sectionId": "contribution",
+        "label": "Contribution"
+      },
+      {
+        "sectionId": "securities-registration",
+        "label": "Securities Registration"
+      },
+      {
+        "sectionId": "witness-and-advancement",
+        "label": "Witness Costs and Advances"
+      },
+      {
+        "sectionId": "request-and-decision",
+        "label": "Request and Decision"
+      },
+      {
+        "sectionId": "presumptions-and-time",
+        "label": "Presumptions and Time"
+      },
+      {
+        "sectionId": "enforcement-remedies",
+        "label": "Enforcement Remedies"
+      },
+      {
+        "sectionId": "insurance-and-priority",
+        "label": "Insurance and Priority"
+      },
+      {
+        "sectionId": "excluded-claims",
+        "label": "Excluded Claims"
+      },
+      {
+        "sectionId": "duration-and-security",
+        "label": "Duration and Security"
+      },
+      {
+        "sectionId": "definitions-and-closing",
+        "label": "Definitions and Closing"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-capacity-and-documents",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.identify-capacity-and-documents",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "relatedFieldKeys": [
+          "company_name",
+          "indemnitee_name",
+          "agreement_effective_date",
+          "indemnitee_role_scope",
+          "bylaws_name",
+          "certificate_name"
+        ],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-basic-indemnity",
+          "nvca-ia-overlap-comment",
+          "nvca-ia-corporate-status"
+        ],
+        "requirementLabel": "Parties and service capacity",
+        "sectionId": "scope-and-capacity",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#identify-capacity-and-documents",
+        "requirementGuidance": "Check that the completed company and Indemnitee names, effective date and selected officer/director capacity match the intended parties, agreed date and actual service. For outside service, check that the identified entity and capacity match service requested by the Company under Corporate Status. Flag an incorrect entity or role, an inconsistent date or outside service not requested by the Company, and resolve the mismatch before execution. Do not treat the recitals or service description as a guarantee of coverage; the indemnity remains limited by law.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-basic-indemnity",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 1, opening sentence",
+            "citation": "§ 1, opening sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 1 specifies that its basic indemnity promise is limited by law.",
+            "verbatimQuote": "Indemnity of Indemnitee. The Company hereby agrees to hold harmless and indemnify Indemnitee to the fullest extent permitted by law, as such may be amended from time to time.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-basic-indemnity"
+          },
+          {
+            "sourceId": "nvca-ia-overlap-comment",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — embedded COMMENT within § 1",
+            "citation": "embedded COMMENT within § 1",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement describes the overlap between its basic and additional indemnity provisions as intentional.",
+            "verbatimQuote": "The overlap in coverage of the two (2) sections is intentional.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-overlap-comment"
+          },
+          {
+            "sourceId": "nvca-ia-corporate-status",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(a)",
+            "citation": "§ 13(a)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(a) specifies that corporate Status includes the described company and requested outside service.",
+            "verbatimQuote": "“Corporate Status” describes the status of a person who is or was a director, officer, employee, agent or fiduciary of the Company or of any other corporation, partnership, joint venture, trust, employee benefit plan or other enterprise that such person is or was serving at the request of the Company.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-corporate-status"
+          }
+        ]
+      },
+      {
+        "requirementId": "classify-proceeding-and-loss",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.classify-proceeding-and-loss",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-third-party",
+          "nvca-ia-company-proceedings"
+        ],
+        "requirementLabel": "Proceeding and payment categories",
+        "sectionId": "proceeding-type",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#classify-proceeding-and-loss",
+        "requirementGuidance": "Classify the proceeding before selecting Section 1(a) or 1(b). Compare requested Expenses, judgments, penalties, fines and settlement amounts with the applicable clause; retain the conduct standard and, for company-right claims, the court-determination qualification where required by law.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-third-party",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 1(a), payment sentence",
+            "citation": "§ 1(a), payment sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 1(a) specifies that its third-party indemnity retains its stated good-faith, company-interest and criminal-conduct conditions.",
+            "verbatimQuote": "Pursuant to this Section 1(a), Indemnitee shall be indemnified against all Expenses (as hereinafter defined), judgments, penalties, fines and amounts paid in settlement actually and reasonably incurred by him or her, or on his or her behalf, in connection with such Proceeding or any claim, issue or matter therein, if the Indemnitee acted in good faith and in a manner the Indemnitee reasonably believed to be in or not opposed to the best interests of the Company, and with respect to any criminal Proceeding, had no reasonable cause to believe the Indemnitee’s conduct was unlawful.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-third-party"
+          },
+          {
+            "sourceId": "nvca-ia-company-proceedings",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 1(b), payment sentence",
+            "citation": "§ 1(b), payment sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 1(b) specifies that the company-right indemnity covers Expenses with conduct and liability-to-company qualifications.",
+            "verbatimQuote": "Pursuant to this Section 1(b), Indemnitee shall be indemnified against all Expenses actually and reasonably incurred by the Indemnitee, or on the Indemnitee’s behalf, in connection with such Proceeding if the Indemnitee acted in good faith and in a manner the Indemnitee reasonably believed to be in or not opposed to the best interests of the Company; provided, however, if applicable law so provides, no indemnification against such Expenses shall be made in respect of any claim, issue or matter in such Proceeding as to which Indemnitee shall have been adjudged to be liable to the Company unless and to the extent that the Court of Chancery of the State of Delaware shall determine that such indemnification may be made.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-company-proceedings"
+          }
+        ]
+      },
+      {
+        "requirementId": "allocate-successful-expenses",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.allocate-successful-expenses",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-partial-success",
+          "nvca-ia-partial-indemnity"
+        ],
+        "requirementLabel": "Partial success and allocation",
+        "sectionId": "successful-and-partial-claims",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#allocate-successful-expenses",
+        "requirementGuidance": "Check that the model covers actual, reasonable Expenses attributable to successfully resolved claims and treats dismissal with or without prejudice as success for the dismissed claim. Preserve payment of an otherwise indemnifiable portion when the whole amount is not covered. Flag a whole-case-success condition, an exclusion of dismissal without prejudice or denial of the covered portion. Refer any separate statutory-entitlement question for review of the actual role and event date.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-partial-success",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 1(c), partial-success sentences",
+            "citation": "§ 1(c), partial-success sentences",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 1(c) separates successfully resolved claims and treats dismissal as success.",
+            "verbatimQuote": "If Indemnitee is not wholly successful in such Proceeding but is successful, on the merits or otherwise, as to one (1) or more but less than all claims, issues or matters in such Proceeding, the Company shall indemnify Indemnitee against all Expenses actually and reasonably incurred by him or her, or on his or her behalf, in connection with each successfully resolved claim, issue or matter. For purposes of this Section and without limitation, the termination of any claim, issue or matter in such a Proceeding by dismissal, with or without prejudice, shall be deemed to be a successful result as to such claim, issue or matter.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-partial-success"
+          },
+          {
+            "sourceId": "nvca-ia-partial-indemnity",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 1(e)",
+            "citation": "§ 1(e)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 1(e) preserves indemnification of the eligible portion of Expenses.",
+            "verbatimQuote": "Partial Indemnification. If Indemnitee is entitled under any provision of this Agreement to indemnification by the Company for some or a portion of Expenses, but not, however, for the total amount thereof, the Company shall nevertheless indemnify Indemnitee for the portion thereof to which Indemnitee is entitled.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-partial-indemnity"
+          }
+        ]
+      },
+      {
+        "requirementId": "select-fund-extension",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.select-fund-extension",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "relatedFieldKeys": [
+          "appointing_stockholder_name",
+          "include_appointing_stockholder_ipo_termination"
+        ],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-appointing-stockholder"
+        ],
+        "requirementLabel": "Optional fund coverage",
+        "sectionId": "appointing-stockholder",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#select-fund-extension",
+        "requirementGuidance": "If the Appointing Stockholder extension is included, check that coverage depends on the stated fund affiliation, proceeding and board-approved-action/related-facts predicates, that rights are suspended while the fund lacks board representation, and that the fund is an express third-party beneficiary. Resolve the bracketed IPO-termination and earlier-facts treatment together; flag removed predicates or an unintended change to suspension, beneficiary status or earlier-facts coverage. Coordinate the matching severability language.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-appointing-stockholder",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 1(d), optional",
+            "citation": "§ 1(d), optional",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 1(d) specifies that the optional fund extension has affiliation, related-claim, suspension and selected termination conditions.",
+            "verbatimQuote": "Indemnification of Appointing Stockholder. If (i) Indemnitee is or was affiliated with one (1) or more venture capital funds that has invested in the Company (an “Appointing Stockholder”), and (ii) the Appointing Stockholder is, or is threatened to be made, a party to or a participant in any Proceeding, and (iii) the Appointing Stockholder’s involvement in the Proceeding (A) arises primarily out of, or relates to, any action taken by the Company that was approved by the Company’s Board, and (B) arises out of facts or circumstances that are the same or substantially similar to the facts and circumstances that form the basis of claims that have been, could have been or could be brought against the Indemnitee in a Proceeding, regardless of whether the legal basis of the claims against the Indemnitee and the Appointing Stockholder are the same or similar, then the Appointing Stockholder shall be entitled to all rights and remedies, including with respect to indemnification and advancement, provided to the Indemnitee under this Agreement as if the Appointing Stockholder were the Indemnitee. The rights provided to the Appointing Stockholder under this Section 1(d) shall be suspended during any period during which the Appointing Stockholder does not have a representative on the Company’s Board[, and terminate on the closing of an initial public offering of the Company’s Common Stock; provided, however, that in the event of any such suspension or termination, the Appointing Stockholder’s rights to indemnification and advancement of expenses will not be suspended or terminated with respect to any Proceeding based in whole or in part on facts and circumstances occurring at any time prior to such suspension or termination regardless of whether the Proceeding arises before or after such suspension or termination.] The Company and Indemnitee intend and agree that the Appointing Stockholder is an express third party beneficiary of the terms of this Section 1(d).",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-appointing-stockholder"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-additional-indemnity",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.review-additional-indemnity",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-additional-limit"
+        ],
+        "requirementLabel": "Additional protection and legal limits",
+        "sectionId": "additional-indemnity",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#review-additional-indemnity",
+        "requirementGuidance": "Compare Section 2 with Section 1 and identify each broader payment category or procedure. Preserve the final-unlawfulness limitation and obtain review of the proposed expansion; do not infer validity of every expansion from DGCL Section 145(f).",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-additional-limit",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 2, final sentence",
+            "citation": "§ 2, final sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 2 specifies that the additional-indemnity clause retains an unlawful-payment limitation.",
+            "verbatimQuote": "The only limitation that shall exist upon the Company’s obligations pursuant to this Agreement shall be that the Company shall not be obligated to make any payment to Indemnitee that is finally determined (under the procedures, and subject to the presumptions, set forth in Sections 6 and 7 hereof) to be unlawful.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-additional-limit"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-contribution-allocation",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.review-contribution-allocation",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-contribution-payment",
+          "nvca-ia-contribution-alternative",
+          "nvca-ia-contribution-colleagues",
+          "nvca-ia-contribution-fallback"
+        ],
+        "requirementLabel": "Contribution triggers and settlement release",
+        "sectionId": "contribution",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#review-contribution-allocation",
+        "requirementGuidance": "For the joint-liability trigger in Section 3(a), check that the company pays first and obtains a full release of the individual in a settlement. Flag a contribution demand or settlement that omits those protections. Preserve the separate relative-benefit/fault allocation, other-person contribution and unavailable-indemnity conditions; do not treat these model allocations as guarantees of enforceability.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-contribution-payment",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 3(a)",
+            "citation": "§ 3(a)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 3(a) addresses company-first payment and a full settlement release in joint-liability proceedings.",
+            "verbatimQuote": "Whether or not the indemnification provided in Sections 1 and 2 hereof is available, in respect of any threatened, pending or completed action, suit or proceeding in which the Company is jointly liable with Indemnitee (or would be if joined in such action, suit or proceeding), the Company shall pay, in the first instance, the entire amount of any judgment or settlement of such action, suit or proceeding without requiring Indemnitee to contribute to such payment and the Company hereby waives and relinquishes any right of contribution it may have against Indemnitee. The Company shall not enter into any settlement of any action, suit or proceeding in which the Company is jointly liable with Indemnitee (or would be if joined in such action, suit or proceeding) unless such settlement provides for a full and final release of all claims asserted against Indemnitee.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-contribution-payment"
+          },
+          {
+            "sourceId": "nvca-ia-contribution-alternative",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 3(b), first sentence",
+            "citation": "§ 3(b), first sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 3(b) specifies that the alternative contribution allocation considers relative benefits and legally required fault/equity adjustments.",
+            "verbatimQuote": "Without diminishing or impairing the obligations of the Company set forth in the preceding subparagraph, if, for any reason, Indemnitee shall elect or be required to pay all or any portion of any judgment or settlement in any threatened, pending or completed action, suit or proceeding in which the Company is jointly liable with Indemnitee (or would be if joined in such action, suit or proceeding), the Company shall contribute to the amount of Expenses, judgments, fines and amounts paid in settlement actually and reasonably incurred and paid or payable by Indemnitee in proportion to the relative benefits received by the Company and all officers, directors or employees of the Company, other than Indemnitee, who are jointly liable with Indemnitee (or would be if joined in such action, suit or proceeding), on the one hand, and Indemnitee, on the other hand, from the transaction or events from which such action, suit or proceeding arose; provided, however, that the proportion determined on the basis of relative benefit may, to the extent necessary to conform to law, be further adjusted by reference to the relative fault of the Company and all officers, directors or employees of the Company other than Indemnitee who are jointly liable with Indemnitee (or would be if joined in such action, suit or proceeding), on the one hand, and Indemnitee, on the other hand, in connection with the transaction or events that resulted in such expenses, judgments, fines or settlement amounts, as well as any other equitable considerations which applicable law may require to be considered.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-contribution-alternative"
+          },
+          {
+            "sourceId": "nvca-ia-contribution-colleagues",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 3(c)",
+            "citation": "§ 3(c)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 3(c) covers the stated contribution claims by other jointly liable company personnel.",
+            "verbatimQuote": "The Company hereby agrees to fully indemnify and hold Indemnitee harmless from any claims of contribution which may be brought by officers, directors, or employees of the Company, other than Indemnitee, who may be jointly liable with Indemnitee.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-contribution-colleagues"
+          },
+          {
+            "sourceId": "nvca-ia-contribution-fallback",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 3(d)",
+            "citation": "§ 3(d)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 3(d) specifies that its unavailable-indemnity contribution fallback retains applicable-law and fairness limitations.",
+            "verbatimQuote": "To the fullest extent permissible under applicable law, if the indemnification provided for in this Agreement is unavailable to Indemnitee for any reason whatsoever, the Company, in lieu of indemnifying Indemnitee, shall contribute to the amount incurred by Indemnitee, whether for judgments, fines, penalties, excise taxes, amounts paid or to be paid in settlement and/or for Expenses, in connection with any claim relating to an indemnifiable event under this Agreement, in such proportion as is deemed fair and reasonable in light of all of the circumstances of such Proceeding in order to reflect (i) the relative benefits received by the Company and Indemnitee as a result of the event(s) and/or transaction(s) giving cause to such Proceeding and/or (ii) the relative fault of the Company (and its directors, officers, employees and agents) and Indemnitee in connection with such event(s) and/or transaction(s).",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-contribution-fallback"
+          }
+        ]
+      },
+      {
+        "requirementId": "check-registration-context",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.check-registration-context",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "sec-indemnity-undertaking"
+        ],
+        "requirementLabel": "Securities Act registration context",
+        "sectionId": "securities-registration",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#check-registration-context",
+        "requirementGuidance": "If registration-statement indemnification disclosure or an undertaking is relevant, review the actual Item 510/512 context, successful-defense expense qualification and court-submission terms. Do not extend that statement to all Exchange Act liabilities or contribution allocations.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sec-indemnity-undertaking",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "SEC registration undertaking — scoped indemnity statement",
+            "citation": "17 C.F.R. § 229.512(h), undertaking",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-229/section-229.512",
+            "proposition": "The 17 C.F.R. § 229.512(h) undertaking states the Commission position and qualified court-submission process.",
+            "verbatimQuote": "Insofar as indemnification for liabilities arising under the Securities Act of 1933 may be permitted to directors, officers and controlling persons of the registrant pursuant to the foregoing provisions, or otherwise, the registrant has been advised that in the opinion of the Securities and Exchange Commission such indemnification is against public policy as expressed in the Act and is, therefore, unenforceable. In the event that a claim for indemnification against such liabilities (other than the payment by the registrant of expenses incurred or paid by a director, officer or controlling person of the registrant in the successful defense of any action, suit or proceeding) is asserted by such director, officer or controlling person in connection with the securities being registered, the registrant will, unless in the opinion of its counsel the matter has been settled by controlling precedent, submit to a court of appropriate jurisdiction the question whether such indemnification by it is against public policy as expressed in the Act and will be governed by the final adjudication of such issue.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-sec-indemnity-undertaking"
+          }
+        ]
+      },
+      {
+        "requirementId": "check-witness-expenses",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.check-witness-expenses",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-witness"
+        ],
+        "requirementLabel": "Witness and discovery status",
+        "sectionId": "witness-and-advancement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#check-witness-expenses",
+        "requirementGuidance": "Confirm Corporate Status and nonparty witness/discovery participation under Section 4. Separate that claim from party-defense costs and verify actual, reasonable Expenses.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-witness",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 4",
+            "citation": "§ 4",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 4 covers actual, reasonable Expenses of a qualifying nonparty witness or discovery participant.",
+            "verbatimQuote": "Indemnification for Expenses of a Witness. Notwithstanding any other provision of this Agreement, to the extent that Indemnitee is, by reason of his or her Corporate Status, a witness, or is made (or asked) to respond to discovery requests, in any Proceeding to which Indemnitee is not a party, he or she shall be indemnified against all Expenses actually and reasonably incurred by him or her, or on his or her behalf, in connection therewith.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-witness"
+          }
+        ]
+      },
+      {
+        "requirementId": "track-advance-request",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.track-advance-request",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-advancement",
+          "dgcl-advancement-undertaking"
+        ],
+        "requirementLabel": "Advancement request and undertaking",
+        "sectionId": "witness-and-advancement",
+        "itemNumber": "8.2",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#track-advance-request",
+        "requirementGuidance": "Record receipt of the advance request, reasonably evidencing statements and written repayment undertaking. Apply the selected 30-day model period, unsecured/interest-free treatment and Section 9 exclusion. If replacing a separate undertaking with agreement language, make that an express negotiated change.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-advancement",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 5",
+            "citation": "§ 5",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 5 provides a 30-day advance mechanism, undertaking and Section 9 exclusion.",
+            "verbatimQuote": "Advancement of Expenses. Notwithstanding any other provision of this Agreement, the Company shall advance all Expenses incurred by or on behalf of Indemnitee in connection with any Proceeding by reason of Indemnitee’s Corporate Status within thirty (30) days after the receipt by the Company of a statement or statements from Indemnitee requesting such advance or advances from time to time, whether prior to or after final disposition of such Proceeding. Such statement or statements shall reasonably evidence the Expenses incurred by Indemnitee and shall include or be preceded or accompanied by a written undertaking by or on behalf of Indemnitee to repay any Expenses advanced if it shall ultimately be determined that Indemnitee is not entitled to be indemnified against such Expenses. Any advances and undertakings to repay pursuant to this Section 5 shall be unsecured and interest free. This Section 5 shall not apply to any claim made by Indemnitee for which indemnity is excluded pursuant to Section 9.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-advancement"
+          },
+          {
+            "sourceId": "dgcl-advancement-undertaking",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 145(e) — advancement",
+            "citation": "8 Del. C. § 145(e), first sentence",
+            "url": "https://delcode.delaware.gov/title8/c001/sc04/",
+            "proposition": "DGCL Section 145(e) permits advance payment for the stated directors/officers upon a repayment undertaking.",
+            "verbatimQuote": "(e) Expenses (including attorneys’ fees) incurred by an officer or director of the corporation in defending any civil, criminal, administrative or investigative action, suit or proceeding may be paid by the corporation in advance of the final disposition of such action, suit or proceeding upon receipt of an undertaking by or on behalf of such director or officer to repay such amount if it shall ultimately be determined that such person is not entitled to be indemnified by the corporation as authorized in this section.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-dgcl-advancement-undertaking"
+          }
+        ]
+      },
+      {
+        "requirementId": "route-request-and-decision",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.route-request-and-decision",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-request",
+          "nvca-ia-decision-method"
+        ],
+        "requirementLabel": "Request, board notice and decision method",
+        "sectionId": "request-and-decision",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#route-request-and-decision",
+        "requirementGuidance": "Check that the request supplies reasonably available necessary information, the secretary promptly notifies the board, and the board selects a permitted decision method with its stated disinterested-director conditions. Preserve the actual-and-material-prejudice qualification for a missing or late request and company participation at its own expense. Flag a different decision-maker, an unconditional forfeiture for delay, or shifted company participation costs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-request",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(a)",
+            "citation": "§ 6(a)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(a) specifies requests, board notification, prejudice treatment and company participation.",
+            "verbatimQuote": "To obtain indemnification under this Agreement, Indemnitee shall submit to the Company a written request, including therein or therewith such documentation and information as is reasonably available to Indemnitee and is reasonably necessary to determine whether and to what extent Indemnitee is entitled to indemnification. The Secretary of the Company shall, promptly upon receipt of such a request for indemnification, advise the Board in writing that Indemnitee has requested indemnification. Notwithstanding the foregoing, any failure of Indemnitee to provide such a request to the Company, or to provide such a request in a timely fashion, shall not relieve the Company of any liability that it may have to Indemnitee unless, and to the extent that, such failure actually and materially prejudices the interests of the Company. The Company will be entitled to participate in the Proceeding at its own Expense.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-request"
+          },
+          {
+            "sourceId": "nvca-ia-decision-method",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(b)",
+            "citation": "§ 6(b)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(b) allocates selection among specified decision methods to the board.",
+            "verbatimQuote": "Upon written request by Indemnitee for indemnification pursuant to the first sentence of Section 6(a) hereof, a determination with respect to Indemnitee’s entitlement thereto shall be made in the specific case by one of the following four methods, which shall be at the election of the Board: (i) by a majority vote of the disinterested directors, even though less than a quorum, (ii) by a committee of disinterested directors designated by a majority vote of the disinterested directors, even though less than a quorum, (iii) if there are no disinterested directors or if the disinterested directors so direct, by independent legal counsel in a written opinion to the Board, a copy of which shall be delivered to the Indemnitee, or (iv) if so directed by the Board, by the stockholders of the Company. For purposes hereof, disinterested directors are those members of the Board who are not parties to the action, suit or proceeding in respect of which indemnification is sought by Indemnitee.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-decision-method"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-independent-counsel",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.review-independent-counsel",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-counsel-selection"
+        ],
+        "requirementLabel": "Counsel selection and objections",
+        "sectionId": "request-and-decision",
+        "itemNumber": "9.2",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#review-independent-counsel",
+        "requirementGuidance": "Check that the board-selected counsel meets the Independent Counsel definition, the individual retains the 10-day factual objection, and an unresolved selection has the 20-day court route. Preserve company payment of the specified reasonable fees and expenses; flag removal of the objection process or a shift of those costs to the individual.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-counsel-selection",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(c)",
+            "citation": "§ 6(c)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(c) contains counsel selection, objection, court-resolution and fee procedures.",
+            "verbatimQuote": "If the determination of entitlement to indemnification is to be made by Independent Counsel pursuant to Section 6(b) hereof, the Independent Counsel shall be selected as provided in this Section 6(c). The Independent Counsel shall be selected by the Board. Indemnitee may, within ten (10) days after such written notice of selection shall have been given, deliver to the Company a written objection to such selection; provided, however, that such objection may be asserted only on the ground that the Independent Counsel so selected does not meet the requirements of “Independent Counsel” as defined in Section 13 of this Agreement, and the objection shall set forth with particularity the factual basis of such assertion. Absent a proper and timely objection, the person so selected shall act as Independent Counsel. If a written objection is made and substantiated, the Independent Counsel selected may not serve as Independent Counsel unless and until such objection is withdrawn or a court has determined that such objection is without merit. If, within twenty (20) days after submission by Indemnitee of a written request for indemnification pursuant to Section 6(a) hereof, no Independent Counsel shall have been selected and not objected to, either the Company or Indemnitee may petition the Court of Chancery of the State of Delaware or other court of competent jurisdiction for resolution of any objection which shall have been made by the Indemnitee to the Company’s selection of Independent Counsel and/or for the appointment as Independent Counsel of a person selected by the court or by such other person as the court shall designate, and the person with respect to whom all objections are so resolved or the person so appointed shall act as Independent Counsel under Section 6(b) hereof. The Company shall pay any and all reasonable fees and expenses of Independent Counsel incurred by such Independent Counsel in connection with acting pursuant to Section 6(b) hereof, and the Company shall pay all reasonable fees and expenses incurred by the Company and the Indemnitee incident to the procedures of this Section 6(c), regardless of the manner in which such Independent Counsel was selected or appointed.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-counsel-selection"
+          }
+        ]
+      },
+      {
+        "requirementId": "calendar-determination",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.calendar-determination",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-decision-deadline"
+        ],
+        "requirementLabel": "Determination deadline and exceptions",
+        "sectionId": "presumptions-and-time",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#calendar-determination",
+        "requirementGuidance": "Calendar the 60-day determination period and any permitted 30-day extension. Check material misstatement/omission and legal prohibitions, and test the separate timely stockholder-meeting exceptions before treating silence as entitlement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-decision-deadline",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(f)",
+            "citation": "§ 6(f)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(f) specifies that the deemed-determination mechanism has timing, extension, meeting and substantive exceptions.",
+            "verbatimQuote": "If the person, persons or entity empowered or selected under Section 6 to determine whether Indemnitee is entitled to indemnification shall not have made a determination within sixty (60) days after receipt by the Company of the request therefor, the requisite determination of entitlement to indemnification shall be deemed to have been made and Indemnitee shall be entitled to such indemnification absent (i) a misstatement by Indemnitee of a material fact, or an omission of a material fact necessary to make Indemnitee’s statement not materially misleading, in connection with the request for indemnification, or (ii) a prohibition of such indemnification under applicable law; provided, however, that such sixty (60) day period may be extended for a reasonable time, not to exceed an additional thirty (30) days, if the person, persons or entity making such determination with respect to entitlement to indemnification in good faith requires such additional time to obtain or evaluate documentation and/or information relating thereto; and provided further, that the foregoing provisions of this Section 6(f) shall not apply if the determination of entitlement to indemnification is to be made by the stockholders pursuant to Section 6(b) of this Agreement and if (A) within fifteen (15) days after receipt by the Company of the request for such determination, the Board or the Disinterested Directors, if appropriate, resolve to submit such determination to the stockholders for their consideration at an annual meeting thereof to be held within seventy five (75) days after such receipt and such determination is made thereat, or (B) a special meeting of stockholders is called within fifteen (15) days after such receipt for the purpose of making such determination, such meeting is held for such purpose within sixty (60) days after having been so called and such determination is made thereat.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-decision-deadline"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-presumptions-and-cooperation",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.review-presumptions-and-cooperation",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-entitlement-presumption",
+          "nvca-ia-good-faith",
+          "nvca-ia-cooperation",
+          "nvca-ia-resolution",
+          "nvca-ia-disposition-effect"
+        ],
+        "requirementLabel": "Presumptions and cooperation",
+        "sectionId": "presumptions-and-time",
+        "itemNumber": "10.2",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#review-presumptions-and-cooperation",
+        "requirementGuidance": "Compare entitlement/good-faith presumptions, evidence burdens, reliance sources, non-imputation and disposition language with the selected agreement. Preserve reasonable requests, privilege/protected-information limits, decision-maker good faith and company-funded cooperation costs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-entitlement-presumption",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(d)",
+            "citation": "§ 6(d)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(d) allocates presumptions and burdens for entitlement determinations.",
+            "verbatimQuote": "In making a determination with respect to entitlement to indemnification hereunder, the person or persons or entity making such determination shall presume that Indemnitee is entitled to indemnification under this Agreement. Anyone seeking to overcome this presumption shall have the burden of proof and the burden of persuasion by clear and convincing evidence. Neither the failure of the Company (including by its directors or independent legal counsel) to have made a determination prior to the commencement of any action pursuant to this Agreement that indemnification is proper in the circumstances because Indemnitee has met the applicable standard of conduct, nor an actual determination by the Company (including by its directors or independent legal counsel) that Indemnitee has not met such applicable standard of conduct, shall be a defense to the action or create a presumption that Indemnitee has not met the applicable standard of conduct.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-entitlement-presumption"
+          },
+          {
+            "sourceId": "nvca-ia-good-faith",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(e)",
+            "citation": "§ 6(e)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(e) specifies good-faith reliance, non-imputation and burden rules.",
+            "verbatimQuote": "Indemnitee shall be deemed to have acted in good faith if Indemnitee’s action is based on the records or books of account of the Enterprise (as hereinafter defined), including financial statements, or on information supplied to Indemnitee by the officers of the Enterprise in the course of their duties, or on the advice of legal counsel for the Enterprise or on information or records given or reports made to the Enterprise by an independent certified public accountant or by an appraiser or other expert selected with reasonable care by the Enterprise. The provisions of this Section 6(e) shall not be deemed to be exclusive or to limit in any way the other circumstances in which the Indemnitee may be deemed to have met the applicable standard of conduct set forth in this Agreement. In addition, the knowledge and/or actions, or failure to act, of any director, officer, agent or employee of the Enterprise shall not be imputed to Indemnitee for purposes of determining the right to indemnification under this Agreement. Whether or not the foregoing provisions of this Section 6(e) are satisfied, it shall in any event be presumed that Indemnitee has at all times acted in good faith and in a manner he or she reasonably believed to be in or not opposed to the best interests of the Company. Anyone seeking to overcome this presumption shall have the burden of proof and the burden of persuasion by clear and convincing evidence.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-good-faith"
+          },
+          {
+            "sourceId": "nvca-ia-cooperation",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(g)",
+            "citation": "§ 6(g)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(g) specifies that the cooperation clause preserves privilege and addresses good faith and costs.",
+            "verbatimQuote": "Indemnitee shall cooperate with the person, persons or entity making such determination with respect to Indemnitee’s entitlement to indemnification, including providing to such person, persons or entity upon reasonable advance request any documentation or information which is not privileged or otherwise protected from disclosure and which is reasonably available to Indemnitee and reasonably necessary to such determination. Any Independent Counsel, member of the Board or stockholder of the Company shall act reasonably and in good faith in making a determination regarding the Indemnitee’s entitlement to indemnification under this Agreement. Any costs or expenses (including attorneys’ fees and disbursements) incurred by Indemnitee in so cooperating with the person, persons or entity making such determination shall be borne by the Company (irrespective of the determination as to Indemnitee’s entitlement to indemnification) and the Company hereby indemnifies and agrees to hold Indemnitee harmless therefrom.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-cooperation"
+          },
+          {
+            "sourceId": "nvca-ia-resolution",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(h)",
+            "citation": "§ 6(h)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(h) presumes success after a non-adverse resolution, with a clear-and-convincing burden.",
+            "verbatimQuote": "In the event that any action, suit or proceeding to which Indemnitee is a party is resolved in any manner other than by adverse judgment against Indemnitee (including, without limitation, settlement of such action, suit or proceeding with or without payment of money or other consideration) it shall be presumed that Indemnitee has been successful on the merits or otherwise in such action, suit or proceeding. Anyone seeking to overcome this presumption shall have the burden of proof and the burden of persuasion by clear and convincing evidence.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-resolution"
+          },
+          {
+            "sourceId": "nvca-ia-disposition-effect",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 6(i)",
+            "citation": "§ 6(i)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 6(i) limits the effect of a disposition on conduct presumptions, subject to its express exceptions.",
+            "verbatimQuote": "The termination of any Proceeding or of any claim, issue or matter therein, by judgment, order, settlement or conviction, or upon a plea of nolo contendere or its equivalent, shall not (except as otherwise expressly provided in this Agreement) of itself adversely affect the right of Indemnitee to indemnification or create a presumption that Indemnitee did not act in good faith and in a manner which he or she reasonably believed to be in or not opposed to the best interests of the Company or, with respect to any criminal Proceeding, that Indemnitee had reasonable cause to believe that his or her conduct was unlawful.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-disposition-effect"
+          }
+        ]
+      },
+      {
+        "requirementId": "calendar-enforcement-route",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.calendar-enforcement-route",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-remedy-trigger",
+          "nvca-ia-final-disposition"
+        ],
+        "requirementLabel": "Remedy triggers and court deadline",
+        "sectionId": "enforcement-remedies",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#calendar-enforcement-route",
+        "requirementGuidance": "Identify which Section 7(a) trigger applies, including its 10-day/90-day payment or determination conditions, and calendar the 180-day commencement period. Reconcile court language and final-disposition timing with advancement requests.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-remedy-trigger",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 7(a)",
+            "citation": "§ 7(a)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 7(a) lists adjudication triggers and a 180-day commencement period.",
+            "verbatimQuote": "In the event that (i) a determination is made pursuant to Section 6 of this Agreement that Indemnitee is not entitled to indemnification under this Agreement, (ii) advancement of Expenses is not timely made pursuant to Section 5 of this Agreement, (iii) no determination of entitlement to indemnification is made pursuant to Section 6(b) of this Agreement within ninety (90) days after receipt by the Company of the request for indemnification, (iv) payment of indemnification is not made pursuant to Sections 1(c), 1(e), 4 or the last sentence of Section 6(g) of this Agreement within ten (10) days after receipt by the Company of a written request therefor, or (v) payment of indemnification is not made pursuant to Sections 1(a), 1(b) and 2 of this Agreement within ten (10) days after a determination has been made that Indemnitee is entitled to indemnification or such determination is deemed to have been made pursuant to Section 6 of this Agreement, Indemnitee shall be entitled to an adjudication in an appropriate court of the State of Delaware, or in any other court of competent jurisdiction, of Indemnitee’s entitlement to such indemnification. Indemnitee shall commence such proceeding seeking an adjudication within one hundred eighty (180) days following the date on which Indemnitee first has the right to commence such proceeding pursuant to this Section 7(a). The Company shall not oppose Indemnitee’s right to seek any such adjudication.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-remedy-trigger"
+          },
+          {
+            "sourceId": "nvca-ia-final-disposition",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 7(f)",
+            "citation": "§ 7(f)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 7(f) postpones required final-entitlement determinations until final disposition.",
+            "verbatimQuote": "Notwithstanding anything in this Agreement to the contrary, no determination as to entitlement to indemnification under this Agreement shall be required to be made prior to the final disposition of the Proceeding.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-final-disposition"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-enforcement-costs",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.review-enforcement-costs",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-review-standard",
+          "nvca-ia-favorable-decision",
+          "nvca-ia-enforcement-advance",
+          "nvca-ia-enforcement-costs"
+        ],
+        "requirementLabel": "Review standard and enforcement funding",
+        "sectionId": "enforcement-remedies",
+        "itemNumber": "11.2",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#review-enforcement-costs",
+        "requirementGuidance": "Review de novo treatment, the favorable-decision exceptions and the distinct advancement/indemnification terms for enforcing rights or seeking insurance recovery. Preserve stated success and legal-permission qualifications rather than treating every enforcement expense as unconditionally indemnified.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-review-standard",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 7(b)",
+            "citation": "§ 7(b)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 7(b) specifies de novo review after an adverse determination.",
+            "verbatimQuote": "In the event that a determination shall have been made pursuant to Section 6(b) of this Agreement that Indemnitee is not entitled to indemnification, any judicial proceeding commenced pursuant to this Section 7 shall be conducted in all respects as a de novo trial on the merits, and Indemnitee shall not be prejudiced by reason of the adverse determination under Section 6(b).",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-review-standard"
+          },
+          {
+            "sourceId": "nvca-ia-favorable-decision",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 7(c)",
+            "citation": "§ 7(c)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 7(c) specifies that favorable determinations bind the company subject to misstatement and unlawfulness exceptions.",
+            "verbatimQuote": "If a determination shall have been made pursuant to Section 6(b) of this Agreement that Indemnitee is entitled to indemnification, the Company shall be bound by such determination in any judicial proceeding commenced pursuant to this Section 7, absent (i) a misstatement by Indemnitee of a material fact, or an omission of a material fact necessary to make Indemnitee’s misstatement not materially misleading in connection with the application for indemnification, or (ii) a prohibition of such indemnification under applicable law.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-favorable-decision"
+          },
+          {
+            "sourceId": "nvca-ia-enforcement-advance",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 7(d)",
+            "citation": "§ 7(d)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 7(d) advances specified judicial-enforcement expenses regardless of ultimate entitlement.",
+            "verbatimQuote": "In the event that Indemnitee, pursuant to this Section 7, seeks a judicial adjudication of his or her rights under, or to recover damages for breach of, this Agreement, or to recover under any directors’ and officers’ liability insurance policies maintained by the Company, the Company shall pay on his or her behalf, in advance, any and all expenses (of the types described in the definition of Expenses in Section 13 of this Agreement) actually and reasonably incurred by him or her in such judicial adjudication, regardless of whether Indemnitee ultimately is determined to be entitled to such indemnification, advancement of expenses or insurance recovery.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-enforcement-advance"
+          },
+          {
+            "sourceId": "nvca-ia-enforcement-costs",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 7(e)",
+            "citation": "§ 7(e)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 7(e) addresses procedural stipulations and conditional enforcement costs.",
+            "verbatimQuote": "The Company shall be precluded from asserting in any judicial proceeding commenced pursuant to this Section 7 that the procedures and presumptions of this Agreement are not valid, binding and enforceable and shall stipulate in any such court that the Company is bound by all the provisions of this Agreement. It is the intent of the Company that, to the fullest extent permitted by law, the Indemnitee not be required to incur legal fees or other Expenses associated with the interpretation, enforcement or defense of Indemnitee’s rights under this Agreement by litigation or otherwise because the cost and expense thereof would substantially detract from the benefits intended to be extended to the Indemnitee hereunder. The Company shall indemnify Indemnitee against any and all Expenses and, if requested by Indemnitee, shall (within ten (10) days after receipt by the Company of a written request therefore) advance, to the extent not prohibited by law, such expenses to Indemnitee, which are incurred by Indemnitee in connection with any action brought by Indemnitee for indemnification or advance of Expenses from the Company under this Agreement or under any directors’ and officers’ liability insurance policies maintained by the Company, if, in the case of indemnification, Indemnitee is wholly successful on the underlying claims; if Indemnitee is not wholly successful on the underlying claims, then such indemnification shall be only to the extent Indemnitee is successful on such underlying claims or otherwise as permitted by law, whichever is greater.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-enforcement-costs"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-insurance-and-other-rights",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.review-insurance-and-other-rights",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-insurance",
+          "nvca-ia-nonexclusivity"
+        ],
+        "requirementLabel": "Insurance and non-exclusive rights",
+        "sectionId": "insurance-and-priority",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#review-insurance-and-other-rights",
+        "requirementGuidance": "If the company maintains the described policies, check that coverage follows their terms to the maximum extent available for the listed insured roles and that the company gives insurer notice and pursues payable amounts. Flag reduced model coverage or deleted notice/cooperation duties, without inventing a policy limit or a duty to buy insurance. Preserve non-exclusive rights, prior-act protection and cumulative remedies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-insurance",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 8(b)",
+            "citation": "§ 8(b)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 8(b) specifies that the insurance provision is conditional on maintained policies and their terms.",
+            "verbatimQuote": "To the extent that the Company maintains an insurance policy or policies providing liability insurance for directors, officers, employees, or agents or fiduciaries of the Company or of any other corporation, partnership, joint venture, trust, employee benefit plan or other enterprise that such person serves at the request of the Company, Indemnitee shall be covered by such policy or policies in accordance with its or their terms to the maximum extent of the coverage available for any director, officer, employee, agent or fiduciary under such policy or policies. If, at the time of the receipt of a notice of a claim pursuant to the terms hereof, the Company has directors’ and officers’ liability insurance in effect, the Company shall give prompt notice of the commencement of such proceeding to the insurers in accordance with the procedures set forth in the respective policies. The Company shall thereafter take all necessary or desirable action to cause such insurers to pay, on behalf of the Indemnitee, all amounts payable as a result of such proceeding in accordance with the terms of such policies.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-insurance"
+          },
+          {
+            "sourceId": "nvca-ia-nonexclusivity",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 8(a)",
+            "citation": "§ 8(a)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 8(a) preserves other rights, prior-act protection and cumulative remedies.",
+            "verbatimQuote": "The rights of indemnification as provided by this Agreement shall not be deemed exclusive of any other rights to which Indemnitee may at any time be entitled under applicable law, the Certificate of Incorporation, the By-laws, any agreement, a vote of stockholders, a resolution of directors of the Company, or otherwise. No amendment, alteration or repeal of this Agreement or of any provision hereof shall limit or restrict any right of Indemnitee under this Agreement in respect of any action taken or omitted by such Indemnitee in his or her Corporate Status prior to such amendment, alteration or repeal. To the extent that a change in the DGCL, whether by statute or judicial decision, permits greater indemnification than would be afforded currently under the Certificate of Incorporation, By-laws and this Agreement, it is the intent of the parties hereto that Indemnitee shall enjoy by this Agreement the greater benefits so afforded by such change. No right or remedy herein conferred is intended to be exclusive of any other right or remedy, and every other right and remedy shall be cumulative and in addition to every other right and remedy given hereunder or now or hereafter existing at law or in equity or otherwise. The assertion or employment of any right or remedy hereunder, or otherwise, shall not prevent the concurrent assertion or employment of any other right or remedy.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-nonexclusivity"
+          }
+        ]
+      },
+      {
+        "requirementId": "select-priority-and-offsets",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.select-priority-and-offsets",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "relatedFieldKeys": [
+          "fund_sponsor_name"
+        ],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-fund-priority",
+          "nvca-ia-subrogation",
+          "nvca-ia-offsets",
+          "nvca-ia-outside-offset"
+        ],
+        "requirementLabel": "Optional fund priority and recovery",
+        "sectionId": "insurance-and-priority",
+        "itemNumber": "12.2",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#select-priority-and-offsets",
+        "requirementGuidance": "If fund priority is selected, identify the Fund Indemnitors and preserve company-first payment and the fund contribution/subrogation and beneficiary terms. Flag fund-first payment or offsets that defeat that selected priority. Apply actual-receipt offsets, company subrogation and outside-enterprise reductions subject to the stated fund-priority exception.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-fund-priority",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 8(c), optional",
+            "citation": "§ 8(c), optional",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 8(c) specifies that the optional provision allocates company/fund priority and recovery rights.",
+            "verbatimQuote": "[The Company hereby acknowledges that Indemnitee has certain rights to indemnification, advancement of expenses and/or insurance provided by [Name of Fund/Sponsor] and certain of [its][their] affiliates (collectively, the “Fund Indemnitors”). The Company hereby agrees (i) that it is the indemnitor of first resort (i.e., its obligations to Indemnitee are primary and any obligation of the Fund Indemnitors to advance expenses or to provide indemnification for the same expenses or liabilities incurred by Indemnitee are secondary), (ii) that it shall be required to advance the full amount of expenses incurred by Indemnitee and shall be liable for the full amount of all Expenses, judgments, penalties, fines and amounts paid in settlement to the extent legally permitted and as required by the terms of this Agreement and the Certificate of Incorporation or Bylaws of the Company (or any other agreement between the Company and Indemnitee), without regard to any rights Indemnitee may have against the Fund Indemnitors, and (iii) that it irrevocably waives, relinquishes and releases the Fund Indemnitors from any and all claims against the Fund Indemnitors for contribution, subrogation or any other recovery of any kind in respect thereof. The Company further agrees that no advancement or payment by the Fund Indemnitors on behalf of Indemnitee with respect to any claim for which Indemnitee has sought indemnification from the Company shall affect the foregoing and the Fund Indemnitors shall have a right of contribution and/or be subrogated to the extent of such advancement or payment to all of the rights of recovery of Indemnitee against the Company. The Company and Indemnitee agree that the Fund Indemnitors are express third party beneficiaries of the terms of this Section 8(c).]",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-fund-priority"
+          },
+          {
+            "sourceId": "nvca-ia-subrogation",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 8(d)",
+            "citation": "§ 8(d)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 8(d) specifies that company subrogation preserves the fund-priority exception.",
+            "verbatimQuote": "Except as provided in paragraph (c) above, in the event of any payment under this Agreement, the Company shall be subrogated to the extent of such payment to all of the rights of recovery of Indemnitee (other than against the Fund Indemnitors), who shall execute all papers required and take all action necessary to secure such rights, including execution of such documents as are necessary to enable the Company to bring suit to enforce such rights.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-subrogation"
+          },
+          {
+            "sourceId": "nvca-ia-offsets",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 8(e)",
+            "citation": "§ 8(e)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 8(e) specifies that the actual-receipt offset retains the fund-priority exception.",
+            "verbatimQuote": "Except as provided in paragraph (c) above, the Company shall not be liable under this Agreement to make any payment of amounts otherwise indemnifiable hereunder if and to the extent that Indemnitee has otherwise actually received such payment under any insurance policy, contract, agreement or otherwise.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-offsets"
+          },
+          {
+            "sourceId": "nvca-ia-outside-offset",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 8(f)",
+            "citation": "§ 8(f)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 8(f) specifies that outside-enterprise receipts reduce obligations subject to the priority exception.",
+            "verbatimQuote": "Except as provided in paragraph (c) above, the Company’s obligation to indemnify or advance Expenses hereunder to Indemnitee who is or was serving at the request of the Company as a director, officer, employee or agent of any other corporation, partnership, joint venture, trust, employee benefit plan or other enterprise shall be reduced by any amount Indemnitee has actually received as indemnification or advancement of expenses from such other corporation, partnership, joint venture, trust, employee benefit plan or other enterprise.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-outside-offset"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-excluded-payments",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.review-excluded-payments",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-exclusions",
+          "nvca-ia-optional-conduct-exclusion"
+        ],
+        "requirementLabel": "Exclusions and counterclaims",
+        "sectionId": "excluded-claims",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#review-excluded-payments",
+        "requirementGuidance": "Review prior payments/excess and fund-priority treatment, specified trading-profit/clawback reimbursements, and the initiated-proceeding exclusion. Preserve Section 7(e), board-authorization, mandatory counterclaim/cross-claim and discretionary-payment qualifications. Treat any added employment/code-of-conduct exception as a negotiated choice.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-exclusions",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 9(a)–(c)",
+            "citation": "§ 9(a)–(c)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 9(a) lists payment, reimbursement and initiated-proceeding exclusions with exceptions.",
+            "verbatimQuote": "Exception to Right of Indemnification. Notwithstanding any provision in this Agreement, the Company shall not be obligated under this Agreement to make any indemnity in connection with any claim made against Indemnitee: for which payment has actually been made to or on behalf of Indemnitee under any insurance policy or other indemnity provision, except with respect to any excess beyond the amount paid under any insurance policy or other indemnity provision, provided, that the foregoing shall not affect the rights of Indemnitee or the Fund Indemnitors set forth in Section 8(c) above; or for (i) an accounting of profits made from the purchase and sale (or sale and purchase) by Indemnitee of securities of the Company within the meaning of Section 16(b) of the Securities Exchange Act of 1934, as amended, or similar provisions of state statutory law or common law, (ii) any reimbursement of the Company by the Indemnitee of any bonus or other incentive-based or equity-based compensation or of any profits realized by the Indemnitee from the sale of securities of the Company, as required in each case under the Exchange Act (including any such reimbursements that arise from an accounting restatement of the Company pursuant to Section 304 of the Sarbanes-Oxley Act of 2002 (the “Sarbanes-Oxley Act”), or the payment to the Company of profits arising from the purchase and sale by Indemnitee of securities in violation of Section 306 of the Sarbanes-Oxley Act) or (iii) any reimbursement of the Company by Indemnitee of any compensation pursuant to any compensation recoupment or clawback policy adopted by the Board or the compensation committee of the Board, including but not limited to any such policy adopted to comply with stock exchange listing requirements implementing Section 10D of the Exchange Act; or except as provided in Section 7(e) of this Agreement, in connection with any Proceeding (or any part of any Proceeding) initiated by Indemnitee, including any Proceeding (or any part of any Proceeding) initiated by Indemnitee against the Company or its directors, officers, employees or other indemnitees, unless (i) the Board authorized the Proceeding (or any part of any Proceeding) prior to its initiation, (ii) such payment arises in connection with any mandatory counterclaim or cross claim brought or raised by Indemnitee in any Proceeding (or any part of any Proceeding) or (iii) the Company provides the indemnification, in its sole discretion, pursuant to the powers vested in the Company under applicable law.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-exclusions"
+          },
+          {
+            "sourceId": "nvca-ia-optional-conduct-exclusion",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — embedded COMMENT following § 9",
+            "citation": "NVCA Indemnification Agreement (July 2020), embedded COMMENT following § 9.",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement offers an additional employment/code-of-conduct exclusion as optional drafting language.",
+            "verbatimQuote": "The following additional exception can be added to address concerns that the Company will be required to provide indemnification for conduct that violates the Company’s code of conduct/business practices: “(d) for Expenses determined by the Company to have arisen out of Indemnitee’s breach or violation of his or her obligations under (i) any employment agreement between the Indemnitee and the Company or (ii) the Company’s Code of Business Conduct and Ethics (as amended from time to time).”]",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-optional-conduct-exclusion"
+          }
+        ]
+      },
+      {
+        "requirementId": "resolve-duration-and-successors",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.resolve-duration-and-successors",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-duration",
+          "nvca-ia-entire-agreement",
+          "nvca-ia-reliance"
+        ],
+        "requirementLabel": "Duration and successors",
+        "sectionId": "duration-and-security",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#resolve-duration-and-successors",
+        "requirementGuidance": "Check that obligations continue through the described service and while qualifying proceedings remain possible under Section 10. Resolve the optional additional-years period and successor alternative; flag an unfilled period or an unconditional service-end cutoff that removes the model’s proceeding survival. Reconcile the company’s reliance acknowledgment and supersession of prior understandings with the actual prior documents.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-duration",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 10",
+            "citation": "§ 10",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 10 addresses service-period and proceeding survival with bracketed choices.",
+            "verbatimQuote": "Duration of Agreement. All agreements and obligations of the Company contained herein shall continue during the period Indemnitee is an officer or director of the Company (or is or was serving at the request of the Company as a director, officer, employee or agent of another corporation, partnership, joint venture, trust or other enterprise) [consider extending for several years after term of service, even if claim has not yet been paid] and shall continue thereafter so long as Indemnitee shall be subject to any Proceeding (or any proceeding commenced under Section 7 hereof) by reason of his or her Corporate Status, whether or not he or she is acting or serving in any such capacity at the time any liability or expense is incurred for which indemnification can be provided under this Agreement. [This Agreement shall be binding upon and inure to the benefit of and be enforceable by the parties hereto and their respective successors (including any direct or indirect successor by purchase, merger, consolidation or otherwise to all or substantially all of the business or assets of the Company), assigns, spouses, heirs, executors and personal and legal representatives.]",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-duration"
+          },
+          {
+            "sourceId": "nvca-ia-entire-agreement",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 12(b)",
+            "citation": "§ 12(b)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 12(b) supersedes prior understandings on its subject matter.",
+            "verbatimQuote": "This Agreement constitutes the entire agreement between the parties hereto with respect to the subject matter hereof and supersedes all prior agreements and understandings, oral, written and implied, between the parties hereto with respect to the subject matter hereof.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-entire-agreement"
+          },
+          {
+            "sourceId": "nvca-ia-reliance",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 12(a)",
+            "citation": "§ 12(a)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 12(a) specifies that the company acknowledges that the individual relies on the agreement in serving.",
+            "verbatimQuote": "The Company expressly confirms and agrees that it has entered into this Agreement and assumes the obligations imposed on it hereby in order to induce Indemnitee to serve as an officer or director of the Company, and the Company acknowledges that Indemnitee is relying upon this Agreement in serving as an officer or director of the Company.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-reliance"
+          }
+        ]
+      },
+      {
+        "requirementId": "consider-security",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.consider-security",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-security"
+        ],
+        "requirementLabel": "Optional security",
+        "sectionId": "duration-and-security",
+        "itemNumber": "14.2",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#consider-security",
+        "requirementGuidance": "If security is requested and approved, specify the arrangement and preserve the written-consent requirement for release. Do not describe Section 11 as an unconditional collateral obligation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-security",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 11",
+            "citation": "§ 11",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 11 specifies that security is conditional on request and approval; provided security requires consent for release.",
+            "verbatimQuote": "Security. To the extent requested by Indemnitee and approved by the Board, the Company may at any time and from time to time provide security to Indemnitee for the Company’s obligations hereunder through an irrevocable bank line of credit, funded trust or other collateral. Any such security, once provided to Indemnitee, may not be revoked or released without the prior written consent of the Indemnitee.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-security"
+          }
+        ]
+      },
+      {
+        "requirementId": "preserve-no-bar-order-term",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.preserve-no-bar-order-term",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-bar-order"
+        ],
+        "requirementLabel": "Advancement bar-order restriction",
+        "sectionId": "duration-and-security",
+        "itemNumber": "14.3",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#preserve-no-bar-order-term",
+        "requirementGuidance": "Check that the company retains its covenant not to seek or agree to an order limiting contractual advancement. Flag deletion or narrowing of that covenant; treat it as the model’s undertaking, not a case holding or guaranteed court result.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-bar-order",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 12(c)",
+            "citation": "§ 12(c)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 12(c) bars the company from seeking or agreeing to an advancement-limiting bar order.",
+            "verbatimQuote": "The Company shall not seek from a court, or agree to, a “bar order” which would have the effect of prohibiting or limiting the Indemnitee’s rights to receive advancement of expenses under this Agreement.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-bar-order"
+          }
+        ]
+      },
+      {
+        "requirementId": "audit-definitions",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.audit-definitions",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-closing-corporate-status",
+          "nvca-ia-expense-categories",
+          "nvca-ia-expense-boundary",
+          "nvca-ia-definitions",
+          "nvca-ia-proceeding-definition",
+          "nvca-ia-enterprise",
+          "nvca-ia-disinterested",
+          "nvca-ia-appeal-enforcement-costs"
+        ],
+        "requirementLabel": "Definitions and expense boundaries",
+        "sectionId": "definitions-and-closing",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#audit-definitions",
+        "requirementGuidance": "Check that Corporate Status and Enterprise cover the described company and requested outside service, Disinterested Director excludes current/former parties to the proceeding, Expenses retains the listed reasonable cost categories and excludes settlements/judgments/fines, and Independent Counsel retains the conflict exclusion. Resolve the bracketed tax inclusion, retain the specified appeal/insurance-recovery/enforcement cost categories, and preserve the Proceeding definition’s Section 7 enforcement exclusion. Flag a mismatch with the actual service or a change to those expense or counsel boundaries.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-closing-corporate-status",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(a)",
+            "citation": "§ 13(a)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(a) specifies that corporate Status includes the described company and requested outside service.",
+            "verbatimQuote": "“Corporate Status” describes the status of a person who is or was a director, officer, employee, agent or fiduciary of the Company or of any other corporation, partnership, joint venture, trust, employee benefit plan or other enterprise that such person is or was serving at the request of the Company.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-closing-corporate-status"
+          },
+          {
+            "sourceId": "nvca-ia-expense-categories",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(d), first sentence",
+            "citation": "§ 13(d), first sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(d) lists reasonable expense categories and leaves the specified tax inclusion bracketed.",
+            "verbatimQuote": "“Expenses” shall include all reasonable attorneys’ fees, retainers, court costs, transcript costs, fees of experts, witness fees, travel expenses, duplicating costs, printing and binding costs, telephone charges, postage, delivery service fees, [and any federal, state, local or foreign taxes imposed on the Indemnitee as a result of the actual or deemed receipt of any payments under this Agreement], ERISA excise taxes and penalties, and all other disbursements or expenses of the types customarily incurred in connection with prosecuting, defending, preparing to prosecute or defend, investigating, participating, or being or preparing to be a witness in a Proceeding, or responding to, or objecting to, a request to provide discovery in any Proceeding.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-expense-categories"
+          },
+          {
+            "sourceId": "nvca-ia-expense-boundary",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(d), final sentence",
+            "citation": "§ 13(d), final sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(d) specifies that expenses excludes settlement amounts, judgments and fines.",
+            "verbatimQuote": "Expenses, however, shall not include amounts paid in settlement by Indemnitee or the amount of judgments or fines against Indemnitee.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-expense-boundary"
+          },
+          {
+            "sourceId": "nvca-ia-definitions",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(e), counsel-conflict sentence",
+            "citation": "§ 13(e), counsel-conflict sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(e) specifies that independent Counsel excludes persons with the stated professional-conduct conflict.",
+            "verbatimQuote": "Notwithstanding the foregoing, the term “Independent Counsel” shall not include any person who, under the applicable standards of professional conduct then prevailing, would have a conflict of interest in representing either the Company or Indemnitee in an action to determine Indemnitee’s rights under this Agreement.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-definitions"
+          },
+          {
+            "sourceId": "nvca-ia-proceeding-definition",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(f)",
+            "citation": "§ 13(f)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(f) defines covered proceedings and excludes the individual’s Section 7 enforcement proceeding from that definition.",
+            "verbatimQuote": "“Proceeding” includes any threatened, pending or completed action, suit, claim, counterclaim, cross claim, arbitration, mediation, alternate dispute resolution mechanism, investigation, inquiry, administrative hearing or any other actual, threatened or completed proceeding, whether brought by or in the right of the Company or otherwise and whether civil, criminal, administrative or investigative, including any appeal therefrom, in which Indemnitee was, is or will be involved as a party or otherwise, by reason of his or her Corporate Status, by reason of any action taken by him or her, or of any inaction on his or her part, while acting in his or her Corporate Status; in each case whether or not he or she is acting or serving in any such capacity at the time any liability or expense is incurred for which indemnification, reimbursement or advancement of expenses can be provided under this Agreement; including one pending on or before the date of this Agreement, but excluding one initiated by an Indemnitee pursuant to Section 7 of this Agreement to enforce his or her rights under this Agreement.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-proceeding-definition"
+          },
+          {
+            "sourceId": "nvca-ia-enterprise",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(c)",
+            "citation": "§ 13(c)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(c) includes the company and described requested-service enterprises in Enterprise.",
+            "verbatimQuote": "“Enterprise” shall mean the Company and any other corporation, partnership, joint venture, trust, employee benefit plan or other enterprise that Indemnitee is or was serving at the request of the Company as a director, officer, employee, agent or fiduciary.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-enterprise"
+          },
+          {
+            "sourceId": "nvca-ia-disinterested",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(b)",
+            "citation": "§ 13(b)",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(b) excludes current and former parties to the relevant proceeding from Disinterested Director.",
+            "verbatimQuote": "“Disinterested Director” means a director of the Company who is not and was not a party to the Proceeding in respect of which indemnification is sought by Indemnitee.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-disinterested"
+          },
+          {
+            "sourceId": "nvca-ia-appeal-enforcement-costs",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 13(d), additional-cost sentence",
+            "citation": "§ 13(d), additional-cost sentence",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 13(d) includes the specified appeal and insurance-recovery costs, and Section 7(e) enforcement costs, subject to its stated scope.",
+            "verbatimQuote": "Expenses also shall include (i) Expenses incurred in connection with any appeal resulting from any Proceeding, including, without limitation, the premium, security for, and other costs relating to any cost bond, supersedeas bond, or other appeal bond or its equivalent (ii) Expenses incurred in connection with recovery under any directors’ and officers’ liability insurance policies maintained by the Company, regardless of whether Indemnitee is ultimately determined to be entitled to such indemnification, advancement or Expenses or insurance recovery, as the case may be, and (iii) for purposes of Section 7(e) only, Expenses incurred by Indemnitee in connection with the interpretation, enforcement or defense of Indemnitee’s rights under this Agreement, the Certificate of Incorporation, the Bylaws or under any directors’ and officers’ liability insurance policies maintained by the Company, by litigation or otherwise.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-appeal-enforcement-costs"
+          }
+        ]
+      },
+      {
+        "requirementId": "complete-closing-and-forum",
+        "specRequirementId": "REQ-venture-financing.nvca-indemnification-agreement.complete-closing-and-forum",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "relatedFieldKeys": [
+          "indemnitee_address",
+          "company_notice_address",
+          "company_notice_attention",
+          "company_signatory_name",
+          "company_signatory_title",
+          "process_agent_name",
+          "process_agent_address"
+        ],
+        "templateGaps": [
+          "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+        ],
+        "templateLimitations": [
+          {
+            "kind": "external_check",
+            "detail": "Compare the actual agreement, claim records, governing documents and insurance terms; field filling does not determine entitlement or enforceability."
+          }
+        ],
+        "sourceClauseRefs": [
+          "nvca-ia-written-changes",
+          "nvca-ia-severability",
+          "nvca-ia-counterparts",
+          "nvca-ia-headings",
+          "nvca-ia-notification",
+          "nvca-ia-forum"
+        ],
+        "requirementLabel": "Written changes, notices and forum",
+        "sectionId": "definitions-and-closing",
+        "itemNumber": "15.2",
+        "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#complete-closing-and-forum",
+        "requirementGuidance": "Preserve both-party written modifications and the claim-notice material-prejudice qualification; flag unilateral amendments or an unconditional loss of protection for late notice. Resolve optional fund severability and any process agent, and complete delivery addresses, signatures and counterparts. Flag inconsistency between Section 19’s exclusive Delaware Chancery language and Section 7’s court wording; preserve the rule that headings add no operative rights.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nvca-ia-written-changes",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 15",
+            "citation": "§ 15",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 15 requires both parties’ written changes and limits waiver spillover.",
+            "verbatimQuote": "Modification and Waiver. No supplement, modification, termination or amendment of this Agreement shall be binding unless executed in writing by both of the parties hereto. No waiver of any of the provisions of this Agreement shall be deemed or shall constitute a waiver of any other provisions hereof (whether or not similar) nor shall such waiver constitute a continuing waiver.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-written-changes"
+          },
+          {
+            "sourceId": "nvca-ia-severability",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 14",
+            "citation": "§ 14",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 14 specifies that the severability clause contains optional separate treatment for the Appointing Stockholder.",
+            "verbatimQuote": "Severability. The invalidity or unenforceability of any provision hereof shall in no way affect the validity or enforceability of any other provision. [Further, the invalidity or unenforceability of any provision hereof as to either Indemnitee or Appointing Stockholder shall in no way affect the validity or enforceability of any provision hereof as to the other.] Without limiting the generality of the foregoing, this Agreement is intended to confer upon Indemnitee [and Appointing Stockholder] indemnification rights to the fullest extent permitted by applicable laws. In the event any provision hereof conflicts with any applicable law, such provision shall be deemed modified, consistent with the aforementioned intent, to the extent necessary to resolve such conflict.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-severability"
+          },
+          {
+            "sourceId": "nvca-ia-counterparts",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, Counterparts",
+            "citation": "Counterparts",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "The NVCA Indemnification Agreement’s Counterparts provision permits counterpart execution and specified electronic delivery.",
+            "verbatimQuote": "Counterparts. This Agreement may be executed in two (2) or more counterparts, each of which shall be deemed an original, but all of which together shall constitute one and the same the same instrument. Counterparts may be delivered via electronic mail (including pdf or any electronic signature complying with the U.S. federal ESIGN Act of 2000, e.g., www.docusign.com) or other transmission method and any counterpart so delivered shall be deemed to have been duly and validly delivered and be valid and effective for all purposes.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-counterparts"
+          },
+          {
+            "sourceId": "nvca-ia-headings",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, Headings",
+            "citation": "Headings",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement Headings denies operative significance to paragraph headings.",
+            "verbatimQuote": "Headings. The headings of the paragraphs of this Agreement are inserted for convenience only and shall not be deemed to constitute part of this Agreement or to affect the construction thereof.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-headings"
+          },
+          {
+            "sourceId": "nvca-ia-notification",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 16",
+            "citation": "§ 16",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 16 requires prompt claim notice but retains a material-prejudice qualification.",
+            "verbatimQuote": "Notice By Indemnitee. Indemnitee agrees promptly to notify the Company in writing upon being served with or otherwise receiving any summons, citation, subpoena, complaint, indictment, information or other document relating to any Proceeding or matter which may be subject to indemnification covered hereunder. The failure to so notify the Company shall not relieve the Company of any obligation which it may have to Indemnitee under this Agreement or otherwise unless and only to the extent that such failure or delay materially prejudices the Company.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-notification"
+          },
+          {
+            "sourceId": "nvca-ia-forum",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "NVCA Indemnification Agreement — operative model text, § 19(i)–(ii)",
+            "citation": "§ 19",
+            "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+            "proposition": "NVCA Indemnification Agreement § 19 selects exclusive Delaware Chancery proceedings and consent to that jurisdiction.",
+            "verbatimQuote": "(i) agree that any action or proceeding arising out of or in connection with this Agreement shall be brought only in the Chancery Court of the State of Delaware (the “Delaware Court”), and not in any other state or federal court in the United States of America or any court in any other country, (ii) consent to submit to the exclusive jurisdiction of the Delaware Court for purposes of any action or proceeding arising out of or in connection with this Agreement,",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement#src-nvca-ia-forum"
+          }
+        ]
+      }
+    ]
+  }
+}

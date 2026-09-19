@@ -76,7 +76,7 @@ An action under the wage-payment section must be commenced within three years af
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-20. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Virginia*, OpenAgreements (last updated July 20, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/virginia.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-20. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Virginia*, OpenAgreements (last updated July 20, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/virginia.
 
 [^va-minwage-2026]: **Va. Code § 40.1-28.10** — "From January 1, 2026, until January 1, 2027, every employer shall pay to each of its employees wages at a rate not less than the greater of (i) $12.77 per hour or (ii) the federal minimum wage." *Va. Code § 40.1-28.10(B)* <https://law.lis.virginia.gov/vacode/40.1-28.10/>
 

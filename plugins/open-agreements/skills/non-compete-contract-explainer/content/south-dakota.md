@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-07-01"
 human_reviewed_at: null
 next_review_due: "2026-12-28"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Dakota[^about]
 
@@ -182,7 +182,7 @@ For templates, align the duration clause, agreement term, termination language, 
 >
 > Restrictive covenants in a fixed-term South Dakota agreement that lacks express survival language end when the agreement ends: where the parties performed a fixed-term agreement to its stated end, the Eighth Circuit held the restrictive covenants terminated with it because nothing said they survived [^wilbur-ellis-no-survival]. The trap compounds with the statutory clock, which measures the two-year ceiling from the date of termination of the agreement, so the agreement term, the termination language, the per-covenant durations, and the survival clause have to align — a covenant impeccable under section 53-9-11 still fails if the contract ends before the restriction is triggered [^wilbur-ellis-statutory-context].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in South Dakota*, OpenAgreements (last updated July 1, 2026), https://openagreements.org/practice-guides/non-compete/us/south-dakota.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in South Dakota*, OpenAgreements (last updated July 1, 2026), https://openagreements.org/practice-guides/non-compete/us/south-dakota.
 
 [^sdcl-53-9-8-void-baseline]: **S.D. Codified Laws § 53-9-8** — "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive." *S.D. Codified Laws § 53-9-8.* <https://sdlegislature.gov/Statutes/53-9-8>
 

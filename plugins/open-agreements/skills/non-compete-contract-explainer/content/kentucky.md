@@ -2,7 +2,7 @@
 jurisdiction: "Kentucky"
 slug: kentucky
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kentucky · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kentucky · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Kentucky[^about]
 
@@ -185,7 +185,7 @@ The enacted baseline therefore remains common-law reasonableness and considerati
 >
 > Treat House Bill 690 and Senate Bill 234 as monitoring items, not present Kentucky law. Recheck the Kentucky General Assembly bill status each session before changing forms or telling workers that Kentucky has enacted a wage-threshold or general non-compete ban [^hb690-wage-threshold].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Kentucky*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/kentucky.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Kentucky*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/kentucky.
 
 [^kegel-reasonableness-test]: **Kegel v. Tillotson** — "agreements on restraint of trade are reasonable if, ‘on consideration of the subject, nature of the business, situation of the parties and circumstances of the particular case, the restriction is such only as to afford fair protection to the interests of the covenan-tee and is not so large as to interfere with the public interests or impose undue hardship on the party restricted." *Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009).* <https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/#:~:text=agreements%20on%20restraint%20of%20trade,hardship%20on%20the%20party%20restricted.>
 

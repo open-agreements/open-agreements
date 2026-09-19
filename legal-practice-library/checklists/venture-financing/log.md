@@ -1,5 +1,17 @@
 # Venture Financing Update Log
 
+## 2026-09-18
+* **Update**: fix(checklists): clarify existing capacity check baseline (00550e8)
+* **Update**: fix(checklists): specify NVCA partial-payment and access baselines (0d1e770)
+* **Update**: fix(checklists): state conditional NVCA fund-review baselines (54d410a)
+* **Update**: fix(checklists): support Manti review qualifications (8a3d53e)
+* **Update**: fix(checklists): clarify NVCA review baselines (b3bb1ea)
+
+## 2026-09-17
+* **Update**: fix(checklists): identify NVCA review context (5819c13)
+* **Update**: Add three NVCA companion practice guides (8e9ebcc)
+* **Update**: Add NVCA companion checklists and review specifications (c375975)
+
 ## 2026-09-16
 * **Update**: content(templates): add a venture financing due diligence request list (#2693) (7597ba2)
 

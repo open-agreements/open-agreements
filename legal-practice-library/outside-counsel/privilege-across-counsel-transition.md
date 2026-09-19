@@ -63,7 +63,7 @@ On successor-counsel communications, the firm commentary is more aligned than th
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Privilege across a counsel transition*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Privilege across a counsel transition*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition.
 
 [^upjohn-co-v-united-states-449-u-s-383-1981]: **Upjohn Co. v. United States, 449 U.S. 383 (1981)** — "full and frank communication between attorneys and their clients" *Upjohn Co. v. United States, 449 U.S. 383 (1981).* <https://www.law.cornell.edu/supremecourt/text/449/383#:~:text=full%20and%20frank%20communication%20between%20attorneys%20and%20their%20clients>
 

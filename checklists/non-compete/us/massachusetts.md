@@ -163,7 +163,7 @@ The seven items below exist only on this Massachusetts page: they implement the 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Massachusetts (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Massachusetts*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/massachusetts.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Massachusetts (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Massachusetts*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/massachusetts.
 
 [^anaplan-wrong-entity]: **Anaplan Parent, LP v. Brennan** — "It has never been held to include a parent corporation as an ‘employer.’" *Anaplan Parent, LP v. Brennan, No. 2584CV02350 (Mass. Super. Ct. 2025).* <https://www.mintz.com/sites/default/files/media/documents/2025-11-07/Anaplan-Parent%2C-LP-v.-Brennan-Noncompete%20Order.pdf>
 

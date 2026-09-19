@@ -2,7 +2,7 @@
 jurisdiction: "Connecticut"
 slug: connecticut
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Connecticut[^about]
 
@@ -184,7 +184,7 @@ In *Mattis v. Lally*, the Connecticut Supreme Court enforced a seller's covenant
 >
 > A Connecticut seller covenant is still tested for reasonable time and place, but courts read it to protect the goodwill the buyer purchased rather than under the stricter employee-mobility lens. Confine it to that goodwill [^mattis-fair-protection].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Connecticut*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/connecticut.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Connecticut*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/connecticut.
 
 [^scott-employee-noncompete-reasonableness]: **Scott v. General Iron & Welding Co.** — "In order to be valid and binding, a covenant which restricts the activities of an employee following the termination of his employment must be partial and restricted in its operation ‘in respect either to time or place, . . . and must be reasonable — that is, it should afford only a fair protection to the interest of the party in whose favor it is made and must not be so large in its operation as to interfere with the interests of the public." *Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).* <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.>
 

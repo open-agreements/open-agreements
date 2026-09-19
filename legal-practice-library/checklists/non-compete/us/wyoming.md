@@ -156,7 +156,7 @@ The five items below exist only on this Wyoming page: they implement the 2025 st
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Wyoming (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Wyoming*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/wyoming.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Wyoming (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Wyoming*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/wyoming.
 
 [^sf107-effective-date]: **SF 107 §§ 1–3** — "This act shall apply to contracts entered into on and after July 1, 2025." *S.F. 107, Enrolled Act No. 87, §§ 1–3, 68th Leg., Gen. Sess. (Wyo. 2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 

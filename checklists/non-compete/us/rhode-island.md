@@ -157,7 +157,7 @@ The five items below exist only on this Rhode Island page: they implement the wo
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Rhode Island (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Rhode Island*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/rhode-island.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Rhode Island (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Rhode Island*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/rhode-island.
 
 [^rinaa-employee-definition-cover]: **R.I. Gen. Laws § 28-59-2** — "‘Employee’ means an individual who works for hire, including an individual employed in a supervisory, managerial, or confidential position, but shall not include an independent contractor." *R.I. Gen. Laws § 28-59-2(3).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm>
 

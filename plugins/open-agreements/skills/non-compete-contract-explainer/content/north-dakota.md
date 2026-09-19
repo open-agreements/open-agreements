@@ -2,7 +2,7 @@
 jurisdiction: "North Dakota"
 slug: north-dakota
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-dakota · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-dakota · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Dakota[^about]
 
@@ -144,7 +144,7 @@ Employers also can enforce ordinary loyalty duties while employment continues. S
 >
 > In a ban state, a North Dakota employer's post-employment protection runs through trade-secret and misappropriation remedies and during-employment loyalty duties, not a covenant against competition [^north-dakota-trade-secret-injunction][^north-dakota-trade-secret-definition]. A confidentiality, return-of-property, or invention-assignment clause holds only while it targets misuse of protected information or disloyal conduct; construed to bar ordinary work for a competitor or ordinary dealing with customers, it inherits the void rule of § 9-08-06 rather than the trade-secret safe ground, and gains nothing the misappropriation remedy did not already supply.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Dakota. This article synthesizes North Dakota primary law and is not legal advice from a North Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in North Dakota*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/north-dakota.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Dakota. This article synthesizes North Dakota primary law and is not legal advice from a North Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in North Dakota*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/north-dakota.
 
 [^north-dakota-business-restraint-void]: **N.D. Cent. Code § 9-08-06** — "A contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind is to that extent void, except: 1. A person that sells the goodwill of a business and the person's partners, members, or shareholders may agree with the buyer to refrain from carrying on a similar business within a reasonable geographic area and for a reasonable length of time, if the buyer or any person deriving title to the goodwill from the buyer carries on a like business in that area." *N.D. Cent. Code § 9-08-06.* <https://ndlegis.gov/cencode/t09c08.pdf>
 

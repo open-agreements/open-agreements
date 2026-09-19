@@ -2,7 +2,7 @@
 jurisdiction: "Georgia"
 slug: georgia
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/georgia · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/georgia · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Georgia[^about]
 
@@ -282,7 +282,7 @@ The Act was signed and took effect on May 11, 2011. A covenant signed before tha
 >
 > Check the signing date before applying the GRCA. A covenant entered before May 11, 2011 is judged under Georgia's stricter pre-Act common law, where modification was unavailable for employment non-competes, so the modern reasonableness and blue-pencil rules do not apply to it [^q13-grca-effective-date][^q13-grca-13-8-52-application].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Georgia. This article synthesizes Georgia primary law and is not legal advice from a Georgia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Georgia*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/georgia.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Georgia. This article synthesizes Georgia primary law and is not legal advice from a Georgia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Georgia*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/georgia.
 
 [^q1-grca-13-8-53a-reasonable]: **O.C.G.A. § 13-8-53** — "Notwithstanding any other provision of this chapter, enforcement of contracts that restrict competition during the term of a restrictive covenant, so long as such restrictions are reasonable in time, geographic area, and scope of prohibited activities, shall be permitted." *O.C.G.A. § 13-8-53(a).* <https://www.legis.ga.gov/api/legislation/document/20112012/114248>
 

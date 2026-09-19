@@ -45,7 +45,7 @@ Every item below reads a draft stock repurchase and cancellation agreement again
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-02. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Delaware founder stock repurchase and cancellation agreement coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Founder Stock Repurchase Agreement Reviewer Checklist*, OpenAgreements (last updated July 2, 2026), https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-02. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Delaware founder stock repurchase and cancellation agreement coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Founder Stock Repurchase Agreement Reviewer Checklist*, OpenAgreements (last updated July 2, 2026), https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement.
 
 [^ra1-dgcl-160a]: **8 Del. C. § 160(a)** — "Every corporation may purchase, redeem, receive, take or otherwise acquire, own and hold, sell, lend, exchange, transfer or otherwise dispose of, pledge, use and otherwise deal in and with its own shares" *8 Del. C. § 160(a).* <https://delcode.delaware.gov/title8/c001/sc05>
 

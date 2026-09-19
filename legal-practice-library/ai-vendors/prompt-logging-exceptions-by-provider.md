@@ -87,7 +87,7 @@ The fourth consequence is that the exceptions are real, not hypothetical. Morgan
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Prompt-logging exceptions by provider*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/prompt-logging-exceptions-by-provider.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Prompt-logging exceptions by provider*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/prompt-logging-exceptions-by-provider.
 
 [^openai-data-controls-in-the-openai-platform]: **OpenAI, Data controls in the OpenAI platform** — "abuse monitoring logs are generated for all API feature usage and retained for up to 30 days" *OpenAI, Data controls in the OpenAI platform.* <https://developers.openai.com/api/docs/guides/your-data>
 

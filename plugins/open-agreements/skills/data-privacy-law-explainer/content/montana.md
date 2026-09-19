@@ -2,7 +2,7 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-05"
 human_reviewed_at: null
 next_review_due: "2026-12-02"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/montana · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/montana · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Montana Consumer Privacy Law (MCDPA)[^about]
 
@@ -70,7 +70,7 @@ Sensitive data includes data revealing racial or ethnic origin, religious belief
 
 The statute is explicit that nothing in it provides a basis for a private right of action [^stat-2817-nopra]. The 2025 amendments also reshaped the enforcement posture: the original act's right to cure was scheduled to sunset on April 1, 2026, but the amendments removed the general cure provision early, so the current enforcement section no longer contains one. The penalty section still references a 30-day period described in section 30-14-2817(3), while that subsection now describes the Attorney General's civil-investigative-demand authority rather than a cure process — an unresolved cross-reference that should be treated as a live statutory ambiguity. The practical posture is to build the notice, consent, and contracting controls up front rather than relying on a chance to fix problems after a complaint.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Montana. This article synthesizes Montana primary law and is not legal advice from a Montana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Montana Consumer Privacy Law (MCDPA)*, OpenAgreements (last updated June 5, 2026), https://openagreements.org/practice-guides/privacy/us/montana.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Montana. This article synthesizes Montana primary law and is not legal advice from a Montana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Montana Consumer Privacy Law (MCDPA)*, OpenAgreements (last updated June 5, 2026), https://openagreements.org/practice-guides/privacy/us/montana.
 
 [^stat-2803-apply]: **Mont. Code Ann. § 30-14-2803** — "(a) control or process the personal data of not less than 25,000 consumers, excluding personal data controlled or processed solely for the purpose of completing a payment transaction; or" *Mont. Code Ann. § 30-14-2803(1)(a).* <https://mca.legmt.gov/bills/mca/title_0300/chapter_0140/part_0280/section_0030/0300-0140-0280-0030.html>
 

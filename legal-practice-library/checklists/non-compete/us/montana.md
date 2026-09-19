@@ -157,7 +157,7 @@ The five items below exist only on this Montana page: they implement the restrai
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Montana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Montana*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/montana.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Montana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Montana*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/montana.
 
 [^mt-hb620-cover]: **House Bill 620 (Ch. 698, L. 2025)** — "Applicability. [This act] applies to contracts made or renewed on or after January 1, 2026." *2025 Mont. Laws ch. 698 (HB 620), §§ 2-3.* <https://archive.legmt.gov/content/Sessions/69th/Contractor_index/CH0698.pdf>
 

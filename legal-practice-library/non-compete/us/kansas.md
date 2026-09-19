@@ -169,7 +169,7 @@ A 2026 bill, HB 2650, would have voided non-competes on the sale or change in co
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Kansas*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/kansas.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Kansas*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/kansas.
 
 [^weber-governing-standard]: **Weber v. Tillman** — "A noncompetition covenant ancillary to an employment contract is valid and enforceable if the restraint is reasonable under the circumstances and not adverse to the public welfare." *Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).* <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.>
 

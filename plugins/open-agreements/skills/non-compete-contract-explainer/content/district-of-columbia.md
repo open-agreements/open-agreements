@@ -2,7 +2,7 @@
 jurisdiction: "District of Columbia"
 slug: district-of-columbia
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/district-of-columbia · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/district-of-columbia · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the District of Columbia[^about]
 
@@ -188,7 +188,7 @@ The duration limits are written as hard caps: a non-medical highly compensated e
 >
 > The District's non-compete statute sets no tolling rule, and its duration limits run as hard caps in calendar days measured from the date the employee separates — 365 days for a non-medical highly compensated employee and 730 for a medical specialist [^tolling-duration-cap]. No District decision has endorsed extending a covenant past that ceiling on breach, and the common law the statute preserves as cumulative has not endorsed extension either [^tolling-cumulative]. A highly compensated employee's covenant written to run past the cap during a period of breach reaches past the statutory ceiling and is exposed on that ground.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not District of Columbia. This article synthesizes District of Columbia primary law and is not legal advice from a District of Columbia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the District of Columbia*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/district-of-columbia.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not District of Columbia. This article synthesizes District of Columbia primary law and is not legal advice from a District of Columbia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the District of Columbia*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/district-of-columbia.
 
 [^ban-covered]: **D.C. Code § 32-581.02** — "Beginning October 1, 2022, no employer may require or request that a covered employee sign an agreement or comply with a workplace policy that includes a non-compete provision." *D.C. Code § 32-581.02(a)(1).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02>
 

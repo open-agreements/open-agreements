@@ -83,7 +83,7 @@ That absence is itself a useful conclusion. The firms agree on what to diligence
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Cross-provider zero-data-retention commitments*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/zdr-cross-provider-comparison.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Cross-provider zero-data-retention commitments*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/zdr-cross-provider-comparison.
 
 [^openai-services-agreement]: **OpenAI, Services Agreement** — "will not use Customer Content to develop or improve the Services, unless Customer explicitly agrees" *OpenAI, Services Agreement.* <https://openai.com/policies/services-agreement/>
 

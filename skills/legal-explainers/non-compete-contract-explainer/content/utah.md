@@ -2,7 +2,7 @@
 jurisdiction: "Utah"
 slug: utah
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Utah[^about]
 
@@ -194,7 +194,7 @@ The trade-secret route has real remedies. Actual or threatened misappropriation 
 >
 > Confidentiality and trade-secret protections hold only where they are tied to actual secret information and reasonable secrecy efforts. A definition that sweeps in ordinary know-how does not qualify as a trade secret, and a confidentiality clause that functions as a work ban can be recharacterized as a non-compete and pulled back under the one-year cap [^alt-trade-secret-def][^alt-carveout].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Utah*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/utah.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Utah*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/utah.
 
 [^upera-one-year]: **Utah Code § 34-51-201** — "an employer and an employee may not enter into a non-compete agreement for a period of more than one year from the day on which the employee is no longer employed by the employer." *Utah Code Ann. § 34-51-201(1)(a).* <https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html>
 

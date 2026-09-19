@@ -2,7 +2,7 @@
 jurisdiction: "Michigan"
 slug: michigan
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/michigan · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/michigan · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Michigan[^about]
 
@@ -210,7 +210,7 @@ In *Total Quality, Inc. v. Fewless*, the nonsolicitation agreement barred a depa
 >
 > Because the statute does not govern, a Michigan employee non-solicit stands or falls on common-law reasonableness — a reasonable competitive business interest plus reasonable duration and scope. Aim it at a real competitive business interest, not at barring ordinary competition [^fewless-not-statute].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Michigan*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/michigan.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Michigan*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/michigan.
 
 [^mcl-774a-employer-may-obtain]: **MCL § 445.774a** — "An employer may obtain from an employee an agreement or covenant which protects an employer's reasonable competitive business interests and expressly prohibits an employee from engaging in employment or a line of business after termination of employment if the agreement or covenant is reasonable as to its duration, geographical area, and the type of employment or line of business." *MCL § 445.774a(1).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-445-774a>
 

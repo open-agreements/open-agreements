@@ -2,7 +2,7 @@
 jurisdiction: "Australia"
 slug: au
 countryCode: AU
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-16"
 human_reviewed_at: null
 next_review_due: "2026-12-13"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Australia[^about]
 
@@ -153,7 +153,7 @@ Those details are proposals, not enacted law. They come from Treasury material a
 >
 > Do not draft to a federal ban that does not yet exist. As of June 2026, enforceability still turns on the common-law reasonableness test and, where NSW law applies, the Restraints of Trade Act 1976 (NSW). Re-check the enacted text before changing practice [^rota-s4-1-reform].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-16. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australia. This article summarizes publicly available Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Australia*, OpenAgreements (last updated June 16, 2026), https://openagreements.org/practice-guides/non-compete/au.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-16. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australia. This article summarizes publicly available Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Australia*, OpenAgreements (last updated June 16, 2026), https://openagreements.org/practice-guides/non-compete/au.
 
 [^lindner-prima-facie-void]: **Lindner v Murdock's Garage** — "Any contractual restraint of trade is prima facie unlawful and invalid." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

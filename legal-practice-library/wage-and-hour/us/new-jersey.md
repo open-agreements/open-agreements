@@ -132,7 +132,7 @@ The regulation spells out exactly what the employee must be told before the cred
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Jersey. This article synthesizes New Jersey primary law and is not legal advice from a New Jersey-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in New Jersey*, OpenAgreements (last updated July 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/new-jersey.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Jersey. This article synthesizes New Jersey primary law and is not legal advice from a New Jersey-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in New Jersey*, OpenAgreements (last updated July 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/new-jersey.
 
 [^nj-min-wage-rate]: **NJDOL Minimum Wage Announcement (Oct. 1, 2025)** — "New Jersey's statewide minimum wage will increase by $0.43 to $15.92 per hour for most employees, effective January 1, 2026." *N.J. Dep't of Labor & Workforce Dev., Minimum Wage Announcement (Oct. 1, 2025).* <https://www.nj.gov/labor/lwdhome/press/2025/20251001_Minimum_Wage.shtml>
 

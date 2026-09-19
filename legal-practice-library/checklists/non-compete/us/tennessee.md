@@ -160,7 +160,7 @@ The six items below exist only on this Tennessee page: they implement the protec
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Tennessee (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Tennessee*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/tennessee.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Tennessee (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Tennessee*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/tennessee.
 
 [^tn-ch934-effective]: **2026 Tenn. Pub. Acts, ch. 934 (HB 1034)** — "This act takes effect July 1, 2026, the public welfare requiring it, and applies to proceedings occurring and agreements entering into, renewed, or amended, on or after that date." *2026 Tenn. Pub. Acts, ch. 934, § 3.* <https://publications.tnsosfiles.com/acts/114/pub/pc0934.pdf>
 

@@ -141,7 +141,7 @@ Florida employees also retain the full federal remedy: a private FLSA action for
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Florida. This article synthesizes Florida primary law and is not legal advice from a Florida-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Florida*, OpenAgreements (last updated July 5, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/florida.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Florida. This article synthesizes Florida primary law and is not legal advice from a Florida-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Florida*, OpenAgreements (last updated July 5, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/florida.
 
 [^fl-const-art10-s24-schedule]: **Fla. Const. art. X, § 24** — "Effective September 30th, 2021, the existing state Minimum Wage shall increase to $10.00 per hour, and then increase each September 30th thereafter by $1.00 per hour, until the Minimum Wage reaches $15.00 per hour on September 30th, 2026." *Fla. Const. art. X, § 24(c).* <https://www.flsenate.gov/Laws/Constitution>
 

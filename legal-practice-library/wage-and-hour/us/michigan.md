@@ -153,7 +153,7 @@ Wage-payment claims take the administrative route, opening with a written compla
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Michigan*, OpenAgreements (last updated July 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/michigan.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Michigan*, OpenAgreements (last updated July 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/michigan.
 
 [^q1-mcl-408-934-schedule]: **MCL § 408.934** — "Subject to the exceptions specified in this act, the minimum hourly wage rate is: (a) Beginning February 21, 2025, $12.48. (b) Beginning January 1, 2026, $13.73. (c) Beginning January 1, 2027, $15.00." *MCL § 408.934(1).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-408-934>
 

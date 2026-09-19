@@ -2,7 +2,7 @@
 jurisdiction: "Nevada"
 slug: nevada
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nevada · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nevada · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nevada[^about]
 
@@ -237,7 +237,7 @@ NRS 613.200 separately makes it unlawful to willfully prevent a discharged or de
 >
 > The NRS 613.200(4) exception preserves a post-termination confidentiality agreement only where it is supported by valuable consideration and is otherwise reasonable in scope and duration, and it reaches disclosure of trade secrets, business methods, customer lists, secret formulas or processes, and confidential information [^q12-nrs-613-200-nda]. That safe harbor is what keeps the covenant clear of the surrounding rule, because NRS 613.200(1) makes it a gross misdemeanor to willfully interfere with a former worker's ability to obtain other employment in Nevada [^q12-nrs-613-200-mobility]. A confidentiality clause drafted so broadly that it operates as a restraint on working, rather than on disclosing the listed categories, sits outside the exception and forfeits the protection that made it lawful.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Nevada*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/nevada.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Nevada*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/nevada.
 
 [^q1-nrs-613-195-enforceability]: **NRS 613.195** — "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant." *NRS 613.195(1).* <https://www.leg.state.nv.us/nrs/NRS-613.html>
 

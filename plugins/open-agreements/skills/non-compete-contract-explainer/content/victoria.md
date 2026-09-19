@@ -2,7 +2,7 @@
 jurisdiction: "Victoria, Australia"
 slug: victoria
 countryCode: AU
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/victoria · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/victoria · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Victoria[^about]
 
@@ -157,7 +157,7 @@ Because this is a future legislative matter, employers should treat the timeline
 >
 > As of June 2026 no Commonwealth statute bans employee non-competes. Enforceability in Victoria therefore continues to turn on the common-law reasonableness test [^just-presumed-void-reform]. The proposal's threshold, scope, and commencement remain subject to change until legislation is enacted.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Victoria, Australia. This article summarizes publicly available Victoria, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in Victoria*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/victoria.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Victoria, Australia. This article summarizes publicly available Victoria, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in Victoria*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/victoria.
 
 [^just-presumed-void]: **Just Group Ltd v Peck** — "A term in a contract, which is a restraint of trade ('a restraint clause'), is presumed to be void as contrary to public policy." *Just Group Ltd v Peck [2016] VSCA 334 (the Court).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>
 

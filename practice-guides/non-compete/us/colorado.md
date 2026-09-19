@@ -190,7 +190,7 @@ The best Colorado authority points toward caution. In *Phoenix Capital, Inc. v. 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Colorado*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/colorado.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Colorado*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/colorado.
 
 [^crs-void-rule]: **C.R.S. § 8-2-113** — "Except as provided in subsections (2)(b), (2)(d), and (3) of this section, a covenant not to compete that restricts the right of an individual to receive compensation for performance of labor is void." *C.R.S. § 8-2-113(2)(a).* <https://olls.info/crs/crs2025-title-08.pdf>
 

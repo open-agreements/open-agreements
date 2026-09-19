@@ -74,7 +74,7 @@ Abstraction layers change the location of dependence more than they erase it. La
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Vendor lock-in risk in AI service agreements*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/vendor-lock-in-risk.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Vendor lock-in risk in AI service agreements*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/vendor-lock-in-risk.
 
 [^regulation-eu-2023-2854-art-23]: **Regulation (EU) 2023/2854, art. 23** — "commercial, technical, contractual and organisational obstacles" *Regulation (EU) 2023/2854, art. 23.* <https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng>
 

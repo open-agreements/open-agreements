@@ -2,7 +2,7 @@
 jurisdiction: "West Virginia"
 slug: west-virginia
 countryCode: US
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in West Virginia[^about]
 
@@ -147,7 +147,7 @@ For non-physician employees, ordinary contract and trade-secret tools are often 
 >
 > Trade secrets and ordinary confidential information carry different durations: trade-secret obligations can run for as long as the information remains a trade secret, but a perpetual lid on non-secret information can operate as a practical non-compete, so ordinary confidential information holds up only under its own finite term tied to actual confidential information rather than to the worker's ability to do similar work [^reddy-trade-secrets-customer-lists]. The statutory overlay matters at enforcement time: the West Virginia Uniform Trade Secrets Act displaces conflicting tort, restitutionary, and other civil remedies for misappropriation of a trade secret but does not affect contractual remedies, so a confidentiality covenant supplies a contract claim that runs alongside the statutory one [^wv-47-22-7-preserved-contract-remedies]. The act also lets a court award reasonable attorney's fees where a misappropriation claim is made in bad faith, a motion to terminate an injunction is made or resisted in bad faith, or willful and malicious misappropriation occurs — independent of any contractual fee clause; absent contractual fee-shifting each side bears its own costs, so a fee clause that is mutual and prevailing-party based carries the intended effect [^wv-47-22-4-attorney-fees].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not West Virginia. This article synthesizes West Virginia primary law and is not legal advice from a West Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in West Virginia*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/west-virginia.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not West Virginia. This article synthesizes West Virginia primary law and is not legal advice from a West Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in West Virginia*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/west-virginia.
 
 [^reddy-employee-rule-of-reason]: **Reddy v. Community Health Foundation of Man** — "The three-dimensional method of inquiry has been summarized in a leading article: ‘A restraint is reasonable only if it (1) is no greater than is required for the protection of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public,’ H.M. Blake, ‘Employee Agreements Not to Compete,’ supra, at 648." *Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).* <https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20three%2Ddimensional%20method%20of%20inquiry,to%20Compete%2C%E2%80%9D%20supra%2C%20at%20648.>
 

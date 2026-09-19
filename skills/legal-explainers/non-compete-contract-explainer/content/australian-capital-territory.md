@@ -2,7 +2,7 @@
 jurisdiction: "Australian Capital Territory, Australia"
 slug: australian-capital-territory
 countryCode: AU
-content_packaged_at: "2026-09-18"
+content_packaged_at: "2026-09-19"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory · **Snapshot as of:** 2026-09-18 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory · **Snapshot as of:** 2026-09-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in the Australian Capital Territory[^about]
 
@@ -155,7 +155,7 @@ Because this is a future legislative matter, employers should treat the timeline
 >
 > As of June 2026 no Commonwealth statute bans employee non-competes. Enforceability in the Australian Capital Territory therefore continues to turn on the common-law reasonableness test, assessed at the time the contract is made, with no statutory power to read an overbroad clause down [^steadfast-still-governs]. The proposal's threshold, scope, and commencement remain subject to change until legislation is enacted.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australian Capital Territory, Australia. This article summarizes publicly available Australian Capital Territory, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in the Australian Capital Territory*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australian Capital Territory, Australia. This article summarizes publicly available Australian Capital Territory, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in the Australian Capital Territory*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory.
 
 [^lindner-onus]: **Lindner v Murdock's Garage** — "The onus was on the plaintiff firm to prove circumstances showing that the restriction on the defendant's freedom to work was reasonable." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

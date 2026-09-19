@@ -157,7 +157,7 @@ The five items below exist only on this Idaho page: they implement the chapter 4
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Idaho (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Idaho*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/idaho.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Idaho (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Idaho*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/idaho.
 
 [^idaho-top-five-cover]: **Idaho Code § 44-2704** — "(5) It shall be a rebuttable presumption that an employee or independent contractor who is among the highest paid five percent (5%) of the employer’s employees or independent contractors is a ‘key employee’ or a ‘key independent contractor.’" *Idaho Code § 44-2704.* <https://legislature.idaho.gov/statutesrules/idstat/Title44/T44CH27/SECT44-2704/>
 

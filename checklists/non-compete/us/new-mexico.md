@@ -155,7 +155,7 @@ The four items below exist only on this New Mexico page: the common-law reasonab
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for New Mexico (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — New Mexico*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/new-mexico.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for New Mexico (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — New Mexico*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/new-mexico.
 
 [^hc-owner-exemption-parties]: **NMSA 1978, § 24A-4-5** — "Chapter 24, Article 1I NMSA 1978 [Chapter 24A, Article 4 NMSA 1978] does not apply to agreements between health care practitioners who are shareholders, owners, partners or directors of a health care practice." *NMSA 1978, § 24A-4-5(A).* <https://nmonesource.com/nmos/nmsa/en/18973/1/document.do>
 

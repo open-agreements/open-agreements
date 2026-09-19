@@ -157,7 +157,7 @@ The five items below exist only on this Indiana page: the common-law reasonablen
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Indiana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Indiana*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/indiana.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Indiana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Indiana*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/indiana.
 
 [^sea475-date-cover]: **Senate Enrolled Act 475 (2025), Ind. Code § 25-22.5-5.5-2.3** — "Any agreement in violation of this section is void and unenforceable." *Ind. Code § 25-22.5-5.5-2.3(c) (Senate Enrolled Act 475, P.L. 207-2025).* <https://iga.in.gov/pdf-documents/124/2025/senate/bills/SB0475/SB0475.04.ENRH.pdf>
 
