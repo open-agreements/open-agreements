@@ -2,7 +2,7 @@
   "$schema": "https://openagreements.org/schemas/skill-quality-card.schema.json",
   "schema_version": "2026-08-31",
   "skill": "non-compete-contract-explainer",
-  "content_packaged_at": "2026-09-20",
+  "content_packaged_at": "2026-09-21",
   "law_checked_through": "2026-04-14",
   "human_reviewed_at": null,
   "next_review_due": "2026-10-11",
