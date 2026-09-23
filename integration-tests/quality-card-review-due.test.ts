@@ -1,8 +1,11 @@
 import {spawnSync} from 'node:child_process';
 import {readFileSync} from 'node:fs';
 import {resolve} from 'node:path';
-import {describe, expect, it} from 'vitest';
+import {describe, expect} from 'vitest';
+import {itAllure} from './helpers/allure-test.js';
 import {reviewDue} from '../scripts/quality_card_review_due.mjs';
+
+const it = itAllure.epic('Platform & Distribution');
 
 const repoRoot = resolve(import.meta.dirname, '..');
 const workflow = readFileSync(resolve(repoRoot, '.github/workflows/quality-card-review-due.yml'), 'utf8');
