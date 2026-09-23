@@ -1,0 +1,65 @@
+name: quality-card-review-due
+
+# A due-date alarm. It creates a coordination task, not a legal review or a
+# human_reviewed_at stamp. The card itself remains sourced from legal-explainer.
+on:
+  schedule:
+    - cron: '23 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Check the review date and open or update the owner task
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -o pipefail
+          set +e
+          result=$(node scripts/quality_card_review_due.mjs)
+          status=$?
+          set -e
+          if [ "$status" -eq 0 ]; then
+            echo "$result" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if [ "$status" -ne 2 ]; then
+            echo "$result" >&2
+            exit "$status"
+          fi
+          due=$(printf '%s' "$result" | node -pe 'JSON.parse(require("fs").readFileSync(0,"utf8")).due')
+          days=$(printf '%s' "$result" | node -pe 'JSON.parse(require("fs").readFileSync(0,"utf8")).days_remaining')
+          floor=$(node -pe 'require("./skills/legal-explainers/non-compete-contract-explainer/quality-card.json").law_checked_through')
+          if [ "$due" = null ]; then
+            title='Non-compete quality card review date missing'
+            review_status='no next_review_due is recorded; assign and record a review date'
+          else
+            title="Non-compete quality card review due $due"
+            review_status="next_review_due: $due ($days UTC days remaining)"
+          fi
+          export OA_ISSUE_MARKER='<!-- oa-quality-card-review-due:non-compete-contract-explainer -->'
+          issue_json=$(gh issue view 874 --json state,body)
+          issue_state=$(printf '%s' "$issue_json" | node -e 'const d=JSON.parse(require("fs").readFileSync(0,"utf8")); if (!d.body.includes(process.env.OA_ISSUE_MARKER)) throw new Error("#874 is not the quality-card task"); console.log(d.state)')
+          body=$(cat <<EOF
+          $OA_ISSUE_MARKER
+          The non-compete skill quality card records **$review_status**. This is an automated reminder only.
+
+          Steven owns coordination. Joey or a designated lawyer must decide whether the $floor bundle law-currency floor remains supportable, what new research or review is required, and whether any public lawyer-reviewed claim is evidenced. Do not advance \`law_checked_through\` or set \`human_reviewed_at\` based on this alarm or a build/publish timestamp.
+
+          Source: [quality card](https://github.com/open-agreements/open-agreements/blob/main/skills/legal-explainers/non-compete-contract-explainer/quality-card.json) and its [jurisdiction manifest](https://github.com/open-agreements/open-agreements/blob/main/skills/legal-explainers/non-compete-contract-explainer/manifest.json). Counsel/owner decisions are tracked in #873.
+
+          Completion requires a recorded counsel decision and verified source updates in the legal-explainer source of truth, followed by projection and publication here. If the date passes unresolved, retain the old date and disclose that review is overdue.
+          EOF
+          )
+          if [ "$issue_state" = CLOSED ]; then gh issue reopen 874; fi
+          gh issue edit 874 --title "$title" --body "$body" --add-assignee stevenobiajulu
+          echo 'Updated #874' >> "$GITHUB_STEP_SUMMARY"
