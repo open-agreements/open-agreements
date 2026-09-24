@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Delaware[^about]
 
@@ -141,11 +141,6 @@ But *Ascension* refused to let Delaware's contractarian policy automatically ove
 > **Drafting note.**
 >
 > Section 2708 gives a written Delaware choice-of-law selection a strong anchor — conclusively presumed to bear a significant, material, and reasonable relationship with Delaware and enforceable whether or not other relationships exist — but it does not reach a contract involving less than $100,000, so a selection resting on it in a smaller-value agreement rests on nothing [^delaware-choice-law-statute][^delaware-choice-law-threshold]. The anchor is not a universal workaround either: Delaware's own courts have declined to let its freedom-of-contract interest always trump another state's fundamental policy and have applied that other state's law where it had the materially greater interest, so a Delaware clause used against a worker whose residence and work center on another state invites a choice-of-law fight measured by the default state's policy and interest, not by the clause alone [^ascension-public-policy-limit][^fp-uc-choice-law-limit].
-
-> [!NOTE]
-> **Practice note.**
->
-> A Delaware choice-of-law clause is not a universal workaround for another state's non-compete restrictions. Before enforcing against an out-of-state worker, analyze the default state, its fundamental policy, and whether it has a materially greater interest in the specific covenant [^ascension-public-policy-limit][^fp-uc-choice-law-limit].
 
 ## How do trade-secret and confidentiality protections fit in? {#trade-secrets-confidentiality}
 

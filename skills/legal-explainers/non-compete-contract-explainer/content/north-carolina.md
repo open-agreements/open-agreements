@@ -2,7 +2,7 @@
 jurisdiction: "North Carolina"
 slug: north-carolina
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-carolina · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-carolina · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Carolina[^about]
 
@@ -43,26 +43,21 @@ A question-by-question summary of North Carolina non-compete law, including the 
 
 North Carolina has no general non-compete statute. Enforceability is governed by case law, with a single statutory overlay — N.C. Gen. Stat. § 75-4 — requiring that the agreement be in writing and signed. The Supreme Court has stated the governing test in consistent terms for decades.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant that later fails any element of the five-element enforceability test has no force to assert, so a notice letter waving such a covenant at a new employer rests on an unenforceable restraint and can expose the employer to a tortious-interference claim [^q1-ridgway-five-factor]. A notice grounded in a restraint the employer is prepared to defend as reasonable carries the weight the letter otherwise lacks.
+
 "Such covenants are enforceable in this state if they are (1) in writing, (2) made part of a contract of employment, (3) based on valuable consideration, (4) reasonable both as to time and territory, and (5) not against public policy."[^q1-daniel-five-factor]
 
 The writing requirement is statutory. Section 75-4 makes any agreement limiting a person's right to do business in the State unenforceable unless it is in writing and signed by the restrained party.
 
 "No contract or agreement hereafter made, limiting the rights of any person to do business anywhere in the State of North Carolina shall be enforceable unless such agreement is in writing duly signed by the party who agrees not to enter into any such business within such territory: Provided, nothing herein shall be construed to legalize any contract or agreement not to enter into business in the State of North Carolina, or at any point in the State of North Carolina, which contract is now illegal, or which contract is made illegal by any other section of this Chapter."[^q1-gs-75-4]
 
-> [!NOTE]
-> **Practice note.**
->
-> Treat a North Carolina non-compete as enforceable only if every one of the five elements is met. Because the agreement must satisfy § 75-4's writing-and-signature rule and the covenant is read strictly against the drafter, a single defective element defeats enforcement [^q1-ridgway-five-factor][^q1-gs-75-4].
-
 > [!CAUTION]
 > **Drafting note.**
 >
 > North Carolina has no general non-compete statute, so every covenant in the agreement is a partial restraint of trade that stands or falls on the five-element common-law test: it must be in writing, part of an employment contract, supported by valuable consideration, reasonable as to time and territory, and designed to protect a legitimate business interest and not against public policy [^q1-ridgway-five-factor][^q1-daniel-five-factor]. Because the covenant is read strictly against the drafter, a single defective element defeats the whole restraint and a North Carolina court will not rewrite an overbroad one — a category the state's restraint-of-trade statute already disfavors [^q1-gs-75-1][^q1-kuykendall-partial-restraint]. The broader covenants in the family are measured the same way: a no-business-with-covered-customers restraint reaches even customer-initiated business and survives only where it is supported by consideration, reasonably necessary to protect the covenantee, and not against public policy, and a non-investment restraint sits under that same reasonableness test rather than outside it [^q1-kuykendall-partial-restraint]. The analysis travels with an assignment — a successor enforcing an assigned covenant faces the same five-element test and the same strike-only severance the original employer faced, so an assignment moves the covenant without strengthening it [^q1-ridgway-five-factor].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant that later fails any element of the five-element enforceability test has no force to assert, so a notice letter waving such a covenant at a new employer rests on an unenforceable restraint and can expose the employer to a tortious-interference claim [^q1-ridgway-five-factor]. A notice grounded in a restraint the employer is prepared to defend as reasonable carries the weight the letter otherwise lacks.
 
 ## What consideration does a North Carolina non-compete require? {#consideration}
 
@@ -183,11 +178,6 @@ The Eastern District reached the same result, giving effect to a clause that tol
 
 "On the other hand, as discussed above, paragraph ll(m) of the employment agreement tolls the time limitation of the non-compete as long as defendant is in violation of it, and so plaintiff will not be deprived of its bargained-for remedy if it later turns out that injunctive relief is warranted."[^q7-southtech-tolls]
 
-> [!NOTE]
-> **Practice note.**
->
-> If you want the restricted period to extend for the time an employee spends breaching, include an express extension-on-breach (tolling) clause; do not assume a court will lengthen the period on its own. Federal courts applying North Carolina law have enforced express tolling clauses, but no North Carolina appellate decision recognizes equitable tolling without one [^q7-philips-valid][^q7-southtech-tolls].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -209,11 +199,6 @@ The court applies a set of public-health factors to that question.
 
 "This Court considers the following factors in determining the risk of substantial harm to the public: the shortage of specialists in the field in the restricted area, the impact of establishing a monopoly in the area, including the impact on fees in the future and the availability of a doctor at all times for emergencies, and the public interest in having a choice in the selection of a physician."[^q8-zaldivar-factors]
 
-> [!NOTE]
-> **Practice note.**
->
-> For physician and other health-care covenants, evaluate the public-health impact before relying on the restraint, and watch SB 673. The covenant can fail on public-policy grounds even if its time and territory are otherwise reasonable, and a pending bill would bar hospital health-care non-competes entirely [^q8-zaldivar-balance][^q8-sb673].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -226,11 +211,6 @@ The court applies a set of public-health factors to that question.
 Section 22B-3 directly targets out-of-state forum-selection clauses.
 
 "Except as otherwise provided in this section, any provision in a contract entered into in North Carolina that requires the prosecution of any action or the arbitration of any dispute that arises from the contract to be instituted or heard in another state is against public policy and is void and unenforceable."[^q9-gs-22b-3]
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not rely on an out-of-state forum, venue, or arbitration clause for a covenant entered into in North Carolina. Section 22B-3 makes such a provision void as against public policy, so the action can proceed in a North Carolina forum [^q9-gs-22b-3].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -248,11 +228,6 @@ The reciprocal-fee statute that applies to business contracts carves employment 
 A separate, narrower fee path exists for unfair-trade-practices claims, which sometimes accompany a covenant or trade-secret dispute.
 
 "In any suit instituted by a person who alleges that the defendant violated G.S. 75-1.1, the presiding judge may, in his discretion, allow a reasonable attorney fee to the duly licensed attorney representing the prevailing party, such attorney fee to be taxed as a part of the court costs and payable by the losing party, upon a finding by the presiding judge that: (1) The party charged with the violation has willfully engaged in the act or practice, and there was an unwarranted refusal by such party to fully resolve the matter which constitutes the basis of such suit; or (2) The party instituting the action knew, or should have known, the action was frivolous and malicious."[^q10-gs-75-16-1]
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume a fee-shifting clause in an employment non-compete will be enforced. Section 6-21.6 excludes employment contracts from the reciprocal business-contract fee statute, so fee recovery generally depends on a separate statutory hook such as a § 75-1.1 unfair-trade-practices claim [^q10-gs-6-21-6][^q10-gs-75-16-1].
 
 > [!CAUTION]
 > **Drafting note.**

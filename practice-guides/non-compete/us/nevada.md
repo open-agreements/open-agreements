@@ -75,11 +75,6 @@ For older agreements, *Duong* adds a separate path. Even before the statute appl
 
 The important unresolved edge case is the word *solely*. Nevada appellate courts have not squarely decided whether a worker paid hourly plus commission, a nondiscretionary bonus, or another non-tip form of compensation falls outside subsection 3. That issue should be treated as open until Nevada courts or the Legislature address it.
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume a small add-on payment makes an hourly worker covenant enforceable. The statute creates mandatory fee risk for unlawful enforcement, and the hourly-plus-commission boundary remains unsettled [^q4-nrs-613-195-hourly][^q4-nrs-613-195-fees].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -170,11 +165,6 @@ The court later clarified in *HD Supply* that a statutory merger is different. T
 Nevada also has a separate sale-of-business antitrust carve-out. Restrictive covenants that are part of a contract for the sale of a business are outside Chapter 598A when they bar the seller from competing within a reasonable market area for a reasonable period of time [^q10-nrs-598a-sale-business].
 
 "Restrictive covenants: (a) Which are part of a contract of sale for a business and which bar the seller of the business from competing with the purchaser of the business sold within a reasonable market area for a reasonable period of time; or (b) Which are part of a commercial shopping center lease and which bar the parties from permitting or engaging in the furnishing of certain services or the sale of certain commodities within the commercial shopping center where such leased premises are located."[^q10-nrs-598a-sale-business]
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume an employee covenant follows the assets automatically. Nevada draws a hard line between asset sales and statutory mergers, and an asset buyer should plan for employee consent, an express assignment clause, and separate consideration where *Traffic Control Services* applies [^q10-traffic-control-consent].
 
 > [!CAUTION]
 > **Drafting note.**

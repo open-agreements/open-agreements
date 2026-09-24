@@ -63,11 +63,6 @@ The reason is practical and equitable. If the employer could avoid competition b
 
 *Wrigg* leaves room for a different result when the employee's conduct gives the employer a real protective interest. Trade-secret misuse, customer-relationship misuse, or proprietary-information misuse can change the analysis, but the employer must prove the risk [^wrigg-misconduct-exception][^wrigg-trade-secret-analysis].
 
-> [!NOTE]
-> **Practice note.**
->
-> Before sending an enforcement letter after a layoff, nonrenewal, or termination without cause, identify a Montana-specific legitimate interest beyond ordinary competition. *Wrigg* makes employer-initiated separation a major enforcement problem [^wrigg-employer-termination].
-
 > [!CAUTION]
 > **Drafting note.**
 >

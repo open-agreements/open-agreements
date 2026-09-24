@@ -58,11 +58,6 @@ The key case is *Polly*. The employer had many accounts the employee never handl
 
 Older cases sometimes enforced geographic language, and sale-of-business covenants are different. For current employment drafting, the conservative Nebraska approach is to avoid a radius or territory ban unless the covenant is truly ancillary to a sale or is otherwise tied to a very specific customer pool.
 
-> [!NOTE]
-> **Practice note.**
->
-> A short radius is not a Nebraska safe harbor. If the practical effect is to stop the employee from using general skill in the market, the restraint still risks failing as ordinary competition [^q4-gaver-ordinary-competition].
-
 > [!CAUTION]
 > **Drafting note.**
 >

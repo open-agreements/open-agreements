@@ -45,17 +45,12 @@ The statute draws a line at $350,000 in total annual compensation. At or below t
 
 Staying inside the cap is necessary, not sufficient. Section 3-716(b) sets outer limits; it does not guarantee enforceability, so a covenant within the cap still has to satisfy the ordinary common-law reasonableness test [^becker-highearner-reasonableness].
 
-There is also a patient-notice duty. On a patient's request, the employer must tell the patient where the departing clinician will be practicing [^statute-patient-notice].
-
 > [!CAUTION]
 > **Drafting note.**
 >
 > A Maryland high-earner clinician covenant that runs beyond one year or reaches more than ten miles from the primary practice site sits outside the ceiling § 3-716(b) sets, so a term or radius carried over from a longer general-purpose covenant is unenforceable to the extent it exceeds the cap. The statutory cap also carries a patient-notice process the covenant depends on [^statute-cap-duration][^statute-patient-notice].
 
-> [!CAUTION]
-> **Drafting note.**
->
-> For a covered high-earner clinician, § 3-716(b) makes patient notice of the departing clinician's new practice location a statutory duty owed on a patient's request, and it runs as a duty of the employer under the statute rather than a term the covenant creates [^statute-patient-notice]. A covenant drafted to block or delay that notice, or to bar the clinician from telling patients where care continues, collides with the statute; one that leaves the notice and the patient's continuity of care unobstructed keeps clear of it.
+There is also a patient-notice duty. On a patient's request, the employer must tell the patient where the departing clinician will be practicing [^statute-patient-notice].
 
 ## What legitimate business interests can support a Maryland non-compete? {#protectable-interests}
 
@@ -63,22 +58,17 @@ There is also a patient-notice duty. On a patient's request, the employer must t
 
 *Becker* describes the categories Maryland courts recognize: covenants are enforced against employees who provide unique services, or to prevent misuse of trade secrets, routes, or client lists, or solicitation of customers [^becker-protectable-interests]. Even when a legitimate interest exists, the restraint can be no broader than necessary to protect it [^fowler-no-broader-than-necessary].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Naming the employer's actual competitors may help show that the restriction is limited to what is reasonably necessary. An open-ended definition of a competitive business creates a greater risk of overbreadth than a list of named competitors [^fowler-no-broader-than-necessary].
+
 Section 3-716 reinforces that focus. Section 3-716(a)'s void rule carves out provisions aimed at the taking or use of a client or patient list or other proprietary client information — signaling that protecting customer data is treated differently from blocking competition outright [^statute-client-list-carveout].
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A Maryland non-compete reaches only a genuine protectable interest — unique services, trade secrets, customer lists, or goodwill — so a restraint aimed at ordinary competition unconnected to any of those protects nothing the law recognizes and fails on the interest requirement. Confidential-information protection carried on separate confidentiality and trade-secret terms survives even where the non-compete does not [^becker-protectable-interests][^statute-client-list-carveout].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A no-business or non-dealing covenant reaches a Covered Customer even when the customer initiates the contact, which pushes past the solicitation and client-relationship interests Maryland recognizes and toward blocking ordinary competition — the reach Maryland will not enforce. A covenant of that breadth holds only where a genuine client-relationship or trade-secret interest actually supports it and it stays no wider than that interest needs [^becker-protectable-interests][^statute-client-list-carveout].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A covenant that binds the employee only as to the employer's actual, named competitors gives a Maryland court the most concrete evidence that the restraint is tailored to what is reasonably necessary rather than a blanket bar on the field, and even a covenant serving a legitimate interest can be no broader than necessary to effectuate it [^fowler-no-broader-than-necessary]. An open-ended competitive-business definition left unnarrowed carries the overbreadth a named list would have cured.
+> A no-business or non-dealing covenant applies even when the customer initiates contact. That broader restriction is enforceable only to the extent a customer-relationship or trade-secret interest supports it, and only if its scope is no wider than necessary to protect that interest [^becker-protectable-interests][^statute-client-list-carveout].
 
 ## What duration and geographic scope are reasonable for a Maryland non-compete? {#duration-limits}
 
@@ -124,11 +114,6 @@ Scope of the prohibited activity matters as much as miles and months. In *Medisp
 A trade secret is information that derives independent economic value from not being generally known and is the subject of reasonable secrecy efforts [^mutsa-trade-secret-definition]. Actual or threatened misappropriation may be enjoined, and for willful and malicious misappropriation a court may award exemplary damages of up to twice the damages awarded under the statute's compensatory-damages provision [^mutsa-injunction][^mutsa-exemplary-damages].
 
 Trade-secret remedies can also outrun a contract's damages cap. In *Ingram v. Cantwell-Cleary*, the court declined to enforce a non-compete's liquidated-damages provisions because they did not bar a separate recovery for trade-secret misappropriation, and it upheld findings that customer lists and pricing data were misappropriated trade secrets [^ingram-liquidated-not-bar][^ingram-trade-secret-finding].
-
-> [!NOTE]
-> **Practice note.**
->
-> Where § 3-716 voids the covenant, build the protection plan around confidentiality and the trade-secret statute instead. Identify the actual trade secrets, document reasonable secrecy measures, and preserve the statutory injunction and damages remedies that do not depend on an enforceable non-compete [^mutsa-trade-secret-definition][^mutsa-injunction].
 
 > [!CAUTION]
 > **Drafting note.**

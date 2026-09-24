@@ -75,11 +75,6 @@ That mandatory reformation rule is the watershed change from pre-Act Arkansas la
 
 The temporal framing is important. *Bendinger* and *NanoMech* remain useful for the old all-or-nothing rule, and *Box* confirms Act 921's effective-date line; they should not be cited as current authority against mandatory statutory reformation for a covered post-Act employment covenant [^q5-box-effective-date][^q5-aca-reformation].
 
-> [!NOTE]
-> **Practice note.**
->
-> Reformation does not remove the need to draft narrowly. The statute tells courts to reform only to the extent necessary to make the limitations reasonable and no greater than needed to protect the business interest [^q5-aca-reformation].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -102,11 +97,6 @@ That means Arkansas does not require a separate bonus, promotion, equity grant, 
 The physician ban was added by the 2025 amendment. The statute defines physician by reference to the Arkansas Medical Practices Act and osteopathy licensing provisions [^q7-aca-physician-definition].
 
 Older physician cases should be framed as pre-2025 public-policy and common-law context, not as the current statutory text. In *Mercy v. Bicak*, the Court of Appeals emphasized public access to physicians and affirmed summary judgment against enforcement of the physician non-compete [^q7-mercy-public-policy][^q7-mercy-affirm].
-
-> [!NOTE]
-> **Practice note.**
->
-> The physician void rule does not generalize to every licensed professional. The statute voids covered physician practice restrictions, while separately saying § 4-75-101 does not apply to people holding a professional license under Arkansas Code Title 17, Subtitle 3, except as provided in subsection k [^q7-aca-physician-void][^q7-aca-title-17].
 
 > [!CAUTION]
 > **Drafting note.**

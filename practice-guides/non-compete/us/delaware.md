@@ -121,11 +121,6 @@ But *Ascension* refused to let Delaware's contractarian policy automatically ove
 >
 > Section 2708 gives a written Delaware choice-of-law selection a strong anchor — conclusively presumed to bear a significant, material, and reasonable relationship with Delaware and enforceable whether or not other relationships exist — but it does not reach a contract involving less than $100,000, so a selection resting on it in a smaller-value agreement rests on nothing [^delaware-choice-law-statute][^delaware-choice-law-threshold]. The anchor is not a universal workaround either: Delaware's own courts have declined to let its freedom-of-contract interest always trump another state's fundamental policy and have applied that other state's law where it had the materially greater interest, so a Delaware clause used against a worker whose residence and work center on another state invites a choice-of-law fight measured by the default state's policy and interest, not by the clause alone [^ascension-public-policy-limit][^fp-uc-choice-law-limit].
 
-> [!NOTE]
-> **Practice note.**
->
-> A Delaware choice-of-law clause is not a universal workaround for another state's non-compete restrictions. Before enforcing against an out-of-state worker, analyze the default state, its fundamental policy, and whether it has a materially greater interest in the specific covenant [^ascension-public-policy-limit][^fp-uc-choice-law-limit].
-
 ## How do trade-secret and confidentiality protections fit in? {#trade-secrets-confidentiality}
 
 **Short answer.** DUTSA gives Delaware employers targeted trade-secret remedies that can substitute for, or sit beside, a narrower covenant package. It protects information that has independent economic value from secrecy and is subject to reasonable secrecy efforts [^dutsa-trade-secret-definition].

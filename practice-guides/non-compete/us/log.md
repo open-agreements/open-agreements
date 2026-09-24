@@ -1,5 +1,11 @@
 # Us Update Log
 
+## 2026-09-23
+* **Update**: content(ny): structured-analysis pilot across the whole New York non-compete guide (#2772) (1b4338b)
+* **Update**: content(ia): replace 'purple pencil' in the Iowa non-compete description (#2771) (62c98a8)
+* **Update**: Consolidate adjacent practice-guide cautions (#2206) (d436c41)
+* **Update**: Continue adjacent caution cleanup from Michigan (#2273) (ed57969)
+
 ## 2026-09-17
 * **Update**: Accent practice-guide title topics (#2725) (a0aa350)
 

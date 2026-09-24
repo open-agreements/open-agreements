@@ -2,7 +2,7 @@
 jurisdiction: "Rhode Island"
 slug: rhode-island
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/rhode-island · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/rhode-island · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Rhode Island[^about]
 
@@ -86,11 +86,6 @@ For drafting, the most important consequence is precision. A customer non-solici
 *Walls* matters because the agreement was signed during employment, not only at initial hire. The court also rejected the argument that involuntary termination prevented enforcement; the covenant applied on termination from employment without limiting language tied to the reason for departure [^walls-involuntary-termination].
 
 The restraint in *Walls* was customer-focused. It barred solicitation and pest-control work for current and former company customers for 24 months, and the court emphasized that it did not use a geographic territory [^walls-customer-scope]. That makes the case useful for customer non-solicits and customer-service restrictions, not for broad bans on working in the same industry.
-
-> [!NOTE]
-> **Practice note.**
->
-> Read *Walls* for what it is. The Rhode Island Supreme Court affirmed a *preliminary* injunction under deferential abuse-of-discretion review, not a final judgment on the covenant's validity [^walls-pi-posture]. It is a strong signal on consideration and customer-scope drafting, but a defendant can still develop a fuller record on reasonableness and legitimate interest at trial.
 
 > [!CAUTION]
 > **Drafting note.**

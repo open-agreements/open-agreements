@@ -50,11 +50,6 @@ The *key employee* and *professional* categories are defined narrowly, and court
 
 "Thus, Blair is not a ‘key employee’ as that term is defined in OCGA § 13-8-51 (8). Consequently, the trial court erred in issuing injunctive relief to Pantera."[^q2-blair-key-employee]
 
-> [!NOTE]
-> **Practice note.**
->
-> Confirm that the employee actually performs a covered function before relying on a non-compete. A reasonable covenant is still void as a post-employment non-compete against a worker who does not solicit, sell, manage, or qualify as a key employee or professional, as *Blair v. Pantera Enterprises* shows [^q2-grca-13-8-53a-categories][^q2-blair-key-employee].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -124,11 +119,6 @@ The statute carves out customer non-solicitation and confidentiality, but it doe
 
 "In light of the statutory text and context of the GRCA, we conclude that the Court of Appeals erred, so we reverse and remand this case for further proceedings."[^q6-wimmer-nonrecruit]
 
-> [!NOTE]
-> **Practice note.**
->
-> Treat an employee non-recruitment or no-hire clause as a GRCA covenant, not a common-law one. *Belt Power v. Reed* placed these covenants within the Act, which means the reasonableness standard and modification limits apply [^q6-beltpower-grca][^q6-wimmer-nonrecruit].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -182,11 +172,6 @@ The court set out a sequence: test the covenant against the GRCA first, and only
 
 "If the restrictive covenant is unreasonable under the GRCA, a Georgia court may not apply foreign law to enforce it."[^q9-motorsports-mechanism]
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not rely on a Delaware, Florida, or other out-of-state choice-of-law clause to enforce a covenant that would fail in Georgia. *Motorsports of Conyers v. Burbach* requires a Georgia court to test GRCA compliance first and bars foreign law when the covenant is unreasonable under the Act [^q9-motorsports-touchstone][^q9-motorsports-mechanism].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -207,11 +192,6 @@ The Court of Appeals agreed with the defendants and relied on Georgia precedent 
 That said, the GRCA's broad remedies provision lets courts enforce a covenant by injunction during the agreement's term, and an employer can still pursue contempt for violating an injunction — it simply cannot stretch the covenant's duration past its contractual end. A contractual tolling clause that purports to extend the restraint beyond its stated term is therefore on uncertain ground, and counsel should not count on a court enforcing it [^q10-grca-13-8-58-remedies].
 
 "A court shall enforce a restrictive covenant by any appropriate and effective remedy available at law or equity, including, but not limited to, temporary and permanent injunctions."[^q10-grca-13-8-58-remedies]
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not rely on a tolling clause to extend a Georgia non-compete past its stated end date. *Daneshgari v. Patriot Towing Services* holds that a court cannot extend a covenant beyond its contractual expiration even against a party violating an injunction [^q10-daneshgari-no-extend][^q10-daneshgari-equity].
 
 > [!CAUTION]
 > **Drafting note.**

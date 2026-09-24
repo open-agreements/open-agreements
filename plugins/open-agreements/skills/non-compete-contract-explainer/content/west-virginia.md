@@ -2,7 +2,7 @@
 jurisdiction: "West Virginia"
 slug: west-virginia
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in West Virginia[^about]
 
@@ -58,17 +58,17 @@ Recent application points the same way. In *Special Services Bureau*, the court 
 
 *Reddy* allows tailoring only after a covenant is facially reasonable and the employer proves legitimate interests. If the restraint is facially excessive in time, territory, or apparent purpose, the covenant is out before the court reaches partial enforcement [^reddy-facially-unreasonable-void][^huntington-eye-no-partial-enforcement]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [West Virginia non-compete reviewer checklist](/checklists/non-compete/us/west-virginia) walks the full covenant suite item by item with each requirement's force level.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A notice to a departing worker's new employer is only as sound as the covenant it invokes. A covenant unreasonable on its face is utterly void [^reddy-facially-unreasonable-void], so a notice letter waving such a covenant at a new employer asserts an instrument with no legal force and can expose the employer to a tortious-interference claim — and a court will not partially enforce a grasping covenant to save the letter [^huntington-eye-no-partial-enforcement].
+
 "An employee covenant not to compete is unreasonable on its face if its time or area limitations are excessively broad, or where the covenant appears designed to intimidate employees rather than to protect the employer’s business, and a court should hold any such covenant void and unenforceable, and not undertake even a partial enforcement of it, bearing in mind, however, that a standard of ‘unreasonable on its face’ is to be distinguished from the standard of ‘reasonableness’ used in inquiries adopted by other authorities to address the minor instances of overbreadth to which restrictive covenants are naturally prone."[^huntington-eye-no-partial-enforcement]
 
 > [!CAUTION]
 > **Drafting note.**
 >
 > A grasping West Virginia covenant does not survive on the assumption that a judge will fix it. Facial overbreadth can make the covenant void rather than merely editable, so the restraint that holds is the narrow one the employer can defend at signing [^reddy-facially-unreasonable-void][^huntington-eye-no-partial-enforcement]. Duration and territory are measured against what the employer could defend in court on day one — a short term, a tight territory, a purpose tied to a proven protectable interest — and anything beyond that is exposed. A savings or reformation clause imported from a general-purpose form does not rescue it: a savings clause cannot move a facially unreasonable covenant from the void column to the tailorable one, because judicial tailoring is reserved for the minor overbreadth to which a facially reasonable covenant is naturally prone [^huntington-eye-no-partial-enforcement]. A covenant drafted to be severable and independently readable lets a sound customer non-solicit or confidentiality term outlive a failed non-compete.
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A notice to a departing worker's new employer is only as sound as the covenant it invokes. A covenant unreasonable on its face is utterly void [^reddy-facially-unreasonable-void], so a notice letter waving such a covenant at a new employer asserts an instrument with no legal force and can expose the employer to a tortious-interference claim — and a court will not partially enforce a grasping covenant to save the letter [^huntington-eye-no-partial-enforcement].
 
 ## Does a West Virginia non-compete signed after employment starts need new consideration? {#mid-employment-consideration}
 

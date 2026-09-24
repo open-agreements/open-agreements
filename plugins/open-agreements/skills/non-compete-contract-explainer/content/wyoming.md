@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-04-14"
 human_reviewed_at: null
 next_review_due: "2026-10-11"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wyoming[^about]
 
@@ -99,17 +99,17 @@ The court held that the entire agreement was void because the duration and geogr
 
 The four statutory carveouts[^wyo-1-23-four-carveouts] are listed in Wyo. Stat. § 1-23-108(a), the last of which is the carve-out for executive and management personnel [^wyo-1-23-carveout-exec]. The repayment carveout is not a blank check; it is capped by the employee's tenure, with lower recovery percentages as service length increases.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> The trade-secret exception covers covenants only to the extent they protect information that meets Wyoming's statutory trade-secret definition. Enforceability is more likely when the contractual definition of protected information is tied to that statutory bar and each category is documented as meeting it, since how broadly Wyoming courts read the carveout remains an open question [^littler-trade-secret-unsettled].
+
 Fitting one of these categories keeps a covenant out of the statutory void, but it does not make the covenant automatically enforceable — an exception covenant that operates as a non-compete is still judged under the common-law reasonableness baseline covered in the earlier question on what law governs covenants the statute does not void.
 
 > [!CAUTION]
 > **Drafting note.**
 >
 > A statutory exception is not a license for loose drafting. Employer-side law-firm commentary still points to reasonable scope and legitimate business fit [^holland-options-remain]; law-firm commentary also treats the breadth of the trade-secret exception as an open question [^littler-trade-secret-unsettled].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> The trade-secret exception covers covenants only to the extent they protect information that meets Wyoming's statutory trade-secret definition. Enforceability is more likely when the contractual definition of protected information is tied to that statutory bar and each category is documented as meeting it, since how broadly Wyoming courts read the carveout remains an open question [^littler-trade-secret-unsettled].
 
 ## Are customer non-solicitation agreements enforceable in Wyoming? {#customer-nonsolicits}
 
@@ -247,9 +247,9 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 [^wyo-1-23-carveout-exec]: **Wyo. Stat. § 1-23-108(a)(iv)** — "Executive and management personnel and officers and employees who constitute professional staff to executive and management personnel." *Wyo. Stat. § 1-23-108(a)(iv) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
-[^holland-options-remain]: **Holland & Hart commentary** — "the new law leaves Wyoming businesses with a few options to continue to use those covenants, employers need to move quickly" *Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).* <https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1>
-
 [^littler-trade-secret-unsettled]: **Littler Mendelson commentary** — "How expansive the trade secret exception will turn out to be waits to be seen." *Littler Mendelson, Wyoming Bans Non-Compete Covenants with Some Exceptions (2025).* <https://www.littler.com/news-analysis/asap/wyoming-bans-non-compete-covenants-some-exceptions>
+
+[^holland-options-remain]: **Holland & Hart commentary** — "the new law leaves Wyoming businesses with a few options to continue to use those covenants, employers need to move quickly" *Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).* <https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1>
 
 [^brownstein-nonsolicits-unaffected]: **Brownstein Hyatt Farber Schreck commentary** — "However, non-solicitation, non-recruitment and confidentiality restrictions remain unaffected." *Brownstein Hyatt Farber Schreck, Wyoming Adopts Statutory Limits for Noncompetes (2025).* <https://www.bhfs.com/insight/wyoming-adopts-statutory-limits-for-noncompetes/>
 

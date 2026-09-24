@@ -2,7 +2,7 @@
 jurisdiction: "South Carolina"
 slug: south-carolina
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-carolina · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-carolina · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Carolina[^about]
 
@@ -45,11 +45,6 @@ Because a non-compete is a restraint on trade that is against public policy, Sou
 
 "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration."[^team-ia-five-factor-test]
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume South Carolina will trim an overbroad covenant down to something enforceable — as the dedicated question below explains, it will not. Because the five factors are conjunctive, a covenant that fails any single one of them is unenforceable [^team-ia-five-factor-test][^kerrigan-restraint-of-trade].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -68,26 +63,11 @@ Trade secrets are protected by statute independent of any covenant. Under the *S
 >
 > Information the *South Carolina Trade Secrets Act* already covers does not need a non-compete to protect it. A focused confidentiality and trade-secret strategy reaches misappropriation without the strict-construction risk that attaches to a covenant not to compete [^trade-secrets-act-employee-duty][^trade-secrets-act-endures].
 
-> [!CAUTION]
-> **Drafting note.**
->
-> The confidentiality drafting does not have to carry the entire trade-secret regime — the *South Carolina Trade Secrets Act* runs underneath it. Every employee already owes a statutory duty, independent of and in addition to any agreement, to refrain from using or disclosing the employer's trade secret [^trade-secrets-act-employee-duty], and that protection endures until the secret is disclosed or discovered by proper means [^trade-secrets-act-endures]. Trade-secret obligations that run for as long as the information stays a trade secret, rather than expiring on a fixed cap, track that statutory protection, and the return-of-property, deletion, and certification mechanics preserve the secrecy the statute's protection depends on.
-
-> [!CAUTION]
-> **Drafting note.**
->
-> An employee non-solicit scoped to inducing a Covered Employee to breach or terminate the employment relationship — leaving references, general advertisements, and non-interfering hiring open — tracks how South Carolina reads the covenant. The state reads it narrowly: *Oxman v. Sherman* construed an employee covenant as restraining inducement to breach rather than as a blanket bar on ever hiring or seeking the services of those employees [^oxman-employee-nonsolicit]. Kept narrow — reaching only Covered Employees during the Restricted Period — it is the lightest restraint in the covenant family and stays no broader than the employer's interest in workforce stability and goodwill. Widened into an all-employee no-hire, it reaches past the recognized interest.
-
 ## How narrow must a customer non-solicitation covenant be in South Carolina? {#customer-non-solicitation}
 
 **Short answer.** It must be tied to the customers the employee actually dealt with. South Carolina enforces a customer non-solicitation covenant limited to customers the employee had contact with during a defined look-back period — and such a limit can even substitute for a geographic restriction — but a covenant barring solicitation of every customer on the employer's books advances no legitimate interest and is unenforceable [^vessel-personal-contact][^fournil-ordinary-competition].
 
 Federal courts applying South Carolina law draw the line at the employee's own customer relationships. In *Vessel Medical, Inc. v. Elliott*, the District of South Carolina upheld a non-solicitation covenant precisely because it reached only customers the employee had contact with during his last twelve months of employment [^vessel-personal-contact]. By contrast, *Fournil v. Turbeville Insurance Agency, Inc.* refused to enforce a covenant that also barred soliciting customers the employee had never serviced, because prohibiting those contacts protected no legitimate interest of the employer [^fournil-no-legitimate-interest]. The governing principle is that an employer may protect its customer relationships but may not enforce a covenant that simply prevents ordinary competition [^fournil-ordinary-competition].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> An *any customer on our books* non-solicitation clause reaches too far. A restriction limited to customers the departing employee actually serviced or contacted within a defined look-back period protects a legitimate interest; a blanket customer ban is treated as an unenforceable restraint on ordinary competition [^vessel-personal-contact][^fournil-no-legitimate-interest].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -100,11 +80,6 @@ Federal courts applying South Carolina law draw the line at the employee's own c
 
 *Poole v. Incentives Unlimited, Inc.* is the controlling rule. The court held that a covenant entered after the inception of employment needs new consideration beyond the continuation of at-will work [^poole-separate-consideration]. In *Poole* itself, the employee's duties, position, and salary were left unchanged after she signed, so there was nothing to supply that separate consideration [^poole-duties-unchanged].
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not ask a current employee to sign a non-compete on the strength of keeping the same job. Pair the covenant with genuine new consideration — a raise, bonus, promotion, or a change in status — and document it, because an unchanged role will not support the restraint [^poole-separate-consideration][^poole-duties-unchanged].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -115,11 +90,6 @@ Federal courts applying South Carolina law draw the line at the employee's own c
 **Short answer.** There is no statutory cap; reasonableness is judged on the facts. The territory may be no broader than necessary to protect the employer's legitimate interest, and both time and place must independently be reasonably limited [^kerrigan-territorial-scope][^q4-team-ia-five-factor-test].
 
 Geography is tied to the employer's actual customer base. A territorial restriction is unreasonable when it sweeps in an area broader than necessary to protect the legitimate interest of the employer [^kerrigan-territorial-scope]. Because the test is conjunctive, each of time and place must be reasonable on its own; as a practical matter, a wide territory paired with a long duration is harder to defend than a restraint matched to where the employee actually worked and the customers the employee actually served [^q4-team-ia-five-factor-test].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A duration or radius copied from another state's form is measured against the wrong market. A South Carolina court will not narrow an overbroad scope to save the covenant, so the territory holds up only where it matches the employee's real customer contacts and the time period stays within what the record can justify [^kerrigan-territorial-scope][^q4-team-ia-five-factor-test].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -137,11 +107,6 @@ There is one narrow lever: an alternative, *already-drafted* fallback. In *Team 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A savings clause asking a court to reduce an overbroad restraint to whatever is reasonable does nothing in South Carolina — the court will not do it. Tiered, severable, narrower alternatives written directly into the agreement give a court enforceable text to fall back on rather than a term it must create [^poynter-no-blue-pencil][^team-ia-step-down].
-
-> [!CAUTION]
-> **Drafting note.**
->
 > Reformation, severability, and step-down provisions do their work only as real, agreed step-down text, not as a savings clause asking a court to trim an overbroad restraint. South Carolina will not do the trimming: the restrictions in a non-compete cannot be rewritten by a court or limited by the parties' later agreement but must stand or fall on their own terms [^poynter-no-blue-pencil], and a contract may not be reformed or blue-penciled to add a new term the parties never agreed to [^stonhard-no-reformation] — an overbroad covenant fails whole, and an unenforceable restraint supports no injunction. The one lever that survives is text the parties actually wrote: an alternative narrower restriction in the original agreement can remain enforceable even when the primary one is overbroad [^team-ia-step-down]. Step-down duration and territory drafted into the agreement as genuine agreed alternatives, with each covenant self-contained, give the agreement that fallback — a sound non-solicit can outlive a non-compete that fails the test.
 
 ## Are confidentiality and nondisclosure agreements treated like non-competes in South Carolina? {#confidentiality-ndas}
@@ -155,11 +120,6 @@ The line matters because a sweeping NDA can collapse into a functional non-compe
 > [!CAUTION]
 > **Drafting note.**
 >
-> An open-ended NDA that bars an employee from doing similar work indefinitely draws non-compete scrutiny. Where a nondisclosure provision functions as a non-compete, South Carolina courts apply that scrutiny — including a reasonable time limit — and an unlimited duration can void it [^fay-functional-noncompete][^fay-no-time-limit].
-
-> [!CAUTION]
-> **Drafting note.**
->
 > Non-trade-secret Confidential Information given a finite duration, with the employee's general knowledge, skill, and experience carved out of the definition, stays a genuine confidentiality clause. Run open-ended, it can collapse into a functional non-compete: a nondisclosure provision with the effect of a covenant not to compete requires a reasonable time restriction [^fay-functional-noncompete], and untimed provisions operating that way violated South Carolina public policy [^fay-no-time-limit], whereas a genuine confidentiality clause scoped to protectable information is not a restraint of trade at all [^milliken-not-restraint]. An Other Confidential Information Duration stretched toward forever converts the clause into an untimed functional non-compete.
 
 ## Does South Carolina treat sale-of-business non-competes differently? {#sale-of-business}
@@ -167,11 +127,6 @@ The line matters because a sweeping NDA can collapse into a functional non-compe
 **Short answer.** Yes. A covenant tied to the sale of a business is scrutinized at a more relaxed level than an employment covenant, so broader restraints may be easier to defend [^palmetto-relaxed-scrutiny].
 
 In *Palmetto Mortuary Transport, Inc. v. Knight Systems, Inc.*, the South Carolina Supreme Court applied this relaxed standard to a covenant executed with an asset purchase [^palmetto-relaxed-scrutiny]. Reviewing the restraint under that standard, the court upheld the territorial restriction as reasonable and enforceable [^palmetto-enforced]. The rationale is that a buyer is paying for goodwill, and the seller bargained for the price that the covenant helps protect [^palmetto-relaxed-scrutiny].
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume the relaxed sale-of-business standard rescues an ordinary employment non-compete. The looser scrutiny applies because the covenant is part of a business sale; a covenant a worker signs as a condition of employment is still judged under the strict five-factor test [^palmetto-relaxed-scrutiny][^palmetto-enforced].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -186,11 +141,6 @@ The closest authority is *Stonhard, Inc. v. Carolina Flooring Specialists, Inc.*
 
 A contractual tolling clause — language in the agreement that pauses the clock during a breach — is a different question that no surveyed South Carolina case squarely decides. Any such clause still has to satisfy the five-factor reasonableness test, and a clause that converts a fixed restraint into an open-ended one invites the same public-policy objection *Stonhard* raised [^q8-team-ia-five-factor-test].
 
-> [!NOTE]
-> **Practice note.**
->
-> Open question: South Carolina has not clearly decided whether a contractual extension-on-breach clause is enforceable, and *Stonhard* rejects judicially extending a covenant past its stated end date. Draft any tolling provision as a separate, reasonable term tied to the duration of the breach, and do not assume a court will lengthen an expired covenant [^stonhard-no-extension][^q8-team-ia-five-factor-test].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -203,11 +153,6 @@ A contractual tolling clause — language in the agreement that pauses the clock
 A physician non-compete is currently analyzed under the ordinary five-factor reasonableness test, with the public-interest factor — patient access to care — as a likely pressure point [^q9-team-ia-five-factor-test]. That could change. H.4767, the Physician Noncompete Contract Prohibition Act, would add a new chapter declaring that contracts with physicians containing noncompete clauses are against South Carolina public policy [^h4767-physician-bill]. As of this review the bill had passed the House and received a favorable Senate committee report, but it had not been enacted.
 
 The bill is physician-specific — not a general healthcare-worker ban — and it is not an absolute prohibition. It would still let an employer recoup documented relocation, signing, retention, and training costs from a physician who leaves within a set period, and it preserves the employer's ability to protect trade secrets and confidential information; its limits would apply only to contracts or renewals entered on or after its effective date [^h4767-physician-bill].
-
-> [!NOTE]
-> **Practice note.**
->
-> Watch this bill, but do not treat it as law yet. H.4767 has not passed the Senate or been signed, so physician non-competes in South Carolina are still governed by common-law reasonableness; recheck the bill's status before relying on either the current rule or the proposed ban [^h4767-physician-bill][^q9-team-ia-five-factor-test].
 
 > [!CAUTION]
 > **Drafting note.**

@@ -65,11 +65,6 @@ For drafting, the most important consequence is precision. A customer non-solici
 
 The restraint in *Walls* was customer-focused. It barred solicitation and pest-control work for current and former company customers for 24 months, and the court emphasized that it did not use a geographic territory [^walls-customer-scope]. That makes the case useful for customer non-solicits and customer-service restrictions, not for broad bans on working in the same industry.
 
-> [!NOTE]
-> **Practice note.**
->
-> Read *Walls* for what it is. The Rhode Island Supreme Court affirmed a *preliminary* injunction under deferential abuse-of-discretion review, not a final judgment on the covenant's validity [^walls-pi-posture]. It is a strong signal on consideration and customer-scope drafting, but a defendant can still develop a fuller record on reasonableness and legitimate interest at trial.
-
 > [!CAUTION]
 > **Drafting note.**
 >

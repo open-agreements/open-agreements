@@ -71,11 +71,6 @@ In *Wenzell*, the covenant arose from a dental-practice sale. Alaska recognized 
 
 Healthcare facts sharpen the public-interest analysis. Because the challenged work was at a federally funded nonprofit provider offering free or low-cost care, the court held that competition would not be presumed and required proof [^wenzell-low-cost-competition-proof]. If competition exists, the court must still consider whether enforcement would harm the public.
 
-> [!NOTE]
-> **Practice note.**
->
-> Alaska has no published blanket ban on healthcare non-competes, but *Wenzell* makes access-to-care facts important. A provider covenant that affects low-cost services for a population in need should be tested against public injury, not just geographic radius and duration [^wenzell-public-interest-low-cost].
-
 > [!CAUTION]
 > **Drafting note.**
 >

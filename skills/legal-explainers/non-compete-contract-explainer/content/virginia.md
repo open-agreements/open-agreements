@@ -2,7 +2,7 @@
 jurisdiction: "Virginia"
 slug: virginia
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-07-03"
 human_reviewed_at: null
 next_review_due: "2026-12-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Virginia[^about]
 
@@ -49,11 +49,6 @@ The statutory track is broad after the 2025 and 2026 amendments. The Virginia De
 
 There is also an enforcement economics gate. For agreements entered into, amended, or renewed on or after July 1, 2026, a non-compete is unenforceable after a discharge without cause unless the employer provides severance benefits or another monetary payment disclosed when the covenant is signed [^sb170-severance-rule]. Agreements entered into, amended, or renewed before that date remain outside that severance rule until a later amendment or renewal pulls them into the current regime [^sb170-prospective].
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not treat Virginia as either a total-ban state or a simple reasonableness state. The first question is whether § 40.1-28.7:8 bars the covenant for the worker; only then does common-law reasonableness matter [^statutory-ban-baseline][^omniplex-basic-test].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -82,29 +77,24 @@ Each case remains fact-specific. *Modern Environments* states that restrictive c
 
 For 2026, the wage threshold is less than $1,507.01 per week, or about $78,364.52 per year. The statute also covers interns, students, apprentices, trainees, and certain lower-paid independent contractors, while excluding employees whose earnings are derived in whole or predominant part from sales commissions, incentives, or bonuses [^doli-threshold][^statute-interns-trainees][^statute-independent-contractors][^statute-commission-exclusion].
 
-The health-care rule is categorical for employment non-competes. A *health care professional* means a person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work, so no pay level restores the employment covenant for those workers [^sb128-healthcare-definition]. The rule is not a total ban on every restrictive term in a health-care transaction: the statute still permits a reasonable sale-of-business covenant, training-cost repayment terms, and a narrowly construed customer non-solicit [^sb128-sale-carveout][^sb128-nonsolicit-carveout].
-
-The remedies have teeth. A covered worker may sue within the statutory limitations period; a court may void the covenant, enjoin conduct, award lost compensation, damages, liquidated damages, and attorney fees; DOLI may assess a $10,000 civil penalty for each violation; and employers must post the required notice [^statute-private-action-relief][^statute-fees][^statute-civil-penalty][^statute-posting].
-
-> [!NOTE]
-> **Practice note.**
->
-> The FLSA-non-exempt expansion is independent of the dollar threshold. A highly paid non-exempt employee can still be protected by § 40.1-28.7:8 because the statute covers workers entitled to overtime regardless of average weekly earnings [^statute-low-wage-flsa][^doli-flsa].
-
 > [!CAUTION]
 > **Drafting note.**
 >
 > The statute's protections surface in the covenant only as operative carve-outs; its enforcement apparatus lives in § 40.1-28.7:8, not in the contract text, and it is severe. A covered worker may sue within the statutory limitations window, and a court may void the covenant, enjoin conduct, and award liquidated damages, lost compensation, damages, and reasonable costs, expert fees, and attorney fees [^statute-private-action-relief][^statute-fees]. DOLI may assess a $10,000 civil penalty for each violation, and merely presenting or threatening to enforce a barred covenant is itself a violation — so confirm the worker is outside the protected class before you hand over the [OpenAgreements Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-virginia) at all [^statute-civil-penalty]. The protected class reaches beyond the weekly-earnings figure to interns, students, apprentices, trainees, and certain lower-paid independent contractors, while excluding predominantly commission-, incentive-, or bonus-compensated workers [^statute-interns-trainees][^statute-independent-contractors][^statute-commission-exclusion]. The current-year threshold surfaced beneath Cover Terms resets annually [^doli-threshold]. A successor or assignee inherits the same statutory bar along with the contract.
 
-> [!CAUTION]
-> **Drafting note.**
->
-> There is a statutory obligation to post a copy of § 40.1-28.7:8, or a Department-approved summary, where other required employee notices are posted [^statute-posting]. Treat the posting as a rollout-checklist item: confirm it is up before any Virginia covenant program goes out. An employer relying on the section's exceptions while ignoring its posting duty is out of compliance with the same section.
+The health-care rule is categorical for employment non-competes. A *health care professional* means a person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work, so no pay level restores the employment covenant for those workers [^sb128-healthcare-definition]. The rule is not a total ban on every restrictive term in a health-care transaction: the statute still permits a reasonable sale-of-business covenant, training-cost repayment terms, and a narrowly construed customer non-solicit [^sb128-sale-carveout][^sb128-nonsolicit-carveout].
 
 > [!CAUTION]
 > **Drafting note.**
 >
 > The health care exclusion states the covered licenses as an objective condition rather than labeling the worker. It implements the SB 128 categorical ban, effective July 1, 2026, for persons licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work — and no earnings level restores an employment non-compete for a covered professional [^sb128-healthcare-ban][^sb128-healthcare-definition].
+
+The remedies have teeth. A covered worker may sue within the statutory limitations period; a court may void the covenant, enjoin conduct, award lost compensation, damages, liquidated damages, and attorney fees; DOLI may assess a $10,000 civil penalty for each violation; and employers must post the required notice [^statute-private-action-relief][^statute-fees][^statute-civil-penalty][^statute-posting].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> There is a statutory obligation to post a copy of § 40.1-28.7:8, or a Department-approved summary, where other required employee notices are posted [^statute-posting]. Treat the posting as a rollout-checklist item: confirm it is up before any Virginia covenant program goes out. An employer relying on the section's exceptions while ignoring its posting duty is out of compliance with the same section.
 
 ## Will a Virginia court narrow or blue-pencil an overbroad non-compete? {#court-narrowing}
 
@@ -136,22 +126,17 @@ The risk-weighted answer is cautious. Virginia courts strictly construe non-comp
 
 In unpublished *Sentry Force Security, LLC v. Barrera*, the Court of Appeals of Virginia read that sentence to permit a restriction against direct customer solicitation, even assuming the worker was low wage [^sentry-customer-solicitation]. The same opinion drew the opposite conclusion for customer-initiated business: if the customer approaches the former employee, the statute protects accepting that work [^sentry-passive-customer].
 
-The opinion also treated employee solicitation differently from customer solicitation for protected workers. It held that § 40.1-28.7:8 prevented enforcement of a covenant barring the former worker from soliciting Sentry Force's other employees [^sentry-employee-solicitation].
-
-> [!NOTE]
-> **Practice note.**
+> [!CAUTION]
+> **Drafting note.**
 >
-> Use *Sentry Force* carefully. It is an unpublished Court of Appeals memorandum opinion, so it is useful Virginia-specific guidance but has limited precedential weight; draft customer provisions to target employee-initiated solicitation, not passive acceptance of customer-initiated work [^sentry-customer-solicitation][^sentry-passive-customer].
+> The customer non-solicitation covenant reaches only the worker's own initiation or solicitation, and the worker-protection gates preserve customer-initiated business, because that is the line the statute draws: a bar on direct, employee-initiated solicitation survives even assuming the worker is protected, while customer-initiated business cannot be blocked [^statute-customer-service-carveout][^sentry-customer-solicitation][^sentry-passive-customer]. The optional no-business-with-covered-customers covenant bars serving a customer even when the customer calls first — the exact conduct the carve-out preserves — so it collides head-on with the statute for any protected worker and defaults off; include it only for a worker outside the protected class as a deliberate risk decision.
+
+The opinion also treated employee solicitation differently from customer solicitation for protected workers. It held that § 40.1-28.7:8 prevented enforcement of a covenant barring the former worker from soliciting Sentry Force's other employees [^sentry-employee-solicitation].
 
 > [!CAUTION]
 > **Drafting note.**
 >
 > Leave the employee non-solicitation covenant switched off unless you have confirmed the worker is outside § 40.1-28.7:8's protected class. The only Virginia appellate reading on point treats an employee non-solicit as a covenant not to compete for a protected worker: in unpublished *Sentry Force Security, LLC v. Barrera*, the Court of Appeals held the statute prevented enforcing a covenant barring a departed protected worker from soliciting the employer's other employees [^sentry-employee-solicitation]. Switch it on only after that check clears; the worker-protection gates in the [OpenAgreements Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-virginia) still control if you get it wrong.
-
-> [!CAUTION]
-> **Drafting note.**
->
-> The customer non-solicitation covenant reaches only the worker's own initiation or solicitation, and the worker-protection gates preserve customer-initiated business, because that is the line the statute draws: a bar on direct, employee-initiated solicitation survives even assuming the worker is protected, while customer-initiated business cannot be blocked [^statute-customer-service-carveout][^sentry-customer-solicitation][^sentry-passive-customer]. The optional no-business-with-covered-customers covenant bars serving a customer even when the customer calls first — the exact conduct the carve-out preserves — so it collides head-on with the statute for any protected worker and defaults off; include it only for a worker outside the protected class as a deliberate risk decision.
 
 ## What can Virginia employers use instead of a non-compete? {#alternatives}
 
@@ -204,17 +189,17 @@ That alternative has its own limits. The Virginia Uniform Trade Secrets Act defi
 
 [^statute-commission-exclusion]: **Va. Code § 40.1-28.7:8** — "does not include any employee whose earnings are derived, in whole or in predominant part, from sales commissions, incentives, or bonuses paid to the employee by the employer." *Va. Code Ann. § 40.1-28.7:8(A).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 
-[^sb128-healthcare-definition]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(A)** — "‘Health care professional’ means any person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(A), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
-
-[^sb128-sale-carveout]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(H)(2)** — "In such transactions, the seller and buyer may enter a covenant not to compete or similarly restrictive covenant for the health care professional or such person's business entity, provided that such covenant not to compete or similarly restrictive covenant is reasonable in scope, duration, and geographic area." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(H)(2), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
-
-[^sb128-nonsolicit-carveout]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(I)** — "Any reference to a prohibition against soliciting or attempting to solicit customers shall be narrowly construed to apply only to (i) the health care professional's customers, including actively sought prospective customers, with whom the health care professional had material contact during employment and (ii) products and services that are the same as or substantially similar to those provided by the employer." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(I), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
-
 [^statute-private-action-relief]: **Va. Code § 40.1-28.7:8** — "An employee or health care professional may bring a civil action in a court of competent jurisdiction against any former employer or other person that attempts to enforce a covenant not to compete against such employee in violation of this section. An action under this section shall be brought within two years of the latter of (i) the date the covenant not to compete was signed, (ii) the date the employee or health care professional learns of the covenant not to compete, (iii) the date the employment relationship is terminated, or (iv) the date the employer takes any step to enforce the covenant not to compete. The court shall have jurisdiction to void any covenant not to compete with an employee or health care professional and to order all appropriate relief, including enjoining the conduct of any person or employer, ordering payment of liquidated damages, and awarding lost compensation, damages, and reasonable attorney fees and costs." *Va. Code Ann. § 40.1-28.7:8(D).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 
 [^statute-fees]: **Va. Code § 40.1-28.7:8** — "If the court finds a violation of the provisions of this section, the plaintiff shall be entitled to recover reasonable costs, including costs and reasonable fees for expert witnesses, and attorney fees from the former employer or other person who attempts to enforce an unlawful covenant not to compete against such plaintiff." *Va. Code Ann. § 40.1-28.7:8(F).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 
 [^statute-civil-penalty]: **Va. Code § 40.1-28.7:8** — "Any employer that violates the provisions of subsection B or C as determined by the Commissioner shall be subject to a civil penalty of $10,000 for each violation." *Va. Code Ann. § 40.1-28.7:8(E).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
+
+[^sb128-healthcare-definition]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(A)** — "‘Health care professional’ means any person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(A), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
+
+[^sb128-sale-carveout]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(H)(2)** — "In such transactions, the seller and buyer may enter a covenant not to compete or similarly restrictive covenant for the health care professional or such person's business entity, provided that such covenant not to compete or similarly restrictive covenant is reasonable in scope, duration, and geographic area." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(H)(2), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
+
+[^sb128-nonsolicit-carveout]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(I)** — "Any reference to a prohibition against soliciting or attempting to solicit customers shall be narrowly construed to apply only to (i) the health care professional's customers, including actively sought prospective customers, with whom the health care professional had material contact during employment and (ii) products and services that are the same as or substantially similar to those provided by the employer." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(I), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
 
 [^statute-posting]: **Va. Code § 40.1-28.7:8** — "Every employer shall post a copy of this section or a summary approved by the Department in the same location where other employee notices required by state or federal law are posted." *Va. Code Ann. § 40.1-28.7:8(G).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 
