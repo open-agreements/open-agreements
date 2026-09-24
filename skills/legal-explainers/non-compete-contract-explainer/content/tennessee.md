@@ -2,7 +2,7 @@
 jurisdiction: "Tennessee"
 slug: tennessee
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/tennessee · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/tennessee · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Tennessee[^about]
 
@@ -68,11 +68,6 @@ Once a protectable interest exists, reasonableness is fact-specific and turns on
 
 Annualized compensation is defined broadly to include wages, salary, commissions, nondiscretionary bonuses, and other remuneration; for an hourly employee it is calculated as the hourly rate times 40 times 52 [^threshold-hourly]. The bar reaches more than enforcement: an employer may not even *request* that a below-threshold employee sign a covenant [^threshold-rule].
 
-> [!NOTE]
-> **Practice note.**
->
-> The prohibition attaches to asking a below-threshold employee to sign, not only to suing on the covenant. Before presenting a Tennessee non-compete on or after July 1, 2026, confirm the employee's annualized compensation clears $70,000 using the statutory definition, and recalculate for hourly workers using the rate-times-40-times-52 formula [^threshold-rule][^threshold-hourly].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -122,11 +117,6 @@ Reformation is discretionary, not guaranteed. A court may decline to save an opp
 **Short answer.** Yes, within statutory limits. A healthcare-provider covenant is deemed reasonable if it is in writing, runs two years or less, and stays within the greater of a 10-mile radius or the provider's county (or a facility-based limit). Emergency-medicine physicians fall outside that statutory authorization, so their covenants remain void under *Udom* [^s63-1-148-deemed-reasonable][^s63-1-148-emergency][^udom-void].
 
 Before the statute, Tennessee voided physician non-competes outright as contrary to public policy. In *Murfreesboro Medical Clinic, P.A. v. Udom*, the Tennessee Supreme Court held that, except as specifically allowed by statute, physician covenants not to compete are unenforceable and void [^udom-void]. The legislature responded with Tenn. Code Ann. § 63-1-148, which authorizes covenants for covered providers within the duration and geographic limits above and applies to providers licensed under Title 63, chapters 3, 4, 5, 6, 8, 9, and 11 [^s63-1-148-deemed-reasonable][^s63-1-148-scope]. A covenant tied to the sale of a provider's practice gets a rebuttable presumption that its agreed duration and area are reasonable [^s63-1-148-sale]. Meeting the safe harbor makes a covenant deemed reasonable in time and area; it does not by itself guarantee enforcement, because the covenant must still rest on a legitimate interest and satisfy the other common-law limits [^s63-1-148-deemed-reasonable].
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not impose a non-compete on an emergency-medicine physician. Section 63-1-148(d) removes them from the statute's safe harbor, and because no statute then authorizes the covenant, it remains void under *Udom*. For other covered providers, keep the term at or under two years and the area within the greater of a 10-mile radius or the county of the primary practice site to stay within the statutory safe harbor [^s63-1-148-emergency][^udom-void][^s63-1-148-deemed-reasonable].
 
 > [!CAUTION]
 > **Drafting note.**

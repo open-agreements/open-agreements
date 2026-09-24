@@ -2,7 +2,7 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Hawaii[^about]
 
@@ -41,14 +41,9 @@ Hawaii treats non-competes through HRS chapter 480's antitrust framework, includ
 
 **Short answer.** Sometimes, but Hawaii starts from an antitrust rule. HRS 480-4(a) makes every in-state restraint of trade illegal, and HRS 480-4(c) allows only restrictive covenants that are ancillary to a legitimate purpose and do not substantially lessen competition or tend to create a monopoly [^employee-hrs-480-4-baseline][^employee-hrs-480-4-ancillary].
 
-The practical test is not ordinary contract reasonableness alone. *Gagnon* says a covenant can satisfy the *Traeger* reasonableness factors and still fail if it is not ancillary to a legitimate purpose under HRS chapter 480 [^employee-gagnon-legitimate-purpose-required].
+The practical test is not ordinary contract reasonableness alone. Hawaii's *Traeger* framework asks whether the restraint is greater than required to protect the beneficiary, imposes undue hardship, or causes public injury that outweighs its benefit to the covenantee, and *Gagnon* says a covenant can satisfy those reasonableness factors and still fail if it is not ancillary to a legitimate purpose under HRS chapter 480 [^employee-traeger-reasonableness-factors][^employee-gagnon-legitimate-purpose-required].
 
 That matters most for ordinary employee covenants. A restraint whose real purpose is to block new competition is not enough. The employer needs a protectable interest such as trade secrets, genuinely confidential information, special customer relationships, workforce stability for an employee-solicitation covenant, or specialized training combined with other protectable factors [^employee-gagnon-competition-not-purpose][^employee-del-rosario-special-training].
-
-> [!NOTE]
-> **Practice note.**
->
-> A Hawaii covenant that fits a familiar category is not automatically enforceable. Keep the record focused on the specific protected interest and on why the restraint is no broader than that interest requires [^employee-gagnon-legitimate-purpose-required][^employee-traeger-reasonableness-factors].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -163,13 +158,13 @@ That is not the same as permission to draft broadly. *Gagnon* refused enforcemen
 
 [^employee-hrs-480-4-ancillary]: **HRS 480-4** — "Notwithstanding subsection (b) and without limiting the application of subsection (a), it shall be lawful for a person to enter into any of the following restrictive covenants or agreements ancillary to a legitimate purpose not violative of this chapter, unless the effect thereof may be substantially to lessen competition or to tend to create a monopoly in any line of commerce in any section of the State: (1) A covenant or agreement by the transferor of a business not to compete within a reasonable area and within a reasonable period of time in connection with the sale of the business; (2) A covenant or agreement between partners not to compete with the partnership within a reasonable area and for a reasonable period of time upon the withdrawal of a partner from the partnership; (3) A covenant or agreement of the lessee to be restricted in the use of the leased premises to certain business or agricultural uses, or covenant or agreement of the lessee to be restricted in the use of the leased premises to certain business uses and of the lessor to be restricted in the use of premises reasonably proximate to any such leased premises to certain business uses; (4) A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent." *Haw. Rev. Stat. 480-4(c).* <https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm>
 
+[^employee-traeger-reasonableness-factors]: **7's Enterprises, Inc. v. Del Rosario** — "As observed in Traeger, courts will find a non-competition provision unreasonable if ‘ ‘(i) it is greater than required for the protection of the person for whose benefit it is imposed; (ii) it imposes undue hardship on the person restricted; or (iii) its benefit to the covenantee is outweighed by injury to the public.’ ’" *7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).* <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=As%20observed%20in%20Traeger%2C%20courts,injury%20to%20the%20public.%E2%80%99%20%E2%80%9D>
+
 [^employee-gagnon-legitimate-purpose-required]: **Prudential Locations, LLC v. Gagnon** — "Even if a restrictive covenant otherwise satisfies the Traeger three-factor reasonableness test, it is unenforceable unless it is ancillary to a legitimate purpose not violative of Chapter 480." *Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).* <https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Even%20if%20a%20restrictive%20covenant,not%20violative%20of%20Chapter%20480.>
 
 [^employee-gagnon-competition-not-purpose]: **Prudential Locations, LLC v. Gagnon** — "Preventing competition, however, is not a legitimate ancillary purpose under HRS § 480-4(a)." *Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).* <https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Preventing%20competition%2C%20however%2C%20is%20not,purpose%20under%20HRS%20%C2%A7%20480%2D4(a).>
 
 [^employee-del-rosario-special-training]: **7's Enterprises, Inc. v. Del Rosario** — "Hence, as a matter of law, we hold that training that provides skills beyond those of a general nature is a legitimate interest which may be considered in weighing the reasonableness of a non-competition covenant, when combined with other factors weighing in favor of a protectable business interest such as trade secrets, confidential information, or special customer relationships." *7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).* <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=Hence%2C%20as%20a%20matter%20of,information%2C%20or%20special%20customer%20relationships.>
-
-[^employee-traeger-reasonableness-factors]: **7's Enterprises, Inc. v. Del Rosario** — "As observed in Traeger, courts will find a non-competition provision unreasonable if ‘ ‘(i) it is greater than required for the protection of the person for whose benefit it is imposed; (ii) it imposes undue hardship on the person restricted; or (iii) its benefit to the covenantee is outweighed by injury to the public.’ ’" *7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).* <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=As%20observed%20in%20Traeger%2C%20courts,injury%20to%20the%20public.%E2%80%99%20%E2%80%9D>
 
 [^interests-hrs-480-4-trade-secrets]: **HRS 480-4** — "A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent." *Haw. Rev. Stat. 480-4(c)(4).* <https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm>
 

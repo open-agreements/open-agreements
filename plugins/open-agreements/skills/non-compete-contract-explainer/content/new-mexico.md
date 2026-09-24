@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Mexico[^about]
 
@@ -44,11 +44,6 @@ New Mexico enforces ordinary employee non-competes only when they are reasonable
 *Lovelace Clinic v. Murphy* is the foundational New Mexico case. It enforced a physician covenant because the restrictions were reasonable, while recognizing the public's competing interests in both free competition and contract enforcement [^lovelace-reasonableness-test]. Later cases restate the same basic frame: non-competes are ordinarily enforceable if the court deems the restraint reasonable [^mcgonigle-ordinary-enforceability].
 
 That does not mean every New Mexico covenant is enforceable. The employer still needs valid consideration, a protectable interest, and a restraint no broader than needed to protect that interest. Covered health-care practitioners also have a statutory ban addressed later in this note.
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not treat New Mexico as either a general ban state or an automatic-enforcement state. Start with consideration and then test the covenant against reasonableness, legitimate interest, employee hardship, and public impact [^lovelace-public-interest][^lovelace-reasonableness-test].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -130,11 +125,6 @@ The statute leaves several tools available. It preserves repayment provisions fo
 
 Two additional limits matter. First, a covered clinical-services agreement cannot avoid New Mexico law through another state's law or an out-of-state litigation forum [^healthcare-choice-law-venue]. Second, the chapter does not apply to agreements between health-care practitioners who are shareholders, owners, partners, or directors of a health-care practice [^healthcare-owner-exemption].
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not use ordinary common-law reasonableness to rescue a covered New Mexico health-care practitioner non-compete. If § 24A-4-2 applies, the non-compete provision is unenforceable, and drafting should shift to the statute's preserved tools: NDAs, capped non-solicits, repayment provisions, and reasonable liquidated damages [^healthcare-ban][^healthcare-nda-nonsolicit][^healthcare-liquidated-damages].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -185,11 +175,11 @@ The sale context does not eliminate reasonableness. It changes the facts that su
 
 [^mcgonigle-ordinary-enforceability]: **Insure New Mexico, LLC v. McGonigle** — "Non-competition covenants are ordinarily enforceable as long as a court deems them reasonable." *Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.* <https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=Non%2Dcompetition%20covenants%20are%20ordinarily%20enforceable,a%20court%20deems%20them%20reasonable.>
 
-[^lovelace-public-interest]: **Lovelace Clinic v. Murphy** — "The public has an interest in seeing that competition is not unreasonably limited or restricted, but it also has an interest in protecting the freedom of persons to contract, and in enforcing contractual rights and obligations." *Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).* <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=The%20public%20has%20an%20interest,enforcing%20contractual%20rights%20and%20obligations.>
-
 [^bowen-facts-particular-case-practice]: **Bowen v. Carlsbad Insurance & Real Estate, Inc.** — "Whether there is a reasonable restraint depends on the facts of a particular case, D. W. Trowbridge Ford, Inc. v. Galyen, 200 Neb. 103, 106 , 262 N.W.2d 442, 445 (1978), and is a matter of law for the courts to decide." *Bowen v. Carlsbad Ins. & Real Estate, Inc., 104 N.M. 514, 724 P.2d 223 (1986).* <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=Whether%20there%20is%20a%20reasonable,for%20the%20courts%20to%20decide.>
 
 [^mcgonigle-general-skills-practice]: **Insure New Mexico, LLC v. McGonigle** — "General skills and knowledge do not rise to the level of trade secrets." *Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.* <https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=General%20skills%20and%20knowledge%20do,the%20level%20of%20trade%20secrets.>
+
+[^lovelace-public-interest]: **Lovelace Clinic v. Murphy** — "The public has an interest in seeing that competition is not unreasonably limited or restricted, but it also has an interest in protecting the freedom of persons to contract, and in enforcing contractual rights and obligations." *Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).* <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=The%20public%20has%20an%20interest,enforcing%20contractual%20rights%20and%20obligations.>
 
 [^piano-continued-employment-illusory]: **Piano v. Premier Distributing Co.** — "Continued at-will employment is an illusory promise that cannot be consideration." *Piano v. Premier Distrib. Co., 2005-NMCA-018, 107 P.3d 11.* <https://www.courtlistener.com/opinion/2509475/piano-v-premier-distributing-co/#:~:text=Continued%20at%2Dwill%20employment%20is%20an,promise%20that%20cannot%20be%20consideration.>
 

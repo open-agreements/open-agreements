@@ -2,7 +2,7 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arizona[^about]
 
@@ -106,11 +106,6 @@ But *Farber* makes clear that the public's interest weighs heavily, and that clo
 
 "In light of the great public policy interest involved in covenants not to compete between physicians, each agreement will be strictly construed for reasonableness."[^q4-farber-strict]
 
-> [!NOTE]
-> **Practice note.**
->
-> Treat a physician non-compete as enforceable only when it is narrowly tailored. Even a covenant that protects a real interest can fail if the restriction on the physician's practice harms patient access; in *Farber* the public-policy interest outweighed the employer's protectable interest [^q4-farber-publicpolicy][^q4-farber-strict].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -155,11 +150,6 @@ A federal court applying Arizona law reached the same result in *Compass Bank v.
 The risk is greatest where a confidentiality clause has no time or geographic limit and reaches information that is not a trade secret.
 
 "Thus, the trial court did not err in finding that the confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-competition agreement."[^q7-orca-defacto]
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A confidentiality or non-solicitation covenant scoped to actual trade secrets and confidential information, with reasonable limits, stays clear of the line; one that broadly restricts a former employee's use of general skills or knowledge does not. An open-ended confidentiality clause can be struck as a disguised non-compete and is subject to the same strict no-rewrite rule [^q7-orca-defacto][^q7-hilb-antipiracy].
 
 > [!CAUTION]
 > **Drafting note.**

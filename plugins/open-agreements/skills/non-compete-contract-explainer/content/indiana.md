@@ -2,7 +2,7 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Indiana[^about]
 
@@ -75,17 +75,17 @@ Even so, consideration is only the threshold. In *Med-1 Solutions* itself the co
 
 Indiana courts evaluate the three dimensions together against the employer's real footprint and the employee's actual role. Duration should match the time needed to protect the interest; geography should track where the employer does business or where the employee held influence; and the restricted activity must relate to the work the employee actually performed [^krueger-scope-burden].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> An overbroad Indiana restraint carries enforcement risk beyond its own unenforceability. An emphatic irreparable-harm recital does not rescue an unreasonable covenant — the reported pattern is injunctions denied because the employer could not carry the reasonableness burden — and a warning letter or notice to a new employer built on a covenant that later fails the reasonableness analysis can become raw material for a tortious-interference claim [^krueger-scope-burden][^med1-any-capacity]. A restraint the employer is prepared to defend on both the legitimate-interest and the reasonableness burdens is the one that supports an injunction and any pre-litigation enforcement step taken on its strength.
+
 The activity dimension is where covenants most often fail. In *Med-1 Solutions*, a clause that would have barred the employee from working for a competitor in *any capacity* — including roles unrelated to any protectable interest — was held unreasonably broad [^med1-any-capacity].
 
 > [!CAUTION]
 > **Drafting note.**
 >
 > A covenant that bars a former employee from a competitor in *any capacity*, or across business lines the employee never touched, is the activity restraint Indiana courts most often strike. The burden sits on the employer, and an all-capacity restraint reaching roles unrelated to any protectable interest is unreasonably broad and unenforceable [^med1-any-capacity]. An activity restriction confined to the employee's actual role and the protected interest is the one that survives.
-
-> [!CAUTION]
-> **Drafting note.**
->
-> An overbroad Indiana restraint carries enforcement risk beyond its own unenforceability. An emphatic irreparable-harm recital does not rescue an unreasonable covenant — the reported pattern is injunctions denied because the employer could not carry the reasonableness burden — and a warning letter or notice to a new employer built on a covenant that later fails the reasonableness analysis can become raw material for a tortious-interference claim [^krueger-scope-burden][^med1-any-capacity]. A restraint the employer is prepared to defend on both the legitimate-interest and the reasonableness burdens is the one that supports an injunction and any pre-litigation enforcement step taken on its strength.
 
 ## Will an Indiana court blue-pencil or reform an overbroad non-compete? {#court-narrowing}
 

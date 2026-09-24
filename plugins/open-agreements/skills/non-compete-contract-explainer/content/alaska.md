@@ -2,7 +2,7 @@
 jurisdiction: "Alaska"
 slug: alaska
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-01"
 human_reviewed_at: null
 next_review_due: "2026-11-28"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alaska[^about]
 
@@ -90,11 +90,6 @@ The same opinion gives the limiting principle. A customer restriction can become
 In *Wenzell*, the covenant arose from a dental-practice sale. Alaska recognized the buyer's legitimate interest in purchased goodwill, while also reading the restraint as a covenant against competition, not a ban on all dentistry in any capacity.
 
 Healthcare facts sharpen the public-interest analysis. Because the challenged work was at a federally funded nonprofit provider offering free or low-cost care, the court held that competition would not be presumed and required proof [^wenzell-low-cost-competition-proof]. If competition exists, the court must still consider whether enforcement would harm the public.
-
-> [!NOTE]
-> **Practice note.**
->
-> Alaska has no published blanket ban on healthcare non-competes, but *Wenzell* makes access-to-care facts important. A provider covenant that affects low-cost services for a population in need should be tested against public injury, not just geographic radius and duration [^wenzell-public-interest-low-cost].
 
 > [!CAUTION]
 > **Drafting note.**

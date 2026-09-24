@@ -1,5 +1,9 @@
 # Us Update Log
 
+## 2026-09-23
+* **Update**: Consolidate adjacent practice-guide cautions (#2206) (d436c41)
+* **Update**: content(ca-ia): cross-family structured-analysis pilot on California's statutory questions, plus pilot lessons (#2773) (faafc1e)
+
 ## 2026-09-03
 * **Update**: fix: sharpen SEO metadata and sitemap indexing (#2425) (c10aed5)
 

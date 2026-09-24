@@ -2,7 +2,7 @@
 jurisdiction: "Ohio"
 slug: ohio
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/ohio · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/ohio · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Ohio[^about]
 
@@ -69,17 +69,17 @@ The rule is not a blank check. Continued employment supplies the consideration, 
 
 *Raimonde* itself lists the factors a court weighs, including whether the employee possessed confidential information or trade secrets and whether the covenant targets unfair competition rather than ordinary competition [^raimonde-confidential-factor]. A covenant that merely suppresses ordinary competition, untethered to a protectable interest, will not stand.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A broad Ohio non-compete draws the heaviest reasonableness scrutiny, while the Ohio Uniform Trade Secrets Act supplies a remedy that does not depend on any covenant: actual or threatened misappropriation of a trade secret may be enjoined under R.C. 1333.62, and the Act protects information that derives independent economic value from secrecy and is the subject of reasonable efforts to keep it secret [^outsa-injunction][^outsa-trade-secret-definition]. A confidentiality and customer-non-solicitation strategy built on that statutory backstop often protects the employer more durably than a non-compete that has to survive the full *Raimonde* analysis, and it holds even where the non-compete is trimmed or declined [^raimonde-confidential-factor].
+
 The Ohio Uniform Trade Secrets Act, codified at R.C. 1333.61 through 1333.69, defines a trade secret by the twin tests of independent economic value from secrecy and reasonable efforts to maintain that secrecy [^outsa-trade-secret-definition]. The Act gives a separate remedy: actual or threatened misappropriation may be enjoined regardless of any contract [^outsa-injunction]. A non-solicitation or confidentiality strategy under the Act is often a stronger backstop than a broad non-compete.
 
 > [!CAUTION]
 > **Drafting note.**
 >
 > An Ohio non-compete that blocks competition disconnected from a protectable interest reaches nothing the law recognizes and fails on the interest requirement: the restraint holds only where it is tied to identified confidential information, trade secrets, or customer goodwill. A separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. survives even where the non-compete does not [^outsa-trade-secret-definition][^raimonde-confidential-factor].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A broad Ohio non-compete draws the heaviest reasonableness scrutiny, while the Ohio Uniform Trade Secrets Act supplies a remedy that does not depend on any covenant: actual or threatened misappropriation of a trade secret may be enjoined under R.C. 1333.62, and the Act protects information that derives independent economic value from secrecy and is the subject of reasonable efforts to keep it secret [^outsa-injunction][^outsa-trade-secret-definition]. A confidentiality and customer-non-solicitation strategy built on that statutory backstop often protects the employer more durably than a non-compete that has to survive the full *Raimonde* analysis, and it holds even where the non-compete is trimmed or declined [^raimonde-confidential-factor].
 
 ## What duration and geographic scope are reasonable for an Ohio non-compete? {#duration-limits}
 
@@ -128,11 +128,6 @@ In *Homan, Inc. v. A1 AG Services, L.L.C.*, the Third District adopted the Sixth
 
 This judicial tolling is equitable rather than automatic, and it operates against the *Raimonde* reasonableness backdrop [^q7-raimonde-reasonableness]. A contractual extension-on-breach clause must itself be reasonable; an open-ended or indefinite extension risks being cut back like any other overbroad term.
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume a fixed Ohio covenant simply lapses on its stated end date while a dispute is pending. Under *Homan*, the period can be tolled during litigation — but draft any extension-on-breach clause as a reasonable, bounded restraint tied to the breach, not an indefinite one [^homan-tolling][^q7-raimonde-reasonableness].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -145,11 +140,6 @@ This judicial tolling is equitable rather than automatic, and it operates agains
 Ohio courts apply a heightened public-interest analysis to physician covenants: a restraint is unreasonable where it imposes undue hardship on the physician and is injurious to the public because the physician's services are vital to the community and the demand for that expertise is critical [^metrohealth-physician-standard]. The principle is long-standing — in *Williams v. Hobbs*, the court affirmed findings that a physician's services were vital to the public and that the covenant was injurious to the public [^williams-public-injury].
 
 There is no enacted Ohio statute banning health care non-competes today. A pending bill, Senate Bill 301, would let a nonprofit hospital impose only a limited restriction on certain clinicians — no more than six months and within a fifteen-mile radius — and would void waivers of that protection [^sb301-healthcare-cap]. It has not become law.
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not draft a physician or other health care non-compete in Ohio as if it were an ordinary commercial restraint. Expect heightened public-interest scrutiny under *MetroHealth* and *Williams*, and monitor Senate Bill 301, which would cap covered hospital clinician covenants if enacted [^metrohealth-physician-standard][^sb301-healthcare-cap].
 
 > [!CAUTION]
 > **Drafting note.**

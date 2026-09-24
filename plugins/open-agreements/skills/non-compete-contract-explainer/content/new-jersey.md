@@ -2,7 +2,7 @@
 jurisdiction: "New Jersey"
 slug: new-jersey
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-jersey · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-jersey · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Jersey[^about]
 
@@ -46,11 +46,6 @@ The standard comes from two early-1970s New Jersey Supreme Court decisions, *Sol
 The three prongs — legitimate interest, undue hardship, and public interest — are weighed together, and the New Jersey Supreme Court restated them in the modern physician case *Community Hospital Group, Inc. v. More* [^more-three-prong].
 
 A covenant tied to the sale of a business is treated more leniently. *Whitmyer* explains that a seller's covenant protecting the goodwill sold to the buyer is freely enforceable, whereas an employee's post-employment covenant is scrutinized more closely because of the policy favoring employee mobility [^whitmyer-sale-of-business].
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not treat New Jersey as either a free-for-all or a ban state. Test the restraint against all three *Solari/Whitmyer* prongs — legitimate interest, undue hardship, and public interest — before assuming a New Jersey covenant is enforceable [^solari-three-prong].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -102,17 +97,12 @@ Because the analysis is holistic, a restraint matched to the employee's actual t
 
 *Solari* is the foundational statement: New Jersey rejected the rule that an overbroad covenant is wholly void and adopted partial enforcement to the extent reasonable under the circumstances [^solari-partial-enforcement]. Applying New Jersey law, the Third Circuit in *ADP, LLC v. Rafferty* described curtailing an overbroad covenant's scope as the approach prescribed by the New Jersey Supreme Court [^rafferty-curtail-scope].
 
-That reformation power is not a license to overreach. Reformation is an equitable remedy, and an employer that drafts an abusively broad covenant cannot assume a court will rewrite it into something enforceable. For a clause-by-clause pass over a specific agreement, the [New Jersey non-compete reviewer checklist](/checklists/non-compete/us/new-jersey) walks the full covenant suite item by item with each requirement's force level.
-
-> [!CAUTION]
-> **Drafting note.**
->
-> New Jersey's reformation power is not a safety net for an aggressive covenant. Reformation is an equitable remedy, so a covenant drawn from the start as a tiered, severable, reasonable restraint is enforced as written, while a court narrowing in equity may decline to rescue one it views as overreaching [^solari-partial-enforcement][^rafferty-curtail-scope].
-
 > [!CAUTION]
 > **Drafting note.**
 >
 > Reformation is a backstop, not a license to overreach. New Jersey abandoned the void-per-se rule in favor of total or partial enforcement of a covenant to the extent reasonable, and curtailing an overbroad covenant's scope is the approach the state's courts prescribe [^solari-partial-enforcement][^rafferty-curtail-scope]. But reformation is an equitable remedy, so a covenant drawn from the start as a tiered, severable, reasonable restraint sized to the Protected Interests is enforced as written, while an aggressive one is exposed to a court that declines to rewrite it. That exposure carries into enforcement conduct: a notice to a future employer built on a covenant that later fails or is narrowed can support a tortious-interference claim, so a disclosure kept factual and tied to a restraint defensible on all three prongs stays within the good-faith posture the reformation power rewards [^rafferty-curtail-scope].
+
+That reformation power is not a license to overreach. Reformation is an equitable remedy, and an employer that drafts an abusively broad covenant cannot assume a court will rewrite it into something enforceable. For a clause-by-clause pass over a specific agreement, the [New Jersey non-compete reviewer checklist](/checklists/non-compete/us/new-jersey) walks the full covenant suite item by item with each requirement's force level.
 
 ## How does New Jersey treat customer and employee non-solicitation covenants? {#non-solicitation}
 
@@ -121,11 +111,6 @@ That reformation power is not a license to overreach. Reformation is an equitabl
 In *ADP, LLC v. Kusins*, the Appellate Division reviewed customer and employee non-solicitation provisions and applied blue-penciling — a court's modification or tailoring of a restrictive covenant — to narrow them to what reasonably protected the employer's interests [^kusins-blue-pencil-definition]. In related ADP litigation, the Third Circuit, applying New Jersey law, concluded that ADP's tiered restrictive covenants furthered legitimate business interests and complied with New Jersey public policy [^rafferty-legitimate-interests].
 
 A narrowly drawn non-solicitation clause — limited to customers the employee actually served or learned about — is generally easier to enforce than a broad covenant against all competition.
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A customer non-solicit that reaches every client regardless of the employee's contact with them is overbroad on its face. New Jersey courts blue-pencil overbroad non-solicitation clauses, so a covenant confined to customers the employee actually served or learned about survives as drawn, while a broader one is narrowed by the court to whatever reasonably protects the employer's interest [^kusins-blue-pencil-definition].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -153,11 +138,6 @@ New Jersey has long declined to treat physician covenants as per se void — the
 
 For shortage specialties and on-call coverage, expect courts to scrutinize whether enforcement would deprive the community of needed care.
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume a physician covenant fails or succeeds on duration and territory alone. In New Jersey the public-interest prong can shrink or defeat a health-care covenant where enforcement would limit patient access to needed care [^q8-more-geography-reduced][^pierson-physician-standard].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -169,24 +149,19 @@ For shortage specialties and on-call coverage, expect courts to scrutinize wheth
 
 The Board of Psychological Examiners rule, N.J.A.C. 13:42-10.16, prohibits a licensee from entering any business agreement that interferes with or restricts a client's access to the therapist of choice [^njac-therapist-choice]. In *Prince*, the Appellate Division read that rule as a restriction on psychologist covenants and emphasized that the uniquely personal patient-psychologist relationship forbids restraints that interfere with ongoing treatment [^prince-treatment-interference]. The court explained the rule shifts the focus from the psychologist's rights to the patient's rights [^prince-patient-rights].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant that would keep a client from continuing with a chosen psychologist is void to that extent, independent of how its time and territory read. N.J.A.C. 13:42-10.16 forbids a licensed psychologist from entering any business agreement that interferes with or restricts a client's ability to see the therapist of choice [^njac-therapist-choice], and the uniquely personal patient-psychologist relationship forbids restraints that interrupt an ongoing course of treatment [^prince-treatment-interference]. The rule shifts the focus from the psychologist's rights to the patient's, so a covenant whose duration and territory look reasonable still fails to the extent it cuts a client off from the treating psychologist [^prince-patient-rights].
+
 Attorneys are the other clear example, and here the limit is stricter than ordinary reasonableness. RPC 5.6 prohibits a lawyer from making a partnership or employment agreement that restricts the right to practice law after the relationship ends, apart from retirement benefits [^rpc-attorney-restriction]. In *Jacob v. Norris, McLaughlin & Marcus*, the New Jersey Supreme Court held that this rule reaches not only outright bans but also indirect financial-disincentive provisions — clauses that strip compensation from a departing lawyer who keeps serving firm clients — because they violate the language and spirit of RPC 5.6 [^jacob-indirect-restriction]. Such a provision is unenforceable as against public policy [^jacob-public-policy].
 
 The analysis does not soften for in-house counsel. The Advisory Committee on Professional Ethics concluded in Opinion 708 that corporate and in-house counsel practicing in New Jersey must follow the Rules of Professional Conduct, including RPC 5.6, whether or not they are admitted in the State [^acpe-708-inhouse]. An employer therefore cannot bind its in-house lawyers with a covenant that RPC 5.6 would forbid for outside counsel.
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not analyze a psychologist's covenant under ordinary reasonableness alone. N.J.A.C. 13:42-10.16 can bar enforcement where the covenant would interfere with a client's access to the therapist of choice, regardless of how reasonable the time and territory look [^njac-therapist-choice][^prince-treatment-interference].
 
 > [!CAUTION]
 > **Drafting note.**
 >
 > A covenant that restrains a lawyer's practice after the relationship ends is void, apart from an agreement concerning retirement benefits. RPC 5.6 bars a lawyer from participating in a partnership or employment agreement that restricts post-termination practice rights [^rpc-attorney-restriction], and that bar reaches indirect financial disincentives — such as compensation forfeitures aimed at a departing lawyer who keeps serving firm clients — not just outright bans, so a clause dressed as a forfeiture rather than a prohibition still falls as against public policy [^jacob-indirect-restriction][^jacob-public-policy]. The bar reaches in-house and corporate counsel practicing in New Jersey whether or not admitted in the State, so an employer cannot bind its in-house lawyers with a restraint RPC 5.6 would forbid for outside counsel [^acpe-708-inhouse].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A covenant that would keep a client from continuing with a chosen psychologist is void to that extent, independent of how its time and territory read. N.J.A.C. 13:42-10.16 forbids a licensed psychologist from entering any business agreement that interferes with or restricts a client's ability to see the therapist of choice [^njac-therapist-choice], and the uniquely personal patient-psychologist relationship forbids restraints that interrupt an ongoing course of treatment [^prince-treatment-interference]. The rule shifts the focus from the psychologist's rights to the patient's, so a covenant whose duration and territory look reasonable still fails to the extent it cuts a client off from the treating psychologist [^prince-patient-rights].
 
 ## Can confidentiality and non-disparagement clauses replace a New Jersey non-compete? {#confidentiality-lad}
 
@@ -195,11 +170,6 @@ The analysis does not soften for in-house counsel. The Advisory Committee on Pro
 The New Jersey Trade Secrets Act gives employers a statutory remedy for misappropriation, which is often a better fit than a non-compete when the real concern is protecting confidential information [^njtsa-short-title]. But confidentiality and non-disparagement language has a New Jersey-specific limit: N.J.S.A. 10:5-12.8(a) makes any provision whose purpose or effect is to conceal the details of a discrimination, retaliation, or harassment claim unenforceable [^lad-conceal-unenforceable]. The New Jersey Supreme Court applied that rule in *Savage v. Township of Neptune*, holding a non-disparagement clause unenforceable and explaining that the label on the clause does not control [^savage-nondisparagement-void][^savage-labels-dont-control].
 
 Importantly, the same statute expressly preserves traditional non-competes and proprietary-information agreements, so the discrimination-concealment rule does not bar an ordinary non-compete [^lad-noncompete-carveout]. Trying to enforce a barred concealment provision also carries a fee-shifting penalty [^lad-fee-shifting].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A confidentiality or non-disparagement clause that would conceal the details of a discrimination, retaliation, or harassment claim is unenforceable in New Jersey, and a party that tries to enforce it is exposed to the employee's attorney fees and costs. The bar turns on the provision's purpose or effect rather than its label, so a concealment clause dressed as ordinary confidentiality falls the same way [^lad-conceal-unenforceable][^lad-fee-shifting].
 
 > [!CAUTION]
 > **Drafting note.**

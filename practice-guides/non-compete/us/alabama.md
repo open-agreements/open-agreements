@@ -142,11 +142,6 @@ So a professional cannot be barred from practicing, but conduct outside that pra
 >
 > A member of a recognized Alabama profession cannot be barred from practicing that profession, even by a covenant that would otherwise fit a § 8-1-190(b) category: § 8-1-196 preserves the common-law professional exemption, and a professional cannot fall within the statutory exceptions at all, so a covenant restraining professional practice is void on that ground [^ala-8-1-196][^friddle-cannot-fall]. The exemption reaches only the practice of the profession, so a restraint on business conduct outside that practice — *Benchmark*'s example of acquiring competing practices purely as an investment without managing them — can still operate, and the confidentiality, trade-secret, and property-return obligations survive to the extent they do not bar the practice itself [^benchmark-scope].
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume a non-compete will keep a licensed professional from practicing in Alabama. Because § 8-1-196 preserves the common-law professional exemption, a covenant cannot bar a physician, accountant, veterinarian, physical therapist, or similar professional from practicing the profession, even when it would otherwise fit a statutory category, though restrictions on business activity outside that practice may still operate [^ala-8-1-196][^benchmark-scope].
-
 ## Does a tolling or extension-during-breach clause extend an Alabama non-compete? {#extended-for-breach}
 
 **Short answer.** Alabama law does not answer this directly. No Alabama appellate decision under the 2016 Act addresses a clause that pauses or extends the restricted period during breach or litigation, and a tolling clause that pushes the effective restraint past the presumptively reasonable window is exposed to reformation as an unreasonable duration [^q8-ala-8-1-190-2yr][^q8-ala-8-1-193-reform].

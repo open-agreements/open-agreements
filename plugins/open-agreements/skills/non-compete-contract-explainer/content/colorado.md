@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Colorado[^about]
 
@@ -96,11 +96,6 @@ Colorado previously allowed physician agreements to require liquidated damages t
 >
 > For an agreement entered into or renewed on or after August 6, 2025, a covenant not to compete or not to solicit customers that restricts the practice of medicine, advanced practice registered nursing, or dentistry is void regardless of the worker's compensation, so the highly compensated worker threshold no longer rescues it [^sb25083-health-care-carveout][^sb25083-health-care-provider-definition]. Draft to the broader defined class rather than the three-practice list: a certified midwife is a health-care provider for the patient-communication rule, and the bill's fiscal note treats midwifery as covered even though the codified practice list omits it. A clause restricting a departing provider from telling patients about the provider's continuing practice, new professional contact information, or the patient's right to choose a provider is separately void [^sb25083-patient-communication].
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not rely on the older physician rule that allowed liquidated-damages clauses in place of a non-compete. For health-care providers under agreements entered into or renewed on or after August 6, 2025, the covenant is void regardless of compensation, and a clause restricting patient communications is separately void [^sb25083-health-care-carveout][^sb25083-patient-communication].
-
 ## Are sale-of-business non-competes enforceable in Colorado, including for minority owners? {#sale-of-business}
 
 **Short answer.** Yes for an owner, with a cap for minority owners. Subsection (2) does not prohibit a covenant not to compete related to the purchase and sale of a business, an ownership share in it, or substantially all of its assets, but only where the covenant restricts competition by an owner of an interest in the business — and for an owner who holds a minority share received as equity compensation, SB 25-083 caps the non-compete's duration by a formula [^crs-sale-of-business][^sb25083-minority-owner-formula].
@@ -122,11 +117,6 @@ If the employer overreaches, the attorney general can recover three times the am
 > **Drafting note.**
 >
 > A training-repayment provision reaches only the reasonable cost of training that is distinct from normal on-the-job training and that satisfies the attorney general's transferability rules, with the recoverable amount decreasing over the two years after the training; ordinary onboarding, routine skills training, and a flat amount untethered from documented cost fall outside the carve-out [^crs-traps]. The exposure for overreaching runs to the attorney general, who may recover three times the amount of any recovery or attempted recovery made in violation of the carve-out [^crs-traps-treble].
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not treat ordinary onboarding or routine skills training as recoverable. A Colorado training-repayment provision is enforceable only for training distinct from normal on-the-job training that satisfies the attorney general's transferability rules, and an unlawful attempt to recover exposes the employer to treble damages [^crs-traps][^crs-traps-treble].
 
 ## Are confidentiality and nondisclosure covenants still allowed in Colorado? {#confidentiality-covenants}
 

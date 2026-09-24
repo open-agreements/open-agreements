@@ -18,6 +18,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Checklists](checklists/)
 * [Corporate Governance](corporate-governance/)
 * [Founder Separation](founder-separation/)
+* [International Agreements](international-agreements/)
 * [Invention Assignment](invention-assignment/)
 * [Legal Due Diligence](legal-due-diligence/)
 * [Non Compete](non-compete/)

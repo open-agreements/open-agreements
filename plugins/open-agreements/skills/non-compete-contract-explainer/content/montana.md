@@ -2,7 +2,7 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Montana[^about]
 
@@ -83,11 +83,6 @@ The practical rule is timing-sensitive. A covenant presented as part of pre-empl
 The reason is practical and equitable. If the employer could avoid competition by keeping the worker employed, then firing the worker and still blocking the worker's livelihood looks like ordinary competition prevention rather than legitimate protection.
 
 *Wrigg* leaves room for a different result when the employee's conduct gives the employer a real protective interest. Trade-secret misuse, customer-relationship misuse, or proprietary-information misuse can change the analysis, but the employer must prove the risk [^wrigg-misconduct-exception][^wrigg-trade-secret-analysis].
-
-> [!NOTE]
-> **Practice note.**
->
-> Before sending an enforcement letter after a layoff, nonrenewal, or termination without cause, identify a Montana-specific legitimate interest beyond ordinary competition. *Wrigg* makes employer-initiated separation a major enforcement problem [^wrigg-employer-termination].
 
 > [!CAUTION]
 > **Drafting note.**

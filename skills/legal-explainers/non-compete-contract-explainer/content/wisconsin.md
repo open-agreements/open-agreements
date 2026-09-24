@@ -2,7 +2,7 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wisconsin[^about]
 
@@ -228,11 +228,6 @@ Two companion bills targeted health care, mirroring a national trend toward rest
 All three measures failed to pass when the 2025-26 session ended, so none became law and § 103.465 continues to govern. One profession is already carved out by court rule: Wisconsin lawyers generally cannot be bound by non-competes.
 
 "A lawyer shall not participate in offering or making: (a) a partnership, shareholders, operating, employment, or other similar type of agreement that restricts the right of a lawyer to practice after termination of the relationship, except an agreement concerning benefits upon retirement; or (b) an agreement in which a restriction on the lawyer's right to practice is part of the settlement of a client controversy."[^q11-scr]
-
-> [!NOTE]
-> **Practice note.**
->
-> Treat Wisconsin non-compete law as governed by § 103.465 and the case law, not by the 2025-26 bills. Assembly Bill 567 and the medical-practitioner bills (Assembly Bill 675 and Senate Bill 657) failed to pass, so re-check the legislature's status before relying on any of them, and remember that SCR 20:5.6 already bars most lawyer non-competes [^q11-ab567][^q11-scr].
 
 > [!CAUTION]
 > **Drafting note.**

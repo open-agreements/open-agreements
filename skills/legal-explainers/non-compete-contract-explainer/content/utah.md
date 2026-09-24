@@ -2,7 +2,7 @@
 jurisdiction: "Utah"
 slug: utah
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Utah[^about]
 
@@ -71,11 +71,6 @@ Reasonableness is fact-specific, decided case by case on the particular circumst
 
 Good faith is a live part of the test, not a formality. The Court of Appeals noted that the good-faith prong could be implicated where an employer quickly hires and fires an at-will employee with the sole intent of binding them to a long restrictive covenant [^reason-good-faith].
 
-> [!NOTE]
-> **Practice note.**
->
-> Tie the restriction to a specific, provable interest. A covenant that reaches an employee's general skills or ordinary competition, rather than the employer's goodwill or confidential information, risks being held unreasonable even within the one-year cap [^reason-legitimate-interests][^reason-four-part].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -108,11 +103,6 @@ That makes scope proportional. A purely local employer cannot lock down the whol
 **Short answer.** The employer pays. If an employer pursues arbitration or a civil action to enforce a non-compete that is then found unenforceable, the statute makes the employer liable for the employee's arbitration costs, attorney fees and court costs, and actual damages [^fee-shift].
 
 This asymmetric fee-shifting is the teeth of the Act. It applies not only to non-competes but also to healthcare non-competes, nondisclosure clauses, and nonsolicitation agreements that an employer tries and fails to enforce [^fee-shift]. The practical effect is to discourage employers from using overbroad covenants as a low-cost deterrent.
-
-> [!NOTE]
-> **Practice note.**
->
-> Before sending an enforcement demand or filing suit on a Utah non-compete, weigh the downside: losing on enforceability does not just void the clause, it transfers the employee's fees, costs, and damages to the employer [^fee-shift].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -148,11 +138,6 @@ These exceptions exist because the situations differ from ordinary employment. A
 **Short answer.** Yes, as of May 6, 2026. A person and a healthcare worker may not enter into a healthcare non-compete agreement, and a person and a veterinarian may not enter into a veterinarian non-compete agreement unless the veterinarian holds at least a 5% ownership interest in the business [^hc-ban][^vet-ban][^vet-exception].
 
 The bans reach beyond pure non-competes. From the same date, a healthcare nonsolicitation agreement may not prevent a healthcare worker from telling a patient where they currently or will work [^hc-nonsolicit]. *Healthcare worker* is a defined statutory term tied to specific clinical licenses, and the ban's coverage turns on whether the worker's role actually requires practicing under that license [^hc-worker-def].
-
-> [!NOTE]
-> **Practice note.**
->
-> Treat the May 6, 2026 healthcare and veterinarian provisions as the current rule, not pending legislation; they are codified in the Post-Employment Restrictions Act and took effect on that date. The bans apply to agreements *entered into* on or after May 6, 2026, so audit your templates and any covenant with clinical staff or veterinarians that you sign, renew, or amend on or after that date [^hc-ban][^vet-ban].
 
 > [!CAUTION]
 > **Drafting note.**

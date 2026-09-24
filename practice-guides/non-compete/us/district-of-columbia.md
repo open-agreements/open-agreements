@@ -157,11 +157,6 @@ Enforcement is real. In November 2023, the Attorney General announced settlement
 
 The duration limits are written as hard caps: a non-medical highly compensated employee's term of non-competition may not exceed 365 calendar days, and a medical specialist's may not exceed 730 calendar days, each measured from the date of separation — not from the end of any breach [^tolling-duration-cap]. A tolling-on-breach clause that pushes enforcement past those caps would be in tension with the statutory ceiling. Because the District has no decision resolving whether a contractual extension survives, the safest reading is that an employer cannot rely on one.
 
-> [!NOTE]
-> **Practice note.**
->
-> Open question: District law does not say whether a clause extending the restricted period during a breach is enforceable, and the statute caps the term in calendar days measured from separation. Whether a District court will toll or extend an expired non-compete is unsettled, and a highly compensated employee's covenant that depends on running past the 365-day or 730-day cap sits in tension with the statutory ceiling [^tolling-duration-cap][^tolling-cumulative].
-
 > [!CAUTION]
 > **Drafting note.**
 >

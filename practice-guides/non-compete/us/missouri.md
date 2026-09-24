@@ -52,19 +52,14 @@ The trade-secret interest is defined by the Missouri Uniform Trade Secrets Act, 
 
 Section 431.202 reaches a covenant promising not to solicit, recruit, hire, or otherwise interfere with the employment of one or more of the employer's employees — an anti-raiding or no-hire covenant, not a customer restriction. Such a covenant is enforceable when it protects the employer's confidential information or its customer or supplier relationships, goodwill, or loyalty, or even without one of those interests if it runs no more than one year — except that the one-year route does not apply to employees who provide only secretarial or clerical services [^section-431-202-clerical]. Section 431.202 is not a general non-compete statute; it expressly does not create or affect the enforceability of employer-employee covenants not to compete, which remain governed by the common-law reasonableness test [^section-431-202-presumption].
 
-"Whether a covenant covered by this section is reasonable shall be determined based upon the facts and circumstances pertaining to such covenant, but a covenant covered exclusively by subdivision (3) or (4) of subsection 1 of this section shall be conclusively presumed to be reasonable if its postemployment duration is no more than one year."[^section-431-202-presumption]
-
-Customer non-solicitation is a separate, common-law inquiry. In *Whelan*, the Missouri Supreme Court found a customer non-solicitation clause overbroad as written because it reached customers regardless of the employee's relationship with them — including prospective customers — beyond the employer's legitimate customer-contacts interest [^whelan-customer-overbroad].
-
-> [!NOTE]
-> **Practice note.**
->
-> Draft an employee no-hire or anti-raiding covenant to one year or less to capture the section 431.202 conclusive presumption, and do not rely on the one-year route for purely secretarial or clerical staff. For a customer non-solicit — which section 431.202 does not cover — the safest course is to limit it to customers the employee actually serviced, the group *Whelan* left enforceable after striking the overbroad reach [^section-431-202-presumption][^section-431-202-clerical][^whelan-customer-overbroad].
-
 > [!CAUTION]
 > **Drafting note.**
 >
 > An employee no-hire or anti-raiding covenant in the agreement is measured against the section 431.202 safe harbor: a covenant resting on no separate protectable interest is conclusively presumed reasonable only where its post-employment duration runs no more than one year, so a term set past one year loses that conclusive presumption and falls back to a facts-and-circumstances reasonableness inquiry [^section-431-202-presumption]. The one-year route does not reach an employee who provided only secretarial or clerical services, so a covenant that binds clerical staff on the strength of duration alone sits outside the safe harbor and stands only on an independent protectable interest [^section-431-202-clerical].
+
+"Whether a covenant covered by this section is reasonable shall be determined based upon the facts and circumstances pertaining to such covenant, but a covenant covered exclusively by subdivision (3) or (4) of subsection 1 of this section shall be conclusively presumed to be reasonable if its postemployment duration is no more than one year."[^section-431-202-presumption]
+
+Customer non-solicitation is a separate, common-law inquiry. In *Whelan*, the Missouri Supreme Court found a customer non-solicitation clause overbroad as written because it reached customers regardless of the employee's relationship with them — including prospective customers — beyond the employer's legitimate customer-contacts interest [^whelan-customer-overbroad].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -94,11 +89,6 @@ In *Sigma-Aldrich*, the court of appeals affirmed both the trial court's refusal
 
 "Accordingly, when the provisions of a non-compete clause impose a restraint that is unreasonably broad, appellate courts still can give effect to its purpose by refusing to give effect to the unreasonable terms or modifying the terms of the contract to be reasonable."[^whelan-modification]
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not rely on a court to rewrite an overbroad covenant. Drafting to the outer edge risks both non-enforcement, if the court declines to modify, and forfeiture of a contractual attorney's-fee award even when the covenant is ultimately enforced as modified [^sigma-refused-modification][^paradise-prevailing-party].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -109,11 +99,6 @@ In *Sigma-Aldrich*, the court of appeals affirmed both the trial court's refusal
 **Short answer.** Missouri law does not squarely answer this. Neither the non-solicitation safe harbor nor the owner-covenant statute addresses whether a restricted period pauses (tolls) while a former employee is violating the covenant or while litigation is pending, and Missouri appellate courts have not laid down a clear rule on judicial or contractual tolling for non-competes [^tolling-431-202-duration][^tolling-whelan-time].
 
 This is an open question, so treat it conservatively. The statutory presumptions in section 431.202 are framed around a fixed post-employment duration, and *Whelan* measures reasonableness against the covenant's stated time and geographic terms — so a clause that effectively lengthens the restraint by tolling could be tested against those same reasonableness and safe-harbor limits [^tolling-431-202-duration][^tolling-whelan-time].
-
-> [!NOTE]
-> **Practice note.**
->
-> If you want the restricted period to extend during a breach, say so expressly in the covenant rather than assuming a court will toll it — Missouri has no clear authority requiring judicial tolling. But keep the total potential restraint within a reasonable duration: an extension that pushes a one-year non-solicit past the section 431.202 safe harbor, or a non-compete past what *Whelan* would consider reasonable in time, may invite a reasonableness challenge [^tolling-431-202-duration][^tolling-whelan-time].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -138,11 +123,6 @@ Section 431.204 also imposes a mandatory reformation rule that differs sharply f
 **Short answer.** Not yet by statute. Physician non-competes in Missouri are still governed by the common-law reasonableness test, and repeated legislative attempts to cap them have not become law [^physician-copeland][^hb-2979-physician-bill].
 
 Missouri legislators have repeatedly introduced bills to cap physician covenants in recent sessions. The most recent, the 2026 Missouri Rural Doctors Act (HB 2979), would make a physician non-compete with a nonprofit employer enforceable only in a clinical setting and only within 365 days and five miles, with a carve-out for research university hospitals [^hb-2979-physician-bill]. As of this review none of these bills had been enacted, so physician covenants remain governed by the common-law reasonableness standard [^physician-copeland].
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume Missouri has a physician non-compete cap; healthcare covenants are still tested under the *Copeland* reasonableness standard. Watch the legislature, because the 365-day, five-mile framework in HB 2979 could re-emerge in a future session [^physician-copeland][^hb-2979-physician-bill].
 
 > [!CAUTION]
 > **Drafting note.**

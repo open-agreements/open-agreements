@@ -71,7 +71,8 @@
 * [Battelle Energy Alliance, LLC v. Southfork Security, Inc.](battelle-energy-alliance-llc-v-southfork-security-inc-95eea6.md) - Battelle Energy Alliance, LLC v. Southfork Security, Inc., 980 F. Supp. 2d 1211 (D. Idaho 2013). — quoted in 1 document(s).
 * [Battelle Energy Alliance, LLC v. Southfork Security, Inc.](battelle-energy-alliance-llc-v-southfork-security-inc.md) - Battelle Energy Alliance, LLC v. Southfork Security, Inc., 3 F. Supp. 3d 852 (D. Idaho 2014). — quoted in 1 document(s).
 * [Bayly, Martin & Fay, Inc. v. Pickard](bayly-martin-fay-inc-v-pickard.md) - Bayly, Martin & Fay, Inc. v. Pickard, 1989 OK 122, 780 P.2d 1168. — quoted in 2 document(s).
-* [Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Systems](bd-of-trustees-of-the-leland-stanford-junior-univ-v-roche-molecular-systems.md) - Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Sys., Inc., 563 U.S. 776 (2011). — quoted in 57 document(s).
+* [Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Systems](bd-of-trustees-of-the-leland-stanford-junior-univ-v-roche-molecular-systems-990cda.md) - Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Sys., Inc., 563 U.S. 776 (2011). — quoted in 57 document(s).
+* [Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Systems](bd-of-trustees-of-the-leland-stanford-junior-univ-v-roche-molecular-systems.md) - Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Sys., Inc., 583 F.3d 832, 842 (Fed. Cir. 2009). — quoted in 1 document(s).
 * [BDO Seidman v. Hirshberg](bdo-seidman-v-hirshberg.md) - BDO Seidman v. Hirshberg, 93 N.Y.2d 382 (1999). — quoted in 3 document(s).
 * [Becker v. Bailey](becker-v-bailey.md) - Becker v. Bailey, 268 Md. 93 (1973). — quoted in 2 document(s).
 * [Beilfuss v. Huffy Corp.](beilfuss-v-huffy-corp.md) - Beilfuss v. Huffy Corp., 2004 WI App 118. — quoted in 2 document(s).
@@ -134,6 +135,7 @@
 * [Columbus Medical Services, LLC v. Thomas](columbus-medical-services-llc-v-thomas.md) - Columbus Medical Services, LLC v. Thomas, 308 S.W.3d 368, 374 (Tenn. Ct. App. 2009). — quoted in 2 document(s).
 * [Commodity Futures Trading Comm'n v. Weintraub, 471 U.S. 343 (1985)](commodity-futures-trading-comm-n-v-weintraub-471-u-s-343-1985.md) - Commodity Futures Trading Comm'n v. Weintraub, 471 U.S. 343 (1985). — quoted in 1 document(s).
 * [Communication Technical Sys., Inc. v. Densmore](communication-technical-sys-inc-v-densmore.md) - Communication Technical Sys., Inc. v. Densmore, 1998 S.D. 87, ¶ 27, 583 N.W.2d 125. — quoted in 2 document(s).
+* [Community for Creative Non-Violence v. Reid](community-for-creative-non-violence-v-reid.md) - Cmty. for Creative Non-Violence v. Reid, 490 U.S. 730, 751 (1989). — quoted in 1 document(s).
 * [Community Hospital Group, Inc. v. More](community-hospital-group-inc-v-more.md) - Community Hospital Group, Inc. v. More, 183 N.J. 36 (2005). — quoted in 2 document(s).
 * [Compass Bank v. Hartley](compass-bank-v-hartley.md) - Compass Bank v. Hartley, 430 F. Supp. 2d 989 (D. Ariz. 2006). — quoted in 2 document(s).
 * [Comprehensive Psychology System, P.C. v. Prince](comprehensive-psychology-system-p-c-v-prince.md) - Comprehensive Psychology Sys., P.C. v. Prince, 375 N.J. Super. 273 (App. Div. 2005). — quoted in 2 document(s).

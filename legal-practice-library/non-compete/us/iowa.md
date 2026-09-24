@@ -2,8 +2,8 @@
 type: State Law Practice Guide
 title: Non-Competes in Iowa
 description: >-
-  Iowa non-compete law uses a three-prong common-law reasonableness test,
-  permits judicial reformation through a 'purple pencil' approach, leaves
+  Iowa non-compete law uses a three-prong common-law reasonableness test, lets a
+  court partially enforce an overbroad covenant rather than void it, leaves
   tolling unresolved, carves out narrow industry bans for mental health,
   health-care staffing, franchise, and UIHC clinical roles, and preserves
   trade-secret alternatives under chapter 550.
@@ -16,7 +16,7 @@ tags:
 
 # Non-Competes in Iowa[^about]
 
-Iowa non-compete law uses a three-prong common-law reasonableness test, permits judicial reformation through a 'purple pencil' approach, leaves tolling unresolved, carves out narrow industry bans for mental health, health-care staffing, franchise, and UIHC clinical roles, and preserves trade-secret alternatives under chapter 550.
+Iowa non-compete law uses a three-prong common-law reasonableness test, lets a court partially enforce an overbroad covenant rather than void it, leaves tolling unresolved, carves out narrow industry bans for mental health, health-care staffing, franchise, and UIHC clinical roles, and preserves trade-secret alternatives under chapter 550.
 
 ## Are employee non-compete agreements enforceable in Iowa? {#employee-non-compete-enforceability}
 
@@ -37,11 +37,6 @@ The Iowa Supreme Court stated the test directly in *Lamp v. American Prosthetics
 "Because this case was tried in equity, our review is de novo. Iowa R.App.P. 4. In deciding whether to enforce a restrictive covenant, the court will apply a three-pronged test: (1) Is the restriction reasonably necessary for the protection of the employer’s business; (2) is it unreasonably restrictive of the employee’s rights; and (3) is it prejudicial to the public interest?"[^q2-lamp-three-prong]
 
 The burden does not shift to the former employee. *Iowa Glass Depot* places reasonableness on the party seeking enforcement, and it also frames the analysis as a balance between fair protection for the employer and unnecessary interference with the employee [^q2-iowa-glass-burden].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> Every covenant in the agreement stands or falls on Iowa's three-prong reasonableness test, and there is no general Iowa non-compete statute or statutory safe harbor to fall back on: a restraint holds only where it is reasonably necessary to protect the employer, not unreasonably restrictive of the employee, and not prejudicial to the public interest [^q2-lamp-three-prong]. The employer seeking enforcement carries the burden of proving reasonableness, so an acknowledgment of reasonableness written into the agreement does not carry it — each covenant clears the test only on its own record of duration, territory, and scope [^q2-iowa-glass-burden]. Adequate consideration establishes only that the covenants are supported at formation, not that they are reasonable, and continued employment sufficient as consideration does not by itself make an unreasonable covenant enforceable. A restraint tied to named competitors and sized to the employer's actual market is the defensible one, and the gate travels with an assignment: reasonable necessity is re-weighed against a successor's own customer relationships and footprint, so a restraint sized to one employer does not automatically fit a buyer.
 
 ## What legitimate business interests can an Iowa non-compete protect? {#legitimate-business-interest}
 
@@ -74,7 +69,7 @@ By contrast, *AG Spectrum* held a three-year restraint unreasonable on a record 
 
 **Short answer.** Usually it may reform. Iowa rejected a strict all-or-nothing approach and allows partial enforcement to the extent reasonably necessary to protect legitimate interests, unless the facts show bad faith or oppression [^q5-ehlers-reform].
 
-This is Iowa's version of a *purple pencil* rule. In *Ehlers*, the Iowa Supreme Court overruled the prior all-or-nothing rule and adopted partial enforcement for employment covenants.
+In *Ehlers*, the Iowa Supreme Court rejected the prior all-or-nothing rule and adopted partial enforcement for employment covenants. A court may enforce only the reasonable portion of an overbroad covenant.
 
 "I. In view of the position we take here, it is unnecessary to discuss these propositions separately. We now overrule Brecher v. Brown (1945), 235 Iowa 627 , 17 N.W.2d 377 , and adopt the rule that unless the facts and circumstances indicate bad faith on the part of the employer, we will enforce noncompetitive covenants to the extent they are reasonably necessary to protect his legitimate interests without imposing undue hardship on the employee when the public interest is not adversely affected."[^q5-ehlers-reform]
 

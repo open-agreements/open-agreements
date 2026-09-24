@@ -2,7 +2,7 @@
 jurisdiction: "District of Columbia"
 slug: district-of-columbia
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/district-of-columbia · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/district-of-columbia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the District of Columbia[^about]
 
@@ -177,11 +177,6 @@ Enforcement is real. In November 2023, the Attorney General announced settlement
 **Short answer.** This is an open question, and the statute's structure cuts against automatic extension. The District's non-compete statute sets no tolling rule, and its caps run as a fixed number of calendar days measured from separation — language that sits uneasily with extending a highly compensated employee's restricted period during a breach or while litigation is pending [^tolling-duration-cap][^tolling-cumulative].
 
 The duration limits are written as hard caps: a non-medical highly compensated employee's term of non-competition may not exceed 365 calendar days, and a medical specialist's may not exceed 730 calendar days, each measured from the date of separation — not from the end of any breach [^tolling-duration-cap]. A tolling-on-breach clause that pushes enforcement past those caps would be in tension with the statutory ceiling. Because the District has no decision resolving whether a contractual extension survives, the safest reading is that an employer cannot rely on one.
-
-> [!NOTE]
-> **Practice note.**
->
-> Open question: District law does not say whether a clause extending the restricted period during a breach is enforceable, and the statute caps the term in calendar days measured from separation. Whether a District court will toll or extend an expired non-compete is unsettled, and a highly compensated employee's covenant that depends on running past the 365-day or 730-day cap sits in tension with the statutory ceiling [^tolling-duration-cap][^tolling-cumulative].
 
 > [!CAUTION]
 > **Drafting note.**
