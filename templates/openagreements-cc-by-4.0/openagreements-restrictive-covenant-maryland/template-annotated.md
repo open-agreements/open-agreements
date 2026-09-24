@@ -228,21 +228,13 @@ Drafting and enforceability considerations for this template, from the related p
 
 A Maryland high-earner clinician covenant that runs beyond one year or reaches more than ten miles from the primary practice site sits outside the ceiling § 3-716(b) sets, so a term or radius carried over from a longer general-purpose covenant is unenforceable to the extent it exceeds the cap. The statutory cap also carries a patient-notice process the covenant depends on .
 
-### The patient-notice duty and patient-communication non-obstruction
+### Named competitors as evidence of tailoring
 
-For a covered high-earner clinician, § 3-716(b) makes patient notice of the departing clinician's new practice location a statutory duty owed on a patient's request, and it runs as a duty of the employer under the statute rather than a term the covenant creates . A covenant drafted to block or delay that notice, or to bar the clinician from telling patients where care continues, collides with the statute; one that leaves the notice and the patient's continuity of care unobstructed keeps clear of it.
-
-### Tie the restraint to a protectable interest
-
-A Maryland non-compete reaches only a genuine protectable interest — unique services, trade secrets, customer lists, or goodwill — so a restraint aimed at ordinary competition unconnected to any of those protects nothing the law recognizes and fails on the interest requirement. Confidential-information protection carried on separate confidentiality and trade-secret terms survives even where the non-compete does not .
+Naming the employer's actual competitors may help show that the restriction is limited to what is reasonably necessary. An open-ended definition of a competitive business creates a greater risk of overbreadth than a list of named competitors .
 
 ### A no-business covenant reaching past solicitation
 
-A no-business or non-dealing covenant reaches a Covered Customer even when the customer initiates the contact, which pushes past the solicitation and client-relationship interests Maryland recognizes and toward blocking ordinary competition — the reach Maryland will not enforce. A covenant of that breadth holds only where a genuine client-relationship or trade-secret interest actually supports it and it stays no wider than that interest needs .
-
-### Named competitors as evidence of tailoring
-
-A covenant that binds the employee only as to the employer's actual, named competitors gives a Maryland court the most concrete evidence that the restraint is tailored to what is reasonably necessary rather than a blanket bar on the field, and even a covenant serving a legitimate interest can be no broader than necessary to effectuate it . An open-ended competitive-business definition left unnarrowed carries the overbreadth a named list would have cured.
+A no-business or non-dealing covenant applies even when the customer initiates contact. That broader restriction is enforceable only to the extent a customer-relationship or trade-secret interest supports it, and only if its scope is no wider than necessary to protect that interest .
 
 ### Non-compete activity-scope overbreadth
 

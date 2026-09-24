@@ -227,10 +227,6 @@ A New Jersey covenant that blocks competition disconnected from a protectable in
 
 A New Jersey court weighs duration and territory as a whole against the employer's real market, with no safe-harbor number, so a fixed term or radius copied from another form is measured against a market it was never sized to. A restraint matched to the employee's actual role and the employer's genuine footprint is far easier to defend, while a long, open-ended, or statewide ban is exposed on the undue-hardship and public-interest prongs .
 
-### Customer non-solicitation
-
-A customer non-solicit that reaches every client regardless of the employee's contact with them is overbroad on its face. New Jersey courts blue-pencil overbroad non-solicitation clauses, so a covenant confined to customers the employee actually served or learned about survives as drawn, while a broader one is narrowed by the court to whatever reasonably protects the employer's interest .
-
 ### Tiered solicitation restraints
 
 The solicitation restraints hold when they track relationships the employee actually had. Tiered restrictive covenants built around real customer and coworker relationships have been upheld as furthering legitimate business interests and complying with New Jersey public policy, and an overbroad one is blue-penciled to a reasonable scope rather than discarded . A customer non-solicit reaching only Covered Customers the employee had material contact with maps directly onto the customer-relationship interest and, backstopped by the confidentiality and Trade Secrets Act protections, is often a stronger and more readily enforceable restraint than a broad non-compete. The employee non-solicit is the lightest restraint in the family and holds where it reaches only Covered Employees through the look-back window; a no-business-with-covered-customers covenant presses hardest on the undue-hardship and public-interest prongs because it reaches unsolicited business, so it survives only where it is sized tightly to those same relationships.
@@ -243,17 +239,13 @@ A tolling clause that runs only while the former employee is actually violating 
 
 A covenant restraining a physician from practicing medicine is not measured as an ordinary commercial restraint. Physician covenants are not per se void, but the public-interest prong carries the analysis: the New Jersey Supreme Court applied the three-part test to a physician covenant and reduced its geographic reach so enforcement would not impair the public's access to care, rather than voiding it , and the trial court must find that the covenant protects a legitimate interest, imposes no undue hardship, and is not adverse to the public interest . A physician covenant drawn to a narrow radius and a short term, tied to preserving patient access and continuity of care, is the one that survives that heightened scrutiny; a broader one is exposed to being narrowed or defeated on the public-interest prong regardless of how its duration and territory read in isolation. No enacted New Jersey statute bans health-care non-competes, so this scrutiny, not a categorical prohibition, is what a physician covenant is measured against.
 
-### The attorney practice-restriction bar
-
-A covenant that restrains a lawyer's practice after the relationship ends is void, apart from an agreement concerning retirement benefits. RPC 5.6 bars a lawyer from participating in a partnership or employment agreement that restricts post-termination practice rights , and that bar reaches indirect financial disincentives — such as compensation forfeitures aimed at a departing lawyer who keeps serving firm clients — not just outright bans, so a clause dressed as a forfeiture rather than a prohibition still falls as against public policy . The bar reaches in-house and corporate counsel practicing in New Jersey whether or not admitted in the State, so an employer cannot bind its in-house lawyers with a restraint RPC 5.6 would forbid for outside counsel .
-
 ### The psychologist client-access bar
 
 A covenant that would keep a client from continuing with a chosen psychologist is void to that extent, independent of how its time and territory read. N.J.A.C. 13:42-10.16 forbids a licensed psychologist from entering any business agreement that interferes with or restricts a client's ability to see the therapist of choice , and the uniquely personal patient-psychologist relationship forbids restraints that interrupt an ongoing course of treatment . The rule shifts the focus from the psychologist's rights to the patient's, so a covenant whose duration and territory look reasonable still fails to the extent it cuts a client off from the treating psychologist .
 
-### Claim confidentiality
+### The attorney practice-restriction bar
 
-A confidentiality or non-disparagement clause that would conceal the details of a discrimination, retaliation, or harassment claim is unenforceable in New Jersey, and a party that tries to enforce it is exposed to the employee's attorney fees and costs. The bar turns on the provision's purpose or effect rather than its label, so a concealment clause dressed as ordinary confidentiality falls the same way .
+A covenant that restrains a lawyer's practice after the relationship ends is void, apart from an agreement concerning retirement benefits. RPC 5.6 bars a lawyer from participating in a partnership or employment agreement that restricts post-termination practice rights , and that bar reaches indirect financial disincentives — such as compensation forfeitures aimed at a departing lawyer who keeps serving firm clients — not just outright bans, so a clause dressed as a forfeiture rather than a prohibition still falls as against public policy . The bar reaches in-house and corporate counsel practicing in New Jersey whether or not admitted in the State, so an employer cannot bind its in-house lawyers with a restraint RPC 5.6 would forbid for outside counsel .
 
 ### The discrimination-claim concealment bar
 

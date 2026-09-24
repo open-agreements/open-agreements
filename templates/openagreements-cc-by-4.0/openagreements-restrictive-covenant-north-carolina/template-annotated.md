@@ -215,13 +215,13 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in North Carolina](/practice-guides/non-compete/us/north-carolina).
 
-### The five-element enforceability test
-
-North Carolina has no general non-compete statute, so every covenant in the agreement is a partial restraint of trade that stands or falls on the five-element common-law test: it must be in writing, part of an employment contract, supported by valuable consideration, reasonable as to time and territory, and designed to protect a legitimate business interest and not against public policy . Because the covenant is read strictly against the drafter, a single defective element defeats the whole restraint and a North Carolina court will not rewrite an overbroad one — a category the state's restraint-of-trade statute already disfavors . The broader covenants in the family are measured the same way: a no-business-with-covered-customers restraint reaches even customer-initiated business and survives only where it is supported by consideration, reasonably necessary to protect the covenantee, and not against public policy, and a non-investment restraint sits under that same reasonableness test rather than outside it . The analysis travels with an assignment — a successor enforcing an assigned covenant faces the same five-element test and the same strike-only severance the original employer faced, so an assignment moves the covenant without strengthening it .
-
 ### A notice to a future employer built on a failed covenant
 
 A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant that later fails any element of the five-element enforceability test has no force to assert, so a notice letter waving such a covenant at a new employer rests on an unenforceable restraint and can expose the employer to a tortious-interference claim . A notice grounded in a restraint the employer is prepared to defend as reasonable carries the weight the letter otherwise lacks.
+
+### The five-element enforceability test
+
+North Carolina has no general non-compete statute, so every covenant in the agreement is a partial restraint of trade that stands or falls on the five-element common-law test: it must be in writing, part of an employment contract, supported by valuable consideration, reasonable as to time and territory, and designed to protect a legitimate business interest and not against public policy . Because the covenant is read strictly against the drafter, a single defective element defeats the whole restraint and a North Carolina court will not rewrite an overbroad one — a category the state's restraint-of-trade statute already disfavors . The broader covenants in the family are measured the same way: a no-business-with-covered-customers restraint reaches even customer-initiated business and survives only where it is supported by consideration, reasonably necessary to protect the covenantee, and not against public policy, and a non-investment restraint sits under that same reasonableness test rather than outside it . The analysis travels with an assignment — a successor enforcing an assigned covenant faces the same five-element test and the same strike-only severance the original employer faced, so an assignment moves the covenant without strengthening it .
 
 ### New consideration
 
