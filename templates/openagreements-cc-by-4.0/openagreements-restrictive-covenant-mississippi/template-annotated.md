@@ -211,17 +211,13 @@ Mississippi has no general non-compete statute, so every covenant in the agreeme
 
 The consideration question does not disappear in Mississippi merely because continued employment can suffice; the agreement is still construed strictly, and the circumstances of signing are scrutinized, so a documented tie to the employment relationship — paired with fresh consideration where practical — stands on firmer ground . For an existing at-will employee, continued employment is itself the consideration, and no separate payment, raise, or promotion is needed to support the covenant . Adequate consideration, however, only supports the covenants — it does not make them reasonable, and each covenant must still independently satisfy the reasonableness balance on time, territory, and restrained activity.
 
-### Territory and market
-
-A fixed radius or term copied from another form is measured against a market it was never sized to; a Mississippi court instead weighs the territory against the employer's real market and the employee's actual reach. A remote worker located inside the restricted area is still bound — geography is measured by where the employee operates, not only where the customers sit .
-
 ### Scope sized to the employee's real influence
 
 A territory tied to the geographic area in which the employee actually provided services, and sized to the employee's real influence rather than the employer's whole footprint, is the defensible one. A statewide restraint failed where the employee's protectable relationships were limited to one local area , while a 250-mile radius held for a telephonic business whose market would have justified even a nationwide limit . There is no statutory cap on duration or territory; a court weighs time, territory, and restrained activity together, so a restraint measured to where the employee worked and whom they influenced fares best. Naming the specific Specified Competitors in Cover Terms, rather than leaving the restrained activity open-ended, is strong evidence it reaches no further than required.
 
-### No-acceptance language
+### Territory and market
 
-A standard non-solicitation clause does not necessarily stop a former employee from serving customers who come to them. Barring the service of former clients regardless of who makes first contact takes explicit non-dealing or no-acceptance language, because Mississippi reads ambiguity against the employer .
+A fixed radius or term copied from another form is measured against a market it was never sized to; a Mississippi court instead weighs the territory against the employer's real market and the employee's actual reach. A remote worker located inside the restricted area is still bound — geography is measured by where the employee operates, not only where the customers sit .
 
 ### Accepting business versus soliciting
 

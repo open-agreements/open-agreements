@@ -217,13 +217,13 @@ Drafting and enforceability considerations for this template, from the related p
 
 An Indiana non-compete built around a general wish to avoid competition fails before reasonableness is ever reached. The employer must first prove a legitimate protectable interest — specific goodwill, a customer relationship, or confidential information — and a restraint that guards nothing more than ordinary competition is void as against public policy, so a court never tests the reasonableness of its time, activity, or geography .
 
-### Restricted activity scope
-
-A covenant that bars a former employee from a competitor in _any capacity_, or across business lines the employee never touched, is the activity restraint Indiana courts most often strike. The burden sits on the employer, and an all-capacity restraint reaching roles unrelated to any protectable interest is unreasonably broad and unenforceable . An activity restriction confined to the employee's actual role and the protected interest is the one that survives.
-
 ### Enforcement risk from an overbroad restraint
 
 An overbroad Indiana restraint carries enforcement risk beyond its own unenforceability. An emphatic irreparable-harm recital does not rescue an unreasonable covenant — the reported pattern is injunctions denied because the employer could not carry the reasonableness burden — and a warning letter or notice to a new employer built on a covenant that later fails the reasonableness analysis can become raw material for a tortious-interference claim . A restraint the employer is prepared to defend on both the legitimate-interest and the reasonableness burdens is the one that supports an injunction and any pre-litigation enforcement step taken on its strength.
+
+### Restricted activity scope
+
+A covenant that bars a former employee from a competitor in _any capacity_, or across business lines the employee never touched, is the activity restraint Indiana courts most often strike. The burden sits on the employer, and an all-capacity restraint reaching roles unrelated to any protectable interest is unreasonably broad and unenforceable . An activity restriction confined to the employee's actual role and the protected interest is the one that survives.
 
 ### Covered employees
 

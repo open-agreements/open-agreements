@@ -236,11 +236,11 @@ Section 599-B's ban is not limited to a stand-alone no-poach contract: it reache
 
 ### Confidentiality alternative and its ceiling
 
-A confidentiality covenant cannot do the work of a non-compete. Maine enforces protection for specialized, proprietary confidential information, but a clause that reaches the general skill and knowledge an employee acquired on the job crosses the line _Bernier_ draws and forfeits that protection .
+A confidentiality definition that expressly excludes the general skill and knowledge the employee acquired on the job matches the nondisclosure clause in _Bernier_, which did not prohibit the employee from using that skill and knowledge .
 
 ### Alternative covenants before a non-compete
 
-Section 599-A(2) ranks the lighter tools first: a non-compete may be presumed necessary only where the legitimate business interest cannot be adequately protected through an alternative restrictive covenant, including a nonsolicitation, nondisclosure, or confidentiality agreement . A covenant that reaches for the non-compete without a record showing the alternatives were considered and found inadequate starts a step behind the statute's own ordering, and the alternatives carry their own ceiling — a confidentiality term still cannot bar the general skill and knowledge an employee acquired on the job .
+Under Maine's noncompete statute, 26 M.R.S. § 599-A(2), a non-compete may be presumed necessary if an alternative restrictive covenant cannot adequately protect the legitimate business interest. The alternatives the statute names include nonsolicitation, nondisclosure, and confidentiality agreements . A non-compete used without a record showing that those alternatives were considered and found inadequate starts a step behind the statute's own ordering.
 
 ### The health-care-practitioner restriction and its made-or-renewed trigger
 

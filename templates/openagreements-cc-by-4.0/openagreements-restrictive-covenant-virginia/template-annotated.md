@@ -246,21 +246,21 @@ Confine the non-compete to the role Employee actually performed — that tailori
 
 The statute's protections surface in the covenant only as operative carve-outs; its enforcement apparatus lives in § 40.1-28.7:8, not in the contract text, and it is severe. A covered worker may sue within the statutory limitations window, and a court may void the covenant, enjoin conduct, and award liquidated damages, lost compensation, damages, and reasonable costs, expert fees, and attorney fees . DOLI may assess a $10,000 civil penalty for each violation, and merely presenting or threatening to enforce a barred covenant is itself a violation — so confirm the worker is outside the protected class before you hand over the [OpenAgreements Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-virginia) at all . The protected class reaches beyond the weekly-earnings figure to interns, students, apprentices, trainees, and certain lower-paid independent contractors, while excluding predominantly commission-, incentive-, or bonus-compensated workers . The current-year threshold surfaced beneath Cover Terms resets annually . A successor or assignee inherits the same statutory bar along with the contract.
 
-### Post the workplace notice before rolling out covenants
-
-There is a statutory obligation to post a copy of § 40.1-28.7:8, or a Department-approved summary, where other required employee notices are posted . Treat the posting as a rollout-checklist item: confirm it is up before any Virginia covenant program goes out. An employer relying on the section's exceptions while ignoring its posting duty is out of compliance with the same section.
-
 ### Health care professional exclusion provenance
 
 The health care exclusion states the covered licenses as an objective condition rather than labeling the worker. It implements the SB 128 categorical ban, effective July 1, 2026, for persons licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work — and no earnings level restores an employment non-compete for a covered professional .
 
-### Employee non-solicits and protected workers
+### Post the workplace notice before rolling out covenants
 
-Leave the employee non-solicitation covenant switched off unless you have confirmed the worker is outside § 40.1-28.7:8's protected class. The only Virginia appellate reading on point treats an employee non-solicit as a covenant not to compete for a protected worker: in unpublished _Sentry Force Security, LLC v. Barrera_, the Court of Appeals held the statute prevented enforcing a covenant barring a departed protected worker from soliciting the employer's other employees . Switch it on only after that check clears; the worker-protection gates in the [OpenAgreements Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-virginia) still control if you get it wrong.
+There is a statutory obligation to post a copy of § 40.1-28.7:8, or a Department-approved summary, where other required employee notices are posted . Treat the posting as a rollout-checklist item: confirm it is up before any Virginia covenant program goes out. An employer relying on the section's exceptions while ignoring its posting duty is out of compliance with the same section.
 
 ### Customer-initiated business stays open
 
 The customer non-solicitation covenant reaches only the worker's own initiation or solicitation, and the worker-protection gates preserve customer-initiated business, because that is the line the statute draws: a bar on direct, employee-initiated solicitation survives even assuming the worker is protected, while customer-initiated business cannot be blocked . The optional no-business-with-covered-customers covenant bars serving a customer even when the customer calls first — the exact conduct the carve-out preserves — so it collides head-on with the statute for any protected worker and defaults off; include it only for a worker outside the protected class as a deliberate risk decision.
+
+### Employee non-solicits and protected workers
+
+Leave the employee non-solicitation covenant switched off unless you have confirmed the worker is outside § 40.1-28.7:8's protected class. The only Virginia appellate reading on point treats an employee non-solicit as a covenant not to compete for a protected worker: in unpublished _Sentry Force Security, LLC v. Barrera_, the Court of Appeals held the statute prevented enforcing a covenant barring a departed protected worker from soliciting the employer's other employees . Switch it on only after that check clears; the worker-protection gates in the [OpenAgreements Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-virginia) still control if you get it wrong.
 
 ### Confidentiality covenant not a disguised non-compete
 
