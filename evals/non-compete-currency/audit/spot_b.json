@@ -1,0 +1,101 @@
+[
+ {
+  "id": "recency:rhode-island",
+  "family": "recency",
+  "state": "rhode-island",
+  "oa_label": {
+   "citations": [
+    "R.I. Gen. Laws \u00a7 5-34-50"
+   ],
+   "effective_dates": [
+    "June 17, 2024"
+   ],
+   "summary": "Non-competes against advanced practice registered nurses banned, sale-of-practice exception."
+  },
+  "cold_answer": {
+   "effective_dates": [],
+   "enacted": false
+  }
+ },
+ {
+  "id": "threshold:colorado",
+  "family": "threshold",
+  "state": "colorado",
+  "oa_label": 130014,
+  "cold_answer": {
+   "dollars": 123833
+  }
+ },
+ {
+  "id": "threshold:virginia",
+  "family": "threshold",
+  "state": "virginia",
+  "oa_label": 78364.52,
+  "cold_answer": {
+   "dollars": 81120
+  }
+ },
+ {
+  "id": "threshold:district-of-columbia",
+  "family": "threshold",
+  "state": "district-of-columbia",
+  "oa_label": 162164,
+  "cold_answer": {
+   "dollars": 156426
+  }
+ },
+ {
+  "id": "threshold:illinois",
+  "family": "threshold",
+  "state": "illinois",
+  "oa_label": 75000,
+  "cold_answer": {
+   "dollars": 90780
+  }
+ },
+ {
+  "id": "threshold:tennessee",
+  "family": "threshold",
+  "state": "tennessee",
+  "oa_label": 70000,
+  "cold_answer": {
+   "dollars": null
+  }
+ },
+ {
+  "id": "threshold:oregon",
+  "family": "threshold",
+  "state": "oregon",
+  "oa_label": 119541,
+  "cold_answer": {
+   "dollars": 121944
+  }
+ },
+ {
+  "id": "duration:arkansas",
+  "family": "duration",
+  "state": "arkansas",
+  "oa_label": 24,
+  "cold_answer": {
+   "months": null
+  }
+ },
+ {
+  "id": "duration:tennessee",
+  "family": "duration",
+  "state": "tennessee",
+  "oa_label": 24,
+  "cold_answer": {
+   "months": null
+  }
+ },
+ {
+  "id": "choice_of_law:new-york",
+  "family": "choice_of_law",
+  "state": "new-york",
+  "oa_label": "no",
+  "cold_answer": {
+   "answer": "yes"
+  }
+ }
+]

@@ -1,0 +1,140 @@
+[
+ {
+  "id": "consideration:colorado",
+  "family": "consideration",
+  "state": "colorado",
+  "oa_label": "yes",
+  "cold_answer": {
+   "answer": "no"
+  }
+ },
+ {
+  "id": "consideration:new-jersey",
+  "family": "consideration",
+  "state": "new-jersey",
+  "oa_label": "yes",
+  "cold_answer": {
+   "answer": "no"
+  }
+ },
+ {
+  "id": "consideration:indiana",
+  "family": "consideration",
+  "state": "indiana",
+  "oa_label": "yes",
+  "cold_answer": {
+   "answer": "no"
+  }
+ },
+ {
+  "id": "consideration:iowa",
+  "family": "consideration",
+  "state": "iowa",
+  "oa_label": "yes",
+  "cold_answer": {
+   "answer": "no"
+  }
+ },
+ {
+  "id": "consideration:maryland",
+  "family": "consideration",
+  "state": "maryland",
+  "oa_label": "yes",
+  "cold_answer": {
+   "answer": "no"
+  }
+ },
+ {
+  "id": "recency:new-hampshire",
+  "family": "recency",
+  "state": "new-hampshire",
+  "oa_label": {
+   "citations": [
+    "RSA 326-B:45-b"
+   ],
+   "effective_dates": [
+    "August 23, 2025"
+   ],
+   "summary": "New statute voids geographic practice restrictions in APRN professional relationship contracts."
+  },
+  "cold_answer": {
+   "effective_dates": [],
+   "enacted": false
+  }
+ },
+ {
+  "id": "recency:texas",
+  "family": "recency",
+  "state": "texas",
+  "oa_label": {
+   "citations": [
+    "Bus. & Com. Code \u00a7 15.50",
+    "Bus. & Com. Code \u00a7 15.501"
+   ],
+   "effective_dates": [
+    "September 1, 2025"
+   ],
+   "summary": "SB 1318 adds physician good-cause rule and limits for dentists, nurses, PAs."
+  },
+  "cold_answer": {
+   "effective_dates": [],
+   "enacted": false
+  }
+ },
+ {
+  "id": "recency:wyoming",
+  "family": "recency",
+  "state": "wyoming",
+  "oa_label": {
+   "citations": [
+    "Wyo. Stat. \u00a7 1-23-108"
+   ],
+   "effective_dates": [
+    "July 1, 2025"
+   ],
+   "summary": "SF 107 voids most non-competes prospectively, with enumerated exceptions and physician rules."
+  },
+  "cold_answer": {
+   "effective_dates": [],
+   "enacted": false
+  }
+ },
+ {
+  "id": "recency:indiana",
+  "family": "recency",
+  "state": "indiana",
+  "oa_label": {
+   "citations": [
+    "Ind. Code \u00a7 25-22.5-5.5-2.3"
+   ],
+   "effective_dates": [
+    "July 1, 2025"
+   ],
+   "summary": "SEA 475 voids new non-competes between physicians and hospitals or hospital systems."
+  },
+  "cold_answer": {
+   "effective_dates": [],
+   "enacted": false
+  }
+ },
+ {
+  "id": "recency:colorado",
+  "family": "recency",
+  "state": "colorado",
+  "oa_label": {
+   "citations": [
+    "C.R.S. \u00a7 8-2-113"
+   ],
+   "effective_dates": [
+    "August 6, 2025"
+   ],
+   "summary": "SB 25-083 voids non-competes for physicians, APRNs, dentists regardless of pay."
+  },
+  "cold_answer": {
+   "effective_dates": [
+    "August 7, 2024"
+   ],
+   "enacted": true
+  }
+ }
+]

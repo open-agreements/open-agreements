@@ -1,0 +1,472 @@
+{
+ "api": "Gemini generateContent v1beta",
+ "excluded_families": [
+  "narrowing"
+ ],
+ "exclusions": {
+  "_narrowing": "narrowing family excluded from published aggregates as ill-posed (strict blue-pencil and near-ban states); items kept in truth2.jsonl for transparency",
+  "_why": "Human review of enum labels (2026-09-23). Dropped where the guide's own wording makes a defensible model answer score wrong.",
+  "consideration:connecticut": "independent audit 2026-09-25 (partly): Dur-A-Flex, Inc. v. Dy, 349 Conn. 513 (2024) \u2014 bare continued at-will employment 'seems unlikely' to be adequate; the key's 'yes' overstates",
+  "consideration:maryland": "same as NY/TN: continuation 'for a substantial period' (flagged by 2026-09-25 peer review)",
+  "consideration:new-mexico": "guide hedges: 'Probably not by itself'",
+  "consideration:new-york": "continued employment suffices if it continues for a substantial period; 'by itself' is not well-posed",
+  "consideration:tennessee": "same as NY: 'remains employed for an appreciable period'",
+  "recency:maryland": "independent audit 2026-09-25 (partly): Ch. 378 (2024) took effect June 1, 2024; July 1, 2025 is its applicability date, not an effective date"
+ },
+ "guide_dir": "practice-guides/non-compete/us",
+ "guide_ref": "30b1281ef738e7df8351ac09bd310ceb19e83610",
+ "guide_repo": "open-agreements",
+ "guide_sha256": {
+  "alabama": "dad3c32a1462354ae9da1f70fedf6be8c6a3d23835189ec5e69f9d05124ffe73",
+  "alaska": "cc12b6c93c12696e00a1f666e1de16ca5854ab95cde360e13d21a59a4f70221a",
+  "arizona": "1343700f9f303fa479036db47038094300174eb1fd897c4c6c9664ee757e7b81",
+  "arkansas": "3ade7937454368dd4810d63f56a523d0267ebf37c6e5e315687ec8f8e49fbdc3",
+  "california": "6c0a52a7dd59679155db2e6b2986e994c06119da0f337e106e4c850531c7521b",
+  "colorado": "495537c7e06853fdd764a2f5c0a69e482a60310bc51406e1fc3cbd285fdcf3f1",
+  "connecticut": "754475f57ac4dfaadedc0c3bfdc8e6cec11e08e451daa121812e1a588f5d68ee",
+  "delaware": "8e4c4bb0bd0a32805b8bf5b1709fd8e4573297e4dda9c58bef27896347d87ebd",
+  "district-of-columbia": "617f614f66bc2eb3b47cd8235c4474cdbb2e94ad49bfdcebe8106d307cf69d7b",
+  "florida": "d5b4e48bab1de3724f49b3dd51c995a85ddd44aaca2ad4a5916f56f825f7c470",
+  "georgia": "05d3ebbaf1701d89f3f3f7a45b05cec66474b0e805cc4d19122a7e712ab154c9",
+  "hawaii": "9b59030dd8b2e45607173ad550d9aa33c00a6f84876955622fdfbe925f703734",
+  "idaho": "780442353c40d56d0f0dc1e13ace14a66d87701853d5c65e7e6f74e3b2be733b",
+  "illinois": "a212f2bc264efbc7eceb4c4c9d7dc60bfa1b0123e94996c2d41e0f62f4715fe6",
+  "indiana": "3b2991d44ec2300c74c905bb49d648fca9423e581cdd557470c7f1bbcb110769",
+  "iowa": "ce18580659ffe8234ef4196b3b3f2199f4713689b4570db3433f2047c9c429ab",
+  "kansas": "0ac23e12e9620e5272dc11e87f2da295b72ffa5e6f3fe1e9931584242d7c53db",
+  "kentucky": "73e6a88b8a94ed424d9e1d404cb81118e8c7a9ee5fdf4191083c3ca3f90e0c7c",
+  "louisiana": "d9348024dab84c180642983240453605b0efb8d734d7538d3e5285789cda199e",
+  "maine": "1c0fdf32013141677deb4d376ef045237d3c21144a8fcdc0bb73033767c305fe",
+  "maryland": "ce84b92ccee7d012994d6bb5b5b8c0fe3bee7bc4d1d8b72172b4d0e0b9952606",
+  "massachusetts": "c657b11796eb8ee042aef328734c296b0c8869ab58163ad7102257ff3e3dae78",
+  "michigan": "b0a9d6a6e8e793c29fd7bfbd73d9e15fe82a3ff6af93d8a6398e24ef1010f43a",
+  "minnesota": "c409919edfa5602ae67edc5cead2cfa3764370ea01a095f4d1359b9a0de8d8fa",
+  "mississippi": "fe9963da3e3f7272b9de4eda6dabf4ab1dcde5efd550fa54f395db7ef4e9de18",
+  "missouri": "989fb400f562efcebbf63b670850d3b50176907a3ef7fb1918c42476e115afc7",
+  "montana": "6c58af1381756a1700a3613a7c2d51ea04a4c90f1124f4c474440de51ca13e63",
+  "nebraska": "eb04b55025897fef749129cd1256acd222313aed7c9fcc12ff0fc15f68e34541",
+  "nevada": "c68a894cb5949fd7661ac68cd17ea91e04beb66bc65730ade1fbc2dd7f79fa60",
+  "new-hampshire": "c2a796acb87cba743bc3ba1b193718120d583c754e9d39afe4162b74f41d8926",
+  "new-jersey": "a05e8c0dd6e6f279632305e7af22cd1b6ad9527c32f7b47868966b098a97dde4",
+  "new-mexico": "5f9db8413cd159264db7aec62c2ab984e38446499420207774e4b0ed36a4bbd3",
+  "new-york": "0afc9dec23983205239b013a421db09c39ca8276d0cb7b4b73bda9849dd5bfd2",
+  "north-carolina": "d2b2f55b20f70ee6707865e411f1c439ea6e34b80a374179f46c0ff98ebb8d97",
+  "north-dakota": "4a974a128daf0b61ead7ee1b7814c20532df4268ae70bd66d6f766ef5025c649",
+  "ohio": "bc4e151bd6cf9cb5eaf4bf6734b55b9b5ae81e87604a733ff141a4fcc71d9da5",
+  "oklahoma": "a004290b10a3707ece47d2b60a1ab39125d35ceae41a4e8505199e730d075e86",
+  "oregon": "92072bb240f050a41ffcb5cea08a6f31526d187907dd83cad2f222e57653610e",
+  "pennsylvania": "8501df1646d5c526a9e73e77084cf950ff399e3da0fafb5c24428d6fb81ca80a",
+  "rhode-island": "ce20337c1a9c5fc3ae64e17c58450e7b36e38365ae6a756a3ed35e6475c40765",
+  "south-carolina": "b518a899316d0c6c1301132ad45466ff59b5746ca90c255fcd4ae0c73a5edc6a",
+  "south-dakota": "8f7c28f11a3ab6fd8f2dd742e39599b9663a1e6bbabe955f2987e0ef0f945b5c",
+  "tennessee": "0ac2f8a02e9bc12fd1314e87a4d4b0b67d37c57f0a204343d85e8dc4f9528509",
+  "texas": "44a026e873be4115549e117913c757a1865f173ee4255ce003c04c79c76e63b4",
+  "utah": "a3f3e5344a1a0b2be7a391f90b0685e919d4aef093eaacc5e6fd712aee2c6400",
+  "vermont": "5d4b871d4e51c8c18dc5fa3da1baeb808e2413641775f163d4cd685c32168b6b",
+  "virginia": "6cd81c8a026a7a2813186b46e11bf29566e9d84817bff55c44b837f2c208a194",
+  "washington": "80543a8ece6ebf4c9715517af88c6548d1594a79b4cd9491b5c1a94bbed337a6",
+  "west-virginia": "a3ff89d9a2bb75df41a6b3eeea197c3c5bf2942bada09c62a7769a89a0dcc7f0",
+  "wisconsin": "913c1f3713842b3cc981e7e2d526923d2767c432cbb878ad925d6813f3e63eda",
+  "wyoming": "45efd6b064e9c5d1cad2aded5afbc4e87e702bf985e11f94c4463218d7be41db"
+ },
+ "max_output_tokens": 16384,
+ "models": {
+  "gemini-3.1-pro-preview": {
+   "cells": {
+    "choice_of_law": {
+     "cold": [
+      7,
+      8
+     ]
+    },
+    "consideration": {
+     "cold": [
+      29,
+      30
+     ]
+    },
+    "duration": {
+     "cold": [
+      9,
+      10
+     ]
+    },
+    "narrowing": {
+     "cold": [
+      32,
+      36
+     ]
+    },
+    "notice": {
+     "cold": [
+      5,
+      5
+     ]
+    },
+    "recency": {
+     "cold": [
+      3,
+      19
+     ]
+    },
+    "threshold": {
+     "cold": [
+      1,
+      7
+     ]
+    }
+   },
+   "recency_breakdown": {
+    "cold": {
+     "enacted_false": 13,
+     "no_matching_date": 3,
+     "pass": 3
+    }
+   },
+   "runs_file": "runs/lt_cold_gemini-3.1-pro-preview.jsonl",
+   "runs_sha256": "efe829a959f3ea6bf614e27cf93b5519271941c55b94cfe47d5e568375987306",
+   "threshold_cold_answers": {
+    "colorado": 123750,
+    "district-of-columbia": 150000,
+    "illinois": 75000,
+    "oregon": 100000,
+    "tennessee": null,
+    "virginia": 151164,
+    "washington": null
+   },
+   "threshold_cold_passed": [
+    "illinois"
+   ]
+  },
+  "gemini-3.5-flash-lite": {
+   "cells": {
+    "choice_of_law": {
+     "cold": [
+      7,
+      8
+     ],
+     "control": [
+      1,
+      8
+     ],
+     "oa": [
+      8,
+      8
+     ]
+    },
+    "consideration": {
+     "cold": [
+      14,
+      30
+     ],
+     "control": [
+      8,
+      30
+     ],
+     "oa": [
+      30,
+      30
+     ]
+    },
+    "duration": {
+     "cold": [
+      6,
+      10
+     ],
+     "control": [
+      0,
+      10
+     ],
+     "oa": [
+      10,
+      10
+     ]
+    },
+    "narrowing": {
+     "cold": [
+      30,
+      36
+     ],
+     "control": [
+      6,
+      36
+     ],
+     "oa": [
+      30,
+      36
+     ]
+    },
+    "notice": {
+     "cold": [
+      5,
+      5
+     ],
+     "control": [
+      0,
+      5
+     ],
+     "oa": [
+      5,
+      5
+     ]
+    },
+    "recency": {
+     "cold": [
+      2,
+      19
+     ],
+     "control": [
+      0,
+      19
+     ],
+     "oa": [
+      19,
+      19
+     ]
+    },
+    "threshold": {
+     "cold": [
+      1,
+      7
+     ],
+     "control": [
+      0,
+      7
+     ],
+     "oa": [
+      7,
+      7
+     ]
+    }
+   },
+   "recency_breakdown": {
+    "cold": {
+     "enacted_false": 16,
+     "no_matching_date": 1,
+     "pass": 2
+    },
+    "control": {
+     "enacted_false": 19
+    },
+    "oa": {
+     "pass": 19
+    }
+   },
+   "runs_file": "runs/longtail_runs.jsonl",
+   "runs_sha256": "a233c45f2b19a14dc8832732a27f647884284a28e8698f702e64b2003827db7a",
+   "threshold_cold_answers": {
+    "colorado": 123833,
+    "district-of-columbia": 156426,
+    "illinois": 90780,
+    "oregon": 121944,
+    "tennessee": null,
+    "virginia": 81120,
+    "washington": 125744
+   },
+   "threshold_cold_passed": [
+    "washington"
+   ]
+  },
+  "gemini-3.8-flash": {
+   "cells": {
+    "choice_of_law": {
+     "cold": [
+      7,
+      8
+     ]
+    },
+    "consideration": {
+     "cold": [
+      28,
+      30
+     ]
+    },
+    "duration": {
+     "cold": [
+      9,
+      10
+     ]
+    },
+    "narrowing": {
+     "cold": [
+      34,
+      36
+     ]
+    },
+    "notice": {
+     "cold": [
+      5,
+      5
+     ]
+    },
+    "recency": {
+     "cold": [
+      4,
+      19
+     ]
+    },
+    "threshold": {
+     "cold": [
+      1,
+      7
+     ]
+    }
+   },
+   "recency_breakdown": {
+    "cold": {
+     "enacted_false": 15,
+     "pass": 4
+    }
+   },
+   "runs_file": "runs/lt_cold_gemini-3.8-flash.jsonl",
+   "runs_sha256": "37e8846808576c637ffb5e19d451d5862b94e603e40f835777e024d5ce238494",
+   "threshold_cold_answers": {
+    "colorado": 123750,
+    "district-of-columbia": 150000,
+    "illinois": 75000,
+    "oregon": 100533,
+    "tennessee": null,
+    "virginia": 73320,
+    "washington": 120560
+   },
+   "threshold_cold_passed": [
+    "illinois"
+   ]
+  }
+ },
+ "recency_always_true_comparator": {
+  "date": "2025-07-01",
+  "of": 19,
+  "passes": 4
+ },
+ "retained_ids": [
+  "choice_of_law:california",
+  "choice_of_law:colorado",
+  "choice_of_law:louisiana",
+  "choice_of_law:massachusetts",
+  "choice_of_law:minnesota",
+  "choice_of_law:new-york",
+  "choice_of_law:oregon",
+  "choice_of_law:washington",
+  "consideration:alabama",
+  "consideration:arizona",
+  "consideration:arkansas",
+  "consideration:colorado",
+  "consideration:delaware",
+  "consideration:florida",
+  "consideration:illinois",
+  "consideration:indiana",
+  "consideration:iowa",
+  "consideration:kansas",
+  "consideration:kentucky",
+  "consideration:louisiana",
+  "consideration:massachusetts",
+  "consideration:michigan",
+  "consideration:mississippi",
+  "consideration:montana",
+  "consideration:new-hampshire",
+  "consideration:new-jersey",
+  "consideration:north-carolina",
+  "consideration:ohio",
+  "consideration:oregon",
+  "consideration:pennsylvania",
+  "consideration:south-carolina",
+  "consideration:south-dakota",
+  "consideration:utah",
+  "consideration:vermont",
+  "consideration:washington",
+  "consideration:west-virginia",
+  "consideration:wisconsin",
+  "consideration:wyoming",
+  "duration:alabama",
+  "duration:arkansas",
+  "duration:georgia",
+  "duration:louisiana",
+  "duration:massachusetts",
+  "duration:oregon",
+  "duration:south-dakota",
+  "duration:tennessee",
+  "duration:utah",
+  "duration:washington",
+  "narrowing:alabama",
+  "narrowing:alaska",
+  "narrowing:arizona",
+  "narrowing:arkansas",
+  "narrowing:colorado",
+  "narrowing:district-of-columbia",
+  "narrowing:florida",
+  "narrowing:georgia",
+  "narrowing:idaho",
+  "narrowing:illinois",
+  "narrowing:indiana",
+  "narrowing:iowa",
+  "narrowing:kansas",
+  "narrowing:kentucky",
+  "narrowing:maryland",
+  "narrowing:massachusetts",
+  "narrowing:michigan",
+  "narrowing:mississippi",
+  "narrowing:missouri",
+  "narrowing:montana",
+  "narrowing:nebraska",
+  "narrowing:nevada",
+  "narrowing:new-hampshire",
+  "narrowing:new-jersey",
+  "narrowing:new-york",
+  "narrowing:north-carolina",
+  "narrowing:ohio",
+  "narrowing:pennsylvania",
+  "narrowing:rhode-island",
+  "narrowing:south-carolina",
+  "narrowing:tennessee",
+  "narrowing:texas",
+  "narrowing:virginia",
+  "narrowing:washington",
+  "narrowing:wisconsin",
+  "narrowing:wyoming",
+  "notice:colorado",
+  "notice:district-of-columbia",
+  "notice:illinois",
+  "notice:maine",
+  "notice:massachusetts",
+  "recency:california",
+  "recency:colorado",
+  "recency:florida",
+  "recency:illinois",
+  "recency:indiana",
+  "recency:louisiana",
+  "recency:maine",
+  "recency:montana",
+  "recency:new-hampshire",
+  "recency:oregon",
+  "recency:pennsylvania",
+  "recency:rhode-island",
+  "recency:south-dakota",
+  "recency:tennessee",
+  "recency:texas",
+  "recency:utah",
+  "recency:virginia",
+  "recency:washington",
+  "recency:wyoming",
+  "threshold:colorado",
+  "threshold:district-of-columbia",
+  "threshold:illinois",
+  "threshold:oregon",
+  "threshold:tennessee",
+  "threshold:virginia",
+  "threshold:washington"
+ ],
+ "run_date": "2026-09-23",
+ "temperature": 0,
+ "threshold_key": {
+  "colorado": 130014,
+  "district-of-columbia": 162164,
+  "illinois": 75000,
+  "oregon": 119541,
+  "tennessee": 70000,
+  "virginia": 78364.52,
+  "washington": 126858.83
+ },
+ "threshold_tolerance": "\u00b11% of keyed dollars",
+ "truth_sha256": "9b6099990444a3b232d01df6806c095db719969537c414bb60bc5a16a4ba0295"
+}
