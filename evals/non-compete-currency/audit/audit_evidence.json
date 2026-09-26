@@ -1,0 +1,10 @@
+{
+ "tennessee": {"checked": "2026-09-25", "source": "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1034&GA=114",
+   "authority": "Tennessee General Assembly bill status (official)",
+   "finding": "HB 1034 enacted as Public Chapter 934; signed by Governor 05/15/2026; effective 07/01/2026; prohibits noncompetes for employees earning less than $70,000 annually",
+   "note": "Chapter PDF (publications.tnsosfiles.com/acts/114/pub/pc0934.pdf) returns 403 to automated fetch; law-firm summaries give a May 7 signing date, the official page says May 15"},
+ "indiana": {"checked": "2026-09-25", "source": "https://codes.findlaw.com (reproduction of Ind. Code 25-22.5-5.5-2.3)",
+   "authority": "secondary reproduction of the official code",
+   "finding": "noncompete bar for physicians and hospitals does not apply to agreements originally entered into before July 1, 2025",
+   "note": "iga.in.gov serves bill text via a JavaScript app that WebFetch, curl and a headless browser could not render; official-source confirmation remains open"}
+}

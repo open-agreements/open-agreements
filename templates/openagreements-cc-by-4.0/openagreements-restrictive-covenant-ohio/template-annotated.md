@@ -203,13 +203,13 @@ Drafting and enforceability considerations for this template, from the related p
 
 Adequate consideration does not cure an overbroad covenant. Continued at-will employment satisfies _Lake Land_, but a restraint that fails _Raimonde_ on time, territory, or scope is unenforceable no matter how cleanly the rest of the agreement reads, because consideration establishes only that a covenant is supported, not that it is reasonable .
 
-### Protectable interests
-
-An Ohio non-compete that blocks competition disconnected from a protectable interest reaches nothing the law recognizes and fails on the interest requirement: the restraint holds only where it is tied to identified confidential information, trade secrets, or customer goodwill. A separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. survives even where the non-compete does not .
-
 ### The trade-secret backstop under the Ohio Uniform Trade Secrets Act
 
 A broad Ohio non-compete draws the heaviest reasonableness scrutiny, while the Ohio Uniform Trade Secrets Act supplies a remedy that does not depend on any covenant: actual or threatened misappropriation of a trade secret may be enjoined under R.C. 1333.62, and the Act protects information that derives independent economic value from secrecy and is the subject of reasonable efforts to keep it secret . A confidentiality and customer-non-solicitation strategy built on that statutory backstop often protects the employer more durably than a non-compete that has to survive the full _Raimonde_ analysis, and it holds even where the non-compete is trimmed or declined .
+
+### Protectable interests
+
+An Ohio non-compete that blocks competition disconnected from a protectable interest reaches nothing the law recognizes and fails on the interest requirement: the restraint holds only where it is tied to identified confidential information, trade secrets, or customer goodwill. A separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. survives even where the non-compete does not .
 
 ### Duration and territory
 

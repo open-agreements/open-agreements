@@ -223,18 +223,6 @@ Every covenant in the agreement stands or falls on South Carolina's five-factor 
 
 Information the _South Carolina Trade Secrets Act_ already covers does not need a non-compete to protect it. A focused confidentiality and trade-secret strategy reaches misappropriation without the strict-construction risk that attaches to a covenant not to compete .
 
-### The statutory trade-secret backstop
-
-The confidentiality drafting does not have to carry the entire trade-secret regime — the _South Carolina Trade Secrets Act_ runs underneath it. Every employee already owes a statutory duty, independent of and in addition to any agreement, to refrain from using or disclosing the employer's trade secret , and that protection endures until the secret is disclosed or discovered by proper means . Trade-secret obligations that run for as long as the information stays a trade secret, rather than expiring on a fixed cap, track that statutory protection, and the return-of-property, deletion, and certification mechanics preserve the secrecy the statute's protection depends on.
-
-### Employee non-solicit scoped to inducement
-
-An employee non-solicit scoped to inducing a Covered Employee to breach or terminate the employment relationship — leaving references, general advertisements, and non-interfering hiring open — tracks how South Carolina reads the covenant. The state reads it narrowly: _Oxman v. Sherman_ construed an employee covenant as restraining inducement to breach rather than as a blanket bar on ever hiring or seeking the services of those employees . Kept narrow — reaching only Covered Employees during the Restricted Period — it is the lightest restraint in the covenant family and stays no broader than the employer's interest in workforce stability and goodwill. Widened into an all-employee no-hire, it reaches past the recognized interest.
-
-### Customer scope
-
-An _any customer on our books_ non-solicitation clause reaches too far. A restriction limited to customers the departing employee actually serviced or contacted within a defined look-back period protects a legitimate interest; a blanket customer ban is treated as an unenforceable restraint on ordinary competition .
-
 ### Customer covenants bound to covered customers
 
 A customer non-solicit — and the optional no-business covenant — bound to Covered Customers only, the customers, vendors, referral sources, and business partners the employee had material contact with during the stated look-back period, tracks what the case law rewards: a covenant confined to customers the employee had contact with during his last twelve months of employment withstood an overbreadth challenge , while barring solicitation of customers the employee never serviced protected no legitimate interest , and an employer is not entitled to enforce an agreement preventing ordinary competition . The no-business covenant bites harder — it reaches even customer-initiated dealings — so its Covered Customers limit is what keeps it inside the legitimate-interest and harshness factors; loosened, it forfeits that protection. A tight customer covenant paired with the confidentiality and trade-secret protections is often a stronger, more readily enforceable instrument than a broad non-compete.
@@ -243,17 +231,9 @@ A customer non-solicit — and the optional no-business covenant — bound to Co
 
 Where the employee signs after employment has already begun, the covenant needs a Separate Consideration cover term — a raise, bonus, promotion, or change in status — because continued employment alone will not support it. South Carolina requires it: a covenant entered into after the inception of employment needs separate consideration beyond continued at-will employment , and an unchanged role supplies none — in _Poole_ the employee's duties, position, and salary were left unchanged . Consideration establishes only one of the five factors: a well-documented raise does nothing for a covenant that fails on legitimate interest, time and place, harshness, or public policy.
 
-### Reasonable scope
-
-A duration or radius copied from another state's form is measured against the wrong market. A South Carolina court will not narrow an overbroad scope to save the covenant, so the territory holds up only where it matches the employee's real customer contacts and the time period stays within what the record can justify .
-
 ### Duration and territory sized to the role
 
 A non-compete's duration, territory, and step-down alternatives hold up only where they fit the employee's actual role and the employer's actual market — a radius or term imported from another state's form is measured against a market it was never sized to. A territorial scope is unreasonable if it covers an area broader than necessary to protect the employer's legitimate interest , and time and place must each be reasonably limited under the conjunctive test . The optional non-investment covenant is judged the same way — a post-employment restraint under the five factors; its passive-public-holdings carveout leaves ordinary public-market investing open, so its real bite is active or material ownership in private competitors. No South Carolina court will shrink an overdrawn map afterward.
-
-### Nondisclosure duration
-
-An open-ended NDA that bars an employee from doing similar work indefinitely draws non-compete scrutiny. Where a nondisclosure provision functions as a non-compete, South Carolina courts apply that scrutiny — including a reasonable time limit — and an unlimited duration can void it .
 
 ### The non-trade-secret confidentiality term
 

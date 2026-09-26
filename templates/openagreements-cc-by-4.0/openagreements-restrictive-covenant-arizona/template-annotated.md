@@ -223,10 +223,6 @@ Any non-competition covenant depends first on whether the employer is a broadcas
 
 A covenant an existing at-will employee signs after employment has commenced needs no separate payment, raise, or promotion — continued at-will employment is itself sufficient consideration . Adequate consideration establishes only that the covenants are supported, not that they are reasonable; each covenant must still independently satisfy the reasonableness analysis on time, territory, and scope.
 
-### De facto noncompetes
-
-A confidentiality or non-solicitation covenant scoped to actual trade secrets and confidential information, with reasonable limits, stays clear of the line; one that broadly restricts a former employee's use of general skills or knowledge does not. An open-ended confidentiality clause can be struck as a disguised non-compete and is subject to the same strict no-rewrite rule .
-
 ### Non-solicits and non-dealing face the same test as non-competes
 
 A non-solicit does not escape scrutiny because it is labeled something lighter than a non-compete. Arizona runs anti-piracy covenants through the same no-broader-than-necessary test, so even the employee non-solicit — the lightest restraint in the family — reaches only covered employees during the restricted period, and the customer non-solicit reaches only as far as the employer's protectable interest in the specific customer relationships extends . Arizona also classifies covenants by functional effect rather than label, so the optional non-dealing clause — which bars serving covered customers even when the customer approaches first — draws the full reasonableness analysis and stands only when sized tightly to the goodwill it protects, because it sits closer to a non-compete than to a non-solicit . A tightly drawn customer non-solicit backstopped by the confidentiality and trade-secret protections is often a stronger and more readily enforceable protection than a broad non-compete.

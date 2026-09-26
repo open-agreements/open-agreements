@@ -211,11 +211,6 @@ All three measures failed to pass when the 2025-26 session ended, so none became
 
 "A lawyer shall not participate in offering or making: (a) a partnership, shareholders, operating, employment, or other similar type of agreement that restricts the right of a lawyer to practice after termination of the relationship, except an agreement concerning benefits upon retirement; or (b) an agreement in which a restriction on the lawyer's right to practice is part of the settlement of a client controversy."[^q11-scr]
 
-> [!NOTE]
-> **Practice note.**
->
-> Treat Wisconsin non-compete law as governed by § 103.465 and the case law, not by the 2025-26 bills. Assembly Bill 567 and the medical-practitioner bills (Assembly Bill 675 and Senate Bill 657) failed to pass, so re-check the legislature's status before relying on any of them, and remember that SCR 20:5.6 already bars most lawyer non-competes [^q11-ab567][^q11-scr].
-
 > [!CAUTION]
 > **Drafting note.**
 >

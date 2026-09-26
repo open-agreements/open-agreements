@@ -199,10 +199,6 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Iowa](/practice-guides/non-compete/us/iowa).
 
-### The three-prong reasonableness gate
-
-Every covenant in the agreement stands or falls on Iowa's three-prong reasonableness test, and there is no general Iowa non-compete statute or statutory safe harbor to fall back on: a restraint holds only where it is reasonably necessary to protect the employer, not unreasonably restrictive of the employee, and not prejudicial to the public interest . The employer seeking enforcement carries the burden of proving reasonableness, so an acknowledgment of reasonableness written into the agreement does not carry it — each covenant clears the test only on its own record of duration, territory, and scope . Adequate consideration establishes only that the covenants are supported at formation, not that they are reasonable, and continued employment sufficient as consideration does not by itself make an unreasonable covenant enforceable. A restraint tied to named competitors and sized to the employer's actual market is the defensible one, and the gate travels with an assignment: reasonable necessity is re-weighed against a successor's own customer relationships and footprint, so a restraint sized to one employer does not automatically fit a buyer.
-
 ### Independent-contractor covenants
 
 An independent-contractor covenant runs the same three-prong reasonableness analysis as an employee covenant, with no lighter standard for contractor status. A restraint that requires a contractor to forsake the customers the contractor brought to the relationship is unreasonable and unenforceable , so a covenant reaching a contractor's own book of business is the exposed case.

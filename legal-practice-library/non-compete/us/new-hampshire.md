@@ -47,11 +47,6 @@ That consideration rule does not cure statutory notice problems. If the worker i
 
 Goodwill is often the practical center of the analysis. New Hampshire cases allow protection against a former employee appropriating customer or patient goodwill developed through the job, but they do not allow a covenant to block ordinary competition unrelated to that employer asset [^forbes-patient-goodwill].
 
-> [!NOTE]
-> **Practice note.**
->
-> Before enforcing, identify the employer asset at risk. A covenant based only on the cost of hiring or training workers is unlikely to satisfy the first prong of the New Hampshire test [^olsten-recruiting-costs].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -142,11 +137,6 @@ RSA 275:70-a's low-wage ban does not reach an anti-raiding clause, because its n
 The available non-binding material points in a cautious direction. A federal District of New Hampshire decision applying New Hampshire law is persuasive only, not controlling state appellate law, and it declined to enjoin the noncompete for lack of irreparable injury and a favorable balance of equities while still issuing the narrower nondisclosure injunction [^hcc-persuasive-limits][^hcc-nondisclosure-granted].
 
 Because the available appellate source set does not squarely address independent contractors, use the employee-covenant cases by analogy: the safer analysis is whether the contractor actually received trade secrets, confidential information, customer influence, or goodwill capable of appropriation.
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume the contractor label expands enforceability. If the worker was engaged as an independent business and lacked concrete access to protectable goodwill or confidential information, the restraint may look like ordinary competition control rather than protection of an employer asset [^hobert-legitimate-interests-contractors].
 
 > [!CAUTION]
 > **Drafting note.**

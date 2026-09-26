@@ -1,0 +1,113 @@
+{
+  "_note": "Dedicated non-compete statutes only. 'section' is the distinguishing string used for format-agnostic scoring and MUST appear verbatim in that state's OA guide. States whose only statute is a general restraint-of-trade/writing/antitrust provision (NC, MT, HI, AR) are excluded: 'the controlling statute' is not well-posed there.",
+  "alabama": {
+    "cite": "Ala. Code section 8-1-190",
+    "section": "8-1-190"
+  },
+  "california": {
+    "cite": "Cal. Bus. & Prof. Code section 16600",
+    "section": "16600"
+  },
+  "colorado": {
+    "cite": "C.R.S. section 8-2-113",
+    "effective": "August 10, 2022",
+    "section": "8-2-113"
+  },
+  "district-of-columbia": {
+    "cite": "D.C. Code section 32-581.01",
+    "effective": "October 1, 2022",
+    "section": "32-581.01"
+  },
+  "florida": {
+    "cite": "Fla. Stat. section 542.335",
+    "section": "542.335"
+  },
+  "georgia": {
+    "cite": "O.C.G.A. section 13-8-53",
+    "section": "13-8-53"
+  },
+  "idaho": {
+    "cite": "Idaho Code section 44-2701",
+    "section": "44-2701"
+  },
+  "illinois": {
+    "cite": "820 ILCS 90 (Illinois Freedom to Work Act)",
+    "section": "ILCS 90"
+  },
+  "louisiana": {
+    "cite": "La. R.S. section 23:921",
+    "section": "23:921"
+  },
+  "maine": {
+    "cite": "26 M.R.S. section 599-A",
+    "section": "599-A"
+  },
+  "maryland": {
+    "cite": "Md. Code, Lab. & Empl. section 3-716",
+    "section": "3-716"
+  },
+  "massachusetts": {
+    "cite": "Mass. Gen. Laws ch. 149 section 24L",
+    "effective": "October 1, 2018",
+    "section": "24L"
+  },
+  "michigan": {
+    "cite": "MCL 445.774a",
+    "section": "445.774a"
+  },
+  "minnesota": {
+    "cite": "Minn. Stat. section 181.988",
+    "effective": "July 1, 2023",
+    "section": "181.988"
+  },
+  "nevada": {
+    "cite": "Nev. Rev. Stat. section 613.195",
+    "section": "613.195"
+  },
+  "north-dakota": {
+    "cite": "N.D. Cent. Code section 9-08-06",
+    "section": "9-08-06"
+  },
+  "oklahoma": {
+    "cite": "Okla. Stat. tit. 15 section 219A",
+    "section": "219A"
+  },
+  "oregon": {
+    "cite": "ORS 653.295",
+    "section": "653.295"
+  },
+  "rhode-island": {
+    "cite": "R.I. Gen. Laws section 28-59-3",
+    "section": "28-59-3"
+  },
+  "south-dakota": {
+    "cite": "SDCL 53-9-11",
+    "section": "53-9-11"
+  },
+  "texas": {
+    "cite": "Tex. Bus. & Com. Code section 15.50",
+    "section": "15.50"
+  },
+  "utah": {
+    "cite": "Utah Code section 34-51-201",
+    "effective": "May 10, 2016",
+    "section": "34-51-201"
+  },
+  "virginia": {
+    "cite": "Va. Code section 40.1-28.7:8",
+    "section": "40.1-28.7:8"
+  },
+  "washington": {
+    "cite": "chapter 49.62 RCW",
+    "section": "49.62"
+  },
+  "wisconsin": {
+    "cite": "Wis. Stat. section 103.465",
+    "section": "103.465"
+  },
+  "wyoming": {
+    "cite": "Wyo. Stat. section 1-23-108",
+    "effective": "July 1, 2025",
+    "section": "1-23-108"
+  }
+}

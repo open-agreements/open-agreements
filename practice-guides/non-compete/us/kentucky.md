@@ -24,11 +24,6 @@ The common-law standard traces to *Ceresia v. Mitchell* and is restated in later
 
 Kentucky has not enacted a general non-compete statute for the ordinary workforce. The enforceability analysis is judge-made, with one narrow statutory exception for temporary health care staffing covered later in this note.
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not treat Kentucky as either a free-for-all or a ban state. Confirm there is valid consideration first, then test the restraint for reasonableness in time, territory, and scope before assuming a Kentucky covenant is enforceable [^kegel-reasonableness-test].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -113,11 +108,6 @@ The statute bars a health care services agency from restricting the employment o
 
 Outside that carve-out, Kentucky has no broad occupational exemptions for non-competes. Ordinary employees — including most professionals — fall back on the common-law reasonableness and consideration analysis described above rather than an industry-specific statute.
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not use ordinary reasonableness analysis to rescue a covenant that KRS 216.724 voids. For a temporary direct care staffer at a health care services agency, the statutory ban controls and the covenant is void regardless of how reasonable it looks [^krs-216-724-healthcare-ban][^krs-216-724-void].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -130,11 +120,6 @@ Outside that carve-out, Kentucky has no broad occupational exemptions for non-co
 In *Senture, LLC v. Dietrich*, a Virginia federal court applied Kentucky law to a non-compete pursuant to the agreement's choice-of-law and forum-selection clause [^senture-applies-kentucky-law]. In *Edwards Moving & Rigging, Inc. v. W.O. Grubb Steel Erection, Inc.*, another Virginia federal court enforced a Kentucky choice-of-law clause and held that applying Kentucky law — which allows blue-penciling, unlike Virginia — was not repugnant enough to Virginia public policy to override the parties' choice [^edwards-public-policy-not-repugnant].
 
 The limit is public policy. A court applies the chosen law only when doing so does not offend the forum's own public policy, and both decisions are federal trial-court rulings rather than binding Kentucky Supreme Court authority.
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not treat a Kentucky choice-of-law clause as automatically dispositive. It is strongest when paired with a real connection to Kentucky and a covenant that is reasonable on its own terms, because a forum court will still test the clause against its own public policy before applying Kentucky law [^senture-applies-kentucky-law][^edwards-public-policy-not-repugnant].
 
 > [!CAUTION]
 > **Drafting note.**

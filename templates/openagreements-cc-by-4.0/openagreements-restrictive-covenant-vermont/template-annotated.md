@@ -215,13 +215,13 @@ A restraint whose clock runs out during a breach or the litigation over it is no
 
 A covenant ancillary to the sale of a business is measured differently from an employment restraint: Vermont gives it more breathing room on duration and geography when it is supported by dedicated transaction consideration and sized to the acquired goodwill, so a five-year, twenty-five-mile covenant delivered at closing with a sum paid for the covenant alone held reasonable in time and place, and a five-year covenant with dedicated consideration is treated as a bargained-for transaction asset whose breach can be valued by the covenant itself . That leeway is earned by the deal structure, not presumed: a covenant is a distinct, negotiated sale term rather than an automatic incident of the transaction, and leaving material covenant terms open — including whether the deal carries a covenant at all — can defeat contract formation, so a covenant transferred in a sale that is not papered expressly, or consideration that is not tied to the covenant, leaves the restraint on ordinary employment-covenant footing when its scope is later tested .
 
-### Covenants restraining a licensed healthcare professional
-
-A covenant restraining a licensed healthcare professional from practicing is not categorically void in Vermont as of this review, but it is not exempt either: it runs the same common-law reasonableness test as any other covenant, with the public-interest prong weighing patient access and continuity of care, and the employer carries the burden of proving its reasonable necessity . A healthcare covenant sized to a narrow radius and a short term is the one that survives that scrutiny; a broad one is exposed on the public-interest prong. The footing is unstable: H.583 would categorically void noncompetition, nondisclosure, and nondisparagement agreements for healthcare professionals if enacted, so a covenant drafted under current law stands to be displaced on enactment .
-
 ### Training covenants at a barbering or cosmetology school
 
 A covenant not to compete imposed as a condition of training for licensure at a school of barbering or cosmetology is void outright — the one generally applicable Vermont statute that voids a category of restrictive covenant, and no drafting saves it . The bar turns on the training-for-licensure relationship rather than on a job title, so a restraint the school or an affiliate extracts from a person training for licensure falls outside enforcement whatever the instrument is called.
+
+### Covenants restraining a licensed healthcare professional
+
+A covenant restraining a licensed healthcare professional from practicing is not categorically void in Vermont as of this review, but it is not exempt either: it runs the same common-law reasonableness test as any other covenant, with the public-interest prong weighing patient access and continuity of care, and the employer carries the burden of proving its reasonable necessity . A healthcare covenant sized to a narrow radius and a short term is the one that survives that scrutiny; a broad one is exposed on the public-interest prong. The footing is unstable: H.583 would categorically void noncompetition, nondisclosure, and nondisparagement agreements for healthcare professionals if enacted, so a covenant drafted under current law stands to be displaced on enactment .
 
 ### Restrictions on a lawyer's right to practice
 

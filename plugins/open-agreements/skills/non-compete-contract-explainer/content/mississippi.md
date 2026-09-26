@@ -2,7 +2,7 @@
 jurisdiction: "Mississippi"
 slug: mississippi
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/mississippi · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/mississippi · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Mississippi[^about]
 
@@ -45,11 +45,6 @@ There is no Mississippi non-compete statute. The enforceability analysis is judg
 
 Because the restraint must protect a legitimate business interest — trade secrets, confidential information, customer goodwill, or an employer's investment in specialized training — a covenant that exists only to suppress ordinary competition fails. Mississippi separately protects proprietary information by statute under the Mississippi Uniform Trade Secrets Act, Miss. Code Ann. §§ 75-26-1 to 75-26-19, which supplies injunctive relief and damages independent of any contract.
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not treat a Mississippi covenant as automatically valid or automatically void. Confirm that the restraint protects a real business interest and is reasonable in time, territory, and activity, because the employer bears the burden of proving reasonableness and the court will construe ambiguity against the drafter [^texas-road-boring-three-aspects].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -74,17 +69,17 @@ That said, timing still matters. Mississippi courts have suggested that a covena
 
 In *Redd Pest Control Co. v. Heatherly*, the court refused to enforce a statewide pest-control restraint against an employee who only had customer relationships around Tupelo, observing that the company did not need protection across the whole state [^heatherly-statewide-unreasonable]. There is no fixed durational cap either: a restraint matched to the time the employer actually needs to protect the relationship is easier to defend, while the longer terms Mississippi has tolerated tend to appear in executive and sale-of-business deals.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A territory tied to the geographic area in which the employee actually provided services, and sized to the employee's real influence rather than the employer's whole footprint, is the defensible one. A statewide restraint failed where the employee's protectable relationships were limited to one local area [^heatherly-statewide-unreasonable], while a 250-mile radius held for a telephonic business whose market would have justified even a nationwide limit [^timber-lake-radius-reasonable]. There is no statutory cap on duration or territory; a court weighs time, territory, and restrained activity together, so a restraint measured to where the employee worked and whom they influenced fares best. Naming the specific Specified Competitors in Cover Terms, rather than leaving the restrained activity open-ended, is strong evidence it reaches no further than required.
+
 Remote work does not dissolve a geographic limit. In *Timber Lake Foods v. Estess*, a meat broker worked the phones from her home inside a 250-mile radius of Tupelo while serving customers nationwide; the Court of Appeals held the 250-mile restraint reasonable because a nationwide restriction would itself have been justified for that telephonic business [^timber-lake-home-in-radius][^timber-lake-radius-reasonable].
 
 > [!CAUTION]
 > **Drafting note.**
 >
 > A fixed radius or term copied from another form is measured against a market it was never sized to; a Mississippi court instead weighs the territory against the employer's real market and the employee's actual reach. A remote worker located inside the restricted area is still bound — geography is measured by where the employee operates, not only where the customers sit [^timber-lake-home-in-radius].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A territory tied to the geographic area in which the employee actually provided services, and sized to the employee's real influence rather than the employer's whole footprint, is the defensible one. A statewide restraint failed where the employee's protectable relationships were limited to one local area [^heatherly-statewide-unreasonable], while a 250-mile radius held for a telephonic business whose market would have justified even a nationwide limit [^timber-lake-radius-reasonable]. There is no statutory cap on duration or territory; a court weighs time, territory, and restrained activity together, so a restraint measured to where the employee worked and whom they influenced fares best. Naming the specific Specified Competitors in Cover Terms, rather than leaving the restrained activity open-ended, is strong evidence it reaches no further than required.
 
 ## Will a Mississippi court reform or blue-pencil an overbroad non-compete? {#court-narrowing}
 
@@ -109,11 +104,6 @@ The defense has a clear limit: it turns on how the employment ended. An employee
 
 "Moreover, as we have indicated, when an employer terminates an employee in bad faith, the terms of a non-competition agreement will not be enforced."[^empiregas-bad-faith]
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not fire an employee arbitrarily and expect to enforce the non-compete in Mississippi. Document a legitimate, good-faith basis for any termination before seeking an injunction, because a bad-faith discharge forfeits the equitable enforcement of the covenant [^empiregas-bad-faith].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -124,11 +114,6 @@ The defense has a clear limit: it turns on how the employment ended. An employee
 **Short answer.** Strictly, and against the drafter. A clause that bars an employee from acting to *divert* business does not necessarily stop the employee from passively *accepting* business from former customers who seek the employee out on their own, unless the contract clearly says so [^kennedy-ambiguous-accepting].
 
 In *Kennedy v. Metropolitan Life Insurance Co.*, the covenant barred conduct that would *tend to divert* business from the insurer. The chancellor below found that the agent's participation in clients' coverage changes violated the clause, but the Supreme Court reversed: when former clients followed the agent to a competitor on their own initiative, the language was ambiguous because it did not expressly prohibit *accepting* their business, and the court construed that ambiguity against the employer [^kennedy-ambiguous-accepting]. The court was clear that a properly drafted no-acceptance clause can be enforceable — the problem was the drafting, not the concept [^kennedy-accepting-can-be-valid].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> A standard non-solicitation clause does not necessarily stop a former employee from serving customers who come to them. Barring the service of former clients regardless of who makes first contact takes explicit non-dealing or no-acceptance language, because Mississippi reads ambiguity against the employer [^kennedy-ambiguous-accepting].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -165,11 +150,6 @@ The same favorable treatment reaches modern ownership and buyout disputes. In th
 In *Herring Gas Co. v. Pine Belt Gas*, the buyer of a propane business tried to enforce a non-compete that an employee had signed with the seller. The Supreme Court held it could not, for two independent reasons: the asset-purchase agreement's plain language did not transfer the employment contract, and a later attempt to assign it failed because it came after the employee had already resigned [^herring-not-enforceable].
 
 This is the mirror image of the sale-of-business rule. A covenant given by the *seller* of a business travels with the goodwill, but a covenant given by an *employee* of the seller is just another contract that must be deliberately assigned in the deal.
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume an asset purchase sweeps in the seller's employee non-competes. Identify each restrictive covenant in diligence and assign it expressly and before closing, because in *Herring Gas* a post-resignation assignment and silent deal documents left the buyer unable to enforce [^herring-not-enforceable].
 
 > [!CAUTION]
 > **Drafting note.**

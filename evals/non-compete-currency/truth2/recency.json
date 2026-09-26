@@ -1,0 +1,353 @@
+[
+ {
+  "family": "recency",
+  "state": "california",
+  "label": {
+   "effective_dates": [
+    "January 1, 2024",
+    "January 1, 2026"
+   ],
+   "citations": [
+    "Bus. & Prof. Code § 16600.5",
+    "Bus. & Prof. Code § 16600.1",
+    "Health and Safety Code section 1191"
+   ],
+   "summary": "SB 699/AB 1076 expand void-noncompete liability; SB 351 bars PE physician noncompetes."
+  },
+  "quote": "Since January 1, 2024, two laws turned California's ban from a defense into an offensive weapon. Senate Bill 699 (section 16600.5) makes *entering into* or *attempting to enforce* a void non-compete a civil violation",
+  "anchor": "employer-exposure",
+  "quotes": [
+   "for contracts under the new healthcare law that takes effect January 1, 2026. Senate Bill 351 (Health and Safety Code section 1191) bars a private equity group or hedge fund"
+  ],
+  "note": "AB 692 (§ 16608, stay-or-pay, Jan 1, 2026) not listed separately; same date."
+ },
+ {
+  "family": "recency",
+  "state": "colorado",
+  "label": {
+   "effective_dates": [
+    "August 6, 2025"
+   ],
+   "citations": [
+    "C.R.S. § 8-2-113"
+   ],
+   "summary": "SB 25-083 voids non-competes for physicians, APRNs, dentists regardless of pay."
+  },
+  "quote": "- **August 6, 2025:** Senate Bill 25-083 voided non-competes for health-care providers and capped minority-owner sale-of-business covenants by formula",
+  "anchor": "recent-developments",
+  "note": "HB 24-1324 (Aug 7, 2024, training-repayment) omitted as not a non-compete enforceability change."
+ },
+ {
+  "family": "recency",
+  "state": "florida",
+  "label": {
+   "effective_dates": [
+    "July 1, 2025"
+   ],
+   "citations": [
+    "Fla. Stat. § 542.41"
+   ],
+   "summary": "CHOICE Act creates employer-favorable enforceable non-compete track for high earners."
+  },
+  "quote": "The CHOICE Act, effective July 1, 2025, created a second, even more employer-favorable track for high-earning *covered employees*",
+  "anchor": "choice-act-high-earners"
+ },
+ {
+  "family": "recency",
+  "state": "illinois",
+  "label": {
+   "effective_dates": [
+    "January 1, 2025"
+   ],
+   "citations": [
+    "820 ILCS 90/10"
+   ],
+   "summary": "Non-competes unenforceable for mental-health professionals serving veterans and first responders."
+  },
+  "quote": "Any covenant not to compete or covenant not to solicit entered into after January 1, 2025 (the effective date of Public Act 103-915) shall not be enforceable with respect to the provision of mental health services to veterans and first responders",
+  "anchor": null,
+  "note": "Workplace Transparency Act (Jan 1, 2026) choice-of-law change excluded: tied to unlawful employment practices, not non-compete enforceability."
+ },
+ {
+  "family": "recency",
+  "state": "indiana",
+  "label": {
+   "effective_dates": [
+    "July 1, 2025"
+   ],
+   "citations": [
+    "Ind. Code § 25-22.5-5.5-2.3"
+   ],
+   "summary": "SEA 475 voids new non-competes between physicians and hospitals or hospital systems."
+  },
+  "quote": "The 2025 amendment (Senate Enrolled Act 475) is the most sweeping. Effective July 1, 2025, a physician and a hospital, a parent company of a hospital, an affiliated manager of a hospital, or a hospital system may not enter a non-compete",
+  "anchor": "physicians"
+ },
+ {
+  "family": "recency",
+  "state": "louisiana",
+  "label": {
+   "effective_dates": [
+    "January 1, 2025",
+    "August 1, 2026"
+   ],
+   "citations": [
+    "La. R.S. 23:921(M)",
+    "La. R.S. 23:921(N)",
+    "La. R.S. 23:921(P)"
+   ],
+   "summary": "Physician non-compete caps from signing; intern and apprentice non-competes barred."
+  },
+  "quote": "Act 273 of 2024 added physician-specific limits to La. R.S. 23:921, effective January 1, 2025.",
+  "anchor": "physician-noncompetes",
+  "quotes": [
+   "Act 150 of 2026, enacting La. R.S. 23:921(P) effective August 1, 2026, bars non-competes for interns and apprentices outright"
+  ]
+ },
+ {
+  "family": "recency",
+  "state": "maine",
+  "label": {
+   "effective_dates": [
+    "July 13, 2026"
+   ],
+   "citations": [
+    "§ 599-A"
+   ],
+   "summary": "L.D. 2200 restricts non-competes for health-care practitioners entered or renewed after effective date."
+  },
+  "quote": "The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on April 15, 2026, and it applies to non-compete agreements entered into or renewed on or after its July 13, 2026 effective date",
+  "anchor": "recent-developments"
+ },
+ {
+  "family": "recency",
+  "state": "maryland",
+  "label": {
+   "effective_dates": [
+    "July 1, 2025",
+    "October 1, 2026"
+   ],
+   "citations": [
+    "§ 3-716(a)(1)(i)2",
+    "§ 3-716(a)(2)(i)3"
+   ],
+   "summary": "Health-care employee ban (HB 1388) and licensed-architect ban (HB 1016) extend § 3-716."
+  },
+  "quote": "The statute voids covenants for licensed health-occupations employees who provide direct patient care and earn $350,000 or less, and that health care expansion applies only to agreements executed on or after July 1, 2025",
+  "anchor": "statutory-voids",
+  "quotes": [
+   "Beginning October 1, 2026, § 3-716's void rule extends to a **licensed architect**"
+  ],
+  "note": "HB 1388 (2024) date given is its application date for health-care agreements; the veterinary expansion's effective date is not stated."
+ },
+ {
+  "family": "recency",
+  "state": "montana",
+  "label": {
+   "effective_dates": [
+    "April 16, 2025",
+    "January 1, 2026"
+   ],
+   "citations": [
+    "Mont. Code Ann. § 28-2-724"
+   ],
+   "summary": "HB 198 and HB 620 extend health-care provider non-compete ban to nurses, PAs, physicians."
+  },
+  "quote": "HB 198 added naturopathic physicians, registered professional nurses, advanced practice registered nurses, and physician assistants for contracts made or renewed on or after April 16, 2025, and HB 620 added all physicians licensed under",
+  "anchor": "health-care-providers",
+  "quotes": [
+   "HB 620 added all physicians licensed under Title 37, chapter 3 on a delayed effective date of January 1, 2026"
+  ]
+ },
+ {
+  "family": "recency",
+  "state": "new-hampshire",
+  "label": {
+   "effective_dates": [
+    "August 23, 2025"
+   ],
+   "citations": [
+    "RSA 326-B:45-b"
+   ],
+   "summary": "New statute voids geographic practice restrictions in APRN professional relationship contracts."
+  },
+  "quote": "Separate statutes reach physicians, nurses, advanced practice registered nurses, and podiatrists — the advanced-practice-registered-nurse statute effective August 23, 2025",
+  "anchor": "healthcare-practitioners"
+ },
+ {
+  "family": "recency",
+  "state": "oregon",
+  "label": {
+   "effective_dates": [
+    "June 9, 2025"
+   ],
+   "citations": [
+    "ORS 653.297",
+    "ORS 653.298"
+   ],
+   "summary": "Non-competes restricting practice of medicine or nursing void for medical licensees, retroactively."
+  },
+  "quote": "The companion provision reaches agreements entered before, on, or after the June 9, 2025 effective date",
+  "anchor": "healthcare-licensees"
+ },
+ {
+  "family": "recency",
+  "state": "pennsylvania",
+  "label": {
+   "effective_dates": [
+    "January 1, 2025"
+   ],
+   "citations": [
+    "Act 74 of 2024"
+   ],
+   "summary": "Health-care practitioner non-competes over one year or after dismissal are void."
+  },
+  "quote": "The Fair Contracting for Health Care Practitioners Act (Act 74 of 2024), effective January 1, 2025, voids non-compete covenants longer than one year for covered practitioners",
+  "anchor": "healthcare-act74"
+ },
+ {
+  "family": "recency",
+  "state": "rhode-island",
+  "label": {
+   "effective_dates": [
+    "June 17, 2024"
+   ],
+   "citations": [
+    "R.I. Gen. Laws § 5-34-50"
+   ],
+   "summary": "Non-competes against advanced practice registered nurses banned, sale-of-practice exception."
+  },
+  "quote": "a covenant made in connection with the sale of a practice that lasts no more than five years — and the APRN ban has applied since June 17, 2024, so a covenant against an APRN signed on or after that date is measured against it.",
+  "anchor": "profession-specific-bans"
+ },
+ {
+  "family": "recency",
+  "state": "south-dakota",
+  "label": {
+   "effective_dates": [
+    "July 1, 2026"
+   ],
+   "citations": [
+    "House Bill 1180 (SDCL ch. 53-9)"
+   ],
+   "summary": "New enforceable lane for departing-owner non-competes on ownership-interest transfers."
+  },
+  "quote": "Under House Bill 1180, which took effect July 1, 2026, the parties to a business entity's governing document, or to a contract for the purchase, sale, or transfer of an ownership interest in the entity, may agree that a departing owner not engage",
+  "anchor": "sale-of-business",
+  "note": "Covers departing owners rather than employees generally; included as a new enforceable-covenant regime."
+ },
+ {
+  "family": "recency",
+  "state": "tennessee",
+  "label": {
+   "effective_dates": [
+    "July 1, 2026"
+   ],
+   "citations": [
+    "Tenn. Code Ann. § 50-1-210",
+    "Tenn. Code Ann. § 50-1-211"
+   ],
+   "summary": "Voids non-competes under $70,000 and adds rebuttable time-reasonableness presumptions."
+  },
+  "quote": "The headline change is the 2026 statute that, effective July 1, 2026, voids non-competes for employees earning under $70,000 and sets rebuttable time presumptions for the rest",
+  "anchor": "recent-developments"
+ },
+ {
+  "family": "recency",
+  "state": "texas",
+  "label": {
+   "effective_dates": [
+    "September 1, 2025"
+   ],
+   "citations": [
+    "Bus. & Com. Code § 15.50",
+    "Bus. & Com. Code § 15.501"
+   ],
+   "summary": "SB 1318 adds physician good-cause rule and limits for dentists, nurses, PAs."
+  },
+  "quote": "SB 1318 extended a parallel set of limits to a broader group of health-care practitioners by enacting § 15.501, effective September 1, 2025",
+  "anchor": "health-care-practitioners"
+ },
+ {
+  "family": "recency",
+  "state": "utah",
+  "label": {
+   "effective_dates": [
+    "May 6, 2026"
+   ],
+   "citations": [
+    "Utah Code § 34-51-201"
+   ],
+   "summary": "Bans healthcare-worker and veterinarian non-competes entered on or after effective date."
+  },
+  "quote": "Treat the May 6, 2026 healthcare and veterinarian provisions as the current rule, not pending legislation; they are codified in the Post-Employment Restrictions Act and took effect on that date",
+  "anchor": "healthcare-veterinarian"
+ },
+ {
+  "family": "recency",
+  "state": "virginia",
+  "label": {
+   "effective_dates": [
+    "July 1, 2025",
+    "July 1, 2026"
+   ],
+   "citations": [
+    "Va. Code § 40.1-28.7:8"
+   ],
+   "summary": "Low-wage ban extended to FLSA non-exempt workers; health-care ban and severance rule added."
+  },
+  "quote": "Effective July 1, 2025, a ‘low-wage employee’ also includes an employee who, regardless of average weekly earnings, is entitled to overtime compensation under the provisions of the Fair Labor Standards Act",
+  "anchor": null,
+  "quotes": [
+   "It implements the SB 128 categorical ban, effective July 1, 2026, for persons licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work",
+   "For agreements entered into, amended, or renewed on or after July 1, 2026, a non-compete is unenforceable after a discharge without cause unless the employer provides severance benefits"
+  ]
+ },
+ {
+  "family": "recency",
+  "state": "washington",
+  "label": {
+   "effective_dates": [
+    "June 6, 2024",
+    "June 30, 2027"
+   ],
+   "citations": [
+    "chapter 49.62 RCW"
+   ],
+   "summary": "SSB 5935 amends non-compete statute; ESHB 1155 near-total ban effective 2027."
+  },
+  "quote": "Covenants entered into now are governed by chapter 49.62 RCW as amended by Substitute Senate Bill 5935, effective June 6, 2024 [^ssb5935-amendments]. On June 30, 2027, Engrossed Substitute House Bill 1155 replaces that conditional regime with a near-total ban",
+  "anchor": "employee-non-compete-enforceability"
+ },
+ {
+  "family": "recency",
+  "state": "wyoming",
+  "label": {
+   "effective_dates": [
+    "July 1, 2025"
+   ],
+   "citations": [
+    "Wyo. Stat. § 1-23-108"
+   ],
+   "summary": "SF 107 voids most non-competes prospectively, with enumerated exceptions and physician rules."
+  },
+  "quote": "**July 1, 2025:** The new statute took effect for contracts entered into on or after that date.",
+  "anchor": "recent-developments"
+ },
+ {
+  "family": "recency",
+  "state": "arkansas",
+  "label": "AMBIGUOUS",
+  "quote": "The physician ban was added by the 2025 amendment. The statute defines physician by reference to the Arkansas Medical Practices Act and osteopathy licensing provisions",
+  "anchor": "physicians-professionals",
+  "note": "Guide says 2025 amendment added physician ban (Ark. Code Ann. § 4-75-101) but gives no effective date."
+ },
+ {
+  "family": "recency",
+  "state": "iowa",
+  "label": "AMBIGUOUS",
+  "quote": "H.F. 2254 is enacted 2026 law of limited reach. It directs the Board of Regents to adopt a policy barring the University of Iowa Hospitals and Clinics from including noncompetes in employment contracts with listed clinical roles",
+  "anchor": "industry-specific-bans",
+  "note": "Enacted 2026 UIHC clinical non-compete law; guide gives only 'the effective date of this Act', no day."
+ }
+]

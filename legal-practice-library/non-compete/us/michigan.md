@@ -25,11 +25,6 @@ The governing statute is part of the Michigan Antitrust Reform Act. A covenant i
 
 "To be reasonable in relation to an employer's competitive business interest, a restrictive covenant must protect against the employee's gaining some unfair advantage in competition with the employer, but not prohibit the employee from using general knowledge or skill."[^borgiel-unfair-advantage]
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not treat Michigan as a total-ban state, and do not assume a covenant is enforceable just because the statute permits non-competes. Start with the reasonable-competitive-business-interest test and the duration, geography, and type-of-employment limits, because a covenant that merely suppresses competition fails even though the statute allows non-competes [^mcl-774a-employer-may-obtain][^borgiel-unfair-advantage].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -97,11 +92,6 @@ The rule of reason flows from the Michigan Antitrust Reform Act, which makes con
 
 "Commercial noncompete agreements between businesses should be evaluated under the rule of reason, and federal court interpretations of the rule of reason should be given due deference."[^innovation-rule-of-reason]
 
-> [!NOTE]
-> **Practice note.**
->
-> Identify which framework applies before assessing a covenant. *Innovation Ventures* routes true commercial covenants, including transaction-ancillary covenants, to the antitrust rule of reason, so applying the MCL 445.774a employee duration-geography test to a genuine business-to-business covenant analyzes it under the wrong standard [^innovation-rule-of-reason][^mcl-772-restraint].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -114,11 +104,6 @@ The rule of reason flows from the Michigan Antitrust Reform Act, which makes con
 In *Isidore Steiner, DPM, PC v. Bonanni*, the Court of Appeals held that Michigan's physician-patient privilege is more protective than HIPAA and blocks discovery of nonparty patient information, which can make it harder for a medical employer to prove diversion of patients [^steiner-patient-privilege].
 
 "Because Michigan law is more protective of patients' privacy interests in the context of this litigation, Michigan law applies to plaintiff's attempted discovery of defendant's patient information."[^steiner-patient-privilege]
-
-> [!NOTE]
-> **Practice note.**
->
-> A physician non-solicitation or non-compete can be valid yet hard to enforce in practice. *Steiner* shows that patient-privilege limits on discovery can deprive a medical employer of the nonparty-patient evidence it needs to prove a breach, so build the enforcement case on non-privileged proof [^steiner-patient-privilege].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -151,11 +136,6 @@ But the clause type matters. In *Barshaw v. Allegheny Performance Plastics, LLC*
 **Short answer.** This is an open Michigan question. No Michigan statute or appellate decision surfaced here squarely endorses automatic judicial tolling, or enforcement of an extension-on-breach clause after the stated restricted period expires [^mcl-774a-tolling-backdrop][^coates-tolling-backdrop].
 
 The relevant backdrop cuts against assuming an automatic extension. MCL 445.774a authorizes a court to *limit* an unreasonable covenant, not to expand one [^mcl-774a-tolling-backdrop], and any extension still has to satisfy the reasonableness test that *Coates* applies as a question of law [^coates-tolling-backdrop]. A clause that converts a fixed restraint into an open-ended one as litigation drags on raises exactly the reasonableness concern the statute targets.
-
-> [!NOTE]
-> **Practice note.**
->
-> Open question: Michigan law is unsettled on whether an extension-on-breach clause is enforceable after the original restricted period expires. Draft any tolling clause as a separate, reasonable restraint tied to the duration of the breach and a legitimate interest, and do not assume a Michigan court will extend an expired covenant automatically [^mcl-774a-tolling-backdrop][^coates-tolling-backdrop].
 
 > [!CAUTION]
 > **Drafting note.**

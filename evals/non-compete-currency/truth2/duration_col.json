@@ -1,0 +1,253 @@
+[
+ {
+  "family": "duration",
+  "state": "alabama",
+  "label": 24,
+  "quote": "The employee exception presumes a restraint of two years or less to be reasonable.\n\n\"Restraints of two years or less are presumed to be reasonable.\"",
+  "anchor": "extended-for-breach",
+  "note": "Ala. Code 8-1-190(b)(4) presumption"
+ },
+ {
+  "family": "duration",
+  "state": "arkansas",
+  "label": 24,
+  "quote": "Two years is presumptively reasonable under the statute, unless the particular facts clearly show that two years is unreasonable",
+  "anchor": "duration-limits"
+ },
+ {
+  "family": "duration",
+  "state": "georgia",
+  "label": 24,
+  "quote": "For an ordinary former employee, the dividing line is two years, measured from the date the relationship ends.",
+  "anchor": "duration-limits",
+  "note": "O.C.G.A. 13-8-57(b) presumption"
+ },
+ {
+  "family": "duration",
+  "state": "louisiana",
+  "label": 24,
+  "quote": "Named parishes and no more than two years. An employee non-compete must identify the specific parishes or municipalities where it applies and may not run longer than two years from the end of employment",
+  "anchor": "duration-limits",
+  "note": "La. R.S. 23:921(C) cap"
+ },
+ {
+  "family": "duration",
+  "state": "massachusetts",
+  "label": 12,
+  "quote": "The restricted period may not exceed 12 months from the end of employment, unless the employee breached a fiduciary duty or unlawfully took employer property",
+  "anchor": "duration-limits",
+  "note": "2-year extension only on misconduct"
+ },
+ {
+  "family": "duration",
+  "state": "oregon",
+  "label": 12,
+  "quote": "No more than 12 months from termination. ORS 653.295(3) caps the term at 12 months after the employee's termination",
+  "anchor": "duration-limits"
+ },
+ {
+  "family": "duration",
+  "state": "south-dakota",
+  "label": 24,
+  "quote": "For employees, the core drafting limits are two years or less, a specified county, first- or second-class municipality, or other specified area",
+  "anchor": "employee-non-compete-enforceability",
+  "note": "SDCL 53-9-11 cap"
+ },
+ {
+  "family": "duration",
+  "state": "tennessee",
+  "label": 24,
+  "quote": "a court presumes a restraint is unreasonable in time if it runs longer than the period set for the relevant relationship: two years for a former employee or independent contractor",
+  "anchor": "duration-limits",
+  "note": "2026 statute; agreements on/after July 1, 2026; rebuttable presumption"
+ },
+ {
+  "family": "duration",
+  "state": "utah",
+  "label": 12,
+  "quote": "One year. For non-competes entered on or after May 10, 2016, an employer and employee may not agree to a post-employment restriction longer than one year from separation",
+  "anchor": "duration-limits"
+ },
+ {
+  "family": "duration",
+  "state": "washington",
+  "label": 18,
+  "quote": "Eighteen months is the practical ceiling. A court or arbitrator must presume that any non-compete longer than eighteen months after termination is unreasonable and unenforceable",
+  "anchor": "duration-limits",
+  "note": "RCW 49.62.020 rebuttable presumption"
+ },
+ {
+  "family": "duration",
+  "state": "florida",
+  "label": "AMBIGUOUS",
+  "quote": "Against a former employee, a restraint of six months or less is presumed reasonable and one longer than two years is presumed unreasonable.",
+  "anchor": "duration-limits",
+  "note": "Two presumptions (6 months reasonable, >2 years unreasonable); unclear which number answers"
+ },
+ {
+  "family": "duration",
+  "state": "idaho",
+  "label": "AMBIGUOUS",
+  "quote": "Eighteen months or less is the statutory safe-harbor term. Idaho Code § 44-2704 presumes an eighteen-month-or-shorter postemployment term reasonable",
+  "anchor": "duration-limits",
+  "note": "Idaho statute governs key employees/key independent contractors, not all ordinary employees"
+ },
+ {
+  "family": "duration",
+  "state": "district-of-columbia",
+  "label": "AMBIGUOUS",
+  "quote": "cap the post-employment term — 365 calendar days for a non-medical employee",
+  "anchor": "highly-compensated-exception",
+  "note": "Cap is stated in days (365) and applies only to highly compensated employees; others barred entirely"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "california",
+  "label": "yes",
+  "quote": "\"An employer shall not require an employee who primarily resides and works in California, as a condition of employment, to agree to a provision that would do either of the following:",
+  "anchor": "choice-of-law",
+  "note": "Lab. Code 925"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "colorado",
+  "label": "yes",
+  "quote": "No, for a Colorado-based worker. If the worker primarily resided and worked in Colorado at termination, Colorado law governs the covenant's enforceability and the worker cannot be required to litigate enforceability outside Colorado, regardless of any contrary contract clause",
+  "anchor": "choice-of-law"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "louisiana",
+  "label": "yes",
+  "quote": "No. A choice-of-forum or choice-of-law clause in a Louisiana employee's contract is null and void unless the employee ratifies it after the dispute has already arisen",
+  "anchor": "choice-of-law",
+  "note": "La. R.S. 23:921(A)(2)"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "massachusetts",
+  "label": "yes",
+  "quote": "Section 24L makes a choice-of-law provision unenforceable, where it would have the effect of avoiding the statute, for an employee who has been a Massachusetts resident or employed in Massachusetts for at least 30 days before leaving",
+  "anchor": "choice-of-law"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "minnesota",
+  "label": "yes",
+  "quote": "The statute prohibits requiring a Minnesota-resident-and-worker employee, as a condition of employment, to agree to out-of-state adjudication or to a clause that would deprive the employee of Minnesota substantive protection",
+  "anchor": "choice-of-law-venue",
+  "note": "Minn. Stat. 181.988; voidable at employee's request"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "washington",
+  "label": "yes",
+  "quote": "No. For a Washington-based worker, a provision requiring out-of-state adjudication, depriving the worker of the Act's protections, or applying another state's law is void and unenforceable",
+  "anchor": "choice-of-law",
+  "note": "RCW 49.62.050"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "oregon",
+  "label": "yes",
+  "quote": "ORS 15.320(3) applies Oregon law to a contract of employment for services rendered primarily in Oregon by an Oregon resident, so an out-of-state choice-of-law clause does not carry a non-compete around ORS 653.295 for that employee.",
+  "anchor": "choice-of-law-and-fees",
+  "note": "Statute mandates Oregon law (law only, not forum)"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "new-york",
+  "label": "no",
+  "quote": "And the pending S4641A bill would go further and void choice-of-law and venue clauses used to avoid the statute for workers who reside or work in New York — pending only, not law",
+  "anchor": "choice-of-law",
+  "note": "Only case-law public-policy exception (Brown & Brown); statutory bar is pending bill only"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "alabama",
+  "label": "AMBIGUOUS",
+  "quote": "Therefore, this article shall govern and shall be applied instead of any foreign laws that might otherwise be applicable in those instances when the application of those foreign laws would violate a fundamental public policy expressed in this article.",
+  "anchor": "choice-of-law",
+  "note": "Statutory public-policy override conditioned on conflict; not a flat bar on requiring the clause"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "illinois",
+  "label": "AMBIGUOUS",
+  "quote": "it voids a unilateral clause applying non-Illinois law or requiring an out-of-state venue to the extent it diminishes an Illinois employee's rights related to an unlawful employment practice",
+  "anchor": "choice-of-law",
+  "note": "WTA bar limited to unlawful-employment-practice claims, not non-compete enforcement generally"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "north-carolina",
+  "label": "AMBIGUOUS",
+  "quote": "Section 22B-3 reaches forum and arbitration provisions; it does not by itself void an out-of-state choice-of-law clause.",
+  "anchor": "out-of-state-employers",
+  "note": "Statute voids out-of-state forum clauses in NC contracts but not choice-of-law"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "idaho",
+  "label": "AMBIGUOUS",
+  "quote": "Idaho Code § 29-110 voids those restrictions as Idaho public policy, and *Off-Spec Solutions* applied that policy to require Idaho arbitration",
+  "anchor": "choice-of-law-forum",
+  "note": "General tribunal-access statute, not a non-compete choice-of-law rule; 'often no'"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "new-mexico",
+  "label": "AMBIGUOUS",
+  "quote": "Outside the health-care statute, the provided New Mexico source set does not contain a non-compete-specific choice-of-law rule.",
+  "anchor": "choice-of-law",
+  "note": "Statutory bar only for health-care practitioners; guide hedges on source set for others"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "florida",
+  "label": "AMBIGUOUS",
+  "quote": "the CHOICE Act even applies to a covered employee whose primary place of work is Florida *regardless of any applicable choice of law provisions*",
+  "anchor": "choice-of-law-multistate",
+  "note": "CHOICE Act override favors enforcement for high earners; not an employee-protective bar"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "indiana",
+  "label": "AMBIGUOUS",
+  "quote": "Indiana generally honors a forum or choice-of-law clause, but a contract for the improvement of Indiana real estate may not be made subject to another state's law",
+  "anchor": "choice-of-law-and-fees",
+  "note": "Statutory bar only for construction contracts; guide does not expressly say no employment bar"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "texas",
+  "label": "AMBIGUOUS",
+  "quote": "Sometimes for forum, rarely to escape Texas policy. Texas courts will enforce a mandatory forum-selection clause through mandamus",
+  "anchor": "choice-of-law-forum",
+  "note": "Case-law public-policy override; guide does not state whether any statutory bar exists"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "oklahoma",
+  "label": "AMBIGUOUS",
+  "quote": "An Oklahoma court will not apply a contractually chosen foreign law if doing so would violate Oklahoma public policy",
+  "anchor": "choice-of-law",
+  "note": "Case-law public-policy override; forum clauses enforced; no statement on statutory bar"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "wisconsin",
+  "label": "AMBIGUOUS",
+  "quote": "Wisconsin courts refuse to enforce a choice-of-law clause that would apply another state's more permissive covenant law in place of § 103.465, because doing so would violate Wisconsin's fundamental public policy.",
+  "anchor": "choice-of-law",
+  "note": "Case-law override, not a statute barring the clause"
+ },
+ {
+  "family": "choice_of_law",
+  "state": "georgia",
+  "label": "AMBIGUOUS",
+  "quote": "Georgia law remains the touchstone, so a Georgia court must first determine whether a covenant complies with the GRCA",
+  "anchor": "choice-of-law",
+  "note": "Case-law (Motorsports) override, not a statutory bar"
+ }
+]

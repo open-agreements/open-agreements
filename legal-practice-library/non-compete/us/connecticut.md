@@ -65,11 +65,6 @@ Customer-focused limits can be easier to defend than broad territory limits. In 
 
 The important limitation is connection. *Schimenti* held that continued employment can be sufficient if connected to the covenant, but a defendant may still try to prove no connection between signing and continued employment [^schimenti-connected-consideration]. *Thoma* is now best read as fact-specific: the later agreement removed severance rights, and continued employment was not predicated on the new agreement [^thoma-fact-specific-consideration].
 
-> [!NOTE]
-> **Practice note.**
->
-> Do not rely on a recital alone. Connecticut now permits continued at-will employment as consideration, but the enforcement record is stronger when the offer letter, promotion letter, or covenant states that signing is a condition of continued employment and the employee actually receives that continued employment [^schimenti-continued-employment-rule][^schimenti-connected-consideration].
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -97,11 +92,6 @@ For physicians, a covenant must be necessary to protect a legitimate business in
 Security-guard covenants are barred for covered guards working the same or similar job at the same location unless the employer proves the guard obtained employer trade secrets [^security-guard-trade-secret-exception]. Broadcast-industry employers cannot require covered broadcast employees to refrain from other broadcast employment in a specified area for a specified time after termination [^broadcast-employee-restriction-ban].
 
 For homemaker-companion and home-health services, Connecticut voids covenants not to compete, and a companion statute voids client no-hire clauses that impose penalties, fees, breach claims, damages, or injunction exposure for directly hiring the agency employee [^home-health-worker-covenant-void][^home-health-client-no-hire-ban].
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not use the ordinary *Scott* reasonableness test to rescue a covenant that a Connecticut occupation-specific statute voids. For covered workers, the statute controls first, and common-law reasonableness matters only if the statutory rule leaves room for enforcement [^physician-one-year-fifteen-mile-limit][^security-guard-trade-secret-exception][^home-health-worker-covenant-void].
 
 > [!CAUTION]
 > **Drafting note.**

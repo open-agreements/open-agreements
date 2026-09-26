@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nebraska[^about]
 
@@ -78,11 +78,6 @@ The key case is *Polly*. The employer had many accounts the employee never handl
 *Gaver* shows the risk. Applying the reasonableness test, the Nebraska Supreme Court struck a covenant it found aimed at ordinary competition rather than at protecting a legitimate interest such as customer goodwill. The lesson for drafting is to tie any restraint to a recognized protectable interest and keep it no broader than necessary, rather than relying on a radius or territory.
 
 Older cases sometimes enforced geographic language, and sale-of-business covenants are different. For current employment drafting, the conservative Nebraska approach is to avoid a radius or territory ban unless the covenant is truly ancillary to a sale or is otherwise tied to a very specific customer pool.
-
-> [!NOTE]
-> **Practice note.**
->
-> A short radius is not a Nebraska safe harbor. If the practical effect is to stop the employee from using general skill in the market, the restraint still risks failing as ordinary competition [^q4-gaver-ordinary-competition].
 
 > [!CAUTION]
 > **Drafting note.**

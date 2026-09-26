@@ -1,0 +1,362 @@
+[
+ {
+  "family": "consideration",
+  "state": "alabama",
+  "label": "yes",
+  "quote": "That is why Alabama treats continued employment of an existing employee as adequate consideration, while a payment cannot rescue a covenant that is void for a different reason.",
+  "anchor": "{#timing-of-signing}",
+  "note": "Stated in the Pitney Bowes discussion, not a dedicated consideration section."
+ },
+ {
+  "family": "consideration",
+  "state": "arizona",
+  "label": "yes",
+  "quote": "Arizona follows the majority rule that continued at-will employment is sufficient consideration to support a covenant, even one signed after employment has already begun.",
+  "anchor": "{#consideration}",
+  "note": ""
+ },
+ {
+  "family": "consideration",
+  "state": "arkansas",
+  "label": "yes",
+  "quote": "\"An employee's continued employment is sufficient consideration for a covenant not to compete agreement.\"[^q6-aca-consideration]",
+  "anchor": "{#consideration}",
+  "note": "Statutory rule."
+ },
+ {
+  "family": "consideration",
+  "state": "delaware",
+  "label": "yes",
+  "quote": "Delaware can treat continued at-will employment as sufficient consideration when signing is a condition of continued employment",
+  "anchor": "{#consideration}",
+  "note": "Powell: signing as condition of keeping the position; adequacy still weighed in equities balancing."
+ },
+ {
+  "family": "consideration",
+  "state": "florida",
+  "label": "yes",
+  "quote": "Florida courts treat continued at-will employment as sufficient consideration, so an employee can be bound by a non-compete signed months or years after the hire date.",
+  "anchor": "{#consideration}",
+  "note": ""
+ },
+ {
+  "family": "consideration",
+  "state": "georgia",
+  "label": "AMBIGUOUS",
+  "quote": "Georgia practitioners generally treat continued at-will employment as sufficient — but no modern GRCA-era appellate decision squarely settles the point, so treat it as an area to monitor",
+  "anchor": "{#consideration}",
+  "note": "GRCA silent on consideration; practitioner view only, no modern appellate holding."
+ },
+ {
+  "family": "consideration",
+  "state": "indiana",
+  "label": "yes",
+  "quote": "In Indiana, an employer's promise to continue an at-will employee's job is valid consideration for a non-compete signed during employment",
+  "anchor": "{#consideration}",
+  "note": "Med-1 Solutions v. Taylor (2024)."
+ },
+ {
+  "family": "consideration",
+  "state": "iowa",
+  "label": "yes",
+  "quote": "Iowa decisions treat continued employment for an indefinite period as sufficient consideration to support a covenant not to compete, even when the covenant is signed after employment begins",
+  "anchor": "{#consideration}",
+  "note": "Guide says 'Generally yes'."
+ },
+ {
+  "family": "consideration",
+  "state": "kansas",
+  "label": "yes",
+  "quote": "Kansas does not treat continued employment of an existing at-will employee as inadequate consideration for a covenant signed after hire",
+  "anchor": "{#consideration}",
+  "note": "Puritan-Bennett."
+ },
+ {
+  "family": "consideration",
+  "state": "kentucky",
+  "label": "no",
+  "quote": "No, not by itself, for an existing employee. Since *Charles T. Creech, Inc. v. Brown*, requiring a current employee to sign a non-compete without giving anything new",
+  "anchor": "{#consideration}",
+  "note": "Creech: new consideration (raise, promotion, training) required."
+ },
+ {
+  "family": "consideration",
+  "state": "mississippi",
+  "label": "yes",
+  "quote": "Mississippi treats continued at-will employment as sufficient consideration to support a restrictive covenant",
+  "anchor": "{#consideration}",
+  "note": "Caveat: covenant extracted just before bad-faith discharge is weaker."
+ },
+ {
+  "family": "consideration",
+  "state": "missouri",
+  "label": "AMBIGUOUS",
+  "quote": "This is unsettled. Missouri appellate cases have treated continued at-will employment plus access to the employer's customers or trade secrets as adequate consideration",
+  "anchor": "{#consideration}",
+  "note": "JumboSack vs. Baker/Durrell split; state supreme court has not resolved for non-competes."
+ },
+ {
+  "family": "consideration",
+  "state": "nevada",
+  "label": "AMBIGUOUS",
+  "quote": "Historically, continued at-will employment was enough, but the modern statute adds a proportionality question.",
+  "anchor": "{#consideration}",
+  "note": "Camco says yes at common law; unresolved whether continued employment alone satisfies NRS 613.195(1)(d)."
+ },
+ {
+  "family": "consideration",
+  "state": "new-jersey",
+  "label": "yes",
+  "quote": "adequate consideration for a post-employment restraint can be found in the original employment contract or in continued employment after the covenant is signed",
+  "anchor": "{#consideration}",
+  "note": "Hogan; guide says 'Often, yes' (Hogan involved ~3 years of continued employment)."
+ },
+ {
+  "family": "consideration",
+  "state": "new-mexico",
+  "label": "no",
+  "quote": "Probably not by itself for an existing at-will employee.",
+  "anchor": "{#consideration}",
+  "note": "Piano (arbitration case): continued at-will employment is illusory; mid-stream covenant needs independent new consideration."
+ },
+ {
+  "family": "consideration",
+  "state": "new-york",
+  "label": "no",
+  "quote": "an employer's forbearance from discharging an at-will worker can supply consideration — but only if the employment then continues for a substantial period",
+  "anchor": "{#consideration}",
+  "note": "Sufficient only if employment continues for a substantial period after signing (Zellner)."
+ },
+ {
+  "family": "consideration",
+  "state": "north-carolina",
+  "label": "no",
+  "quote": "a covenant imposed on an existing employee must be supported by *new* consideration — continued at-will employment is not enough",
+  "anchor": "{#consideration}",
+  "note": "New consideration can be modest (e.g., $500)."
+ },
+ {
+  "family": "consideration",
+  "state": "ohio",
+  "label": "yes",
+  "quote": "Ohio holds that an employer's agreement to continue an at-will employment relationship is itself sufficient consideration for a non-compete an existing employee signs",
+  "anchor": "{#consideration}",
+  "note": "Lake Land v. Columber."
+ },
+ {
+  "family": "consideration",
+  "state": "oklahoma",
+  "label": "AMBIGUOUS",
+  "quote": "Oklahoma has not squarely decided whether continued at-will employment, by itself, is sufficient consideration for a restrictive covenant signed mid-employment.",
+  "anchor": "{#consideration}",
+  "note": "Unsettled per guide."
+ },
+ {
+  "family": "consideration",
+  "state": "pennsylvania",
+  "label": "no",
+  "quote": "When a covenant is added after employment has begun, it is enforceable only if the employee receives new and valuable consideration beyond merely keeping the job",
+  "anchor": "{#consideration}",
+  "note": "Socko; UWOA recital does not cure."
+ },
+ {
+  "family": "consideration",
+  "state": "tennessee",
+  "label": "no",
+  "quote": "a covenant an existing employee signs is supported by consideration where the employee then remains employed for an appreciable period",
+  "anchor": "{#consideration}",
+  "note": "Guide says 'Yes, when the employment actually continues' — sufficient only after an appreciable (unfixed) period of continued employment (Central Adjustment Bureau v. Ingram)."
+ },
+ {
+  "family": "consideration",
+  "state": "texas",
+  "label": "AMBIGUOUS",
+  "quote": "What is risky is relying on nothing more than continued at-will employment, because a promise the employer can revoke at any moment raises the illusory-promise problem the next question addresses.",
+  "anchor": "{#consideration}",
+  "note": "Texas frames consideration as reasonably related to protectable interest (Marsh/Sheshunoff); guide does not give a yes/no on continued employment alone."
+ },
+ {
+  "family": "consideration",
+  "state": "utah",
+  "label": "yes",
+  "quote": "an offer of employment, including continued at-will employment, can be sufficient consideration for a non-compete, even when the employee signs after starting work",
+  "anchor": "{#consideration}",
+  "note": ""
+ },
+ {
+  "family": "consideration",
+  "state": "wisconsin",
+  "label": "yes",
+  "quote": "an employer's forbearance in exercising its right to terminate an at-will employee is lawful consideration for signing a restrictive covenant",
+  "anchor": "{#consideration}",
+  "note": "Runzheimer; forbearance must be genuine (no sign-then-fire)."
+ },
+ {
+  "family": "consideration",
+  "state": "colorado",
+  "label": "yes",
+  "quote": "an employer that forbears from terminating an existing at-will employee gives adequate consideration for a non-compete signed after employment begins",
+  "anchor": "{#continued-employment-consideration}",
+  "note": "Statutory 14-day notice to current workers still required (procedural)."
+ },
+ {
+  "family": "consideration",
+  "state": "connecticut",
+  "label": "yes",
+  "quote": "The current Connecticut rule is that continued at-will employment can supply sufficient consideration for a restrictive covenant signed after employment has begun",
+  "anchor": "{#continued-employment-consideration}",
+  "note": "Continued employment must be connected to the covenant (Schimenti); Dur-A-Flex."
+ },
+ {
+  "family": "consideration",
+  "state": "maryland",
+  "label": "yes",
+  "quote": "Maryland treats an employer's agreement to continue an at-will employee as sufficient consideration for a covenant signed after employment begins",
+  "anchor": "{#continued-employment-consideration}",
+  "note": "Simko."
+ },
+ {
+  "family": "consideration",
+  "state": "michigan",
+  "label": "yes",
+  "quote": "\"Mere continuation of employment is sufficient consideration to support a noncompete agreement in an at-will employment setting.\"[^qis-continued-employment]",
+  "anchor": "{#continued-employment-consideration}",
+  "note": "Only for genuine at-will employees; just-cause employees need separate consideration (QIS)."
+ },
+ {
+  "family": "consideration",
+  "state": "south-carolina",
+  "label": "no",
+  "quote": "When a covenant is signed after employment has already begun, South Carolina requires separate, independent consideration — continued at-will employment alone is not enough",
+  "anchor": "{#continued-employment-consideration}",
+  "note": "Poole v. Incentives Unlimited."
+ },
+ {
+  "family": "consideration",
+  "state": "montana",
+  "label": "no",
+  "quote": "*Access Organics* held that simple continued employment did not supply good consideration for a non-compete signed more than four months after hiring",
+  "anchor": "{#consideration-after-hire}",
+  "note": "Guide says 'Usually no'; independent consideration needed."
+ },
+ {
+  "family": "consideration",
+  "state": "new-hampshire",
+  "label": "yes",
+  "quote": "New Hampshire recognizes continued employment after signing as consideration for a covenant not to compete",
+  "anchor": "{#consideration-after-hire}",
+  "note": "RSA 275:70 notice gate for new hires is separate."
+ },
+ {
+  "family": "consideration",
+  "state": "illinois",
+  "label": "no",
+  "quote": "Either two years of continued employment after signing, or other professional or financial benefits adequate to support the restraint.",
+  "anchor": "{#adequate-consideration}",
+  "note": "Sufficient only after ~2 years of continued employment (Fifield, codified 820 ILCS 90/5)."
+ },
+ {
+  "family": "consideration",
+  "state": "south-dakota",
+  "label": "yes",
+  "quote": "SDCL 53-9-11 permits an employee to agree at the time of employment or during employment, while older case law treats continued employment as sufficient consideration in that setting",
+  "anchor": "{#consideration-termination}",
+  "note": "Zakinski (older case); fired-without-fault employees get a reasonableness balancing."
+ },
+ {
+  "family": "consideration",
+  "state": "vermont",
+  "label": "yes",
+  "quote": "the Vermont Supreme Court held that continued at-will employment alone is sufficient consideration to support a non-compete entered into during the employment relationship",
+  "anchor": "{#mid-employment-consideration}",
+  "note": "Summits 7 v. Kelly."
+ },
+ {
+  "family": "consideration",
+  "state": "west-virginia",
+  "label": "no",
+  "quote": "If employment began without a non-compete, a later covenant needs new, independent consideration; continued at-will employment alone is not enough under West Virginia law",
+  "anchor": "{#mid-employment-consideration}",
+  "note": "Environmental Products."
+ },
+ {
+  "family": "consideration",
+  "state": "washington",
+  "label": "no",
+  "quote": "give independent consideration for any covenant signed after employment starts. Continued employment alone is not enough",
+  "anchor": "{#disclosure-and-consideration}",
+  "note": "RCW 49.62.020; Labriola."
+ },
+ {
+  "family": "consideration",
+  "state": "wyoming",
+  "label": "no",
+  "quote": "Wyoming common law requires separate, contemporaneous consideration[^brown-post-hire-consideration] for the new promise — continued at-will employment, by itself, is not enough.",
+  "anchor": "{#post-hire-consideration}",
+  "note": "Applies to covenants outside the 2025 statutory void (pre-2025 cohort and statutory exceptions)."
+ },
+ {
+  "family": "consideration",
+  "state": "idaho",
+  "label": "AMBIGUOUS",
+  "quote": "That means continued at-will employment can support an eighteen-month-or-shorter covenant, but it is not enough by itself for a longer restriction.",
+  "anchor": "{#duration-limits}",
+  "note": "Depends on covenant length: sufficient for <=18-month restraint, not for longer (Idaho Code 44-2704)."
+ },
+ {
+  "family": "consideration",
+  "state": "louisiana",
+  "label": "yes",
+  "quote": "Continued at-will employment generally suffices, as in *Cellular One, Inc. v. Boyd*, where the covenant the court analyzed was signed as a condition of continued employment",
+  "anchor": "{#prospective-employee}",
+  "note": "Civil-law 'lawful cause' framing."
+ },
+ {
+  "family": "consideration",
+  "state": "massachusetts",
+  "label": "no",
+  "quote": "the agreement must be supported by fair and reasonable consideration independent from continued employment, with at least 10 business days' notice before it takes effect",
+  "anchor": "{#formation-notice}",
+  "note": "MNAA (agreements on/after Oct 1, 2018) abrogated the older continued-employment rule."
+ },
+ {
+  "family": "consideration",
+  "state": "minnesota",
+  "label": "AMBIGUOUS",
+  "quote": "Minn. Stat. § 181.988 makes covered covenants not to compete void and unenforceable[^minn-181-988-voids-employment-noncompetes], unless a sale-of-business or dissolution exception applies.",
+  "anchor": "{#employee-non-compete-enforceability}",
+  "note": "Near-total ban for agreements on/after July 1, 2023; pre-2023 Sanborn rule required independent consideration."
+ },
+ {
+  "family": "consideration",
+  "state": "rhode-island",
+  "label": "AMBIGUOUS",
+  "quote": "Rhode Island treats continued at-will employment, plus training and licensure support, as part of a lawful exchange that can support a restraint agreed mid-employment",
+  "anchor": "{#continued-employment-termination}",
+  "note": "Walls: continued employment PLUS training; preliminary-injunction posture only, not a final holding on continued employment alone."
+ },
+ {
+  "family": "consideration",
+  "state": "oregon",
+  "label": "no",
+  "quote": "Continued employment alone is not a valid trigger. The covenant must be tied either to the original hire (with the two-week notice) or to a subsequent bona fide advancement.",
+  "anchor": "{#timing-advancement}",
+  "note": "ORS 653.295(1)(a) statutory formation gateway."
+ },
+ {
+  "family": "consideration",
+  "state": "california",
+  "label": "AMBIGUOUS",
+  "quote": "California voids employee non-compete agreements by statute. Business and Professions Code section 16600 makes any contract that restrains someone from engaging in a lawful profession, trade, or business void to that extent",
+  "anchor": "{#employee-non-compete-enforceability}",
+  "note": "State voids nearly all employee non-competes; consideration question moot."
+ },
+ {
+  "family": "consideration",
+  "state": "north-dakota",
+  "label": "AMBIGUOUS",
+  "quote": "North Dakota voids employee non-competes under N.D. Cent. Code § 9-08-06, one of the strictest bans in the United States, with only sale-of-goodwill and dissociation exceptions.",
+  "anchor": null,
+  "note": "State voids nearly all employee non-competes; consideration question moot."
+ }
+]

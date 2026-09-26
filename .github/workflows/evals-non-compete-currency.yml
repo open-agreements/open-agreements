@@ -1,0 +1,47 @@
+name: Eval — non-compete currency
+
+# Re-derives every published number of evals/non-compete-currency from the committed
+# runs and the pinned guide commit. No model API is called; no secrets are needed.
+"on":
+  pull_request:
+    paths:
+      - "evals/non-compete-currency/**"
+      - ".github/workflows/evals-non-compete-currency.yml"
+  push:
+    branches: [main]
+    paths:
+      - "evals/non-compete-currency/**"
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: evals/non-compete-currency
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # guides are read from the pinned GUIDE_REF via `git show`
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Self-tests (each includes cases that must fail)
+        run: |
+          python3 -B gate_truth2.py --selftest
+          python3 -B longtail.py score --selftest
+          python3 -B score_bench.py --selftest
+
+      - name: Answer-key gates against the pinned guides
+        run: |
+          python3 -B score_bench.py --gate
+          python3 -B gate_truth2.py
+
+      - name: Re-derive results and require byte-identical output
+        run: |
+          python3 -B longtail.py results
+          git diff --exit-code -- truth2.jsonl results.json RESULTS.md

@@ -1,0 +1,410 @@
+[
+ {
+  "family": "narrowing",
+  "state": "alabama",
+  "label": "narrow",
+  "quote": "\"If a contractually specified restraint is overly broad or unreasonable in its duration, a court may void the restraint in part and reform it to preserve the protectable interest or interests.\"",
+  "anchor": "court-narrowing",
+  "note": "Statutory reformation of overbroad duration within a valid § 8-1-190(b) category."
+ },
+ {
+  "family": "narrowing",
+  "state": "alaska",
+  "label": "narrow",
+  "quote": "**Short answer.** Often yes, through reasonable alteration, but only if the covenant can be made enforceable and the employer proves it was drafted in good faith",
+  "anchor": "court-narrowing",
+  "note": "Reasonable-alteration rule, conditioned on good faith."
+ },
+ {
+  "family": "narrowing",
+  "state": "arizona",
+  "label": "narrow",
+  "quote": "Arizona follows a strict blue-pencil rule: a court may eliminate a grammatically severable unreasonable term, but it may not add language or rewrite the covenant to make it reasonable.",
+  "anchor": "court-narrowing",
+  "note": "Strict blue pencil only (strike severable terms); counts as narrow per label definition."
+ },
+ {
+  "family": "narrowing",
+  "state": "arkansas",
+  "label": "narrow",
+  "quote": "If the restrictions are unreasonable, the court must reform the covenant as needed and enforce it under the reformed terms",
+  "anchor": "court-narrowing",
+  "note": "Mandatory reformation under § 4-75-101 for post-Act covenants."
+ },
+ {
+  "family": "narrowing",
+  "state": "california",
+  "label": "AMBIGUOUS",
+  "quote": "California treats a conventional employee non-compete as void rather than reforming it.",
+  "anchor": "employee-non-compete-enforceability",
+  "note": "State voids nearly all employee non-competes; question not well-posed."
+ },
+ {
+  "family": "narrowing",
+  "state": "colorado",
+  "label": "narrow",
+  "quote": "Colorado courts have discretion to blue-pencil an overbroad covenant but are not required to, and parties cannot contractually force a court to rewrite one",
+  "anchor": "court-narrowing",
+  "note": "Discretionary blue pencil."
+ },
+ {
+  "family": "narrowing",
+  "state": "connecticut",
+  "label": "AMBIGUOUS",
+  "quote": "whether a court will narrow an overbroad employee covenant remains unsettled",
+  "anchor": "court-narrowing",
+  "note": "Guide says the narrowing question is unsettled."
+ },
+ {
+  "family": "narrowing",
+  "state": "delaware",
+  "label": "AMBIGUOUS",
+  "quote": "Delaware courts retain equitable discretion, but recent Chancery and Supreme Court decisions warn that overbroad covenants may fall rather than be rewritten",
+  "anchor": "court-narrowing",
+  "note": "Discretion retained but modern trend refuses blue-pencil; guide frames answer as \"usually not\"."
+ },
+ {
+  "family": "narrowing",
+  "state": "district-of-columbia",
+  "label": "narrow",
+  "quote": "The District of Columbia Court of Appeals has formally adopted the doctrine of equitable reformation to modify an overbroad restrictive covenant",
+  "anchor": "court-narrowing",
+  "note": "Equitable reformation (narrowing only) under Steiner."
+ },
+ {
+  "family": "narrowing",
+  "state": "florida",
+  "label": "narrow",
+  "quote": "**Short answer.** Yes — reformation is mandatory. If a restraint is overbroad, overlong, or otherwise broader than necessary, section 542.335 directs the court to *modify the restraint and grant only the relief reasonably necessary*",
+  "anchor": "court-narrowing",
+  "note": "Mandatory statutory modification."
+ },
+ {
+  "family": "narrowing",
+  "state": "georgia",
+  "label": "narrow",
+  "quote": "provided, however, that a court may modify a covenant that is otherwise void and unenforceable so long as the modification does not render the covenant more restrictive with regard to the employee than as originally drafted by the parties",
+  "anchor": "court-narrowing",
+  "note": "Discretionary GRCA modification."
+ },
+ {
+  "family": "narrowing",
+  "state": "hawaii",
+  "label": "AMBIGUOUS",
+  "quote": "they do not supply a broad rule that courts will rewrite any overbroad employee non-compete into an enforceable one",
+  "anchor": "court-narrowing",
+  "note": "Guide says sources do not establish a narrowing rule either way."
+ },
+ {
+  "family": "narrowing",
+  "state": "idaho",
+  "label": "narrow",
+  "quote": "Idaho Code § 44-2703 says a court shall limit or modify[^idaho-44-2703-mandatory-modification] an unreasonable covenant and enforce it as limited or modified.",
+  "anchor": "court-narrowing",
+  "note": "Mandatory statutory modification, limited to what can be done simply and accurately."
+ },
+ {
+  "family": "narrowing",
+  "state": "illinois",
+  "label": "narrow",
+  "quote": "**Short answer.** Sometimes, but it is discretionary and far from guaranteed. The IFWA permits reformation yet warns that extensive judicial rewriting may be against public policy",
+  "anchor": "court-narrowing",
+  "note": "Discretionary reformation under IFWA § 35."
+ },
+ {
+  "family": "narrowing",
+  "state": "indiana",
+  "label": "narrow",
+  "quote": "Indiana's blue-pencil doctrine is a strict eraser: a court may strike grammatically divisible unreasonable language, but it cannot add, change, or rearrange terms to save a covenant",
+  "anchor": "court-narrowing",
+  "note": "Strict blue pencil only; counts as narrow per label definition."
+ },
+ {
+  "family": "narrowing",
+  "state": "iowa",
+  "label": "narrow",
+  "quote": "Iowa rejected a strict all-or-nothing approach and allows partial enforcement to the extent reasonably necessary to protect legitimate interests, unless the facts show bad faith or oppression",
+  "anchor": "court-narrowing",
+  "note": "Partial enforcement absent bad faith (Ehlers)."
+ },
+ {
+  "family": "narrowing",
+  "state": "kansas",
+  "label": "narrow",
+  "quote": "Kansas courts have long used their equitable power to reduce an overbroad restraint and enforce it as reduced, rather than striking the whole covenant",
+  "anchor": "court-narrowing",
+  "note": "Common-law equitable reduction."
+ },
+ {
+  "family": "narrowing",
+  "state": "kentucky",
+  "label": "narrow",
+  "quote": "Kentucky is a reformation jurisdiction: its courts have a blue-pencil power to reform or amend overly broad restrictions",
+  "anchor": "court-narrowing",
+  "note": "Discretionary reformation."
+ },
+ {
+  "family": "narrowing",
+  "state": "louisiana",
+  "label": "AMBIGUOUS",
+  "quote": "A court will not add or substitute language to save a defective covenant; at most it may strike an offending portion under a severability clause and enforce what independently complies with the statute",
+  "anchor": "court-narrowing",
+  "note": "Striking available only where the contract has a severability clause; turns on contract clause."
+ },
+ {
+  "family": "narrowing",
+  "state": "maine",
+  "label": "AMBIGUOUS",
+  "quote": "whether a court will rewrite an overbroad covenant as drafted is unsettled",
+  "anchor": "court-narrowing",
+  "note": "Guide says the reformation question is unsettled; Maine reviews as applied."
+ },
+ {
+  "family": "narrowing",
+  "state": "maryland",
+  "label": "narrow",
+  "quote": "Maryland courts blue-pencil rather than rewrite. A court may strike an offending, severable portion of a covenant and enforce what remains",
+  "anchor": "court-narrowing",
+  "note": "Blue pencil of severable portions; counts as narrow per label definition."
+ },
+ {
+  "family": "narrowing",
+  "state": "massachusetts",
+  "label": "narrow",
+  "quote": "\"A court may, in its discretion, reform or otherwise revise a noncompetition agreement so as to render it valid and enforceable to the extent necessary to protect the applicable legitimate business interests.\"",
+  "anchor": "court-narrowing",
+  "note": "Discretionary statutory reformation (§ 24L)."
+ },
+ {
+  "family": "narrowing",
+  "state": "michigan",
+  "label": "narrow",
+  "quote": "MCL 445.774a expressly lets a court limit a covenant it finds unreasonable and enforce it as limited, so Michigan is a statutory blue-pencil state",
+  "anchor": "court-narrowing",
+  "note": "Discretionary statutory limitation."
+ },
+ {
+  "family": "narrowing",
+  "state": "minnesota",
+  "label": "AMBIGUOUS",
+  "quote": "Usually no, for agreements entered into on or after July 1, 2023. Minn. Stat. § 181.988 makes covered covenants not to compete void and unenforceable",
+  "anchor": "employee-non-compete-enforceability",
+  "note": "State voids nearly all employee non-competes signed after July 1, 2023; question not well-posed."
+ },
+ {
+  "family": "narrowing",
+  "state": "mississippi",
+  "label": "narrow",
+  "quote": "Mississippi follows an equitable-reformation approach: rather than voiding an overbroad covenant outright, its courts will enforce the agreement to the extent it is reasonable",
+  "anchor": "court-narrowing",
+  "note": "Equitable reformation, discretionary."
+ },
+ {
+  "family": "narrowing",
+  "state": "missouri",
+  "label": "narrow",
+  "quote": "Missouri courts have authority to refuse to enforce unreasonable terms or to modify an overbroad covenant to make it reasonable, yet modification is discretionary",
+  "anchor": "court-narrowing",
+  "note": "Discretionary modification."
+ },
+ {
+  "family": "narrowing",
+  "state": "montana",
+  "label": "void",
+  "quote": "Montana courts construe restrictive covenants strictly and void an overbroad restraint outright rather than narrowing it into a lawful one",
+  "anchor": "trade-secrets-severance",
+  "note": "No court-narrowing section; answer from trade-secrets-severance drafting note."
+ },
+ {
+  "family": "narrowing",
+  "state": "nebraska",
+  "label": "void",
+  "quote": "Nebraska rejects blue-pencil rewriting and generally enforces the covenant as written or not at all",
+  "anchor": "court-narrowing",
+  "note": "No blue pencil for ordinary employment covenants."
+ },
+ {
+  "family": "narrowing",
+  "state": "nevada",
+  "label": "narrow",
+  "quote": "NRS 613.195(6) directs the court to revise and enforce an overbroad but consideration-supported covenant",
+  "anchor": "court-narrowing",
+  "note": "Mandatory statutory revision."
+ },
+ {
+  "family": "narrowing",
+  "state": "new-hampshire",
+  "label": "narrow",
+  "quote": "New Hampshire courts have power to reform overbroad covenants, but bad-faith presentation can defeat that remedy",
+  "anchor": "court-narrowing",
+  "note": "Reformation conditioned on good faith."
+ },
+ {
+  "family": "narrowing",
+  "state": "new-jersey",
+  "label": "narrow",
+  "quote": "*Solari* abandoned the old void-per-se rule in favor of total or partial enforcement to the extent reasonable, so New Jersey courts narrow overbroad covenants",
+  "anchor": "court-narrowing",
+  "note": "Partial enforcement under Solari."
+ },
+ {
+  "family": "narrowing",
+  "state": "new-mexico",
+  "label": "AMBIGUOUS",
+  "quote": "*KidsKare* upheld modification because the parties' agreement expressly authorized amendment of an unenforceable provision and enforcement to the maximum reasonable extent",
+  "anchor": "court-narrowing",
+  "note": "Narrowing authority is contract-based only; court declined to decide default rule."
+ },
+ {
+  "family": "narrowing",
+  "state": "new-york",
+  "label": "narrow",
+  "quote": "New York rejects a per se rule voiding every overbroad covenant, yet a court will rewrite one to a reasonable scope only when the employer acted in good faith and did not overreach",
+  "anchor": "court-narrowing",
+  "note": "Discretionary partial enforcement (BDO)."
+ },
+ {
+  "family": "narrowing",
+  "state": "north-carolina",
+  "label": "narrow",
+  "quote": "\"North Carolina has adopted the ‘strict blue pencil doctrine’ under which a court cannot rewrite a faulty covenant not to compete but may enforce divisible and reasonable portions of the covenant while striking the unenforceable portions.\"",
+  "anchor": "court-narrowing",
+  "note": "Strict blue pencil only; counts as narrow per label definition."
+ },
+ {
+  "family": "narrowing",
+  "state": "north-dakota",
+  "label": "AMBIGUOUS",
+  "quote": "**Short answer.** No. North Dakota law makes a contract that restrains a lawful profession, trade, or business to that extent void",
+  "anchor": "employee-non-compete-enforceability",
+  "note": "State voids nearly all employee non-competes; question not well-posed."
+ },
+ {
+  "family": "narrowing",
+  "state": "ohio",
+  "label": "narrow",
+  "quote": "*Raimonde* abandoned strict blue-penciling and lets Ohio courts enforce an overbroad covenant only to the extent reasonable, but reformation is discretionary",
+  "anchor": "court-narrowing",
+  "note": "Discretionary reformation (Raimonde)."
+ },
+ {
+  "family": "narrowing",
+  "state": "oklahoma",
+  "label": "AMBIGUOUS",
+  "quote": "Oklahoma treats a conventional employee non-compete as void rather than reforming it",
+  "anchor": "employee-non-compete-enforceability",
+  "note": "State voids nearly all employee non-competes; question not well-posed."
+ },
+ {
+  "family": "narrowing",
+  "state": "oregon",
+  "label": "AMBIGUOUS",
+  "quote": "The statute expressly severs only the portion of a term beyond 12 months; the older voidable regime described in *Bernard v. S.B., Inc.* was superseded by the 2021 amendments",
+  "anchor": "void-vs-voidable",
+  "note": "Post-2022 non-conforming covenant is void, but statute severs over-length duration; mixed answer."
+ },
+ {
+  "family": "narrowing",
+  "state": "pennsylvania",
+  "label": "narrow",
+  "quote": "A Pennsylvania court of equity may enforce only the reasonable portions of an overbroad covenant, yet it will scrutinize the restraint closely",
+  "anchor": "court-narrowing",
+  "note": "Discretionary partial enforcement."
+ },
+ {
+  "family": "narrowing",
+  "state": "rhode-island",
+  "label": "narrow",
+  "quote": "*Durapin* adopted partial enforcement rather than an all-or-nothing or mechanical blue-pencil rule, absent bad faith or deliberate overreaching",
+  "anchor": "court-narrowing",
+  "note": "Partial enforcement absent bad faith."
+ },
+ {
+  "family": "narrowing",
+  "state": "south-carolina",
+  "label": "void",
+  "quote": "South Carolina is a strict no-blue-pencil, no-reformation jurisdiction: a court will not rewrite an unreasonable covenant, and the agreement must stand or fall on its own terms",
+  "anchor": "court-narrowing",
+  "note": "Only pre-drafted step-down alternatives survive."
+ },
+ {
+  "family": "narrowing",
+  "state": "south-dakota",
+  "label": "AMBIGUOUS",
+  "quote": "**Short answer.** Sometimes. South Dakota recognizes partial enforcement, but that does not let a drafter ignore the statute; the court modifies only to conform the covenant to statutory limits",
+  "anchor": "overbroad-covenants",
+  "note": "\"Sometimes\"; the partial-enforcement authority cited is a sale-of-business case, not an employee covenant."
+ },
+ {
+  "family": "narrowing",
+  "state": "tennessee",
+  "label": "narrow",
+  "quote": "Tennessee follows the *rule of reasonableness* rather than the strict blue-pencil rule, so a court may modify an unreasonable covenant to make it reasonable instead of striking it",
+  "anchor": "court-narrowing",
+  "note": "Discretionary modification; oppressive covenants voided."
+ },
+ {
+  "family": "narrowing",
+  "state": "texas",
+  "label": "narrow",
+  "quote": "**Short answer.** Yes, reformation is mandatory. If a covenant is ancillary to an otherwise enforceable agreement but its limits are unreasonable, the court shall reform it to the minimum reasonable restraint",
+  "anchor": "court-narrowing",
+  "note": "Mandatory reformation under § 15.51(c)."
+ },
+ {
+  "family": "narrowing",
+  "state": "utah",
+  "label": "AMBIGUOUS",
+  "quote": "Probably not for the duration problem, and the broader reformation question is unsettled.",
+  "anchor": "court-narrowing",
+  "note": "Guide says the question is unsettled."
+ },
+ {
+  "family": "narrowing",
+  "state": "vermont",
+  "label": "AMBIGUOUS",
+  "quote": "**Short answer.** Genuinely mixed. The Vermont Supreme Court will not *make* a contract for the parties",
+  "anchor": "court-narrowing",
+  "note": "Guide describes split signals."
+ },
+ {
+  "family": "narrowing",
+  "state": "virginia",
+  "label": "void",
+  "quote": "Virginia courts strictly construe restrictive covenants, and a clear overbreadth problem can make the covenant unenforceable rather than narrowed by the court",
+  "anchor": "court-narrowing",
+  "note": "No blue pencil."
+ },
+ {
+  "family": "narrowing",
+  "state": "washington",
+  "label": "narrow",
+  "quote": "Washington courts have long enforced a covenant only to the extent it is reasonable, yet RCW 49.62.080 makes the employer pay the $5,000 penalty whenever a court reforms or partially enforces one",
+  "anchor": "court-narrowing",
+  "note": "Reformation available but triggers statutory penalty."
+ },
+ {
+  "family": "narrowing",
+  "state": "west-virginia",
+  "label": "AMBIGUOUS",
+  "quote": "*Reddy* allows tailoring only after a covenant is facially reasonable and the employer proves legitimate interests.",
+  "anchor": "court-narrowing",
+  "note": "Facially overbroad covenants void; minor overbreadth may be tailored; turns on degree."
+ },
+ {
+  "family": "narrowing",
+  "state": "wisconsin",
+  "label": "void",
+  "quote": "\"Any covenant, described in this section, imposing an unreasonable restraint is illegal, void and unenforceable even as to any part of the covenant or performance that would be a reasonable restraint.\"",
+  "anchor": "court-narrowing",
+  "note": "§ 103.465 forbids narrowing."
+ },
+ {
+  "family": "narrowing",
+  "state": "wyoming",
+  "label": "void",
+  "quote": "The court held that the entire agreement was void because the duration and geographic terms were unreasonable.",
+  "anchor": "court-narrowing",
+  "note": "Wyoming Supreme Court will not rewrite overbroad covenant."
+ }
+]

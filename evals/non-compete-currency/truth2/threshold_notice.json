@@ -1,0 +1,157 @@
+[
+ {
+  "family": "threshold",
+  "state": "colorado",
+  "label": 130014,
+  "quote": "the highly compensated worker threshold — $130,014 in 2026",
+  "anchor": "highly-compensated-threshold"
+ },
+ {
+  "family": "threshold",
+  "state": "district-of-columbia",
+  "label": 162164,
+  "quote": "As of January 1, 2026, the District's Department of Employment Services puts the figures at $162,164 for most employees",
+  "anchor": "covered-employee",
+  "note": "Non-medical employees; medical specialists $270,274."
+ },
+ {
+  "family": "threshold",
+  "state": "illinois",
+  "label": 75000,
+  "quote": "A non-compete is void unless the employee's actual or expected annualized earnings exceed $75,000",
+  "anchor": "earnings-thresholds",
+  "note": "Rises to $80,000 on Jan 1, 2027; $75,000 in force in 2026."
+ },
+ {
+  "family": "threshold",
+  "state": "oregon",
+  "label": 119541,
+  "quote": "the labor agency publishes the figure annually, and for 2026 the amount the employee's pay must exceed is $119,541",
+  "anchor": "salary-threshold"
+ },
+ {
+  "family": "threshold",
+  "state": "washington",
+  "label": 126858.83,
+  "quote": "Only when annualized earnings exceed the inflation-adjusted threshold, which is $126,858.83 for 2026.",
+  "anchor": "earnings-threshold",
+  "note": "Guide gives cents; independent-contractor threshold is $317,147.09."
+ },
+ {
+  "family": "threshold",
+  "state": "virginia",
+  "label": 78364.52,
+  "quote": "For 2026, the wage threshold is less than $1,507.01 per week, or about $78,364.52 per year.",
+  "anchor": "protected-workers",
+  "note": "Low-wage-employee ban; guide annualizes the weekly figure ('about')."
+ },
+ {
+  "family": "threshold",
+  "state": "tennessee",
+  "label": 70000,
+  "quote": "makes a non-compete void against any employee earning less than $70,000 a year",
+  "anchor": "employee-non-compete-enforceability",
+  "note": "Statute effective July 1, 2026."
+ },
+ {
+  "family": "threshold",
+  "state": "maine",
+  "label": "AMBIGUOUS",
+  "quote": "Foley reports that Maine updated its threshold from $60,240 in 2024 to $62,600 in 2025",
+  "anchor": "protected-workers",
+  "note": "Threshold is 400% of FPL; guide gives only 2024/2025 figures, none for 2026."
+ },
+ {
+  "family": "threshold",
+  "state": "maryland",
+  "label": "AMBIGUOUS",
+  "quote": "The wage line is keyed to the State minimum wage in § 3-413, which has been $15.00 per hour since January 1, 2024, so the covered ceiling is $22.50 per hour",
+  "anchor": "statutory-voids",
+  "note": "Formula (150% of state minimum wage), hourly only; $350,000 figure applies only to health care workers."
+ },
+ {
+  "family": "threshold",
+  "state": "new-hampshire",
+  "label": "AMBIGUOUS",
+  "quote": "The threshold is less than or equal to 200 percent of the federal minimum wage, currently $14.50 per hour while the federal minimum wage remains $7.25 per hour",
+  "anchor": "low-wage-employees",
+  "note": "Hourly formula only; no annual dollar figure."
+ },
+ {
+  "family": "threshold",
+  "state": "rhode-island",
+  "label": "AMBIGUOUS",
+  "quote": "The statute defines it as an employee whose average annual earnings are not more than 250 percent of the federal poverty level for individuals",
+  "anchor": "employee-non-compete-enforceability",
+  "note": "Formula (250% of FPL) with no dollar figure; also nonexempt-status test."
+ },
+ {
+  "family": "notice",
+  "state": "colorado",
+  "label": {
+   "days": 14,
+   "kind": "unspecified"
+  },
+  "quote": "before a prospective worker accepts the job, or at least fourteen days before the covenant or new consideration takes effect for a current worker",
+  "anchor": "notice-requirements",
+  "note": "14 days applies to current workers; applicants get notice before accepting the offer."
+ },
+ {
+  "family": "notice",
+  "state": "district-of-columbia",
+  "label": {
+   "days": 14,
+   "kind": "unspecified"
+  },
+  "quote": "The employer must also deliver the non-compete provision in writing at least 14 days before the employee starts work, or at least 14 days before a current employee must sign",
+  "anchor": "highly-compensated-exception"
+ },
+ {
+  "family": "notice",
+  "state": "illinois",
+  "label": {
+   "days": 14,
+   "kind": "calendar"
+  },
+  "quote": "provides a copy of the covenant at least 14 calendar days before employment begins or otherwise gives the employee at least 14 calendar days to review it",
+  "anchor": "notice-requirement"
+ },
+ {
+  "family": "notice",
+  "state": "maine",
+  "label": {
+   "days": 3,
+   "kind": "business"
+  },
+  "quote": "Second, the employer must provide the agreement at least 3 business days before the required signing date.",
+  "anchor": "notice-timing",
+  "note": "Plus pre-offer disclosure of the requirement."
+ },
+ {
+  "family": "notice",
+  "state": "massachusetts",
+  "label": {
+   "days": 10,
+   "kind": "business"
+  },
+  "quote": "be delivered by the earlier of a formal offer or 10 business days before the start date",
+  "anchor": "formation-notice",
+  "note": "New hires: earlier of formal offer or 10 business days; mid-employment: 10 business days' notice before effect."
+ },
+ {
+  "family": "notice",
+  "state": "oregon",
+  "label": "AMBIGUOUS",
+  "quote": "in a written employment offer received by the employee at least two weeks before the first day of the employee's employment",
+  "anchor": "valid-requirements",
+  "note": "Guide states 'two weeks', not a day count; alternative bona fide advancement route."
+ },
+ {
+  "family": "notice",
+  "state": "florida",
+  "label": "AMBIGUOUS",
+  "quote": "To qualify, the employer must advise the worker of the right to counsel, give at least seven days' written notice",
+  "anchor": "choice-act-high-earners",
+  "note": "Seven days applies only to CHOICE Act covered non-competes for high earners, not Florida non-competes generally."
+ }
+]

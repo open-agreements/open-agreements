@@ -206,17 +206,9 @@ Drafting and enforceability considerations for this template, from the related p
 
 Pennsylvania has no general non-compete statute, so nothing in the agreement substitutes for the common-law reasonableness analysis every covenant must survive: a covenant is enforceable only when it is ancillary to employment, supported by adequate consideration, reasonably limited in duration and geography, and tied to a legitimate protectable interest . The acknowledgments tracking those four elements are not self-proving, and a covenant survives only where the structural work behind them holds — each covenant confined to Covered Customers or Covered Employees through the look-back windows, a real geographic limit in place, and the restraint tied to Protected Interests rather than ordinary competition — because a covenant is only _prima facie_ enforceable when reasonably limited in duration and geographic extent . Governing-law and venue choices that track where the employee actually lives and works leave the covenant measured against the law it was drafted for; a mismatch tees up a choice-of-law fight on top of the merits .
 
-### New consideration
-
-When an existing Pennsylvania employee signs a new covenant, neither continued at-will employment nor an _intend to be legally bound_ recital supplies the consideration the covenant needs; the recital did not save the agreement in _Socko_. A covenant supported instead by identifiable new consideration — a raise, bonus, or promotion, documented as such — stands on ground the recital cannot furnish .
-
 ### New consideration and signing timing
 
 The specific new consideration recorded in Cover Terms is what carries a mid-employment covenant; continued at-will employment and an intent-to-be-legally-bound recital do not. Continued employment alone is not adequate consideration for a mid-employment covenant, and the Uniform Written Obligations Act recital cannot substitute for new and valuable consideration in this context . Where the employee signs shortly after the first day of work, start-of-employment consideration holds only if the parties agreed to the covenant's essential provisions at the start of the relationship; absent that agreement the covenant needs new consideration of its own . A covenant added or expanded by a later amendment is a later-agreed restraint that needs its own new consideration . And adequate consideration establishes only that the covenants are supported, not that they are reasonable — each covenant must independently satisfy the reasonableness elements on duration, geography, and scope .
-
-### Protectable interests
-
-A Pennsylvania non-compete that blocks competition disconnected from a protectable interest reaches beyond what the law will enforce. A restraint tied to specific trade secrets, confidential information, customer goodwill, or genuinely specialized training rests on a recognized interest; one aimed at ordinary competition is not reasonably necessary to protect the employer .
 
 ### Recognized interests and the return record
 
@@ -229,10 +221,6 @@ A Pennsylvania court evaluates the restraint as a whole against the employer's r
 ### Duration and territory sized to the real market
 
 A non-compete's duration and territory hold up only when sized to the employee's real role and the employer's real market; a recital that they are sized is not enough, because a Pennsylvania court weighs time and territory together against that market . The real Specified Competitors named in Cover Terms narrow the covenant, are strong evidence the restraint is no greater than reasonably necessary, and leave the employee the rest of the industry. The remedies clause's irreparable-harm acknowledgment does not carry the equitable showing a court will demand — enforcement remains limited to restraints reasonably necessary for the employer's protection and reasonably limited in duration and geographic extent .
-
-### Solicitation
-
-A Pennsylvania non-solicitation clause that bars merely _accepting_ business or omits a geographic limit invites a finding that it is unenforceable as written. A clause restricted to affirmative solicitation of customers the employee actually served stays within the reasonableness the courts require; a no-accept or geographically unbounded clause does not .
 
 ### Affirmative outreach and a geographic limit
 
@@ -253,10 +241,6 @@ The 90-day patient-notice obligation restated as an employer covenant adds nothi
 ### No-hire clauses
 
 A no-hire or no-poach clause buried in a Pennsylvania commercial services contract is not a reliable protection. After _Beemac_, such clauses are vulnerable as unreasonable restraints of trade, while legitimate interests protected through narrowly drawn confidentiality and direct restrictive covenants supported by consideration rest on firmer ground .
-
-### Assignment
-
-A Pennsylvania non-compete does not travel with the business in an asset sale on its own. A buyer can enforce existing covenants only where each agreement contains an express assignability provision, because _Hess_ bars automatic assignment without one .
 
 ### Covenant-specific assignability
 

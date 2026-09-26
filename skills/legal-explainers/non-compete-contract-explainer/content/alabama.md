@@ -2,7 +2,7 @@
 jurisdiction: "Alabama"
 slug: alabama
 countryCode: US
-content_packaged_at: "2026-09-21"
+content_packaged_at: "2026-09-23"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alabama · **Snapshot as of:** 2026-09-21 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alabama · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alabama[^about]
 
@@ -159,11 +159,6 @@ So a professional cannot be barred from practicing, but conduct outside that pra
 > **Drafting note.**
 >
 > A member of a recognized Alabama profession cannot be barred from practicing that profession, even by a covenant that would otherwise fit a § 8-1-190(b) category: § 8-1-196 preserves the common-law professional exemption, and a professional cannot fall within the statutory exceptions at all, so a covenant restraining professional practice is void on that ground [^ala-8-1-196][^friddle-cannot-fall]. The exemption reaches only the practice of the profession, so a restraint on business conduct outside that practice — *Benchmark*'s example of acquiring competing practices purely as an investment without managing them — can still operate, and the confidentiality, trade-secret, and property-return obligations survive to the extent they do not bar the practice itself [^benchmark-scope].
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not assume a non-compete will keep a licensed professional from practicing in Alabama. Because § 8-1-196 preserves the common-law professional exemption, a covenant cannot bar a physician, accountant, veterinarian, physical therapist, or similar professional from practicing the profession, even when it would otherwise fit a statutory category, though restrictions on business activity outside that practice may still operate [^ala-8-1-196][^benchmark-scope].
 
 ## Does a tolling or extension-during-breach clause extend an Alabama non-compete? {#extended-for-breach}
 

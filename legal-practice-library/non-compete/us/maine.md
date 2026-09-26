@@ -87,17 +87,17 @@ Violations carry a civil fine of at least $5,000, and the Maine Department of La
 
 That does not make every alternative covenant low risk. A confidentiality covenant can protect information beyond trade secrets, but it cannot bar use of general skill or knowledge. *Bernier* upheld a nondisclosure clause because it protected specialized original work without stopping the employee from using general skill and knowledge [^bernier-confidential-not-general-skill].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A confidentiality definition that expressly excludes the general skill and knowledge the employee acquired on the job matches the nondisclosure clause in *Bernier*, which did not prohibit the employee from using that skill and knowledge [^bernier-confidential-not-general-skill].
+
 Maine also has a separate employment NDA statute. Section 599-C protects reporting, testimony, evidence, and law-enforcement communications in discrimination-related contexts, while preserving ordinary protections for proprietary information, trade secrets, and information confidential by law [^maine-599c-discrimination-reporting][^maine-599c-proprietary-info-saved].
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A confidentiality covenant cannot do the work of a non-compete. Maine enforces protection for specialized, proprietary confidential information, but a clause that reaches the general skill and knowledge an employee acquired on the job crosses the line *Bernier* draws and forfeits that protection [^bernier-confidential-not-general-skill].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> Section 599-A(2) ranks the lighter tools first: a non-compete may be presumed necessary only where the legitimate business interest cannot be adequately protected through an alternative restrictive covenant, including a nonsolicitation, nondisclosure, or confidentiality agreement [^maine-599a-alternative-covenants]. A covenant that reaches for the non-compete without a record showing the alternatives were considered and found inadequate starts a step behind the statute's own ordering, and the alternatives carry their own ceiling — a confidentiality term still cannot bar the general skill and knowledge an employee acquired on the job [^bernier-confidential-not-general-skill].
+> Under Maine's noncompete statute, 26 M.R.S. § 599-A(2), a non-compete may be presumed necessary if an alternative restrictive covenant cannot adequately protect the legitimate business interest. The alternatives the statute names include nonsolicitation, nondisclosure, and confidentiality agreements [^maine-599a-alternative-covenants]. A non-compete used without a record showing that those alternatives were considered and found inadequate starts a step behind the statute's own ordering.
 
 ## How does Maine treat sale-of-business non-compete covenants? {#sale-of-business}
 
@@ -120,11 +120,6 @@ The remedies are practical. Courts may restrain actual or threatened misappropri
 The 2024 veto means Maine did not move to a near-total employee non-compete ban then. Bernstein Shur reports that the veto was sustained on April 2, 2024, so employers continued to draft under the existing L.D. 733 framework [^bernstein-ld1496-veto-sustained].
 
 The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on April 15, 2026, and it applies to non-compete agreements entered into or renewed on or after its July 13, 2026 effective date [^ebg-ld2200-effective].
-
-> [!NOTE]
-> **Practice note.**
->
-> Confirm the codified text before relying on the § 599-A page alone for healthcare covenants. L.D. 2200 was signed on April 15, 2026 but does not take effect until July 13, 2026, so the Revisor's current § 599-A text may still show only the wage-floor and veterinarian prohibitions until the amendment is codified [^maine-599a-current-prohibited-workers][^ebg-ld2200-effective].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -186,5 +181,3 @@ The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on A
 [^bernstein-ld1496-veto-sustained]: **Governor Mills Vetoes L.D. 1496: What Maine Employers Need to Know** — "Because L.D. 1496 was vetoed and that veto was sustained by the Maine State Legislature, Maine employers should continue to reference L.D. 733 when drafting and negotiating noncompete agreements." *Bernstein Shur, Governor Mills Vetoes L.D. 1496: What Maine Employers Need to Know (2024).* <https://www.bernsteinshur.com/insights-events/governor-mills-vetoes-l-d-1496-an-act-to-prohibit-noncompete-clauses-what-maine-employers-need-to-know/>
 
 [^ebg-ld2200-effective]: **Maine Restricts Noncompetes for Health Care Practitioners** — "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the ‘Effective Date’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
-
-[^maine-599a-current-prohibited-workers]: **26 M.R.S. § 599-A — Noncompete agreements** — "The employee is earning wages at or below 400% of the federal poverty level; or" *26 M.R.S. § 599-A(3)(A).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
