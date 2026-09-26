@@ -1,0 +1,115 @@
+{"family": "consideration", "id": "consideration:alabama", "label": "yes", "state": "alabama"}
+{"family": "consideration", "id": "consideration:arizona", "label": "yes", "state": "arizona"}
+{"family": "consideration", "id": "consideration:arkansas", "label": "yes", "state": "arkansas"}
+{"family": "consideration", "id": "consideration:delaware", "label": "yes", "state": "delaware"}
+{"family": "consideration", "id": "consideration:florida", "label": "yes", "state": "florida"}
+{"family": "consideration", "id": "consideration:indiana", "label": "yes", "state": "indiana"}
+{"family": "consideration", "id": "consideration:iowa", "label": "yes", "state": "iowa"}
+{"family": "consideration", "id": "consideration:kansas", "label": "yes", "state": "kansas"}
+{"family": "consideration", "id": "consideration:kentucky", "label": "no", "state": "kentucky"}
+{"family": "consideration", "id": "consideration:mississippi", "label": "yes", "state": "mississippi"}
+{"family": "consideration", "id": "consideration:new-jersey", "label": "yes", "state": "new-jersey"}
+{"family": "consideration", "id": "consideration:north-carolina", "label": "no", "state": "north-carolina"}
+{"family": "consideration", "id": "consideration:ohio", "label": "yes", "state": "ohio"}
+{"family": "consideration", "id": "consideration:pennsylvania", "label": "no", "state": "pennsylvania"}
+{"family": "consideration", "id": "consideration:utah", "label": "yes", "state": "utah"}
+{"family": "consideration", "id": "consideration:wisconsin", "label": "yes", "state": "wisconsin"}
+{"family": "consideration", "id": "consideration:colorado", "label": "yes", "state": "colorado"}
+{"family": "consideration", "id": "consideration:michigan", "label": "yes", "state": "michigan"}
+{"family": "consideration", "id": "consideration:south-carolina", "label": "no", "state": "south-carolina"}
+{"family": "consideration", "id": "consideration:montana", "label": "no", "state": "montana"}
+{"family": "consideration", "id": "consideration:new-hampshire", "label": "yes", "state": "new-hampshire"}
+{"family": "consideration", "id": "consideration:illinois", "label": "no", "state": "illinois"}
+{"family": "consideration", "id": "consideration:south-dakota", "label": "yes", "state": "south-dakota"}
+{"family": "consideration", "id": "consideration:vermont", "label": "yes", "state": "vermont"}
+{"family": "consideration", "id": "consideration:west-virginia", "label": "no", "state": "west-virginia"}
+{"family": "consideration", "id": "consideration:washington", "label": "no", "state": "washington"}
+{"family": "consideration", "id": "consideration:wyoming", "label": "no", "state": "wyoming"}
+{"family": "consideration", "id": "consideration:louisiana", "label": "yes", "state": "louisiana"}
+{"family": "consideration", "id": "consideration:massachusetts", "label": "no", "state": "massachusetts"}
+{"family": "consideration", "id": "consideration:oregon", "label": "no", "state": "oregon"}
+{"family": "duration", "id": "duration:alabama", "label": 24, "state": "alabama"}
+{"family": "duration", "id": "duration:arkansas", "label": 24, "state": "arkansas"}
+{"family": "duration", "id": "duration:georgia", "label": 24, "state": "georgia"}
+{"family": "duration", "id": "duration:louisiana", "label": 24, "state": "louisiana"}
+{"family": "duration", "id": "duration:massachusetts", "label": 12, "state": "massachusetts"}
+{"family": "duration", "id": "duration:oregon", "label": 12, "state": "oregon"}
+{"family": "duration", "id": "duration:south-dakota", "label": 24, "state": "south-dakota"}
+{"family": "duration", "id": "duration:tennessee", "label": 24, "state": "tennessee"}
+{"family": "duration", "id": "duration:utah", "label": 12, "state": "utah"}
+{"family": "duration", "id": "duration:washington", "label": 18, "state": "washington"}
+{"family": "choice_of_law", "id": "choice_of_law:california", "label": "yes", "state": "california"}
+{"family": "choice_of_law", "id": "choice_of_law:colorado", "label": "yes", "state": "colorado"}
+{"family": "choice_of_law", "id": "choice_of_law:louisiana", "label": "yes", "state": "louisiana"}
+{"family": "choice_of_law", "id": "choice_of_law:massachusetts", "label": "yes", "state": "massachusetts"}
+{"family": "choice_of_law", "id": "choice_of_law:minnesota", "label": "yes", "state": "minnesota"}
+{"family": "choice_of_law", "id": "choice_of_law:washington", "label": "yes", "state": "washington"}
+{"family": "choice_of_law", "id": "choice_of_law:oregon", "label": "yes", "state": "oregon"}
+{"family": "choice_of_law", "id": "choice_of_law:new-york", "label": "no", "state": "new-york"}
+{"family": "narrowing", "id": "narrowing:alabama", "label": "narrow", "state": "alabama"}
+{"family": "narrowing", "id": "narrowing:alaska", "label": "narrow", "state": "alaska"}
+{"family": "narrowing", "id": "narrowing:arizona", "label": "narrow", "state": "arizona"}
+{"family": "narrowing", "id": "narrowing:arkansas", "label": "narrow", "state": "arkansas"}
+{"family": "narrowing", "id": "narrowing:colorado", "label": "narrow", "state": "colorado"}
+{"family": "narrowing", "id": "narrowing:district-of-columbia", "label": "narrow", "state": "district-of-columbia"}
+{"family": "narrowing", "id": "narrowing:florida", "label": "narrow", "state": "florida"}
+{"family": "narrowing", "id": "narrowing:georgia", "label": "narrow", "state": "georgia"}
+{"family": "narrowing", "id": "narrowing:idaho", "label": "narrow", "state": "idaho"}
+{"family": "narrowing", "id": "narrowing:illinois", "label": "narrow", "state": "illinois"}
+{"family": "narrowing", "id": "narrowing:indiana", "label": "narrow", "state": "indiana"}
+{"family": "narrowing", "id": "narrowing:iowa", "label": "narrow", "state": "iowa"}
+{"family": "narrowing", "id": "narrowing:kansas", "label": "narrow", "state": "kansas"}
+{"family": "narrowing", "id": "narrowing:kentucky", "label": "narrow", "state": "kentucky"}
+{"family": "narrowing", "id": "narrowing:maryland", "label": "narrow", "state": "maryland"}
+{"family": "narrowing", "id": "narrowing:massachusetts", "label": "narrow", "state": "massachusetts"}
+{"family": "narrowing", "id": "narrowing:michigan", "label": "narrow", "state": "michigan"}
+{"family": "narrowing", "id": "narrowing:mississippi", "label": "narrow", "state": "mississippi"}
+{"family": "narrowing", "id": "narrowing:missouri", "label": "narrow", "state": "missouri"}
+{"family": "narrowing", "id": "narrowing:montana", "label": "void", "state": "montana"}
+{"family": "narrowing", "id": "narrowing:nebraska", "label": "void", "state": "nebraska"}
+{"family": "narrowing", "id": "narrowing:nevada", "label": "narrow", "state": "nevada"}
+{"family": "narrowing", "id": "narrowing:new-hampshire", "label": "narrow", "state": "new-hampshire"}
+{"family": "narrowing", "id": "narrowing:new-jersey", "label": "narrow", "state": "new-jersey"}
+{"family": "narrowing", "id": "narrowing:new-york", "label": "narrow", "state": "new-york"}
+{"family": "narrowing", "id": "narrowing:north-carolina", "label": "narrow", "state": "north-carolina"}
+{"family": "narrowing", "id": "narrowing:ohio", "label": "narrow", "state": "ohio"}
+{"family": "narrowing", "id": "narrowing:pennsylvania", "label": "narrow", "state": "pennsylvania"}
+{"family": "narrowing", "id": "narrowing:rhode-island", "label": "narrow", "state": "rhode-island"}
+{"family": "narrowing", "id": "narrowing:south-carolina", "label": "void", "state": "south-carolina"}
+{"family": "narrowing", "id": "narrowing:tennessee", "label": "narrow", "state": "tennessee"}
+{"family": "narrowing", "id": "narrowing:texas", "label": "narrow", "state": "texas"}
+{"family": "narrowing", "id": "narrowing:virginia", "label": "void", "state": "virginia"}
+{"family": "narrowing", "id": "narrowing:washington", "label": "narrow", "state": "washington"}
+{"family": "narrowing", "id": "narrowing:wisconsin", "label": "void", "state": "wisconsin"}
+{"family": "narrowing", "id": "narrowing:wyoming", "label": "void", "state": "wyoming"}
+{"family": "recency", "id": "recency:california", "label": {"citations": ["Bus. & Prof. Code \u00a7 16600.5", "Bus. & Prof. Code \u00a7 16600.1", "Health and Safety Code section 1191"], "effective_dates": ["January 1, 2024", "January 1, 2026"], "summary": "SB 699/AB 1076 expand void-noncompete liability; SB 351 bars PE physician noncompetes."}, "state": "california"}
+{"family": "recency", "id": "recency:colorado", "label": {"citations": ["C.R.S. \u00a7 8-2-113"], "effective_dates": ["August 6, 2025"], "summary": "SB 25-083 voids non-competes for physicians, APRNs, dentists regardless of pay."}, "state": "colorado"}
+{"family": "recency", "id": "recency:florida", "label": {"citations": ["Fla. Stat. \u00a7 542.41"], "effective_dates": ["July 1, 2025"], "summary": "CHOICE Act creates employer-favorable enforceable non-compete track for high earners."}, "state": "florida"}
+{"family": "recency", "id": "recency:illinois", "label": {"citations": ["820 ILCS 90/10"], "effective_dates": ["January 1, 2025"], "summary": "Non-competes unenforceable for mental-health professionals serving veterans and first responders."}, "state": "illinois"}
+{"family": "recency", "id": "recency:indiana", "label": {"citations": ["Ind. Code \u00a7 25-22.5-5.5-2.3"], "effective_dates": ["July 1, 2025"], "summary": "SEA 475 voids new non-competes between physicians and hospitals or hospital systems."}, "state": "indiana"}
+{"family": "recency", "id": "recency:louisiana", "label": {"citations": ["La. R.S. 23:921(M)", "La. R.S. 23:921(N)", "La. R.S. 23:921(P)"], "effective_dates": ["January 1, 2025", "August 1, 2026"], "summary": "Physician non-compete caps from signing; intern and apprentice non-competes barred."}, "state": "louisiana"}
+{"family": "recency", "id": "recency:maine", "label": {"citations": ["\u00a7 599-A"], "effective_dates": ["July 13, 2026"], "summary": "L.D. 2200 restricts non-competes for health-care practitioners entered or renewed after effective date."}, "state": "maine"}
+{"family": "recency", "id": "recency:montana", "label": {"citations": ["Mont. Code Ann. \u00a7 28-2-724"], "effective_dates": ["April 16, 2025", "January 1, 2026"], "summary": "HB 198 and HB 620 extend health-care provider non-compete ban to nurses, PAs, physicians."}, "state": "montana"}
+{"family": "recency", "id": "recency:new-hampshire", "label": {"citations": ["RSA 326-B:45-b"], "effective_dates": ["August 23, 2025"], "summary": "New statute voids geographic practice restrictions in APRN professional relationship contracts."}, "state": "new-hampshire"}
+{"family": "recency", "id": "recency:oregon", "label": {"citations": ["ORS 653.297", "ORS 653.298"], "effective_dates": ["June 9, 2025"], "summary": "Non-competes restricting practice of medicine or nursing void for medical licensees, retroactively."}, "state": "oregon"}
+{"family": "recency", "id": "recency:pennsylvania", "label": {"citations": ["Act 74 of 2024"], "effective_dates": ["January 1, 2025"], "summary": "Health-care practitioner non-competes over one year or after dismissal are void."}, "state": "pennsylvania"}
+{"family": "recency", "id": "recency:rhode-island", "label": {"citations": ["R.I. Gen. Laws \u00a7 5-34-50"], "effective_dates": ["June 17, 2024"], "summary": "Non-competes against advanced practice registered nurses banned, sale-of-practice exception."}, "state": "rhode-island"}
+{"family": "recency", "id": "recency:south-dakota", "label": {"citations": ["House Bill 1180 (SDCL ch. 53-9)"], "effective_dates": ["July 1, 2026"], "summary": "New enforceable lane for departing-owner non-competes on ownership-interest transfers."}, "state": "south-dakota"}
+{"family": "recency", "id": "recency:tennessee", "label": {"citations": ["Tenn. Code Ann. \u00a7 50-1-210", "Tenn. Code Ann. \u00a7 50-1-211"], "effective_dates": ["July 1, 2026"], "summary": "Voids non-competes under $70,000 and adds rebuttable time-reasonableness presumptions."}, "state": "tennessee"}
+{"family": "recency", "id": "recency:texas", "label": {"citations": ["Bus. & Com. Code \u00a7 15.50", "Bus. & Com. Code \u00a7 15.501"], "effective_dates": ["September 1, 2025"], "summary": "SB 1318 adds physician good-cause rule and limits for dentists, nurses, PAs."}, "state": "texas"}
+{"family": "recency", "id": "recency:utah", "label": {"citations": ["Utah Code \u00a7 34-51-201"], "effective_dates": ["May 6, 2026"], "summary": "Bans healthcare-worker and veterinarian non-competes entered on or after effective date."}, "state": "utah"}
+{"family": "recency", "id": "recency:virginia", "label": {"citations": ["Va. Code \u00a7 40.1-28.7:8"], "effective_dates": ["July 1, 2025", "July 1, 2026"], "summary": "Low-wage ban extended to FLSA non-exempt workers; health-care ban and severance rule added."}, "state": "virginia"}
+{"family": "recency", "id": "recency:washington", "label": {"citations": ["chapter 49.62 RCW"], "effective_dates": ["June 6, 2024", "June 30, 2027"], "summary": "SSB 5935 amends non-compete statute; ESHB 1155 near-total ban effective 2027."}, "state": "washington"}
+{"family": "recency", "id": "recency:wyoming", "label": {"citations": ["Wyo. Stat. \u00a7 1-23-108"], "effective_dates": ["July 1, 2025"], "summary": "SF 107 voids most non-competes prospectively, with enumerated exceptions and physician rules."}, "state": "wyoming"}
+{"family": "threshold", "id": "threshold:colorado", "label": 130014, "state": "colorado"}
+{"family": "threshold", "id": "threshold:district-of-columbia", "label": 162164, "state": "district-of-columbia"}
+{"family": "threshold", "id": "threshold:illinois", "label": 75000, "state": "illinois"}
+{"family": "threshold", "id": "threshold:oregon", "label": 119541, "state": "oregon"}
+{"family": "threshold", "id": "threshold:washington", "label": 126858.83, "state": "washington"}
+{"family": "threshold", "id": "threshold:virginia", "label": 78364.52, "state": "virginia"}
+{"family": "threshold", "id": "threshold:tennessee", "label": 70000, "state": "tennessee"}
+{"family": "notice", "id": "notice:colorado", "label": {"days": 14, "kind": "unspecified"}, "state": "colorado"}
+{"family": "notice", "id": "notice:district-of-columbia", "label": {"days": 14, "kind": "unspecified"}, "state": "district-of-columbia"}
+{"family": "notice", "id": "notice:illinois", "label": {"days": 14, "kind": "calendar"}, "state": "illinois"}
+{"family": "notice", "id": "notice:maine", "label": {"days": 3, "kind": "business"}, "state": "maine"}
+{"family": "notice", "id": "notice:massachusetts", "label": {"days": 10, "kind": "business"}, "state": "massachusetts"}

@@ -1,0 +1,123 @@
+[
+ {
+  "id": "consideration:kansas",
+  "family": "consideration",
+  "state": "kansas",
+  "oa_label": "yes"
+ },
+ {
+  "id": "consideration:connecticut",
+  "family": "consideration",
+  "state": "connecticut",
+  "oa_label": "yes"
+ },
+ {
+  "id": "consideration:south-dakota",
+  "family": "consideration",
+  "state": "south-dakota",
+  "oa_label": "yes"
+ },
+ {
+  "id": "consideration:montana",
+  "family": "consideration",
+  "state": "montana",
+  "oa_label": "no"
+ },
+ {
+  "id": "consideration:colorado",
+  "family": "consideration",
+  "state": "colorado",
+  "oa_label": "yes"
+ },
+ {
+  "id": "consideration:massachusetts",
+  "family": "consideration",
+  "state": "massachusetts",
+  "oa_label": "no"
+ },
+ {
+  "id": "consideration:new-jersey",
+  "family": "consideration",
+  "state": "new-jersey",
+  "oa_label": "yes"
+ },
+ {
+  "id": "consideration:south-carolina",
+  "family": "consideration",
+  "state": "south-carolina",
+  "oa_label": "no"
+ },
+ {
+  "id": "recency:wyoming",
+  "family": "recency",
+  "state": "wyoming",
+  "oa_label": {
+   "citations": [
+    "Wyo. Stat. \u00a7 1-23-108"
+   ],
+   "effective_dates": [
+    "July 1, 2025"
+   ],
+   "summary": "SF 107 voids most non-competes prospectively, with enumerated exceptions and physician rules."
+  }
+ },
+ {
+  "id": "recency:maryland",
+  "family": "recency",
+  "state": "maryland",
+  "oa_label": {
+   "citations": [
+    "\u00a7 3-716(a)(1)(i)2",
+    "\u00a7 3-716(a)(2)(i)3"
+   ],
+   "effective_dates": [
+    "July 1, 2025",
+    "October 1, 2026"
+   ],
+   "summary": "Health-care employee ban (HB 1388) and licensed-architect ban (HB 1016) extend \u00a7 3-716."
+  }
+ },
+ {
+  "id": "recency:texas",
+  "family": "recency",
+  "state": "texas",
+  "oa_label": {
+   "citations": [
+    "Bus. & Com. Code \u00a7 15.50",
+    "Bus. & Com. Code \u00a7 15.501"
+   ],
+   "effective_dates": [
+    "September 1, 2025"
+   ],
+   "summary": "SB 1318 adds physician good-cause rule and limits for dentists, nurses, PAs."
+  }
+ },
+ {
+  "id": "recency:rhode-island",
+  "family": "recency",
+  "state": "rhode-island",
+  "oa_label": {
+   "citations": [
+    "R.I. Gen. Laws \u00a7 5-34-50"
+   ],
+   "effective_dates": [
+    "June 17, 2024"
+   ],
+   "summary": "Non-competes against advanced practice registered nurses banned, sale-of-practice exception."
+  }
+ },
+ {
+  "id": "recency:florida",
+  "family": "recency",
+  "state": "florida",
+  "oa_label": {
+   "citations": [
+    "Fla. Stat. \u00a7 542.41"
+   ],
+   "effective_dates": [
+    "July 1, 2025"
+   ],
+   "summary": "CHOICE Act creates employer-favorable enforceable non-compete track for high earners."
+  }
+ }
+]
