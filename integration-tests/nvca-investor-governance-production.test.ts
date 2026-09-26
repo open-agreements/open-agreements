@@ -16,7 +16,7 @@ const CASES = [
   },
   {
     id: 'nvca-voting-agreement',
-    sha256: '3496d7ae9343d1b5b7db13239313c6512e7e0d68d13273538c4dbf06416a5f0d',
+    sha256: '8999e0324e1cb420c7af246ea373c1421063a9a8e1cf645d439f31285d8ada78',
     fixture: 'voting-agreement-production-full.json',
   },
   {
