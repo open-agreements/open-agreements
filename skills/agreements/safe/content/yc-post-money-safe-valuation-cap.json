@@ -93,8 +93,8 @@
         "sources": [
           {
             "sourceId": "safe-no-modification",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap)",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -129,8 +129,8 @@
         "sources": [
           {
             "sourceId": "safe-price-defined",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), Safe Price",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -190,8 +190,8 @@
         "sources": [
           {
             "sourceId": "post-money-cap-defined",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), Post-Money Valuation Cap",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -212,8 +212,8 @@
           },
           {
             "sourceId": "safe-price-defined-cap",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), Safe Price",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -237,8 +237,8 @@
         "sources": [
           {
             "sourceId": "safe-preamble",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -262,8 +262,8 @@
         "sources": [
           {
             "sourceId": "safe-preamble-entity",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -287,8 +287,8 @@
         "sources": [
           {
             "sourceId": "safe-governing-law",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), Governing Law",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -312,8 +312,8 @@
         "sources": [
           {
             "sourceId": "safe-preamble-parties",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -337,8 +337,8 @@
         "sources": [
           {
             "sourceId": "safe-preamble-parties",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -375,8 +375,8 @@
         "sources": [
           {
             "sourceId": "safe-preamble-parties",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",

@@ -1,5 +1,12 @@
 # Invention Assignment Update Log
 
+## 2026-09-25
+* **Update**: fix(invention-assignment): shorten the pillar title (000c542)
+* **Update**: fix(invention-assignment): lead three pillar answers with the cross-state rule (136ed98)
+* **Update**: fix(invention-assignment): drop an unsupported superlative and uncited state counts (2fb2389)
+* **Update**: fix(invention-assignment): trim the pillar introduction and description (ca1f510)
+* **Update**: fix(invention-assignment): fit the pillar blurb under 120 characters (d963a8f)
+
 ## 2026-09-23
 * **Update**: fix(invention-assignment): restore the full case names in two openings (36d497d)
 * **Update**: fix(invention-assignment): drop the goodwill chip from the federal opening (5d6c0c4)

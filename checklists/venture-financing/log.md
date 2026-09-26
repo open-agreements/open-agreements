@@ -1,5 +1,8 @@
 # Venture Financing Update Log
 
+## 2026-09-25
+* **Update**: content: tag NVCA and YC form citations as standard-form (#2793) (fc14974)
+
 ## 2026-09-18
 * **Update**: fix(checklists): clarify existing capacity check baseline (00550e8)
 * **Update**: fix(checklists): specify NVCA partial-payment and access baselines (0d1e770)

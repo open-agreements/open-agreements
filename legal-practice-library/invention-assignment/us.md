@@ -1,39 +1,32 @@
 ---
 type: Law Topic
-title: >-
-  Employee Invention-Assignment Agreements: What State Law Lets an Employer
-  Require, and What It Carves Out
+title: Employee Invention-Assignment Agreements
 description: >-
-  The cross-state framework for employee invention-assignment agreements — the
-  own-time invention carve-out, default ownership of what an employee invents,
-  the written-notice requirement, limits on post-employment holdover clauses,
-  the federal requirements for transferring patent, copyright, and trademark
-  rights, and the recording rules that protect an assignment against later
-  purchasers — with California's Labor Code Sections 2870–2872 as the worked
-  example and links to the 50-state survey.
+  The cross-state framework for employee invention-assignment agreements: which
+  inventions a state lets an employer claim, who owns an invention by default,
+  how far a holdover clause can reach, and what federal law requires to transfer
+  patent, copyright, and trademark rights. Links to the 50-state survey.
 resource: 'https://openagreements.org/practice-guides/invention-assignment/us'
 timestamp: '2026-06-29'
 tags:
   - invention-assignment
 ---
 
-# Employee Invention-Assignment Agreements: What State Law Lets an Employer Require, and What It Carves Out[^about]
+# Employee Invention-Assignment Agreements[^about]
 
-The cross-state framework for employee invention-assignment agreements — the own-time invention carve-out, default ownership of what an employee invents, the written-notice requirement, limits on post-employment holdover clauses, the federal requirements for transferring patent, copyright, and trademark rights, and the recording rules that protect an assignment against later purchasers — with California's Labor Code Sections 2870–2872 as the worked example and links to the 50-state survey.
+The cross-state framework for employee invention-assignment agreements: which inventions a state lets an employer claim, who owns an invention by default, how far a holdover clause can reach, and what federal law requires to transfer patent, copyright, and trademark rights. Links to the 50-state survey.
 
-An invention-assignment agreement is the promise an employer asks a worker to make about who owns what the worker invents: the employee agrees to assign their rights in covered inventions to the employer. How far that promise can reach is not a single national rule — it turns on the law of the governing state — but the same four questions decide the outcome almost everywhere. First, does the state impose a statutory **own-time carve-out** that takes certain personal inventions outside the assignment no matter how the clause is drafted? Second, who owns an invention by default, before any assignment? Third, must the employer give the employee written **notice** of the carve-out? And fourth, how far can a post-employment **holdover** clause reach into inventions conceived after the job ends? A fifth question concerns federal law and works alongside each state's contract law: does the signed document actually **transfer** the patent, copyright, and trademark rights it covers, and what recording protects that transfer against a competing claim?
-
-This note explains that shared spine and uses **California** as the worked example, because California codifies the own-time carve-out, default ownership, and notice rules in Labor Code sections 2870–2872 — its limit on post-employment holdover clauses comes separately from the restraint-of-trade bar in Business and Professions Code section 16600 — and is the model that roughly ten other states have followed. Most states reach comparable results through contract and common law rather than a statute. For the jurisdiction-specific detail, see the [50-state survey](/surveys/invention-assignment/us); for the fully sourced California analysis, see the [California practice note](/practice-guides/invention-assignment/us/california).
+An invention-assignment agreement is the promise an employer asks a worker to make to assign the rights in inventions the worker creates. How far that promise can reach depends on the law of the governing state, and whether the signed document actually transfers patent, copyright, and trademark rights depends on federal law. This note explains the rules that apply across states and links to the [50-state survey](/surveys/invention-assignment/us) for the jurisdiction-specific detail.
 
 ## What inventions can an employer require an employee to assign? {#what-can-be-assigned}
 
-**Short answer.** California Labor Code section 2870(a) excludes from an employment assignment clause an invention developed entirely on the employee's own time without the employer's equipment, supplies, facilities, or trade-secret information, unless it relates at conception or reduction to practice to the employer's business or actual or demonstrably anticipated research or development, or results from work performed for the employer [^ia-2870-carveout]. California and roughly nine other states codify this **own-time carve-out**; most states reach a broadly similar line through contract and common law rather than a statute. Where the statute applies, a clause that purports to capture those own-time inventions is void to that extent [^ia-2870-carveout].
+**Short answer.** An employer can require an employee to assign inventions that relate to the employer's business or research, or that result from the employee's work for the employer, but in a state with an **own-time carve-out** statute it cannot claim an invention the employee developed entirely on their own time without the employer's equipment, supplies, facilities, or trade-secret information [^ia-2870-carveout]. Where California's statute applies, a clause that purports to capture those own-time inventions is void to that extent [^ia-2870-carveout]. Other states differ on whether the carve-out is statutory at all, and the [50-state survey](/surveys/invention-assignment/us) records each state's rule.
 
 The carve-out operates as a ceiling on what an assignment promise can do, not a matter of drafting around. However broadly the contract is written, in a section 2870 state it does not reach an invention the employee made on their own time and with their own resources unless the invention relates to the employer's business or anticipated R&D, or results from the employee's work [^ia-2870-carveout].
 
 "Any provision in an employment agreement which provides that an employee shall assign, or offer to assign, any of his or her rights in an invention to his or her employer shall not apply to an invention that the employee developed entirely on his or her own time without using the employer’s equipment, supplies, facilities, or trade secret information except for those inventions that either: (1) Relate at the time of conception or reduction to practice of the invention to the employer’s business, or actual or demonstrably anticipated research or development of the employer; or (2) Result from any work performed by the employee for the employer."[^ia-2870-carveout]
 
-The exact contours of the carve-out — and whether it is statutory at all — vary by state, so the [50-state survey](/surveys/invention-assignment/us) records each jurisdiction's rule. What is uniform is the core idea: an invention an employee makes wholly on their own time and resources, unrelated to the employer's business and not flowing from their work, sits on the employee's side of the line.
+The exact contours of the carve-out, and whether it is statutory at all, vary by state, so the [50-state survey](/surveys/invention-assignment/us) records each jurisdiction's rule. What is uniform is the core idea: an invention an employee makes wholly on their own time and resources, unrelated to the employer's business and not flowing from their work, sits on the employee's side of the line.
 
 ## Who owns an invention by default, absent a written assignment? {#default-ownership}
 
@@ -73,7 +66,7 @@ As a practical step before a financing or acquisition, a company can review the 
 
 ## Must the employer give the employee written notice of the carve-out? {#notice-requirement}
 
-**Short answer.** California Labor Code section 2872 requires an employer whose employment agreement was entered into after January 1, 1980, and requires the employee to assign or offer to assign invention rights to provide, when the agreement is made, written notice that it does not apply to an invention qualifying fully under section 2870 [^ia-2872-notice]. The same statute then places the burden of proof on the employee who later claims the carve-out's protection. Whether a notice is required at all, and what it must say, varies by state — several section 2870 states impose a parallel duty, while non-statutory states impose none [^ia-2872-notice][^ia-2872-burden].
+**Short answer.** Whether the employer must give written notice of the own-time carve-out depends on the state: in California, Labor Code section 2872 requires an employer whose agreement was entered into after January 1, 1980, and requires the employee to assign or offer to assign invention rights to provide, when the agreement is made, written notice that it does not apply to an invention qualifying fully under section 2870 [^ia-2872-notice]. Other states differ on whether a notice is required, and the [50-state survey](/surveys/invention-assignment/us) records each state's rule. California's statute also places the burden of proof on the employee who later claims the carve-out's protection [^ia-2872-burden].
 
 The notice obligation is contemporaneous: the written notification must accompany the agreement when it is made. It does not change which inventions are carved out — the carve-out statute does that — but it ensures the employee is told the carve-out exists [^ia-2872-notice].
 
@@ -87,7 +80,7 @@ Because both the notice duty and the burden allocation are creatures of each sta
 
 ## How far can a post-employment holdover clause reach? {#holdover-limits}
 
-**Short answer.** The Federal Circuit held in *Whitewater West Industries v. Alleshouse* that the **holdover** (trailing-assignment) provision before it, which reached inventions conceived after employment ended, was void under California Business and Professions Code section 16600 as a restraint on the former employee's profession [^ia-whitewater-void][^ia-whitewater-16600]. The court applied the same statute that voids employee non-competes because forcing a former worker to hand over inventions made after they leave restrains them from practicing their profession. The own-time carve-out statute does not rescue an overbroad holdover; if anything, section 2870 marks the same public-policy limit [^ia-whitewater-void][^ia-whitewater-16600][^ia-2870-policy].
+**Short answer.** How far a **holdover** (trailing-assignment) clause can reach depends on the state, and in California a clause reaching inventions conceived after employment ended is void: in *Whitewater West Industries v. Alleshouse*, the Federal Circuit held such a provision void under California Business and Professions Code section 16600 [^ia-whitewater-void][^ia-whitewater-16600]. The court applied the same statute that voids employee non-competes, because forcing a former worker to hand over inventions made after they leave restrains them from practicing their profession [^ia-whitewater-16600]. Other states differ on whether to void such a clause, narrow it, or enforce a short post-employment tail tied to trade-secret use, and the [50-state survey](/surveys/invention-assignment/us) records each state's limit.
 
 The former employee in *Whitewater* left, then invented and patented new technology without using any of his former employer's trade secrets. The court refused to enforce the trailing-assignment clause against him, holding the provision void under California law [^ia-whitewater-void].
 
@@ -101,7 +94,7 @@ The carve-out statute reinforces the same boundary from the other direction: a p
 
 "To the extent a provision in an employment agreement purports to require an employee to assign an invention otherwise excluded from being required to be assigned under subdivision (a), the provision is against the public policy of this state and is unenforceable."[^ia-2870-policy]
 
-How far a holdover clause can reach — and whether a state will void it, narrow it, or enforce a short post-employment tail tied to trade-secret use — is one of the sharpest points of state-to-state divergence. The [50-state survey](/surveys/invention-assignment/us) records each jurisdiction's limit.
+How far a holdover clause can reach is one of the sharpest points of state-to-state divergence.
 
 > [!NOTE]
 > **Practice note.**
@@ -109,7 +102,7 @@ How far a holdover clause can reach — and whether a state will void it, narrow
 > Do not reuse a single assign-everything invention-assignment form across states. A form built for a broad-assignment jurisdiction will often omit the written carve-out notice that statutory states such as California require at signing, sweep in own-time inventions that a section 2870-style carve-out takes off the table, and carry a post-employment *holdover* clause that *Whitewater* makes void under section 16600. Before relying on one form, confirm each state's own-time carve-out, notice rule, and holdover limit against the [50-state survey](/surveys/invention-assignment/us) [^ia-2872-notice-practice][^ia-whitewater-void].
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-29. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + 50-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention-Assignment Agreements: What State Law Lets an Employer Require, and What It Carves Out*, OpenAgreements (last updated June 29, 2026), https://openagreements.org/practice-guides/invention-assignment/us.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-29. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + 50-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention-Assignment Agreements*, OpenAgreements (last updated June 29, 2026), https://openagreements.org/practice-guides/invention-assignment/us.
 
 [^ia-2870-carveout]: **Cal. Lab. Code § 2870** — "Any provision in an employment agreement which provides that an employee shall assign, or offer to assign, any of his or her rights in an invention to his or her employer shall not apply to an invention that the employee developed entirely on his or her own time without using the employer’s equipment, supplies, facilities, or trade secret information except for those inventions that either: (1) Relate at the time of conception or reduction to practice of the invention to the employer’s business, or actual or demonstrably anticipated research or development of the employer; or (2) Result from any work performed by the employee for the employer." *Cal. Lab. Code § 2870(a).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=2870>
 
