@@ -35,7 +35,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `holdover-clause-limit`, `holdover-limits`
 - source_cards: `ia-whitewater-16600`, `whitewater-16600`
-- cited_by: [Employee Invention-Assignment Agreements: What State Law Lets an Employer Require, and What It Carves Out](../invention-assignment/us.md), [Employee Invention Assignment in California](../invention-assignment/us/california.md)
+- cited_by: [Employee Invention-Assignment Agreements](../invention-assignment/us.md), [Employee Invention Assignment in California](../invention-assignment/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=First%2C%20California%20Business%20and%20Professions,is%20to%20that%20extent%20void.%E2%80%9D>
 
 ### whitewater-west-industries-ltd-v-alleshouse-in-particular-we-reverse-the-judgment-c95d3bbd {#whitewater-west-industries-ltd-v-alleshouse-in-particular-we-reverse-the-judgment-c95d3bbd}
@@ -44,7 +44,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `holdover-clause-limit`, `holdover-limits`
 - source_cards: `ia-whitewater-void`, `whitewater-void`
-- cited_by: [Employee Invention-Assignment Agreements: What State Law Lets an Employer Require, and What It Carves Out](../invention-assignment/us.md), [Employee Invention Assignment in California](../invention-assignment/us/california.md)
+- cited_by: [Employee Invention-Assignment Agreements](../invention-assignment/us.md), [Employee Invention Assignment in California](../invention-assignment/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=In%20particular%2C%20we%20reverse%20the,is%20void%20under%20California%20law.>
 
 ### whitewater-west-industries-ltd-v-alleshouse-no-trade-secret-or-other-confidential-97f9da0c {#whitewater-west-industries-ltd-v-alleshouse-no-trade-secret-or-other-confidential-97f9da0c}

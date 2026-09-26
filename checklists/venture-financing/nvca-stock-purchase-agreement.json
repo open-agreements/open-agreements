@@ -38,7 +38,14 @@
       "rel": "related-form",
       "href": "https://openagreements.org/templates/nvca-stock-purchase-agreement",
       "type": "text/html",
-      "title": "Model Stock Purchase Agreement"
+      "title": "NVCA Stock Purchase Agreement"
+    },
+    {
+      "rel": "download",
+      "href": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx",
+      "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "title": "NVCA Stock Purchase Agreement (October 2025), Word. The NVCA Word form is not covered by this page's CC BY 4.0 license.",
+      "external": true
     },
     {
       "rel": "contract-api",
@@ -293,8 +300,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-restated-certificate",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 1.1(a)",
             "citation": "NVCA Model Stock Purchase Agreement § 1.1(a) (v10-28-2025); see id. n.1.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -321,8 +328,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-closing-deliverables",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 1.2 (Closing Deliverables)",
             "citation": "NVCA Model Stock Purchase Agreement § 1.2 (Closing Deliverables) (v10-28-2025); see id. nn.15–16.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -409,8 +416,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-capitalization",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 2.2 (Capitalization)",
             "citation": "NVCA Model Stock Purchase Agreement § 2.2(a)(iii) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -464,8 +471,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-valid-issuance",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 2.5 (Valid Issuance)",
             "citation": "NVCA Model Stock Purchase Agreement § 2.5 (v10-28-2025); see id. n.36.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -647,8 +654,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-mae-definition",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), Defined Terms",
             "citation": "NVCA Model Stock Purchase Agreement § 1.4 (Material Adverse Effect) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -843,8 +850,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-own-account",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.2 (Purchase Entirely for Own Account)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.2 (Purchase Entirely for Own Account) (v10-28-2025); see id. n.83.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -881,8 +888,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-restricted-securities",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.4 (Restricted Securities)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.4 (Restricted Securities) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -944,8 +951,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-accredited-investor",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.7 (Accredited Investor)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.7 (Accredited Investor) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1079,8 +1086,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-bring-down",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.1 (Representations and Warranties)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.1 (Representations and Warranties) (v10-28-2025); see id. n.89.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1130,8 +1137,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-qualifications",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.4 (Qualifications)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.4 (Qualifications) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1155,8 +1162,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-companion-agreements",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.7 (Investors' Rights Agreement)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.7 (Investors' Rights Agreement) (v10-28-2025); see id. §§ 4.6, 4.8–4.9.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1251,8 +1258,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-minimum-shares",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.13 (Minimum Number of Shares)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.13 (Minimum Number of Shares) (v10-28-2025); see id. n.92.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1291,8 +1298,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-purchaser-bring-down",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 5.1 (Representations and Warranties)",
             "citation": "NVCA Model Stock Purchase Agreement § 5.1 (Representations and Warranties) (v10-28-2025); see id. n.88.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1519,8 +1526,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-fee-cap",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 6.8 (Fees and Expenses)",
             "citation": "NVCA Model Stock Purchase Agreement § 6.8 (Fees and Expenses) (v10-28-2025); see id. n.97.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1557,8 +1564,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-amendment-threshold",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 6.10 (Amendments and Waivers)",
             "citation": "NVCA Model Stock Purchase Agreement § 6.10 (Amendments and Waivers) (v10-28-2025); see id. n.98.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",

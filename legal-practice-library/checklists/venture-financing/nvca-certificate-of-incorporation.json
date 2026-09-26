@@ -38,7 +38,14 @@
       "rel": "related-form",
       "href": "https://openagreements.org/templates/nvca-certificate-of-incorporation",
       "type": "text/html",
-      "title": "Model Certificate of Incorporation"
+      "title": "NVCA Certificate of Incorporation"
+    },
+    {
+      "rel": "download",
+      "href": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx",
+      "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "title": "NVCA Certificate of Incorporation (October 2025), Word. The NVCA Word form is not covered by this page's CC BY 4.0 license.",
+      "external": true
     },
     {
       "rel": "contract-api",
@@ -545,8 +552,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-identity-identity-and-capitalization",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — introductory certification",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), introductory certification; drafting notes 2, 3.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -651,8 +658,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-capital-identity-and-capitalization",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, capitalization",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, capitalization; drafting notes 4, 5.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -707,8 +714,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-capital-identity-and-capitalization",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, capitalization",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, capitalization; drafting notes 4, 5.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -718,8 +725,8 @@
           },
           {
             "sourceId": "nvca-coi-reserve-identity-and-capitalization",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.3.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.3.2.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -742,8 +749,8 @@
           },
           {
             "sourceId": "nvca-coi-capacity-note",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — drafting note 5",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), drafting note 5, first paragraph.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -789,8 +796,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-common-vote-identity-and-capitalization",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part A, § 2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part A, § 2; drafting notes 6, 7, 8.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -813,8 +820,8 @@
           },
           {
             "sourceId": "nvca-coi-cumulative-voting-note",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — drafting note 7",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), drafting note 7. This is model drafting guidance, not a determination that California law applies to a particular corporation.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -861,8 +868,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-dividends-dividends-and-liquidation-preference",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 1, noncumulative alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 1, noncumulative alternative; drafting notes 9, 10, 11, 12.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -923,8 +930,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-accruing-dividends-dividends-and-liquidation-preference",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 1, cumulative alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 1, cumulative alternative; drafting notes 13, 14, 15.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -971,8 +978,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-liquidation-dividends-and-liquidation-preference",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.1, nonparticipating alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.1, nonparticipating alternative; drafting notes 16, 17, 18.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1030,8 +1037,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-liquidation-dividends-and-liquidation-preference",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.1, nonparticipating alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.1, nonparticipating alternative; drafting notes 16, 17, 18.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1088,8 +1095,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-dle-definition-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.3.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.3.1; drafting notes 21, 22, 23, 24, 25, 26, 27, 28.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1140,8 +1147,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-dle-definition-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.3.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.3.1; drafting notes 21, 22, 23, 24, 25, 26, 27, 28.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1195,8 +1202,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-financing-exclusion-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.3.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.3.1; drafting note 29.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1239,8 +1246,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-dle-definition-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.3.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.3.1; drafting notes 21, 22, 23, 24, 25, 26, 27, 28.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1299,8 +1306,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-dle-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.3.2(a)",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.3.2(a).",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1310,8 +1317,8 @@
           },
           {
             "sourceId": "nvca-coi-dle-proceeds-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.3.2(b)",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.3.2(b).",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1321,8 +1328,8 @@
           },
           {
             "sourceId": "nvca-coi-no-redemption-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6, no-redemption alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6, no-redemption alternative; drafting notes 75, 76.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1373,8 +1380,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-noncash-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.3.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.3.3; drafting note 30.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1428,8 +1435,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-escrow-deemed-liquidation-events",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 2.3.4",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 2.3.4; drafting note 31.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1482,8 +1489,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-preferred-vote-voting-and-protective-provisions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.1.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1547,8 +1554,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-director-vote-voting-and-protective-provisions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.2; drafting notes 32, 33, 34, 35.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1602,8 +1609,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-requisite-directors-voting-and-protective-provisions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.2; drafting note 36.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1660,8 +1667,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-protective-voting-and-protective-provisions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.3; drafting notes 37, 38, 39, 40, 41, 42, 43, 44, 45.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1718,8 +1725,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-protective-voting-and-protective-provisions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.3; drafting notes 37, 38, 39, 40, 41, 42, 43, 44, 45.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1776,8 +1783,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-protective-voting-and-protective-provisions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.3; drafting notes 37, 38, 39, 40, 41, 42, 43, 44, 45.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1800,8 +1807,8 @@
           },
           {
             "sourceId": "nvca-coi-jurisdiction-note",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — drafting note 40",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), drafting note 40.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1841,8 +1848,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-protective-voting-and-protective-provisions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.3; drafting notes 37, 38, 39, 40, 41, 42, 43, 44, 45.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1900,8 +1907,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-operating-consents-voting-and-protective-provisions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.3.9(a)",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.3.9(a); drafting notes 44, 45.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1911,8 +1918,8 @@
           },
           {
             "sourceId": "nvca-coi-operating-consents-voting-and-protective-provisions-tokens",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.3.9(i)",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.3.9(i).",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1922,8 +1929,8 @@
           },
           {
             "sourceId": "nvca-coi-operating-consents-voting-and-protective-provisions-acquihires",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.3.9(k)",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.3.9(k).",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1933,8 +1940,8 @@
           },
           {
             "sourceId": "nvca-coi-operating-consents-voting-and-protective-provisions-leases",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 3.3.9(k)–(l)",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 3.3.9(k)–(l).",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -1976,8 +1983,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-conversion-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.1.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.1.1; drafting notes 46, 47.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2028,8 +2035,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-rounding-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.2; drafting note 48.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2089,8 +2096,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-conversion-procedure-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.1.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.1.2.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2100,8 +2107,8 @@
           },
           {
             "sourceId": "nvca-coi-conversion-procedure-optional-conversion-and-anti-dilution-notice",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.3.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.3.1; drafting notes 49, 50.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2111,8 +2118,8 @@
           },
           {
             "sourceId": "nvca-coi-conversion-procedure-optional-conversion-and-anti-dilution-effect",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.3.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.3.3.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2122,8 +2129,8 @@
           },
           {
             "sourceId": "nvca-coi-conversion-procedure-optional-conversion-and-anti-dilution-taxes",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.3.5",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.3.5.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2176,8 +2183,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-reserve-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.3.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.3.2.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2238,8 +2245,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-exemptions-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.4.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.4.1; drafting notes 51, 52, 53.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2295,8 +2302,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-weighted-average-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.4.4, weighted-average alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.4.4, weighted-average alternative; drafting note 56.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2306,8 +2313,8 @@
           },
           {
             "sourceId": "nvca-coi-full-ratchet-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.4.4, full-ratchet alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.4.4, full-ratchet alternative; drafting note 57.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2362,8 +2369,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-full-ratchet-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.4.4, full-ratchet alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.4.4, full-ratchet alternative; drafting note 57.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2405,8 +2412,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-deemed-issue-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.4.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.4.3; drafting notes 54, 55.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2458,8 +2465,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-waive-adjustment-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.4.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.4.2.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2508,8 +2515,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-multiple-closings-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.4.6",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.4.6.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2563,8 +2570,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-reorganization-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.8",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.8; drafting notes 58, 59, 60.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2587,8 +2594,8 @@
           },
           {
             "sourceId": "nvca-coi-recapitalization-details",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — Part B, §§ 4.5–4.7",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, §§ 4.5–4.7.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2629,8 +2636,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-adjustment-certificate-optional-conversion-and-anti-dilution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.9",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.9.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2653,8 +2660,8 @@
           },
           {
             "sourceId": "nvca-coi-event-notice",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — Part B, § 4.10",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.10.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2710,8 +2717,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-mandatory-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5.1; drafting notes 61, 62, 63, 64.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2768,8 +2775,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-mandatory-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5.1; drafting notes 61, 62, 63, 64.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2810,8 +2817,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-mandatory-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5.1; drafting notes 61, 62, 63, 64.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2860,8 +2867,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-mandatory-process-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5.2.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2917,8 +2924,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-pay-to-play-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5A.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5A.1; drafting notes 65, 66, 67, 68, 69.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2967,8 +2974,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-pay-to-play-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5A.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5A.1; drafting notes 65, 66, 67, 68, 69.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -2978,8 +2985,8 @@
           },
           {
             "sourceId": "nvca-coi-qualified-financing-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5A.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5A.3.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3029,8 +3036,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-pay-to-play-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5A.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5A.1; drafting notes 65, 66, 67, 68, 69.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3040,8 +3047,8 @@
           },
           {
             "sourceId": "nvca-coi-pay-to-play-suspension-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 4.1.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 4.1.1; drafting note 47.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3085,8 +3092,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-pay-to-play-mandatory-conversion-and-pay-to-play",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 5A.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 5A.1; drafting notes 65, 66, 67, 68, 69.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3129,8 +3136,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-no-redemption-redemption-and-continuing-preferred-terms",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6, no-redemption alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6, no-redemption alternative; drafting notes 75, 76.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3191,8 +3198,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-redemption-redemption-and-continuing-preferred-terms",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6.1; drafting notes 77, 78, 79, 80, 81, 82, 83, 84.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3234,8 +3241,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-redemption-redemption-and-continuing-preferred-terms",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6.1",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6.1; drafting notes 77, 78, 79, 80, 81, 82, 83, 84.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3282,8 +3289,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-redemption-process-redemption-and-continuing-preferred-terms",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6.2",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6.2.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3293,8 +3300,8 @@
           },
           {
             "sourceId": "nvca-coi-redemption-process-redemption-and-continuing-preferred-terms-excluded",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6.2, Excluded Shares alternative",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6.2, Excluded Shares alternative; drafting note 83.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3304,8 +3311,8 @@
           },
           {
             "sourceId": "nvca-coi-redemption-process-redemption-and-continuing-preferred-terms-surrender",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6.3",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6.3.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3315,8 +3322,8 @@
           },
           {
             "sourceId": "nvca-coi-redemption-process-redemption-and-continuing-preferred-terms-rights",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6.5",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6.5.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3358,8 +3365,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-interest-redemption-and-continuing-preferred-terms",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 6.4",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 6.4; drafting note 85.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3395,8 +3402,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-retire-redemption-and-continuing-preferred-terms",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourth, Part B, § 7",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 7.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3446,8 +3453,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-waivers",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — Part B, § 8",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 8.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3457,8 +3464,8 @@
           },
           {
             "sourceId": "nvca-coi-general-notices",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — Part B, § 9",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourth, Part B, § 9.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3508,8 +3515,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-bylaw-power",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — Article Fifth",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fifth.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3532,8 +3539,8 @@
           },
           {
             "sourceId": "nvca-coi-general-governance",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — Articles Sixth–Eighth",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Articles Sixth–Eighth.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3574,8 +3581,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-exculpation-governance-and-filing-package",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Ninth",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Ninth; drafting note 86.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3637,8 +3644,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-indemnification-governance-and-filing-package",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Tenth",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Tenth; drafting notes 87, 92.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3689,8 +3696,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-opportunities-governance-and-filing-package",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Eleventh",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Eleventh; drafting note 88.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3744,8 +3751,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-forum-governance-and-filing-package",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Twelfth",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Twelfth; drafting note 89.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3786,8 +3793,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-california-governance-and-filing-package",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — Article Fourteenth",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), Article Fourteenth; drafting note 90.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3830,8 +3837,8 @@
         "sources": [
           {
             "sourceId": "nvca-coi-adoption-governance-and-filing-package",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Certificate of Incorporation — closing adoption certification",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), closing adoption certification; drafting notes 2, 91.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",
@@ -3929,8 +3936,8 @@
           },
           {
             "sourceId": "nvca-coi-defined-terms-note",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA model — drafting note 47",
             "citation": "NVCA Model Certificate of Incorporation (Oct. 1, 2025), drafting note 47, on the § 4.1 pay-to-play proviso. The defined-term instruction is specific to that provision; it is not a general package-review step.",
             "url": "https://nvca.org/document/nvca-model-certificate-of-incorporation-updated-oct-2025/",

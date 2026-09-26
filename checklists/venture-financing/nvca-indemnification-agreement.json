@@ -38,7 +38,14 @@
       "rel": "related-form",
       "href": "https://openagreements.org/templates/nvca-indemnification-agreement",
       "type": "text/html",
-      "title": "Model Indemnification Agreement"
+      "title": "NVCA Indemnification Agreement"
+    },
+    {
+      "rel": "download",
+      "href": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
+      "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "title": "NVCA Indemnification Agreement (2020), Word. The NVCA Word form is not covered by this page's CC BY 4.0 license.",
+      "external": true
     },
     {
       "rel": "contract-api",
@@ -256,8 +263,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-basic-indemnity",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 1, opening sentence",
             "citation": "§ 1, opening sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -267,8 +274,8 @@
           },
           {
             "sourceId": "nvca-ia-overlap-comment",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — embedded COMMENT within § 1",
             "citation": "embedded COMMENT within § 1",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -278,8 +285,8 @@
           },
           {
             "sourceId": "nvca-ia-corporate-status",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(a)",
             "citation": "§ 13(a)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -316,8 +323,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-third-party",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 1(a), payment sentence",
             "citation": "§ 1(a), payment sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -327,8 +334,8 @@
           },
           {
             "sourceId": "nvca-ia-company-proceedings",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 1(b), payment sentence",
             "citation": "§ 1(b), payment sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -365,8 +372,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-partial-success",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 1(c), partial-success sentences",
             "citation": "§ 1(c), partial-success sentences",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -376,8 +383,8 @@
           },
           {
             "sourceId": "nvca-ia-partial-indemnity",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 1(e)",
             "citation": "§ 1(e)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -417,8 +424,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-appointing-stockholder",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 1(d), optional",
             "citation": "§ 1(d), optional",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -454,8 +461,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-additional-limit",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 2, final sentence",
             "citation": "§ 2, final sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -494,8 +501,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-contribution-payment",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 3(a)",
             "citation": "§ 3(a)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -505,8 +512,8 @@
           },
           {
             "sourceId": "nvca-ia-contribution-alternative",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 3(b), first sentence",
             "citation": "§ 3(b), first sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -516,8 +523,8 @@
           },
           {
             "sourceId": "nvca-ia-contribution-colleagues",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 3(c)",
             "citation": "§ 3(c)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -527,8 +534,8 @@
           },
           {
             "sourceId": "nvca-ia-contribution-fallback",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 3(d)",
             "citation": "§ 3(d)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -601,8 +608,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-witness",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 4",
             "citation": "§ 4",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -639,8 +646,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-advancement",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 5",
             "citation": "§ 5",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -688,8 +695,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-request",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(a)",
             "citation": "§ 6(a)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -699,8 +706,8 @@
           },
           {
             "sourceId": "nvca-ia-decision-method",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(b)",
             "citation": "§ 6(b)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -736,8 +743,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-counsel-selection",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(c)",
             "citation": "§ 6(c)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -773,8 +780,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-decision-deadline",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(f)",
             "citation": "§ 6(f)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -814,8 +821,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-entitlement-presumption",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(d)",
             "citation": "§ 6(d)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -825,8 +832,8 @@
           },
           {
             "sourceId": "nvca-ia-good-faith",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(e)",
             "citation": "§ 6(e)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -836,8 +843,8 @@
           },
           {
             "sourceId": "nvca-ia-cooperation",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(g)",
             "citation": "§ 6(g)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -847,8 +854,8 @@
           },
           {
             "sourceId": "nvca-ia-resolution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(h)",
             "citation": "§ 6(h)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -858,8 +865,8 @@
           },
           {
             "sourceId": "nvca-ia-disposition-effect",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 6(i)",
             "citation": "§ 6(i)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -896,8 +903,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-remedy-trigger",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 7(a)",
             "citation": "§ 7(a)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -907,8 +914,8 @@
           },
           {
             "sourceId": "nvca-ia-final-disposition",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 7(f)",
             "citation": "§ 7(f)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -947,8 +954,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-review-standard",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 7(b)",
             "citation": "§ 7(b)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -958,8 +965,8 @@
           },
           {
             "sourceId": "nvca-ia-favorable-decision",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 7(c)",
             "citation": "§ 7(c)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -969,8 +976,8 @@
           },
           {
             "sourceId": "nvca-ia-enforcement-advance",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 7(d)",
             "citation": "§ 7(d)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -980,8 +987,8 @@
           },
           {
             "sourceId": "nvca-ia-enforcement-costs",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 7(e)",
             "citation": "§ 7(e)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1018,8 +1025,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-insurance",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 8(b)",
             "citation": "§ 8(b)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1029,8 +1036,8 @@
           },
           {
             "sourceId": "nvca-ia-nonexclusivity",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 8(a)",
             "citation": "§ 8(a)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1072,8 +1079,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-fund-priority",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 8(c), optional",
             "citation": "§ 8(c), optional",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1083,8 +1090,8 @@
           },
           {
             "sourceId": "nvca-ia-subrogation",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 8(d)",
             "citation": "§ 8(d)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1094,8 +1101,8 @@
           },
           {
             "sourceId": "nvca-ia-offsets",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 8(e)",
             "citation": "§ 8(e)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1105,8 +1112,8 @@
           },
           {
             "sourceId": "nvca-ia-outside-offset",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 8(f)",
             "citation": "§ 8(f)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1143,8 +1150,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-exclusions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 9(a)–(c)",
             "citation": "§ 9(a)–(c)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1154,8 +1161,8 @@
           },
           {
             "sourceId": "nvca-ia-optional-conduct-exclusion",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — embedded COMMENT following § 9",
             "citation": "NVCA Indemnification Agreement (July 2020), embedded COMMENT following § 9.",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1193,8 +1200,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-duration",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 10",
             "citation": "§ 10",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1204,8 +1211,8 @@
           },
           {
             "sourceId": "nvca-ia-entire-agreement",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 12(b)",
             "citation": "§ 12(b)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1215,8 +1222,8 @@
           },
           {
             "sourceId": "nvca-ia-reliance",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 12(a)",
             "citation": "§ 12(a)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1252,8 +1259,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-security",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 11",
             "citation": "§ 11",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1289,8 +1296,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-bar-order",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 12(c)",
             "citation": "§ 12(c)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1333,8 +1340,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-closing-corporate-status",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(a)",
             "citation": "§ 13(a)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1344,8 +1351,8 @@
           },
           {
             "sourceId": "nvca-ia-expense-categories",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(d), first sentence",
             "citation": "§ 13(d), first sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1355,8 +1362,8 @@
           },
           {
             "sourceId": "nvca-ia-expense-boundary",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(d), final sentence",
             "citation": "§ 13(d), final sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1366,8 +1373,8 @@
           },
           {
             "sourceId": "nvca-ia-definitions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(e), counsel-conflict sentence",
             "citation": "§ 13(e), counsel-conflict sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1377,8 +1384,8 @@
           },
           {
             "sourceId": "nvca-ia-proceeding-definition",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(f)",
             "citation": "§ 13(f)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1388,8 +1395,8 @@
           },
           {
             "sourceId": "nvca-ia-enterprise",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(c)",
             "citation": "§ 13(c)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1399,8 +1406,8 @@
           },
           {
             "sourceId": "nvca-ia-disinterested",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(b)",
             "citation": "§ 13(b)",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1410,8 +1417,8 @@
           },
           {
             "sourceId": "nvca-ia-appeal-enforcement-costs",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 13(d), additional-cost sentence",
             "citation": "§ 13(d), additional-cost sentence",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1461,8 +1468,8 @@
         "sources": [
           {
             "sourceId": "nvca-ia-written-changes",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 15",
             "citation": "§ 15",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1472,8 +1479,8 @@
           },
           {
             "sourceId": "nvca-ia-severability",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 14",
             "citation": "§ 14",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1483,8 +1490,8 @@
           },
           {
             "sourceId": "nvca-ia-counterparts",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, Counterparts",
             "citation": "Counterparts",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1494,8 +1501,8 @@
           },
           {
             "sourceId": "nvca-ia-headings",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, Headings",
             "citation": "Headings",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1505,8 +1512,8 @@
           },
           {
             "sourceId": "nvca-ia-notification",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 16",
             "citation": "§ 16",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -1516,8 +1523,8 @@
           },
           {
             "sourceId": "nvca-ia-forum",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Indemnification Agreement — operative model text, § 19(i)–(ii)",
             "citation": "§ 19",
             "url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",

@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `federal-transfer-formalities`
 - source_cards: `ia-fed-reid-control`
-- cited_by: [Employee Invention-Assignment Agreements: What State Law Lets an Employer Require, and What It Carves Out](../invention-assignment/us.md)
+- cited_by: [Employee Invention-Assignment Agreements](../invention-assignment/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/112273/community-for-creative-non-violence-v-reid/#:~:text=In%20determining%20whether%20a%20hired,which%20the%20product%20is%20accomplished.>
 
 ### community-for-creative-non-violence-v-reid-no-one-of-these-factors-is-633ad005 {#community-for-creative-non-violence-v-reid-no-one-of-these-factors-is-633ad005}
@@ -39,5 +39,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `federal-transfer-formalities`
 - source_cards: `ia-fed-reid-factors`
-- cited_by: [Employee Invention-Assignment Agreements: What State Law Lets an Employer Require, and What It Carves Out](../invention-assignment/us.md)
+- cited_by: [Employee Invention-Assignment Agreements](../invention-assignment/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/112273/community-for-creative-non-violence-v-reid/#:~:text=No%20one%20of%20these%20factors%20is%20determinative.>

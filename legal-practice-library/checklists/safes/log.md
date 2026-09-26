@@ -1,5 +1,8 @@
 # Safes Update Log
 
+## 2026-09-25
+* **Update**: content: tag NVCA and YC form citations as standard-form (#2793) (fc14974)
+
 ## 2026-07-06
 * **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)
 

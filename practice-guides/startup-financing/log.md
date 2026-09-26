@@ -1,5 +1,8 @@
 # Startup Financing Update Log
 
+## 2026-09-25
+* **Update**: content: tag NVCA and YC form citations as standard-form (#2793) (fc14974)
+
 ## 2026-09-18
 * **Update**: fix(nvca): resolve purchaser-guide source and answer findings (05630cd)
 * **Update**: fix(guides): remove misplaced indemnity closing chip (13b732e)
