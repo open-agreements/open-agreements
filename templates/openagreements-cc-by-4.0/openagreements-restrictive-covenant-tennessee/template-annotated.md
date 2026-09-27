@@ -225,7 +225,7 @@ For a provider licensed under the listed chapters of Title 63, a covenant deemed
 
 ### Preserved covenants operating as de facto non-competes
 
-The 2026 statute preserves a confidentiality or nondisclosure agreement, a customer non-solicitation agreement, and an employee non-solicitation agreement from its non-compete rules, so a covenant tied to genuine confidential information, customers, or employees sits outside the time presumptions and the $70,000 threshold; together with the trade-secret protections, a customer non-solicit is often a more readily enforceable protection than a broad non-compete . That shelter depends on the covenant staying within its category: a non-solicitation or confidentiality clause drawn so broadly that it bars the worker from competing at all reads as a disguised non-compete and draws the same reasonableness scrutiny — and, for a below-threshold employee, the same voidness risk — as an express non-compete. A no-dealing covenant is not on the preserved list at all, so a court may test it under the disfavored-restraint framework rather than the carve-out, and a clock kept independently per covenant makes clear which covenants answer to the statute and which do not .
+A non-solicitation or confidentiality clause drawn so broadly that it bars the worker from competing at all risks losing the 2026 statute's shelter for those covenants and being treated as a noncompete agreement, which for an employee below the $70,000 threshold carries the same voidness risk as an express non-compete . A no-dealing covenant is not on the preserved list, so it cannot rely on the carve-out .
 
 ### A good-faith basis for an out-of-state choice of law
 

@@ -216,7 +216,7 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### The legitimate-ancillary-purpose screen
 
-Every restraint in a Hawaii agreement passes through HRS chapter 480's antitrust screen, not ordinary contract reasonableness alone: HRS 480-4(a) makes every in-state restraint of trade illegal, and 480-4(c) makes a covenant lawful only where it is ancillary to a legitimate purpose not violative of chapter 480 and its effect is not substantially to lessen competition or to tend to create a monopoly . A covenant that satisfies every reasonableness factor is still unenforceable unless it is ancillary to such a purpose, and preventing competition is not one, so a restraint whose real work is blocking ordinary competition fails no matter how tightly its duration and territory are drawn . The purpose has to be a recognized protectable interest — trade secrets, genuinely confidential information, special customer relationships, workforce stability for an employee-solicitation covenant, or specialized training combined with other protectable factors — proven for each covenant on its own record rather than assumed, and no particular form or timing of consideration substitutes for that showing; binding a non-compete to named competitors is one way to show it reaches a specific interest against specific rivals rather than the market at large .
+A Hawaii covenant whose real work is blocking ordinary competition, rather than protecting an identified legitimate interest, risks being unenforceable however tightly its duration and territory are drawn . An agreement that does not tie each restraint to such an interest leaves it outside the covenants HRS 480-4(c) permits .
 
 ### Confidential information scope
 
@@ -244,7 +244,7 @@ An NDA drafted to do non-compete work does not hold up as one. Hawaii preserves 
 
 ### Tolling
 
-A tolling or extension-on-breach clause is untested in the staged Hawaii sources, so its enforcement cannot be assumed. Because such a clause extends the effective restricted period, it is measured under the same HRS 480-4 antitrust and reasonableness limits that govern the covenant itself, and an extension pushing the covenant past a reasonable duration is exposed on the same ground the underlying restraint would be .
+A tolling or extension-on-breach clause is untested in the identified Hawaii sources, so its enforcement cannot be assumed. Because such a clause extends the effective restricted period, it is measured under the same HRS 480-4 antitrust and reasonableness limits that govern the covenant itself, and an extension pushing the covenant past a reasonable duration is exposed on the same ground the underlying restraint would be .
 
 ### Narrowing reliance
 

@@ -221,7 +221,7 @@ A covenant not to compete imposed as a condition of training for licensure at a 
 
 ### Covenants restraining a licensed healthcare professional
 
-A covenant restraining a licensed healthcare professional from practicing is not categorically void in Vermont as of this review, but it is not exempt either: it runs the same common-law reasonableness test as any other covenant, with the public-interest prong weighing patient access and continuity of care, and the employer carries the burden of proving its reasonable necessity . A healthcare covenant sized to a narrow radius and a short term is the one that survives that scrutiny; a broad one is exposed on the public-interest prong. The footing is unstable: H.583 would categorically void noncompetition, nondisclosure, and nondisparagement agreements for healthcare professionals if enacted, so a covenant drafted under current law stands to be displaced on enactment .
+A healthcare-professional covenant is neither banned nor exempt in Vermont: it runs the ordinary reasonableness test, with patient access weighed on the public-interest prong and the burden on the employer . A radius or term set without regard to patient access is exposed on that prong, and even a narrow one is not assured of enforcement.
 
 ### Restrictions on a lawyer's right to practice
 

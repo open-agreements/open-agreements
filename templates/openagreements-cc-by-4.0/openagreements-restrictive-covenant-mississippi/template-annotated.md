@@ -205,7 +205,7 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### The three-interest balance
 
-Mississippi has no general non-compete statute, so every covenant in the agreement stands or falls on the balance of three interests — the rights of the employer, the rights of the employee, and the rights of the public — and the employer carries the burden of proving the restraint reasonable in time, territory, and restrained activity . A court treats these covenants as restraints on trade and individual freedom, so they are disfavored and any ambiguity is construed strictly against the drafting employer , weighed to maintain a reasonable balance between the employer's protection and the employee's freedom to work . A covenant that cannot be tied to customer goodwill, confidential information, or another protectable interest fails that test — the investment restraint is the hardest of all to justify. Trade-secret protection, in turn, survives only on the reasonable efforts that surround it: the return, deletion, and certification of confidential material form the contemporaneous record an employer would need if protected material later surfaced at a competitor.
+A Mississippi covenant carried over from another form without facts supporting its time, territory, or activity limits risks being refused enforcement, because these covenants are disfavored and courts weigh the employee's and the public's rights alongside the employer's .
 
 ### Consideration record
 
@@ -221,7 +221,7 @@ A fixed radius or term copied from another form is measured against a market it 
 
 ### Accepting business versus soliciting
 
-Each restraint reaches only the conduct it names. A customer non-solicit built on the Solicit definition reaches only the employee's active diversion; stopping a former employee from serving customers who come to them on their own falls to the separate No Business with Covered Customers covenant and its express no-acceptance language. A clause barring conduct that would tend to divert business was held ambiguous precisely because it did not expressly prohibit accepting business from former customers who came over on their own initiative, and the court construed that ambiguity against the employer . An express no-acceptance provision can, in appropriate cases, be reasonable and enforceable . That no-acceptance covenant is the heavier restraint, defensible only where it is genuinely needed and sized at least as tightly to the customer goodwill it protects; a customer non-solicit backed by the confidentiality and trade-secret terms is often a sturdier, more readily enforceable protection than a broad non-compete.
+A customer non-solicit built on the Solicit definition in the [OpenAgreements Mississippi restrictive covenant form](/templates/openagreements-restrictive-covenant-mississippi) risks not reaching former customers who come to the employee on their own, because a clause that did not expressly prohibit accepting their business was held ambiguous and construed against the employer . Stopping that business depends on the separate No Business with Covered Customers covenant and its express no-acceptance language, which can be enforceable in appropriate cases .
 
 ### Extension on breach
 

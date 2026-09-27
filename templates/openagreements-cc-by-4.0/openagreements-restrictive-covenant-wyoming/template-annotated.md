@@ -211,10 +211,6 @@ Where a covenant falls within a statutory exception and enforceability matters, 
 
 The trade-secret exception covers covenants only to the extent they protect information that meets Wyoming's statutory trade-secret definition. Enforceability is more likely when the contractual definition of protected information is tied to that statutory bar and each category is documented as meeting it, since how broadly Wyoming courts read the carveout remains an open question .
 
-### Statutory exceptions
-
-A statutory exception is not a license for loose drafting. Employer-side law-firm commentary still points to reasonable scope and legitimate business fit ; law-firm commentary also treats the breadth of the trade-secret exception as an open question .
-
 ### Customer non-solicitation scope
 
 A narrow customer-relationship restriction carries less risk than language that prevents the person from earning compensation in a field, territory, or role. The closer the clause gets to a work ban, the more non-compete risk it carries .
