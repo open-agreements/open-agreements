@@ -217,7 +217,7 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### The five-factor reasonableness gate
 
-Every covenant in the agreement stands or falls on South Carolina's five-factor test — necessity to protect a legitimate interest, reasonable time and place, no undue harshness on the employee, sound public policy, and valuable consideration. The factors are conjunctive: a covenant that fails any single one is unenforceable whole, and because a non-compete is a disfavored restraint of trade the court construes it strictly against the employer, so ambiguous language — including a defined term like Solicit — is read against the drafter . The same test follows the covenant wherever it goes. A notice to a prospective employer asserting a covenant that cannot clear the test carries interference exposure of its own; an assignee or successor can enforce the covenants only where it actually holds the customer relationships and other protected interests they guard; and a governing-law and venue choice mismatched to where the employee lives and works invites a public-policy challenge to the whole structure.
+A South Carolina covenant that clears four of the five conjunctive factors but not the fifth, such as a restraint signed without valuable consideration or one broader in time and place than the employer's legitimate interest requires, risks being unenforceable . Recitals and scope terms that establish only the employer's interest leave the harshness, public-policy, and consideration factors unaddressed, and a restraint on trade that does not meet the criteria is unenforceable .
 
 ### Trade-secret strategy
 
@@ -225,7 +225,7 @@ Information the _South Carolina Trade Secrets Act_ already covers does not need 
 
 ### Customer covenants bound to covered customers
 
-A customer non-solicit — and the optional no-business covenant — bound to Covered Customers only, the customers, vendors, referral sources, and business partners the employee had material contact with during the stated look-back period, tracks what the case law rewards: a covenant confined to customers the employee had contact with during his last twelve months of employment withstood an overbreadth challenge , while barring solicitation of customers the employee never serviced protected no legitimate interest , and an employer is not entitled to enforce an agreement preventing ordinary competition . The no-business covenant bites harder — it reaches even customer-initiated dealings — so its Covered Customers limit is what keeps it inside the legitimate-interest and harshness factors; loosened, it forfeits that protection. A tight customer covenant paired with the confidentiality and trade-secret protections is often a stronger, more readily enforceable instrument than a broad non-compete.
+A customer non-solicit that reaches beyond the Covered Customers the employee had material contact with during the look-back period risks being unenforceable, because barring contact with customers the employee never serviced protects no legitimate interest . The optional no-business covenant carries the same risk: a Covered Customers definition loosened beyond the customers the employee served risks the covenant being treated as a bar on ordinary competition .
 
 ### Mid-employment consideration
 

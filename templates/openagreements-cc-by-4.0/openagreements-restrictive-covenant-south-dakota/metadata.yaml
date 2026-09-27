@@ -61,7 +61,7 @@ fields:
     default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. South Dakota enforces confidentiality covenants only to the extent reasonably necessary to protect the employer's interest in confidential information, so a finite term keeps the clause from reading as a disguised work ban.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included. No staged South Dakota authority addresses a worker's own promise not to recruit former colleagues, so this covenant is left off by default and, if included, is drawn narrowly.
+    description: Whether the employee non-solicitation covenant is included. No identified South Dakota authority addresses a worker's own promise not to recruit former colleagues, so this covenant is left off by default and, if included, is drawn narrowly.
     display_label: Employee Non-Solicitation Included
     default: false
     section: Employee Non-Solicitation
@@ -73,7 +73,7 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
-    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements, and it stays within the two-year ceiling South Dakota fixes for its statutory covenants — though the employee non-solicit itself is unaddressed by staged South Dakota authority, so the statutory clock is context, not a pin. 12 months is the common lighter alternative.
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements, and it stays within the two-year ceiling South Dakota fixes for its statutory covenants — though the employee non-solicit itself is unaddressed by identified South Dakota authority, so the statutory clock is context, not a pin. 12 months is the common lighter alternative.
   - name: covered_employee_period
     type: string
     description: Lookback period for determining which employees are covered by the non-solicitation restriction.

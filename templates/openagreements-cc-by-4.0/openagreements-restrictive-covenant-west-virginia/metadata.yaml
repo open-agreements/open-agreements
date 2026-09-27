@@ -83,7 +83,7 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
-    default_value_rationale: West Virginia sets no statutory cap on duration for a general-employment covenant; enforceability turns on the Reddy reasonableness inquiry rather than a fixed number, and no staged West Virginia case sets a separate standard for employee non-solicits. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual workforce-stability interest and keep it a modest restraint rather than a de facto hiring ban.
+    default_value_rationale: West Virginia sets no statutory cap on duration for a general-employment covenant; enforceability turns on the Reddy reasonableness inquiry rather than a fixed number, and no identified West Virginia case sets a separate standard for employee non-solicits. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual workforce-stability interest and keep it a modest restraint rather than a de facto hiring ban.
   - name: covered_employee_period
     type: string
     description: Lookback period for determining which employees are covered by the non-solicitation restriction.
