@@ -209,7 +209,7 @@ A clause permitting the employer to notify a prospective employer or business as
 
 ### Protectable interest comes first
 
-Each covenant in the family — non-compete, non-solicit, non-dealing, non-investment — depends on the legitimate business interest it protects. Arizona has no general non-compete statute and no statutory safe harbor: each covenant is enforceable only so long as it is no broader than necessary to protect that interest, and the interest inquiry is the threshold, so a covenant fails where the employer has no protectable interest in the relationship restrained . Hardship to the employee is weighed in the same analysis, so no acknowledgment, consideration recital, or irreparable-harm stipulation rescues an unreasonable restraint . Two things carry through the rest of the agreement: real Specified Competitors named in Cover Terms are strong evidence the restraint is no greater than necessary; and an assignee inherits the analysis unchanged — whoever enforces a covenant must show its own protectable interest behind the restraint, because an assignment moves the covenant without strengthening it. A non-investment covenant aimed at active or material participation in private competitors, resting on the passive-public-holdings carve-out, stays tied to the interest rather than to ordinary investing.
+A non-compete, non-solicit, non-dealing, or non-investment covenant that reaches a customer, account, or activity in which the employer has no protectable interest risks going unenforced as to that relationship, as the covenant in _Hilb, Rogal & Hamilton_ did for the account at issue . A covenant drawn broader than the interest behind it faces the same risk .
 
 ### Physician covenants under strict construction
 

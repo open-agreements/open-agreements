@@ -53,7 +53,7 @@ Competitive Business
 : [Description of the business activities that constitute competition with the employer.]
 
 Specified Competitors
-: [Optional named list of specific competitors. Narrowing the restriction to named competitors reduces the risk that a court narrows it — and therefore the risk of the statutory reformation penalty.]
+: [Optional named list of specific competitors. Narrowing the restriction to named competitors reduces the risk that a court narrows it — and therefore the risk of the statutory reformation penalty, which applies until ESHB 1155 deletes it effective June 30, 2027.]
 
 No Business with Covered Customers
 
@@ -224,3 +224,7 @@ A restrictive covenant a worker signs after employment has already commenced is 
 ### Customer non-acceptance clauses treated as non-competes
 
 A customer non-acceptance or no-business clause is not a safe substitute for a non-solicit. Because the 2024 amendment treats any agreement that directly or indirectly prohibits accepting or transacting business with a customer as a non-compete, drafting around the threshold by forbidding the customer relationship instead of the solicitation pulls the clause back inside RCW 49.62.020 .
+
+### Written notice to workers by October 1, 2027
+
+Without an inventory of every non-compete the employer has entered into, including each Non-Compete Covenant in agreements like this one, and the date each restricted period ends, an employer risks omitting current or former workers from the written notice it must make reasonable efforts to provide by October 1, 2027, stating that their non-compete is void and unenforceable .

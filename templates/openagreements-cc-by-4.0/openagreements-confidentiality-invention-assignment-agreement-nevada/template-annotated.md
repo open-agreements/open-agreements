@@ -2,7 +2,7 @@
 > with your own value. `[[Defined Terms]]` (double brackets) are glossary markers, not blanks.
 > Token-only (programmatic-fill) version: ./template.md
 
-# Confidentiality & Invention Assignment Agreement (Nevada)
+# Confidential Information and Invention Assignment Agreement (Nevada)
 
 ## Cover Terms
 

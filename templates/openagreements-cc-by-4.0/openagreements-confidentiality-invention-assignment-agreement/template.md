@@ -1,4 +1,4 @@
-# Confidentiality & Invention Assignment Agreement (CIIAA)
+# Confidential Information and Invention Assignment Agreement (CIIAA)
 
 ## Cover Terms
 
