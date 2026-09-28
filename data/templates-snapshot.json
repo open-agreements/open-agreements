@@ -16476,7 +16476,7 @@
     {
       "name": "openagreements-confidentiality-invention-assignment-agreement",
       "tier": "internal",
-      "display_name": "Confidentiality & Invention Assignment Agreement (CIIAA)",
+      "display_name": "Confidential Information and Invention Assignment Agreement (CIIAA)",
       "category": "invention-assignment",
       "description": "Employee proprietary information and inventions assignment agreement with explicit prior-inventions and personal-project carveout language placeholders.",
       "license": "CC-BY-4.0",
@@ -16623,7 +16623,7 @@
     {
       "name": "openagreements-confidentiality-invention-assignment-agreement-nevada",
       "tier": "internal",
-      "display_name": "Confidentiality & Invention Assignment Agreement (Nevada)",
+      "display_name": "Confidential Information and Invention Assignment Agreement (Nevada)",
       "category": "invention-assignment",
       "description": "Nevada-specific employee confidentiality and invention assignment agreement aligned with Nevada's employer-ownership default (NRS 600.500): the employer keeps statutory ownership of patentable inventions and trade secrets developed in the course and scope of employment that relate directly to the work, the own-time carve-out reaches only inventions outside that statutory grant, and the form carries no state carve-out notice because Nevada imposes none. The assignment clause keeps present-tense assignment language for a clean federal patent chain of title and carries no post-employment holdover tail. Drafted as a starting point for licensed counsel review.",
       "license": "CC-BY-4.0",
@@ -32742,7 +32742,7 @@
       "tier": "internal",
       "display_name": "Employee Restrictive Covenant (Washington)",
       "category": "non-compete",
-      "description": "Washington-specific employee restrictive covenant agreement built for chapter 49.62 RCW as amended by SSB 5935 (effective 2024): confidentiality and trade-secret protection, customer and employee non-solicitation held to the statutory solicitation-only definition, and an optional non-compete gated on the inflation-adjusted earnings threshold ($126,858.83 for employees / $317,147.09 for independent contractors in 2026 per the Department of Labor & Industries), the at-hire written disclosure or post-hire independent consideration requirement, the eighteen-month duration presumption, and the layoff garden-leave-pay condition. Governing law, venue, and choice of law are locked to Washington for Washington-based workers under RCW 49.62.050, and the agreement flags the June 30, 2027 near-total ban under ESHB 1155. Because RCW 49.62.080(3) penalizes judicial reformation, each covenant is drawn to the minimum the legitimate interest requires. Drafted as a starting point for licensed counsel review.",
+      "description": "Employee restrictive covenant agreement for Washington State, built for chapter 49.62 RCW as amended by SSB 5935 (effective 2024): confidentiality and trade-secret protection, customer and employee non-solicitation held to the statutory solicitation-only definition, and an optional non-compete gated on the inflation-adjusted earnings threshold ($126,858.83 for employees / $317,147.09 for independent contractors in 2026 per the Department of Labor & Industries), the at-hire written disclosure or post-hire independent consideration requirement, the eighteen-month duration presumption, and the layoff garden-leave-pay condition. Governing law, venue, and choice of law are locked to Washington for Washington-based workers under RCW 49.62.050, and the agreement flags the June 30, 2027 near-total ban under ESHB 1155 and the October 1, 2027 deadline for employers to make reasonable efforts to give written notice to affected employees and independent contractors that their non-competes are void and unenforceable. Because RCW 49.62.080(3) penalizes judicial reformation until ESHB 1155 deletes that penalty effective June 30, 2027, each covenant is drawn to the minimum the legitimate interest requires. Drafted as a starting point for licensed counsel review.",
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-washington",
       "source": "OpenAgreements",
@@ -32908,10 +32908,10 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Competition",
-          "description": "Whether the non-competition covenant is included. Under Washington law, an employee non-compete is void and unenforceable unless the employer clears every statutory condition: timely written disclosure or independent consideration, the inflation-adjusted earnings threshold, and layoff garden-leave pay. Washington also presumes any term over eighteen months unreasonable, and the Noncompetition Agreement Act voids all non-competition covenants effective June 30, 2027 regardless of when they were signed.",
+          "description": "Whether the non-competition covenant is included. Under Washington State law, an employee non-compete is void and unenforceable unless the employer clears every statutory condition: timely written disclosure or independent consideration, the inflation-adjusted earnings threshold, and layoff garden-leave pay. Washington also presumes any term over eighteen months unreasonable. ESHB 1155 (chapter 149, Laws of 2026) amends Washington's non-compete statute effective June 30, 2027: it deletes the eighteen-month presumption and makes all non-competition covenants void and unenforceable regardless of when they were signed. By October 1, 2027, the employer must make reasonable efforts to give written notice to all current and former employees and independent contractors whose non-compete is still within its effective time period that the covenant is void and unenforceable.",
           "display_label": "Non-Competition Included",
           "default": "false",
-          "default_value_rationale": "Conservative default. A Washington non-compete is void unless every statutory condition is satisfied and has a hard statutory expiry on June 30, 2027; include only after confirming the earnings threshold is met, the disclosure-or-consideration timing rule is satisfied, and the layoff garden-leave condition and eighteen-month presumption are addressed."
+          "default_value_rationale": "Conservative default. A Washington non-compete is void unless every statutory condition is satisfied and has a hard statutory expiry on June 30, 2027; include only after confirming the earnings threshold is met, the disclosure-or-consideration timing rule is satisfied, and the layoff garden-leave condition and eighteen-month presumption (which applies only until June 30, 2027) are addressed. An employer that includes a non-compete must also plan the written notice that ESHB 1155 requires by October 1, 2027."
         },
         {
           "name": "noncompete_duration",
@@ -32921,7 +32921,7 @@
           "description": "Duration of non-competition restriction",
           "display_label": "Non-Competition Duration",
           "default": "12 months",
-          "default_value_rationale": "12 months sits well within Washington's eighteen-month presumption, which treats any longer term as unreasonable and unenforceable unless the employer rebuts the presumption by clear and convincing evidence. Because reformation of an overbroad term triggers a statutory penalty, the default stays inside the presumptively reasonable window."
+          "default_value_rationale": "12 months sits well within Washington's eighteen-month presumption, which treats any longer term as unreasonable and unenforceable unless the employer rebuts the presumption by clear and convincing evidence. ESHB 1155 deletes that presumption effective June 30, 2027, when all non-competition covenants become void. Because reformation of an overbroad term triggers a statutory penalty until ESHB 1155 deletes that penalty effective June 30, 2027, the default stays inside the presumptively reasonable window."
         },
         {
           "name": "territory",
@@ -32948,7 +32948,7 @@
           "type": "string",
           "required": false,
           "section": "Non-Competition",
-          "description": "Optional named list of specific competitors. Narrowing the restriction to named competitors reduces the risk that a court narrows it — and therefore the risk of the statutory reformation penalty.",
+          "description": "Optional named list of specific competitors. Narrowing the restriction to named competitors reduces the risk that a court narrows it — and therefore the risk of the statutory reformation penalty, which applies until ESHB 1155 deletes it effective June 30, 2027.",
           "display_label": "Specified Competitors",
           "default": "",
           "default_value_rationale": null
@@ -32981,7 +32981,7 @@
           "description": "Duration of the no-business-with-covered-customers restriction",
           "display_label": "No Business with Covered Customers Duration",
           "default": "12 months",
-          "default_value_rationale": "12 months stays within Washington's eighteen-month presumption, which applies because Washington treats a non-dealing clause as a non-competition covenant."
+          "default_value_rationale": "12 months stays within Washington's eighteen-month presumption, which applies because Washington treats a non-dealing clause as a non-competition covenant. ESHB 1155 deletes that presumption effective June 30, 2027, when all non-competition covenants become void."
         },
         {
           "name": "passive_public_holdings_threshold",
@@ -32991,7 +32991,7 @@
           "description": "Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.",
           "display_label": "Passive Public Holdings Threshold",
           "default": "five percent",
-          "default_value_rationale": "Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A carve-out that technically barred index funds and ordinary public shares would restrain more than any legitimate interest requires, inviting the statutory reformation penalty."
+          "default_value_rationale": "Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A carve-out that technically barred index funds and ordinary public shares would restrain more than any legitimate interest requires, inviting the statutory reformation penalty, which applies until ESHB 1155 deletes it effective June 30, 2027."
         },
         {
           "name": "noninvestment_included",
@@ -33011,7 +33011,7 @@
           "description": "Duration of non-investment restriction",
           "display_label": "Non-Investment Duration",
           "default": "12 months",
-          "default_value_rationale": "12 months stays within Washington's eighteen-month presumption, which applies because a covenant restraining active roles at a Competitive Business functions as a non-competition covenant."
+          "default_value_rationale": "12 months stays within Washington's eighteen-month presumption, which applies because a covenant restraining active roles at a Competitive Business functions as a non-competition covenant. ESHB 1155 deletes that presumption effective June 30, 2027, when all non-competition covenants become void."
         },
         {
           "name": "nondisparagement_duration",

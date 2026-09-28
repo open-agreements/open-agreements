@@ -208,7 +208,7 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### The reasonable-necessity gate
 
-Every covenant in the agreement stands or falls on Alaska's common-law reasonableness analysis: there is no general non-compete statute, non-competition agreements are strictly construed, and a restraint aimed at eliminating ordinary competition or cutting off the worker's livelihood fails no matter how modestly its time and territory are drawn . Reasonableness is fact-bound and weighed across the _Data Management_ factors — the time-and-space limits, whether the worker was the sole customer contact, whether the worker held confidential information or trade secrets, whether the restraint targets unfair competition or merely ordinary competition, the hardship to the worker, and whether it bars the worker's sole means of support — so no term or territory is safe by rule and each restraint is measured against the interest at stake . Adequate consideration establishes only that a covenant is supported, not that it is reasonable, and an extension of the restricted period for breach is itself a restraint measured under those same fact-bound factors, so the covenant that survives is the one sized to the employer's actual footprint at signing rather than copied from another form .
+A non-compete drawn to eliminate ordinary competition, or broad enough to bar the worker's sole means of support, risks failing Alaska's reasonableness review . An extension of the restricted period for breach lengthens the time limit that the same review weighs, so an open-ended extension carries the same risk .
 
 ### Customer-list restraints
 
