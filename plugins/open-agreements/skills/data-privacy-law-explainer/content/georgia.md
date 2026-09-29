@@ -2,7 +2,7 @@
 jurisdiction: "Georgia"
 slug: georgia
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/georgia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/georgia · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Georgia Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Georgia has no comprehensive consumer-privacy statute. The operative framework i
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Georgia has not enacted an omnibus consumer-privacy law, so there are no general state-law access, deletion, correction, opt-out, controller, processor, or privacy-notice duties. The current Georgia obligations are breach notification for information brokers and government data collectors, a fast 24-hour vendor notice-up rule, and truth-in-privacy-policy exposure through the Fair Business Practices Act and FTC Act § 5. |
-| **Main law** | O.C.G.A. §§ 10-1-910 to 10-1-912 (identity theft and data-breach notification) plus the Georgia Fair Business Practices Act, O.C.G.A. §§ 10-1-390 to 10-1-408 — Georgia has no comprehensive consumer-privacy statute |
+| **Main law** | No comprehensive consumer-privacy law; O.C.G.A. § 10-1-912(a). O.C.G.A. § 10-1-393(a). |
 | **Privacy policy required?** | No Georgia statute generally requires a consumer privacy policy or fixes its contents; a policy that misstates actual practices is reachable as a deceptive practice under the FBPA and FTC Act § 5, with GLBA, HIPAA, COPPA, and other sectoral laws supplying notices where they apply |
 | **Who does it cover?** | The breach-notification statute reaches information brokers and government data collectors that maintain computerized personal information about individuals, and gives vendors holding that data a 24-hour notice-up duty; the FBPA reaches unfair or deceptive practices in consumer transactions and consumer acts or practices in trade or commerce |
 | **Can consumers sue?** | Limited path |

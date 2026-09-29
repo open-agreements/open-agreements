@@ -28,6 +28,24 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### amn-healthcare-inc-v-aya-healthcare-services-inc-moyes-use-of-a-reasonableness-standard-bbd3f053 {#amn-healthcare-inc-v-aya-healthcare-services-inc-moyes-use-of-a-reasonableness-standard-bbd3f053}
+
+> Moyes use of a reasonableness standard in analyzing the nonsolicitation clause there at issue thus appears to conflict with Edwards's interpretation of section 16600, which, under the plain language of the statute, prevents a former employer from restraining a former employee from engaging in his or her “ ‘lawful profession, trade, or business of any kind,’ ” absent statutory exceptions not applicable here.
+
+- supports: `employee-nonsolicitation`
+- source_cards: `amn-loral-conflicts-edwards`
+- cited_by: [Non-Competes in California](../non-compete/us/california.md)
+- link_to_source: <https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=Moyes%20use%20of%20a%20reasonableness,statutory%20exceptions%20not%20applicable%20here.>
+
+### amn-healthcare-inc-v-aya-healthcare-services-inc-this-provision-clearly-restrained-4cc2011f {#amn-healthcare-inc-v-aya-healthcare-services-inc-this-provision-clearly-restrained-4cc2011f}
+
+> This provision clearly restrained individual defendants from practicing with Aya their chosen profession — recruiting travel nurses on 13-week assignments with AMN.
+
+- supports: `employee-nonsolicitation`
+- source_cards: `amn-restrained-profession`
+- cited_by: [Non-Competes in California](../non-compete/us/california.md)
+- link_to_source: <https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=This%20provision%20clearly%20restrained%20individual,on%2013%2Dweek%20assignments%20with%20AMN.>
+
 ### amn-healthcare-inc-v-aya-healthcare-services-inc-turning-to-the-instant-case-we-5a68691b {#amn-healthcare-inc-v-aya-healthcare-services-inc-turning-to-the-instant-case-we-5a68691b}
 
 > Turning to the instant case, we independently conclude that the nonsolicitation of employee provision in the CNDA is void under section 16600.

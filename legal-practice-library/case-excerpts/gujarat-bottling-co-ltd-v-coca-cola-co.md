@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Since the negatice stipulation in paragraph 14 of the 1993 Agreement is confined in its application to the period of subsistence of the agreement and the restriction imposed therein is operative only during the period the 1993 Agreement is subsisting, the said stipulation cannot be held to be in restraint of trade so as to attract the bar of section 27 of the Contract Act.
 
-- supports: `during-employment`
-- source_cards: `gujarat-in-term`
+- supports: `during-employment`, `what-to-protect`
+- source_cards: `gujarat-in-term`, `q8-gujarat-franchise`
 - cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/104935066/>

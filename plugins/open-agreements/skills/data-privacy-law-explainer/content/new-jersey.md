@@ -2,7 +2,7 @@
 jurisdiction: "New Jersey"
 slug: new-jersey
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-jersey · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-jersey · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # New Jersey Consumer Privacy Law (NJDPA)[^about]
 
@@ -30,7 +30,7 @@ The New Jersey Data Privacy Act gives New Jersey consumers rights over their per
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus any data-sale revenue) threshold in New Jersey, the NJDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General as an unlawful practice under the Consumer Fraud Act, with no consumer lawsuits and a cure period that sunsets after the law's first 18 months. |
-| **Main law** | N.J.S.A. 56:8-166.4 et seq. (New Jersey Data Privacy Act), effective January 15, 2025 |
+| **Main law** | N.J.S.A. 56:8-166.5. |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with seven statutorily fixed contents |
 | **Who does it cover?** | Controllers doing business in New Jersey (or targeting residents) that control or process the data of 100,000+ consumers a year (excluding payment-only data), or 25,000+ while deriving any revenue or a discount from selling data — no revenue floor, and no exemption for nonprofits |
 | **Can consumers sue?** | No |

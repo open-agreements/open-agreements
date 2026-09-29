@@ -135,7 +135,7 @@ Read every item below the way an Alaska court would: there is no Alaska non-comp
 
 ## Governing law, venue, dispute process {#governing-law-venue-dispute-process}
 
-- [ ] **Governing law and venue** (Recommended) — State the governing law, venue, and dispute process. None of the staged Alaska authorities overrides the parties' choice of law for restrictive covenants, so confirm the selection was deliberate: choosing Alaska selects strict construction and the fact-bound reasonableness factors for every covenant in the agreement. [^ak-decristofaro-strict-law] [#specify-governing-law-and-venue]
+- [ ] **Governing law and venue** (Recommended) — State the governing law, venue, and dispute process. None of the identified Alaska authorities overrides the parties' choice of law for restrictive covenants, so confirm the selection was deliberate: choosing Alaska selects strict construction and the fact-bound reasonableness factors for every covenant in the agreement. [^ak-decristofaro-strict-law] [#specify-governing-law-and-venue]
 
 ## Entire agreement, amendment, waiver, e-signatures {#entire-agreement-amendment-waiver-e-signatures}
 

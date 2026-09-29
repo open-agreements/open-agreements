@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/south-dakota · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/south-dakota · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # South Dakota Consumer Privacy Law[^about]
 
@@ -29,8 +29,8 @@ South Dakota has no comprehensive consumer-privacy statute. The operative state 
 | Question | South Dakota |
 | --- | --- |
 | **Law coverage** | Specific data types only |
-| **Summary** | South Dakota has no comprehensive consumer-privacy law — compliance today means the 60-day breach-notification statute, truthful privacy statements under a knowledge-gated deceptive-practices law, and the federal overlay; direct-to-consumer genetic-testing companies face a consent-heavy Genetic Data Privacy Act on July 1, 2026, and the largest social-media platforms face data-portability duties on July 1, 2027. |
-| **Main law** | No comprehensive consumer-privacy statute — the operative framework is the breach-notification act (S.D. Codified Laws §§ 22-40-19 to 22-40-26), the deceptive-trade-practices chapter (ch. 37-24), and the Genetic Data Privacy Act (§§ 37-24-59 to 37-24-64, effective July 1, 2026) |
+| **Summary** | South Dakota has no comprehensive consumer-privacy law — compliance today means the 60-day breach-notification statute, truthful privacy statements under a knowledge-gated deceptive-practices law, and the federal overlay; direct-to-consumer genetic-testing companies have faced a consent-heavy Genetic Data Privacy Act since July 1, 2026, and the largest social-media platforms face data-portability duties on July 1, 2027. |
+| **Main law** | No comprehensive consumer-privacy law; S.D. Codified Laws § 22-40-19(3). S.D. Codified Laws § 37-24-6(1). S.D. Codified Laws § 37-24-60(1). |
 | **Privacy policy required?** | No general mandate — from July 1, 2026 only direct-to-consumer genetic-testing companies must publish a plain-language privacy policy plus a prominent privacy notice; everyone else's policy contents are driven by FTC Act § 5 and the sectoral federal rules |
 | **Who does it cover?** | Breach duties reach any person or business that conducts business in South Dakota and owns or licenses computerized personal or protected information of residents — no size or revenue threshold; the Genetic Data Privacy Act reaches direct-to-consumer genetic-testing companies; the 2027 portability law reaches only social-media services with more than 100 million monthly users |
 | **Can consumers sue?** | Limited path |
@@ -46,7 +46,7 @@ South Dakota has no comprehensive consumer-privacy statute. The operative state 
 
 Unlike California or Colorado, South Dakota has not enacted an omnibus privacy statute, so its residents have no general state-law rights to access, delete, or correct their personal data, no right to opt out of sale or targeted advertising, and no recognized universal opt-out signal; businesses face no state notice-at-collection, consent, or data-protection-assessment duties. What fills the gap is a layered framework. The breach act sets the one statewide data-incident duty for every business. The federal overlay carries the rest of the program: Section 5 of the FTC Act reaches deceptive or unfair privacy practices nationwide, the Gramm-Leach-Bliley Act governs financial institutions, HIPAA governs covered health entities and their business associates, and the Children's Online Privacy Protection Act governs services directed to children under 13.
 
-Two recent enactments narrow the gap at the sectoral level. The Genetic Data Privacy Act (Senate Bill 49, signed March 30, 2026, and codified at S.D. Codified Laws §§ 37-24-59 to 37-24-64) takes effect July 1, 2026 and is covered in its own section below. A second 2026 law, Senate Bill 111, gives users of the very largest social-media platforms a data-portability right beginning July 1, 2027 — a service with more than one hundred million active monthly users must hand a requesting user a portable copy of the user's personal data [^q1-social-copy]. This note is written to stay durable: if South Dakota later enacts a comprehensive law, a program built to the breach act and the federal overlay upgrades rather than restarts.
+Two recent enactments narrow the gap at the sectoral level. The Genetic Data Privacy Act (Senate Bill 49, signed March 23, 2026, and codified at S.D. Codified Laws §§ 37-24-59 to 37-24-64) took effect July 1, 2026 and is covered in its own section below. A second 2026 law, Senate Bill 111, gives users of the very largest social-media platforms a data-portability right beginning July 1, 2027 — a service with more than one hundred million active monthly users must hand a requesting user a portable copy of the user's personal data [^q1-social-copy]. This note is written to stay durable: if South Dakota later enacts a comprehensive law, a program built to the breach act and the federal overlay upgrades rather than restarts.
 
 ## What must your privacy policy contain in South Dakota? {#privacy-policy-contents}
 

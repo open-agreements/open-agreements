@@ -2,7 +2,7 @@
 jurisdiction: "Utah"
 slug: utah
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Utah[^about]
 
@@ -30,7 +30,7 @@ Utah caps employee non-competes at one year under the Post-Employment Restrictio
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Utah enforces employee non-competes only if they satisfy both the common-law Rose Park reasonableness test and a hard one-year statutory cap, and it bans healthcare and veterinarian non-competes entered on or after May 6, 2026. |
-| **Main law or case** | Utah Code § 34-51-201 (Post-Employment Restrictions Act) |
+| **Main law or case** | Utah Code Ann. § 34-51-201(1)(a). England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137. Utah Code Ann. § 34-51-201(1)(b). Utah Code Ann. § 34-51-201(3)(a). |
 | **Main exceptions** | Health-care worker & veterinarian bans (5% owner carve-out) from May 6, 2026; sale-of-business; reasonable severance; narrow broadcasting exception |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | — |
@@ -157,7 +157,7 @@ For overbreadth in scope or activity, Utah's common law has historically been re
 
 ## Does the restricted period toll or extend during breach or litigation in Utah? {#extended-for-breach}
 
-**Short answer.** Utah has no statute or staged case squarely deciding judicial tolling, but the structure of the Act cuts hard against an extension clause. Because a non-compete may not exceed one year and a longer one is void, a clause that lengthens the restricted period during breach or litigation risks pushing the covenant past the statutory ceiling and voiding it [^toll-one-year][^toll-void].
+**Short answer.** Utah has no statute or identified case squarely deciding judicial tolling, but the structure of the Act cuts hard against an extension clause. Because a non-compete may not exceed one year and a longer one is void, a clause that lengthens the restricted period during breach or litigation risks pushing the covenant past the statutory ceiling and voiding it [^toll-one-year][^toll-void].
 
 The one-year cap is measured from the day employment ends, not from the day the employee stops competing [^toll-one-year]. An extension-on-breach or tolling clause that keeps the restriction alive while litigation runs is therefore in direct tension with that fixed measuring point, and the *void* consequence applies to any covenant that exceeds one year [^toll-void].
 

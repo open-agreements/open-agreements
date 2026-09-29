@@ -79,11 +79,11 @@ The drafting takeaway is direct: include an express severability and reformation
 > [!CAUTION]
 > **Drafting note.**
 >
-> A bare overbroad New Mexico covenant has no assured rescue: the only staged authority for narrowing one is contract-based, upheld precisely because the agreement itself authorized amendment of an unenforceable provision, and the court declined to decide whether a court may narrow an overbroad covenant without that language [^kidskare-contract-reformation][^kidskare-no-general-ruling]. An express reformation and severability clause supplies that basis, but a primary restriction drawn narrowly at the outset is what survives without needing it.
+> A bare overbroad New Mexico covenant has no assured rescue: the only identified authority for narrowing one is contract-based, upheld precisely because the agreement itself authorized amendment of an unenforceable provision, and the court declined to decide whether a court may narrow an overbroad covenant without that language [^kidskare-contract-reformation][^kidskare-no-general-ruling]. An express reformation and severability clause supplies that basis, but a primary restriction drawn narrowly at the outset is what survives without needing it.
 
 ## Does a New Mexico non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
-**Short answer.** This is an open New Mexico question. The staged New Mexico non-compete cases and statutes do not squarely say that a court may automatically toll or extend a non-compete's restricted period while the former employee is allegedly breaching or while litigation is pending [^q6-lovelace-fixed-period][^q6-kidskare-fixed-period].
+**Short answer.** This is an open New Mexico question. The identified New Mexico non-compete cases and statutes do not squarely say that a court may automatically toll or extend a non-compete's restricted period while the former employee is allegedly breaching or while litigation is pending [^q6-lovelace-fixed-period][^q6-kidskare-fixed-period].
 
 The existing cases enforce or reform fixed restraints under a reasonableness framework. *Lovelace* enforced a physician covenant through the end of the contract's three-year period [^q6-lovelace-fixed-period]. *KidsKare* upheld a reformed one-year and thirty-mile restraint based on the contract's reformation language and the district court's reasonableness findings [^q6-kidskare-fixed-period]. Neither case announces a tolling rule.
 

@@ -33,7 +33,7 @@ Pennsylvania has not enacted a general non-compete statute for the ordinary work
 
 **Short answer.** No, not by itself, for an existing employee. When a covenant is added after employment has begun, it is enforceable only if the employee receives new and valuable consideration beyond merely keeping the job [^socko-mid-employment][^maintenance-continued-employment].
 
-In *Socko*, the Pennsylvania Supreme Court confirmed that a mid-employment restraint requires new and valuable consideration — a corresponding benefit or a beneficial change in employment status — not just continued at-will employment [^socko-mid-employment]. The rule predates *Socko*: in *Maintenance Specialties, Inc. v. Gottus*, the court held that continued employment is not sufficient consideration for a covenant signed after employment began [^maintenance-continued-employment].
+In *Socko*, the Pennsylvania Supreme Court confirmed that a mid-employment restraint requires new and valuable consideration — a corresponding benefit or a beneficial change in employment status — not just continued at-will employment [^socko-mid-employment]. The rule predates *Socko* [^socko-mid-employment]: in *Maintenance Specialties, Inc. v. Gottus*, the court held that continued employment is not sufficient consideration for a covenant signed after employment began [^maintenance-continued-employment].
 
 "In the context of requiring an employee to agree to a restrictive covenant mid-employment, however, such a restraint on trade will be enforceable only if new and valuable consideration, beyond mere continued employment, is provided and is sufficient to support the restrictive clause."[^socko-mid-employment]
 

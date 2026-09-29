@@ -34,3 +34,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `de-lkq-gate`, `lkq-not-limited-to-lp`, `lkq-recent-track`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=Cantor%20Fitzgerald%20is%20not%20restricted,to%20the%20limited%20partnership%20context.>
+
+### lkq-corp-v-rutledge-the-united-states-court-of-appeals-72ae8bf6 {#lkq-corp-v-rutledge-the-united-states-court-of-appeals-72ae8bf6}
+
+> The United States Court of Appeals for the Seventh Circuit is considering an appeal raising a similar forfeiture-for- competition dispute under Delaware law but arising from a company’s restricted stock unit agreements.
+
+- supports: `forfeiture-for-competition`, `recent-developments`
+- source_cards: `lkq-recent-rsu`, `lkq-rsu-agreements`
+- cited_by: [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- link_to_source: <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=The%20United%20States%20Court%20of%20Appeals%20for%20the%20Seventh%20Circuit%20is,company%E2%80%99s%20restricted%20stock%20unit%20agreements.>

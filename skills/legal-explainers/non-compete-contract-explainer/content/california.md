@@ -2,7 +2,7 @@
 jurisdiction: "California"
 slug: california
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/california · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/california · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in California[^about]
 
@@ -30,7 +30,7 @@ California voids employee non-compete agreements by statute and treats customer 
 | --- | --- |
 | **Are non-competes enforceable?** | Banned |
 | **Bottom line** | Employee non-competes and customer non-solicits are void by statute, and since 2024 entering or enforcing one is a civil violation with a private right of action. |
-| **Main law or case** | Cal. Bus. & Prof. Code § 16600 |
+| **Main law or case** | Cal. Bus. & Prof. Code § 16600(a). |
 | **Main exceptions** | Sale of a business or ownership interest (§§ 16601–16602.5) |
 | **When the ban took effect** | Longstanding (§ 16600); 2024 enforcement laws SB 699 / AB 1076 effective Jan 1, 2024 |
 | **Can a court narrow it?** | No |
@@ -74,13 +74,13 @@ The one place a customer non-solicitation covenant can survive is where it is ge
 
 ## Can a California employer restrict soliciting its employees? {#employee-nonsolicitation}
 
-**Short answer.** It is high-risk and probably void. An older decision, *Loral Corp. v. Moyes*, upheld an employee anti-raiding covenant as only a *slight* restraint, but the more recent appellate decision in *AMN Healthcare v. Aya Healthcare* held an employee non-solicitation clause void under section 16600 because it restrained the recruiters' chosen profession, and questioned whether *Loral* survives *Edwards*. The California Supreme Court has not resolved the split [^amn-void][^loral-slight].
+**Short answer.** A California employee non-solicitation clause is high-risk and probably void [^amn-void]. An older decision, *Loral Corp. v. Moyes*, treated an employee anti-raiding covenant as no more significant a restraint than a customer non-solicitation or confidentiality clause [^loral-slight]. The more recent appellate decision in *AMN Healthcare v. Aya Healthcare* held an employee non-solicitation clause void under section 16600 because it restrained the recruiters' chosen profession [^amn-void][^amn-restrained-profession].
 
 For decades employers relied on *Loral*, where the court treated a clause barring a departing executive from *raiding* his former employer's staff as a minor restriction that did not foreclose anyone's livelihood [^loral-slight].
 
 "This does not appear to be any more of a significant restraint on his engaging in his profession, trade or business than a restraint on solicitation of customers or on disclosure of confidential information."[^loral-slight]
 
-In 2018 the Court of Appeal in *AMN Healthcare* invalidated an employee non-solicitation clause imposed on nurse recruiters and openly questioned whether *Loral* survives *Edwards* [^amn-void].
+In 2018 the Court of Appeal in *AMN Healthcare* invalidated an employee non-solicitation clause imposed on nurse recruiters [^amn-void]. *Edwards* had rejected any narrow-restraint exception to section 16600 [^nonsolicit-edwards-reject-narrow], and the court found that the reasonableness standard the older decision used appears to conflict with that reading [^amn-loral-conflicts-edwards].
 
 "Turning to the instant case, we independently conclude that the nonsolicitation of employee provision in the CNDA is void under section 16600."[^amn-void]
 
@@ -222,6 +222,12 @@ A trade-secret claim also comes with a procedural gate that shapes litigation: b
 [^amn-void]: **AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.** — "Turning to the instant case, we independently conclude that the nonsolicitation of employee provision in the CNDA is void under section 16600." *AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).* <https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=Turning%20to%20the%20instant%20case%2C,is%20void%20under%20section%2016600.>
 
 [^loral-slight]: **Loral Corp. v. Moyes** — "This does not appear to be any more of a significant restraint on his engaging in his profession, trade or business than a restraint on solicitation of customers or on disclosure of confidential information." *Loral Corp. v. Moyes, 174 Cal. App. 3d 268 (1985).* <https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/#:~:text=This%20does%20not%20appear%20to,on%20disclosure%20of%20confidential%20information.>
+
+[^amn-restrained-profession]: **AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.** — "This provision clearly restrained individual defendants from practicing with Aya their chosen profession — recruiting travel nurses on 13-week assignments with AMN." *AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).* <https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=This%20provision%20clearly%20restrained%20individual,on%2013%2Dweek%20assignments%20with%20AMN.>
+
+[^nonsolicit-edwards-reject-narrow]: **Edwards v. Arthur Andersen LLP** — "We reject Andersen's contention that we should adopt a narrow-restraint exception to section 16600 and leave it to the Legislature, if it chooses, either to relax the statutory restrictions or adopt additional exceptions to the prohibition-against-restraint rule under section 16600." *Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008).* <https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/#:~:text=We%20reject%20Andersen's%20contention%20that,prohibition%2Dagainst%2Drestraint%20rule%20under%20section%2016600.>
+
+[^amn-loral-conflicts-edwards]: **AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.** — "Moyes use of a reasonableness standard in analyzing the nonsolicitation clause there at issue thus appears to conflict with Edwards's interpretation of section 16600, which, under the plain language of the statute, prevents a former employer from restraining a former employee from engaging in his or her ‘ ‘lawful profession, trade, or business of any kind,’ ’ absent statutory exceptions not applicable here." *AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).* <https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=Moyes%20use%20of%20a%20reasonableness,statutory%20exceptions%20not%20applicable%20here.>
 
 [^stat-16600-5-violation]: **Cal. Bus. & Prof. Code § 16600.5** — "An employer that enters into a contract that is void under this chapter or attempts to enforce a contract that is void under this chapter commits a civil violation." *Cal. Bus. & Prof. Code § 16600.5(d).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5>
 

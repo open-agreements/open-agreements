@@ -100,7 +100,7 @@ The items below exist only on this Virginia page: they implement the statute's l
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as unsettled Virginia law rather than a standard remedy. No staged Virginia authority decides tolling, and the backdrop cuts against it: covenants are strictly construed as restraints of trade, and a clause that can stretch the restricted period indefinitely hands the worker a ready-made overbreadth argument. [^motion-control-strict-tolling][^home-paramount-overbreadth-tolling] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as unsettled Virginia law rather than a standard remedy. No identified Virginia authority decides tolling, and the backdrop cuts against it: covenants are strictly construed as restraints of trade, and a clause that can stretch the restricted period indefinitely hands the worker a ready-made overbreadth argument. [^motion-control-strict-tolling][^home-paramount-overbreadth-tolling] [#address-tolling-during-breach]
 
 ## Severability and reformation {#severability-and-reformation}
 
@@ -142,7 +142,7 @@ Review every item below the way a Virginia court would: first ask whether Va. Co
 
 ## Timing and execution acknowledgements {#timing-and-execution-acknowledgements}
 
-- [ ] **When the agreement was signed** (Recommended) — Document the signing date relative to the start of employment and what consideration moved — Virginia's staged authorities do not settle whether continued employment alone suffices for a mid-employment covenant, so a clean record is the cheap hedge. For agreements entered into, amended, or renewed on or after July 1, 2026, the acknowledgement should also capture any monetary compensation disclosed up front, because that disclosed compensation is what keeps the covenant alive after a termination without cause. [^sb170-severance-condition] [#acknowledge-timing]
+- [ ] **When the agreement was signed** (Recommended) — Document the signing date relative to the start of employment and what consideration moved — Virginia's identified authorities do not settle whether continued employment alone suffices for a mid-employment covenant, so a clean record is the cheap hedge. For agreements entered into, amended, or renewed on or after July 1, 2026, the acknowledgement should also capture any monetary compensation disclosed up front, because that disclosed compensation is what keeps the covenant alive after a termination without cause. [^sb170-severance-condition] [#acknowledge-timing]
 
 - [ ] **Chance to consult a lawyer** (Recommended) — No Virginia statute requires it, but the acknowledgement is cheap procedural-fairness evidence in a state whose courts construe every ambiguity in the worker's favor. It reads best alongside a genuine review window rather than a signature demanded on day one. [#acknowledge-opportunity-to-consult-counsel]
 
@@ -156,7 +156,7 @@ Review every item below the way a Virginia court would: first ask whether Va. Co
 
 ## Governing law, venue, dispute process {#governing-law-venue-dispute-process}
 
-- [ ] **Governing law and venue** (Recommended) — The clause should name governing law, venue, and dispute process. For a Virginia workforce, name Virginia: the staged authorities identify no statutory override of a foreign choice-of-law clause, but a selection designed to sidestep the low-wage ban for workers living and working in Virginia invites a public-policy challenge and signals a form that was never localized. [#specify-governing-law-and-venue]
+- [ ] **Governing law and venue** (Recommended) — The clause should name governing law, venue, and dispute process. For a Virginia workforce, name Virginia: the identified authorities identify no statutory override of a foreign choice-of-law clause, but a selection designed to sidestep the low-wage ban for workers living and working in Virginia invites a public-policy challenge and signals a form that was never localized. [#specify-governing-law-and-venue]
 
 ## Entire agreement, amendment, waiver, e-signatures {#entire-agreement-amendment-waiver-e-signatures}
 

@@ -2,7 +2,7 @@
 jurisdiction: "Georgia"
 slug: georgia
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/georgia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/georgia · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Georgia[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of Georgia non-compete law under the Georgia Rest
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Georgia enforces non-competes that are reasonable in time, area, and scope under the Restrictive Covenants Act, but only against employees who perform covered higher-level job functions. |
-| **Main law or case** | Georgia Restrictive Covenants Act, O.C.G.A. §§ 13-8-50 to 13-8-59 |
+| **Main law or case** | O.C.G.A. § 13-8-53(a). |
 | **Main exceptions** | Employee-category gate (§ 13-8-53(a)); longer presumptions for distributors/franchisees (3 yr) and sellers (5 yr+) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | — |

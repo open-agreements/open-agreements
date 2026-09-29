@@ -2,7 +2,7 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Hawaii[^about]
 
@@ -30,7 +30,7 @@ Hawaii treats non-competes through HRS chapter 480's antitrust framework, includ
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Hawaii treats non-competes as restraints of trade under its antitrust statute, enforcing only covenants ancillary to a legitimate purpose, and flatly banning non-compete/non-solicit clauses for technology-business employees. |
-| **Main law or case** | Haw. Rev. Stat. § 480-4 |
+| **Main law or case** | Haw. Rev. Stat. 480-4(c). Haw. Rev. Stat. 480-4(d). |
 | **Main exceptions** | Technology-business employee ban (§ 480-4(d)); statutory categories: sale-of-business, partner-withdrawal, lease-use, trade-secret covenants |
 | **Can a court narrow it?** | Unsettled |
 | **Applies to contractors?** | Unclear |
@@ -48,7 +48,7 @@ That matters most for ordinary employee covenants. A restraint whose real purpos
 > [!CAUTION]
 > **Drafting note.**
 >
-> Every restraint in a Hawaii agreement passes through HRS chapter 480's antitrust screen, not ordinary contract reasonableness alone: HRS 480-4(a) makes every in-state restraint of trade illegal, and 480-4(c) makes a covenant lawful only where it is ancillary to a legitimate purpose not violative of chapter 480 and its effect is not substantially to lessen competition or to tend to create a monopoly [^employee-hrs-480-4-baseline][^employee-hrs-480-4-ancillary]. A covenant that satisfies every reasonableness factor is still unenforceable unless it is ancillary to such a purpose, and preventing competition is not one, so a restraint whose real work is blocking ordinary competition fails no matter how tightly its duration and territory are drawn [^employee-gagnon-legitimate-purpose-required][^employee-gagnon-competition-not-purpose]. The purpose has to be a recognized protectable interest — trade secrets, genuinely confidential information, special customer relationships, workforce stability for an employee-solicitation covenant, or specialized training combined with other protectable factors — proven for each covenant on its own record rather than assumed, and no particular form or timing of consideration substitutes for that showing; binding a non-compete to named competitors is one way to show it reaches a specific interest against specific rivals rather than the market at large [^employee-del-rosario-special-training].
+> A Hawaii covenant whose real work is blocking ordinary competition, rather than protecting an identified legitimate interest, risks being unenforceable however tightly its duration and territory are drawn [^employee-gagnon-legitimate-purpose-required][^employee-gagnon-competition-not-purpose]. An agreement that does not tie each restraint to such an interest leaves it outside the covenants HRS 480-4(c) permits [^employee-hrs-480-4-ancillary].
 
 ## What legitimate interests can support a Hawaii non-compete? {#protectable-interests}
 
@@ -130,20 +130,20 @@ The drafting point is to protect information rather than work. A confidentiality
 
 ## Does a Hawaii non-compete period toll during breach or litigation? {#extended-for-breach}
 
-**Short answer.** Open question. The staged Hawaii authorities do not squarely resolve whether a covenant period pauses while the former employee is allegedly breaching or while enforcement litigation is pending, so a tolling clause should be analyzed as part of the effective duration of the restraint under HRS 480-4(c) and *Traeger* [^tolling-hrs-480-4-ancillary][^tolling-traeger-scope-factors].
+**Short answer.** Open question. The identified Hawaii authorities do not squarely resolve whether a covenant period pauses while the former employee is allegedly breaching or while enforcement litigation is pending, so a tolling clause should be analyzed as part of the effective duration of the restraint under HRS 480-4(c) and *Traeger* [^tolling-hrs-480-4-ancillary][^tolling-traeger-scope-factors].
 
 The reason is practical. A contractual extension-on-breach clause lengthens the actual restraint. Hawaii's framework asks whether the covenant is ancillary to a legitimate purpose, whether its effect may substantially lessen competition, and whether its geography, time, and breadth are reasonable [^tolling-hrs-480-4-ancillary][^tolling-traeger-scope-factors].
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A tolling or extension-on-breach clause is untested in the staged Hawaii sources, so its enforcement cannot be assumed. Because such a clause extends the effective restricted period, it is measured under the same HRS 480-4 antitrust and reasonableness limits that govern the covenant itself, and an extension pushing the covenant past a reasonable duration is exposed on the same ground the underlying restraint would be [^tolling-hrs-480-4-ancillary][^tolling-traeger-reasonableness-factors].
+> A tolling or extension-on-breach clause is untested in the identified Hawaii sources, so its enforcement cannot be assumed. Because such a clause extends the effective restricted period, it is measured under the same HRS 480-4 antitrust and reasonableness limits that govern the covenant itself, and an extension pushing the covenant past a reasonable duration is exposed on the same ground the underlying restraint would be [^tolling-hrs-480-4-ancillary][^tolling-traeger-reasonableness-factors].
 
 ## Will Hawaii courts narrow or reform an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** Do not rely on it as a drafting strategy. The staged Hawaii sources support judicial reasonableness review and case-specific limits on injunctions, but they do not supply a broad rule that courts will rewrite any overbroad employee non-compete into an enforceable one [^narrowing-traeger-reasonableness-factors][^narrowing-del-rosario-honolulu-limit].
+**Short answer.** Do not rely on it as a drafting strategy. The identified Hawaii sources support judicial reasonableness review and case-specific limits on injunctions, but they do not supply a broad rule that courts will rewrite any overbroad employee non-compete into an enforceable one [^narrowing-traeger-reasonableness-factors][^narrowing-del-rosario-honolulu-limit].
 
-*Del Rosario* is the best example in the staged sources of a court correcting the enforced scope. The trial court had enjoined work as a briefer statewide, but the covenant itself was limited to the County of Honolulu, and the appellate court remanded to amend the judgment to that county limit [^narrowing-del-rosario-honolulu-limit].
+*Del Rosario* is the best example in the identified sources of a court correcting the enforced scope. The trial court had enjoined work as a briefer statewide, but the covenant itself was limited to the County of Honolulu, and the appellate court remanded to amend the judgment to that county limit [^narrowing-del-rosario-honolulu-limit].
 
 That is not the same as permission to draft broadly. *Gagnon* refused enforcement of a non-compete that lacked a legitimate ancillary purpose, even though the employer argued confidentiality and competition concerns [^narrowing-gagnon-legitimate-purpose-required][^narrowing-gagnon-competition-not-purpose]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Hawaii non-compete reviewer checklist](/checklists/non-compete/us/hawaii) walks the full covenant suite item by item with each requirement's force level.
 

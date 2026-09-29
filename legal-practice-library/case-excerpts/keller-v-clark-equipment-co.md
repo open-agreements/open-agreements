@@ -53,3 +53,12 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - source_cards: `keller-hired-for-inventive-abilities`
 - cited_by: [Employee Invention Assignment in North Dakota](../invention-assignment/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/423972/louis-j-keller-and-cyril-n-keller-v-clark-equipment-company-and-clark/#:~:text=The%20district%20court%20found%20that%20Louis,hired%20for%20his%20inventive%20abilities.>
+
+### keller-v-clark-equipment-co-the-district-court-however-found-that-89c39928 {#keller-v-clark-equipment-co-the-district-court-however-found-that-89c39928}
+
+> The district court, however, found that Melroe indeed agreed to recognize that the Kellers retained an ownership interest in the 117 patent and never claimed sole ownership.
+
+- supports: `default-ownership`, `statutory-carve-out`
+- source_cards: `keller-kept-ownership`, `keller-kept-ownership-q1`
+- cited_by: [Employee Invention Assignment in North Dakota](../invention-assignment/us/north-dakota.md)
+- link_to_source: <https://www.courtlistener.com/opinion/423972/louis-j-keller-and-cyril-n-keller-v-clark-equipment-company-and-clark/#:~:text=The%20district%20court%2C%20however%2C%20found,and%20never%20claimed%20sole%20ownership.>

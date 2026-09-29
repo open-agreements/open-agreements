@@ -2,7 +2,7 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/hawaii · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/hawaii · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Hawaii Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Hawaii has no comprehensive consumer-privacy statute; the operative state framew
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Hawaii has not enacted a comprehensive consumer-privacy law, so there are no general access, deletion, correction, or opt-out rights under state law. The operative state framework is sectoral — breach notification under HRS ch. 487N, social security number protections under ch. 487J, records-destruction duties under ch. 487R, and the ch. 480 unfair-or-deceptive-practices law. The standout exposure: § 487N-3(b) gives a person injured by a breach-notification violation a private damages action, and § 480-13 adds treble damages with a $1,000 floor for deceptive practices, so Hawaii's sectoral rules carry real private-suit risk even without an omnibus act. |
-| **Main law** | Hawaii Revised Statutes ch. 487N (security breach notification), ch. 487J (social security number protection), ch. 487R (destruction of personal information records), and ch. 480 (unfair or deceptive practices) — Hawaii has no comprehensive consumer-privacy statute |
+| **Main law** | No comprehensive consumer-privacy law; Haw. Rev. Stat. § 487N-2(a). Haw. Rev. Stat. § 487J-2(a). Haw. Rev. Stat. § 487R-2(a). Haw. Rev. Stat. § 480-2(a). |
 | **Privacy policy required?** | No Hawaii statute mandates a general consumer privacy policy or fixes its contents; a policy that misstates actual practices is reachable as a deceptive practice under FTC Act § 5 and HRS § 480-2, and GLBA, HIPAA, and COPPA supply the contents where those regimes apply |
 | **Who does it cover?** | Any business — a sole proprietorship, partnership, corporation, association, or other group, however organized and whether or not organized for profit — that owns, licenses, maintains, or disposes of personal information of Hawaii residents, plus government agencies; no revenue or consumer-volume thresholds |
 | **Can consumers sue?** | Limited path |

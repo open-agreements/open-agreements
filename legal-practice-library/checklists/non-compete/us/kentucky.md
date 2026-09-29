@@ -114,7 +114,7 @@ Review every item below the way a Kentucky court would: there is no general non-
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Kentucky question. No staged statute or appellate decision squarely endorses automatic tolling, and the background rules cut both ways against it: any clause extending the restricted period must still satisfy the ordinary reasonableness standard, and Kentucky courts reform restraints toward reasonableness rather than mechanically enlarging them. Draft any extension as a separate, breach-tied, bounded restraint, and do not assume a court will revive an expired covenant. [^ky-kegel-tolling-standard][^ky-kegel-tolling-reform] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Kentucky question. No identified statute or appellate decision squarely endorses automatic tolling, and the background rules cut both ways against it: any clause extending the restricted period must still satisfy the ordinary reasonableness standard, and Kentucky courts reform restraints toward reasonableness rather than mechanically enlarging them. Draft any extension as a separate, breach-tied, bounded restraint, and do not assume a court will revive an expired covenant. [^ky-kegel-tolling-standard][^ky-kegel-tolling-reform] [#address-tolling-during-breach]
 
 ## Remedies {#remedies}
 
@@ -132,7 +132,7 @@ Review every item below the way a Kentucky court would: there is no general non-
 
 ## Assignment and successors {#assignment-and-successors}
 
-- [ ] **Assignment and successors** (Recommended) — Confirm employer-side assignability to successors and that the worker cannot assign. No staged Kentucky authority resolves how covenants travel in a sale, so the contract text is what a successor will stand on — explicit language that names the restrictive covenants beats a generic successors-and-assigns recital, and whoever ends up enforcing still inherits the same consideration and reasonableness questions the original employer faced. [#address-assignment-and-successors]
+- [ ] **Assignment and successors** (Recommended) — Confirm employer-side assignability to successors and that the worker cannot assign. No identified Kentucky authority resolves how covenants travel in a sale, so the contract text is what a successor will stand on — explicit language that names the restrictive covenants beats a generic successors-and-assigns recital, and whoever ends up enforcing still inherits the same consideration and reasonableness questions the original employer faced. [#address-assignment-and-successors]
 
 ## Governing law, venue, dispute process {#governing-law-venue-dispute-process}
 

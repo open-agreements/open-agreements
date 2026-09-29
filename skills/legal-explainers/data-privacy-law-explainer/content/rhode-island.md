@@ -2,7 +2,7 @@
 jurisdiction: "Rhode Island"
 slug: rhode-island
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/rhode-island · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/rhode-island · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Rhode Island Consumer Privacy Law (RIDTPPA)[^about]
 
@@ -30,7 +30,7 @@ The Rhode Island Data Transparency and Privacy Protection Act, effective January
 | --- | --- |
 | **Law coverage** | Limited-scope law |
 | **Summary** | If your commercial website sells Rhode Island customers' personal information, RIDTPPA requires an information-sharing-practices notice; meeting the 35,000-customer (or 10,000-plus-20%-data-sale) threshold adds opt-in consent for sensitive data and binding processor contracts — all enforced by the Attorney General, with no consumer lawsuits. |
-| **Main law** | R.I. Gen. Laws ch. 6-48.1 (Rhode Island Data Transparency and Privacy Protection Act), effective January 1, 2026 |
+| **Main law** | R.I. Gen. Laws § 6-48.1-3(a). R.I. Gen. Laws § 6-48.1-4(a). |
 | **Privacy policy required?** | Yes — a commercial website or ISP that collects, stores, and sells customers' personal information must conspicuously disclose data categories, the third parties it sells to, and a contact mechanism |
 | **Who does it cover?** | Two tracks: any commercial website or internet service provider that collects, stores, and sells customers' personal information must post information-sharing disclosures; the broader controller duties reach for-profit entities that control or process the data of 35,000+ Rhode Island customers, or 10,000+ while deriving over 20% of gross revenue from data sales. Financial institutions, GLBA/HIPAA data, nonprofits, and government bodies are exempt. |
 | **Can consumers sue?** | No |

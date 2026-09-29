@@ -55,6 +55,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2361851/bernier-v-merrill-air-engineers/#:~:text=The%20nondisclosure%20clause%20does%20not,during%20his%20employment%20with%20Merrill.>
 
+### bernier-v-merrill-air-engineers-the-nondisclosure-clause-in-the-6554cb1e {#bernier-v-merrill-air-engineers-the-nondisclosure-clause-in-the-6554cb1e}
+
+> The nondisclosure clause in the Bernier-Merrill employment contract is reasonable.
+
+- supports: `holdover-clause-limit`
+- source_cards: `bernier-nondisclosure-reasonable`
+- cited_by: [Employee Invention Assignment in Maine](../invention-assignment/us/maine.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2361851/bernier-v-merrill-air-engineers/#:~:text=The%20nondisclosure%20clause%20in%20the,Bernier%2DMerrill%20employment%20contract%20is%20reasonable.>
+
 ### bernier-v-merrill-air-engineers-to-be-enforceable-however-restrictive-f9353b88 {#bernier-v-merrill-air-engineers-to-be-enforceable-however-restrictive-f9353b88}
 
 > To be enforceable, however, restrictive covenants must be reasonable. The reasonableness of a restrictive covenant is a question of law.

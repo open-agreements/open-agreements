@@ -113,7 +113,7 @@ Review every item below the way a Utah court would: the Post-Employment Restrict
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but in Utah, flag any extension mechanism on the non-compete as a void risk, not a safety net. The one-year cap is measured from the day employment ends, not from when the worker stops competing, so a tolling or extension-on-breach clause that pushes the restriction past the one-year mark collides with the statute's *void* consequence. Whether a court would equitably toll a covenant that stays inside the cap is an open question no staged Utah case resolves. [^ut-toll-one-year][^ut-toll-void] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but in Utah, flag any extension mechanism on the non-compete as a void risk, not a safety net. The one-year cap is measured from the day employment ends, not from when the worker stops competing, so a tolling or extension-on-breach clause that pushes the restriction past the one-year mark collides with the statute's *void* consequence. Whether a court would equitably toll a covenant that stays inside the cap is an open question no identified Utah case resolves. [^ut-toll-one-year][^ut-toll-void] [#address-tolling-during-breach]
 
 ## Remedies {#remedies}
 

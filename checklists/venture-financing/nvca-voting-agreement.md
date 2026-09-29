@@ -133,8 +133,6 @@ Review the June 2026 NVCA Voting Agreement for a Delaware corporation from the a
 
 Original explanation: CC BY 4.0. Quoted excerpts and linked NVCA materials retain their original rights.
 
-[Not legal advice](/disclaimer).
-
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-16. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for June 2026 NVCA model for a Delaware corporation; transaction-specific choices and legal limits coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *NVCA Voting Agreement Reviewer Checklist*, OpenAgreements (last updated September 16, 2026), https://openagreements.org/checklists/venture-financing/nvca-voting-agreement.
 

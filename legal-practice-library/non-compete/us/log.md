@@ -1,8 +1,43 @@
 # Us Update Log
 
+## 2026-09-28
+* **Update**: One chip per named case: cards for the nine cases batch B could not source (#2900) (#2947) (0016d13)
+* **Update**: One chip per named case: twelve U.S. non-compete guides (#2900 batch C2) (#2934) (03cc794)
+* **Update**: One chip per named case: twelve U.S. non-compete guides (#2900 batch C1) (#2924) (0c43ef4)
+* **Update**: Add primary-law source cards for three sale-of-business statutes (FL, AL, RI) (#2969) (2929bac)
+* **Update**: Cut six long drafting notes in West Virginia, Alaska, Arizona, and Connecticut to mistake, clause, and consequence (#2913) (2f56801)
+* **Update**: content(non-compete): link Main law to source cards (3e5fa1f)
+* **Update**: Washington: common-law savings clause deleted June 30, 2027; checklist reformation-penalty end date (#2929) (#2931) (452e62f)
+* **Update**: Washington: reformation penalty ends June 30, 2027; October 1, 2027 notice on the template page (#2901) (#2922) (7c61974)
+* **Update**: content(non-compete): Main law statements say only what the linked cards support (88efb3e)
+
+## 2026-09-27
+* **Update**: One chip per case: spec rule, LLM-judged audit, Kentucky fix (#2877) (#2892) (0882192)
+* **Update**: Washington: ESHB 1155 notice deadline and 2027 changes; say Washington State (#2886, #2880) (#2898) (933e73b)
+* **Update**: fix(non-compete): state Oregon medical restriction using statutory scope (f334770)
+
+## 2026-09-26
+* **Update**: content(non-compete): date the Singapore and Michigan reform status from the last official record (0053843)
+* **Update**: Cut ten long non-compete drafting notes in eight state guides to mistake, clause, and consequence (#2855) (1ec01ab)
+* **Update**: fix(non-compete): include practitioner restriction in Maine bottom line (214cfbc)
+* **Update**: content(non-compete): support the Michigan HB 4040 status from the full bill history (4c93a4b)
+* **Update**: fix(non-compete): preserve Wyoming professional-staff qualifier in survey (4fff084)
+* **Update**: fix: replace public evidence workflow jargon and prevent recurrence (#2741) (5a7454b)
+* **Update**: content(non-compete): tighten the Michigan and Singapore status passages after peer review (91f35ec)
+* **Update**: fix(non-compete): support eligibility and complete statutory exceptions (ba9d194)
+* **Update**: Cut Iowa's three long drafting notes to mistake, clause, and consequence (#2817) (bb61a99)
+* **Update**: fix(non-compete): close route-summary citation gaps (cfa38fd)
+* **Update**: fix(non-compete): scope Maine parent-card propositions to quoted law (d6bd69a)
+* **Update**: Correct Vermont non-compete pages: H.583 became Act 133 without a covenant ban (#2813) (d78a894)
+* **Update**: fix(non-compete): pair Maine carve-out amendment with governing ban (de4bf91)
+* **Update**: Fix the stray asterisks in Iowa's Farm Bureau quote (#2815) (e92ad37)
+* **Update**: fix(non-compete): keep citations within their questions (ef2527d)
+
 ## 2026-09-23
 * **Update**: content(ny): structured-analysis pilot across the whole New York non-compete guide (#2772) (1b4338b)
+* **Update**: fix(non-compete): correct source-audited jurisdiction summaries (6053c38)
 * **Update**: content(ia): replace 'purple pencil' in the Iowa non-compete description (#2771) (62c98a8)
+* **Update**: fix(non-compete): align legal source cards with operative quotes (771c00b)
 * **Update**: Consolidate adjacent practice-guide cautions (#2206) (d436c41)
 * **Update**: Continue adjacent caution cleanup from Michigan (#2273) (ed57969)
 

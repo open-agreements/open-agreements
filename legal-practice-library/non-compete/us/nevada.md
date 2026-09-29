@@ -99,7 +99,7 @@ This is a service safe harbor, not a general permission to solicit. The former e
 
 "If the termination of the employment of an employee is the result of a reduction of force, reorganization or similar restructuring of the employer, a noncompetition covenant is only enforceable during the period in which the employer is paying the employee’s salary, benefits or equivalent compensation, including, without limitation, severance pay."[^q6-nrs-613-195-rif]
 
-This operates like conditional garden leave for layoffs and restructurings. It does not say every involuntary termination requires pay; the trigger is a reduction of force, reorganization, or similar restructuring. The current staged statute places this rule in subsection 5.
+This operates like conditional garden leave for layoffs and restructurings. It does not say every involuntary termination requires pay; the trigger is a reduction of force, reorganization, or similar restructuring. The current statute text reviewed here places this rule in subsection 5.
 
 ## What are the penalties for enforcing an unlawful Nevada non-compete? {#fees-penalties}
 
@@ -126,7 +126,7 @@ The statute now speaks in two places. The covenant must be supported by valuable
 
 "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant."[^q8-nrs-613-195-consideration]
 
-The open question is how much *Camco* survives the statutory proportionality requirement in a difficult case. Continued employment remains important Nevada authority, but no staged Nevada appellate source squarely decides whether continued employment alone satisfies NRS 613.195(1)(d) for a severe covenant.
+The open question is how much *Camco* survives the statutory proportionality requirement in a difficult case. Continued employment remains important Nevada authority, but no identified Nevada appellate source squarely decides whether continued employment alone satisfies NRS 613.195(1)(d) for a severe covenant.
 
 > [!CAUTION]
 > **Drafting note.**
@@ -135,9 +135,9 @@ The open question is how much *Camco* survives the statutory proportionality req
 
 ## Does a Nevada non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
-**Short answer.** This is an open question. Nevada's staged statute and cases do not squarely address judicial tolling or contractual extension clauses, though NRS 613.195(6) lets a court revise and enforce reasonable terms when revision is possible [^q9-nrs-613-195-revision].
+**Short answer.** This is an open question. Nevada's identified statute and cases do not squarely address judicial tolling or contractual extension clauses, though NRS 613.195(6) lets a court revise and enforce reasonable terms when revision is possible [^q9-nrs-613-195-revision].
 
-Many covenants say the restricted period pauses during breach or litigation so the employer receives the full period of compliance. The staged Nevada authorities do not contain a Nevada holding approving or rejecting that kind of tolling clause.
+Many covenants say the restricted period pauses during breach or litigation so the employer receives the full period of compliance. The identified Nevada authorities do not contain a Nevada holding approving or rejecting that kind of tolling clause.
 
 As a mandatory revision state, Nevada gives courts authority to revise time, geography, and activity restrictions and enforce the covenant as revised.
 
@@ -148,11 +148,11 @@ That supports an inference that a reasonable, clearly drafted contractual extens
 > [!NOTE]
 > **Practice note.**
 >
-> No staged Nevada statute or case squarely decides whether a court may extend a non-compete period for breach or pending litigation. Treat tolling as unsettled, and draft any extension clause as a defined, reasonable term rather than an open-ended restraint [^q9-nrs-613-195-revision].
+> No identified Nevada statute or case squarely decides whether a court may extend a non-compete period for breach or pending litigation. Treat tolling as unsettled, and draft any extension clause as a defined, reasonable term rather than an open-ended restraint [^q9-nrs-613-195-revision].
 
 ## Can a Nevada non-compete be assigned in a sale of the business or a merger? {#assignment-sale-merger}
 
-**Short answer.** It depends on the transaction. In an asset sale, *Traffic Control Services* treats employee non-competes as personal and unassignable absent the employee's express consent, obtained through arm's-length negotiation and supported by separate consideration; in a statutory merger, *HD Supply* says the nonassignability rule does not apply [^q10-traffic-control-consent][^q10-hd-supply-merger].
+**Short answer.** It depends on the transaction. In an asset sale, *Traffic Control Services* treats employee non-competes as personal and unassignable absent the employee's express consent, obtained through arm's-length negotiation and supported by separate consideration [^q10-traffic-control-consent]; in a statutory merger, *HD Supply* says the nonassignability rule does not apply [^q10-hd-supply-merger].
 
 The asset-sale rule is strict. *Traffic Control Services* held that employee non-competes are personal in nature, so an asset buyer cannot enforce them without the employee's express consent, obtained through arm's-length negotiation and supported by separate consideration.
 
@@ -175,7 +175,7 @@ Nevada also has a separate sale-of-business antitrust carve-out. Restrictive cov
 
 **Short answer.** No healthcare-specific ban appears in Nevada's non-compete statute, so a physician or healthcare covenant is not automatically void — but it is not automatically enforceable either. It is judged case by case under the general NRS 613.195 requirements: valuable consideration, no excessive restraint, no undue hardship, and proportional restrictions [^q11-nrs-613-195-healthcare].
 
-The staged research reports note that the 2023 Nevada Legislature passed AB 11, a physician non-compete bill, but the Governor vetoed it. That legislative history signals scrutiny of healthcare covenants, not an enacted ban.
+The identified research reports note that the 2023 Nevada Legislature passed AB 11, a physician non-compete bill, but the Governor vetoed it. That legislative history signals scrutiny of healthcare covenants, not an enacted ban.
 
 Current enforceability therefore returns to the ordinary Nevada framework. A physician or healthcare covenant must fit the statute, and healthcare access or public-interest facts can matter when a court evaluates undue hardship and the reasonableness of the restraint.
 

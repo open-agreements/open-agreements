@@ -2,7 +2,7 @@
 jurisdiction: "Illinois"
 slug: illinois
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/illinois · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/illinois · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Illinois[^about]
 
@@ -28,9 +28,9 @@ A question-by-question summary of Illinois non-compete law under the Illinois Fr
 
 | Question | Illinois |
 | --- | --- |
-| **Are non-competes enforceable?** | Allowed above a pay level |
+| **Are non-competes enforceable?** | Income-based limits |
 | **Bottom line** | Illinois enforces employee non-competes only above a $75,000 earnings floor and only if they clear the Freedom to Work Act's consideration and 14-day-notice gates and the Reliable Fire reasonableness test. |
-| **Main law or case** | Illinois Freedom to Work Act, 820 ILCS 90 (Reliable Fire Equipment Co. v. Arredondo) |
+| **Main law or case** | 820 ILCS 90/15. Reliable Fire Equipment Co. v. Arredondo, 2011 IL 111871. |
 | **Main exceptions** | Construction workers; broadcasters; temp-agency nurses; public-sector CBA; COVID-19 layoffs; certain mental-health professionals; sale of business excluded |
 | **When the ban took effect** | Jan 1, 2022 (Public Act 102-358) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |

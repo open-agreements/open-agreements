@@ -2,7 +2,7 @@
 jurisdiction: "North Dakota"
 slug: north-dakota
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/north-dakota · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/north-dakota · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # North Dakota Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ North Dakota has no comprehensive consumer-privacy statute. Chapter 51-30 govern
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | North Dakota has not enacted a comprehensive consumer-privacy law — the operative state framework is the ch. 51-30 breach-notification statute, enforced by the Attorney General through the ch. 51-15 consumer-fraud law, plus a 2025 information-security chapter for state-regulated financial corporations, with everything else riding the federal and sectoral overlay. |
-| **Main law** | N.D. Cent. Code ch. 51-30 (breach notification) — North Dakota has no comprehensive consumer-privacy law; ch. 51-30 plus the consumer-fraud law (ch. 51-15) and the 2025 financial-corporation data-security chapter (ch. 13-01.2) are the operative state framework |
+| **Main law** | No comprehensive consumer-privacy law; N.D. Cent. Code § 51-30-02. N.D. Cent. Code § 51-15-02. N.D. Cent. Code § 13-01.2-02(1). |
 | **Privacy policy required?** | No North Dakota statute mandates a consumer privacy policy or fixes its contents; a policy that misstates practices can be a deceptive practice under N.D. Cent. Code ch. 51-15 and FTC Act § 5, with GLBA, HIPAA, and COPPA supplying contents where those regimes apply |
 | **Who does it cover?** | Any person that owns or licenses computerized data including personal information of North Dakota residents — no revenue or consumer-volume threshold; the 2025 data-security chapter reaches financial corporations regulated by the Department of Financial Institutions |
 | **Can consumers sue?** | Limited path |

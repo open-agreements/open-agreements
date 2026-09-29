@@ -77,7 +77,7 @@ The real-world Virginia-forum fight is *Avtec Systems, Inc. v. Peiffer*, the can
 
 "conduct is within the scope of employment ‘only if: (a) it is of the kind he is employed to perform; (b) it occurs substantially within the authorized time and space limits; [and] (c) it is actuated, at least in part, by a purpose to serve the master.’"[^avtec-scope-of-employment-default]
 
-Short of ownership, an employer whose time, tools, and materials contributed to the invention holds only a shop right. In the *Avtec* litigation the Eastern District of Virginia stated the doctrine by adopting the Ninth Circuit's definition from *California Eastern Laboratories, Inc. v. Gould* — a nonexclusive right to use, not title [^avtec-shop-right-gould-default].
+Short of ownership, an employer whose time, tools, and materials contributed to the invention holds only a shop right. In the *Avtec* litigation the Eastern District of Virginia stated the doctrine by adopting a Ninth Circuit definition — a nonexclusive right to use, not title [^avtec-shop-right-gould-default].
 
 "A shop right is an employer’s nonexclusive right to use an employee’s patented process or invention that was developed during the employee’s hours of employment. The right is based on the employer’s presumed contribution to the invention through materials, time, and equipment."[^avtec-shop-right-gould-default]
 
@@ -89,7 +89,7 @@ Because ownership therefore starts with the inventor, Virginia has no statute fi
 
 Two layers define the Virginia picture: a well-settled common-law reasonableness rule for restraints on competition, and a fast-moving statute that prohibits covenants not to compete outright for a large covered class. Neither layer has been applied to a trailing invention-assignment clause by any Virginia decision found in our review.
 
-The common-law framework comes from the Supreme Court of Virginia. *Home Paramount Pest Control Cos. v. Shaffer*, restating the test announced in *Omniplex World Services Corp. v. US Investigations Services, Inc.*, gives the operative three-part standard [^hp-three-part-test-holdover].
+The common-law framework comes from the Supreme Court of Virginia. *Home Paramount Pest Control Cos. v. Shaffer* gives the operative three-part standard [^hp-three-part-test-holdover].
 
 "It is enforceable if it ‘is narrowly drawn to protect the employer’s legitimate business interest, is not unduly burdensome on the employee’s ability to earn a living, and is not against public policy.’"[^hp-three-part-test-holdover]
 
@@ -135,7 +135,7 @@ Remedially, Virginia is unforgiving of overbreadth. In *Roto-Die Co. v. Lesser*,
 
 "Because a demurrer cannot be used to decide on the merits whether a restraint on competition is enforceable, we will reverse the circuit court's judgment."[^assurance-data-demurrer-holdover]
 
-Applying any of this to holdover assignments is a prediction, not a holding. The uncertainty comes from missing case law rather than ambiguous doctrine: Virginia's reasonableness framework and the statute are both well documented, but neither has been applied to a trailing invention-assignment clause by any decision found in our review. The safe reading is that an overbroad trailing clause is at meaningful risk in Virginia twice over — as an unreasonable restraint under the *Omniplex*/*Home Paramount* framework, and, if characterized as a covenant not to compete, as a statutorily prohibited one for the large covered class — while a narrow holdover tied to the employer's trade secrets and confidential information, with a short tail and a genuine business nexus, remains the defensible zone.
+Applying any of this to holdover assignments is a prediction, not a holding. The uncertainty comes from missing case law rather than ambiguous doctrine: Virginia's reasonableness framework and the statute are both well documented, but neither has been applied to a trailing invention-assignment clause by any decision found in our review. The safe reading is that an overbroad trailing clause is at meaningful risk in Virginia twice over — as an unreasonable restraint under the framework of *Omniplex* [^omniplex-disfavored-holdover] and *Home Paramount* [^hp-three-part-test-holdover], and, if characterized as a covenant not to compete, as a statutorily prohibited one for the large covered class — while a narrow holdover tied to the employer's trade secrets and confidential information, with a short tail and a genuine business nexus, remains the defensible zone.
 
 > [!NOTE]
 > **Practice note.**

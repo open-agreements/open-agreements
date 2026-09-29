@@ -37,7 +37,7 @@ Review every item below the way a Hawaii court would: the covenant is measured a
 
 - [ ] **Restricted period** (Recommended) — One defined Restricted Period keeps every duration auditable. Hawaii sets no fixed ceiling, but length of time is one of the factors a court examines when weighing a restraint, and the statutory categories each demand a reasonable period — so the period should be the shortest the protected interest credibly requires, with the record explaining why. [^hi-traeger-scope-factors] [#define-restricted-period]
 
-- [ ] **Restricted territory** (Recommended) — Geographic scope is examined alongside duration and breadth, and the contract's own territory controls what can be enforced — in the staged case law an injunction entered statewide was sent back to be trimmed to the covenant's County of Honolulu limit. Define the territory precisely and size it to where the protected interest actually operates. [^hi-traeger-scope-factors][^hi-del-rosario-honolulu] [#define-restricted-territory]
+- [ ] **Restricted territory** (Recommended) — Geographic scope is examined alongside duration and breadth, and the contract's own territory controls what can be enforced — in the identified case law an injunction entered statewide was sent back to be trimmed to the covenant's County of Honolulu limit. Define the territory precisely and size it to where the protected interest actually operates. [^hi-traeger-scope-factors][^hi-del-rosario-honolulu] [#define-restricted-territory]
 
 - [ ] **Covered customers** (Recommended) — Bound the class to customers the worker had real contact with during a stated look-back window. Special customer relationships are among the interests Hawaii recognizes as protectable, and a customer class limited to relationships the worker actually built keeps the clause tethered to that interest rather than to the market at large. [^hi-del-rosario-protectable] [#define-covered-customers]
 
@@ -57,7 +57,7 @@ Review every item below the way a Hawaii court would: the covenant is measured a
 
 ## Timing and execution acknowledgements {#timing-and-execution-acknowledgements}
 
-- [ ] **Timing of signing acknowledged** (Recommended) — Look for the worker's acknowledgement of when the covenant was signed relative to the start of employment and what was exchanged for it. No staged Hawaii statute conditions enforceability on a particular consideration form, but a clean record of timing and exchange is cheap evidence if procedural fairness is ever contested — and it documents the legitimate purpose the covenant will need to show. [#acknowledge-timing]
+- [ ] **Timing of signing acknowledged** (Recommended) — Look for the worker's acknowledgement of when the covenant was signed relative to the start of employment and what was exchanged for it. No identified Hawaii statute conditions enforceability on a particular consideration form, but a clean record of timing and exchange is cheap evidence if procedural fairness is ever contested — and it documents the legitimate purpose the covenant will need to show. [#acknowledge-timing]
 
 - [ ] **Chance to consult a lawyer** (Recommended) — No Hawaii statute demands it, but the reasonableness analysis weighs the hardship the restraint places on the worker — and a documented opportunity to take the agreement to a lawyer before signing is low-cost evidence that the process was fair rather than coercive. [#acknowledge-opportunity-to-consult-counsel]
 
@@ -101,7 +101,7 @@ Review every item below the way a Hawaii court would: the covenant is measured a
 
 ## Physician-specific notices and carve-outs {#physician-specific-notices-and-carve-outs}
 
-- [ ] **Physician rights and notices** (Recommended) — The staged Hawaii sources contain no physician-specific covenant statute, so the dedicated clause does honest work by saying what governs: a physician covenant passes through the same restraint-of-trade framework as any other — legitimate ancillary purpose, no substantial lessening of competition, reasonable scope. A clause that states that treatment expressly keeps the question reviewable instead of leaving the physician to assume some special regime exists. [#address-physician-specific-rights]
+- [ ] **Physician rights and notices** (Recommended) — The identified Hawaii sources contain no physician-specific covenant statute, so the dedicated clause does honest work by saying what governs: a physician covenant passes through the same restraint-of-trade framework as any other — legitimate ancillary purpose, no substantial lessening of competition, reasonable scope. A clause that states that treatment expressly keeps the question reviewable instead of leaving the physician to assume some special regime exists. [#address-physician-specific-rights]
 
 ## No conflicting obligations {#no-conflicting-obligations}
 
@@ -113,7 +113,7 @@ Review every item below the way a Hawaii court would: the covenant is measured a
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Hawaii question. The staged authorities do not resolve whether a covenant period pauses during breach or litigation, and an extension-on-breach clause lengthens the actual restraint, so it has to be justified under the same ancillary-purpose and reasonable-duration limits that govern the covenant itself. Do not assume a court will enforce it. [^hi-tolling-ancillary][^hi-tolling-scope] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Hawaii question. The identified authorities do not resolve whether a covenant period pauses during breach or litigation, and an extension-on-breach clause lengthens the actual restraint, so it has to be justified under the same ancillary-purpose and reasonable-duration limits that govern the covenant itself. Do not assume a court will enforce it. [^hi-tolling-ancillary][^hi-tolling-scope] [#address-tolling-during-breach]
 
 ## Remedies {#remedies}
 
@@ -123,7 +123,7 @@ Review every item below the way a Hawaii court would: the covenant is measured a
 
 ## Severability and reformation {#severability-and-reformation}
 
-- [ ] **Minimum scope, not court rescue** (Avoid) — Read the severability clause as architecture, not insurance. The staged Hawaii authorities supply no rule that a court will rewrite an overbroad covenant into an enforceable one: the closest example trimmed an injunction back to the covenant's own county limit — correcting enforcement to the contract's terms, not rewriting the contract — and the covenant that lacked a legitimate ancillary purpose failed outright rather than being saved by narrower wording. Expect each restriction to be drafted at the minimum scope its protected interest supports, in separable tiers a court can enforce or strike cleanly, rather than a broad clause paired with a savings provision that asks the court to do the tailoring. [^hi-narrowing-honolulu][^hi-narrowing-purpose] [#draft-to-the-protected-interest-rather-than-rely-on-narrowing]
+- [ ] **Minimum scope, not court rescue** (Avoid) — Read the severability clause as architecture, not insurance. The identified Hawaii authorities supply no rule that a court will rewrite an overbroad covenant into an enforceable one: the closest example trimmed an injunction back to the covenant's own county limit — correcting enforcement to the contract's terms, not rewriting the contract — and the covenant that lacked a legitimate ancillary purpose failed outright rather than being saved by narrower wording. Expect each restriction to be drafted at the minimum scope its protected interest supports, in separable tiers a court can enforce or strike cleanly, rather than a broad clause paired with a savings provision that asks the court to do the tailoring. [^hi-narrowing-honolulu][^hi-narrowing-purpose] [#draft-to-the-protected-interest-rather-than-rely-on-narrowing]
 
 ## Survival {#survival}
 

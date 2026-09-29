@@ -2,7 +2,7 @@
 jurisdiction: "Massachusetts"
 slug: massachusetts
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-07-11"
 human_reviewed_at: null
 next_review_due: "2027-01-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/massachusetts · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/massachusetts · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Massachusetts[^about]
 
@@ -30,7 +30,7 @@ Massachusetts enforces employee non-competes only when they meet the Noncompetit
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Massachusetts enforces an employee non-compete only if it meets the 2018 Noncompetition Agreement Act — paid garden leave or agreed consideration, a 12-month cap, and strict notice — and voids them entirely for physicians, nurses, psychologists, social workers, and most broadcasters. |
-| **Main law or case** | Mass. Gen. Laws ch. 149, § 24L |
+| **Main law or case** | Mass. Gen. Laws ch. 149, § 24L(b). |
 | **Main exceptions** | Physician, nurse, psychologist, social-worker, broadcaster bans; excluded workers (FLSA-nonexempt, interns, laid-off/no-cause, age ≤18); sale-of-business & non-solicit/NDA carve-outs |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Yes |
@@ -193,9 +193,9 @@ Because so many workers and covenants fall outside the act — laid-off employee
 **Short answer.** A 2018 statutory overhaul, a clarifying 2025 decision, and continued reform pressure. The Noncompetition Agreement Act reset the rules for agreements entered into on or after October 1, 2018, and the Supreme Judicial Court's 2025 decision in *Miele* drew a firm line keeping non-solicitation agreements — and forfeiture clauses triggered only by breaching them — outside the act [^rd-nuvasive-effective-date][^rd-miele-plain-language].
 
 - **October 1, 2018:** The Massachusetts Noncompetition Agreement Act took effect, applying only to agreements entered into on or after that date [^rd-nuvasive-effective-date].
-- **September 2024:** In *DraftKings Inc. v. Hermalyn*, the First Circuit, applying Massachusetts choice-of-law principles, upheld a Massachusetts choice-of-law clause and a one-year nationwide preliminary injunction against an executive who had relocated to California, distinguishing *Oxford* on its facts [^rd-draftkings-choice-of-law].
+- **September 2024:** In *DraftKings Inc. v. Hermalyn*, the First Circuit held that the district judge did not err in ruling that Massachusetts law governed an executive's non-compete [^rd-draftkings-massachusetts-law], or in including California within the one-year countrywide preliminary injunction [^rd-draftkings-injunction-range][^rd-draftkings-one-year]. The court also held that the executive's facts were unlike those of an earlier Supreme Judicial Court choice-of-law case [^rd-draftkings-choice-of-law]. That earlier case, *Oxford Global Resources, LLC v. Hernandez*, refused to enforce a Massachusetts choice-of-law clause where California law would otherwise apply and Massachusetts law would violate California's fundamental public policy [^rd-oxford-choice-of-law].
 - **June 2025:** In *Miele v. Foundation Medicine*, the Supreme Judicial Court held that the act does not reach non-solicitation agreements or a forfeiture clause triggered by breaching one [^rd-miele-plain-language].
-- **2025–2026 session:** Reform bills are pending but none has been enacted. S.1336 would make noncompetition agreements void and unenforceable outright, and S.1366 would void veterinarian non-competes on the model of the physician ban; both were reported favorably and referred to Senate Ways and Means on December 22, 2025 [^bill-s1336][^bill-s1366]. H.2090 would apply Massachusetts law to remote employees of employers incorporated or operating in Massachusetts absent a negotiated waiver; it was reported favorably and referred to House Ways and Means on October 29, 2025 [^bill-h2090]. Because the First Circuit already applied Massachusetts law to a remote out-of-state employee under existing choice-of-law analysis in *DraftKings*, H.2090 would largely codify that result for Massachusetts-connected employers rather than change the law's direction [^rd-draftkings-choice-of-law].
+- **2025–2026 session:** Reform bills are pending but none has been enacted. S.1336 would make noncompetition agreements void and unenforceable outright, and S.1366 would void veterinarian non-competes on the model of the physician ban; both were reported favorably and referred to Senate Ways and Means on December 22, 2025 [^bill-s1336][^bill-s1366]. H.2090 would apply Massachusetts law to remote employees of employers incorporated or operating in Massachusetts absent a negotiated waiver; it was reported favorably and referred to House Ways and Means on October 29, 2025 [^bill-h2090].
 
 > [!NOTE]
 > **Practice note.**
@@ -290,7 +290,15 @@ Because so many workers and covenants fall outside the act — laid-off employee
 
 [^rd-miele-plain-language]: **Miele v. Foundation Medicine, Inc.** — "Under the plain language of the Massachusetts Noncompetition Agreement Act, (1) noncompetition agreements do not include nonsolicitation agreements, and (2) forfeiture for competition agreements are a subset of noncompetition agreements." *Miele v. Foundation Medicine, Inc., 496 Mass. 171 (2025).* <https://www.courtlistener.com/opinion/10604382/susan-miele-v-foundation-medicine-inc/#:~:text=Under%20the%20plain%20language%20of,a%20subset%20of%20noncompetition%20agreements.>
 
+[^rd-draftkings-massachusetts-law]: **DraftKings Inc. v. Hermalyn** — "The short of it is that the judge didn't err by ruling that Massachusetts law governs Hermalyn's noncompete with DraftKings." *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=The%20short%20of%20it%20is,governs%20Hermalyn's%20noncompete%20with%20DraftKings.>
+
+[^rd-draftkings-injunction-range]: **DraftKings Inc. v. Hermalyn** — "The bottom line is that the judge didn't err by including California within the preliminary injunction's range." *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=The%20bottom%20line%20is%20that,within%20the%20preliminary%20injunction's%20range.>
+
+[^rd-draftkings-one-year]: **DraftKings Inc. v. Hermalyn** — "Clearly his requested California carveout will give him a way to skirt the countrywide preliminary injunction’s one-year noncompete ban." *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Clearly%20his%20requested%20California%20carveout,preliminary%20injunction%E2%80%99s%20one%2Dyear%20noncompete%20ban.>
+
 [^rd-draftkings-choice-of-law]: **DraftKings Inc. v. Hermalyn** — "Hermalyn’s facts are not like Hernandez’s." *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Hermalyn%E2%80%99s%20facts%20are%20not%20like%20Hernandez%E2%80%99s.>
+
+[^rd-oxford-choice-of-law]: **Oxford Global Res., LLC v. Hernandez** — "We conclude that the Massachusetts choice of law provision in the agreement is not enforceable, where California substantive law would apply under our choice of law principles, and where the application of Massachusetts substantive law would violate the fundamental public policy of California favoring open competition and employee mobility." *Oxford Global Res., LLC v. Hernandez, 480 Mass. 462 (2018).* <https://www.courtlistener.com/opinion/7175264/oxford-global-res-llc-v-hernandez/#:~:text=We%20conclude%20that%20the%20Massachusetts,open%20competition%20and%20employee%20mobility.>
 
 [^bill-s1336]: **S.1336 — An Act relative to banning noncompetition agreements in the Commonwealth** — "Effective January 1, 2026, noncompetition agreements, as defined in this section, shall be void and unenforceable." *S.1336, 194th Gen. Court (Mass. 2025) (not enacted; reported favorably and referred to Senate Ways and Means, Dec. 22, 2025).* <https://malegislature.gov/Bills/194/S1336.pdf>
 

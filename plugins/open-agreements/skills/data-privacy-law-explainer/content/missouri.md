@@ -2,7 +2,7 @@
 jurisdiction: "Missouri"
 slug: missouri
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/missouri · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/missouri · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Missouri Consumer Privacy Law[^about]
 
@@ -29,8 +29,8 @@ Missouri has no omnibus consumer-privacy statute; the main commercial spine is b
 | Question | Missouri |
 | --- | --- |
 | **Law coverage** | No comprehensive law |
-| **Summary** | Missouri has not enacted a comprehensive consumer-privacy law. The 2026 session saw biometric and privacy-adjacent bills, but no omnibus access/delete/correct/opt-out framework passed before the May 15, 2026 adjournment, so the main commercial state framework is the breach-notification statute, the MMPA's deception rules and qualified private right of action, and, for insurance licensees, the Insurance Data Security Act's phased duties; everything else rides the federal overlay. |
-| **Main law** | Mo. Rev. Stat. § 407.1500 (breach notification) plus the Merchandising Practices Act (§§ 407.010–407.025) and, for insurance licensees, the Insurance Data Security Act (§§ 375.1400–375.1427, effective January 1, 2026) — Missouri has no comprehensive consumer-privacy statute |
+| **Summary** | Missouri has not enacted a comprehensive consumer-privacy law. The 2026 session saw biometric and privacy-adjacent bills, but no omnibus access/delete/correct/opt-out framework passed before the May 15, 2026 adjournment, so the main commercial state framework is the breach-notification statute, the MMPA's deception rules and qualified private right of action, and, for insurance licensees, the Insurance Data Security Act's phased duties (the act took effect January 1, 2026); everything else rides the federal overlay. |
+| **Main law** | No comprehensive consumer-privacy law; Mo. Rev. Stat. § 407.1500.2(1). Mo. Rev. Stat. § 407.020.1. Mo. Rev. Stat. § 375.1400.2. |
 | **Privacy policy required?** | No general Missouri mandate fixes a privacy policy's contents — they are driven by FTC Act § 5 and the sectoral overlay (GLBA, HIPAA, COPPA), with the MMPA supplying the state deception hook for a policy that misstates actual practices; an insurance licensee must hand its privacy policy to the insurance director after a cybersecurity event |
 | **Who does it cover?** | Breach statute: any person that owns or licenses personal information of Missouri residents, or that conducts business in Missouri and owns or licenses a resident's personal information, with no size threshold. MMPA: anyone selling or advertising merchandise — defined to include services and intangibles — in or from Missouri. Insurance Data Security Act: persons licensed or registered under Missouri insurance law |
 | **Can consumers sue?** | Yes |

@@ -25,6 +25,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### stratech-systems-ltd-v-nyam-chiu-shin-however-we-were-of-the-view-c8b81169 {#stratech-systems-ltd-v-nyam-chiu-shin-however-we-were-of-the-view-c8b81169}
+
+> However, we were of the view that this evidence did not demonstrate any legitimate interest over and above the protection of confidential information.
+
+- supports: `confidentiality-overlap`
+- source_cards: `stratech-over-and-above`
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
+- link_to_source: <https://www.elitigation.sg/gd/s/2005_SGCA_17>
+
 ### stratech-systems-ltd-v-nyam-chiu-shin-it-follows-from-the-foregoing-that-e16e60f2 {#stratech-systems-ltd-v-nyam-chiu-shin-it-follows-from-the-foregoing-that-e16e60f2}
 
 > It follows from the foregoing that an employer must particularize the confidential information which he seeks to protect.

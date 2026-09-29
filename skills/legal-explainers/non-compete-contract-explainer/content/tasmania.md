@@ -2,7 +2,7 @@
 jurisdiction: "Tasmania, Australia"
 slug: tasmania
 countryCode: AU
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/tasmania · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/tasmania · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Tasmania[^about]
 
@@ -30,7 +30,7 @@ In Tasmania a post-employment non-compete is presumptively void as a restraint o
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | A Tasmanian non-compete is presumptively void and binds a former employee only so far as it is reasonable to protect a legitimate interest; there is no statutory read-down power, so a court can only sever covenants the parties themselves drafted as genuinely separate, and an overbroad clause that severance cannot save fails entirely. |
-| **Main law or case** | Common-law restraint of trade (no equivalent of the NSW Restraints of Trade Act 1976) |
+| **Main law or case** | Common-law restraint of trade governs; Neville Jeffress Advertising Pty Ltd v Barlow (No 2) [1993] TASSC 113 (Zeeman J), citing Herbert Morris Ltd v Saxelby [1916] 1 AC 688 and Lindner v Murdock's Garage (1950) 83 CLR 628. |
 | **Main exceptions** | Sale-of-business covenants are judged more leniently; a proposed federal ban would, if enacted, cover most employees earning under the Fair Work Act high-income threshold (with sale-of-business and above-threshold restraints reported to be excluded), but it is not yet law. |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Yes |
@@ -41,7 +41,7 @@ In Tasmania a post-employment non-compete is presumptively void as a restraint o
 
 **Short answer.** Only so far as they are reasonable. A post-employment non-compete is treated as a restraint of trade, which the common law presumes is unenforceable unless the employer shows it goes no further than is reasonably necessary to protect a legitimate business interest. The Supreme Court of Tasmania has stated the test in orthodox terms: to be reasonable, a covenant must afford no more than adequate protection to the party in whose favour it is imposed, judged at the time the covenant was entered into [^jeffress-adequate-protection]. The onus of justifying the restraint sits on the employer [^lindner-onus].
 
-Tasmania is not a per se ban jurisdiction, and it has no statute that sets fixed numeric limits on duration or area or that empowers a court to read an overbroad restraint down. It is a reasonableness jurisdiction built entirely on the common-law restraint-of-trade doctrine. The local case law is comparatively thin: two Supreme Court of Tasmania decisions — *Neville Jeffress Advertising Pty Ltd v Barlow (No 2)* and *Bulk Frozen Foods Pty Ltd v Excell* — carry most of the weight, supplemented by the High Court of Australia restraint-of-trade authorities that bind Tasmanian courts. The Supreme Court has adopted the High Court's statement of why the doctrine exists:
+Tasmania is not a per se ban jurisdiction, and it has no statute that sets fixed numeric limits on duration or area or that empowers a court to read an overbroad restraint down. It is a reasonableness jurisdiction built entirely on the common-law restraint-of-trade doctrine. The local case law is comparatively thin: two Supreme Court of Tasmania decisions — *Neville Jeffress Advertising Pty Ltd v Barlow (No 2)* [^jeffress-adequate-protection] and *Bulk Frozen Foods Pty Ltd v Excell* [^bulk-reasonableness-at-contract] — carry most of the weight, supplemented by the High Court of Australia restraint-of-trade authorities that bind Tasmanian courts. The Supreme Court has adopted the High Court's statement of why the doctrine exists:
 
 "The law treats unreasonable restraints as unenforceable because it is contrary to the public welfare that a man should unreasonably be prevented from earning his living in whatever lawful way he chooses and that the public should unreasonably be deprived of the services of a man prepared to engage in employment."[^jeffress-public-welfare]
 
@@ -170,6 +170,8 @@ Because this is a future legislative matter, employers should treat the timeline
 [^jeffress-adequate-protection]: **Neville Jeffress Advertising Pty Ltd v Barlow (No 2)** — "In considering the primary question as to whether or not the covenant is reasonable as between the parties, two propositions are fundamental, namely that in order to be regarded as reasonable the covenant must afford no more than adequate protection to the party in whose favour it is imposed (Herbert Morris Ltd v Saxelby (supra) at 707) as judged at the time the covenant was entered into (Lindner v Murdock's Garage [1950] HCA 48 ; (1950) 83 CLR 628 at 653; Amoco Australia Pty Ltd v Rocca Bros Motor Engineering Co Pty Ltd [1973] HCA 40 ; (1973) 133 CLR 288 at 318)." *Neville Jeffress Advertising Pty Ltd v Barlow (No 2) [1993] TASSC 113 (Zeeman J), citing Herbert Morris Ltd v Saxelby [1916] 1 AC 688 and Lindner v Murdock's Garage (1950) 83 CLR 628.* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 [^lindner-onus]: **Lindner v Murdock's Garage** — "The onus was on the plaintiff firm to prove circumstances showing that the restriction on the defendant's freedom to work was reasonable." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
+
+[^bulk-reasonableness-at-contract]: **Bulk Frozen Foods Pty Ltd v Excell** — "The reasonableness or otherwise of a restraint of trade must be judged by reference to the circumstances at the time of the contract: Lindner v Murdock's Garage [1950] HCA 48 ; (1950) 83 CLR 628 at 653." *Bulk Frozen Foods Pty Ltd v Excell [2014] TASSC 58 (Blow CJ), citing Lindner v Murdock's Garage (1950) 83 CLR 628.* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 [^jeffress-public-welfare]: **Neville Jeffress Advertising Pty Ltd v Barlow (No 2)** — "The law treats unreasonable restraints as unenforceable because it is contrary to the public welfare that a man should unreasonably be prevented from earning his living in whatever lawful way he chooses and that the public should unreasonably be deprived of the services of a man prepared to engage in employment." *Neville Jeffress Advertising Pty Ltd v Barlow (No 2) [1993] TASSC 113 (Zeeman J), quoting Buckley v Tutty (1971) 125 CLR 353.* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 

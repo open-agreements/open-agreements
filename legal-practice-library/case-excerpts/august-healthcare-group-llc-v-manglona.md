@@ -66,6 +66,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
+### august-healthcare-group-llc-v-manglona-in-determining-whether-to-grant-a-50d96366 {#august-healthcare-group-llc-v-manglona-in-determining-whether-to-grant-a-50d96366}
+
+> In determining whether to grant a preliminary injunction, the district court applies a four-pronged test.
+
+- supports: `holdover-clause-limit`
+- source_cards: `aug-preliminary-injunction-denied`
+- cited_by: [Employee Invention Assignment in the Northern Mariana Islands](../invention-assignment/us/cnmi.md)
+- link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
+
 ### august-healthcare-group-llc-v-manglona-in-the-absence-of-written-law-7e5192d9 {#august-healthcare-group-llc-v-manglona-in-the-absence-of-written-law-7e5192d9}
 
 > In the absence of written law or local customary law, the CNMI looks to the United States common law as expressed in the Restatements.

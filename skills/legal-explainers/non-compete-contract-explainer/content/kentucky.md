@@ -2,7 +2,7 @@
 jurisdiction: "Kentucky"
 slug: kentucky
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kentucky · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kentucky · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Kentucky[^about]
 
@@ -30,7 +30,7 @@ Kentucky enforces non-competes only when the restraint is reasonable under commo
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Kentucky enforces a non-compete only if it is supported by valid consideration and reasonable in scope; existing employees must get new consideration, and courts may blue-pencil overbroad terms. |
-| **Main law or case** | common law (Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009); Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014)) |
+| **Main law or case** | Common law governs most employee non-competes; Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009). Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014). |
 | **Main exceptions** | Temporary health-care staffing ban (KRS 216.724) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -41,7 +41,7 @@ Kentucky enforces non-competes only when the restraint is reasonable under commo
 
 **Short answer.** Yes, sometimes. Kentucky is a reasonableness state, not a general ban state. A non-compete is enforceable only if it is supported by valid consideration and is reasonable — affording fair protection to a legitimate employer interest without being so broad as to harm the public or impose undue hardship on the employee [^kegel-reasonableness-test].
 
-The common-law standard traces to *Ceresia v. Mitchell* and is restated in later cases such as *Kegel v. Tillotson*. In practice the recurring questions are duration, geography, the employer's protectable interest, the burden on the employee, and the effect on the public [^kegel-reasonableness-test].
+The common-law standard traces to *Ceresia v. Mitchell* [^ceresia-reasonableness-test], is restated in *Hammons v. Big Sandy Claims Service, Inc.* [^hammons-reasonableness-test], and appears in later cases such as *Kegel v. Tillotson* [^kegel-reasonableness-test]. In practice the recurring questions are duration, geography, the employer's protectable interest, the burden on the employee, and the effect on the public [^kegel-reasonableness-test].
 
 Kentucky has not enacted a general non-compete statute for the ordinary workforce. The enforceability analysis is judge-made, with one narrow statutory exception for temporary health care staffing covered later in this note.
 
@@ -110,7 +110,7 @@ Under *Kegel*, the restraint must afford only fair protection to the employer's 
 
 ## Does a Kentucky non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
-**Short answer.** This is an open Kentucky question. No staged Kentucky statute or appellate decision squarely endorses automatically tolling or extending the restricted period while the former employee is in breach or while litigation is pending [^q6-kegel-reasonableness-backdrop][^q6-kegel-blue-pencil].
+**Short answer.** This is an open Kentucky question. No identified Kentucky statute or appellate decision squarely endorses automatically tolling or extending the restricted period while the former employee is in breach or while litigation is pending [^q6-kegel-reasonableness-backdrop][^q6-kegel-blue-pencil].
 
 Kentucky law gives two signals rather than a rule. First, any clause that extends the restricted period must still satisfy the ordinary reasonableness standard, so an extension that turns a fixed covenant into an open-ended restraint risks being found unreasonable [^q6-kegel-reasonableness-backdrop]. Second, Kentucky courts reform restraints toward reasonableness rather than mechanically enlarging them, which cuts against assuming a court will tack on extra time for a breach [^q6-kegel-blue-pencil].
 
@@ -173,6 +173,10 @@ The enacted baseline therefore remains common-law reasonableness and considerati
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Kentucky*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/kentucky.
 
 [^kegel-reasonableness-test]: **Kegel v. Tillotson** — "agreements on restraint of trade are reasonable if, ‘on consideration of the subject, nature of the business, situation of the parties and circumstances of the particular case, the restriction is such only as to afford fair protection to the interests of the covenan-tee and is not so large as to interfere with the public interests or impose undue hardship on the party restricted." *Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009).* <https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/#:~:text=agreements%20on%20restraint%20of%20trade,hardship%20on%20the%20party%20restricted.>
+
+[^ceresia-reasonableness-test]: **Ceresia v. Mitchell** — "In the case at bar the restraint imposed upon the seller of the business did not directly affect the competitive position of the public, because the buyers took over where the seller left off. The buyers had not been in the business before they made their purchase. ‘An agreement in restraint of trade is reasonable if, on consideration of the subject matter, the nature of the business, the situation of the parties and the circumstances of the particular case, the restriction is such only as to afford fair protection to the interests of the covenantee and not so large as to interfere with the public interests or impose undue hardship on the party restricted.’" *Ceresia v. Mitchell, 242 S.W.2d 359 (Ky. 1951).* <https://www.courtlistener.com/opinion/2406606/ceresia-v-mitchell/#:~:text=In%20the%20case%20at%20bar,hardship%20on%20the%20party%20restricted.%E2%80%9D>
+
+[^hammons-reasonableness-test]: **Hammons v. Big Sandy Claims Service, Inc.** — "Also, it has been held in Kentucky that an agreement in restraint of trade is reasonable if, on consideration of the subject, nature of the business, situation of the parties and circumstances of the particular case, the restriction is such only as to afford fair protection to the interests of the cove-nantee and is not so large as to interfere with the public interests or impose undue hardship on the party restricted. Ceresia v. Mitchell, Ky., 242 S.W.2d 359 (1951). In this case, Big Sandy had a legitimate concern in protecting itself from the very situation which arose in the case. An adjustment service has to spend much time and money to generate good will among the insurance agencies and companies in the area it serves. A company like Big Sandy is particularly vulnerable to solicitation by employees or former employees of business from its clientele. Hammons, as well as other employees, could use their positions inside the company to undermine Big Sandy’s position with its clients. A covenant, such as the one at bar, not to engage in competition is a valuable business tool and it did not work an undue hardship on Hammons or the public." *Hammons v. Big Sandy Claims Serv., Inc., 567 S.W.2d 313 (Ky. Ct. App. 1978).* <https://www.courtlistener.com/opinion/2419936/hammons-v-big-sandy-claims-service-inc/#:~:text=Also%2C%20it%20has%20been%20held,on%20Hammons%20or%20the%20public.>
 
 [^creech-no-consideration]: **Charles T. Creech, Inc. v. Brown** — "Because the Agreement did not require Creech to forbear the exercise of some legal right or otherwise result in some detriment to Creech, there was no consideration." *Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014).* <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=Because%20the%20Agreement%20did%20not,Creech%2C%20there%20was%20no%20consideration.>
 

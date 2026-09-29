@@ -75,7 +75,7 @@ The starting point is substance over label. In *Manitowoc Co. v. Lanning*, the W
 
 "we conclude that Lanning's non-solicitation of employees provision is a restraint of trade governed by Wis. Stat. § 103.465"[^lanning-restraint]
 
-*Lanning* restated the rule it drew from *Heyde Cos. v. Dove Healthcare* — that the statute essentially deals with restraint of trade regardless of what the drafter labeled the restriction [^lanning-heyde].
+*Lanning* restated the rule it drew from an earlier Wisconsin Supreme Court decision — that the statute essentially deals with restraint of trade regardless of what the drafter labeled the restriction [^lanning-heyde].
 
 "essentially deals with restraint of trade . . . regardless of whether a restriction is labeled a 'non-disclosure' provision or a 'covenant not to compete.'"[^lanning-heyde]
 
@@ -83,7 +83,7 @@ A trailing invention-assignment clause fits that logic: to the extent it sweeps 
 
 Extending the *Lanning* line to holdover assignments is a prediction, not a holding. Our review found no Wisconsin decision — state or federal — applying § 103.465 to an invention-assignment clause; the § 103.465 case law concerns non-competes, non-solicits, and confidentiality covenants. So a court could conceivably treat an assignment of property rights as something other than a covered restraint. The safer working assumption, given how consistently Wisconsin courts have refused to let labels control, is that an aggressive holdover clause would be tested for reasonableness like any other post-employment restraint [^lanning-restraint].
 
-The nearest invention-specific precedent is regional and persuasive only. In *Guth v. Minnesota Mining & Manufacturing Co.*, decided in 1934 — before *Erie* required federal courts sitting in diversity to apply state law — the Seventh Circuit held that employment-contract provisions requiring assignment of future inventions without limit in time or subject matter were contrary to public policy, while enforcing the contract's reasonable provisions [^guth-gross].
+The nearest invention-specific precedent is regional and persuasive only. In *Guth v. Minnesota Mining & Manufacturing Co.*, decided in 1934, the Seventh Circuit held that employment-contract provisions requiring assignment of future inventions without limit in time or subject matter were contrary to public policy [^guth-limitless-public-policy], while enforcing the contract's reasonable provisions [^guth-divisible].
 
 "Assignments in gross of future inventions are not favored."[^guth-gross]
 
@@ -118,5 +118,9 @@ What makes Wisconsin unusual is the remedy. *Guth* saved the reasonable parts of
 [^stat-103465-void-in-toto]: **Wis. Stat. § 103.465** — "Any covenant, described in this section, imposing an unreasonable restraint is illegal, void and unenforceable even as to any part of the covenant or performance that would be a reasonable restraint." *Wis. Stat. § 103.465.* <https://docs.legis.wisconsin.gov/statutes/statutes/103/465>
 
 [^lanning-heyde]: **The Manitowoc Company, Inc. v. Lanning** — "essentially deals with restraint of trade . . . regardless of whether a restriction is labeled a 'non-disclosure' provision or a 'covenant not to compete.'" *The Manitowoc Co., Inc. v. Lanning, 2018 WI 6 (quoting Heyde Cos. v. Dove Healthcare, LLC, 2002 WI 131).* <https://www.courtlistener.com/opinion/4460470/the-manitowoc-company-inc-v-john-m-lanning/#:~:text=essentially%20deals%20with%20restraint%20of,a%20'covenant%20not%20to%20compete.'>
+
+[^guth-limitless-public-policy]: **Guth v. Minnesota Mining & Mfg. Co.** — "Upon the facts peculiar to this ease we are convinced that those provisions of the contract which were limitless in extent of time and in subject matter of invention were contrary to public policy." *Guth v. Minnesota Mining & Mfg. Co., 72 F.2d 385 (7th Cir. 1934).* <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=Upon%20the%20facts%20peculiar%20to,were%20contrary%20to%20public%20policy.>
+
+[^guth-divisible]: **Guth v. Minnesota Mining & Mfg. Co.** — "Some of the covenants are contrary to public policy and non-enforceable. Others are valid and enforceable in a court of equity (although courts are not required in all cases to grant the specific performance of such contracts)." *Guth v. Minnesota Mining & Mfg. Co., 72 F.2d 385 (7th Cir. 1934).* <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=Some%20of%20the%20covenants%20are,specific%20performance%20of%20such%20contracts).>
 
 [^guth-gross]: **Guth v. Minnesota Mining & Mfg. Co.** — "Assignments in gross of future inventions are not favored." *Guth v. Minnesota Mining & Mfg. Co., 72 F.2d 385 (7th Cir. 1934).* <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=Assignments%20in%20gross%20of%20future%20inventions%20are%20not%20favored.>

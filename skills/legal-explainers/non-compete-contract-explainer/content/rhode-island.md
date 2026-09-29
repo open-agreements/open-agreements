@@ -2,7 +2,7 @@
 jurisdiction: "Rhode Island"
 slug: rhode-island
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/rhode-island · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/rhode-island · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Rhode Island[^about]
 
@@ -28,11 +28,11 @@ Rhode Island bans non-competes for several worker categories and regulated profe
 
 | Question | Rhode Island |
 | --- | --- |
-| **Are non-competes enforceable?** | Allowed above a pay level |
+| **Are non-competes enforceable?** | Income-based limits |
 | **Bottom line** | Rhode Island applies common-law reasonableness to most workers but bans non-competes for low-wage and several other worker categories (FLSA-nonexempt, student interns, age 18 or younger) and for physicians and APRNs. |
-| **Main law or case** | R.I. Gen. Laws § 28-59-3 (Rhode Island Noncompetition Agreement Act) |
+| **Main law or case** | Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1053 (R.I. 1989). R.I. Gen. Laws § 28-59-3(a). R.I. Gen. Laws § 5-37-33(a). R.I. Gen. Laws § 5-34-50(a). |
 | **Main exceptions** | Worker-category bans (low-wage, FLSA-nonexempt, interns, ≤18); physician (§ 5-37-33) and APRN (§ 5-34-50) bans with a 5-year sale-of-practice exception; non-solicits/NDAs/sale excluded from definition |
-| **When the ban took effect** | Physician/APRN bans eff. June 17, 2024 (worker-category ban date not stated in note) |
+| **When the ban took effect** | Worker-category ban effective Jan. 15, 2020; physician ban July 12, 2016; APRN ban June 17, 2024 |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | No |
 | **Restriction extended during a breach?** | Not addressed |
@@ -53,7 +53,7 @@ The low-wage category is indexed to the federal poverty level. The statute defin
 
 ## What Rhode Island restrictions are excluded from the statutory non-compete definition? {#excluded-covenants}
 
-**Short answer.** Rhode Island excludes several common restraints from the Chapter 28-59 definition of a noncompetition agreement, including employee non-solicits, customer non-solicits, confidentiality agreements, and sale-of-business covenants [^rinaa-noncompete-definition].
+**Short answer.** Rhode Island excludes several common restraints from the Chapter 28-59 definition of a noncompetition agreement, including employee non-solicits, customer non-solicits and confidentiality agreements [^rinaa-noncompete-definition][^rinaa-definition-exclusions][^rinaa-confidentiality-exclusion]. It also excludes a covenant made in connection with the sale of a business entity or of all or substantially all of its operating assets, or the disposal of an ownership interest, but only when the restricted party is a significant owner, member or partner who will receive significant consideration or benefit from the sale [^rinaa-sale-exclusion].
 
 That does not make those covenants automatically enforceable. It means the RINAA ban does not decide the issue. Customer non-solicits, employee non-solicits, NDAs, confidentiality clauses, sale covenants, and qualifying separation agreements fall back to common law, trade-secret law, or the separate statute that governs the profession or industry.
 
@@ -158,7 +158,11 @@ The federal FTC Non-Compete Rule is also background rather than an operative Rho
 
 [^rinaa-noncompete-definition]: **R.I. Gen. Laws § 28-59-2** — "‘Noncompetition agreement’ means an agreement between an employer and an employee, or otherwise arising out of an existing or anticipated employment relationship, under which the employee or expected employee agrees that he or she will not engage in certain specified activities competitive with his or her employer after the employment relationship has ended." *R.I. Gen. Laws § 28-59-2(8).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm>
 
+[^rinaa-definition-exclusions]: **R.I. Gen. Laws § 28-59-2** — "Noncompetition agreements include forfeiture for competition agreements, but do not include: (i) Covenants not to solicit or hire employees of the employer; (ii) Covenants not to solicit or transact business with customers, clients, or vendors of the employer; (iii) Noncompetition agreements made in connection with the sale of a business entity or all or substantially all of the operating assets of a business entity or partnership, or otherwise disposing of the ownership interest of a business entity or partnership, or division or subsidiary of any of the foregoing, when the party restricted by the noncompetition agreement is a significant owner of, or member or partner in, the business entity who will receive significant consideration or benefit from the sale or disposal; (iv) Noncompetition agreements originating outside of an employment relationship; (v) Forfeiture agreements; (vi) Nondisclosure or confidentiality agreements; (vii) Invention assignment agreements; (viii) Noncompetition agreements made in connection with the cessation of or separation from employment if the employee is expressly granted seven (7) business days to rescind acceptance; or (ix) Agreements by which an employee agrees to not reapply for employment to the same employer after termination of the employee." *R.I. Gen. Laws § 28-59-2(8).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm>
+
 [^rinaa-confidentiality-exclusion]: **R.I. Gen. Laws § 28-59-2** — "(vi) Nondisclosure or confidentiality agreements;" *R.I. Gen. Laws § 28-59-2(8)(vi).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm>
+
+[^rinaa-sale-exclusion]: **R.I. Gen. Laws § 28-59-2** — "(iii) Noncompetition agreements made in connection with the sale of a business entity or all or substantially all of the operating assets of a business entity or partnership, or otherwise disposing of the ownership interest of a business entity or partnership, or division or subsidiary of any of the foregoing, when the party restricted by the noncompetition agreement is a significant owner of, or member or partner in, the business entity who will receive significant consideration or benefit from the sale or disposal;" *R.I. Gen. Laws § 28-59-2(8)(iii).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm>
 
 [^durapin-enforcement-elements]: **Durapin, Inc. v. American Products, Inc.** — "Before a court reaches this question, however, the party seeking to enforce a noncompetition provision must show that (1) the provision is ancillary to an otherwise valid transaction or relationship, such as an employment contract or a contract for the purchase and sale of a business, Restatement (Second)" *Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1053 (R.I. 1989).* <https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=Before%20a%20court%20reaches%20this,of%20a%20business%2C%20Restatement%20(Second)>
 

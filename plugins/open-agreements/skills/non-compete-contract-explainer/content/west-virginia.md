@@ -2,7 +2,7 @@
 jurisdiction: "West Virginia"
 slug: west-virginia
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in West Virginia[^about]
 
@@ -30,7 +30,7 @@ West Virginia uses the common-law Reddy reasonableness test for employee non-com
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | West Virginia enforces employee non-competes under the common-law Reddy reasonableness test, but a facially unreasonable covenant is void with no judicial narrowing, and a physician statute caps medical covenants at one year and thirty miles. |
-| **Main law or case** | common law (Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368 (1982)) |
+| **Main law or case** | Common law governs, with a physician statute; Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982). W. Va. Code § 47-11E-2. |
 | **Main exceptions** | Physician covenants capped at one year/30 road miles and void on employer termination (W. Va. Code § 47-11E); sale-of-business lesser scrutiny; non-piracy clauses less restrictive |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |
@@ -50,7 +50,7 @@ Recent application points the same way. In *Special Services Bureau*, the court 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A West Virginia covenant stands only on a concrete interest it protects. West Virginia has no general non-compete statute, and every post-employment restraint runs the two-stage *Reddy* inquiry: the employer must first show an interest requiring protection, and the restraint is then reasonable only if it is no greater than required, imposes no undue hardship on the employee, and is not injurious to the public [^reddy-employer-burden][^reddy-employee-rule-of-reason]. Trade secrets, customer lists, customer goodwill, and unusual employer-funded training qualify; general managerial, supervisory, merchandising, purchasing, and advertising skills do not, and publicly available customer information plus ordinary sales work fares no better [^helms-general-managerial-skills][^voorhees-no-protectable-interest]. An acknowledgement or an irreparable-harm recital does not fill that gap — where the employer fails the protectable-interest gate, a court never reaches reasonableness [^special-services-protectable-interest-gate]. The gate also travels with an assignment: an assignee or successor must itself hold the protected interest before enforcing, and there is no statutory safe harbor to fall back on.
+> A covenant whose recitals rely on an acknowledgement or an irreparable-harm stipulation, rather than identifying the interest the restraint protects, leaves open the protectable-interest showing the employer bears the burden of making [^reddy-employer-burden]. A covenant that fails on that ground is not enforced, and the court need not reach its reasonableness [^special-services-protectable-interest-gate].
 
 ## Will West Virginia courts narrow an overbroad non-compete? {#court-narrowing}
 
@@ -81,7 +81,7 @@ Recent application points the same way. In *Special Services Bureau*, the court 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A mid-employment West Virginia covenant depends on separate consideration documented in the agreement itself. A raise, bonus, promotion, equity grant, term extension, or other benefit must be real and covenant-linked; merely continuing the job is the fact pattern *Environmental Products* rejected [^environmental-products-new-consideration][^environmental-products-only-limitations]. Consideration left blank or implied when the covenant comes mid-employment is the vulnerable case: in the [OpenAgreements West Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-west-virginia), the specific value belongs in the New Consideration (if signed after hire) cover term, and in any form the instrument that recites the value stands on firmer ground than one reconstructed in litigation. The rule follows the covenant forward — an amendment that re-papers a covenant after employment has begun is itself a covenant contracted mid-employment and needs new consideration of its own [^pemco-new-contract-new-consideration]. And adequate consideration only shows the covenants are supported; it does not substitute for the independent reasonableness showing each covenant must still make.
+> A covenant signed after employment began whose only consideration is continued employment matches the covenant *Environmental Products* held to lack the required new consideration, because it imposed limitations without altering any benefit [^environmental-products-new-consideration][^environmental-products-only-limitations]. A blank New Consideration (if signed after hire) cover term in the [OpenAgreements West Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-west-virginia) leaves any new benefit undocumented, and a non-compete added after the employee was hired without one must be a new contract supported by new consideration [^pemco-new-contract-new-consideration].
 
 ## Are customer non-solicitation clauses enforceable in West Virginia? {#customer-nonsolicits}
 
@@ -98,7 +98,7 @@ Validity still depends on a three-factor test: a protectable business interest, 
 
 ## Does the restricted period toll or extend during a breach or lawsuit in West Virginia? {#extended-for-breach}
 
-**Short answer.** This is an open West Virginia question. The staged West Virginia appellate corpus does not contain a decision squarely deciding whether a court may extend a non-compete period for time spent in breach or litigation, or whether an extension-on-breach clause is enforceable.
+**Short answer.** This is an open West Virginia question. The identified West Virginia appellate corpus does not contain a decision squarely deciding whether a court may extend a non-compete period for time spent in breach or litigation, or whether an extension-on-breach clause is enforceable.
 
 > [!NOTE]
 > **Practice note.**
@@ -130,7 +130,7 @@ The policy is different from employment. A sale covenant helps transfer goodwill
 
 ## Are low-wage workers protected from non-competes in West Virginia? {#low-wage-workers}
 
-**Short answer.** There is no enacted West Virginia wage-threshold ban in the staged corpus. Low-wage protection instead comes through *Reddy*'s undue-hardship and public-interest prongs, plus the employer's burden to prove a legitimate protectable interest [^reddy-low-wage-undue-hardship].
+**Short answer.** There is no enacted West Virginia wage-threshold ban in the identified corpus. Low-wage protection instead comes through *Reddy*'s undue-hardship and public-interest prongs, plus the employer's burden to prove a legitimate protectable interest [^reddy-low-wage-undue-hardship].
 
 That means income level is not a standalone statutory cutoff the way it is in some states. It still matters factually. A restraint that makes an employee unable to earn a livelihood, while doing little to protect trade secrets, customer goodwill, or employer-funded training, is vulnerable under the same common-law reasonableness framework that governs other West Virginia employee covenants [^reddy-low-wage-undue-hardship][^helms-low-wage-general-skills].
 
@@ -145,7 +145,7 @@ For non-physician employees, ordinary contract and trade-secret tools are often 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Trade secrets and ordinary confidential information carry different durations: trade-secret obligations can run for as long as the information remains a trade secret, but a perpetual lid on non-secret information can operate as a practical non-compete, so ordinary confidential information holds up only under its own finite term tied to actual confidential information rather than to the worker's ability to do similar work [^reddy-trade-secrets-customer-lists]. The statutory overlay matters at enforcement time: the West Virginia Uniform Trade Secrets Act displaces conflicting tort, restitutionary, and other civil remedies for misappropriation of a trade secret but does not affect contractual remedies, so a confidentiality covenant supplies a contract claim that runs alongside the statutory one [^wv-47-22-7-preserved-contract-remedies]. The act also lets a court award reasonable attorney's fees where a misappropriation claim is made in bad faith, a motion to terminate an injunction is made or resisted in bad faith, or willful and malicious misappropriation occurs — independent of any contractual fee clause; absent contractual fee-shifting each side bears its own costs, so a fee clause that is mutual and prevailing-party based carries the intended effect [^wv-47-22-4-attorney-fees].
+> A confidentiality clause that binds everything the employee learns, indefinitely, reaches beyond the trade secrets and customer lists whose competitive use by former employees *Reddy* describes courts as reluctant to permit, so *Reddy* gives the excess no support [^reddy-trade-secrets-customer-lists]. An agreement without its own confidentiality covenant has no claim for breach of that covenant, a contractual remedy the West Virginia Uniform Trade Secrets Act does not affect [^wv-47-22-7-preserved-contract-remedies]. Without a fee clause, a fee award under W. Va. Code § 47-22-4 depends on a bad-faith misappropriation claim, a motion to terminate an injunction made or resisted in bad faith, or willful and malicious misappropriation [^wv-47-22-4-attorney-fees].
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not West Virginia. This article synthesizes West Virginia primary law and is not legal advice from a West Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in West Virginia*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/west-virginia.
 

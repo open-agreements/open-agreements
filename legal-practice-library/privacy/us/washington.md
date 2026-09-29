@@ -2,10 +2,10 @@
 type: State Law Practice Guide
 title: Washington Consumer Privacy Law (My Health My Data Act)
 description: >-
-  Washington has no comprehensive consumer-privacy statute, but the My Health My
-  Data Act (ch. 19.373 RCW) reaches biometrics, precise location, and health
-  inferences across most consumer businesses — and a violation is a per se
-  Consumer Protection Act violation that consumers can sue over.
+  Washington State has no comprehensive consumer-privacy statute, but the My
+  Health My Data Act (ch. 19.373 RCW) reaches biometrics, precise location, and
+  health inferences across most consumer businesses — and a violation is a per
+  se Consumer Protection Act violation that consumers can sue over.
 resource: 'https://openagreements.org/practice-guides/privacy/us/washington'
 timestamp: '2026-06-11'
 tags:
@@ -15,7 +15,7 @@ tags:
 
 # Washington Consumer Privacy Law (My Health My Data Act)[^about]
 
-Washington has no comprehensive consumer-privacy statute, but the My Health My Data Act (ch. 19.373 RCW) reaches biometrics, precise location, and health inferences across most consumer businesses — and a violation is a per se Consumer Protection Act violation that consumers can sue over.
+Washington State has no comprehensive consumer-privacy statute, but the My Health My Data Act (ch. 19.373 RCW) reaches biometrics, precise location, and health inferences across most consumer businesses — and a violation is a per se Consumer Protection Act violation that consumers can sue over.
 
 ## Which privacy laws apply to your business in Washington? {#which-privacy-laws-apply}
 

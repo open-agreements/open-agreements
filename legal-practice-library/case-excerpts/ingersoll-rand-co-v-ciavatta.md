@@ -2,14 +2,18 @@
 type: Case Excerpt
 title: Ingersoll-Rand Co. v. Ciavatta
 description: >-
-  Ingersoll-Rand Co. v. Ciavatta, 110 N.J. 609 (1988). — quoted in 3
+  Ingersoll-Rand Co. v. Ciavatta, 110 N.J. 609 (1988). — quoted in 5
   document(s).
 citation: 'Ingersoll-Rand Co. v. Ciavatta, 110 N.J. 609 (1988).'
 resource: 'https://www.courtlistener.com/opinion/1916343/ingersoll-rand-co-v-ciavatta/'
-timestamp: '2026-06-30'
+timestamp: '2026-07-03'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/iowa'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/maine'
   - type: State Law Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/invention-assignment/us/new-jersey
@@ -25,7 +29,7 @@ tags:
 
 *Ingersoll-Rand Co. v. Ciavatta, 110 N.J. 609 (1988).*
 
-Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 5 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -53,7 +57,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `holdover-clause-limit`
 - source_cards: `ciavatta-holdover`
-- cited_by: [Employee Invention Assignment in New Jersey](../invention-assignment/us/new-jersey.md)
+- cited_by: [Employee Invention Assignment in Iowa](../invention-assignment/us/iowa.md), [Employee Invention Assignment in Maine](../invention-assignment/us/maine.md), [Employee Invention Assignment in New Jersey](../invention-assignment/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1916343/ingersoll-rand-co-v-ciavatta/#:~:text=In%20sum%2C%20we%20conclude%20that,the%20three%2Dprong%20test%20of%20Solari%2FWhitmyer.>
 
 ### ingersoll-rand-co-v-ciavatta-moreover-courts-strictly-construe-6c9dfa6b {#ingersoll-rand-co-v-ciavatta-moreover-courts-strictly-construe-6c9dfa6b}

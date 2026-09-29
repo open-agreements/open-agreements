@@ -38,7 +38,14 @@
       "rel": "related-form",
       "href": "https://openagreements.org/templates/nvca-management-rights-letter",
       "type": "text/html",
-      "title": "Model Management Rights Letter"
+      "title": "NVCA Management Rights Letter"
+    },
+    {
+      "rel": "download",
+      "href": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
+      "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "title": "NVCA Management Rights Letter (2020), Word. The NVCA Word form is not covered by this page's CC BY 4.0 license.",
+      "external": true
     },
     {
       "rel": "contract-api",
@@ -223,8 +230,8 @@
         "sources": [
           {
             "sourceId": "nvca-mrl-purchase",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 0",
             "citation": "paragraph 0",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -287,8 +294,8 @@
         "sources": [
           {
             "sourceId": "nvca-mrl-consultation",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 1",
             "citation": "paragraph 1",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -329,8 +336,8 @@
         "sources": [
           {
             "sourceId": "nvca-mrl-inspection",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 2",
             "citation": "paragraph 2",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -372,8 +379,8 @@
         "sources": [
           {
             "sourceId": "nvca-mrl-board-materials",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 3",
             "citation": "paragraph 3",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -383,8 +390,8 @@
           },
           {
             "sourceId": "nvca-mrl-board-address",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 3",
             "citation": "paragraph 3",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -430,8 +437,8 @@
         "sources": [
           {
             "sourceId": "nvca-mrl-restrictions",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 4",
             "citation": "paragraph 4",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -452,8 +459,8 @@
           },
           {
             "sourceId": "nvca-mrl-regulatory-tension",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — editorial footnote 4",
             "citation": "NVCA Management Rights Letter (July 2020), footnote 4.",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -492,8 +499,8 @@
         "sources": [
           {
             "sourceId": "nvca-mrl-confidentiality",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 5",
             "citation": "paragraph 5",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -503,8 +510,8 @@
           },
           {
             "sourceId": "nvca-mrl-confidentiality-note",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — editorial footnote 5",
             "citation": "footnote 5",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -544,8 +551,8 @@
         "sources": [
           {
             "sourceId": "nvca-mrl-termination",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 6",
             "citation": "paragraph 6",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -590,8 +597,8 @@
         "sources": [
           {
             "sourceId": "nvca-mrl-purchase-execution",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Management Rights Letter — operative model text, paragraph 0",
             "citation": "paragraph 0",
             "url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",

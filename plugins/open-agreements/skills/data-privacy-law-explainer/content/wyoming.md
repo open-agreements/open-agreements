@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wyoming · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wyoming · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Wyoming Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Wyoming has no comprehensive consumer-privacy statute. The operative state laws 
 | --- | --- |
 | **Law coverage** | Specific data types only |
 | **Summary** | Wyoming has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative state laws are the data-breach notification statute (Wyo. Stat. §§ 40-12-501 et seq.), the Wyoming Consumer Protection Act, and a genetic-data privacy chapter that imposes consent, notice, and deletion duties on direct-to-consumer genetic testing companies and carries a private right of action. Everything else in a Wyoming-facing privacy program comes from the federal and sectoral overlay — FTC Act § 5, GLBA, HIPAA, and COPPA. |
-| **Main law** | Wyo. Stat. §§ 40-12-501 et seq. (breach of the security of the data system), the Wyoming Consumer Protection Act, §§ 40-12-101 et seq., and the genetic data privacy chapter, §§ 35-32-101 et seq. — Wyoming has no comprehensive consumer-privacy law |
+| **Main law** | No comprehensive consumer-privacy law; Wyo. Stat. § 40-12-502(a). Wyo. Stat. § 40-12-105(a). Wyo. Stat. § 35-32-102(a). |
 | **Privacy policy required?** | No general Wyoming statute mandates a consumer privacy policy or fixes its contents; direct-to-consumer genetic testing companies must post a high-level privacy-policy overview and a prominent privacy notice, and FTC Act § 5, GLBA, HIPAA, and COPPA drive contents for everyone else |
 | **Who does it cover?** | Any individual or commercial entity that conducts business in Wyoming and owns or licenses computerized personal identifying information about Wyoming residents — no revenue or consumer-volume threshold; the genetic-data chapter reaches direct-to-consumer genetic testing companies |
 | **Can consumers sue?** | Limited path |

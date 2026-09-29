@@ -2,18 +2,22 @@
 type: Case Excerpt
 title: 'Solari Industries, Inc. v. Malady'
 description: >-
-  Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970). — quoted in 2
+  Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970). — quoted in 3
   document(s).
 citation: 'Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970).'
 resource: 'https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/'
-timestamp: '2026-06-12'
+timestamp: '2026-06-30'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/new-jersey
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -21,7 +25,7 @@ tags:
 
 *Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -38,9 +42,9 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > It will generally be found to be reasonable where it simply protects the legitimate interests of the employer, imposes no undue hardship on the employee, and is not injurious to the public.
 
-- supports: `employee-non-compete-enforceability`, `new-jersey-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `holdover-clause-limit`, `new-jersey-statutory-gates`
 - source_cards: `nj-solari-test`, `solari-three-prong`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Employee Invention Assignment in New Jersey](../invention-assignment/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=It%20will%20generally%20be%20found,not%20injurious%20to%20the%20public.>
 
 ### solari-industries-inc-v-malady-we-are-entirely-satisfied-that-the-f557b2bf {#solari-industries-inc-v-malady-we-are-entirely-satisfied-that-the-f557b2bf}

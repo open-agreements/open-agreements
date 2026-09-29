@@ -6,7 +6,7 @@ description: >-
   document(s).
 citation: 'Summits 7, Inc. v. Kelly, 2005 VT 97, 178 Vt. 396, 886 A.2d 365.'
 resource: 'https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/'
-timestamp: '2026-07-03'
+timestamp: '2026-09-26'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
@@ -36,6 +36,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - source_cards: `summits7-burden-defs`, `summits7-burden-gate`, `summits7-burden-timing`, `summits7-employer-burden`, `summits7-employer-burden-drafting`, `summits7-employer-burden-physician`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/#:~:text=%5Bt%5Dhe%20employer%20has%20the%20burden,necessity%20of%20the%20restrictive%20covenant.>
+
+### summits-7-inc-v-kelly-lasker-does-argue-that-the-superior-b65988f8 {#summits-7-inc-v-kelly-lasker-does-argue-that-the-superior-b65988f8}
+
+> Lasker does argue that the superior court erred by not addressing whether the geographic scope of the agreement was unreasonably broad, but, as we explain later, we need not consider this issue because Lasker plainly sought and obtained employment within a reasonably restricted geographic area, and the court may enforce the agreement to the extent that it is reasonable.
+
+- supports: `holdover-clause-limit`
+- source_cards: `summits7-scope-not-reached`
+- cited_by: [Employee Invention Assignment in Vermont](../invention-assignment/us/vermont.md)
+- link_to_source: <https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/#:~:text=Lasker%20does%20argue%20that%20the,extent%20that%20it%20is%20reasonable.>
 
 ### summits-7-inc-v-kelly-most-modem-courts-agree-that-a-b364922b {#summits-7-inc-v-kelly-most-modem-courts-agree-that-a-b364922b}
 

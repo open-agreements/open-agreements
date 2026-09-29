@@ -38,7 +38,14 @@
       "rel": "related-form",
       "href": "https://openagreements.org/templates/nvca-stock-purchase-agreement",
       "type": "text/html",
-      "title": "Model Stock Purchase Agreement"
+      "title": "NVCA Stock Purchase Agreement"
+    },
+    {
+      "rel": "download",
+      "href": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx",
+      "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "title": "NVCA Stock Purchase Agreement (October 2025), Word. The NVCA Word form is not covered by this page's CC BY 4.0 license.",
+      "external": true
     },
     {
       "rel": "contract-api",
@@ -55,7 +62,7 @@
       "description": "A clause-by-clause reviewer checklist for the NVCA Model Stock Purchase Agreement, covering the full agreement — the Section 1 purchase-and-sale mechanics, the Section 2 company and Section 3 purchaser representations, the Section 4 and Section 5 closing conditions, the Section 6 miscellaneous provisions, and the exhibit-package completeness checks.",
       "eyebrow": "Reviewer Checklist",
       "coverage": "NVCA-style venture financing stock purchase agreement",
-      "lastReviewed": "2026-06-22",
+      "lastReviewed": "2026-09-26",
       "license": "CC BY 4.0",
       "authors": [
         "steven-obiajulu"
@@ -179,7 +186,7 @@
         "sectionId": "purchase-and-sale",
         "itemNumber": "1.2",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#identify-investor",
-        "requirementGuidance": "Check whether the Purchasers are named in the body of the agreement. The operative identification is the Schedule of Purchasers — the next item — so naming the Purchasers in the body as well is good practice rather than a requirement; where they are named, confirm those names match the schedule so share issuance, payment duties, and purchaser-specific rights attach to the correct party.",
+        "requirementGuidance": "Check whether the Purchasers are named in the body of the agreement. The operative identification is the Schedule of Purchasers, so naming the Purchasers in the body as well is good practice rather than a requirement; where they are named, confirm those names match the schedule so share issuance, payment duties, and purchaser-specific rights attach to the correct party.",
         "variants": [],
         "sources": []
       },
@@ -293,8 +300,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-restated-certificate",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 1.1(a)",
             "citation": "NVCA Model Stock Purchase Agreement § 1.1(a) (v10-28-2025); see id. n.1.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -321,8 +328,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-closing-deliverables",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 1.2 (Closing Deliverables)",
             "citation": "NVCA Model Stock Purchase Agreement § 1.2 (Closing Deliverables) (v10-28-2025); see id. nn.15–16.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -360,9 +367,20 @@
         "sectionId": "purchase-and-sale",
         "itemNumber": "1.11",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#address-tranche-funding-default",
-        "requirementGuidance": "If the round funds in milestone-dependent tranches, check that the tranche-closing trigger and any default remedy are defined. The §1.2(c) default remedy is punitive by design: the NVCA form brackets a forced conversion of the defaulting Purchaser's preferred into common at [one-tenth] of a common share per preferred share — a roughly 90% haircut — and one filed charter (Durata Therapeutics) implements that one-tenth ratio through a $1.00 original-issue price over a $10.00 conversion price. Confirm the bracketed conversion ratio is filled and reconciles against the Restated Certificate, and treat a ratio materially gentler than the NVCA-bracketed one-tenth as a negotiated term to confirm with the deal lead. Keep this §1.2(c) tranche-default remedy distinct from the charter's Special Mandatory Conversion pay-to-play mechanic, which operates on a separate trigger.",
+        "requirementGuidance": "If the round funds in milestone-dependent tranches, check that the tranche-closing trigger and any default remedy are defined. The §1.2(c) default remedy is punitive by design: the NVCA form brackets a forced conversion of the defaulting Purchaser's preferred into common at [one-tenth] of a common share per preferred share, a roughly 90% haircut. Confirm the bracketed conversion ratio is filled and reconciles against the Restated Certificate, and treat a ratio materially gentler than the NVCA-bracketed one-tenth as a negotiated term to confirm with the deal lead. Keep this §1.2(c) tranche-default remedy distinct from the charter's Special Mandatory Conversion pay-to-play mechanic, which operates on a separate trigger.",
         "variants": [],
         "sources": [
+          {
+            "sourceId": "nvca-spa-tranche-default-conversion",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 1.2(c)(iv) (Special Mandatory Conversion)",
+            "citation": "NVCA Model Stock Purchase Agreement § 1.2(c)(iv) (v10-28-2025).",
+            "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
+            "proposition": "The NVCA form converts a defaulting Purchaser's preferred stock into common stock at the bracketed rate of [one-tenth] of a common share for each preferred share.",
+            "verbatimQuote": "Except as otherwise specified in this Agreement or the Restated Certificate, and unless this Section 1.2(c)(iv) is waived in writing by the Requisite Purchasers with respect to all Purchasers, if any Purchaser, together with such Purchaser’s Affiliates, fails to purchase its required number of Tranche Closing Shares at the Tranche Closing (including for calculation purposes all Tranche Closing Shares purchased at any Elective Closing)  (any such Purchaser, a “Defaulting Purchaser”), then each Share held by such Defaulting Purchaser as of immediately prior to the Tranche Closing (the “Subject Preferred Stock”) shall automatically, and without any further action on the part of such Defaulting Purchaser, the Company or any other Person, be converted into fully paid and nonassessable shares of the Company’s common stock, $0.0001 par value per share (the “Common Stock”) at the rate of [one-tenth] of a share of Common Stock for each one share of the Subject Preferred Stock, all pursuant to, and as further provided in, Article Fourth, Part B, Section [5A.1] of the Restated Certificate (a “Special Mandatory Conversion”).",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-nvca-spa-tranche-default-conversion"
+          },
           {
             "sourceId": "edgar-durata-smc",
             "authorityType": "commentary",
@@ -409,8 +427,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-capitalization",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 2.2 (Capitalization)",
             "citation": "NVCA Model Stock Purchase Agreement § 2.2(a)(iii) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -464,8 +482,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-valid-issuance",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 2.5 (Valid Issuance)",
             "citation": "NVCA Model Stock Purchase Agreement § 2.5 (v10-28-2025); see id. n.36.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -584,7 +602,7 @@
         "sectionId": "company-representations-and-warranties",
         "itemNumber": "2.11",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-agreements-and-actions",
-        "requirementGuidance": "The agreements-and-actions representation is standard NVCA text; the reviewer's value here is the fillable parts, not its presence. In the filed Series A SPAs reviewed (Immunome and Encapsion), the individual material-contract threshold was set at $50,000; check that the bracketed thresholds are filled in — a blank threshold leaves the disclosure scope undefined — and that the figure is proportionate to the company's size: a threshold set very high relative to a small company's operations guts the disclosure by letting material contracts fall below the reporting line. Confirm too that the disclosure schedules listing material agreements, indebtedness, and out-of-ordinary-course actions match what diligence has surfaced.",
+        "requirementGuidance": "Check that the bracketed thresholds in the agreements-and-actions representation are filled in; a blank threshold leaves the disclosure scope undefined. Confirm the figures are proportionate to the company's size because a threshold set too high can let material contracts fall below the reporting line. Reconcile the disclosure schedules listing material agreements, indebtedness, and out-of-ordinary-course actions against what diligence has surfaced.",
         "variants": [],
         "sources": [
           {
@@ -647,8 +665,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-mae-definition",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), Defined Terms",
             "citation": "NVCA Model Stock Purchase Agreement § 1.4 (Material Adverse Effect) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -725,9 +743,21 @@
         "sectionId": "company-representations-and-warranties",
         "itemNumber": "2.19",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-disclosure",
-        "requirementGuidance": "The catch-all disclosure rep cuts both ways, so weigh both sides. For Purchaser counsel, guard against the rep being omitted or narrowed — that no representation or certificate contains an untrue statement of material fact or omits a material fact needed to make the statements not misleading — because it backstops the specific representations and can give Purchasers a broader recovery than a securities-fraud claim. For Company counsel, guard against the rep being broadened beyond the standard NVCA-style catch-all, which can expand the company's exposure past what the form contemplates. Where the catch-all has been omitted, narrowed below the standard NVCA-style language, or broadened past it, raise the deviation with the party whose exposure it shifts so they can decide whether to insist on the standard form.",
+        "requirementGuidance": "Confirm the catch-all disclosure representation is present and has not been omitted or narrowed below the NVCA default: no representation or certificate contains an untrue statement of a material fact or, to the company's knowledge, omits a material fact needed to make the statements not misleading. It backstops the specific representations. The NVCA default knowledge-qualifies only the omission prong, so flag an added knowledge or materiality qualifier on the untrue-statement prong. A version broadened past the NVCA default is not a defect for the Purchasers.",
         "variants": [],
-        "sources": []
+        "sources": [
+          {
+            "sourceId": "nvca-spa-disclosure",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 2.36 (Disclosure)",
+            "citation": "NVCA Model Stock Purchase Agreement § 2.36 (v10-28-2025).",
+            "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
+            "proposition": "The NVCA form represents that company representations and closing certificates contain no untrue statement of a material fact and, to the company's knowledge, omit no material fact needed to make their statements not misleading.",
+            "verbatimQuote": "No representation or warranty of the Company contained in this Agreement, as qualified by the Disclosure Schedule, and no certificate furnished or to be furnished to Purchasers at the Closing contains any untrue statement of a material fact or, to the Company’s knowledge, omits to state a material fact necessary in order to make the statements contained herein or therein not misleading in light of the circumstances under which they were made.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-nvca-spa-disclosure"
+          }
+        ]
       },
       {
         "requirementId": "represent-qualified-small-business-stock",
@@ -740,7 +770,7 @@
         "sectionId": "company-representations-and-warranties",
         "itemNumber": "2.20",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-qualified-small-business-stock",
-        "requirementGuidance": "Where the Purchasers want Qualified Small Business Stock treatment, check whether the agreement includes a Section 1202 representation on the company's eligibility — the gross-asset ceiling and active-business conditions. The Section 1202 gain exclusion can be significant for Purchasers, so confirm the representation tracks the statute and check the company's gross assets against the $75 million ceiling: for stock acquired after July 4, 2025, the 2025 amendments raised the gross-asset cap to $75 million and introduced a tiered exclusion with shorter holding periods — 50% at 3 years, 75% at 4 years, and 100% at 5 years. The same amendments also raised the per-issuer gain-exclusion cap to $15 million for stock acquired after July 4, 2025, and both the $75 million gross-asset threshold and the $15 million per-issuer cap are indexed for inflation for tax years beginning after 2026, so check the company's figures against the adjusted limits for the year of acquisition.",
+        "requirementGuidance": "Where the Purchasers want Qualified Small Business Stock treatment, check whether the agreement includes a Section 1202 representation on the company's eligibility — the gross-asset ceiling and active-business conditions. The Section 1202 gain exclusion can be significant for Purchasers, so confirm the representation tracks the statute and check the company's gross assets against the $75 million ceiling: for stock acquired after July 4, 2025, the 2025 amendments raised the gross-asset cap to $75 million and introduced a tiered exclusion with shorter holding periods — 50% at 3 years, 75% at 4 years, and 100% at 5 years. The same amendments also raised the per-issuer gain-exclusion cap to $15 million for stock acquired after July 4, 2025, and the $15 million per-issuer cap will be indexed for inflation for tax years beginning after 2026. The gross-asset test applies to the company when the shares are issued, while the per-issuer cap limits the Purchasers' exclusion in the year they sell, so check each figure against the limit in effect at the relevant time.",
         "variants": [],
         "sources": [
           {
@@ -823,7 +853,7 @@
         "sectionId": "purchaser-representations-and-warranties",
         "itemNumber": "3.1",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-purchaser-authorization",
-        "requirementGuidance": "Confirm each Purchaser represents that it has full power and authority to enter the transaction agreements and that those agreements are valid and binding on it. This is the purchaser-side mirror of the company's authorization rep; where it has been removed or qualified so heavily that the Purchaser's funding obligation reads as unenforceable, treat that as a defect to resolve before the company relies on the Purchaser's commitment.",
+        "requirementGuidance": "Confirm each Purchaser represents that it has full power and authority to enter the transaction agreements and that those agreements are valid and binding on it. This is the purchaser-side mirror of the company's authorization rep; where it has been removed or qualified so heavily that the Purchaser's funding obligation reads as unenforceable, treat that as a defect to resolve before closing, since the company and the other Purchasers rely on each Purchaser's commitment to fund.",
         "variants": [],
         "sources": []
       },
@@ -843,8 +873,8 @@
         "sources": [
           {
             "sourceId": "nvca-spa-own-account",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.2 (Purchase Entirely for Own Account)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.2 (Purchase Entirely for Own Account) (v10-28-2025); see id. n.83.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -863,7 +893,7 @@
         "sectionId": "purchaser-representations-and-warranties",
         "itemNumber": "3.3",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-access-to-information",
-        "requirementGuidance": "Confirm each Purchaser represents it had the opportunity to discuss the company's business and review its affairs. Check that the standard sentence preserving the Purchasers' right to rely on the company's Section 2 representations is intact, since a Purchaser should not be read to have waived the company's reps by acknowledging its own access to information.",
+        "requirementGuidance": "Confirm the access-to-information representation has not been removed, weakened, or over-qualified and that each Purchaser represents it had the opportunity to discuss the company's business and review its affairs. Check that the standard sentence preserving the Purchasers' right to rely on the company's Section 2 representations is intact, since a Purchaser should not be read to have waived the company's reps by acknowledging its own access to information.",
         "variants": [],
         "sources": []
       },
@@ -876,13 +906,13 @@
         "sectionId": "purchaser-representations-and-warranties",
         "itemNumber": "3.4",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-restricted-securities",
-        "requirementGuidance": "Confirm each Purchaser acknowledges the shares are restricted securities that have not been registered and must be held until registered or an exemption is available. This acknowledgment records that the Purchaser took the stock on notice of the Rule 144 resale limits, so treat any softening of the indefinite-hold language as a point for attorney review.",
+        "requirementGuidance": "Confirm the restricted-securities acknowledgment has not been removed or over-qualified and that each Purchaser acknowledges the shares are restricted securities that have not been registered and must be held until registered or an exemption is available. This acknowledgment records that the Purchaser took the stock on notice of the Rule 144 resale limits, so treat any softening of the indefinite-hold language as a point for attorney review.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-restricted-securities",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.4 (Restricted Securities)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.4 (Restricted Securities) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -926,7 +956,7 @@
         "sectionId": "purchaser-representations-and-warranties",
         "itemNumber": "3.6",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-legends",
-        "requirementGuidance": "Confirm each Purchaser acknowledges the shares may be notated with restrictive legends. Check the fillable parts: that the Securities Act legend text is present and that the cross-references to legends required by the other transaction agreements and by applicable state securities laws are intact, since the legend is how the transfer restrictions are policed after closing.",
+        "requirementGuidance": "Confirm the legends acknowledgment has not been removed, weakened, or over-qualified and that each Purchaser acknowledges the shares may be notated with restrictive legends. Check the fillable parts: that the Securities Act legend text is present and that the cross-references to legends required by the other transaction agreements and by applicable state securities laws are intact, since the legend is how the transfer restrictions are policed after closing.",
         "variants": [],
         "sources": []
       },
@@ -939,13 +969,13 @@
         "sectionId": "purchaser-representations-and-warranties",
         "itemNumber": "3.7",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-accredited-investor",
-        "requirementGuidance": "Confirm each Purchaser represents that it is an accredited investor as defined in Rule 501(a) of Regulation D. Accredited-investor status is the central factual basis for the Rule 506(b) private placement the round relies on, so where the form has been tailored for a co-investment nominee or a non-accredited purchaser, confirm the change is reconciled with the exemption being claimed; a non-accredited Purchaser in a round claiming Rule 506(b) is the mismatch to resolve with securities counsel before closing, since it can defeat the exemption.",
+        "requirementGuidance": "Confirm the accredited-investor representation has not been removed, weakened, or over-qualified and that each Purchaser represents it is an accredited investor as defined in Rule 501(a) of Regulation D. Accredited-investor status is the central factual basis for the Rule 506(b) private placement the round relies on, so where the form has been tailored for a co-investment nominee or a non-accredited purchaser, confirm the change is reconciled with the exemption being claimed; a non-accredited Purchaser in a round claiming Rule 506(b) is the mismatch to resolve with securities counsel before closing, since it can defeat the exemption.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-accredited-investor",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.7 (Accredited Investor)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.7 (Accredited Investor) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1002,7 +1032,7 @@
         "sectionId": "purchaser-representations-and-warranties",
         "itemNumber": "3.9",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-exculpation-among-purchasers",
-        "requirementGuidance": "Confirm each Purchaser acknowledges it is not relying on any other Purchaser and agrees the other Purchasers are not liable to it for the investment decision. This exculpation keeps the Purchasers from owing each other diligence or disclosure duties in a syndicated round, so confirm the standard language is present where the round has multiple Purchasers.",
+        "requirementGuidance": "Confirm the exculpation has not been removed, weakened, or over-qualified and that each Purchaser acknowledges it is not relying on any other Purchaser and agrees the other Purchasers are not liable to it for the investment decision. This exculpation keeps the Purchasers from owing each other diligence or disclosure duties in a syndicated round, so confirm the standard language is present where the round has multiple Purchasers.",
         "variants": [],
         "sources": []
       },
@@ -1015,7 +1045,7 @@
         "sectionId": "purchaser-representations-and-warranties",
         "itemNumber": "3.10",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#represent-purchaser-residence",
-        "requirementGuidance": "Confirm the agreement identifies each Purchaser's state or province of residence, or principal place of business, by reference to the signature page or the Schedule of Purchasers. The residence anchors which state blue-sky laws apply to the Purchaser's investment, so check that the referenced address details are actually filled in rather than left blank.",
+        "requirementGuidance": "Confirm the residence representation has not been removed, weakened, or over-qualified and identifies each Purchaser's state or province of residence, or principal place of business, by reference to the signature page or the Schedule of Purchasers. The residence anchors which state blue-sky laws apply to the Purchaser's investment, so check that the referenced address details are actually filled in rather than left blank.",
         "variants": [],
         "sources": []
       },
@@ -1074,13 +1104,13 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.1",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-representations-true-at-closing",
-        "requirementGuidance": "Confirm the Purchasers' obligation to close is conditioned on the company's Section 2 representations being true and correct as of the closing, as modified by the Disclosure Schedule. This bring-down keeps the diligence picture current to the moment the Purchasers fund, so check that the standard has not been weakened — for example, a materiality qualifier added across the board — and that any subsequent-closing standard is the one the deal intends.",
+        "requirementGuidance": "Confirm the Purchasers' obligation to close is conditioned on the company's Section 2 representations being true and correct as of the closing, as modified by the Disclosure Schedule. This bring-down keeps the diligence picture current to the moment the Purchasers fund, so check that the condition has not been weakened or quietly waived, for example by a materiality qualifier added across the board, and that any subsequent-closing standard is the one the deal intends.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-bring-down",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.1 (Representations and Warranties)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.1 (Representations and Warranties) (v10-28-2025); see id. n.89.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1099,7 +1129,7 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.2",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-performance-of-covenants",
-        "requirementGuidance": "Confirm the closing is conditioned on the company having performed and complied with the covenants and obligations it owes on or before the closing. This is the companion to the bring-down: it lets the Purchasers decline to fund if the company has not done what the agreement requires of it by the closing, so confirm the condition is present and not narrowed to a subset of the company's obligations.",
+        "requirementGuidance": "Confirm the closing is conditioned on the company having performed and complied with the covenants and obligations it owes on or before the closing. This is the companion to the bring-down: it lets the Purchasers decline to fund if the company has not done what the agreement requires of it by the closing, so confirm the condition is present, has not been quietly waived, and is not weakened by being narrowed to a subset of the company's obligations.",
         "variants": [],
         "sources": []
       },
@@ -1112,7 +1142,7 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.3",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-compliance-certificate",
-        "requirementGuidance": "Confirm the agreement requires a senior officer of the company to deliver a compliance certificate at the closing confirming that the bring-down and performance conditions have been satisfied. The certificate puts the company's compliance on the record and gives the Purchasers a signed officer statement they can rely on if a condition later proves unmet, so check that it cross-refers to the right condition sections.",
+        "requirementGuidance": "Confirm the compliance-certificate condition is present, has not been weakened or quietly waived, and requires a senior officer of the company to deliver a certificate at the closing confirming that the bring-down and performance conditions have been satisfied. The certificate puts the company's compliance on the record and gives the Purchasers a signed officer statement they can rely on if a condition later proves unmet, so check that it cross-refers to the right condition sections.",
         "variants": [],
         "sources": []
       },
@@ -1125,13 +1155,13 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.4",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-securities-law-qualifications",
-        "requirementGuidance": "Confirm the closing is conditioned on the securities-law qualifications — that the authorizations, approvals, or permits required for the lawful issuance and sale of the shares are obtained and effective as of the closing, except the federal and state notice filings permitted to be made afterward. This condition confirms the private placement is cleared to proceed, so check that no blue-sky or other securities approval is left outstanding at the closing.",
+        "requirementGuidance": "Confirm the securities-law-qualifications condition is present and has not been weakened or quietly waived: the authorizations, approvals, or permits required for the lawful issuance and sale of the shares must be obtained and effective as of the closing, except the federal and state notice filings permitted to be made afterward. This condition confirms the private placement is cleared to proceed, so check that no blue-sky or other securities approval is left outstanding at the closing.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-qualifications",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.4 (Qualifications)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.4 (Qualifications) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1150,13 +1180,13 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.5",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-companion-agreements-executed",
-        "requirementGuidance": "Confirm the closing is conditioned on the company and the required parties having executed and delivered the companion transaction agreements — the Investors' Rights Agreement, the Right of First Refusal and Co-Sale Agreement, the Voting Agreement, and the Indemnification Agreement. These carry the governance, transfer, and protective rights the Purchasers bargained for, so confirm each agreement the deal contemplates is listed as a closing condition and none has been dropped.",
+        "requirementGuidance": "Confirm the companion-agreements closing condition is present, has not been weakened or quietly waived, and requires the company and the required parties to have executed and delivered the companion transaction agreements: the Investors' Rights Agreement, the Right of First Refusal and Co-Sale Agreement, the Voting Agreement, and the Indemnification Agreement. These carry the governance, transfer, and protective rights the Purchasers bargained for, so confirm each agreement the deal contemplates is listed as a closing condition and none has been dropped.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-companion-agreements",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.7 (Investors' Rights Agreement)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.7 (Investors' Rights Agreement) (v10-28-2025); see id. §§ 4.6, 4.8–4.9.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1175,7 +1205,7 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.6",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-restated-certificate-on-file",
-        "requirementGuidance": "Confirm the closing is conditioned on the Restated Certificate having been filed with the Delaware Secretary of State and remaining in full force and effect at the closing. This is the closing-condition side of the company's Section 1 covenant to file the charter: the covenant obligates the filing, and this condition lets the Purchasers decline to fund if the charter that creates their series is not on file when they close, so confirm both are present and consistent.",
+        "requirementGuidance": "Confirm the Restated Certificate condition is present and has not been weakened or quietly waived: the Restated Certificate must have been filed with the Delaware Secretary of State and remain in full force and effect at the closing. This is the closing-condition side of the company's Section 1 covenant to file the charter: the covenant obligates the filing, and this condition lets the Purchasers decline to fund if the charter that creates their series is not on file when they close, so confirm both are present and consistent.",
         "variants": [],
         "sources": []
       },
@@ -1188,7 +1218,7 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.7",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-secretarys-certificate",
-        "requirementGuidance": "Confirm the agreement requires a secretary's certificate attaching the charter and bylaws in effect at the closing and the board and stockholder resolutions approving the Restated Certificate, the transaction agreements, and the financing. The certificate gives the Purchasers a clean record that the corporate approvals behind the deal were properly adopted, so check that it covers each approval the deal relied on.",
+        "requirementGuidance": "Confirm the secretary's-certificate condition is present and has not been weakened or quietly waived, and requires a certificate attaching the charter and bylaws in effect at the closing and the board and stockholder resolutions approving the Restated Certificate, the transaction agreements, and the financing. The certificate gives the Purchasers a clean record that the corporate approvals behind the deal were properly adopted, so check that it covers each approval the deal relied on.",
         "variants": [],
         "sources": []
       },
@@ -1201,7 +1231,7 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.8",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-proceedings-and-documents",
-        "requirementGuidance": "Confirm the closing is conditioned on all corporate proceedings and the related documents being reasonably satisfactory to each Purchaser, who may request counterpart and certified copies, including good-standing certificates. This catch-all condition lets the Purchasers confirm the closing paperwork is in order before funding, so confirm it is present and has not been narrowed away from a per-Purchaser standard.",
+        "requirementGuidance": "Confirm the closing is conditioned on all corporate proceedings and the related documents being reasonably satisfactory to each Purchaser, who may request counterpart and certified copies, including good-standing certificates. This catch-all condition lets the Purchasers confirm the closing paperwork is in order before funding, so confirm it is present, has not been quietly waived, and is not weakened by being narrowed away from a per-Purchaser standard.",
         "variants": [],
         "sources": []
       },
@@ -1216,7 +1246,7 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.9",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-opinion-of-company-counsel",
-        "requirementGuidance": "Where the parties want a legal opinion, check whether the agreement conditions the closing on the Purchasers receiving an opinion from the company's counsel in the agreed form. The opinion is bracketed and elective because it can be expensive and time-consuming, so many early-stage deals forgo it or narrow which opinions it covers; confirm whether this deal intends to require one and that the referenced opinion form is attached.",
+        "requirementGuidance": "Where the parties want a legal opinion, check whether the agreement conditions the closing on the Purchasers receiving an opinion from the company's counsel in the agreed form. The opinion is bracketed and elective because it can be expensive and time-consuming, so many early-stage deals forgo it or narrow which opinions it covers; confirm whether this deal intends to require one and, if it does, that the condition has not been weakened or quietly waived and the referenced opinion form is attached.",
         "variants": [],
         "sources": []
       },
@@ -1231,7 +1261,7 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.10",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-board-of-directors-composition",
-        "requirementGuidance": "Where the financing changes the board, check whether the agreement conditions the closing on the Board of Directors having a stated authorized size and a stated composition as of the closing. This bracketed condition may be omitted where the round leaves board composition unchanged, so where it appears, confirm the stated size and named members are filled in rather than left blank.",
+        "requirementGuidance": "Where the financing changes the board, check whether the agreement conditions the closing on the Board of Directors having a stated authorized size and a stated composition as of the closing. This bracketed condition may be omitted where the round leaves board composition unchanged, so where it applies, confirm it has not been weakened or quietly waived and that the stated size and named members are filled in rather than left blank.",
         "variants": [],
         "sources": []
       },
@@ -1246,13 +1276,13 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.11",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-minimum-shares-sold",
-        "requirementGuidance": "Where the round sets a floor on how much must be raised, check whether the agreement conditions the closing on a minimum of [_________] Shares being sold at the closing — the way the form expresses the minimum aggregate investment the round must reach to fund. The NVCA form expresses this minimum-raise condition as a minimum number of Shares rather than a dollar floor, and it is optional and deal-specific, so this condition need not appear at all; where it does, confirm the bracketed share number is filled in and reconciles with the intended minimum proceeds.",
+        "requirementGuidance": "Where the round sets a floor on how much must be raised, check whether the agreement conditions the closing on a minimum of [_________] Shares being sold at the closing, which is how the form expresses the minimum aggregate investment the round must reach to fund. The NVCA form expresses this minimum-raise condition as a minimum number of Shares rather than a dollar floor, and it is optional and deal-specific, so this condition need not appear at all; where it does, confirm it has not been weakened or quietly waived and that the bracketed share number is filled in and reconciles with the intended minimum proceeds.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-minimum-shares",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.13 (Minimum Number of Shares)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.13 (Minimum Number of Shares) (v10-28-2025); see id. n.92.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1273,7 +1303,7 @@
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
         "itemNumber": "4.12",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-investor-specific-deliverables",
-        "requirementGuidance": "Where a Purchaser's own profile requires it, check whether the agreement conditions the closing on investor-specific deliverables — a management rights letter to each Purchaser entitled to one, and the SBA forms (a Size Status Declaration, an Assurance of Compliance, and Portfolio Financing Report information) for any SBIC Purchaser. These bracketed conditions are relevant only to particular Purchasers, so confirm they are present for any fund that needs a management rights letter or any SBIC Purchaser subject to the SBA requirements.",
+        "requirementGuidance": "Where a Purchaser's own profile requires it, check whether the agreement conditions the closing on investor-specific deliverables: a management rights letter to each Purchaser entitled to one, and the SBA forms (a Size Status Declaration, an Assurance of Compliance, and Portfolio Financing Report information) for any SBIC Purchaser. These bracketed conditions are relevant only to particular Purchasers, so confirm they are present, and not weakened or quietly waived, for any fund that needs a management rights letter or any SBIC Purchaser subject to the SBA requirements.",
         "variants": [],
         "sources": []
       },
@@ -1286,13 +1316,13 @@
         "sectionId": "conditions-of-the-companys-obligations-at-closing",
         "itemNumber": "5.1",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-purchaser-representations-true-at-closing",
-        "requirementGuidance": "Confirm the company's obligation to sell is conditioned on each Purchaser's Section 3 representations being true and correct in all respects as of the closing. This is the company-side mirror of the Section 4 bring-down, so check that the purchasers' investment-intent and accredited-investor representations — the factual predicates the private placement exemption depends on — must still hold at the closing, and treat a missing or weakened version as a point for attorney review since the company relies on it to keep the exemption.",
+        "requirementGuidance": "Confirm the company's obligation to sell is conditioned on each Purchaser's Section 3 representations being true and correct in all respects as of the closing. Check that this condition is intentionally aligned with its Section 4 counterpart, recognizing that § 4.1 may use a different standard at a subsequent closing rather than identical text. The Purchasers' investment-intent and accredited-investor representations, which are factual predicates for the private-placement exemption, must still hold at the closing; treat a missing or weakened version as a point for attorney review.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-purchaser-bring-down",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 5.1 (Representations and Warranties)",
             "citation": "NVCA Model Stock Purchase Agreement § 5.1 (Representations and Warranties) (v10-28-2025); see id. n.88.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1311,7 +1341,7 @@
         "sectionId": "conditions-of-the-companys-obligations-at-closing",
         "itemNumber": "5.2",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#condition-purchaser-performance",
-        "requirementGuidance": "Confirm the company's obligation to sell is conditioned on the Purchasers having performed and complied with the covenants and obligations they owe on or before the closing. This is the company-side counterpart to the Section 4 performance condition, so check that it covers a purchaser tendering the purchase price and is not narrowed in a way that would let the company be obligated to issue shares to a purchaser that has not funded.",
+        "requirementGuidance": "Confirm the company's obligation to sell is conditioned on the Purchasers having performed and complied with the covenants and obligations they owe on or before the closing. This is the company-side counterpart to the Section 4 performance condition, so check that it is limited to covenants and obligations the Purchasers actually owe under the agreement, such as tendering the purchase price, and flag any expansion that would let the company refuse to close for a reason outside those obligations.",
         "variants": [],
         "sources": []
       },
@@ -1514,13 +1544,13 @@
         "sectionId": "miscellaneous",
         "itemNumber": "6.12",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#provide-investor-counsel-fee-cap",
-        "requirementGuidance": "Check that the cap on the lead Purchaser's counsel fees the company agrees to reimburse is filled in — this dollar cap is the negotiated, fillable term in the fees and expenses section, and a blank cap leaves the company's reimbursement obligation open-ended. One practitioner guide (Altum Legal) reports a Series A fee cap of about $25,000 to $50,000 — directional guidance, not measured survey data — so use it only as a rough sense of scale for whether the cap is proportionate to the round, not as a fixed standard. Confirm the named counsel and the amount not to exceed match what the parties agreed the company would cover, and that the provision reimburses only the lead Purchaser's counsel rather than every Purchaser's.",
+        "requirementGuidance": "Check that the cap on the lead Purchaser's counsel fees the company agrees to reimburse is filled in — this dollar cap is the negotiated, fillable term in the fees and expenses section, and a blank cap leaves the company's reimbursement obligation open-ended. A practitioner source reports a typical Series A fee cap of about $25,000 to $50,000; that figure is directional guidance, not measured survey data, so use it only as a rough sense of scale for whether the cap is proportionate to the round, not as a fixed standard. Confirm the named counsel and the amount not to exceed match what the parties agreed the company would cover, and that the provision reimburses only the lead Purchaser's counsel rather than every Purchaser's.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-fee-cap",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 6.8 (Fees and Expenses)",
             "citation": "NVCA Model Stock Purchase Agreement § 6.8 (Fees and Expenses) (v10-28-2025); see id. n.97.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1552,19 +1582,32 @@
         "sectionId": "miscellaneous",
         "itemNumber": "6.13",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#set-amendment-and-waiver-threshold",
-        "requirementGuidance": "Check that the amendment-and-waiver threshold is set — the percentage of the then-outstanding Shares whose holders, together with the company, must consent before the agreement may be amended, terminated or waived. The NVCA form defaults the consent to a majority of the then-outstanding Shares (its Requisite Purchasers); among the filed agreements reviewed the threshold ranged from a majority (Encapsion) to a 66⅔% supermajority (Immunome). Confirm the bracketed percentage is filled rather than left as a placeholder and that it is consistent with the deal's control terms — a percentage well above 66⅔% concentrates blocking power and is worth reconciling against who the parties intend to be able to amend. Confirm too that the protective proviso requiring any amendment singling out a Purchaser to apply to all Purchasers in the same fashion is intact.",
+        "requirementGuidance": "Check that the amendment-and-waiver threshold is set: the percentage of the then-outstanding Shares whose holders, together with the company, must consent before the agreement may be amended, terminated or waived. The NVCA form leaves that percentage bracketed rather than fixing a default. Confirm the bracketed percentage is filled rather than left as a placeholder and is consistent with the deal's control terms; a higher approval threshold lets holders of a smaller stake block an amendment, so check which holders or coalitions can approve an amendment and which can prevent the required percentage from being reached. Because an amendment approved at the threshold can bind a Purchaser that did not consent, confirm the proviso that makes an amendment effective against a non-consenting Purchaser only if it applies to all Purchasers in the same fashion is intact.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nvca-spa-amendment-threshold",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 6.10 (Amendments and Waivers)",
             "citation": "NVCA Model Stock Purchase Agreement § 6.10 (Amendments and Waivers) (v10-28-2025); see id. n.98.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
             "proposition": "The NVCA form lets the agreement be amended, terminated, or waived only with the company's consent and that of holders of a specified percentage of the then-outstanding Shares.",
             "verbatimQuote": "Except as otherwise specifically set forth in this Agreement, any term of this Agreement may be amended, terminated or waived only with the written consent of the Company and [(i)] the holders of at least [specify percentage] of the then-outstanding Shares[, or (ii) for an amendment, termination or waiver effected prior to the Initial Closing, Purchasers obligated to purchase [specify percentage] of the Shares to be issued at the Initial Closing][; provided, however, that any provision of this Agreement may be waived by any waiving party on such party’s own behalf, without the consent of any other party].",
             "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-nvca-spa-amendment-threshold"
+          },
+          {
+            "sourceId": "edgar-encapsion-amendment",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (Amendments and Waivers)",
+            "citation": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (filed Mar. 31, 2015).",
+            "url": "https://www.sec.gov/Archives/edgar/data/1390085/000104746915003027/a2223801zex-4_3.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1390085/000104746915003027/a2223801zex-4_3.htm#:~:text=Except%20as%20set%20forth%20in%20Section,a%20majority%20of%20the%20Purchasers.",
+            "proposition": "Encapsion, Inc.'s Series A preferred stock purchase agreement sets the amendment-and-waiver threshold at a majority of the Purchasers.",
+            "verbatimQuote": "Except as set forth in Section 1.3 of this Agreement, any term of this Agreement may be amended, terminated or waived only with the written consent of the Company and a majority of the Purchasers.",
+            "pullQuoteLocator": "Except as set forth in Section|a majority of the Purchasers.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-edgar-encapsion-amendment"
           },
           {
             "sourceId": "edgar-immunome-amendment",
@@ -1578,6 +1621,17 @@
             "verbatimQuote": "Except as set forth in Section 1.1(c), any term of this Agreement may be amended, terminated or waived only with the written consent of (a) the Company and (b) the holders of at least 66⅔% of the then-outstanding Shares.",
             "pullQuoteLocator": "Except as set forth in Section 1.1(c),|66⅔% of the then-outstanding Shares.",
             "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-edgar-immunome-amendment"
+          },
+          {
+            "sourceId": "nvca-spa-amendment-same-fashion",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 6.10 (Amendments and Waivers)",
+            "citation": "NVCA Model Stock Purchase Agreement § 6.10 (Amendments and Waivers) (v10-28-2025).",
+            "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
+            "proposition": "The NVCA form makes an amendment, termination or waiver effective against a non-consenting Purchaser only if it applies to all Purchasers in the same fashion.",
+            "verbatimQuote": "Notwithstanding the foregoing or anything herein to the contrary, no amendment, termination or waiver of any provision of this Agreement effected without the consent of a Purchaser shall be effective against such Purchaser unless such amendment, termination, or waiver applies to all Purchasers in the same fashion.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-nvca-spa-amendment-same-fashion"
           }
         ]
       },
@@ -1592,9 +1646,32 @@
         "sectionId": "miscellaneous",
         "itemNumber": "6.14",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#confirm-corporate-securities-law-legend",
-        "requirementGuidance": "Check whether the agreement includes the bracketed California corporate-securities-law legend — the notice that the sale has not been qualified with the California Commissioner of Financial Protection and Innovation. Standard institutional priced rounds relying on federal Reg D Rule 506(b) preempt state qualification under NSMIA, so this legend is typically deleted; do not flag its routine deletion as a defect. It is needed only where the round does not rely on Rule 506 and must qualify locally under California law (for example, Cal. Corp. Code § 25102(f)). Confirm it is present where the deal's California nexus and exemption posture call for it and removed where the round's NSMIA-based exemption makes it unnecessary.",
+        "requirementGuidance": "Check whether the agreement includes the bracketed California corporate-securities-law legend, the notice that the sale has not been qualified with the California Commissioner of Financial Protection and Innovation and that the parties' rights are conditioned on qualification unless the sale is exempt. The NVCA form's drafting note limits this section to transactions governed by California law that are not relying on the National Securities Markets Improvement Act (NSMIA) for a state securities-law exemption. Confirm the legend is present where the agreement is governed by California law and the round does not rely on NSMIA for its state exemption, and removed where the round relies on NSMIA; do not flag its deletion in an NSMIA-reliant round as a defect. Where the exemption posture is unclear, raise it with securities counsel.",
         "variants": [],
-        "sources": []
+        "sources": [
+          {
+            "sourceId": "nvca-spa-california-legend",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 6.14 (Corporate Securities Law)",
+            "citation": "NVCA Model Stock Purchase Agreement § 6.14 (Corporate Securities Law) (v10-28-2025).",
+            "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
+            "proposition": "The NVCA form's bracketed California legend states that the sale has not been qualified with the California Commissioner of Financial Protection and Innovation and conditions the parties' rights on qualification unless the sale is exempt.",
+            "verbatimQuote": "THE SALE OF THE SECURITIES THAT ARE THE SUBJECT OF THIS AGREEMENT HAS NOT BEEN QUALIFIED WITH THE COMMISSIONER OF FINANCIAL PROTECTION AND INNOVATION OF THE STATE OF CALIFORNIA AND THE ISSUANCE OF THE SECURITIES OR THE PAYMENT OR RECEIPT OF ANY PART OF THE CONSIDERATION THEREFOR PRIOR TO THE QUALIFICATION IS UNLAWFUL, UNLESS THE SALE OF SECURITIES IS EXEMPT FROM THE QUALIFICATION BY SECTION 25100, 25102 OR 25105 OF THE CALIFORNIA CORPORATIONS CODE. THE RIGHTS OF ALL PARTIES TO THIS AGREEMENT ARE EXPRESSLY CONDITIONED UPON THE QUALIFICATION BEING OBTAINED, UNLESS THE SALE IS SO EXEMPT.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-nvca-spa-california-legend"
+          },
+          {
+            "sourceId": "nvca-spa-note-99",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), n.99",
+            "citation": "NVCA Model Stock Purchase Agreement n.99 (v10-28-2025).",
+            "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
+            "proposition": "The NVCA form's note 99 states that the California securities-law section is for transactions governed by California law that are not relying on NSMIA for a state securities-law exemption.",
+            "verbatimQuote": "Section 6.14 is to be used for transactions governed by California law that are not relying on NSMIA for a state securities law exemption.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-nvca-spa-note-99"
+          }
+        ]
       },
       {
         "requirementId": "address-termination-of-closing-obligations",
@@ -1639,9 +1716,21 @@
         "sectionId": "miscellaneous",
         "itemNumber": "6.17",
         "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#address-jury-trial-waiver",
-        "requirementGuidance": "Confirm whether the parties intend the jury-trial waiver carried in the dispute-resolution section, by which each party waives its right to a jury trial of any claim arising out of the agreement. Note that the waiver may be unenforceable in some forums — a California state-court forum is the classic example — so where the parties have chosen such a forum a judicial-reference backstop may be needed. A jury waiver paired with a forum that will not enforce it is the mismatch to raise with the drafting attorney, who can decide whether to add a judicial-reference backstop.",
+        "requirementGuidance": "Confirm whether the parties intend the jury-trial waiver carried in the dispute-resolution section, by which each party waives its right to a jury trial of any claim arising out of the agreement. The NVCA form's drafting note warns that the waiver will likely be unenforceable if the parties select California state court as the forum, and it offers trial by a judicial referee as the alternative. Where the agreement selects California state court, check whether it adds a judicial-reference backstop; a jury waiver in that forum with no backstop is the mismatch to raise with the drafting attorney.",
         "variants": [],
-        "sources": []
+        "sources": [
+          {
+            "sourceId": "nvca-spa-note-102",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), n.102",
+            "citation": "NVCA Model Stock Purchase Agreement n.102 (v10-28-2025).",
+            "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
+            "proposition": "The NVCA form's note 102 warns that a jury-trial waiver will likely be unenforceable if the parties select California state court, and identifies trial by judicial referee as the alternative.",
+            "verbatimQuote": "If the parties select California state court as the forum for any dispute resolution, a jury trial waiver will likely be unenforceable. Instead, the parties can choose to submit to trial by judicial referee, a private person (typically a retired judge) the parties select.",
+            "anchor": "https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement#src-nvca-spa-note-102"
+          }
+        ]
       },
       {
         "requirementId": "confirm-no-commitment-for-additional-financing",

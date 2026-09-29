@@ -36,8 +36,8 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Conformably then with the aforementioned pronouncements, a non-involvement clause is not necessarily void for being in restraint of trade as long as there are reasonable limitations as to time, trade, and place.
 
-- supports: `employee-non-compete-enforceability`
-- source_cards: `tiu-time-trade-place`
+- supports: `contractors`, `employee-non-compete-enforceability`
+- source_cards: `tiu-contractors-same-test`, `tiu-time-trade-place`
 - cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2007/feb2007/gr_163512_2007.html>
 
@@ -65,5 +65,14 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `employee-non-compete-enforceability`
 - source_cards: `q5-tiu-goodfaith`, `tiu-force-of-law`
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
+- link_to_source: <https://lawphil.net/judjuris/juri2007/feb2007/gr_163512_2007.html>
+
+### tiu-v-platinum-plans-phil-inc-while-the-complainant-in-that-case-1cb88671 {#tiu-v-platinum-plans-phil-inc-while-the-complainant-in-that-case-1cb88671}
+
+> While the complainant in that case was an independent agent and not an employee, she was prohibited for one year from engaging directly or indirectly in activities of other companies that compete with the business of her principal.
+
+- supports: `contractors`
+- source_cards: `tiu-consulta-agent`
 - cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2007/feb2007/gr_163512_2007.html>

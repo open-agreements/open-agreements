@@ -2,7 +2,7 @@
 jurisdiction: "Alabama"
 slug: alabama
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/alabama · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/alabama · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Alabama Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Alabama's Personal Data Protection Act (Act No. 2026-552) takes effect May 1, 20
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Alabama's new Personal Data Protection Act takes effect May 1, 2027 with an unusually low consumer-count trigger but a sweeping under-500-employee exemption; until then, compliance means the 2018 Data Breach Notification Act, the Deceptive Trade Practices Act, and the federal overlay. |
-| **Main law** | Alabama Personal Data Protection Act, Ala. Act No. 2026-552 (HB 351, effective May 1, 2027 — not yet codified); operative today, the Alabama Data Breach Notification Act of 2018, Ala. Code §§ 8-38-1 to 8-38-12, enforced through the Alabama Deceptive Trade Practices Act |
+| **Main law** | No comprehensive consumer-privacy law in force; Ala. Code § 8-38-1. Ala. Code § 8-38-9(a). |
 | **Privacy policy required?** | Yes from May 1, 2027 — a reasonably accurate, clear, and meaningful privacy notice with six statutorily listed items; outside sector-specific Alabama privacy statutes, no generally applicable Alabama consumer-privacy statute fixes privacy-policy contents today, but a policy that misstates practices is actionable under FTC Act § 5 and the ADTPA |
 | **Who does it cover?** | From May 1, 2027 — businesses operating in Alabama (or targeting Alabama residents) that control or process personal data of more than 25,000 consumers or derive more than 25% of gross revenue from selling personal data; businesses with fewer than 500 employees (nonprofits under 100) are exempt unless they sell personal data |
 | **Can consumers sue?** | Limited path |
@@ -39,13 +39,13 @@ Alabama's Personal Data Protection Act (Act No. 2026-552) takes effect May 1, 20
 | **Browser opt-out signals?** | Not required |
 | **Lawsuit detail** | The APDPA contains no express private right of action and authorizes Attorney General enforcement after notice and cure; the breach act expressly states that a violation does not establish a private cause of action; the ADTPA carries only a narrow individual remedy with a statutory class-action bar |
 | **Who enforces it?** | Alabama Attorney General |
-| **Future effective law** | Alabama Personal Data Protection Act, effective 2027-05-01 (Law coverage: Comprehensive law; Privacy policy rule: Policy contents fixed by law; Consent for sensitive data?: Consent required first) — Current buckets stay on Alabama's breach-notification and ADTPA baseline until the APDPA takes effect. |
+| **Upcoming changes** | Alabama Personal Data Protection Act [Ala. Act No. 2026-552, § 12.], effective 2027-05-01 (Law coverage: Comprehensive law; Privacy policy rule: Policy contents fixed by law; Consent for sensitive data?: Consent required first) — Current buckets stay on Alabama's breach-notification and ADTPA baseline until the APDPA takes effect. |
 
 ## Which privacy laws apply to your business in Alabama? {#which-privacy-laws-apply}
 
 **Short answer.** Two regimes, on a timeline. Alabama has enacted a comprehensive consumer-privacy statute — the Alabama Personal Data Protection Act [^apdpa-short-title] — but it does not take effect until May 1, 2027 [^apdpa-effective-date]. Until that date, the state laws that govern data handling day to day are the Alabama Data Breach Notification Act of 2018 [^breach-act-title] and the Alabama Deceptive Trade Practices Act, supplemented by the federal overlay.
 
-The APDPA is currently citable as the session law, Ala. Act No. 2026-552. Two structural points shape everything below. First, the enrolled act text staged here does not include an express rulemaking provision, so its interpretive gaps are likely to be filled by amendment, enforcement positions, or litigation. Second, the APDPA layers on top of — it does not replace — the breach-notification act, which has been in force since 2018 and continues to supply Alabama's data-security and incident-response duties.
+The APDPA is currently citable as the session law, Ala. Act No. 2026-552. Two structural points shape everything below. First, the enrolled act text reviewed here does not include an express rulemaking provision, so its interpretive gaps are likely to be filled by amendment, enforcement positions, or litigation. Second, the APDPA layers on top of — it does not replace — the breach-notification act, which has been in force since 2018 and continues to supply Alabama's data-security and incident-response duties.
 
 For the period before May 1, 2027, an Alabama-facing privacy program looks like a no-comprehensive-statute state: the breach act sets the security and notification duties, the Deceptive Trade Practices Act reaches false or misleading privacy statements, and the rest rides federal law — FTC Act § 5 for deceptive or unfair practices generally, the Gramm-Leach-Bliley Act for financial institutions, HIPAA for covered health entities, and COPPA for services directed to children under 13. A program built to that overlay now upgrades, rather than restarts, when the APDPA arrives.
 
@@ -71,7 +71,7 @@ Compared with other states' notice lists, Alabama's is lean: there is no require
 
 The APDPA contract must be binding and clearly set out the processing instructions, the nature and purpose of processing, the type of data, the duration, and both parties' rights and obligations. It must also commit the processor to a duty of confidentiality, to delete or return all personal data at the controller's direction at the end of the engagement, to make available the information needed to demonstrate compliance on the controller's reasonable request, and to bind any subcontractor to the same processor obligations [^apdpa-dpa-terms]. Many multi-state DPA templates can be adapted to these elements after checking the Alabama-specific list.
 
-One genuine departure deserves emphasis: the staged APDPA text contains no express data-protection-assessment requirement. Nothing in the staged text requires a documented risk assessment before targeted advertising, selling data, processing sensitive data, or profiling. The processor contract, not an assessment file, is the act's named compliance artifact. Where a federal regime applies, it adds its own contracting layer regardless of state law: the GLBA Safeguards Rule requires financial institutions to bind service providers by contract to implement and maintain safeguards [^fed-glba-safeguards], and HIPAA requires a business-associate agreement before protected health information is shared [^fed-hipaa-baa].
+One genuine departure deserves emphasis: the APDPA text reviewed here contains no express data-protection-assessment requirement. Nothing in the text reviewed here requires a documented risk assessment before targeted advertising, selling data, processing sensitive data, or profiling. The processor contract, not an assessment file, is the act's named compliance artifact. Where a federal regime applies, it adds its own contracting layer regardless of state law: the GLBA Safeguards Rule requires financial institutions to bind service providers by contract to implement and maintain safeguards [^fed-glba-safeguards], and HIPAA requires a business-associate agreement before protected health information is shared [^fed-hipaa-baa].
 
 ## What rights will Alabama consumers have, and how fast must you respond? {#consumer-rights}
 
@@ -79,7 +79,7 @@ One genuine departure deserves emphasis: the staged APDPA text contains no expre
 
 Responses are free of charge once per consumer in any 12-month period; for manifestly unfounded, excessive, technically infeasible, or repetitive requests the controller may charge a reasonable fee or decline to act, and bears the burden of demonstrating that character on inquiry by an enforcement authority [^apdpa-request-fees]. The access and portability rights each carry a trade-secret carve-out, and parents, guardians, and conservators may exercise rights on a known child's or protected consumer's behalf [^apdpa-representative-rights]. The rights themselves cannot be contracted away: any contract provision that purports to waive or limit a consumer's rights under the act is void and unenforceable as contrary to public policy [^apdpa-anti-waiver].
 
-Two things the act does not contain are worth stating plainly. The APDPA requires a controller that declines a request to give the consumer its justification within 45 days, but the staged text does not include an appeal mechanism or require the privacy notice to describe one [^apdpa-refusal-response]. And because the enrolled act text staged here does not include an express rulemaking provision, there is no regulator who can add one by rule. The profiling opt-out is also narrower than it may first appear: it reaches only solely automated processing, and only for a closed list of significant decisions such as credit, housing, insurance, education, criminal justice, employment opportunity, health care, and basic necessities [^apdpa-significant-decision].
+Two things the act does not contain are worth stating plainly. The APDPA requires a controller that declines a request to give the consumer its justification within 45 days, but the text reviewed here does not include an appeal mechanism or require the privacy notice to describe one [^apdpa-refusal-response]. And because the enrolled act text reviewed here does not include an express rulemaking provision, there is no regulator who can add one by rule. The profiling opt-out is also narrower than it may first appear: it reaches only solely automated processing, and only for a closed list of significant decisions such as credit, housing, insurance, education, criminal justice, employment opportunity, health care, and basic necessities [^apdpa-significant-decision].
 
 > [!NOTE]
 > **Practice note.**

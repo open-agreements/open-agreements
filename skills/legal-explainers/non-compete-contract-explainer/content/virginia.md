@@ -2,7 +2,7 @@
 jurisdiction: "Virginia"
 slug: virginia
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-07-03"
 human_reviewed_at: null
 next_review_due: "2026-12-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Virginia[^about]
 
@@ -28,9 +28,9 @@ Virginia non-compete law combines Va. Code § 40.1-28.7:8, a common-law reasonab
 
 | Question | Virginia |
 | --- | --- |
-| **Are non-competes enforceable?** | Allowed above a pay level |
+| **Are non-competes enforceable?** | Income-based limits |
 | **Bottom line** | Virginia bans non-competes outright for statutory low-wage employees, FLSA non-exempt employees, and health care professionals, while other workers remain subject to a strict common-law reasonableness test with no judicial blue-penciling. |
-| **Main law or case** | Va. Code § 40.1-28.7:8; common law (Omniplex World Servs. Corp. v. U.S. Investigations Servs., 270 Va. 246 (2005)) |
+| **Main law or case** | Common law governs workers outside the statutory ban; Va. Code Ann. § 40.1-28.7:8(B). Omniplex World Servs. Corp. v. U.S. Investigations Servs., Inc., 270 Va. 246, 618 S.E.2d 340 (2005). |
 | **Main exceptions** | Low-wage/FLSA-non-exempt ban (commission/incentive-earner exclusion); health-care-professional ban; severance-or-disclosed-comp rule for without-cause discharge; NDAs/trade-secret preserved |
 | **When the ban took effect** | Low-wage ban July 1, 2020; FLSA-non-exempt expansion July 1, 2025; health-care ban and severance rule July 1, 2026 |
 | **Can a court narrow it?** | No |
@@ -80,7 +80,7 @@ For 2026, the wage threshold is less than $1,507.01 per week, or about $78,364.5
 > [!CAUTION]
 > **Drafting note.**
 >
-> The statute's protections surface in the covenant only as operative carve-outs; its enforcement apparatus lives in § 40.1-28.7:8, not in the contract text, and it is severe. A covered worker may sue within the statutory limitations window, and a court may void the covenant, enjoin conduct, and award liquidated damages, lost compensation, damages, and reasonable costs, expert fees, and attorney fees [^statute-private-action-relief][^statute-fees]. DOLI may assess a $10,000 civil penalty for each violation, and merely presenting or threatening to enforce a barred covenant is itself a violation — so confirm the worker is outside the protected class before you hand over the [OpenAgreements Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-virginia) at all [^statute-civil-penalty]. The protected class reaches beyond the weekly-earnings figure to interns, students, apprentices, trainees, and certain lower-paid independent contractors, while excluding predominantly commission-, incentive-, or bonus-compensated workers [^statute-interns-trainees][^statute-independent-contractors][^statute-commission-exclusion]. The current-year threshold surfaced beneath Cover Terms resets annually [^doli-threshold]. A successor or assignee inherits the same statutory bar along with the contract.
+> Entering into the non-compete in the [OpenAgreements Virginia restrictive covenant form](/templates/openagreements-restrictive-covenant-virginia) with a low-wage employee or health care professional is itself a violation, as is threatening to enforce it, and each violation risks a $10,000 civil penalty [^sb128-healthcare-ban][^statute-civil-penalty]. An attempt to enforce it also exposes the employer to a suit to void the covenant with damages and attorney fees [^statute-private-action-relief]. The low-wage threshold is a calculated figure rather than a fixed amount in the statute, so a screen against an outdated figure risks missing a covered worker [^statute-low-wage-threshold][^doli-threshold].
 
 The health-care rule is categorical for employment non-competes. A *health care professional* means a person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work, so no pay level restores the employment covenant for those workers [^sb128-healthcare-definition]. The rule is not a total ban on every restrictive term in a health-care transaction: the statute still permits a reasonable sale-of-business covenant, training-cost repayment terms, and a narrowly construed customer non-solicit [^sb128-sale-carveout][^sb128-nonsolicit-carveout].
 
@@ -111,7 +111,7 @@ That does not mean every enforceability question can be decided from the pleadin
 
 ## Does the restricted period toll or extend during breach or litigation in Virginia? {#extended-for-breach}
 
-**Short answer.** Virginia law does not squarely answer this in the staged authorities. No source in this corpus resolves whether a non-compete period tolls during breach or litigation, or whether an extension-on-breach clause is enforceable; the available cases only supply strict-construction and overbreadth background [^tolling-motion-control-strict][^tolling-home-paramount-overbreadth].
+**Short answer.** Virginia law does not squarely answer this in the identified authorities. No source in this corpus resolves whether a non-compete period tolls during breach or litigation, or whether an extension-on-breach clause is enforceable; the available cases only supply strict-construction and overbreadth background [^tolling-motion-control-strict][^tolling-home-paramount-overbreadth].
 
 The risk-weighted answer is cautious. Virginia courts strictly construe non-competes as restraints of trade, and clear overbreadth can void a restraint rather than invite judicial narrowing [^tolling-motion-control-strict][^tolling-home-paramount-overbreadth]. That backdrop makes a clause that lengthens the restricted period a plausible overbreadth risk, especially if it creates an open-ended or litigation-driven restraint.
 
@@ -189,17 +189,17 @@ That alternative has its own limits. The Virginia Uniform Trade Secrets Act defi
 
 [^statute-commission-exclusion]: **Va. Code § 40.1-28.7:8** — "does not include any employee whose earnings are derived, in whole or in predominant part, from sales commissions, incentives, or bonuses paid to the employee by the employer." *Va. Code Ann. § 40.1-28.7:8(A).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 
-[^statute-private-action-relief]: **Va. Code § 40.1-28.7:8** — "An employee or health care professional may bring a civil action in a court of competent jurisdiction against any former employer or other person that attempts to enforce a covenant not to compete against such employee in violation of this section. An action under this section shall be brought within two years of the latter of (i) the date the covenant not to compete was signed, (ii) the date the employee or health care professional learns of the covenant not to compete, (iii) the date the employment relationship is terminated, or (iv) the date the employer takes any step to enforce the covenant not to compete. The court shall have jurisdiction to void any covenant not to compete with an employee or health care professional and to order all appropriate relief, including enjoining the conduct of any person or employer, ordering payment of liquidated damages, and awarding lost compensation, damages, and reasonable attorney fees and costs." *Va. Code Ann. § 40.1-28.7:8(D).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
-
-[^statute-fees]: **Va. Code § 40.1-28.7:8** — "If the court finds a violation of the provisions of this section, the plaintiff shall be entitled to recover reasonable costs, including costs and reasonable fees for expert witnesses, and attorney fees from the former employer or other person who attempts to enforce an unlawful covenant not to compete against such plaintiff." *Va. Code Ann. § 40.1-28.7:8(F).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
-
 [^statute-civil-penalty]: **Va. Code § 40.1-28.7:8** — "Any employer that violates the provisions of subsection B or C as determined by the Commissioner shall be subject to a civil penalty of $10,000 for each violation." *Va. Code Ann. § 40.1-28.7:8(E).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
+
+[^statute-private-action-relief]: **Va. Code § 40.1-28.7:8** — "An employee or health care professional may bring a civil action in a court of competent jurisdiction against any former employer or other person that attempts to enforce a covenant not to compete against such employee in violation of this section. An action under this section shall be brought within two years of the latter of (i) the date the covenant not to compete was signed, (ii) the date the employee or health care professional learns of the covenant not to compete, (iii) the date the employment relationship is terminated, or (iv) the date the employer takes any step to enforce the covenant not to compete. The court shall have jurisdiction to void any covenant not to compete with an employee or health care professional and to order all appropriate relief, including enjoining the conduct of any person or employer, ordering payment of liquidated damages, and awarding lost compensation, damages, and reasonable attorney fees and costs." *Va. Code Ann. § 40.1-28.7:8(D).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 
 [^sb128-healthcare-definition]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(A)** — "‘Health care professional’ means any person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(A), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
 
 [^sb128-sale-carveout]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(H)(2)** — "In such transactions, the seller and buyer may enter a covenant not to compete or similarly restrictive covenant for the health care professional or such person's business entity, provided that such covenant not to compete or similarly restrictive covenant is reasonable in scope, duration, and geographic area." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(H)(2), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
 
 [^sb128-nonsolicit-carveout]: **Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(I)** — "Any reference to a prohibition against soliciting or attempting to solicit customers shall be narrowly construed to apply only to (i) the health care professional's customers, including actively sought prospective customers, with whom the health care professional had material contact during employment and (ii) products and services that are the same as or substantially similar to those provided by the employer." *2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(I), eff. July 1, 2026).* <https://lis.virginia.gov/bill-details/20261/SB128>
+
+[^statute-fees]: **Va. Code § 40.1-28.7:8** — "If the court finds a violation of the provisions of this section, the plaintiff shall be entitled to recover reasonable costs, including costs and reasonable fees for expert witnesses, and attorney fees from the former employer or other person who attempts to enforce an unlawful covenant not to compete against such plaintiff." *Va. Code Ann. § 40.1-28.7:8(F).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 
 [^statute-posting]: **Va. Code § 40.1-28.7:8** — "Every employer shall post a copy of this section or a summary approved by the Department in the same location where other employee notices required by state or federal law are posted." *Va. Code Ann. § 40.1-28.7:8(G).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 

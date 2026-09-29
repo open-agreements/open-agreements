@@ -138,7 +138,7 @@ For overbreadth in scope or activity, Utah's common law has historically been re
 
 ## Does the restricted period toll or extend during breach or litigation in Utah? {#extended-for-breach}
 
-**Short answer.** Utah has no statute or staged case squarely deciding judicial tolling, but the structure of the Act cuts hard against an extension clause. Because a non-compete may not exceed one year and a longer one is void, a clause that lengthens the restricted period during breach or litigation risks pushing the covenant past the statutory ceiling and voiding it [^toll-one-year][^toll-void].
+**Short answer.** Utah has no statute or identified case squarely deciding judicial tolling, but the structure of the Act cuts hard against an extension clause. Because a non-compete may not exceed one year and a longer one is void, a clause that lengthens the restricted period during breach or litigation risks pushing the covenant past the statutory ceiling and voiding it [^toll-one-year][^toll-void].
 
 The one-year cap is measured from the day employment ends, not from the day the employee stops competing [^toll-one-year]. An extension-on-breach or tolling clause that keeps the restriction alive while litigation runs is therefore in direct tension with that fixed measuring point, and the *void* consequence applies to any covenant that exceeds one year [^toll-void].
 

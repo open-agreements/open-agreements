@@ -2,18 +2,21 @@
 type: Case Excerpt
 title: 'Lamp v. American Prosthetics, Inc.'
 description: >-
-  Lamp v. American Prosthetics, Inc., 379 N.W.2d 909 (Iowa 1986). — quoted in 2
+  Lamp v. American Prosthetics, Inc., 379 N.W.2d 909 (Iowa 1986). — quoted in 3
   document(s).
 citation: 'Lamp v. American Prosthetics, Inc., 379 N.W.2d 909 (Iowa 1986).'
 resource: 'https://www.courtlistener.com/opinion/1601399/lamp-v-american-prosthetics-inc/'
-timestamp: '2026-06-12'
+timestamp: '2026-07-02'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/iowa'
   - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/iowa'
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -21,7 +24,7 @@ tags:
 
 *Lamp v. American Prosthetics, Inc., 379 N.W.2d 909 (Iowa 1986).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -33,3 +36,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `ia-lamp-test`, `q2-lamp-three-prong`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1601399/lamp-v-american-prosthetics-inc/#:~:text=Because%20this%20case%20was%20tried,prejudicial%20to%20the%20public%20interest%3F>
+
+### lamp-v-american-prosthetics-inc-in-deciding-whether-to-enforce-a-4e7a4cd5 {#lamp-v-american-prosthetics-inc-in-deciding-whether-to-enforce-a-4e7a4cd5}
+
+> In deciding whether to enforce a restrictive covenant, the court will apply a three-pronged test: (1) Is the restriction reasonably necessary for the protection of the employer’s business; (2) is it unreasonably restrictive of the employee’s rights; and (3) is it prejudicial to the public interest?
+
+- supports: `holdover-clause-limit`
+- source_cards: `lamp-three-prong`
+- cited_by: [Employee Invention Assignment in Iowa](../invention-assignment/us/iowa.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1601399/lamp-v-american-prosthetics-inc/#:~:text=In%20deciding%20whether%20to%20enforce,prejudicial%20to%20the%20public%20interest%3F>

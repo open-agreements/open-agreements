@@ -2,7 +2,7 @@
 jurisdiction: "Iowa"
 slug: iowa
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/iowa · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/iowa · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Iowa[^about]
 
@@ -30,7 +30,7 @@ Iowa non-compete law uses a three-prong common-law reasonableness test, lets a c
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Iowa enforces an employee non-compete only if it satisfies a three-prong reasonableness test, with the employer bearing the burden; courts may reform an overbroad covenant rather than void it. |
-| **Main law or case** | common law (Revere Transducers, Inc. v. Deere & Co., 595 N.W.2d 751 (Iowa 1999)) |
+| **Main law or case** | Common law governs most employee non-competes; Revere Transducers, Inc. v. Deere & Co., 595 N.W.2d 751 (Iowa 1999). |
 | **Main exceptions** | Mental-health professionals (§ 147.161); health-care staffing workers (§ 135Q.2); franchise nonrenewal (§ 537A.10); UIHC clinical roles (HF 2254, 2026) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Yes |
@@ -115,7 +115,7 @@ A drafted extension-on-breach clause would still have to survive Iowa's ordinary
 > [!CAUTION]
 > **Drafting note.**
 >
-> Tolling is an open question in Iowa: no controlling appellate authority decides whether a non-compete period tolls during breach or enforcement litigation, and the closest doctrine is reformation, which reshapes an overbroad covenant to a reasonable scope rather than adding time back [^q6-ehlers-reform]. Iowa's leading application set a fixed period measured from the date employment terminated, not an extension for breach or litigation delay [^q6-farm-bureau-fixed-period]. An extension-on-breach clause is itself a longer restraint, so it stands or falls as part of the covenant's duration under the same reasonableness test; an open-ended or indefinite extension, or one that assumes a court will revive an expired covenant, is the exposed case.
+> An extension-on-breach clause adds to the covenant's total duration, and Iowa enforces a non-compete only to the extent reasonably necessary to protect the employer without undue hardship on the employee [^q6-ehlers-reform]. An open-ended extension, or one that assumes a court will revive an expired covenant, risks being cut back or left unenforced.
 
 ## Are Iowa non-solicitation and no-business covenants treated like non-competes? {#non-solicitation-no-business}
 
@@ -123,14 +123,14 @@ A drafted extension-on-breach clause would still have to survive Iowa's ordinary
 
 Iowa cases often involve covenants that combine competition bans, customer-contact limits, and solicitation limits. The court's task is to identify what protection is reasonably necessary and what overreaches.
 
-"First it appears the activities restricted were more than were necessary for plaintiff’s protection. Defendant was restricted from any ‘ * * * business activity competitive to that of the company * * It would be ample protection for the plaintiff in this case to restrict a former employee only from those activities he undertook during his employment. Similarly defendant was restricted from activity throughout a two county area. It would have sufficed to restrict him from the six townships he worked in. The trial court rightly held the covenant too broad both as to scope and area."[^q7-farm-bureau-activities]
+"It would be ample protection for the plaintiff in this case to restrict a former employee only from those activities he undertook during his employment. Similarly defendant was restricted from activity throughout a two county area. It would have sufficed to restrict him from the six townships he worked in. The trial court rightly held the covenant too broad both as to scope and area."[^q7-farm-bureau-activities]
 
 So a customer non-solicit or no-business covenant may be easier to defend than a broad no-work covenant, but only when its scope tracks the employer's actual protectable relationships and does not suppress unrelated work.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A customer non-solicit maps directly onto the employer's customer-goodwill interest — customer proximity is among the first factors Iowa weighs — and, backstopped by confidentiality and trade-secret protection, is often a stronger and more readily enforceable protection than a broad non-compete. A no-business-with-covered-customers clause reaches even customer-initiated business, so it presses harder on the reasonableness inquiry into whether a restraint sweeps in more activity than protection requires and deprives the customer of its chosen provider. Iowa trims such a restraint to the activities and territory the worker actually served [^q7-farm-bureau-activities], so a customer restriction survives only where it is sized tightly to the goodwill it protects and confined to customers the worker actually had material contact with; stretched beyond that, it is the exposed case.
+> A no-business clause covering unsolicited customer business reaches transactions that a solicitation-only clause leaves unrestricted. A customer restriction broader than the activities and territory the worker actually served risks being trimmed back to them, as the covenant in *Farm Bureau* was [^q7-farm-bureau-activities].
 
 ## Is continued employment enough consideration for an Iowa non-compete? {#consideration}
 
@@ -167,7 +167,7 @@ The Iowa Supreme Court drew that distinction in *Baker v. Starkey*. The reason i
 
 "In determining the question of reasonableness as to area and time, restrictive stipulations in agreements between employer and employee are not viewed with the same indulgence as such stipulations are between a vendor and vendee of a business and its good will."[^q10-baker-sale-goodwill]
 
-The distinction does not eliminate reasonableness review. *Baker* still refused to partially enforce the employee covenant before Iowa later adopted reformation in *Ehlers*, and its core point remains that employee restraints receive closer scrutiny than sale-of-business restraints.
+The distinction does not eliminate reasonableness review. Iowa later adopted reformation of overbroad employment covenants in *Ehlers* [^q10-ehlers-reform], but the core point of *Baker* remains that employee restraints receive closer scrutiny than sale-of-business restraints [^q10-baker-sale-goodwill].
 
 ## What trade-secret and NDA tools exist alongside Iowa non-competes? {#trade-secrets-confidentiality}
 
@@ -186,7 +186,7 @@ Unlike some states, Iowa has not made its trade-secret statute the exclusive rou
 > [!CAUTION]
 > **Drafting note.**
 >
-> A non-compete is not the only route to protecting secrecy, and often not the strongest. Where the real concern is confidential information, targeted NDA, invention-assignment, and trade-secret provisions carry their own protection: chapter 550 supplies an injunction against actual or threatened misappropriation independent of any covenant [^q11-injunctive-relief], damages for actual loss and unjust enrichment [^q11-damages], and attorney fees where a claim is made in bad faith, an injunction-termination motion is made or resisted in bad faith, or misappropriation is willful and malicious [^q11-fees] — each available only where the information meets the statutory definition of a trade secret and reasonable secrecy efforts can be proved [^q11-trade-secret-definition]. Return, deletion, and certification of employer property are part of those reasonable secrecy efforts. Because chapter 550 does not preempt every tort theory involving trade secrets, a common-law claim can run alongside the statutory one [^q11-brandow-nonpreemption].
+> An agreement that relies on a non-compete without reasonable measures to keep information secret risks that information failing chapter 550's trade-secret definition, which requires reasonable secrecy efforts [^q11-trade-secret-definition]. Information outside the definition loses the statute's injunction and damages remedies, which otherwise protect a trade secret without any covenant [^q11-injunctive-relief][^q11-damages].
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from an Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Iowa*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/iowa.
 
@@ -218,7 +218,7 @@ Unlike some states, Iowa has not made its trade-secret statute the exclusive rou
 
 [^q6-farm-bureau-fixed-period]: **Farm Bureau Serv. Co. of Maynard v. Kohls** — "The cause is remanded for entry of a decree properly restraining the defendant from competing with plaintiff as provided herein. Said injunction shall restrain defendant from activity competitive to plaintiff in the six townships he served in plaintiff’s employment, shall embrace only the activities defendant undertook in plaintiff’s employment and shall be for a period of two years from the date that employment was terminated." *Farm Bureau Serv. Co. of Maynard v. Kohls, 203 N.W.2d 209 (Iowa 1972).* <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=The%20cause%20is%20remanded%20for,date%20that%20employment%20was%20terminated.>
 
-[^q7-farm-bureau-activities]: **Farm Bureau Serv. Co. of Maynard v. Kohls** — "First it appears the activities restricted were more than were necessary for plaintiff’s protection. Defendant was restricted from any ‘ * * * business activity competitive to that of the company * * It would be ample protection for the plaintiff in this case to restrict a former employee only from those activities he undertook during his employment. Similarly defendant was restricted from activity throughout a two county area. It would have sufficed to restrict him from the six townships he worked in. The trial court rightly held the covenant too broad both as to scope and area." *Farm Bureau Serv. Co. of Maynard v. Kohls, 203 N.W.2d 209 (Iowa 1972).* <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=First%20it%20appears%20the%20activities,as%20to%20scope%20and%20area.>
+[^q7-farm-bureau-activities]: **Farm Bureau Serv. Co. of Maynard v. Kohls** — "It would be ample protection for the plaintiff in this case to restrict a former employee only from those activities he undertook during his employment. Similarly defendant was restricted from activity throughout a two county area. It would have sufficed to restrict him from the six townships he worked in. The trial court rightly held the covenant too broad both as to scope and area." *Farm Bureau Serv. Co. of Maynard v. Kohls, 203 N.W.2d 209 (Iowa 1972).* <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=It%20would%20be%20ample%20protection,as%20to%20scope%20and%20area.>
 
 [^q8-farm-bureau-consideration]: **Farm Bureau Serv. Co. of Maynard v. Kohls** — "In Ehlers the contract was not executed until sometime after the employee went to work. The case might be distinguished by the concession in Ehlers that the matter was discussed when the job was undertaken. Ehlers is however authority for the proposition continuing employment for an indefinite period is sufficient consideration to support a covenant not to compete." *Farm Bureau Serv. Co. of Maynard v. Kohls, 203 N.W.2d 209 (Iowa 1972).* <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=In%20Ehlers%20the%20contract%20was,a%20covenant%20not%20to%20compete.>
 
@@ -237,6 +237,8 @@ Unlike some states, Iowa has not made its trade-secret statute the exclusive rou
 [^q9-hf2254-effective]: **2026 Iowa Acts, House File 2254** — "This subsection applies to all employment contracts between an advanced registered nurse practitioner, a licensed practical nurse, a pharmacist, a physician, a physician assistant, or a registered nurse and the university of Iowa hospitals and clinics entered into, extended, or renewed on or after the effective date of this Act." *2026 Iowa Acts, House File 2254 (codified at Iowa Code § 262.9(43)).* <https://www.legis.iowa.gov/docs/publications/LGE/91/HF2254.pdf>
 
 [^q10-baker-sale-goodwill]: **Baker v. Starkey** — "In determining the question of reasonableness as to area and time, restrictive stipulations in agreements between employer and employee are not viewed with the same indulgence as such stipulations are between a vendor and vendee of a business and its good will." *Baker v. Starkey, 144 N.W.2d 889 (Iowa 1966).* <https://www.courtlistener.com/opinion/2202172/baker-v-starkey/#:~:text=In%20determining%20the%20question%20of,business%20and%20its%20good%20will.>
+
+[^q10-ehlers-reform]: **Ehlers v. Iowa Warehouse Co.** — "We now overrule Brecher v. Brown (1945), 235 Iowa 627 , 17 N.W.2d 377 , and adopt the rule that unless the facts and circumstances indicate bad faith on the part of the employer, we will enforce noncompetitive covenants to the extent they are reasonably necessary to protect his legitimate interests without imposing undue hardship on the employee when the public interest is not adversely affected." *Ehlers v. Iowa Warehouse Co., 188 N.W.2d 368 (Iowa 1971).* <https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse-company/#:~:text=We%20now%20overrule%20Brecher%20v.,interest%20is%20not%20adversely%20affected.>
 
 [^q11-trade-secret-definition]: **Iowa Code § 550.2** — "‘Trade secret’ means information, including but not limited to a formula, pattern, compilation, program, device, method, technique, or process that is both of the following: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by a person able to obtain economic value from its disclosure or use. b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy." *Iowa Code § 550.2.* <https://www.legis.iowa.gov/docs/code/2025/550.2.pdf>
 

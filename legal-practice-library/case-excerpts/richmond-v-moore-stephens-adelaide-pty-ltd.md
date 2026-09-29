@@ -43,6 +43,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
 
+### richmond-v-moore-stephens-adelaide-pty-ltd-mr-richmond-contends-that-general-2e040d34 {#richmond-v-moore-stephens-adelaide-pty-ltd-mr-richmond-contends-that-general-2e040d34}
+
+> Mr Richmond contends that General Billposting Company Limited v Atkinson is authority for the proposition that it is a rule of law that a party who has repudiated a contract leading to its termination by the innocent party can never enforce a restraint clause expressed to operate after termination and this was endorsed by the High Court in Kaufman v McGillicuddy.
+
+- supports: `employer-breach`
+- source_cards: `richmond-billposting-argument`
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
+- link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
+
 ### richmond-v-moore-stephens-adelaide-pty-ltd-mr-richmond-s-contention-should-be-49f33414 {#richmond-v-moore-stephens-adelaide-pty-ltd-mr-richmond-s-contention-should-be-49f33414}
 
 > Mr Richmond's contention should be rejected because the question whether the restraint clause survives must depend on the proper construction of the contract.

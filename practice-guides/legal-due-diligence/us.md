@@ -40,7 +40,7 @@ Before the first full virtual-data-room review, write a one-page working map tha
 
 - **Who are the legal actors?** Record exact names, historical names, entity types, jurisdictions, organizational numbers, ownership relationships, and transaction roles, distinguishing the target from its parent, subsidiaries, affiliates, and sellers.
 - **What is expected to move?** State whether the working structure is a transfer of equity, specified assets, a statutory merger, or a combination, and identify excluded assets, retained liabilities, rollover interests, and acquisition vehicles.
-- **What must happen between signing and closing?** Identify financing, regulatory filings, third-party consents, payoff and lien releases, reorganizations, equity treatment, and any delayed or staged transfer.
+- **What must happen between signing and closing?** Identify financing, regulatory filings, third-party consents, payoff and lien releases, reorganizations, equity treatment, and any delayed or phased transfer.
 - **Which assumptions are still unconfirmed?** Give each assumption an owner, requested evidence, date requested, status, and consequence if the evidence never arrives.
 
 The map is allowed to change. A change should be explicit and versioned, because changing the scope or structure changes which consents, approvals, liabilities, and specialist analyses matter.

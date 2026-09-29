@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Delaware[^about]
 
@@ -30,7 +30,7 @@ Delaware enforces reasonable non-competes under Court of Chancery and Supreme Co
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Delaware enforces reasonable non-competes under Chancery/Supreme Court case law but increasingly refuses to blue-pencil overbroad ones, and physician practice-restricting covenants are void by statute. |
-| **Main law or case** | common law (FP UC Holdings, LLC v. Hamilton, 2020 (Del. Ch.)); physician ban 6 Del. C. § 2707 |
+| **Main law or case** | Common law governs most employee non-competes; FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020). 6 Del. C. § 2707. |
 | **Main exceptions** | Physician practice covenants void (§ 2707); home-inspector trainees; sale-of-business reviewed less searchingly |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |
@@ -62,12 +62,12 @@ That is not a safe harbor for nationwide clauses. It is a procedural and factual
 
 **Short answer.** Usually not as a litigation strategy. Delaware courts retain equitable discretion, but recent Chancery and Supreme Court decisions warn that overbroad covenants may fall rather than be rewritten [^sunder-supreme-blue-pencil-discretion].
 
-The modern no-blue-pencil spine comes from *Kodiak*, *Intertek*, and *Sunder*. The reason is incentive-based: if courts routinely trim overbroad restrictions, employers can draft broadly, chill workers, and still get a lawful restraint if challenged [^kodiak-blue-pencil-inequity][^intertek-no-rescue][^sunder-supreme-perverse-incentives]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Delaware non-compete reviewer checklist](/checklists/non-compete/us/delaware) walks the full covenant suite item by item with each requirement's force level.
+The modern no-blue-pencil spine comes from *Kodiak* [^kodiak-blue-pencil-inequity], *Intertek* [^intertek-no-rescue], and *Sunder* [^sunder-supreme-blue-pencil-discretion]. The reason is incentive-based: if courts routinely trim overbroad restrictions, employers can draft broadly, chill workers, and still get a lawful restraint if challenged [^kodiak-blue-pencil-inequity][^intertek-no-rescue][^sunder-supreme-perverse-incentives]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Delaware non-compete reviewer checklist](/checklists/non-compete/us/delaware) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A Delaware covenant drafted on the assumption that a court will narrow it later carries the risk the covenant fails instead: recent Chancery and Supreme Court decisions increasingly refuse to blue-pencil an overbroad restraint and let it fall rather than rewrite it, calling partial enforcement of an overbroad covenant inequitable and warning that rescuing unreasonable covenants creates perverse incentives to overdraft [^sunder-supreme-blue-pencil-discretion][^intertek-no-rescue]. The scope a covenant can actually hold is the one written into the contract at signing — the protected business, restricted activities, customer set, geography, and duration — because a savings or reformation clause does not move a facially overbroad covenant back into the enforceable column. Severability earns its keep here: a sound non-solicit or confidentiality term drafted to stand on its own can survive a failed non-compete in a jurisdiction whose courts decline to repair the failed clause. A notice to a future employer that asserts a covenant a Delaware court would refuse to enforce or narrow overstates the sender's position and can create its own interference exposure.
+> A Delaware covenant drafted broader than the business needs, on the assumption that a court will narrow it later, risks failing entirely instead. Delaware courts may refuse to blue-pencil an overbroad covenant and treat rescuing a sophisticated drafter from its overreach as inequitable [^sunder-supreme-blue-pencil-discretion][^intertek-no-rescue].
 
 ## How does Delaware treat sale-of-business non-competes? {#sale-of-business}
 
@@ -101,7 +101,7 @@ The Delaware Supreme Court treated the personnel restriction as a true employee 
 
 The distinction matters. A true non-compete restrains work and is reviewed for reasonableness. A forfeiture-for-competition provision can let the former partner compete while losing a contingent benefit. In that setting, the Delaware Supreme Court held that public policy favored enforcing the limited partnership agreement against sophisticated parties [^ainslie-employee-choice-distinction][^ainslie-summary-rule].
 
-*Ainslie* itself arose from a limited-partnership agreement, but the doctrine is not confined to that setting. In *LKQ Corp. v. Rutledge*, the Delaware Supreme Court advised the Seventh Circuit that *Ainslie* is not restricted to the limited-partnership context, extending the employee-choice doctrine to a corporate restricted-stock-unit forfeiture-for-competition provision [^lkq-not-limited-to-lp].
+*Ainslie* itself arose from a limited-partnership agreement, but the doctrine is not confined to that setting. In *LKQ Corp. v. Rutledge*, the Delaware Supreme Court advised the Seventh Circuit that *Ainslie* [^ainslie-summary-rule] is not restricted to the limited-partnership context, extending the employee-choice doctrine to a corporate restricted-stock-unit forfeiture-for-competition provision [^lkq-not-limited-to-lp][^lkq-rsu-agreements].
 
 Do not overread the doctrine. It governs forfeiture conditions on deferred benefits such as partnership distributions or equity awards; it does not let an employer relabel a covenant that directly bars work and thereby escape the reasonableness review that still governs true restraints on post-employment competition.
 
@@ -167,7 +167,7 @@ This is a narrow licensing rule, not a general employee non-compete statute. It 
 
 - **January 29, 2024:** *Ainslie* held that limited partnership forfeiture-for-competition provisions are not reviewed like ordinary non-competes when sophisticated parties agreed to the condition [^ainslie-recent-track].
 - **December 10, 2024:** *Sunder* affirmed refusal to blue-pencil exceptionally broad covenants and warned against incentives for overbroad drafting [^sunder-recent-track].
-- **December 18, 2024:** *LKQ Corp. v. Rutledge* confirmed that *Ainslie*'s employee-choice doctrine is not limited to limited partnerships and reaches corporate equity forfeiture-for-competition provisions [^lkq-recent-track].
+- **December 18, 2024:** *LKQ Corp. v. Rutledge* confirmed that the employee-choice doctrine of *Ainslie* [^ainslie-recent-track] is not limited to limited partnerships and reaches corporate equity forfeiture-for-competition provisions [^lkq-recent-track][^lkq-recent-rsu].
 - **February 3, 2026:** *Doorly* held that consideration is measured at contract formation, not at enforcement after equity forfeiture [^doorly-recent-track].
 - **March 19, 2026:** *Payscale* reversed dismissal and rejected a pleading-stage inference against a nationwide covenant where the plaintiff pleaded specific business interests [^payscale-recent-track].
 
@@ -221,6 +221,8 @@ The through-line is not that Delaware became anti-enforcement. It is that Delawa
 
 [^lkq-not-limited-to-lp]: **LKQ Corp. v. Rutledge** — "Cantor Fitzgerald is not restricted to the limited partnership context." *LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024).* <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=Cantor%20Fitzgerald%20is%20not%20restricted,to%20the%20limited%20partnership%20context.>
 
+[^lkq-rsu-agreements]: **LKQ Corp. v. Rutledge** — "The United States Court of Appeals for the Seventh Circuit is considering an appeal raising a similar forfeiture-for- competition dispute under Delaware law but arising from a company’s restricted stock unit agreements." *LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024).* <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=The%20United%20States%20Court%20of%20Appeals%20for%20the%20Seventh%20Circuit%20is,company%E2%80%99s%20restricted%20stock%20unit%20agreements.>
+
 [^powell-continued-employment]: **Research & Trading Corp. v. Powell** — "The Court finds there was sufficient consideration at the time of the signing of the covenant to support an enforceable restrictive covenant." *Research & Trading Corp. v. Powell, 468 A.2d 1301, 1305 (Del. Ch. 1983).* <https://www.courtlistener.com/opinion/2275060/research-trading-corp-v-powell/#:~:text=The%20Court%20finds%20there%20was,support%20an%20enforceable%20restrictive%20covenant.>
 
 [^doorly-formation-timing]: **North American Fire Ultimate Holdings, LP v. Doorly** — "Because consideration is measured at the time of contracting and not at the time of enforcement, we reverse and remand for further proceedings." *N. Am. Fire Ultimate Holdings, LP v. Doorly, No. 142, 2025, order at 2 (Del. Feb. 3, 2026).* <https://www.courtlistener.com/opinion/10783312/north-american-fire-ultimate-holdings-lp-v-alan-doorly/#:~:text=Because%20consideration%20is%20measured%20at,and%20remand%20for%20further%20proceedings.>
@@ -264,3 +266,5 @@ The through-line is not that Delaware became anti-enforcement. It is that Delawa
 [^doorly-recent-track]: **North American Fire Ultimate Holdings, LP v. Doorly** — "Because consideration is measured at the time of contracting and not at the time of enforcement, we reverse and remand for further proceedings." *N. Am. Fire Ultimate Holdings, LP v. Doorly, No. 142, 2025, order at 2 (Del. Feb. 3, 2026).* <https://www.courtlistener.com/opinion/10783312/north-american-fire-ultimate-holdings-lp-v-alan-doorly/#:~:text=Because%20consideration%20is%20measured%20at,and%20remand%20for%20further%20proceedings.>
 
 [^payscale-recent-track]: **Payscale Inc. v. Norman** — "Accordingly, the trial court erred in dismissing Payscale’s claim that Norman breached the non-compete provision." *Payscale Inc. v. Norman, No. 297, 2025, slip op. at 18 (Del. Mar. 19, 2026).* <https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=Accordingly%2C%20the%20trial%20court%20erred,Norman%20breached%20the%20non%2Dcompete%20provision.>
+
+[^lkq-recent-rsu]: **LKQ Corp. v. Rutledge** — "The United States Court of Appeals for the Seventh Circuit is considering an appeal raising a similar forfeiture-for- competition dispute under Delaware law but arising from a company’s restricted stock unit agreements." *LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024).* <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=The%20United%20States%20Court%20of%20Appeals%20for%20the%20Seventh%20Circuit%20is,company%E2%80%99s%20restricted%20stock%20unit%20agreements.>

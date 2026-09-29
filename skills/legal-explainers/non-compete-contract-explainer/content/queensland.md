@@ -2,7 +2,7 @@
 jurisdiction: "Queensland, Australia"
 slug: queensland
 countryCode: AU
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/queensland · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/queensland · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Queensland[^about]
 
@@ -30,7 +30,7 @@ In Queensland a post-employment non-compete is presumptively void as a restraint
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | A Queensland non-compete is presumptively void and binds a former employee only so far as it is reasonable to protect a legitimate interest; there is no statutory read-down power, so a court can only strike out grammatically severable words under the blue-pencil rule and an overbroad clause that severance cannot save fails entirely. |
-| **Main law or case** | Common-law restraint of trade (no equivalent of the NSW Restraints of Trade Act 1976) |
+| **Main law or case** | Common-law restraint of trade governs; Reims Investments Pty Ltd v City Fertility Sydney CBD Pty Ltd [2025] QCA 243 (Doyle JA). |
 | **Main exceptions** | Sale-of-business covenants are judged more leniently; a proposed federal ban would, if enacted, cover most employees earning under the Fair Work Act high-income threshold (with sale-of-business and above-threshold restraints reported to be excluded), but it is not yet law. |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Yes |
@@ -45,7 +45,7 @@ Queensland is not a per se ban jurisdiction, and it has no statute that sets fix
 
 "A restraint will be invalid unless it is proven to be reasonable as between the parties or if proven to be unreasonable in the public interest."[^reims-invalid-unless-reasonable]
 
-Courts apply the doctrine more strictly to employment covenants than to covenants in commercial deals: a buyer of a business may protect itself from competition by the seller, but an employer may not protect itself from competition by an employee as such [^aeci-competition-per-se]. The foundational High Court authorities — *Nordenfelt v Maxim Nordenfelt Guns and Ammunition Co* and *Buckley v Tutty* — establish the same framework that Queensland courts continue to apply today. The sections that follow work through whether a court can narrow an overbroad clause, why cascading clauses matter so much, what counts as a legitimate interest, how reasonableness of scope is judged, and the open question of whether a breach can extend the restraint.
+Courts apply the doctrine more strictly to employment covenants than to covenants in commercial deals: a buyer of a business may protect itself from competition by the seller, but an employer may not protect itself from competition by an employee as such [^aeci-competition-per-se]. The High Court stated the starting point in *Lindner v Murdock's Garage*: any contractual restraint of trade is prima facie invalid [^lindner-prima-facie]. The Queensland Court of Appeal restated the rule in 2025 [^reims-invalid-unless-reasonable]. The sections that follow work through whether a court can narrow an overbroad clause, why cascading clauses matter so much, what counts as a legitimate interest, how reasonableness of scope is judged, and the open question of whether a breach can extend the restraint.
 
 ## Can a Queensland court narrow an overbroad non-compete? {#court-narrowing}
 
@@ -110,7 +110,7 @@ For mid-employment restraints — covenants introduced after the employee is alr
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus], so an employer seeking an injunction already starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The staged Queensland authorities here do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled Queensland rule.
+**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus], so an employer seeking an injunction already starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The identified Queensland authorities here do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled Queensland rule.
 
 The reasonableness analysis assumes a clause the employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus]. Where the employer is the party in serious breach, a court may, applying the general common-law principle, treat the employee as released from the covenant; and in any event the equitable remedy an employer needs — chiefly an injunction — is discretionary and sensitive to the employer's own conduct.
 
@@ -181,6 +181,8 @@ The same High Court restraint-of-trade doctrine that governs Queensland non-comp
 [^autoparts-onus]: **Auto Parts Group Pty Ltd v Cooper** — "The party who seeks to enforce the restraint has the onus of proving that the restraint is reasonable as between the parties." *Auto Parts Group Pty Ltd v Cooper [2015] QSC 155, quoting Vision Eye Institute Ltd v Kitchen [2014] QSC 260.* <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 
 [^aeci-competition-per-se]: **AECI Australia Pty Ltd v Convey** — "a purchaser of a business is entitled to protect itself from competition by the vendor; but an employer is not entitled to protect itself from competition per se by an employee." *AECI Australia Pty Ltd v Convey [2020] QSC 207 (Bradley J), quoting Just Group Ltd v Peck (2016) 344 ALR 162.* <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>
+
+[^lindner-prima-facie]: **Lindner v Murdock's Garage** — "Any contractual restraint of trade is prima facie unlawful and invalid." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 
 [^autoparts-no-rewrite]: **Auto Parts Group Pty Ltd v Cooper** — "Courts will not rewrite the parties' contract for them. However, within certain limits which are not alleged to have been exceeded in this case, a contract may contain cascading restraint of trade clauses." *Auto Parts Group Pty Ltd v Cooper [2015] QSC 155, quoting Vision Eye Institute Ltd v Kitchen [2014] QSC 260.* <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 

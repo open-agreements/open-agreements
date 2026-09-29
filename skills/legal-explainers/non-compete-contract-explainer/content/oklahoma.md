@@ -2,7 +2,7 @@
 jurisdiction: "Oklahoma"
 slug: oklahoma
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oklahoma · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oklahoma · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Oklahoma[^about]
 
@@ -30,7 +30,7 @@ Oklahoma voids employee non-compete agreements by statute and allows only narrow
 | --- | --- |
 | **Are non-competes enforceable?** | Banned |
 | **Bottom line** | Oklahoma voids employee non-competes by statute, permitting only narrow carve-outs for direct customer non-solicitation, employee anti-raiding, and sale-of-business or partnership-dissolution covenants. |
-| **Main law or case** | Okla. Stat. tit. 15, § 217 |
+| **Main law or case** | Okla. Stat. tit. 15, § 217. |
 | **Main exceptions** | Sale of goodwill (§ 218); partnership dissolution (§ 219); direct customer non-solicit (§ 219A); employee anti-raiding (§ 219B); trade-secret clauses outside the ban |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |

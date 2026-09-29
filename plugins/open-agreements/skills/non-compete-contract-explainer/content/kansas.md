@@ -2,7 +2,7 @@
 jurisdiction: "Kansas"
 slug: kansas
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kansas · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kansas · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Kansas[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of Kansas non-compete law, including the Weber re
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Kansas enforces an employee non-compete that is ancillary, reasonable under the four-factor Weber test, and not adverse to the public welfare, and is one of the more employer-friendly states; courts will narrow an overbroad restraint. |
-| **Main law or case** | common law (Weber v. Tillman, 913 P.2d 84 (Kan. 1996)) |
+| **Main law or case** | Common law governs employee non-competes; Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996). |
 | **Main exceptions** | Non-competes excluded from K.S.A. 50-163 Restraint of Trade Act; non-solicit & owner safe harbors; no physician/healthcare ban |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -148,7 +148,7 @@ That gives Kansas employers more flexibility than states requiring new, independ
 
 **Short answer.** No special ban. Kansas evaluates physician covenants under the ordinary reasonableness test, and it recognizes referral sources as a legitimate interest a medical practice may protect [^idbeis-referral-sources].
 
-Kansas has no statute banning healthcare non-competes. Both of the state's leading covenant cases, *Weber* and *Idbeis*, arose in medical practices and enforced the covenants. *Idbeis* is the clearest statement that a medical group may protect referral relationships.
+Kansas has no statute banning healthcare non-competes. Two Kansas Supreme Court decisions arose in medical practices and enforced the covenants: *Weber* [^healthcare-weber-dermatologists][^healthcare-weber-enforced] and *Idbeis* [^idbeis-referral-sources][^healthcare-idbeis-enforced]. *Idbeis* is the clearest statement that a medical group may protect referral relationships.
 
 "In Kansas, however, the law is clear that referral sources are a legitimate interest which can be protected by a restrictive covenant even in the context of a medical practice."[^idbeis-referral-sources]
 
@@ -225,6 +225,12 @@ A 2026 bill, HB 2650, would have voided non-competes on the sale or change in co
 [^puritan-bennett-consideration]: **Puritan-Bennett Corp. v. Richter** — "After reviewing these authorities, we hold that continued employment should not as a matter of law be disregarded as consideration sufficient to uphold a covenant not to compete." *Puritan-Bennett Corp. v. Richter, 8 Kan. App. 2d 311, 657 P.2d 589 (1983).* <https://www.courtlistener.com/opinion/1159191/puritan-bennett-corp-v-richter/#:~:text=After%20reviewing%20these%20authorities%2C%20we,a%20covenant%20not%20to%20compete.>
 
 [^idbeis-referral-sources]: **Idbeis v. Wichita Surgical Specialists, P.A.** — "In Kansas, however, the law is clear that referral sources are a legitimate interest which can be protected by a restrictive covenant even in the context of a medical practice." *Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005).* <https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20Kansas%2C%20however%2C%20the%20law,context%20of%20a%20medical%20practice.>
+
+[^healthcare-weber-dermatologists]: **Weber v. Tillman** — "Plaintiff employer and defendant employee, both dermatologists, entered into an employment contract which included a covenant not to compete should the employment cease for any reason." *Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).* <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=Plaintiff%20employer%20and%20defendant%20employee%2C,employment%20cease%20for%20any%20reason.>
+
+[^healthcare-weber-enforced]: **Weber v. Tillman** — "We are required to enforce the noncompetition covenant and affirm the trial court’s grant of an injunction." *Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).* <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=We%20are%20required%20to%20enforce,court%E2%80%99s%20grant%20of%20an%20injunction.>
+
+[^healthcare-idbeis-enforced]: **Idbeis v. Wichita Surgical Specialists, P.A.** — "In conclusion, the restrictive covenant in each of the plaintiff s employment contracts is enforceable." *Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005).* <https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20conclusion%2C%20the%20restrictive%20covenant,s%20employment%20contracts%20is%20enforceable.>
 
 [^ksa-60-3320-trade-secret]: **K.S.A. 60-3320** — "‘Trade secret’ means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (i) derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and (ii) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy." *K.S.A. 60-3320(4).* <https://ksrevisor.gov/statutes/chapters/ch60/060_033_0020.html>
 

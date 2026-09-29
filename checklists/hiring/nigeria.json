@@ -1,0 +1,306 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/hiring/nigeria",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/hiring/nigeria.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/hiring/nigeria",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/hiring/nigeria/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/hiring/nigeria/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "external": true,
+      "title": "CC BY 4.0"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "hiring",
+    "slug": "nigeria",
+    "frontmatter": {
+      "title": "Hiring Reviewer Checklist — Nigeria",
+      "description": "Review Nigerian hiring terms, worker coverage, written particulars, delivery, notice and onboarding questions before issuing an offer.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Nigeria",
+      "coverage": "Nigeria — written employment terms and onboarding",
+      "lastReviewed": "2026-09-28",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 10,
+    "sections": [
+      {
+        "sectionId": "coverage-and-employer",
+        "label": "Coverage and employer"
+      },
+      {
+        "sectionId": "written-terms-and-delivery",
+        "label": "Written terms and delivery"
+      },
+      {
+        "sectionId": "onboarding-and-unresolved-work",
+        "label": "Onboarding and unresolved work"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "assess-worker-coverage",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.assess-worker-coverage",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Labour Act worker coverage",
+        "sectionId": "coverage-and-employer",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#assess-worker-coverage",
+        "requirementGuidance": "Record the actual duties and assess section 91, including every relevant exclusion. Do not assume all employees fall within the Act or that an excluded employee has no rights. If unresolved, flag which statutory rules cannot yet be applied.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-worker-coverage",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 91(1), definition of worker",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 91(1), definition of worker; official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Worker coverage is limited by the statutory definition and its exclusions.",
+            "verbatimQuote": "\"worker\" means any person who has entered into or works under a contract with an employer, whether the contract is for manual labour or clerical work or is expressed or implied or oral or written, and whether it is a contract of service or a contract personally to execute any work or labour, but does not include‐ (a) any person employed otherwise than for the purposes of the employer's business; or (b) persons exercising administrative, executive, technical or professional functions as public officers or otherwise; or (c) members of the employer's family; or (d) representatives, agents and commercial travellers in so far as their work is carried on outside the permanent workplace of the employer's establishment; or (a) any person to whom articles or materials are given out to be made up, cleaned, washed, altered, ornamented, finished, repaired or adapted for sale in his own home or on other premises not under the control or management of the person who gave out the articles or the material; or (b) any person employed in a vessel or aircraft to which the laws regulating merchant shipping or civil aviation apply;",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-worker-coverage"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employer-and-engagement",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.identify-employer-and-engagement",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employer and engagement facts",
+        "sectionId": "coverage-and-employer",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#identify-employer-and-engagement",
+        "requirementGuidance": "Record the legal employer, candidate, actual duties, reporting line, work location, start date and fixed-term expiry if relevant. Complete the agreed terms before sending the offer. This is a drafting safeguard, not a statutory coverage determination.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "complete-written-particulars",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.complete-written-particulars",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Required written particulars for covered workers",
+        "sectionId": "written-terms-and-delivery",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#complete-written-particulars",
+        "requirementGuidance": "Where section 7 applies, include every section 7(1) particular: employer and worker details, place/date of engagement, nature of work, fixed-term expiry, appropriate notice, wages/calculation/payment, hours, holiday and holiday pay, sickness or injury and sick pay, and special conditions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-written-particulars",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 7(1)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 7(1); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Covered workers must receive the listed written particulars within three months.",
+            "verbatimQuote": "(1) Not later than three months after the beginning of a worker's period of employment with an employer, the employer shall give to the worker a written statement specifying‐ (a) the name of the employer or group of employers, and where appropriate, of the undertaking by which the worker is employed; (b) the name and address of the worker and the place and date of his engagement; (c) the nature of the employment; (d) if the contract is for a fixed term, the date when the contract expires; (e) the appropriate period of notice to be given by the party wishing to terminate the contract, due regard being had to section 11 of this Act; (f) the rates of wages and method of calculation thereof and the manner and periodicity of payment of wages; (g) any terms and conditions relating to‐ (i) hours of work; or (ii) holidays and holiday pay; or (iii) incapacity for work due to sickness or injury, including any provisions for sick pay; and (h) any special conditions of the contract.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-written-particulars"
+          }
+        ]
+      },
+      {
+        "requirementId": "deliver-contract-and-copy",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.deliver-contract-and-copy",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Timely delivery and worker copy",
+        "sectionId": "written-terms-and-delivery",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#deliver-contract-and-copy",
+        "requirementGuidance": "For a covered worker, give the section 7 statement within three months of starting. If relying on section 7(6), confirm that the written contract covers every required particular and the worker has a copy. Keep a delivery record as a practical safeguard.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-contract-copy",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 7(6)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 7(6); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "A complete written contract and worker copy satisfy the section 7(6) exception.",
+            "verbatimQuote": "(6) The provisions of this section in respect of written statements shall not apply if‐ (a) a worker has a written contract of employment which covers each of the particulars mentioned in subsection (1) of this section; and (b) he has a copy of that written contract.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-contract-copy"
+          }
+        ]
+      },
+      {
+        "requirementId": "maintain-accessible-policies-and-changes",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.maintain-accessible-policies-and-changes",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Accessible policies and change records",
+        "sectionId": "written-terms-and-delivery",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#maintain-accessible-policies-and-changes",
+        "requirementGuidance": "When section 7 applies, make referenced documents reasonably accessible. Communicate required changes within one month under section 7(2), or satisfy the specific advance-reference and timely-recording mechanism in section 7(4). Record versions and access; these disclosure rules do not by themselves authorize unilateral changes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-accessible-policy",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 7(3)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 7(3); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 7(3) permits reference to another document that the worker has reasonable opportunities to read or can reasonably access.",
+            "verbatimQuote": "(3) A statement under subsection (1) or (2) of this section may, for all or any of the particulars to be given by the statement, refer the worker to some other document which the worker has reasonable opportunities of reading in the course of his employment or which is made reasonably accessible to the worker in some other way.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-accessible-policy"
+          },
+          {
+            "sourceId": "ng-checklist-accessible-policy-changes",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 7(2)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 7(2); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 7(2) requires communicating changes within one month and specifies preservation and access when no copy is left.",
+            "verbatimQuote": "(2) If after the date to which the said statement relates there is a change in the terms to be included or referred to in the statement the employer‐ (a) shall, not more than one month after the change, inform the worker of the nature of the change by a written statement; and (b) if he does not leave a copy of the statement with the worker, shall preserve the statement and ensure that the worker has reasonable opportunities of reading it (c) in the course of his employment, or that it is made reasonably accessible to the worker in some other way.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-accessible-policy-changes"
+          },
+          {
+            "sourceId": "ng-checklist-accessible-policy-recording",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 7(4)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 7(4); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 7(4) permits its advance-reference alternative only where the indicated changes are duly entered or recorded within one month.",
+            "verbatimQuote": "(4) If the employer, in referring in the said statement to any such document, indicates to the worker that future changes in the terms particularised in the document will be entered in the document (or recorded by some other means for the information of persons referred to in the document), the employer need not under subsection (2) of this section inform the worker of any such change which is duly entered or recorded not more than one month after the change is made.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-accessible-policy-recording"
+          }
+        ]
+      },
+      {
+        "requirementId": "check-notice-clause",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.check-notice-clause",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice clause and termination process",
+        "sectionId": "written-terms-and-delivery",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#check-notice-clause",
+        "requirementGuidance": "State an express notice clause. For covered contracts, check section 11: one day up to three months; one week over three months but under two years; two weeks from two years to under five; one month from five years. Notice of at least one week must be written; the notice day is excluded. Assess the rest of section 11 and other applicable rules before termination. Do not import a U.S. at-will clause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-notice",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 11(2)–(9)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 11(2)–(9); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "The Act specifies service-based notice and writing for notice of one week or more.",
+            "verbatimQuote": "(2) The notice to be given for the purposes of subsection (1) of this section shall be‐ (a) one day, where the contract has continued for a period of three months or less; (b) one week, where the contract had continued for more than three months but less than two years; (c) two weeks, where the contract has continued for a period of two years but less than five years; and (d) one month, where the contract had continued for five years or more. (3) Any notice for a period of one week or more shall be in writing.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "resolve-medical-examination",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.resolve-medical-examination",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Medical-examination operations",
+        "sectionId": "onboarding-and-unresolved-work",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#resolve-medical-examination",
+        "requirementGuidance": "Before the start date, resolve worker coverage and section 8: registered practitioner, employer expense, any applicable State Authority exemption order and the examination process. Do not assume a statutory category is an automatic exemption. Separately determine medical-data handling requirements; current orders and privacy rules are outside this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-medical",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 8(1)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 8(1); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 8(1) requires examination by a registered medical practitioner at employer expense; exemptions are addressed separately in section 8(2).",
+            "verbatimQuote": "(1) Every worker who enters into a contract shall be medically examined by a registered medical practitioner at the expense of the employer.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-medical"
+          },
+          {
+            "sourceId": "ng-checklist-medical-exemptions",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 8(2)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 8(2); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 8(2) permits State Authority exemption orders for the specified categories and qualifications; category membership alone is not an exemption.",
+            "verbatimQuote": "(2) The State Authority may by order exempt from the requirement of medical examination workers entering into contracts ror‐ (a) employment in agricultural undertakings not employing more than a limited number of workers (the limit being specified in the order); or (b) employment in the vicinity of the workers' homes‐ (i) in agricultural work; or (ii) in non‐agricultural work which the State Authority is satisfied is not of a dangerous character or likely to be injurious to the health of the workers.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-medical-exemptions"
+          }
+        ]
+      },
+      {
+        "requirementId": "separate-post-employment-restraint",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.separate-post-employment-restraint",
+        "requirementLevel": "SHOULD NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "Post-employment restraint assessment",
+        "sectionId": "onboarding-and-unresolved-work",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#separate-post-employment-restraint",
+        "requirementGuidance": "Include a post-termination non-compete in the base offer for this resource. This is a drafting safeguard, not a statement that all Nigerian restraints are prohibited. If one is proposed separately, document the business interest and employee access, proposed scope and verified authority. FCCPA section 68(1)(e) is not a blanket two-year safe harbor. No La Casera holding or 2026 exposure-draft rule is adopted.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "assign-other-hiring-workstreams",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.assign-other-hiring-workstreams",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Other hiring workstreams",
+        "sectionId": "onboarding-and-unresolved-work",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#assign-other-hiring-workstreams",
+        "requirementGuidance": "Assign payroll, minimum-wage, pension, immigration, equity, IP ownership, employee-data, collective-agreement and sector reviews for the actual hire. This checklist does not verify those regimes or certify all-law compliance.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "retain-source-and-decision-record",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.retain-source-and-decision-record",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Source and decision record",
+        "sectionId": "onboarding-and-unresolved-work",
+        "itemNumber": "3.4",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#retain-source-and-decision-record",
+        "requirementGuidance": "MUST items state conditional duties from the cited Labour Act provisions; SHOULD and SHOULD NOT items are practical safeguards for this limited resource. Record the result, person responsible and unresolved question for each item. The sources below were directly retrieved on 28 September 2026; no local-lawyer review or comprehensive compliance assessment is claimed. The source-capture dates, hashes and specific limitations appear in the guide's sources and limits. For a proposed service-contract restraint, separately read FCCPA 2018 section 68(1)(e), PDF page 37, printed A35, and verify the relevant restraint authorities. The held source set does not establish general enforceability or a permitted duration. Retain the source versions, verification dates, coverage reasoning, completed terms, delivered policies and remaining questions. Check for operative amendments and applicable State/sector rules before relying on a provision. A completed checklist is not proof of legal clearance.",
+        "variants": [],
+        "sources": []
+      }
+    ]
+  }
+}

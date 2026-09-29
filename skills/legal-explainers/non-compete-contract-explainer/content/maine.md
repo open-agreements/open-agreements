@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maine[^about]
 
@@ -28,11 +28,11 @@ Maine regulates employee non-competes through 26 M.R.S. § 599-A, using statutor
 
 | Question | Maine |
 | --- | --- |
-| **Are non-competes enforceable?** | Allowed above a pay level |
-| **Bottom line** | Maine treats non-competes as contrary to public policy and enforces them only when reasonable, and bans them entirely for employees earning at or below 400% of the federal poverty level (and for non-owner veterinarians). |
-| **Main law or case** | 26 M.R.S. § 599-A |
-| **Main exceptions** | Veterinarian (non-owner) ban; health-care-practitioner restriction (L.D. 2200, eff. July 13, 2026); employer no-poach ban (§ 599-B) |
-| **When the ban took effect** | Wage-floor ban (threshold indexed; $62,600 in 2025) |
+| **Are non-competes enforceable?** | Income-based limits |
+| **Bottom line** | Maine treats non-competes as contrary to public policy and enforces them only when reasonable. It bars them for employees earning at or below 400% of the federal poverty level and non-owner veterinarians; the non-owner employee health-care-practitioner ban applies to agreements entered into or renewed on or after July 29, 2026. |
+| **Main law or case** | 26 M.R.S. § 599-A(2). 26 M.R.S. § 599-A(3); read with P.L. 2025, ch. 718, § 3. P.L. 2025, ch. 718, § 3. |
+| **Main exceptions** | Veterinarian (non-owner) ban; non-owner employee health-care-practitioner ban (P.L. 2025, ch. 718, eff. July 29, 2026); employer no-poach ban (§ 599-B) |
+| **When the ban took effect** | Sept. 19, 2019 (agreements entered into or renewed after that date); threshold follows the annual federal poverty guideline |
 | **Can a court narrow it?** | Unsettled |
 | **Applies to contractors?** | Unclear |
 | **Restriction extended during a breach?** | Not addressed |
@@ -62,11 +62,11 @@ The veterinarian rule is stronger than ordinary non-enforcement. The current sta
 > [!NOTE]
 > **Practice note.**
 >
-> Do not treat the physician delayed-effect carve-out as a healthcare-wide permission rule. A separate health-care-practitioner restriction is now law: Governor Mills signed L.D. 2200 on April 15, 2026, and it applies to agreements entered into or renewed on or after its July 13, 2026 effective date [^ebg-ld2200-enacted][^maine-599a-prohibited-workers].
+> P.L. 2025, ch. 718 bars a non-compete with an employee health-care practitioner who has no ownership interest in the employer. The act applies to agreements entered into or renewed on or after July 29, 2026; a permitted practitioner covenant must also honor patients’ choice of practitioner [^maine-599a-prohibited-workers][^maine-ld2200-enacted][^maine-ld2200-application][^maine-ld2200-patient-choice][^maine-2026-effective-protected].
 
 ## What notice and timing rules apply to Maine non-competes? {#notice-timing}
 
-**Short answer.** Maine requires pre-offer disclosure, a copy at least 3 business days before signing, and delayed effectiveness until the later of one year of employment or 6 months after signing, except for allopathic and osteopathic physician agreements [^maine-599a-disclosure-notice][^maine-599a-delayed-effectiveness].
+**Short answer.** Maine employers must disclose a required non-compete before offering employment and provide the employee a copy at least 3 business days before signing [^maine-599a-disclosure-notice]. For most employees, the covenant takes effect only after the later of one year of employment or 6 months after signing [^maine-599a-delayed-effectiveness]. Section 4 of P.L. 2025, ch. 718 extends the timing exception from certain physicians to health-care practitioners; section 3 separately bars non-owner employee practitioners’ non-competes [^maine-ld2200-timing-amendment][^maine-599a-timing-prohibition][^maine-ld2200-timing-eligibility].
 
 The notice rule has two parts. First, if the job will require a non-compete, the employer must disclose that requirement before making the offer. Second, the employer must provide the agreement at least 3 business days before the required signing date.
 
@@ -137,16 +137,16 @@ The remedies are practical. Courts may restrain actual or threatened misappropri
 
 ## What recent Maine non-compete developments should employers track? {#recent-developments}
 
-**Short answer.** Track three moving points: the annually indexed wage threshold, the 2024 veto of L.D. 1496, and the newly enacted L.D. 2200 health-care-practitioner restriction effective July 13, 2026 [^foley-2025-threshold-recent][^bernstein-ld1496-veto-sustained][^ebg-ld2200-effective].
+**Short answer.** Track three moving points: the annually indexed wage threshold, the 2024 veto of L.D. 1496, and the newly enacted L.D. 2200 non-owner employee health-care-practitioner restriction effective July 29, 2026 [^foley-2025-threshold-recent][^bernstein-ld1496-veto-sustained][^maine-599a-current-prohibited-workers][^maine-ld2200-recent-restriction][^maine-ld2200-recent][^maine-2026-session-effective-date].
 
 The 2024 veto means Maine did not move to a near-total employee non-compete ban then. Bernstein Shur reports that the veto was sustained on April 2, 2024, so employers continued to draft under the existing L.D. 733 framework [^bernstein-ld1496-veto-sustained].
 
-The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on April 15, 2026, and it applies to non-compete agreements entered into or renewed on or after its July 13, 2026 effective date [^ebg-ld2200-effective].
+The 2026 health-care amendment is now law. L.D. 2200 was approved on April 15, 2026; it applies to non-competes entered into or renewed on or after July 29, 2026. Its new employee ban concerns practitioners without an ownership interest in their employer [^maine-599a-current-prohibited-workers][^maine-ld2200-recent-restriction][^maine-ld2200-recent][^maine-2026-session-effective-date].
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> L.D. 2200's health-care-practitioner restriction applies to every non-compete entered into or renewed on or after its July 13, 2026 effective date, so the trigger is the made-or-renewed date rather than when a dispute arises [^ebg-ld2200-effective]. A covenant for a health-care worker that is signed, re-papered, or renewed on or after that date is measured against the restriction even where the original agreement predated it, and because the codified text can lag the amendment on the published § 599-A page, a covenant validated only against the pre-amendment wage-floor and veterinarian rules can miss the restriction that now governs it [^ebg-ld2200-effective].
+> L.D. 2200's non-owner employee health-care-practitioner restriction applies to non-competes entered into or renewed on or after its July 29, 2026 effective date, so the trigger is the made-or-renewed date rather than when a dispute arises [^maine-ld2200-recent][^maine-2026-session-effective-date]. A covenant for such a practitioner renewed on or after that date is measured against the new rule even if the original agreement predates it. The older published § 599-A text alone does not show that change [^maine-ld2200-recent].
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Maine*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/maine.
 
@@ -156,17 +156,29 @@ The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on A
 
 [^sisters-duration-geography-interest]: **Sisters of Charity Health System, Inc. v. Farrago** — "Although reasonableness is a question of law, the inquiry is fact-intensive, and it depends on the specific circumstances of the case: the covenant’s duration, the scope of the specified geographic area, and the nature of the interest to be protected." *Sisters of Charity Health Sys., Inc. v. Farrago, 2011 ME 62, ¶ 10, 21 A.3d 110.* <https://www.courtlistener.com/opinion/2444708/sisters-of-charity-health-system-inc-v-farrago/#:~:text=Although%20reasonableness%20is%20a%20question,the%20interest%20to%20be%20protected.>
 
-[^maine-599a-prohibited-workers]: **26 M.R.S. § 599-A — Noncompete agreements** — "The employee is earning wages at or below 400% of the federal poverty level; or" *26 M.R.S. § 599-A(3)(A).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
+[^maine-599a-prohibited-workers]: **26 M.R.S. § 599-A — Noncompete agreements** — "3. Prohibited for certain workers. Notwithstanding subsection 2, an employer may not require or permit an employee to enter into a noncompete agreement with the employer if: A. The employee is earning wages at or below 400% of the federal poverty level; or [PL 2023, c. 118, §1 (NEW).] B. The employee is a veterinarian licensed under Title 32, chapter 71‑A and is employed in a veterinary facility in which the employee does not have an ownership interest. [PL 2023, c. 118, §1 (AMD).] A court may not enforce a noncompete agreement entered into or renewed with an employee who is a veterinarian licensed under Title 32, chapter 71‑A before the effective date of this paragraph unless the employee is working in a veterinary facility in which the employee has an ownership interest. [PL 2023, c. 118, §1 (NEW).]" *26 M.R.S. § 599-A(3); read with P.L. 2025, ch. 718, § 3.* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
 [^maine-599a-veterinarian-prior-agreements]: **26 M.R.S. § 599-A — Noncompete agreements** — "A court may not enforce a noncompete agreement entered into or renewed with an employee who is a veterinarian licensed under Title 32, chapter 71‑A before the effective date of this paragraph unless the employee is working in a veterinary facility in which the employee has an ownership interest." *26 M.R.S. § 599-A(3).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
 [^foley-2025-maine-threshold]: **Noncompete Agreements: Updated Income Thresholds for 2025** — "Accordingly, Maine is updating its $60,240 threshold from 2024 to $62,600 in 2025." *Foley & Lardner, Noncompete Agreements: Updated Income Thresholds for 2025 (2025).* <https://www.foley.com/insights/publications/2025/01/noncompete-agreements-updated-income-thresholds-for-2025/>
 
-[^ebg-ld2200-enacted]: **Maine Restricts Noncompetes for Health Care Practitioners** — "On April 15, 2026, Governor Janet T. Mills signed into law ‘An Act Relating to Noncompete Agreements Between Employers and Health Care Practitioners,’ L.D. 2200 (the ‘Amendments’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
+[^maine-ld2200-enacted]: **P.L. 2025, ch. 718 (L.D. 2200)** — "Sec. 3. 26 MRSA §599-A, sub-§3, ¶C is enacted to read: C. The employee is a health care practitioner who is employed by an entity in which that health care practitioner does not have an ownership interest." *P.L. 2025, ch. 718, §§ 1–5 (approved Apr. 15, 2026).* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
 
-[^maine-599a-disclosure-notice]: **26 M.R.S. § 599-A — Noncompete agreements** — "An employer shall notify an employee or prospective employee of a noncompete agreement requirement and provide a copy of the noncompete agreement not less than 3 business days before the employer requires the agreement to be signed to allow time for the employee or prospective employee to review the agreement and negotiate the terms of the agreement or employment with the employer if the employee or prospective employee wishes to do so." *26 M.R.S. § 599-A(4).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
+[^maine-ld2200-application]: **P.L. 2025, ch. 718 (L.D. 2200)** — "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act." *P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^maine-ld2200-patient-choice]: **P.L. 2025, ch. 718 (L.D. 2200)** — "A noncompete agreement between an employer and a health care practitioner that is enforceable under this subsection must recognize an individual's right to choose that individual's own health care practitioner." *P.L. 2025, ch. 718, § 2.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^maine-2026-effective-protected]: **Maine Laws, 132nd Legislature, Second Regular Session** — "The general effective date of the nonemergency laws passed at the Second Regular Session of the 132nd Legislature is July 29, 2026." *Laws of Maine, 132nd Legislature, Second Regular Session, cover.* <https://legislature.maine.gov/doc/12627>
+
+[^maine-599a-disclosure-notice]: **26 M.R.S. § 599-A — Noncompete agreements** — "An employer shall disclose prior to an offer of employment with the employer that will require the acceptance of a noncompete agreement a statement that a noncompete agreement will be required. An employer shall notify an employee or prospective employee of a noncompete agreement requirement and provide a copy of the noncompete agreement not less than 3 business days before the employer requires the agreement to be signed to allow time for the employee or prospective employee to review the agreement and negotiate the terms of the agreement or employment with the employer if the employee or prospective employee wishes to do so." *26 M.R.S. § 599-A(4).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
 [^maine-599a-delayed-effectiveness]: **26 M.R.S. § 599-A — Noncompete agreements** — "Except for a noncompete agreement between an employer and an allopathic physician or an osteopathic physician licensed under Title 32, chapter 48 or chapter 36, respectively, the terms of a noncompete agreement do not take effect until after one year of the employee's employment with the employer or a period of 6 months from the date the agreement was signed, whichever is later." *26 M.R.S. § 599-A(5).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
+
+[^maine-ld2200-timing-amendment]: **P.L. 2025, ch. 718 (L.D. 2200)** — "Except for a noncompete agreement between an employer and an allopathic physician or an osteopathic physician licensed under Title 32, chapter 48 or chapter 36, respectively a health care practitioner, the terms of a noncompete agreement do not take effect until after one year of the employee's employment with the employer or a period of 6 months from the date the agreement was signed, whichever is later." *P.L. 2025, ch. 718, § 4 (amending 26 M.R.S. § 599-A(5)).* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^maine-599a-timing-prohibition]: **26 M.R.S. § 599-A — Noncompete agreements** — "3. Prohibited for certain workers. Notwithstanding subsection 2, an employer may not require or permit an employee to enter into a noncompete agreement with the employer if: A. The employee is earning wages at or below 400% of the federal poverty level; or [PL 2023, c. 118, §1 (NEW).] B. The employee is a veterinarian licensed under Title 32, chapter 71‑A and is employed in a veterinary facility in which the employee does not have an ownership interest. [PL 2023, c. 118, §1 (AMD).] A court may not enforce a noncompete agreement entered into or renewed with an employee who is a veterinarian licensed under Title 32, chapter 71‑A before the effective date of this paragraph unless the employee is working in a veterinary facility in which the employee has an ownership interest. [PL 2023, c. 118, §1 (NEW).]" *26 M.R.S. § 599-A(3); read with P.L. 2025, ch. 718, § 3.* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
+
+[^maine-ld2200-timing-eligibility]: **P.L. 2025, ch. 718 (L.D. 2200)** — "Sec. 3. 26 MRSA §599-A, sub-§3, ¶C is enacted to read: C. The employee is a health care practitioner who is employed by an entity in which that health care practitioner does not have an ownership interest." *P.L. 2025, ch. 718, §§ 1–5 (approved Apr. 15, 2026).* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
 
 [^brignull-as-applied-review]: **Brignull v. Albert** — "Finally, because the reasonableness of a noncompetition agreement depends on the specific facts of the case, we assess the agreement only as Brignull has sought to apply it and not as it might have been enforced on its terms." *Brignull v. Albert, 666 A.2d 82, 84 (Me. 1995).* <https://www.courtlistener.com/opinion/2381411/brignull-v-albert/#:~:text=Finally%2C%20because%20the%20reasonableness%20of,been%20enforced%20on%20its%20terms.>
 
@@ -200,4 +212,10 @@ The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on A
 
 [^bernstein-ld1496-veto-sustained]: **Governor Mills Vetoes L.D. 1496: What Maine Employers Need to Know** — "Because L.D. 1496 was vetoed and that veto was sustained by the Maine State Legislature, Maine employers should continue to reference L.D. 733 when drafting and negotiating noncompete agreements." *Bernstein Shur, Governor Mills Vetoes L.D. 1496: What Maine Employers Need to Know (2024).* <https://www.bernsteinshur.com/insights-events/governor-mills-vetoes-l-d-1496-an-act-to-prohibit-noncompete-clauses-what-maine-employers-need-to-know/>
 
-[^ebg-ld2200-effective]: **Maine Restricts Noncompetes for Health Care Practitioners** — "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the ‘Effective Date’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
+[^maine-599a-current-prohibited-workers]: **26 M.R.S. § 599-A — Noncompete agreements** — "3. Prohibited for certain workers. Notwithstanding subsection 2, an employer may not require or permit an employee to enter into a noncompete agreement with the employer if: A. The employee is earning wages at or below 400% of the federal poverty level; or [PL 2023, c. 118, §1 (NEW).] B. The employee is a veterinarian licensed under Title 32, chapter 71‑A and is employed in a veterinary facility in which the employee does not have an ownership interest. [PL 2023, c. 118, §1 (AMD).] A court may not enforce a noncompete agreement entered into or renewed with an employee who is a veterinarian licensed under Title 32, chapter 71‑A before the effective date of this paragraph unless the employee is working in a veterinary facility in which the employee has an ownership interest. [PL 2023, c. 118, §1 (NEW).]" *26 M.R.S. § 599-A(3); read with P.L. 2025, ch. 718, § 3.* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
+
+[^maine-ld2200-recent-restriction]: **P.L. 2025, ch. 718 (L.D. 2200)** — "Sec. 3. 26 MRSA §599-A, sub-§3, ¶C is enacted to read: C. The employee is a health care practitioner who is employed by an entity in which that health care practitioner does not have an ownership interest." *P.L. 2025, ch. 718, § 3.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^maine-ld2200-recent]: **P.L. 2025, ch. 718 (L.D. 2200)** — "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act." *P.L. 2025, ch. 718, §§ 3, 5.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^maine-2026-session-effective-date]: **Maine Laws, 132nd Legislature, Second Regular Session** — "The general effective date of the nonemergency laws passed at the Second Regular Session of the 132nd Legislature is July 29, 2026." *Laws of Maine, 132nd Legislature, Second Regular Session, cover; P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/doc/12627>

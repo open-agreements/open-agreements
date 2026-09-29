@@ -12,6 +12,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 
 ## Documents
 
+* [Asset Purchase](asset-purchase/)
 * [Corporate Governance](corporate-governance/)
 * [Founder Separation](founder-separation/)
 * [Invention Assignment](invention-assignment/)

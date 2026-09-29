@@ -24,11 +24,11 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
-### first-state-bank-v-hall-flooring-co-to-transfer-it-instantly-so-that-2ee030b9 {#first-state-bank-v-hall-flooring-co-to-transfer-it-instantly-so-that-2ee030b9}
+### first-state-bank-v-hall-flooring-co-the-purported-assignment-in-the-present-8cff1780 {#first-state-bank-v-hall-flooring-co-the-purported-assignment-in-the-present-8cff1780}
 
-> to transfer it instantly, so that it will be the property of the transferee.
+> The purported assignment in the present case did not show an intention to transfer the fund immediately since the payment was to be made jointly to the purported assignor and assignee without any distinction being shown as to their separate interest in such fund, and for such reason the paper could not constitute either an equitable or legal assignment and the judgment of the trial court so holding was not error.
 
-- supports: `default-ownership`, `holdover-clause-limit`
-- source_cards: `firststatebank-present`, `firststatebank-present-practice`
+- supports: `default-ownership`
+- source_cards: `firststatebank-present`
 - cited_by: [Employee Invention Assignment in Georgia](../invention-assignment/us/georgia.md)
-- link_to_source: <https://www.courtlistener.com/opinion/1377308/first-state-bank-v-hall-flooring-co/#:~:text=to%20transfer%20it%20instantly%2C%20so,the%20property%20of%20the%20transferee.>
+- link_to_source: <https://www.courtlistener.com/opinion/1377308/first-state-bank-v-hall-flooring-co/#:~:text=The%20purported%20assignment%20in%20the,so%20holding%20was%20not%20error.>

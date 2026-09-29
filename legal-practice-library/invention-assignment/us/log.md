@@ -1,5 +1,16 @@
 # Us Update Log
 
+## 2026-09-28
+* **Update**: One chip per named case: cards for the nine cases batch B could not source (#2900) (#2947) (0016d13)
+* **Update**: content(invention-assignment): Rhode Island Main law links the invention-assignment exclusion (1e4c16b)
+* **Update**: One chip per named case: ten invention-assignment guides, Puerto Rico to Wyoming (#2900 batch D2) (#2933) (5227aa5)
+* **Update**: One chip per case: invention-assignment batch B, 13 of 22 findings (#2900) (#2917) (5449817)
+* **Update**: content(invention-assignment): link Main law to source cards (adbad52)
+* **Update**: One chip per named case: nine invention-assignment guides, Missouri to Pennsylvania (#2900 batch D1) (#2926) (ff6f9ed)
+
+## 2026-09-27
+* **Update**: Washington: ESHB 1155 notice deadline and 2027 changes; say Washington State (#2886, #2880) (#2898) (933e73b)
+
 ## 2026-09-23
 * **Update**: Consolidate adjacent practice-guide cautions (#2206) (d436c41)
 * **Update**: content(ca-ia): cross-family structured-analysis pilot on California's statutory questions, plus pilot lessons (#2773) (faafc1e)

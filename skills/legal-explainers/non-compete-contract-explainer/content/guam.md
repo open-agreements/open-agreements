@@ -2,7 +2,7 @@
 jurisdiction: "Guam"
 slug: guam
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/guam · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/guam · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Guam[^about]
 
@@ -30,7 +30,7 @@ Guam voids employee non-compete agreements by statute — 18 GCA § 88105 derive
 | --- | --- |
 | **Are non-competes enforceable?** | Banned |
 | **Bottom line** | Guam voids employee non-competes by statute — 18 GCA § 88105, a transplant of California's restraint-of-trade rule that the Supreme Court of Guam reads as a per-se ban — leaving only narrow sale-of-business and partnership-dissolution exceptions. |
-| **Main law or case** | 18 GCA § 88105; Island Eye Ctr., Inc. v. Lombard, 2020 Guam 32 |
+| **Main law or case** | 18 GCA § 88105. Island Eye Ctr., Inc. v. Lombard, 2020 Guam 32. |
 | **Main exceptions** | Sale of business good will (§ 88106); partnership dissolution (§ 88107) |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |
@@ -66,7 +66,7 @@ This is not a new development. Decades earlier, the Ninth Circuit applied the sa
 
 **Short answer.** Neither sits on firm ground, and a customer non-solicitation clause likely shares the non-compete's fate. No Guam decision squarely rules on a customer non-solicitation clause, but because *Island Eye* adopted California's section 16600 framework — under which a covenant that forecloses a former employee's ability to compete for business is an impermissible restraint — a customer non-solicit likely carries the same void risk. For clauses barring the solicitation of a former employer's *staff*, the Supreme Court of Guam expressly left the question of facial validity open in *Island Eye* [^q2-ie-postemp][^q2-ie-facial].
 
-Guam took its restraint-of-trade rule from California, where post-employment covenants that foreclose a worker's ability to compete are impermissible restraints regardless of how they are labeled — including the former-client service restriction the court invalidated in *Edwards*, the decision *Island Eye* adopted. *Island Eye* itself distinguished employee anti-raiding clauses from client non-solicits and did not separately rule on a customer non-solicitation clause, so the customer-restriction conclusion is a prediction from the adopted framework rather than a Guam holding [^q2-ie-postemp].
+Guam took its restraint-of-trade rule from California, where post-employment covenants that foreclose a worker's ability to compete are impermissible restraints regardless of how they are labeled — including the former-client service restriction the court invalidated in *Edwards* [^q2-edwards-client-restriction], the decision *Island Eye* relied on [^q2-ie-edwards]. *Island Eye* itself distinguished employee anti-raiding clauses from client non-solicits and did not separately rule on a customer non-solicitation clause, so the customer-restriction conclusion is a prediction from the adopted framework rather than a Guam holding [^q2-ie-postemp].
 
 "California courts interpret post-employment covenants not to compete as impermissible restraints of trade which violate section 16600."[^q2-ie-postemp]
 
@@ -162,6 +162,10 @@ The court drew that line itself. *Island Eye* rejected the *inevitable disclosur
 [^q2-ie-postemp]: **Island Eye Center, Inc. v. Lombard** — "California courts interpret post-employment covenants not to compete as impermissible restraints of trade which violate section 16600." *Island Eye Ctr., Inc. v. Lombard, 2020 Guam 32.* <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 [^q2-ie-facial]: **Island Eye Center, Inc. v. Lombard** — "Because of Island Eye's concession, the parties' arguments on appeal are limited to whether non-solicitation clauses facially violate 18 GCA § 88105." *Island Eye Ctr., Inc. v. Lombard, 2020 Guam 32.* <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
+
+[^q2-edwards-client-restriction]: **Edwards v. Arthur Andersen LLP** — "The noncompetition agreement that Edwards was required to sign before commencing employment with Andersen was therefore invalid because it restrained his ability to practice his profession." *Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008).* <https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/#:~:text=The%20noncompetition%20agreement%20that%20Edwards,ability%20to%20practice%20his%20profession.>
+
+[^q2-ie-edwards]: **Island Eye Center, Inc. v. Lombard** — "The Edwards court found that an eighteen-month bar on performing professional services to former clients restricted the employee's ability to practice his profession and was therefore invalid." *Island Eye Ctr., Inc. v. Lombard, 2020 Guam 32.* <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 [^q2-ie-concede]: **Island Eye Center, Inc. v. Lombard** — "Island Eye concedes that employee non-solicitation clauses are typically invalidated under California law as unlawful restraints of trade." *Island Eye Ctr., Inc. v. Lombard, 2020 Guam 32.* <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 

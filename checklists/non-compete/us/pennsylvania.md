@@ -41,7 +41,7 @@ Review every item below the way a Pennsylvania court would: there is no general 
 
 - [ ] **Covered customers** (Recommended) — Bound the class to customers the worker actually served during a stated look-back window. A recent Pennsylvania appellate decision declined to stretch a restriction to customers whose relationships predated the employee's tenure — the employer never built that goodwill through this worker, so restraining it protects nothing the law recognizes. [^pa-english-predated-defs] [#define-covered-customers]
 
-- [ ] **Covered employees** (Recommended) — Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. No Pennsylvania statute or staged decision speaks directly to employee non-solicits, so the clause is judged on the same reasonableness principles as every other restraint — a modest, relationship-based class is far easier to defend than a workforce-wide hiring fence. [#define-covered-employees]
+- [ ] **Covered employees** (Recommended) — Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. No Pennsylvania statute or identified decision speaks directly to employee non-solicits, so the clause is judged on the same reasonableness principles as every other restraint — a modest, relationship-based class is far easier to defend than a workforce-wide hiring fence. [#define-covered-employees]
 
 - [ ] **Protected business interests** (Recommended) — Name the interests in the vocabulary Pennsylvania recognizes: trade secrets, confidential information, customer goodwill, and genuinely specialized training. The fourth element of the enforceability test runs through these interests, and the covenants are enforced only so far as reasonably necessary to protect them — a recital that claims only a wish to avoid competition supports nothing. [^pa-morgans-necessary-defs] [#define-protected-interests]
 
@@ -113,7 +113,7 @@ Review every item below the way a Pennsylvania court would: there is no general 
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Pennsylvania question. No staged statute or appellate decision squarely endorses automatic tolling, and the background rules cut against open-ended extensions: every restraint must be reasonably limited in duration, and a covenant is only presumptively enforceable when reasonably limited as to time. Draft any extension as a separate, breach-tied, bounded restraint, and do not assume a court will revive an expired covenant. [^pa-sidco-tolling][^pa-morgans-tolling] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Pennsylvania question. No identified statute or appellate decision squarely endorses automatic tolling, and the background rules cut against open-ended extensions: every restraint must be reasonably limited in duration, and a covenant is only presumptively enforceable when reasonably limited as to time. Draft any extension as a separate, breach-tied, bounded restraint, and do not assume a court will revive an expired covenant. [^pa-sidco-tolling][^pa-morgans-tolling] [#address-tolling-during-breach]
 
 ## Remedies {#remedies}
 

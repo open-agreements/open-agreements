@@ -8,7 +8,7 @@ description: >-
   (Second) of Contracts § 188 framing, with Vermont's profession-specific
   covenant bars.
 resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
-timestamp: '2026-06-12'
+timestamp: '2026-09-26'
 tags:
   - non-compete
   - checklist
@@ -20,11 +20,11 @@ A clause-by-clause reviewer checklist for Vermont employee restrictive covenant 
 
 ## Parties and cover-term identification {#parties-and-cover-term-identification}
 
-Review every item below the way a Vermont court would: there is no general non-compete statute in force, so each covenant lives or dies on a common-law reasonableness test the employer has the burden of satisfying — and the legislature is actively advancing bills that would supersede that framework if enacted. For the question-by-question legal analysis behind these items, see the [Vermont non-compete practice note](/practice-guides/non-compete/us/vermont).
+Review every item below the way a Vermont court would: there is no general non-compete statute in force, so each covenant lives or dies on a common-law reasonableness test the employer has the burden of satisfying. The 2025-2026 bills that proposed a statutory ban (H.205 and H.583) did not enact one. For the question-by-question legal analysis behind these items, see the [Vermont non-compete practice note](/practice-guides/non-compete/us/vermont).
 
 - [ ] **Parties identified by name** (Recommended) — Who the parties are sets the review track: a covenant between an employer and a departing employee gets the cautious employment-side scrutiny, while a covenant between a buyer and the seller of a business earns more deference. Vermont treats a non-compete in a business sale as its own bargained-for term, so confirm which relationship the signing entities actually create before reaching anything else. [^miller-distinct-term-parties] [#identify-parties]
 
-- [ ] **Effective date** (Recommended) — Every covenant clock needs a defined start, and date discipline carries extra weight while the General Assembly is actively considering non-compete legislation: if a pending bill becomes law, the execution date is what will place an agreement on one side or the other of any new regime. An undated covenant leaves that question open at the worst possible time. [^vt-h205-effective-date] [#identify-effective-date]
+- [ ] **Effective date** (Recommended) — Every covenant clock needs a defined start. Record the execution and effective dates so counsel can assess any transition provisions if Vermont later enacts a non-compete statute; H.205, the 2026 general-ban bill, was recommitted. [^vt-h205-effective-date] [#identify-effective-date]
 
 - [ ] **Employee title** (Recommended) — The role decides whether a categorical bar applies before reasonableness ever comes up: a restriction on a lawyer's right to practice after the relationship ends is barred by the professional-conduct rules, and a barbering or cosmetology school cannot require a covenant as a condition of training for licensure. Outside those classes, the title frames which interests the worker could plausibly threaten. [^rpc-56a-title][^vt-281c-title] [#identify-employee-title]
 
@@ -90,7 +90,7 @@ Review every item below the way a Vermont court would: there is no general non-c
 
 - [ ] **Non-dealing covenant** (Optional) — Non-dealing bars serving covered customers even when they call first — a heavier restraint than a non-solicit, and one that presses on both Restatement prongs: more restraint than the interest needs, and more hardship and public injury on the other side of the scale. Treat its inclusion as a deliberate risk decision. [^barnes-restatement-covenants] [#permit-non-dealing]
 
-- [ ] **Non-compete covenant** (Optional) — If this clause appears, route the review through the Vermont gates at the end of this checklist: courts proceed with caution before enforcing covenants against competitive employment, and the employer will carry the burden at every step. Then check the legislature — H.205 and H.583 are pending bills that would substantially supersede the common-law framework if enacted, so confirm their status before relying on any template. [^barnes-proceed-with-caution][^vt-h205-covenants][^vt-h583-covenants] [#permit-non-compete]
+- [ ] **Non-compete covenant** (Optional) — If this clause appears, route the review through the Vermont gates at the end of this checklist: courts proceed with caution before enforcing covenants against competitive employment, and the employer will carry the burden at every step. Do not rely on a statutory ban: H.205 was recommitted, and H.583 became Act 133, whose [enacted text](https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT133/ACT133%20As%20Enacted.pdf) has no restrictive-covenant provision. [^barnes-proceed-with-caution][^vt-h205-covenants][^vt-act133-covenants] [#permit-non-compete]
 
 - [ ] **Named-competitor narrowing** (Recommended) — When the employer can name its real competitors, the covenant should bind those instead of leaning on an open-ended definition. A named list is the cleanest evidence that the restraint is no greater than the protected interest needs — exactly the showing the employer must make. [#narrow-non-compete-by-specified-competitors-when-provided]
 
@@ -98,11 +98,11 @@ Review every item below the way a Vermont court would: there is no general non-c
 
 ## Non-disparagement {#non-disparagement}
 
-- [ ] **Non-disparagement** (Recommended) — Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state — and for agreements with licensed healthcare professionals, note that pending H.583 would void nondisparagement agreements alongside non-competes if enacted. [^mclaren-macomb-nondisparagement][^vt-h583-nondisparagement] [#require-non-disparagement]
+- [ ] **Non-disparagement** (Recommended) — Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state. [^mclaren-macomb-nondisparagement] [#require-non-disparagement]
 
 ## Physician-specific notices and carve-outs {#physician-specific-notices-and-carve-outs}
 
-- [ ] **Healthcare-professional rights and notices** (Recommended) — As of this checklist's review date, Vermont has no categorical healthcare non-compete ban in force: physician covenants run through the same reasonableness test as everyone else's, and the employer carries the same burden. The clause should say so plainly — and it should flag the tracking duty, because H.583 has passed the House and cleared a Senate amendment cycle; if enacted it would void noncompetition, nondisclosure, and nondisparagement agreements for licensed healthcare professionals, with a narrow exception for covenants ancillary to the sale of a 25%-or-greater equity interest. [^andrus-health-framework][^vt-h583-health] [#address-physician-specific-rights]
+- [ ] **Healthcare-professional rights and notices** (Recommended) — Check that the clause holds physician covenants to the ordinary reasonableness test and does not cite a healthcare ban. Vermont has none: physician covenants run through the same test as everyone else's, and H.583 was enacted as Act 133, whose [enacted text](https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT133/ACT133%20As%20Enacted.pdf) has no restrictive-covenant provision. [^andrus-health-framework][^vt-act133-health] [#address-physician-specific-rights]
 
 ## No conflicting obligations {#no-conflicting-obligations}
 
@@ -114,7 +114,7 @@ Review every item below the way a Vermont court would: there is no general non-c
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach?** (Recommended) — The agreement should say expressly whether the clock pauses during a breach, because in Vermont no one else will say it: the Supreme Court refused to extend a covenant whose term litigation delay had exhausted, holding that the term was a matter of contract and that courts construe contracts but will not make them — it would not even accept relabeling the extension as a postponed start date. No staged Vermont source tests an express tolling clause, so treat any extension mechanism as its own restraint that must earn its keep under the reasonableness test, never as boilerplate. [^roys-85-no-extension] [#address-tolling-without-assuming-courts-will-extend-the-term]
+- [ ] **Restriction extended during a breach?** (Recommended) — The agreement should say expressly whether the clock pauses during a breach, because in Vermont no one else will say it: the Supreme Court refused to extend a covenant whose term litigation delay had exhausted, holding that the term was a matter of contract and that courts construe contracts but will not make them — it would not even accept relabeling the extension as a postponed start date. No identified Vermont source tests an express tolling clause, so treat any extension mechanism as its own restraint that must earn its keep under the reasonableness test, never as boilerplate. [^roys-85-no-extension] [#address-tolling-without-assuming-courts-will-extend-the-term]
 
 ## Remedies {#remedies}
 
@@ -136,7 +136,7 @@ Review every item below the way a Vermont court would: there is no general non-c
 
 ## Governing law, venue, dispute process {#governing-law-venue-dispute-process}
 
-- [ ] **Governing law, venue, dispute process** (Recommended) — Confirm the agreement specifies governing law, venue, and a dispute-resolution process. Restrictive-covenant disputes are jurisdiction-sensitive, and a clear selection binds that risk; the staged Vermont sources state no covenant-specific choice-of-law rule, so review the selection under ordinary conflicts principles. [#specify-governing-law-and-venue]
+- [ ] **Governing law, venue, dispute process** (Recommended) — Confirm the agreement specifies governing law, venue, and a dispute-resolution process. Restrictive-covenant disputes are jurisdiction-sensitive, and a clear selection binds that risk; the identified Vermont sources state no covenant-specific choice-of-law rule, so review the selection under ordinary conflicts principles. [#specify-governing-law-and-venue]
 
 ## Entire agreement, amendment, waiver, e-signatures {#entire-agreement-amendment-waiver-e-signatures}
 
@@ -156,11 +156,11 @@ The four items below exist only on this Vermont page: the common-law reasonablen
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Vermont (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Vermont*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/vermont.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-26. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Vermont (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Vermont*, OpenAgreements (last updated September 26, 2026), https://openagreements.org/checklists/non-compete/us/vermont.
 
 [^miller-distinct-term-parties]: **Miller v. Flegenheimer** — "whether or not the contract includes a form of non compete or non solicitation agreement, the price to be paid for the shares (as opposed to the Non-Compete Agreement), and the structure of the claw-back provision." *Miller v. Flegenheimer, 2016 VT 125, ¶ 21, 203 Vt. 620, 161 A.3d 524.* <https://www.courtlistener.com/opinion/4328779/kenneth-w-miller-ii-v-eric-flegenheimer/#:~:text=whether%20or%20not%20the%20contract,structure%20of%20the%20claw%2Dback%20provision.>
 
-[^vt-h205-effective-date]: **Vt. H.205 (2025-2026) — Bill Status** — "An act relating to agreements not to compete" *H.205, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (recommitted Mar. 13, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.205>
+[^vt-h205-effective-date]: **Vt. H.205 (2025-2026) — Bill Status** — "An act relating to agreements not to compete Rep. Michael Marcotte , Rep. David Bosch , Rep. Kevin Christie , Rep. Jonathan Cooper , Rep. Abbey Duke , Rep. Edye Graning , Rep. Martin LaLonde , Rep. Anthony Micklus , Rep. Herb Olson , Rep. Kirk White House Committee on Commerce and Economic Development 3/13/2026 - Rep. Marcotte of Coventry moved to recommit the bill to the Committee on Commerce and Economic Development , which was agreed to" *H.205, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (recommitted Mar. 13, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.205>
 
 [^rpc-56a-title]: **Vermont Rule of Professional Conduct 5.6** — "agreement that restricts the right of a lawyer to practice after termination of the relationship," *Vt. R. Prof. Conduct 5.6(a).* <https://www.vermontjudiciary.org/sites/default/files/documents/VermontRulesofProfessionalConduct.pdf>
 
@@ -208,17 +208,15 @@ The four items below exist only on this Vermont page: the common-law reasonablen
 
 [^barnes-proceed-with-caution]: **Systems & Software, Inc. v. Barnes** — "We have stated that ‘we will proceed with caution’ when asked to enforce covenants against competitive employment because such restraints run counter to public policy favoring the right of individuals to engage in the commercial activity of their choice." *Sys. & Software, Inc. v. Barnes, 2005 VT 95, 178 Vt. 389, 886 A.2d 762.* <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=We%20have%20stated%20that%20%E2%80%9Cwe,commercial%20activity%20of%20their%20choice.>
 
-[^vt-h205-covenants]: **Vt. H.205 (2025-2026) — Bill Status** — "An act relating to agreements not to compete" *H.205, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (recommitted Mar. 13, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.205>
+[^vt-h205-covenants]: **Vt. H.205 (2025-2026) — Bill Status** — "An act relating to agreements not to compete Rep. Michael Marcotte , Rep. David Bosch , Rep. Kevin Christie , Rep. Jonathan Cooper , Rep. Abbey Duke , Rep. Edye Graning , Rep. Martin LaLonde , Rep. Anthony Micklus , Rep. Herb Olson , Rep. Kirk White House Committee on Commerce and Economic Development 3/13/2026 - Rep. Marcotte of Coventry moved to recommit the bill to the Committee on Commerce and Economic Development , which was agreed to" *H.205, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (recommitted Mar. 13, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.205>
 
-[^vt-h583-covenants]: **Vt. H.583 (2025-2026) — Bill Status** — "An act relating to clinical decision making" *H.583, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (passed House Mar. 20, 2026; House concurred in Senate proposal of amendment, May 22, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.583>
+[^vt-act133-covenants]: **Act 133 (2026) — An act relating to clinical decision making (H.583)** — "No. 133. An act relating to clinical decision making. (H.583) It is hereby enacted by the General Assembly of the State of Vermont: Sec. 1. 18 V.S.A. chapter 233 is added to read: CHAPTER 233. CLINICAL DECISION MAKING § 9771. DEFINITIONS As used in this chapter: (1) ‘Health care facility’ has the same meaning as in section 9432 of this title." *2026, No. 133 (Act 133) (H.583).* <https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT133/ACT133%20As%20Enacted.pdf>
 
 [^mclaren-macomb-nondisparagement]: **NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)** — "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act." *McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
 
-[^vt-h583-nondisparagement]: **Vt. H.583 (2025-2026) — Bill Status** — "An act relating to clinical decision making" *H.583, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (passed House Mar. 20, 2026; House concurred in Senate proposal of amendment, May 22, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.583>
-
 [^andrus-health-framework]: **Vermont Electric Supply Co. v. Andrus** — "enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed." *Vt. Elec. Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).* <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=enforcement%20will%20be%20ordered%20unless,it%20is%20to%20be%20performed.>
 
-[^vt-h583-health]: **Vt. H.583 (2025-2026) — Bill Status** — "An act relating to clinical decision making" *H.583, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (passed House Mar. 20, 2026; House concurred in Senate proposal of amendment, May 22, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.583>
+[^vt-act133-health]: **Act 133 (2026) — An act relating to clinical decision making (H.583)** — "No. 133. An act relating to clinical decision making. (H.583) It is hereby enacted by the General Assembly of the State of Vermont: Sec. 1. 18 V.S.A. chapter 233 is added to read: CHAPTER 233. CLINICAL DECISION MAKING § 9771. DEFINITIONS As used in this chapter: (1) ‘Health care facility’ has the same meaning as in section 9432 of this title." *2026, No. 133 (Act 133) (H.583).* <https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT133/ACT133%20As%20Enacted.pdf>
 
 [^roys-85-no-extension]: **Roy's Orthopedic, Inc. v. Lavigne (second appeal)** — "The term of the noncompetition agreement was a matter of contract between the parties. This Court will construe contracts but it will not make them for the parties." *Roy's Orthopedic, Inc. v. Lavigne, 145 Vt. 324, 487 A.2d 173 (1985).* <https://www.courtlistener.com/opinion/2359631/roys-orthopedic-inc-v-lavigne/#:~:text=The%20term%20of%20the%20noncompetition,make%20them%20for%20the%20parties.>
 

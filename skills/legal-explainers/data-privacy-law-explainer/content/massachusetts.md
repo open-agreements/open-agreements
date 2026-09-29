@@ -2,7 +2,7 @@
 jurisdiction: "Massachusetts"
 slug: massachusetts
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/massachusetts · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/massachusetts · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Massachusetts Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Massachusetts has no comprehensive consumer-privacy act in force. Breach notific
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Massachusetts governs consumer data today through its breach-notification statute (c. 93H), the prescriptive 201 CMR 17.00 regulation (in force since March 1, 2010, it requires a written information security program), and the c. 93A unfair-practices backbone — and the Massachusetts Consumer Data Privacy Act, which would add comprehensive consumer rights and controller duties, has passed both chambers in differing versions and is now in conference-committee reconciliation, not yet law. |
-| **Main law** | Mass. Gen. Laws ch. 93H (breach notification) plus 201 CMR 17.00 (the written information security program rule) and ch. 93I (data destruction), enforced through the ch. 93A consumer-protection backbone — no comprehensive consumer-privacy act is in force; the Massachusetts Consumer Data Privacy Act has passed both chambers in differing versions and is in conference reconciliation |
+| **Main law** | No comprehensive consumer-privacy law in force; Mass. Gen. Laws ch. 93H, § 3(b). 201 CMR 17.01(2). Mass. Gen. Laws ch. 93I, § 2. Mass. Gen. Laws ch. 93A, § 2(a). |
 | **Privacy policy required?** | No Massachusetts statute requires a general consumer privacy policy today; a posted policy that misstates practices is a c. 93A § 2 and FTC Act § 5 deception risk, and both pending MCDPA versions would mandate a detailed privacy notice if enacted |
 | **Who does it cover?** | Any person that owns or licenses personal information about a Massachusetts resident — c. 93H and 201 CMR 17.00 carry no revenue or consumer-volume threshold and reach out-of-state businesses holding resident data; the pending MCDPA versions would add consumer-count and sensitive-data triggers |
 | **Can consumers sue?** | Limited path |
@@ -52,7 +52,7 @@ The rest of a Massachusetts-facing program rides the federal overlay. Section 5 
 
 ## Is Massachusetts about to adopt a comprehensive consumer privacy law? {#pending-data-privacy-act}
 
-**Short answer.** Quite possibly, but it is not law yet. As of June 12, 2026, the Massachusetts Consumer Data Privacy Act is in conference-committee reconciliation: the Senate passed its version, S.2619, 40 to 0 on September 25, 2025; the House passed S.2619 as amended — substituting its own text, published as H.5479 — 146 to 0 on June 4, 2026; and on June 11, 2026 the Senate non-concurred in the House amendment, so a conference committee is forming (the Senate has named conferees; the House had not yet appointed its conferees as of this review). Both versions would insert a new chapter 93M giving consumers rights to access, correct, delete, and port their personal data and to opt out of targeted advertising, the sale of personal data, and profiling that feeds significant automated decisions [^q2-s2619-rights] [^q2-h5479-rights]. None of those duties applies today, and no effective date exists until a merged bill passes both chambers and is signed.
+**Short answer.** Quite possibly, but it is not law yet. The Massachusetts Consumer Data Privacy Act remains in conference-committee reconciliation as of the September 26, 2026 status check: the Senate passed its version, S.2619, 40 to 0 on September 25, 2025; the House passed S.2619 as amended — substituting its own text, published as H.5479 — 146 to 0 on June 4, 2026; and on June 11, 2026 the Senate non-concurred in the House amendment, the Senate appointed conferees that day, and the House appointed its conferees on June 17, 2026 ([official bill history](https://malegislature.gov/Bills/194/S2619)). Both versions would insert a new chapter 93M giving consumers rights to access, correct, delete, and port their personal data and to opt out of targeted advertising, the sale of personal data, and profiling that feeds significant automated decisions [^q2-s2619-rights] [^q2-h5479-rights]. None of those duties applies today, and no effective date exists until a merged bill passes both chambers and is signed.
 
 The two versions agree on the architecture — controller and processor duties, sensitive-data protections, data-protection assessments, recognition of an opt-out preference signal, and Attorney General enforcement through c. 93A — but they differ in both directions, and the differences are the conference agenda. Neither chamber's text is uniformly stricter.
 

@@ -58,7 +58,7 @@ Geography deserves special attention. The territory is three small islands — S
 
 "restrictive clauses of the agreement are void and unenforceable as against public policy on the ground that they are unreasonable restraint on competition."[^dixon-void]
 
-A covenant should therefore state an explicit duration, a defined geographic area tied to where the employer actually competes, and a scope limited to the activities that threaten the protected interest. *Dixon* is a 1983 Territorial Court decision predating *Banks*, so treat it as persuasive illustration rather than binding doctrine — but its reasoning tracks the modern *Arvidson* test.
+A covenant should therefore state an explicit duration, a defined geographic area tied to where the employer actually competes, and a scope limited to the activities that threaten the protected interest. *Dixon* is a 1983 Territorial Court decision [^dixon-void], and its reasoning tracks the modern test applied in *Arvidson* [^arvidson-scope]. A Territorial Court decision of that era is persuasive illustration rather than binding doctrine: *Banks* explains that decisions of the Superior Court and its predecessor courts were reviewed on appeal by the District Court, and that local judges lacked the ability to issue decisions that would constitute binding precedent in the territory [^dl-banks-precedent].
 
 ## What consideration supports a Virgin Islands non-compete, and is continued employment enough? {#consideration}
 
@@ -78,7 +78,7 @@ No on-point Virgin Islands case resolves the question, so this is a planning jud
 > [!CAUTION]
 > **Drafting note.**
 >
-> Draft to the narrowest defensible scope from the start. Reformation is theoretically available in the Virgin Islands, but *Arvidson* applies it strictly — a court is reluctant to rewrite an agreement that is not reasonable on its face or that would require supplying essential terms [^q6-arvidson-strict]. A clause with no reasonable core to enforce risks losing entirely, as both *Arvidson* and the older *Dixon* decision show [^q6-dixon].
+> Draft to the narrowest defensible scope from the start. Reformation is theoretically available in the Virgin Islands, but *Arvidson* applies it strictly — a court is reluctant to rewrite an agreement that is not reasonable on its face or that would require supplying essential terms [^q6-arvidson-strict]. A clause with no reasonable core to enforce risks losing entirely, as *Arvidson* [^q6-arvidson-strict] and the older *Dixon* decision [^q6-dixon] show.
 
 A savings or step-down clause may improve the odds of partial enforcement, but only if enough reasonable terms already exist for a court to enforce without effectively writing a new covenant. The safer assumption is that the covenant as drafted is the covenant the court will judge.
 
@@ -145,6 +145,8 @@ For planning, the audience that matters is a Virgin Islands judge applying the *
 [^arvidson-scope]: **Arvidson v. Buchar** — "The Covenant to not compete does not pass the three pronged business interest test and, by failing to provide time, place, and manner restrictions, is overly broad and invalid" *Arvidson v. Buchar, 2019 VI SUPER 122 (Super. Ct. V.I. Sept. 10, 2019).* <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 [^dixon-void]: **V.I. Diving Schools/Supplies, Inc. v. Dixon** — "restrictive clauses of the agreement are void and unenforceable as against public policy on the ground that they are unreasonable restraint on competition." *V.I. Diving Schools/Supplies, Inc. v. Dixon, Civ. No. 1046/1982 (Terr. Ct. V.I. Oct. 7, 1983).* <https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810747/File/Opinions/Archive/VI%20Diving%20Sch%20v.%20Dixon%20%28IAM%29.pdf>
+
+[^dl-banks-precedent]: **Banks v. International Rental & Leasing Corp.** — "Moreover, even though the Virgin Islands local judiciary continued to expand and receive greater jurisdiction over local matters in the decades that followed, all decisions rendered by the Superior Court and its predecessor courts continued to be reviewed on appeal by the District Court, which made it ‘very difficult to attain’ the goal of establishing ‘an indigenous Virgin Islands jurisprudence’ given that local judges lacked the ability to issue decisions that would constitute binding precedent in the territory." *Banks v. Int'l Rental & Leasing Corp., 55 V.I. 967 (V.I. 2011).* <https://www.courtlistener.com/opinion/8676262/banks-v-international-rental-leasing-corp/#:~:text=Moreover%2C%20even%20though%20the%20Virgin,binding%20precedent%20in%20the%20territory.>
 
 [^arvidson-consideration]: **Arvidson v. Buchar** — "is supported by valid consideration" *Arvidson v. Buchar, 2019 VI SUPER 122 (Super. Ct. V.I. Sept. 10, 2019).* <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 

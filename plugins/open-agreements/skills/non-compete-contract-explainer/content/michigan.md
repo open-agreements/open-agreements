@@ -2,7 +2,7 @@
 jurisdiction: "Michigan"
 slug: michigan
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/michigan · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/michigan · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Michigan[^about]
 
@@ -30,7 +30,7 @@ Michigan enforces employee non-competes only when they are reasonable under MCL 
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Michigan enforces an employee non-compete if it protects a reasonable competitive business interest and is reasonable in duration, geography, and type of employment, with no categorical worker or profession ban. |
-| **Main law or case** | MCL § 445.774a; St. Clair Medical, P.C. v. Borgiel, 270 Mich. App. 260 (2006) |
+| **Main law or case** | MCL § 445.774a(1). St. Clair Med., P.C. v. Borgiel, 270 Mich. App. 260 (2006). |
 | **Main exceptions** | B2B/sale-of-business covenants judged under antitrust rule of reason; no physician or profession ban |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -145,7 +145,7 @@ MUTSA has its own timing and fee rules that a non-compete does not. A misappropr
 
 ## Will Michigan enforce a non-compete's choice-of-law or forum-selection clause? {#choice-of-law-forum}
 
-**Short answer.** Often yes. In the *Stryker Corp. v. Ridgeway* litigation (the *Stone Surgical* dispute), the Sixth Circuit held that a non-compete's Michigan forum-selection clause was valid and enforceable under Michigan law [^stryker-michigan-clauses].
+**Short answer.** Often yes. In *Stryker Corp. v. Ridgeway*, the Sixth Circuit held that a non-compete's Michigan forum-selection clause was valid and enforceable under Michigan law [^stryker-michigan-clauses].
 
 But the clause type matters. In *Barshaw v. Allegheny Performance Plastics, LLC*, the Court of Appeals held that a Michigan court applies Michigan law to decide the effect of a forum-selection clause, even when the contract chooses another state's law for the merits [^barshaw-michigan-forum-law].
 
@@ -164,9 +164,9 @@ The relevant backdrop cuts against assuming an automatic extension. MCL 445.774a
 
 ## What Michigan non-compete reform should employers watch? {#pending-reform}
 
-**Short answer.** None is currently law. The bill to watch is House Bill 4040 (2025), which would amend MCL 445.774a to bar nearly all worker non-competes; as of June 3, 2026 it remains in committee and has not been enacted [^hb-4040-worker-ban][^hb-4040-status].
+**Short answer.** As of the September 26, 2026 review, the Michigan Legislature's bill record shows House Bill 4040 (2025), which would amend MCL 445.774a to bar nearly all worker non-competes, was referred to the House Committee on Economic Competitiveness on January 30, 2025 [^hb-4040-status][^hb-4040-worker-ban]. The only later entry in that record, dated February 4, 2025, notes that the bill was electronically reproduced [^hb-4040-status], so as of that review the governing standard is statutory reasonableness under MCL 445.774a [^mcl-774a-reform-baseline].
 
-HB 4040 would prohibit a business from entering into, obtaining, or enforcing a non-compete against a worker, reaching beyond employees to independent contractors, interns, and volunteers [^hb-4040-worker-ban]. The official bill record shows it was referred to the House Committee on Economic Competitiveness and has had no further action [^hb-4040-status], so the enacted baseline remains statutory reasonableness under MCL 445.774a, as interpreted by Michigan non-compete cases.
+HB 4040 would prohibit a business from entering into, obtaining, or enforcing a non-compete against a worker, reaching beyond employees to independent contractors, interns, and volunteers [^hb-4040-worker-ban]. Unless and until it is enacted, the governing standard is statutory reasonableness under MCL 445.774a, as interpreted by Michigan non-compete cases.
 
 A separate 2025 development affects onboarding paperwork that bundles covenants. In *Rayford v. American House Roseville I, LLC*, the Michigan Supreme Court held that a contractually shortened limitations provision in an adhesion agreement must be examined for reasonableness [^rayford-adhesion-reasonableness].
 
@@ -175,7 +175,7 @@ A separate 2025 development affects onboarding paperwork that bundles covenants.
 > [!NOTE]
 > **Practice note.**
 >
-> Treat HB 4040 as a monitoring item, not as present Michigan law. Recheck the official Michigan Legislature bill status before changing forms or telling workers that Michigan has enacted a general non-compete ban [^hb-4040-worker-ban].
+> A form or worker notice that treats HB 4040's ban as Michigan law misstates the governing test: unless the bill is enacted, a Michigan non-compete is measured by the reasonableness standard in MCL 445.774a, and an overstated notice can mislead workers about covenants that may still be enforceable [^mcl-774a-reform-baseline].
 
 ## How does Michigan treat employee (anti-raiding) non-solicits? {#employee-non-solicitation}
 
@@ -240,9 +240,11 @@ In *Total Quality, Inc. v. Fewless*, the nonsolicitation agreement barred a depa
 
 [^coates-tolling-backdrop]: **Coates v. Bastian Brothers, Inc.** — "The reasonableness of a noncompetition provision is a question of law when the relevant facts are undisputed." *Coates v. Bastian Bros., Inc., 276 Mich. App. 498 (2007).* <https://www.courtlistener.com/opinion/2220514/coates-v-bastian-brothers-inc/#:~:text=The%20reasonableness%20of%20a%20noncompetition,the%20relevant%20facts%20are%20undisputed.>
 
+[^hb-4040-status]: **Michigan House Bill 4040 (2025) — bill status** — "History (House actions in lowercase, Senate actions in UPPERCASE) Note: A page number of 0 indicates that the page number is coming soon Date Journal Action 1/30/2025 HJ 10 Pg. 85 introduced by Representative Rep. Denise Mentzer 1/30/2025 HJ 10 Pg. 85 read a first time 1/30/2025 HJ 10 Pg. 85 referred to Committee on Economic Competitiveness 2/04/2025 HJ 11 Pg. 89 bill electronically reproduced 01/30/2025" *2025 Mich. H.B. 4040, Bill Status (Mich. Legislature).* <https://www.legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4040>
+
 [^hb-4040-worker-ban]: **Michigan House Bill 4040 (2025)** — "Except as otherwise provided in subsection (2), a business shall not do any of the following: (a) Enter into or attempt to enter into a noncompete agreement with a worker. (b) Obtain or attempt to obtain a noncompete agreement from a worker. (c) Enforce or attempt to enforce a noncompete agreement against a worker or former worker." *2025 Mich. H.B. 4040 (introduced Jan. 30, 2025).* <https://www.legislature.mi.gov/documents/2025-2026/billintroduced/House/htm/2025-HIB-4040.htm>
 
-[^hb-4040-status]: **Michigan House Bill 4040 (2025) — bill status** — "referred to Committee on Economic Competitiveness" *2025 Mich. H.B. 4040, Bill Status (Mich. Legislature).* <https://www.legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4040>
+[^mcl-774a-reform-baseline]: **MCL § 445.774a** — "An employer may obtain from an employee an agreement or covenant which protects an employer's reasonable competitive business interests and expressly prohibits an employee from engaging in employment or a line of business after termination of employment if the agreement or covenant is reasonable as to its duration, geographical area, and the type of employment or line of business." *MCL § 445.774a(1).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-445-774a>
 
 [^rayford-adhesion-reasonableness]: **Rayford v. American House Roseville I, LLC** — "A shortened limitations provision contained in such an agreement must be examined for reasonableness." *Rayford v. American House Roseville I, LLC, ___ Mich. ___ (2025) (Docket No. 163989).* <https://www.courtlistener.com/opinion/10645648/timika-rayford-v-american-house-roseville-i-llc/#:~:text=A%20shortened%20limitations%20provision%20contained,must%20be%20examined%20for%20reasonableness.>
 

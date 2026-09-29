@@ -94,7 +94,7 @@ Review the July 2020 NVCA model for a Delaware corporation in its DGCL Section 1
 
 - [ ] **Written changes, notices and forum** (Recommended) — Preserve both-party written modifications and the claim-notice material-prejudice qualification; flag unilateral amendments or an unconditional loss of protection for late notice. Resolve optional fund severability and any process agent, and complete delivery addresses, signatures and counterparts. Flag inconsistency between Section 19’s exclusive Delaware Chancery language and Section 7’s court wording; preserve the rule that headings add no operative rights. [^nvca-ia-written-changes] [^nvca-ia-severability] [^nvca-ia-counterparts] [^nvca-ia-headings] [^nvca-ia-notification] [^nvca-ia-forum] [#complete-closing-and-forum]
 
-[Not legal advice](/disclaimer). Original explanation: CC BY 4.0. Quoted NVCA materials retain their original rights.
+Original explanation: CC BY 4.0. Quoted NVCA materials retain their original rights.
 
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-16. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for July 2020 NVCA model for a Delaware corporation; limited statutory and registration context coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *NVCA Indemnification Agreement Reviewer Checklist*, OpenAgreements (last updated September 16, 2026), https://openagreements.org/checklists/venture-financing/nvca-indemnification-agreement.

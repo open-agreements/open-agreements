@@ -2,7 +2,7 @@
 jurisdiction: "Mississippi"
 slug: mississippi
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/mississippi · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/mississippi · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Mississippi Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Mississippi has no comprehensive consumer-privacy statute. The operative framewo
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Mississippi has not enacted an omnibus consumer-privacy law, so there are no general state-law access, deletion, correction, sale opt-out, targeted-advertising opt-out, controller, processor, or privacy-notice duties. The state-law privacy program is breach notice, vendor notice-up, and truthfulness of consumer-facing privacy promises. |
-| **Main law** | Miss. Code Ann. § 75-24-29 (data-breach notification), plus Miss. Code Ann. §§ 75-24-5 and 75-24-15 for unfair or deceptive trade practices and individual consumer remedies — Mississippi has no comprehensive consumer-privacy statute |
+| **Main law** | No comprehensive consumer-privacy law; Miss. Code Ann. § 75-24-29(1). Miss. Code Ann. § 75-24-5(1). Miss. Code Ann. § 75-24-15(1). |
 | **Privacy policy required?** | No Mississippi statute generally requires a consumer privacy policy or fixes its contents; a policy that misstates actual practices is reachable as a deceptive-practices risk under Miss. Code Ann. § 75-24-5 and FTC Act § 5, with GLBA, HIPAA, COPPA, and other sectoral laws supplying notices where they apply |
 | **Who does it cover?** | The breach-notification statute applies to any person conducting business in Mississippi that, in the ordinary course of business, owns, licenses, or maintains personal information of a Mississippi resident; the deceptive-practices statute reaches unfair methods of competition and unfair or deceptive trade practices in or affecting commerce |
 | **Can consumers sue?** | Limited path |

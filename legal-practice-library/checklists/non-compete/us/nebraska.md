@@ -114,7 +114,7 @@ Review every item below the way a Nebraska court would: a restraint of trade sur
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach?** (Recommended) — Nebraska appellate law is silent on tolling: no staged decision says whether a court may pause the clock during a breach or whether a contractual extension-on-breach clause is enforceable. Read any tolling language as another restraint that must be reasonable as written — a restraint with no effective limit in time is void here, and a covenant a court finds overbroad does not get reformed into a lawful one. If tolling appears, it should be a separate, definite term tied to the duration of the breach, never an open-ended extension. [^ne-brown-unlimited-toll][^ne-waadah-no-reform-toll] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach?** (Recommended) — Nebraska appellate law is silent on tolling: no identified decision says whether a court may pause the clock during a breach or whether a contractual extension-on-breach clause is enforceable. Read any tolling language as another restraint that must be reasonable as written — a restraint with no effective limit in time is void here, and a covenant a court finds overbroad does not get reformed into a lawful one. If tolling appears, it should be a separate, definite term tied to the duration of the breach, never an open-ended extension. [^ne-brown-unlimited-toll][^ne-waadah-no-reform-toll] [#address-tolling-during-breach]
 
 ## Remedies {#remedies}
 

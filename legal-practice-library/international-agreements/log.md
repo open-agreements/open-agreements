@@ -1,5 +1,8 @@
 # International Agreements Update Log
 
+## 2026-09-27
+* **Update**: content(greenland): English paraphrases under the Danish press-release quotes (#2894) (18d240e)
+
 ## 2026-09-23
 * **Update**: content: fit Greenland comparison table on phones; rename nav label (494905c)
 * **Update**: content: apply peer review to Greenland defense agreement guide (73669e9)

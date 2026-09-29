@@ -1,17 +1,20 @@
 ---
 type: Case Excerpt
 title: Lord v. Lord
-description: 'Lord v. Lord, 454 A.2d 830, 834 (Me. 1983). — quoted in 2 document(s).'
+description: 'Lord v. Lord, 454 A.2d 830, 834 (Me. 1983). — quoted in 3 document(s).'
 citation: 'Lord v. Lord, 454 A.2d 830, 834 (Me. 1983).'
 resource: 'https://www.courtlistener.com/opinion/2367150/lord-v-lord/'
-timestamp: '2026-06-11'
+timestamp: '2026-07-03'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/maine'
   - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/maine'
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/maine'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -19,7 +22,7 @@ tags:
 
 *Lord v. Lord, 454 A.2d 830, 834 (Me. 1983).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -36,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We have long recognized that non-competition agreements are contrary to public policy and will be enforced only to the extent that they are reasonable and sweep no wider than necessary to protect the business interests in issue.
 
-- supports: `employee-non-compete-enforceability`, `maine-statutory-gates`, `restrictive-covenants-each-independently-includable`, `sale-of-business`
-- source_cards: `lord-no-wider-cov`, `lord-no-wider-gate`, `lord-no-wider-than-necessary`, `me-sob-lord`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
+- supports: `employee-non-compete-enforceability`, `holdover-clause-limit`, `maine-statutory-gates`, `restrictive-covenants-each-independently-includable`, `sale-of-business`
+- source_cards: `lord-no-wider`, `lord-no-wider-cov`, `lord-no-wider-gate`, `lord-no-wider-than-necessary`, `me-sob-lord`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Maine](../checklists/non-compete/us/maine.md), [Employee Invention Assignment in Maine](../invention-assignment/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2367150/lord-v-lord/#:~:text=We%20have%20long%20recognized%20that,the%20business%20interests%20in%20issue.>

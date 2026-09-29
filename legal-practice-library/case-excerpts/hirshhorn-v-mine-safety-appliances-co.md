@@ -27,6 +27,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### hirshhorn-v-mine-safety-appliances-co-jackson-s-covenant-to-assign-to-catalyst-f0c70983 {#hirshhorn-v-mine-safety-appliances-co-jackson-s-covenant-to-assign-to-catalyst-f0c70983}
+
+> Jackson’s covenant to assign to Catalyst is subject to two conditions, both of which must exist in order to create rights thereunder in Catalyst: (1) The inventions or improvements must have been made by him during the course of his employment by Catalyst. (2) The inventions must have been made in connection with the business of Catalyst.
+
+- supports: `statutory-carve-out`
+- source_cards: `hirshhorn-two-conditions`
+- cited_by: [Employee Invention Assignment in Pennsylvania](../invention-assignment/us/pennsylvania.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1649406/hirshhorn-v-mine-safety-appliances-co/#:~:text=Jackson%E2%80%99s%20covenant%20to%20assign%20to%20Catalyst%20is%20subject,with%20the%20business%20of%20Catalyst.>
+
 ### hirshhorn-v-mine-safety-appliances-co-jackson-s-covenant-to-assign-to-catalyst-b2780abd {#hirshhorn-v-mine-safety-appliances-co-jackson-s-covenant-to-assign-to-catalyst-b2780abd}
 
 > Jackson’s covenant to assign to Catalyst must be strictly construed against Catalyst.

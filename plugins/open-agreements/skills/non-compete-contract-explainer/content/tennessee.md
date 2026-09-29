@@ -2,7 +2,7 @@
 jurisdiction: "Tennessee"
 slug: tennessee
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/tennessee · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/tennessee · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Tennessee[^about]
 
@@ -30,7 +30,7 @@ Tennessee enforces non-competes that are reasonable and protect a legitimate bus
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Tennessee enforces a non-compete that is reasonable and protects a legitimate business interest; a 2026 statute effective July 1, 2026 will void covenants against employees earning under $70,000 and add rebuttable time-reasonableness presumptions. |
-| **Main law or case** | common law (Hasty v. Rent-A-Driver, Inc., 671 S.W.2d 471 (Tenn. 1984)); Tenn. Code Ann. §§ 50-1-210, 50-1-211 (2026 Tenn. Pub. Acts, ch. 934, eff. July 1, 2026) |
+| **Main law or case** | Common law governs, supplemented by a new statute; Hasty v. Rent-A-Driver, Inc., 671 S.W.2d 471, 472 (Tenn. 1984). Tenn. Code Ann. § 50-1-210(a) (2026 Tenn. Pub. Acts, ch. 934) (eff. July 1, 2026). Tenn. Code Ann. § 50-1-211(a) (2026 Tenn. Pub. Acts, ch. 934) (eff. July 1, 2026). |
 | **Main exceptions** | Coming July 1, 2026 — $70,000 pay-threshold ban; health-care-provider safe harbor (§ 63-1-148; emergency-medicine physicians excluded, covenants void under Udom); sale-of-business longer presumption; non-solicits/NDAs preserved |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Yes |
@@ -134,7 +134,7 @@ Section 50-1-210(c) preserves these covenants from the time-presumption rules, a
 > [!CAUTION]
 > **Drafting note.**
 >
-> The 2026 statute preserves a confidentiality or nondisclosure agreement, a customer non-solicitation agreement, and an employee non-solicitation agreement from its non-compete rules, so a covenant tied to genuine confidential information, customers, or employees sits outside the time presumptions and the $70,000 threshold; together with the trade-secret protections, a customer non-solicit is often a more readily enforceable protection than a broad non-compete [^s50-1-210-carveouts][^threshold-rule-nonsolicit]. That shelter depends on the covenant staying within its category: a non-solicitation or confidentiality clause drawn so broadly that it bars the worker from competing at all reads as a disguised non-compete and draws the same reasonableness scrutiny — and, for a below-threshold employee, the same voidness risk — as an express non-compete. A no-dealing covenant is not on the preserved list at all, so a court may test it under the disfavored-restraint framework rather than the carve-out, and a clock kept independently per covenant makes clear which covenants answer to the statute and which do not [^s50-1-210-carveouts][^threshold-rule-nonsolicit].
+> A non-solicitation or confidentiality clause drawn so broadly that it bars the worker from competing at all risks losing the 2026 statute's shelter for those covenants and being treated as a noncompete agreement, which for an employee below the $70,000 threshold carries the same voidness risk as an express non-compete [^s50-1-210-carveouts][^threshold-rule-nonsolicit]. A no-dealing covenant is not on the preserved list, so it cannot rely on the carve-out [^s50-1-210-carveouts].
 
 "This section does not prohibit an employer from enforcing: (1) A confidentiality or nondisclosure agreement; (2) A client or customer nonsolicitation agreement; or (3) An employee nonsolicitation agreement."[^s50-1-210-carveouts]
 

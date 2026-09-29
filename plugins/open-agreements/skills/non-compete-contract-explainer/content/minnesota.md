@@ -2,7 +2,7 @@
 jurisdiction: "Minnesota"
 slug: minnesota
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-05-27"
 human_reviewed_at: null
 next_review_due: "2026-11-23"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/minnesota · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/minnesota · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Employment Non-Competes in Minnesota[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of Minnesota's 2023 non-compete statute, legacy M
 | --- | --- |
 | **Are non-competes enforceable?** | Banned |
 | **Bottom line** | Most employee and independent-contractor non-competes signed on or after July 1, 2023 are void and unenforceable, with only sale-of-business and business-dissolution exceptions surviving. |
-| **Main law or case** | Minn. Stat. § 181.988 |
+| **Main law or case** | Minn. Stat. § 181.988, subd. 2(a) (2025). |
 | **Main exceptions** | Sale of business; dissolution of business; pre-July 1, 2023 agreements under common law; NDAs/nonsolicits excluded |
 | **When the ban took effect** | July 1, 2023 (prospective only) |
 | **Can a court narrow it?** | No |

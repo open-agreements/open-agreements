@@ -46,8 +46,17 @@ Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements l
 
 - supports: `holdover-clause-limit`
 - source_cards: `guth-divisible`
-- cited_by: [Employee Invention Assignment in Illinois](../invention-assignment/us/illinois.md)
+- cited_by: [Employee Invention Assignment in Illinois](../invention-assignment/us/illinois.md), [Employee Invention Assignment in Wisconsin](../invention-assignment/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=Some%20of%20the%20covenants%20are,specific%20performance%20of%20such%20contracts).>
+
+### guth-v-minnesota-mining-mfg-co-some-of-the-covenants-are-contrary-cbfd2a74 {#guth-v-minnesota-mining-mfg-co-some-of-the-covenants-are-contrary-cbfd2a74}
+
+> Some of the covenants are contrary to public policy and non-enforceable. Others are valid and enforceable in a court of equity (although courts are not required in all cases to grant the specific performance of such contracts). The two discoveries which are the subject matter of this litigation fell within the valid provisions of the agreement.
+
+- supports: `holdover-clause-limit`
+- source_cards: `guth-severable`
+- cited_by: [Employee Invention Assignment in Indiana](../invention-assignment/us/indiana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=Some%20of%20the%20covenants%20are,valid%20provisions%20of%20the%20agreement.>
 
 ### guth-v-minnesota-mining-mfg-co-the-right-of-an-employer-to-1292c413 {#guth-v-minnesota-mining-mfg-co-the-right-of-an-employer-to-1292c413}
 
@@ -64,5 +73,14 @@ Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements l
 
 - supports: `holdover-clause-limit`, `post-employment-obligations`
 - source_cards: `guth-holdover`, `guth-holdover-disclosure`
-- cited_by: [Confidentiality and Invention Assignment Agreement Reviewer Checklist](../checklists/invention-assignment/us.md), [Employee Invention Assignment in Illinois](../invention-assignment/us/illinois.md)
+- cited_by: [Confidential Information and Invention Assignment Agreement Reviewer Checklist](../checklists/invention-assignment/us.md), [Employee Invention Assignment in Illinois](../invention-assignment/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=those%20provisions%20of%20the%20contract,were%20contrary%20to%20public%20policy.>
+
+### guth-v-minnesota-mining-mfg-co-upon-the-facts-peculiar-to-this-6b08a69f {#guth-v-minnesota-mining-mfg-co-upon-the-facts-peculiar-to-this-6b08a69f}
+
+> Upon the facts peculiar to this ease we are convinced that those provisions of the contract which were limitless in extent of time and in subject matter of invention were contrary to public policy.
+
+- supports: `holdover-clause-limit`
+- source_cards: `guth-limitless`, `guth-limitless-public-policy`
+- cited_by: [Employee Invention Assignment in Indiana](../invention-assignment/us/indiana.md), [Employee Invention Assignment in Wisconsin](../invention-assignment/us/wisconsin.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=Upon%20the%20facts%20peculiar%20to,were%20contrary%20to%20public%20policy.>

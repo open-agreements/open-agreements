@@ -27,6 +27,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### novelaire-technologies-l-l-c-v-harrison-in-june-1999-novelaire-and-mr-74bc50c0 {#novelaire-technologies-l-l-c-v-harrison-in-june-1999-novelaire-and-mr-74bc50c0}
+
+> In June 1999, NovelAire and Mr. Harrison entered into a written agreement, which provided: 2. Any and all inventions, discoveries and improvements which Employee has conceived or made, and/or may conceive or make, during the period of his said employment, relating to employer’s business or arising out of or resulting from his said employment, shall be the sole and exclusive property of Employer or its nominee.
+
+- supports: `holdover-clause-limit`
+- source_cards: `novelaire-agreement-during-employment`
+- cited_by: [Employee Invention Assignment in Louisiana](../invention-assignment/us/louisiana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/5047586/novelaire-technologies-llc-v-harrison/#:~:text=In%20June%201999%2C%20NovelAire%20and,of%20Employer%20or%20its%20nominee.>
+
 ### novelaire-technologies-l-l-c-v-harrison-not-a-covenant-not-to-compete-97498b85 {#novelaire-technologies-l-l-c-v-harrison-not-a-covenant-not-to-compete-97498b85}
 
 > not a covenant not to compete, does not limit the employee’s post-employment activities except with respect to the affected inventions and improvements, and is not subject to the limitations and requirements applicable to covenants not to compete.

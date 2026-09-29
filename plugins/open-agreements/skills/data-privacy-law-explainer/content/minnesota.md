@@ -2,7 +2,7 @@
 jurisdiction: "Minnesota"
 slug: minnesota
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/minnesota · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/minnesota · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Minnesota Consumer Privacy Law (MCDPA)[^about]
 
@@ -30,7 +30,7 @@ The Minnesota Consumer Data Privacy Act gives Minnesota consumers rights over th
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you control or process the data of 100,000+ Minnesota consumers (or 25,000+ plus over 25% of revenue from data sales), the MCDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — plus a uniquely strict list-of-third-parties right and profiling-reevaluation rights. The Attorney General enforces it; there are no consumer lawsuits, and the 30-day cure period has already expired. |
-| **Main law** | Minn. Stat. §§ 325M.10–325M.21 (Minnesota Consumer Data Privacy Act), effective July 31, 2025 |
+| **Main law** | Minn. Stat. § 325M.12, subd. 1(a). |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Legal entities doing business in Minnesota (or targeting residents) that control or process the data of 100,000+ consumers a year (excluding payment-only data), or 25,000+ while deriving over 25% of gross revenue from selling data — no general nonprofit exemption; small businesses exempt except they still cannot sell sensitive data without consent |
 | **Can consumers sue?** | No |

@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nebraska[^about]
 
@@ -30,7 +30,7 @@ Nebraska enforces only narrowly tailored, customer-specific covenants under a co
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Nebraska enforces only narrowly tailored covenants limited to customers the employee personally served, refuses to rewrite overbroad ones, and has no general statutory ban as of 2026. |
-| **Main law or case** | common law (Securities Acceptance Corp. v. Brown, 106 N.W.2d 456 (Neb. 1960); Polly v. Ray D. Hilderman & Co., 407 N.W.2d 751 (Neb. 1987)) |
+| **Main law or case** | Common law governs employee non-competes; Securities Acceptance Corp. v. Brown, 171 Neb. 406, 417, 106 N.W.2d 456 (1960). Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987). |
 | **Main exceptions** | Franchise non-competes reformable by statute (§ 87-404); sale-of-business more favorable; successor enforcement by merger |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |
@@ -154,7 +154,7 @@ Use trade-secret provisions for information risk, and use customer covenants onl
 
 ## Does a Nebraska non-compete period toll during breach or litigation? {#extended-for-breach}
 
-**Short answer.** Nebraska appellate case law is silent. No staged Nebraska appellate decision squarely addresses whether a court may toll a non-compete period during breach or litigation, or whether a contractual extension-on-breach clause is enforceable [^q11-brown-reasonableness].
+**Short answer.** Nebraska appellate case law is silent. No identified Nebraska appellate decision squarely addresses whether a court may toll a non-compete period during breach or litigation, or whether a contractual extension-on-breach clause is enforceable [^q11-brown-reasonableness].
 
 The conservative read is to treat tolling as another restraint that must be reasonable when the covenant is enforced as written. Nebraska requires the restraint to be no greater than reasonably necessary, and Nebraska refuses to reform overbroad covenants simply to make them enforceable [^q11-brown-reasonableness][^q11-waadah-no-reform].
 

@@ -1,5 +1,17 @@
 # Venture Financing Update Log
 
+## 2026-09-27
+* **Update**: content(checklists): drop repeated not-legal-advice lines (#2889) (4267578)
+
+## 2026-09-26
+* **Update**: content(checklists): make two NVCA SPA items stand alone and fix QSBS indexing tense (19e743e)
+* **Update**: content(checklists): fix advisory findings on the NVCA SPA checklist (73f3819)
+* **Update**: content(checklists): address CI follow-ups on the NVCA SPA checklist (7e5f94a)
+* **Update**: content(checklists): add search title and description to the NVCA SPA checklist (7eb2b01)
+
+## 2026-09-25
+* **Update**: content: tag NVCA and YC form citations as standard-form (#2793) (fc14974)
+
 ## 2026-09-18
 * **Update**: fix(checklists): clarify existing capacity check baseline (00550e8)
 * **Update**: fix(checklists): specify NVCA partial-payment and access baselines (0d1e770)

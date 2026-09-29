@@ -2,14 +2,14 @@
 type: State Law Practice Guide
 title: Wage and Hour Law in Washington
 description: >-
-  A practice note on Washington wage and hour rules for employers and employees,
-  covering the inflation-adjusted state minimum wage and its relationship to the
-  federal floor, weekly overtime, mandated meal and rest periods, final pay on
-  separation, double damages for willfully withheld wages, pay intervals and
-  itemized pay statements, the definitions and tests used to sort employees from
-  independent contractors, the ban on counting tips toward the minimum wage, and
-  how the Department of Labor and Industries and private lawsuits enforce these
-  rules.
+  A practice note on Washington State wage and hour rules for employers and
+  employees, covering the inflation-adjusted state minimum wage and its
+  relationship to the federal floor, weekly overtime, mandated meal and rest
+  periods, final pay on separation, double damages for willfully withheld wages,
+  pay intervals and itemized pay statements, the definitions and tests used to
+  sort employees from independent contractors, the ban on counting tips toward
+  the minimum wage, and how the Department of Labor and Industries and private
+  lawsuits enforce these rules.
 resource: 'https://openagreements.org/practice-guides/wage-and-hour/us/washington'
 timestamp: '2026-08-15'
 tags:
@@ -19,7 +19,7 @@ tags:
 
 # Wage and Hour Law in Washington[^about]
 
-A practice note on Washington wage and hour rules for employers and employees, covering the inflation-adjusted state minimum wage and its relationship to the federal floor, weekly overtime, mandated meal and rest periods, final pay on separation, double damages for willfully withheld wages, pay intervals and itemized pay statements, the definitions and tests used to sort employees from independent contractors, the ban on counting tips toward the minimum wage, and how the Department of Labor and Industries and private lawsuits enforce these rules.
+A practice note on Washington State wage and hour rules for employers and employees, covering the inflation-adjusted state minimum wage and its relationship to the federal floor, weekly overtime, mandated meal and rest periods, final pay on separation, double damages for willfully withheld wages, pay intervals and itemized pay statements, the definitions and tests used to sort employees from independent contractors, the ban on counting tips toward the minimum wage, and how the Department of Labor and Industries and private lawsuits enforce these rules.
 
 This note walks through the wage and hour questions Washington employers and employees ask most often: what the minimum wage is and how it moves, when overtime is owed, whether breaks are required, when the last paycheck has to arrive, how often workers must be paid and what the pay stub has to show, how the state sorts employees from independent contractors, how tips are treated, and who can bring a claim.
 

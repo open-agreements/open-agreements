@@ -32,8 +32,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > courts should consider “three non-dispositive factors” to determine Virgin Islands common law: “(1) whether any Virgin Islands courts have previously adopted a particular rule; (2) the position taken by a majority of courts from other jurisdictions; and (3) most importantly, which approach represents the soundest rule for the Virgin Islands.”
 
-- supports: `default-ownership`, `holdover-clause-limit`, `statutory-carve-out`
-- source_cards: `connor-three-factors`, `connor-three-factors-holdover`, `connor-three-factors-ownership`
+- supports: `holdover-clause-limit`, `statutory-carve-out`
+- source_cards: `connor-three-factors`, `connor-three-factors-holdover`
 - cited_by: [Employee Invention Assignment in the U.S. Virgin Islands](../invention-assignment/us/virgin-islands.md)
 - link_to_source: <https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810860/File/Opinions/Published/2014/File16.pdf>
 

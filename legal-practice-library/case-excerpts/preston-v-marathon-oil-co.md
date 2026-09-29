@@ -23,6 +23,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### preston-v-marathon-oil-co-both-goodyear-and-hebbard-involved-5461d5be {#preston-v-marathon-oil-co-both-goodyear-and-hebbard-involved-5461d5be}
+
+> Both Goodyear and Hebbard involved employees who were hired specifically to invent products and, as such, could have been decided using the general rule that employers own any inventions created by employees who are hired to invent.
+
+- supports: `default-ownership`
+- source_cards: `preston-hired-to-invent-rule`
+- cited_by: [Employee Invention Assignment in Wyoming](../invention-assignment/us/wyoming.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2330166/preston-v-marathon-oil-co/#:~:text=Both%20Goodyear%20and%20Hebbard%20involved,who%20are%20hired%20to%20invent.>
+
 ### preston-v-marathon-oil-co-generally-an-invention-is-the-property-5eff584a {#preston-v-marathon-oil-co-generally-an-invention-is-the-property-5eff584a}
 
 > Generally an invention is the property of the inventor who conceived, developed, and perfected it, and the law protects and enforces the inventor's property rights in an invention unless he or she has contracted them away.

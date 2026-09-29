@@ -40,3 +40,12 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - source_cards: `bandag-inventor-default`, `bandag-inventor-default-practice`
 - cited_by: [Employee Invention Assignment in Iowa](../invention-assignment/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2224289/bandag-incorporated-v-morenings/#:~:text=In%20the%20absence%20of%20special,which%20the%20inventor%20was%20employed.>
+
+### bandag-inc-v-morenings-we-have-considered-each-assignment-0e998e97 {#bandag-inc-v-morenings-we-have-considered-each-assignment-0e998e97}
+
+> We have considered each assignment relied on by plaintiff for reversal but fail to find circumstances which the law requires for awarding to an employer the right and title to a process or formula discovered or developed by his employee during the term of his employment.
+
+- supports: `default-ownership`
+- source_cards: `bandag-no-title`
+- cited_by: [Employee Invention Assignment in Iowa](../invention-assignment/us/iowa.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2224289/bandag-incorporated-v-morenings/#:~:text=We%20have%20considered%20each%20assignment,the%20term%20of%20his%20employment.>

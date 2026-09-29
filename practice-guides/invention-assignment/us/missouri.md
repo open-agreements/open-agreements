@@ -33,7 +33,7 @@ The substantive default that Missouri contract law operates against is the feder
 
 "Since 1790, the patent law has operated on the premise that rights in an invention belong to the inventor."[^stanford-carveout-baseline]
 
-Missouri's appellate courts apply the same framework. In *Corrigan v. Armstrong, Teasdale, Schlafly, Davis & Dicus*, the Missouri Court of Appeals, adopting *United States v. Dubilier Condenser Corp.*, explained that an employer who has not taken an assignment cannot demand ownership of an invention that is the employee's own conception [^corrigan-no-conveyance]. Quoting *Dubilier*, the court said the employer
+Missouri's appellate courts apply the same framework. In *Corrigan v. Armstrong, Teasdale, Schlafly, Davis & Dicus*, the Missouri Court of Appeals, adopting the rule of *United States v. Dubilier Condenser Corp.* [^dubilier-no-equity-mo], explained that an employer who has not taken an assignment cannot demand ownership of an invention that is the employee's own conception [^corrigan-no-conveyance]. Quoting *Dubilier*, the court said the employer
 
 "has no equity to demand a conveyance of the invention, which is the original conception of the employee alone, in which the employer had no part."[^corrigan-no-conveyance]
 
@@ -100,6 +100,8 @@ Extending that framework to holdover assignments is a prediction, not a holding.
 [^stanford-carveout-baseline]: **Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Systems** — "Since 1790, the patent law has operated on the premise that rights in an invention belong to the inventor." *Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Sys., Inc., 563 U.S. 776 (2011).* <https://www.courtlistener.com/opinion/218133/board-of-trustees-of-the-leland-stanford-junior-university-v-roche/#:~:text=Since%201790%2C%20the%20patent%20law,invention%20belong%20to%20the%20inventor.>
 
 [^corrigan-no-conveyance]: **Corrigan v. Armstrong, Teasdale, Schlafly, Davis & Dicus** — "has no equity to demand a conveyance of the invention, which is the original conception of the employee alone, in which the employer had no part." *Corrigan v. Armstrong, Teasdale, Schlafly, Davis & Dicus, 824 S.W.2d 92 (Mo. Ct. App. E.D. 1992) (quoting United States v. Dubilier Condenser Corp., 289 U.S. 178 (1933)).* <https://www.courtlistener.com/opinion/2430352/corrigan-v-armstrong-teasdale-schlafly-davis-dicus/#:~:text=has%20no%20equity%20to%20demand,the%20employer%20had%20no%20part.>
+
+[^dubilier-no-equity-mo]: **United States v. Dubilier Condenser Corp.** — "But the employer in such a case has no equity to demand a conveyance of the invention, which is the original conception of the employee alone, in which the employer had no part." *United States v. Dubilier Condenser Corp., 289 U.S. 178 (1933).* <https://www.courtlistener.com/opinion/1087847/united-states-v-dubilier-condenser-corp/#:~:text=But%20the%20employer%20in%20such,the%20employer%20had%20no%20part.>
 
 [^dewey-common-law-framework]: **Dewey v. American Stair Glide Corp.** — "The use of the small amount of company materials and equipment is not sufficient to establish a shop right." *Dewey v. American Stair Glide Corp., 557 S.W.2d 643 (Mo. Ct. App. 1977).* <https://www.courtlistener.com/opinion/1737795/dewey-v-american-stair-glide-corp/#:~:text=The%20use%20of%20the%20small,to%20establish%20a%20shop%20right.>
 

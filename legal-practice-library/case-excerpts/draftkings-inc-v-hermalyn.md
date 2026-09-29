@@ -49,8 +49,8 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Clearly his requested California carveout will give him a way to skirt the countrywide preliminary injunction’s one-year noncompete ban.
 
-- supports: `choice-of-law`
-- source_cards: `draftkings-injunction-scope`
+- supports: `choice-of-law`, `recent-developments`
+- source_cards: `draftkings-injunction-scope`, `rd-draftkings-one-year`
 - cited_by: [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Clearly%20his%20requested%20California%20carveout,preliminary%20injunction%E2%80%99s%20one%2Dyear%20noncompete%20ban.>
 
@@ -80,3 +80,21 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - source_cards: `draftkings-choice-of-law`
 - cited_by: [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Massachusetts%20usually%20respects%20the%20parties%E2%80%99,he%20could%20satisfy%20the%20others).>
+
+### draftkings-inc-v-hermalyn-the-bottom-line-is-that-the-af8bf1c0 {#draftkings-inc-v-hermalyn-the-bottom-line-is-that-the-af8bf1c0}
+
+> The bottom line is that the judge didn't err by including California within the preliminary injunction's range.
+
+- supports: `recent-developments`
+- source_cards: `rd-draftkings-injunction-range`
+- cited_by: [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
+- link_to_source: <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=The%20bottom%20line%20is%20that,within%20the%20preliminary%20injunction's%20range.>
+
+### draftkings-inc-v-hermalyn-the-short-of-it-is-that-38eb352d {#draftkings-inc-v-hermalyn-the-short-of-it-is-that-38eb352d}
+
+> The short of it is that the judge didn't err by ruling that Massachusetts law governs Hermalyn's noncompete with DraftKings.
+
+- supports: `recent-developments`
+- source_cards: `rd-draftkings-massachusetts-law`
+- cited_by: [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
+- link_to_source: <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=The%20short%20of%20it%20is,governs%20Hermalyn's%20noncompete%20with%20DraftKings.>

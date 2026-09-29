@@ -2,7 +2,7 @@
 jurisdiction: "India"
 slug: in
 countryCode: IN
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/in · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/in · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in India[^about]
 
@@ -30,7 +30,7 @@ India voids post-employment non-compete agreements under Section 27 of the India
 | --- | --- |
 | **Are non-competes enforceable?** | Banned |
 | **Bottom line** | Post-employment non-competes are void under Section 27 of the Indian Contract Act, 1872 regardless of how reasonable they are, and Indian law offers no reasonableness saving for post-term restraints — leaving only the sale-of-goodwill exception, in-term covenants, confidentiality, non-solicitation, garden leave during the notice period, and cost-based employment bonds. |
-| **Main law or case** | Indian Contract Act, 1872, § 27 |
+| **Main law or case** | Indian Contract Act, 1872, § 27. |
 | **Main exceptions** | Sale of business goodwill (Exception 1 to § 27); partnership carve-outs (§§ 11(2), 36(2), 54); in-term exclusive-service covenants |
 | **When the ban took effect** | Longstanding — Section 27 has been in force since 1872 |
 | **Can a court narrow it?** | No |
@@ -201,7 +201,7 @@ The boundary is that confidentiality cannot be used as a back-door non-compete. 
 
 "Freedom of changing employment for improving service conditions is a vital and important right of an employee which cannot be restricted or curtailed on the ground that the employee has employer's data and confidential information of customers which is capable of ascertainment on behalf of defendant or any one else, by an independent canvass at a small expense and in a very limited period of time."[^amex-freedom]
 
-Because Section 27 applies to all contracts, not just employment, an employer cannot escape the ban by engaging a worker as a consultant or independent contractor — the same rules govern, as Section 27's reach in *Percept* (an agency contract) and *Gujarat Bottling* (a franchise) confirms [^q8-percept-not-confined]. These freedoms are reinforced by the constitutional right to practise any profession or carry on any trade or business [^const-art19].
+Because Section 27 applies to all contracts, not just employment, engaging a worker as a consultant or independent contractor does not take a post-contract restraint outside it. *Percept*, a dispute over an agency contract, held that the doctrine is not confined to contracts of employment [^q8-percept-not-confined]. *Gujarat Bottling* tested a franchise restriction under Section 27 and upheld it because it operated only while the agreement subsisted [^q8-gujarat-franchise], so timing and commercial context still matter outside employment. These freedoms are reinforced by the constitutional right to practise any profession or carry on any trade or business [^const-art19].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -267,5 +267,7 @@ Because Section 27 applies to all contracts, not just employment, an employer ca
 [^amex-freedom]: **American Express Bank Ltd. v. Priya Puri** — "Freedom of changing employment for improving service conditions is a vital and important right of an employee which cannot be restricted or curtailed on the ground that the employee has employer's data and confidential information of customers which is capable of ascertainment on behalf of defendant or any one else, by an independent canvass at a small expense and in a very limited period of time." *American Express Bank Ltd. v. Priya Puri, (2006) III LLJ 540 (Delhi HC).* <https://indiankanoon.org/doc/445135/>
 
 [^q8-percept-not-confined]: **Percept D'Mark (India) Pvt. Ltd. v. Zaheer Khan** — "As held by this Court in Gujarat Bottling vs. Coca Cola (supra), this doctrine is not confined only to contracts of employment, but is also applicable to all other contracts." *Percept D'Mark (India) Pvt. Ltd. v. Zaheer Khan, (2006) 4 SCC 227.* <https://indiankanoon.org/doc/571375/>
+
+[^q8-gujarat-franchise]: **Gujarat Bottling Co. Ltd. v. Coca Cola Co.** — "Since the negatice stipulation in paragraph 14 of the 1993 Agreement is confined in its application to the period of subsistence of the agreement and the restriction imposed therein is operative only during the period the 1993 Agreement is subsisting, the said stipulation cannot be held to be in restraint of trade so as to attract the bar of section 27 of the Contract Act." *Gujarat Bottling Co. Ltd. v. Coca Cola Co., (1995) 5 SCC 545.* <https://indiankanoon.org/doc/104935066/>
 
 [^const-art19]: **Constitution of India, art. 19(1)(g)** — "All citizens shall have the right— (g) to practise any profession, or to carry on any occupation, trade or business." *Constitution of India, art. 19(1)(g).* <https://www.indiacode.nic.in/bitstream/123456789/16124/1/the_constitution_of_india.pdf>

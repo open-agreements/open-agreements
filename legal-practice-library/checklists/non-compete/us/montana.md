@@ -113,7 +113,7 @@ Review every item below the way a Montana court would: the restraint-of-trade st
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Montana question. No statute or staged decision addresses extending a restricted period for time spent in violation, and an extension is itself part of the restraint, so it has to survive the same time-limit and balancing analysis as the covenant it stretches. A clause that can run indefinitely through repeated extensions undercuts the definite time limit the reasonableness test asks for. [^mt-dobbins-tolling] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Montana question. No statute or identified decision addresses extending a restricted period for time spent in violation, and an extension is itself part of the restraint, so it has to survive the same time-limit and balancing analysis as the covenant it stretches. A clause that can run indefinitely through repeated extensions undercuts the definite time limit the reasonableness test asks for. [^mt-dobbins-tolling] [#address-tolling-during-breach]
 
 ## Remedies {#remedies}
 

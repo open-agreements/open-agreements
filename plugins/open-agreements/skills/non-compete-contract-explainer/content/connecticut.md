@@ -2,7 +2,7 @@
 jurisdiction: "Connecticut"
 slug: connecticut
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Connecticut[^about]
 
@@ -30,7 +30,7 @@ Connecticut generally enforces non-competes only when the restraint is reasonabl
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Connecticut enforces employee non-competes only if reasonable under common law, but several occupation-specific statutes cap or void covenants for covered workers. |
-| **Main law or case** | common law (Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976)); occupation statutes |
+| **Main law or case** | Common law governs, with occupation-specific statutory caps and bans; Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976). Conn. Gen. Stat. § 20-14p(b)(2). Conn. Gen. Stat. § 20-681. |
 | **Main exceptions** | Physician/PA/APRN 1-yr & 15-mile caps; security guards; broadcast employees; homemaker-companion/home-health bans |
 | **Can a court narrow it?** | Unsettled |
 | **Applies to contractors?** | Unclear |
@@ -82,7 +82,7 @@ Customer-focused limits can be easier to defend than broad territory limits. In 
 
 **Short answer.** Yes, if the continued employment is connected to the covenant. The current Connecticut rule is that continued at-will employment can supply sufficient consideration for a restrictive covenant signed after employment has begun [^dur-a-flex-consideration-reversal][^schimenti-continued-employment-rule].
 
-*Dur-A-Flex* is the current Connecticut Supreme Court anchor. It reversed a lack-of-consideration ruling and required further proceedings on whether the non-compete was supported by adequate consideration [^dur-a-flex-consideration-reversal]. *Schimenti* had already read *Roessler* as binding precedent that continued at-will employment can be sufficient consideration when the employee receives the benefit of continued employment after signing [^schimenti-continued-employment-rule].
+*Dur-A-Flex* is the current Connecticut Supreme Court anchor. It reversed a lack-of-consideration ruling and required further proceedings on whether the non-compete was supported by adequate consideration [^dur-a-flex-consideration-reversal]. *Schimenti* had already read *Roessler* [^roessler-continued-employment-consideration] as binding precedent that continued at-will employment can be sufficient consideration when the employee receives the benefit of continued employment after signing [^schimenti-continued-employment-rule].
 
 The important limitation is connection. *Schimenti* held that continued employment can be sufficient if connected to the covenant, but a defendant may still try to prove no connection between signing and continued employment [^schimenti-connected-consideration]. *Thoma* is now best read as fact-specific: the later agreement removed severance rights, and continued employment was not predicated on the new agreement [^thoma-fact-specific-consideration].
 
@@ -117,7 +117,7 @@ For homemaker-companion and home-health services, Connecticut voids covenants no
 > [!CAUTION]
 > **Drafting note.**
 >
-> For a covered worker a Connecticut occupation statute sets the outer bound before any common-law balancing, and the physician and physician-assistant/APRN caps reach covenants entered into, amended, extended, or renewed on or after their trigger dates — July 1, 2016 for physicians and October 1, 2023 for physician assistants and advanced practice registered nurses — so a routine amendment or renewal can pull an older covenant into the one-year and fifteen-mile regime [^physician-one-year-fifteen-mile-limit][^physician-assistant-one-year-fifteen-mile-limit][^aprn-one-year-fifteen-mile-limit]. Two of these rules are absolute rather than balanced: the broadcast-employee statute bars the specified post-employment restrictions outright, and the homemaker-companion and home-health ban voids the covenant as against public policy with no compensation, consideration, or trade-secret cure, voiding an agency's client no-hire clause the same way [^broadcast-employee-restriction-ban][^home-health-worker-covenant-void][^home-health-client-no-hire-ban]. The security-guard exclusion is proof-based, not recital-based: a boilerplate acknowledgement that the guard had access to confidential material does not carry the employer's statutory burden of proving the guard obtained trade secrets [^security-guard-trade-secret-exception].
+> An amendment, extension, or renewal that carries an older physician, physician assistant, or advanced practice registered nurse covenant past one year or fifteen miles risks exceeding the statutory cap, which reaches covenants amended, extended, or renewed after its trigger date [^physician-one-year-fifteen-mile-limit][^physician-assistant-one-year-fifteen-mile-limit][^aprn-one-year-fifteen-mile-limit]. A covered broadcast employee's area-and-time restriction, a home-health worker's non-compete, and a no-hire clause in the agency's client contract are barred or void outright [^broadcast-employee-restriction-ban][^home-health-worker-covenant-void][^home-health-client-no-hire-ban]. A security-guard covenant resting on an access recital risks the statutory bar, because the employer must prove the guard obtained trade secrets [^security-guard-trade-secret-exception].
 
 ## How does Connecticut treat employee non-solicitation covenants? {#employee-non-solicitation}
 
@@ -127,9 +127,9 @@ Under that test a restraint on a former employee is enforceable only if it is pa
 
 ## Does a Connecticut non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
-**Short answer.** This is an open Connecticut question. No staged Connecticut statute or appellate decision squarely endorses automatic judicial tolling or enforcement of an extension-on-breach clause after the stated restricted period expires [^van-dyck-injunction-moot-after-period][^scott-reasonableness-backdrop-for-tolling].
+**Short answer.** This is an open Connecticut question. No identified Connecticut statute or appellate decision squarely endorses automatic judicial tolling or enforcement of an extension-on-breach clause after the stated restricted period expires [^van-dyck-injunction-moot-after-period][^scott-reasonableness-backdrop-for-tolling].
 
-The best staged Connecticut authority points toward caution. In *Van Dyck*, the plaintiff sought injunctive relief on a covenant whose claimed period had already run, and the Superior Court treated the request for injunctive relief as moot rather than automatically extending the restraint [^van-dyck-injunction-moot-after-period]. That does not decide every contractual tolling clause, but it is not an endorsement of automatic extension.
+The best identified Connecticut authority points toward caution. In *Van Dyck*, the plaintiff sought injunctive relief on a covenant whose claimed period had already run, and the Superior Court treated the request for injunctive relief as moot rather than automatically extending the restraint [^van-dyck-injunction-moot-after-period]. That does not decide every contractual tolling clause, but it is not an endorsement of automatic extension.
 
 Contractual extension-on-breach language still has to fit the *Scott* reasonableness lens. If the extension turns a fixed covenant into an open-ended restraint, or if litigation delay creates a much longer practical restraint than the employer could justify at signing, enforceability is unsettled and fact-dependent [^scott-reasonableness-backdrop-for-tolling].
 
@@ -205,6 +205,8 @@ In *Mattis v. Lally*, the Connecticut Supreme Court enforced a seller's covenant
 [^dur-a-flex-consideration-reversal]: **Dur-A-Flex, Inc. v. Dy** — "We conclude, therefore, that the trial court incorrectly determined that continued employment can never be consideration for a noncompete agreement." *Dur-A-Flex, Inc. v. Dy, 349 Conn. 513 (2024).* <https://www.courtlistener.com/opinion/10131708/dur-a-flex-inc-v-dy/#:~:text=We%20conclude%2C%20therefore%2C%20that%20the%20trial%20court%20incorrectly,consideration%20for%20a%20noncompete%20agreement.>
 
 [^schimenti-continued-employment-rule]: **Schimenti Construction Co., LLC v. Schimenti** — "Its holding that consideration in the form of continued employment for at-will employees can be sufficient to make enforceable a restrictive covenant agreed to by the parties at some point after the commencement of employment remains binding precedent." *Schimenti Constr. Co., LLC v. Schimenti, 217 Conn. App. 224 (2023).* <https://www.courtlistener.com/opinion/9367427/schimenti-construction-co-llc-v-schimenti/#:~:text=Its%20holding%20that%20consideration%20in,of%20employment%20remains%20binding%20precedent.>
+
+[^roessler-continued-employment-consideration]: **Roessler v. Burwell** — "The defendant received the benefit he sought in that he was continued in the employment more than four years after the agreement was made, until he voluntarily left it." *Roessler v. Burwell, 119 Conn. 289 (1934).* <https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/#:~:text=The%20defendant%20received%20the%20benefit,until%20he%20voluntarily%20left%20it.>
 
 [^schimenti-connected-consideration]: **Schimenti Construction Co., LLC v. Schimenti** — "At trial, as the plaintiff did in Thoma, the defendant may present evidence that there was no con- nection between the nondisclosure agreement and his continued employment; but, if connected, continued employment can be sufficient consideration for a restrictive covenant." *Schimenti Constr. Co., LLC v. Schimenti, 217 Conn. App. 224 (2023).* <https://www.courtlistener.com/opinion/9367427/schimenti-construction-co-llc-v-schimenti/#:~:text=At%20trial%2C%20as%20the%20plaintiff,consideration%20for%20a%20restrictive%20covenant.>
 

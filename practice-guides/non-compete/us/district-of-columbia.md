@@ -3,9 +3,9 @@ type: State Law Practice Guide
 title: Non-Competes in the District of Columbia
 description: >-
   The District of Columbia bans non-compete provisions for most employees and
-  allows them only for highly compensated employees who earn above an annually
-  adjusted threshold and sign a covenant that meets strict scope, duration, and
-  notice requirements.
+  allows them only for highly compensated employees who earn at least an
+  annually adjusted threshold and sign a covenant that meets strict scope,
+  duration, and notice requirements.
 resource: 'https://openagreements.org/practice-guides/non-compete/us/district-of-columbia'
 timestamp: '2026-06-03'
 tags:
@@ -15,7 +15,7 @@ tags:
 
 # Non-Competes in the District of Columbia[^about]
 
-The District of Columbia bans non-compete provisions for most employees and allows them only for highly compensated employees who earn above an annually adjusted threshold and sign a covenant that meets strict scope, duration, and notice requirements.
+The District of Columbia bans non-compete provisions for most employees and allows them only for highly compensated employees who earn at least an annually adjusted threshold and sign a covenant that meets strict scope, duration, and notice requirements.
 
 ## Are employee non-compete agreements enforceable in the District of Columbia? {#employee-non-compete-enforceability}
 
@@ -51,15 +51,15 @@ For a qualifying employee, the agreement must do three things to be enforceable:
 > [!CAUTION]
 > **Drafting note.**
 >
-> A high salary alone does not make a District non-compete enforceable. The agreement must spell out the functional scope and geographic limits, stay within the duration cap, and be delivered at least 14 days in advance — miss any element and the covenant is not valid and enforceable under § 32-581.03(a) [^hce-requirements][^hce-notice-timing].
+> A high salary alone does not make a District non-compete enforceable. The agreement must spell out the functional scope and geographic limits, stay within the duration cap, and be delivered at least 14 days in advance — miss any element and the covenant is not valid and enforceable under § 32-581.03(a) [^hce-duration][^hce-requirements][^hce-notice-timing].
 
 ## How does the District treat non-competes for physicians and medical specialists? {#medical-specialists}
 
-**Short answer.** Medical specialists can be bound, but only above a higher pay floor and for a longer maximum term. A *medical specialist* — a licensed physician who has completed a residency and earns at least $250,000 (as annually adjusted) — may be subject to a non-compete capped at 730 calendar days, double the 365-day cap for other employees [^medical-specialist-def][^medical-duration].
+**Short answer.** D.C. employee non-competes for medical specialists require the higher statutory pay floor and may last no more than 730 calendar days [^medical-specialist-def][^medical-duration]. A *medical specialist* — a licensed physician who has completed a residency and earns at least $250,000 (as annually adjusted) — may be subject to a non-compete capped at 730 calendar days, double the 365-day cap for other employees [^medical-specialist-def][^medical-duration].
 
 The medical specialist category is narrow: the statute requires a license to practice medicine, status as a physician, a completed medical residency, and total compensation of at least $250,000 before annual inflation adjustments [^medical-specialist-def]. For 2026, the Department of Employment Services sets the medical specialist threshold at $270,274 [^medical-threshold-2026].
 
-A medical specialist's non-compete must still meet all of the other § 32-581.03 requirements — functional scope, geographic limits, and 14-day advance written notice — and only the duration cap differs, at 730 calendar days from separation [^medical-duration][^medical-requirements].
+A medical specialist's non-compete must still meet all of the other § 32-581.03 requirements — functional scope, geographic limits, and 14-day advance written notice — and only the duration cap differs, at 730 calendar days from separation [^medical-duration][^medical-requirements][^medical-notice-timing].
 
 ## What notices and disclosures must a District employer provide? {#notice-disclosures}
 
@@ -197,6 +197,8 @@ The duration limits are written as hard caps: a non-medical highly compensated e
 [^medical-threshold-2026]: **DOES Public Notice: District of Columbia Prohibition on Non-Compete Clauses (2026)** — "As of January 1, 2026, the restriction on non-compete clauses applies to employees earning less than $162,164 and to medical specialists earning less than $270,274." *D.C. Dep't of Emp't Servs., Public Notice: District of Columbia Prohibition on Non-Compete Clauses (Jan. 1, 2026).* <https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/2026%20Ban%20on%20Non-Compete%20Clauses_0.pdf>
 
 [^medical-requirements]: **D.C. Code § 32-581.03** — "The agreement must specify: (A) The functional scope of the competitive restriction, including what services, roles, industry, or competing entities the employee is restricted from performing work in or on behalf of; (B) The geographical limitations of the work restriction" *D.C. Code § 32-581.03(a)(1).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03>
+
+[^medical-notice-timing]: **D.C. Code § 32-581.03** — "The employer shall provide the non-compete provision to the employee in writing: (A) At least 14 days before the individual commences employment for the employer; or (B) If the employer already employs the highly compensated employee, at least 14 days before the employee must execute the agreement." *D.C. Code § 32-581.03(a)(2).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03>
 
 [^statutory-notice]: **D.C. Code § 32-581.03a** — "A highly compensated employee's employer shall provide the following notice to the employee whenever a non-compete provision is proposed to the employee:" *D.C. Code § 32-581.03a(b).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03a>
 

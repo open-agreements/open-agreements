@@ -2,7 +2,7 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Indiana[^about]
 
@@ -30,7 +30,7 @@ Indiana enforces non-competes only when they are reasonable and protect a legiti
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Indiana enforces a non-compete only if the employer proves it is reasonable in time, activity, and geography and protects a legitimate interest; courts disfavor them and use a strict eraser blue pencil. |
-| **Main law or case** | common law (Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008)) |
+| **Main law or case** | Common law governs most employee non-competes; Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008). |
 | **Main exceptions** | Physician-hospital covenants banned (SEA 475, 2025); primary-care physician non-competes banned (SEA 7, 2023); physician covenants must meet HEA 1004 |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Unclear |
@@ -154,7 +154,7 @@ A contractual extension-on-breach clause is therefore unsettled and fact-depende
 
 **Short answer.** Yes. A covenant ancillary to the sale of a business — or to an owner's sale of an equity interest — is judged under a more liberal standard than an ordinary employment covenant, because the buyer is paying for goodwill that the seller could otherwise destroy [^dicen-sale-liberal][^zollinger-sale-standard].
 
-Indiana applies the skeptical, employer-disfavoring standard to employment covenants but a more lenient one to sale-ancillary restraints [^zollinger-sale-standard]. The Indiana Supreme Court explained in *Dicen* that sale-of-business promises are enforced on a more liberal basis than employment covenants [^dicen-sale-liberal], and the Court of Appeals applied that lenient standard in *Zollinger v. Wagner-Meinert Engineering, LLC* to an owner who sold his interest. The reason is goodwill: the Seventh Circuit, applying Indiana law in *E.T. Products, LLC v. D.E. Miller Holdings, Inc.*, upheld a broad sale covenant precisely to protect the goodwill the buyer purchased [^etproducts-goodwill].
+Indiana applies the skeptical, employer-disfavoring standard to employment covenants but a more lenient one to sale-ancillary restraints [^zollinger-sale-standard]. The Indiana Supreme Court explained in *Dicen* that sale-of-business promises are enforced on a more liberal basis than employment covenants [^dicen-sale-liberal], and the Court of Appeals applied that lenient standard in *Zollinger v. Wagner-Meinert Engineering, LLC* to an owner who sold his interest [^zollinger-sale-standard]. The reason is goodwill: the Seventh Circuit, applying Indiana law in *E.T. Products, LLC v. D.E. Miller Holdings, Inc.*, upheld a broad sale covenant precisely to protect the goodwill the buyer purchased [^etproducts-goodwill].
 
 > [!NOTE]
 > **Practice note.**

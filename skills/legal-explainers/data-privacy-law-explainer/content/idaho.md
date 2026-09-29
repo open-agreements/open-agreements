@@ -2,7 +2,7 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/idaho · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/idaho · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Idaho Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Idaho has no comprehensive consumer-privacy statute. The operative state framewo
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Idaho has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative state statutes are the breach-notification provisions in the identity-theft chapter — a misuse-triggered notice duty with no day-count deadline and no regulator notice for private businesses — and the Idaho Consumer Protection Act, which makes a privacy policy you publish but do not follow a deceptive practice. Build to the federal overlay (FTC Act § 5, GLBA, HIPAA, COPPA) and the breach statute, and watch two narrow 2026 enactments, one on social-media minors and one on conversational AI. |
-| **Main law** | Idaho Code §§ 28-51-104 to 28-51-107 (data-breach notification) plus the Idaho Consumer Protection Act, Idaho Code § 48-601 et seq. — Idaho has no comprehensive consumer-privacy statute |
+| **Main law** | No comprehensive consumer-privacy law; Idaho Code § 28-51-105(1). Idaho Code § 48-603(17). |
 | **Privacy policy required?** | No Idaho statute requires a consumer privacy policy or fixes its contents; the binding constraints are FTC Act § 5 and the Idaho Consumer Protection Act's ban on misleading or deceptive practices, plus GLBA, HIPAA, and COPPA where the business is in scope |
 | **Who does it cover?** | Any agency, individual, or commercial entity (for profit or not) that conducts business in Idaho and owns or licenses computerized personal information about Idaho residents; no revenue or consumer-volume threshold |
 | **Can consumers sue?** | Limited path |

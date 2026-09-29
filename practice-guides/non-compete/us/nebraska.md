@@ -133,7 +133,7 @@ Use trade-secret provisions for information risk, and use customer covenants onl
 
 ## Does a Nebraska non-compete period toll during breach or litigation? {#extended-for-breach}
 
-**Short answer.** Nebraska appellate case law is silent. No staged Nebraska appellate decision squarely addresses whether a court may toll a non-compete period during breach or litigation, or whether a contractual extension-on-breach clause is enforceable [^q11-brown-reasonableness].
+**Short answer.** Nebraska appellate case law is silent. No identified Nebraska appellate decision squarely addresses whether a court may toll a non-compete period during breach or litigation, or whether a contractual extension-on-breach clause is enforceable [^q11-brown-reasonableness].
 
 The conservative read is to treat tolling as another restraint that must be reasonable when the covenant is enforced as written. Nebraska requires the restraint to be no greater than reasonably necessary, and Nebraska refuses to reform overbroad covenants simply to make them enforceable [^q11-brown-reasonableness][^q11-waadah-no-reform].
 

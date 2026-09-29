@@ -2,7 +2,7 @@
 jurisdiction: "Missouri"
 slug: missouri
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/missouri · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/missouri · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Missouri[^about]
 
@@ -30,7 +30,7 @@ Missouri enforces non-competes only when the restraint is reasonable and tied to
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Missouri enforces a non-compete only to the extent it is reasonable and protects the employer's trade secrets or customer contacts, not mere competition, with the employer bearing the burden. |
-| **Main law or case** | Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006) |
+| **Main law or case** | Common law governs employee non-competes; Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006). |
 | **Main exceptions** | Employee no-hire/anti-raiding safe harbor (§ 431.202, ≤1 yr); owner/sale covenants (§ 431.204); no physician statutory cap |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -95,12 +95,12 @@ In *JumboSack*, the court of appeals recognized continued employment as consider
 
 "An offer of at-will employment, or the continuation of at-will employment, is simply not a source of consideration under Missouri contract law."[^durrell-at-will]
 
-Because *Baker* arose in the arbitration context and the Missouri Supreme Court has not squarely resolved the question for non-competes, lower courts are not bound to follow *Durrell*, and the law remains divided.
+*Baker* arose in the arbitration context, holding that there was no consideration to create a valid arbitration agreement [^baker-arbitration], and the Missouri Supreme Court has not squarely resolved the question for non-competes. *Durrell*, which applied that reasoning to a non-compete, is a federal district court decision [^durrell-at-will].
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A Missouri non-compete resting on continued at-will employment as its only consideration rests on a promise the employer was already free to withhold — *Baker* held such a promise illusory, and *Durrell* applied that reasoning directly to a non-compete — so bare continued-employment consideration is a standing litigation risk rather than a settled footing [^baker-illusory][^durrell-at-will][^jumbosack-consideration]. A covenant supported by independent consideration — a signing bonus, a raise, specialized training, or another concrete benefit documented at signing — rests on ground *Baker* and *Durrell* do not reach, while a covenant staked on the *JumboSack* continued-employment-plus-access theory alone hangs enforceability on a question Missouri has not resolved.
+> A consideration provision that relies only on continued at-will employment leaves a Missouri non-compete exposed to an enforceability challenge that the Missouri Supreme Court has not resolved for non-competes [^baker-illusory][^durrell-at-will]. A covenant supported by an independent benefit documented at signing, such as a signing bonus, a raise, or specialized training, does not depend on continued at-will employment, while a covenant resting only on the continued-employment-plus-access theory of *JumboSack* [^jumbosack-consideration] depends on that unresolved question.
 
 ## Will a Missouri court modify (blue-pencil) an overbroad non-compete? {#court-narrowing}
 
@@ -196,6 +196,8 @@ A liquidated-damages provision is valid in Missouri when the amount is a reasona
 [^baker-illusory]: **Baker v. Bristol Care, Inc.** — "An offer of continued at-will employment is not valid consideration because the employer makes no legally enforceable promise to do or refrain from doing anything it is not already entitled to do." *Baker v. Bristol Care, Inc., 450 S.W.3d 770 (Mo. banc 2014).* <https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/#:~:text=An%20offer%20of%20continued%20at%2Dwill,not%20already%20entitled%20to%20do.>
 
 [^durrell-at-will]: **Durrell v. Tech Electronics, Inc.** — "An offer of at-will employment, or the continuation of at-will employment, is simply not a source of consideration under Missouri contract law." *Durrell v. Tech Elecs., Inc., No. 4:16-cv-01367, 2016 WL 6833956 (E.D. Mo. Nov. 15, 2016).* <https://www.govinfo.gov/app/details/USCOURTS-moed-4_16-cv-01367>
+
+[^baker-arbitration]: **Baker v. Bristol Care, Inc.** — "This Court affirms the circuit court’s order because there was no consideration to create a valid arbitration agreement." *Baker v. Bristol Care, Inc., 450 S.W.3d 770 (Mo. banc 2014).* <https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/#:~:text=This%20Court%20affirms%20the%20circuit,create%20a%20valid%20arbitration%20agreement.>
 
 [^whelan-modification]: **Whelan Security Co. v. Kennebrew** — "Accordingly, when the provisions of a non-compete clause impose a restraint that is unreasonably broad, appellate courts still can give effect to its purpose by refusing to give effect to the unreasonable terms or modifying the terms of the contract to be reasonable." *Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).* <https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=Accordingly%2C%20when%20the%20provisions%20of,the%20contract%20to%20be%20reasonable.>
 

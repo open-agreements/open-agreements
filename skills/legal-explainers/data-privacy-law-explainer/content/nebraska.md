@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/nebraska · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/nebraska · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Nebraska Consumer Privacy Law (Data Privacy Act)[^about]
 
@@ -30,7 +30,7 @@ The Nebraska Data Privacy Act gives Nebraska consumers rights over their persona
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you do business in Nebraska (or serve its residents), process or sell personal data, and are not a federal small business, the Data Privacy Act requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with a 30-day cure period and no consumer lawsuits. |
-| **Main law** | Neb. Rev. Stat. §§ 87-1101 et seq. (Nebraska Data Privacy Act, effective Jan. 1, 2025) |
+| **Main law** | Neb. Rev. Stat. § 87-1103(1). |
 | **Privacy policy required?** | Yes — a reasonably accessible and clear privacy notice with statutorily fixed contents |
 | **Who does it cover?** | Persons that conduct business in Nebraska or produce a product or service consumed by Nebraska residents, that process or sell personal data, and that are not a small business under the federal Small Business Act — no consumer-count or revenue threshold; state agencies, GLBA, HIPAA, nonprofits, and higher-education institutions exempt |
 | **Can consumers sue?** | No |
