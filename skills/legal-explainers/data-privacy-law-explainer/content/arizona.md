@@ -2,7 +2,7 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/arizona · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/arizona · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Arizona Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Arizona has no comprehensive consumer-privacy statute. The operative state laws 
 | --- | --- |
 | **Law coverage** | Specific data types only |
 | **Summary** | Arizona has no comprehensive consumer-privacy law — despite a circulating vendor claim, none took effect on January 1, 2026 — so the operative state framework is the 45-day breach-notification statute, the Consumer Fraud Act, and the 2021 Genetic Information Privacy Act for DNA testing companies. |
-| **Main law** | A.R.S. §§ 18-551 to 18-552 (data-breach notification) plus the Consumer Fraud Act, A.R.S. §§ 44-1521 et seq. — Arizona has no comprehensive consumer-privacy law; sectoral statutes and a federal overlay are the operative framework |
+| **Main law** | No comprehensive consumer-privacy law; A.R.S. § 18-552(A). A.R.S. § 44-1522(A). |
 | **Privacy policy required?** | No Arizona statute requires a commercial privacy policy — the only state mandates cover state-agency websites and direct-to-consumer genetic testing companies; contents are otherwise driven by FTC Act § 5 and Consumer Fraud Act deception risk |
 | **Who does it cover?** | Any person conducting business in Arizona that owns, maintains, or licenses computerized personal information of Arizona residents — no revenue or consumer-volume threshold; the Genetic Information Privacy Act adds duties for direct-to-consumer genetic testing companies |
 | **Can consumers sue?** | No |

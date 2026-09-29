@@ -33,7 +33,7 @@ Start with what the Guam Code Annotated does and does not contain. Guam has enac
 
 "Everything which an employee acquires by virtue of his employment, except the compensation, if any, which is due to him from his employer, belongs to the latter whether acquired lawfully or unlawfully, or during or after the expiration of the term of his employment."[^gu-55311-employer-acquisition]
 
-That text is not local drafting. It was carried into Guam's 1970 Civil Code as Guam Civil Code § 1985, a verbatim copy of California Civil Code § 1985 of 1872, later recodified as California Labor Code § 2860 — the same Field Code family that produced the employer-acquisition statutes of Montana and North Dakota. And Guam has a black-letter rule for statutes with that pedigree. In *Island Eye Center, Inc. v. Lombard*, quoting its earlier decision in *Banes v. Superior Court*, the Supreme Court of Guam restated the borrowed-statute doctrine [^ie-borrowed-statute-rule].
+That text is not local drafting. It was carried into Guam's 1970 Civil Code as Guam Civil Code § 1985, a verbatim copy of California Civil Code § 1985 of 1872, later recodified as California Labor Code § 2860 — the same Field Code family that produced the employer-acquisition statutes of Montana and North Dakota. And Guam has a black-letter rule for statutes with that pedigree. In *Island Eye Center, Inc. v. Lombard*, quoting one of its own earlier decisions, the Supreme Court of Guam restated the borrowed-statute doctrine [^ie-borrowed-statute-rule].
 
 "When Guam statutes are based on nearly identical California statutes, California case law is persuasive, absent any compelling reason to deviate from California's interpretation."[^ie-borrowed-statute-rule]
 
@@ -127,7 +127,7 @@ That is not a new posture. Decades earlier the Ninth Circuit applied the same st
 
 "Since this agreement attempted to make the prohibition and restraint complete within the Territory of Guam, it is to that extent void."[^shelton-void]
 
-What does that framework do to a trailing invention-assignment clause? The closest construction of the identical statutory text answers it. In *Whitewater West Industries, Ltd. v. Alleshouse*, the Federal Circuit, applying California law, held a post-employment invention-assignment provision void under § 16600 — the same section *Island Eye* treats as virtually identical to § 88105 — because it restrained the former employee's ability to work in his field [^whitewater-void-holding].
+What does that framework do to a trailing invention-assignment clause? The closest construction of the identical statutory text answers it. In *Whitewater West Industries, Ltd. v. Alleshouse*, the Federal Circuit, applying California law, held a post-employment invention-assignment provision void under § 16600 because it restrained the former employee's ability to work in his field [^whitewater-void-holding]. Section 16600 is the provision *Island Eye* treats as virtually identical to § 88105 [^ie-derived-16600].
 
 "We reverse. In particular, we reverse the judgment of breach of contract because we hold that the assignment provision is void under California law."[^whitewater-void-holding]
 

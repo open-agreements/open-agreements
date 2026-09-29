@@ -2,7 +2,7 @@
 jurisdiction: "Connecticut"
 slug: connecticut
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-04"
 human_reviewed_at: null
 next_review_due: "2026-12-01"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/connecticut · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/connecticut · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Connecticut Consumer Privacy Law (CTDPA)[^about]
 
@@ -30,7 +30,7 @@ The Connecticut Data Privacy Act gives Connecticut consumers rights over their p
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus data-sale) threshold in Connecticut, the CTDPA requires a privacy notice, recognition of universal opt-out signals, processor contracts, and consent for sensitive data — enforced by the Attorney General, with no consumer lawsuits and a cure period that expired at the end of 2024. |
-| **Main law** | Conn. Gen. Stat. §§ 42-515 et seq. (Connecticut Data Privacy Act) |
+| **Main law** | Conn. Gen. Stat. § 42-516. |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Connecticut (or targeting residents) that control or process the data of 100,000+ consumers a year, or 25,000+ while deriving 25%+ of gross revenue from selling data — no revenue floor; nonprofits exempt |
 | **Can consumers sue?** | No |

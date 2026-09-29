@@ -34,3 +34,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `baker-illusory`, `mo-baker-amendment`, `mo-baker-gate`, `mo-baker-timing`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/#:~:text=An%20offer%20of%20continued%20at%2Dwill,not%20already%20entitled%20to%20do.>
+
+### baker-v-bristol-care-inc-this-court-affirms-the-circuit-court-s-5e66b69b {#baker-v-bristol-care-inc-this-court-affirms-the-circuit-court-s-5e66b69b}
+
+> This Court affirms the circuit court’s order because there was no consideration to create a valid arbitration agreement.
+
+- supports: `consideration`
+- source_cards: `baker-arbitration`
+- cited_by: [Non-Competes in Missouri](../non-compete/us/missouri.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/#:~:text=This%20Court%20affirms%20the%20circuit,create%20a%20valid%20arbitration%20agreement.>

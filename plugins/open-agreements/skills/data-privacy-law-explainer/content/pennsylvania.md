@@ -2,7 +2,7 @@
 jurisdiction: "Pennsylvania"
 slug: pennsylvania
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-07"
 human_reviewed_at: null
 next_review_due: "2026-12-04"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/pennsylvania · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/pennsylvania · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Pennsylvania Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Pennsylvania has no comprehensive consumer-privacy statute. The operative state 
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Pennsylvania has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative state statute is the Breach of Personal Information Notification Act, which requires notice of a data breach without unreasonable delay and is enforced solely by the Attorney General. Everything else in a Pennsylvania-facing privacy program comes from the federal and sectoral overlay — FTC Act § 5, GLBA, HIPAA, and COPPA — so build to those and to the Breach Act, and the program auto-upgrades if Pennsylvania later enacts an omnibus law. One state-law exposure does demand attention now — Pennsylvania's all-party-consent wiretap statute (WESCA) has become the basis for website session-replay and tracking-pixel class actions, so obtain visitor consent before running third-party tracking. |
-| **Main law** | Pennsylvania Breach of Personal Information Notification Act, 73 P.S. §§ 2301 et seq. — Pennsylvania has no comprehensive consumer-privacy law; the Breach Act plus a federal and sectoral overlay is the operative framework |
+| **Main law** | No comprehensive consumer-privacy law; 73 P.S. § 2303(a). |
 | **Privacy policy required?** | No comprehensive Pennsylvania statute mandates a consumer privacy policy or fixes its contents; contents are driven by FTC Act § 5 (a policy that misstates practices is deceptive), the UTPCPL, and the GLBA, HIPAA, and COPPA rules where the business is in scope |
 | **Who does it cover?** | Any entity — a sole proprietorship, partnership, corporation, association, or other group, for profit or not — doing business in Pennsylvania that maintains, stores, or manages computerized personal information of Pennsylvania residents; no revenue or consumer-volume threshold |
 | **Can consumers sue?** | Yes |

@@ -86,7 +86,7 @@ The framework itself is well developed. In *Reddy v. Community Health Foundation
 
 "A restraint is reasonable only if it (1) is no greater than is required for the protection of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public"[^reddy-three-part-test]
 
-Timing matters too. In *Environmental Products Co. v. Duncan*, applying the rule announced in *Pemco Corp. v. Rose*, the court required fresh consideration when a restraint is imposed after the employment relationship is already underway [^envtl-products-new-consideration].
+Timing matters too. In *Environmental Products Co. v. Duncan*, the court required fresh consideration when a restraint is imposed after the employment relationship is already underway [^envtl-products-new-consideration], citing *Pemco Corp. v. Rose*, which had stated the new-consideration rule as a prediction of Virginia law [^pemco-new-consideration].
 
 "If a covenant not to compete is contracted after employment has been commenced without restriction, there must be new consideration to support it."[^envtl-products-new-consideration]
 
@@ -121,6 +121,8 @@ Extending this framework to holdover assignments is a prediction, not a holding.
 [^envtl-products-new-consideration]: **Environmental Products Co., Inc. v. Duncan** — "If a covenant not to compete is contracted after employment has been commenced without restriction, there must be new consideration to support it." *Envtl. Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).* <https://www.courtlistener.com/opinion/1331693/environmental-products-co-inc-v-duncan/#:~:text=If%20a%20covenant%20not%20to,new%20consideration%20to%20support%20it.>
 
 [^reddy-three-part-test]: **Reddy v. Community Health Foundation of Man** — "A restraint is reasonable only if it (1) is no greater than is required for the protection of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public" *Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).* <https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=A%20restraint%20is%20reasonable%20only,not%20injurious%20to%20the%20public>
+
+[^pemco-new-consideration]: **Pemco Corp. v. Rose** — "We believe Virginia’s highest court would probably follow the holding in Kistler that when the relationship of employer and employee is established without a restrictive covenant not to compete, any agreement thereafter not to compete, must be in the nature of a new contract based upon a new consideration." *Pemco Corp. v. Rose, 163 W. Va. 420, 257 S.E.2d 885 (1979).* <https://www.courtlistener.com/opinion/8217515/pemco-corp-v-rose/#:~:text=We%20believe%20Virginia%E2%80%99s%20highest%20court,based%20upon%20a%20new%20consideration.>
 
 [^envtl-products-continued-employment]: **Environmental Products Co., Inc. v. Duncan** — "It certainly is not adequate here." *Envtl. Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).* <https://www.courtlistener.com/opinion/1331693/environmental-products-co-inc-v-duncan/#:~:text=It%20certainly%20is%20not%20adequate%20here.>
 

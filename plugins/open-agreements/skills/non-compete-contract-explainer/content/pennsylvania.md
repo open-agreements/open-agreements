@@ -2,7 +2,7 @@
 jurisdiction: "Pennsylvania"
 slug: pennsylvania
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/pennsylvania · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/pennsylvania · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Pennsylvania[^about]
 
@@ -30,7 +30,7 @@ Pennsylvania enforces non-competes only when they are ancillary to employment, s
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Pennsylvania enforces an employee non-compete only if it is ancillary to employment, supported by adequate consideration, reasonably limited in time and territory, and tied to a legitimate business interest, with a 2024 statute sharply restricting health care covenants. |
-| **Main law or case** | Socko v. Mid-Atlantic Systems of CPA, Inc., 126 A.3d 1266 (Pa. 2015) |
+| **Main law or case** | Common law governs, with a health-care practitioner statute; Socko v. Mid-Atlantic Systems of CPA, Inc., 126 A.3d 1266 (Pa. 2015). Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 4(a) (Pa.). |
 | **Main exceptions** | Health-care practitioner restrictions (Act 74 of 2024, eff. Jan 1, 2025 — voids covenants over one year and any where employer dismissed practitioner); B2B no-hire clauses unenforceable (Beemac) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -54,7 +54,7 @@ Pennsylvania has not enacted a general non-compete statute for the ordinary work
 
 **Short answer.** No, not by itself, for an existing employee. When a covenant is added after employment has begun, it is enforceable only if the employee receives new and valuable consideration beyond merely keeping the job [^socko-mid-employment][^maintenance-continued-employment].
 
-In *Socko*, the Pennsylvania Supreme Court confirmed that a mid-employment restraint requires new and valuable consideration — a corresponding benefit or a beneficial change in employment status — not just continued at-will employment [^socko-mid-employment]. The rule predates *Socko*: in *Maintenance Specialties, Inc. v. Gottus*, the court held that continued employment is not sufficient consideration for a covenant signed after employment began [^maintenance-continued-employment].
+In *Socko*, the Pennsylvania Supreme Court confirmed that a mid-employment restraint requires new and valuable consideration — a corresponding benefit or a beneficial change in employment status — not just continued at-will employment [^socko-mid-employment]. The rule predates *Socko* [^socko-mid-employment]: in *Maintenance Specialties, Inc. v. Gottus*, the court held that continued employment is not sufficient consideration for a covenant signed after employment began [^maintenance-continued-employment].
 
 "In the context of requiring an employee to agree to a restrictive covenant mid-employment, however, such a restraint on trade will be enforceable only if new and valuable consideration, beyond mere continued employment, is provided and is sufficient to support the restrictive clause."[^socko-mid-employment]
 

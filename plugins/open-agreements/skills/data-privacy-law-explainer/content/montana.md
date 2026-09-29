@@ -2,7 +2,7 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-05"
 human_reviewed_at: null
 next_review_due: "2026-12-02"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/montana · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/montana · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Montana Consumer Privacy Law (MCDPA)[^about]
 
@@ -30,7 +30,7 @@ The Montana Consumer Data Privacy Act gives Montana consumers rights over their 
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 25,000-consumer (or 15,000 plus over-25%-data-sale) threshold in Montana, the MCDPA requires a privacy notice, opt-in consent to process sensitive data, recognition of a universal opt-out preference signal, and processor contracts — enforced by the Attorney General, with no consumer lawsuits and, since the 2025 amendments, no general right to cure before penalties of up to $7,500 per violation. |
-| **Main law** | Mont. Code Ann. §§ 30-14-2801 et seq. (codified short title Consumer Data Privacy Act; commonly the Montana Consumer Data Privacy Act, or MCDPA) |
+| **Main law** | Mont. Code Ann. § 30-14-2803(1)(a). |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Montana (or targeting residents) that control or process the data of 25,000+ consumers, or 15,000+ while deriving over 25% of gross revenue from selling data — no revenue floor; state agencies, higher-education institutions, GLBA banks, HIPAA covered entities, and insurers are exempt |
 | **Can consumers sue?** | No |

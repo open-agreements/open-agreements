@@ -2,7 +2,7 @@
 jurisdiction: "Illinois"
 slug: illinois
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/illinois · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/illinois · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Illinois Consumer Privacy Law (BIPA)[^about]
 
@@ -30,7 +30,7 @@ Illinois has no comprehensive consumer-privacy act, but the Biometric Informatio
 | --- | --- |
 | **Law coverage** | Specific data types only |
 | **Summary** | Illinois has not enacted a comprehensive consumer-privacy law, but it is the highest-exposure privacy state in the country for one reason — the Biometric Information Privacy Act. Before collecting a fingerprint, face scan, or voiceprint, a business must publish a written retention-and-destruction policy and obtain informed written consent, and any person whose rights are violated can sue for $1,000 or $5,000 in liquidated damages per person without proving actual harm, on a five-year limitations period. A 2024 amendment capped repeated identical scans at one recovery per person per method of collection, and in April 2026 the Seventh Circuit held that cap applies retroactively to pending cases. Genetic data carries parallel private-suit exposure under GIPA, and breach notification under the Personal Information Protection Act is the Attorney General's lane. |
-| **Main law** | Biometric Information Privacy Act (BIPA), 740 ILCS 14 — Illinois has no comprehensive consumer-privacy law; BIPA sits alongside the Genetic Information Privacy Act (410 ILCS 513), the Personal Information Protection Act breach statute (815 ILCS 530), and the Consumer Fraud Act |
+| **Main law** | No comprehensive consumer-privacy law; 740 ILCS 14/15(a). 410 ILCS 513/15(a). 815 ILCS 530/10(a). 815 ILCS 505/2. |
 | **Privacy policy required?** | Yes for biometric data — BIPA § 15(a) requires a written, publicly available policy with a retention schedule and destruction guidelines; no Illinois statute fixes the contents of a general consumer privacy policy, so FTC Act § 5 and the Consumer Fraud Act truthfulness rules govern the rest |
 | **Who does it cover?** | BIPA reaches any private entity — any individual, partnership, corporation, LLC, association, or other group — that handles biometric identifiers or biometric information of people in Illinois, with no revenue or volume threshold; government agencies and GLBA financial institutions are carved out |
 | **Can consumers sue?** | Yes |
@@ -78,7 +78,7 @@ Scope limits matter in both directions. The definition excludes photographs, wri
 
 **Short answer.** Yes — this is the feature that makes Illinois unlike any other state. BIPA § 20 gives any person aggrieved by a violation a right of action in state circuit court or as a supplemental claim in federal court, with liquidated damages of $1,000 per negligent violation or $5,000 per intentional or reckless violation (or actual damages if greater), plus attorneys' fees and costs [^stat-20a-damages]. In *Rosenbach v. Six Flags Entertainment Corp.*, the Illinois Supreme Court held that "an individual need not allege some actual injury or adverse effect, beyond violation of his or her rights under the Act, in order to qualify as an ‘aggrieved’ person and be entitled to seek liquidated damages and injunctive relief pursuant to the Act"[^case-rosenbach] [^case-rosenbach]. And the window is long: in *Tims v. Black Horse Carriers, Inc.*, the court held that the five-year catchall limitations period of section 13-205 of the Code of Civil Procedure controls claims under the Act [^case-tims].
 
-The mechanics deserve emphasis because each element compounds the others. The violation *is* the injury — a fingerprint collected without the § 15(b) disclosures and release is actionable the day it is scanned, with no identity theft, data breach, or out-of-pocket loss required. The *Rosenbach* court was explicit that this is the design, not an accident: "When private entities face liability for failure to comply with the law’s requirements without requiring affected individuals or customers to show some injury beyond violation of their statutory rights, those entities have the strongest possible incentive to conform to the law and prevent problems before they occur and cannot be undone."[^case-rosenbach-deterrence] [^case-rosenbach-deterrence] Stack the per-person liquidated amounts across a workforce or user base, add a five-year reach-back under *Tims*, and a routine timekeeping or photo-tagging practice becomes a class action with eight-or-nine-figure exposure.
+The mechanics deserve emphasis because each element compounds the others. The violation *is* the injury — a fingerprint collected without the § 15(b) disclosures and release is actionable the day it is scanned, with no identity theft, data breach, or out-of-pocket loss required. The *Rosenbach* court was explicit that this is the design, not an accident: "When private entities face liability for failure to comply with the law’s requirements without requiring affected individuals or customers to show some injury beyond violation of their statutory rights, those entities have the strongest possible incentive to conform to the law and prevent problems before they occur and cannot be undone."[^case-rosenbach-deterrence] [^case-rosenbach-deterrence] Stack the per-person liquidated amounts across a workforce or user base, add a five-year reach-back under *Tims* [^case-tims], and a routine timekeeping or photo-tagging practice becomes a class action with eight-or-nine-figure exposure.
 
 BIPA exposure management is litigation prevention: compliant paperwork, vendor disclosures, and retention policies matter more than regulator relations. The Illinois Supreme Court explained in *Rosenbach* that, other than the private right of action authorized in section 20, no other enforcement mechanism is available [^case-rosenbach-no-agency].
 
@@ -95,7 +95,7 @@ The 2023–2026 arc is worth a timeline, because each date changed the settlemen
 
 - **February 17, 2023:** *Cothron* answers the Seventh Circuit's certified question — claims accrue with every scan or transmission, not only the first [^case-cothron-per-scan]. A workforce clocking in by fingerprint for five years suddenly represented thousands of violations per employee, and the court closed by inviting the legislature to clarify its intent on damages.
 - **August 2, 2024:** Public Act 103-0769 takes effect the day it is signed. It leaves § 15's substantive duties and § 20(a)'s per-violation amounts untouched, but adds the single-recovery rule for repeated same-person, same-method collections [^stat-20b-single-recovery] and same-recipient disclosures [^stat-20c-single-disclosure], and it modernizes consent by adding an electronic signature to the definition of a written release.
-- **April 1, 2026:** In *Gregg* — a trio of consolidated appeals with *Clay v. Union Pacific Railroad* and *Willis v. Universal Intermodal Services* — a unanimous Seventh Circuit panel, in an opinion by Chief Judge Brennan, holds that the amendment is a remedial change: "That makes it ‘procedural’ under Illinois law, so courts should apply the amendment to cases pending at the time the statute was enacted."[^case-gregg-remedial] [^case-gregg-remedial] Plaintiffs who had banked on per-scan damages for pre-2024 conduct — one plaintiff alleged roughly 1,500 scans, a potential $7.5 million for a single person — lost that multiplier in federal court.
+- **April 1, 2026:** In *Gregg*, which decided three consolidated appeals together, a unanimous Seventh Circuit panel, in an opinion by Chief Judge Brennan, holds that the amendment is a remedial change: "That makes it ‘procedural’ under Illinois law, so courts should apply the amendment to cases pending at the time the statute was enacted."[^case-gregg-remedial] [^case-gregg-remedial] Plaintiffs who had banked on per-scan damages for pre-2024 conduct — one plaintiff alleged roughly 1,500 scans, a potential $7.5 million for a single person — lost that multiplier in federal court.
 
 > [!NOTE]
 > **Practice note.**

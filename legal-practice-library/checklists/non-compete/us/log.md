@@ -1,5 +1,16 @@
 # Us Update Log
 
+## 2026-09-28
+* **Update**: Washington: common-law savings clause deleted June 30, 2027; checklist reformation-penalty end date (#2929) (#2931) (452e62f)
+
+## 2026-09-27
+* **Update**: Washington: ESHB 1155 notice deadline and 2027 changes; say Washington State (#2886, #2880) (#2898) (933e73b)
+
+## 2026-09-26
+* **Update**: fix: replace public evidence workflow jargon and prevent recurrence (#2741) (5a7454b)
+* **Update**: Correct Vermont non-compete pages: H.583 became Act 133 without a covenant ban (#2813) (d78a894)
+* **Update**: Fix the stray asterisks in Iowa's Farm Bureau quote (#2815) (e92ad37)
+
 ## 2026-09-12
 * **Update**: Maryland and Oklahoma: remove claims that rest on text struck before passage (#2235) (c738a7e)
 

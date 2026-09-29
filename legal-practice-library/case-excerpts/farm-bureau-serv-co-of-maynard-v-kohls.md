@@ -26,15 +26,6 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
-### farm-bureau-serv-co-of-maynard-v-kohls-first-it-appears-the-activities-dc6c108f {#farm-bureau-serv-co-of-maynard-v-kohls-first-it-appears-the-activities-dc6c108f}
-
-> First it appears the activities restricted were more than were necessary for plaintiff’s protection. Defendant was restricted from any “ * * * business activity competitive to that of the company * * It would be ample protection for the plaintiff in this case to restrict a former employee only from those activities he undertook during his employment. Similarly defendant was restricted from activity throughout a two county area. It would have sufficed to restrict him from the six townships he worked in. The trial court rightly held the covenant too broad both as to scope and area.
-
-- supports: `definitions`, `non-solicitation-no-business`, `restrictive-covenants-each-independently-includable`
-- source_cards: `ia-farm-bureau-scope`, `ia-farm-bureau-territory`, `q7-farm-bureau-activities`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
-- link_to_source: <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=First%20it%20appears%20the%20activities,as%20to%20scope%20and%20area.>
-
 ### farm-bureau-serv-co-of-maynard-v-kohls-in-ehlers-the-contract-was-not-f6f850b5 {#farm-bureau-serv-co-of-maynard-v-kohls-in-ehlers-the-contract-was-not-f6f850b5}
 
 > In Ehlers the contract was not executed until sometime after the employee went to work. The case might be distinguished by the concession in Ehlers that the matter was discussed when the job was undertaken. Ehlers is however authority for the proposition continuing employment for an indefinite period is sufficient consideration to support a covenant not to compete.
@@ -43,6 +34,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `ia-farm-bureau-consideration`, `q8-farm-bureau-consideration`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=In%20Ehlers%20the%20contract%20was,a%20covenant%20not%20to%20compete.>
+
+### farm-bureau-serv-co-of-maynard-v-kohls-it-would-be-ample-protection-for-2eecb1a7 {#farm-bureau-serv-co-of-maynard-v-kohls-it-would-be-ample-protection-for-2eecb1a7}
+
+> It would be ample protection for the plaintiff in this case to restrict a former employee only from those activities he undertook during his employment. Similarly defendant was restricted from activity throughout a two county area. It would have sufficed to restrict him from the six townships he worked in. The trial court rightly held the covenant too broad both as to scope and area.
+
+- supports: `definitions`, `non-solicitation-no-business`, `restrictive-covenants-each-independently-includable`
+- source_cards: `ia-farm-bureau-scope`, `ia-farm-bureau-territory`, `q7-farm-bureau-activities`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=It%20would%20be%20ample%20protection,as%20to%20scope%20and%20area.>
 
 ### farm-bureau-serv-co-of-maynard-v-kohls-the-cause-is-remanded-for-entry-c389b325 {#farm-bureau-serv-co-of-maynard-v-kohls-the-cause-is-remanded-for-entry-c389b325}
 

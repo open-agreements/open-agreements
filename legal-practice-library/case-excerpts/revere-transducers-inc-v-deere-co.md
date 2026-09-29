@@ -38,6 +38,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Employee Invention Assignment in Iowa](../invention-assignment/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1989929/revere-transducers-inc-v-deere-co/#:~:text=(1)%20Is%20the%20restriction%20reasonably,prejudicial%20to%20the%20public%20interest%3F>
 
+### revere-transducers-inc-v-deere-co-employment-agreements-requiring-an-699fcb4f {#revere-transducers-inc-v-deere-co-employment-agreements-requiring-an-699fcb4f}
+
+> Employment agreements requiring an employee to assign to the employer rights to inventions designed or conceived during the period of employment have been upheld. See Ingersoll-Rand Co. v. Ciavatta, *762 110 N.J. 609 , 542 A.2d 879, 886 (1988); Callmann, § 14.27, at 95 (1996) (agreements to assign all inventions and improvements in employer’s field, patentable or unpatentable, which are developed by employee during employment belong to employer and such agreements are not invalid or unenforceable as an unreasonable restraint of trade); 27 Am.Jur.2d Employment Relationship § 288, at 735 (1996).
+
+- supports: `holdover-clause-limit`
+- source_cards: `revere-cites-ingersoll`
+- cited_by: [Employee Invention Assignment in Iowa](../invention-assignment/us/iowa.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1989929/revere-transducers-inc-v-deere-co/#:~:text=Employment%20agreements%20requiring%20an%20employee,%C2%A7%20288%2C%20at%20735%20(1996).>
+
 ### revere-transducers-inc-v-deere-co-factors-we-consider-in-determining-the-7493f9b8 {#revere-transducers-inc-v-deere-co-factors-we-consider-in-determining-the-7493f9b8}
 
 > Factors we consider in determining the enforceability of a noncompete agreement include the employee’s close proximity to customers, the nature of the business, accessibility to information peculiar to the employer’s business, and the nature of the occupation which is restrained.

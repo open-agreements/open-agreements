@@ -2,12 +2,12 @@
 type: State Law Practice Guide
 title: Employee Invention Assignment in Washington
 description: >-
-  Washington's RCW 49.44.140 voids any clause forcing an employee to assign an
-  invention developed entirely on their own time, without the employer's
-  resources, that is unrelated to the employer's business and does not result
-  from the employee's work; the employer must give written notice of that
-  carve-out at signing. Whether a post-employment holdover clause is enforceable
-  is unsettled in Washington.
+  In Washington State, RCW 49.44.140 voids any clause forcing an employee to
+  assign an invention developed entirely on their own time, without the
+  employer's resources, that is unrelated to the employer's business and does
+  not result from the employee's work; the employer must give written notice of
+  that carve-out at signing. Whether a post-employment holdover clause is
+  enforceable is unsettled in Washington.
 resource: 'https://openagreements.org/practice-guides/invention-assignment/us/washington'
 timestamp: '2026-06-30'
 tags:
@@ -17,7 +17,7 @@ tags:
 
 # Employee Invention Assignment in Washington[^about]
 
-Washington's RCW 49.44.140 voids any clause forcing an employee to assign an invention developed entirely on their own time, without the employer's resources, that is unrelated to the employer's business and does not result from the employee's work; the employer must give written notice of that carve-out at signing. Whether a post-employment holdover clause is enforceable is unsettled in Washington.
+In Washington State, RCW 49.44.140 voids any clause forcing an employee to assign an invention developed entirely on their own time, without the employer's resources, that is unrelated to the employer's business and does not result from the employee's work; the employer must give written notice of that carve-out at signing. Whether a post-employment holdover clause is enforceable is unsettled in Washington.
 
 ## Can a Washington employer require assignment of every invention? {#statutory-carve-out}
 
@@ -89,6 +89,8 @@ Start with the statute's silence. RCW 49.44.140 governs what an assignment claus
 
 Nor does Washington's noncompete statute supply a cap. Chapter 49.62 RCW caps noncompetition covenants — and presumes covenants longer than eighteen months unreasonable — but its definition of noncompetition covenant expressly excludes a covenant prohibiting use or disclosure of trade secrets or inventions. That express carve-out addresses use-and-disclosure covenants, not assignment clauses as such, so a trailing invention-assignment provision is at least not squarely governed by the chapter — and its eighteen-month durational presumption does not clearly supply a ceiling for a post-employment assignment clause.
 
+Washington's eighteen-month presumption will end on June 30, 2027. On that date, Engrossed Substitute House Bill 1155 (chapter 149, Laws of 2026) takes effect; it strikes the presumption from RCW 49.62.020 [^eshb1155-presumption-struck-holdover][^eshb1155-effective-date-holdover]. After June 30, 2027, the eighteen-month presumption will not be available even as a loose reference point for a trailing assignment clause.
+
 What guidance exists points to trimming rather than wholesale invalidation. The *Waterjet* remedy — strike the overreaching portions as against public policy — suggests a Washington court confronted with an overbroad holdover clause would likely pare it back rather than enforce it as written [^waterjet-strike-holdover].
 
 "Overreaching portions of the agreement should be stricken as against public policy"[^waterjet-strike-holdover]
@@ -128,6 +130,10 @@ But that is an inference, not a holding. No published Washington decision has sq
 [^waterjet-strike-holdover]: **Waterjet Technology, Inc. v. Flow International Corp.** — "Overreaching portions of the agreement should be stricken as against public policy" *Waterjet Tech., Inc. v. Flow Int'l Corp., 140 Wn.2d 313 (2000).* <https://www.courtlistener.com/opinion/4907586/waterjet-technology-inc-v-flow-international-corp/#:~:text=Overreaching%20portions%20of%20the%20agreement,stricken%20as%20against%20public%20policy>
 
 [^stat-140-void-holdover]: **RCW 49.44.140** — "Any provision which purports to apply to such an invention is to that extent against the public policy of this state and is to that extent void and unenforceable." *RCW 49.44.140(1).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
+
+[^eshb1155-presumption-struck-holdover]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "A court or arbitrator must presume that any noncompetition covenant with a duration exceeding eighteen months after termination of employment is unreasonable and unenforceable." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4 (amending RCW 49.62.020).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^eshb1155-effective-date-holdover]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "This act takes effect June 30, 2027." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^stat-140-notice-practice]: **RCW 49.44.140** — "If an employment agreement entered into after September 1, 1979, contains a provision requiring the employee to assign any of the employee's rights in any invention to the employer, the employer must also, at the time the agreement is made, provide a written notification to the employee that the agreement does not apply to an invention for which no equipment, supplies, facility, or trade secret information of the employer was used and which was developed entirely on the employee's own time" *RCW 49.44.140(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
 

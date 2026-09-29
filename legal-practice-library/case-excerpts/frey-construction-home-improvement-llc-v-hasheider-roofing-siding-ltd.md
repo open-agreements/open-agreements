@@ -36,3 +36,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `q10-frey`, `wi-frey-interference`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10293559/frey-construction-home-improvement-llc-v-hasheider-roofing-siding/#:~:text=However%2C%20we%20further%20conclude%20that,intentional%20interference%20with%20contract%20claim.>
+
+### frey-construction-home-improvement-llc-v-hasheider-roofing-siding-ltd-the-allegations-stem-from-hasheider-s-47ce61ea {#frey-construction-home-improvement-llc-v-hasheider-roofing-siding-ltd-the-allegations-stem-from-hasheider-s-47ce61ea}
+
+> The allegations stem from Hasheider’s hiring one of Frey’s former employees, Anthony Bauernhuber, resulting in Frey’s claim that No. 2023AP67 Hasheider tortiously interfered with a “Noncompetition and Nondisclosure Agreement” (“noncompete agreement”) between Frey and Bauernhuber.
+
+- supports: `remedies`
+- source_cards: `q10-frey-hiring`
+- cited_by: [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
+- link_to_source: <https://www.courtlistener.com/opinion/10293559/frey-construction-home-improvement-llc-v-hasheider-roofing-siding/#:~:text=The%20allegations%20stem%20from%20Hasheider%E2%80%99s,agreement%E2%80%9D)%20between%20Frey%20and%20Bauernhuber.>

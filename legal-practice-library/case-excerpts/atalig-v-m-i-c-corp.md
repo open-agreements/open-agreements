@@ -42,3 +42,12 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - source_cards: `atalig-186-balancing`
 - cited_by: [Employee Invention Assignment in the Northern Mariana Islands](../invention-assignment/us/cnmi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8669524/atalig-v-mic-corp/#:~:text=Account%20is%20taken%20of%20such,likely%20injury%20to%20the%20public.>
+
+### atalig-v-m-i-c-corp-order-granting-summary-judgment-this-c96ef8fe {#atalig-v-m-i-c-corp-order-granting-summary-judgment-this-c96ef8fe}
+
+> ORDER GRANTING SUMMARY JUDGMENT This matter was heard December 18 , 1987, on defendant's motion for summary judgment.
+
+- supports: `holdover-clause-limit`
+- source_cards: `atalig-summary-judgment-order`
+- cited_by: [Employee Invention Assignment in the Northern Mariana Islands](../invention-assignment/us/cnmi.md)
+- link_to_source: <https://www.courtlistener.com/opinion/8669524/atalig-v-mic-corp/#:~:text=ORDER%20GRANTING%20SUMMARY%20JUDGMENT%20This,defendant's%20motion%20for%20summary%20judgment.>

@@ -28,6 +28,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### idbeis-v-wichita-surgical-specialists-p-a-in-conclusion-the-restrictive-covenant-a5ef161d {#idbeis-v-wichita-surgical-specialists-p-a-in-conclusion-the-restrictive-covenant-a5ef161d}
+
+> In conclusion, the restrictive covenant in each of the plaintiff s employment contracts is enforceable.
+
+- supports: `healthcare`
+- source_cards: `healthcare-idbeis-enforced`
+- cited_by: [Non-Competes in Kansas](../non-compete/us/kansas.md)
+- link_to_source: <https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20conclusion%2C%20the%20restrictive%20covenant,s%20employment%20contracts%20is%20enforceable.>
+
 ### idbeis-v-wichita-surgical-specialists-p-a-in-kansas-however-the-law-is-c6935b24 {#idbeis-v-wichita-surgical-specialists-p-a-in-kansas-however-the-law-is-c6935b24}
 
 > In Kansas, however, the law is clear that referral sources are a legitimate interest which can be protected by a restrictive covenant even in the context of a medical practice.

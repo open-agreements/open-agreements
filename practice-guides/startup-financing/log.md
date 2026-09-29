@@ -1,5 +1,19 @@
 # Startup Financing Update Log
 
+## 2026-09-28
+* **Update**: NVCA: shorter charter voting answer; add the Investors' Rights Agreement as a verified source (#2928) (84448c1)
+* **Update**: content(nvca): open two answers with the substantive rule (#2907) (#2919) (b9ec29f)
+
+## 2026-09-27
+* **Update**: content(practice-guides): drop repeated not-legal-advice lines (#2889) (b8d335c)
+
+## 2026-09-26
+* **Update**: fix: refresh privacy law status and financing workflow links (0cea93f)
+* **Update**: fix: address survey content advisory citations and stale wording (5f16426)
+
+## 2026-09-25
+* **Update**: content: tag NVCA and YC form citations as standard-form (#2793) (fc14974)
+
 ## 2026-09-18
 * **Update**: fix(nvca): resolve purchaser-guide source and answer findings (05630cd)
 * **Update**: fix(guides): remove misplaced indemnity closing chip (13b732e)

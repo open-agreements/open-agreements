@@ -113,7 +113,7 @@ Review every item below the way a Connecticut court would: there is no general n
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Connecticut question. No staged statute or appellate decision endorses automatic extension; the staged authority treated a request for an injunction as moot once the covenant period had run, and any extension clause still has to survive the same reasonableness test as the underlying restraint. Draft it as a separate, breach-tied, bounded restraint, and do not assume a court will revive an expired covenant. [^van-dyck-moot][^scott-tolling-backdrop] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Connecticut question. No identified statute or appellate decision endorses automatic extension; the identified authority treated a request for an injunction as moot once the covenant period had run, and any extension clause still has to survive the same reasonableness test as the underlying restraint. Draft it as a separate, breach-tied, bounded restraint, and do not assume a court will revive an expired covenant. [^van-dyck-moot][^scott-tolling-backdrop] [#address-tolling-during-breach]
 
 ## Remedies {#remedies}
 

@@ -155,7 +155,7 @@ The statute by its terms governs covenants by an employee or agent. A covenant g
 
 ## Can an out-of-state choice-of-law clause avoid Wisconsin's non-compete rules? {#choice-of-law}
 
-**Short answer.** Generally no. Wisconsin courts refuse to enforce a choice-of-law clause that would apply another state's more permissive covenant law in place of § 103.465, because doing so would violate Wisconsin's fundamental public policy. *Beilfuss v. Huffy Corp.* refused to apply Ohio law that permitted severability, and *Bush v. National School Studios* identified laws prohibiting covenants not to compete as the kind of fundamental policy that overrides a contractual choice of law [^q9-beilfuss][^q9-bush].
+**Short answer.** Generally no. Wisconsin courts refuse to enforce a choice-of-law clause that would apply another state's more permissive covenant law in place of § 103.465, because doing so would violate Wisconsin's fundamental public policy. *Beilfuss v. Huffy Corp.* refused to apply Ohio law that permitted severability [^q9-beilfuss], and *Bush v. National School Studios* identified laws prohibiting covenants not to compete as the kind of fundamental policy that overrides a contractual choice of law [^q9-bush].
 
 A common strategy is to draft the agreement under the law of a state friendlier to non-competes. Wisconsin courts police that strategy when the covenant would be applied to Wisconsin work.
 
@@ -168,7 +168,7 @@ That public-policy override rests on the foundational choice-of-law analysis in 
 > [!NOTE]
 > **Practice note.**
 >
-> Do not assume a Delaware, Ohio, or other out-of-state choice-of-law clause will rescue a non-compete applied to Wisconsin employment. *Beilfuss* refused to enforce a choice-of-law clause that conflicted with § 103.465, relying on the fundamental-policy analysis of *Bush* [^q9-beilfuss][^q9-bush].
+> A Delaware, Ohio, or other out-of-state choice-of-law clause that selects more permissive covenant law for Wisconsin employment risks being held unenforceable, leaving the non-compete to be judged under § 103.465 [^q9-beilfuss].
 
 ## What remedies and litigation exposure apply to Wisconsin non-competes? {#remedies}
 
@@ -193,7 +193,7 @@ The statute does not displace a contractual attorney-fee clause — common in no
 > [!NOTE]
 > **Practice note.**
 >
-> A competitor that hires away an employee bound by a Wisconsin non-compete can face a tortious-interference claim with disgorgement exposure under *Frey Construction*, while an employee fired for refusing to sign cannot rely on a wrongful-discharge theory under *Tatge* — so weigh the covenant's enforceability, not just the firing, before acting. Price in fee exposure too: § 814.045 anchors a fee award to a three-times-damages reasonableness presumption while still honoring a contractual fee clause [^q10-frey][^q10-tatge][^q10-fees-presumption][^q10-fees-agreement].
+> A competitor that hires away an employee bound by a Wisconsin non-compete can face a tortious-interference claim with disgorgement exposure under *Frey Construction* [^q10-frey-hiring][^q10-frey], while an employee fired for refusing to sign cannot rely on a wrongful-discharge theory under *Tatge* [^q10-tatge]. A covenant without an attorney-fee clause forgoes the presumption in § 814.045 that an agreement for attorney fees is reasonable [^q10-fees-agreement].
 
 ## What recent legislation and industry-specific rules affect Wisconsin non-competes? {#legislation}
 
@@ -272,6 +272,8 @@ A trade-secret claim does not depend on a signed covenant and is not subject to 
 [^q10-tatge]: **Tatge v. Chambers & Owen, Inc.** — "We also hold that a contract cause of action for wrongful discharge may not be maintained under Brockmeyer where an at-will employee is terminated for failing to sign a non-disclosure/non-compete agreement." *Tatge v. Chambers & Owen, Inc., 219 Wis. 2d 99, 579 N.W.2d 217 (1998).* <https://www.courtlistener.com/opinion/2053665/tatge-v-chambers-owen-inc/#:~:text=We%20also%20hold%20that%20a,to%20sign%20a%20non%2Ddisclosure%2Fnon%2Dcompete%20agreement.>
 
 [^q10-fees-agreement]: **Wis. Stat. § 814.045** — "This section does not abrogate the rights of persons to enter into an agreement for attorney fees, and the court shall presume that such an agreement is reasonable." *Wis. Stat. § 814.045(3).* <https://docs.legis.wisconsin.gov/statutes/statutes/814/i/045>
+
+[^q10-frey-hiring]: **Frey Construction & Home Improvement, LLC v. Hasheider Roofing & Siding, Ltd.** — "The allegations stem from Hasheider’s hiring one of Frey’s former employees, Anthony Bauernhuber, resulting in Frey’s claim that No. 2023AP67 Hasheider tortiously interfered with a ‘Noncompetition and Nondisclosure Agreement’ (‘noncompete agreement’) between Frey and Bauernhuber." *Frey Construction & Home Improvement, LLC v. Hasheider Roofing & Siding, Ltd., 2025 WI App 4.* <https://www.courtlistener.com/opinion/10293559/frey-construction-home-improvement-llc-v-hasheider-roofing-siding/#:~:text=The%20allegations%20stem%20from%20Hasheider%E2%80%99s,agreement%E2%80%9D)%20between%20Frey%20and%20Bauernhuber.>
 
 [^q11-ab567]: **2025 Wisconsin Assembly Bill 567** — "This bill makes most such covenants illegal, void, and unenforceable after the termination of employment or agency." *2025 Wisconsin Assembly Bill 567 (failed to pass, Mar. 23, 2026).* <https://docs.legis.wisconsin.gov/2025/related/proposals/ab567>
 

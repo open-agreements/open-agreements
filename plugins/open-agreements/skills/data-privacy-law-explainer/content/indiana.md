@@ -2,7 +2,7 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/indiana · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/indiana · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Indiana Consumer Privacy Law (INCDPA)[^about]
 
@@ -30,7 +30,7 @@ The Indiana Consumer Data Protection Act, effective January 1, 2026, gives India
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus majority-data-sale) threshold in Indiana, the INCDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with a permanent 30-day cure period and no consumer lawsuits. Its broad entity-level exemptions (nonprofits, HIPAA entities, higher education, utilities) keep many organizations out entirely. |
-| **Main law** | Ind. Code §§ 24-15 et seq. (Indiana Consumer Data Protection Act), effective January 1, 2026 |
+| **Main law** | Ind. Code § 24-15-1-1(a). |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Indiana (or targeting residents) that control or process the data of 100,000+ Indiana consumers a year, or 25,000+ while deriving over 50% of gross revenue from selling data — no revenue floor, and entity-level exemptions for nonprofits, HIPAA covered entities, higher education, GLBA institutions, and public utilities |
 | **Can consumers sue?** | No |

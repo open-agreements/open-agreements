@@ -1,5 +1,15 @@
 # Us Update Log
 
+## 2026-09-27
+* **Update**: Washington: ESHB 1155 notice deadline and 2027 changes; say Washington State (#2886, #2880) (#2898) (933e73b)
+
+## 2026-09-26
+* **Update**: content(wage-and-hour): keep 2027 Colorado farm overtime out of the Main law column (2884034)
+
+## 2026-09-25
+* **Update**: content(wage-and-hour): cite Texas Labor Code § 61.019 and state the late-pay penalties exactly (07cc614)
+* **Update**: content(wage-and-hour): link Main law or case to source cards (d97dc51)
+
 ## 2026-08-17
 * **Update**: content(wage-and-hour): Arizona wage-and-hour guide (pipeline-verified, 75 source-cards) (#2191) (0760040)
 * **Update**: content(wa): Washington wage-and-hour practice note (Parallel Ultra pipeline) (#2190) (9eabb41)

@@ -2,7 +2,7 @@
 jurisdiction: "Kentucky"
 slug: kentucky
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kentucky · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kentucky · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Kentucky Consumer Privacy Law (KCDPA)[^about]
 
@@ -30,7 +30,7 @@ The Kentucky Consumer Data Protection Act, effective January 1, 2026, gives Kent
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus majority-data-sale) threshold in Kentucky, the KCDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with a permanent 30-day cure period and no consumer lawsuits. |
-| **Main law** | KRS 367.3611 to 367.3629 (Kentucky Consumer Data Protection Act), effective January 1, 2026 |
+| **Main law** | KRS 367.3613(1). |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Kentucky (or targeting residents) that control or process the data of 100,000+ consumers a year, or 25,000+ while deriving over 50% of gross revenue from selling data — no revenue floor; nonprofits and higher-education institutions exempt |
 | **Can consumers sue?** | No |

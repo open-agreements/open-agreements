@@ -1131,7 +1131,7 @@
         "sectionId": "tolling-during-breach",
         "itemNumber": "7.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-tolling-during-breach",
-        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as unsettled Virginia law rather than a standard remedy. No staged Virginia authority decides tolling, and the backdrop cuts against it: covenants are strictly construed as restraints of trade, and a clause that can stretch the restricted period indefinitely hands the worker a ready-made overbreadth argument.",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as unsettled Virginia law rather than a standard remedy. No identified Virginia authority decides tolling, and the backdrop cuts against it: covenants are strictly construed as restraints of trade, and a clause that can stretch the restricted period indefinitely hands the worker a ready-made overbreadth argument.",
         "variants": [],
         "sources": [
           {
@@ -1482,7 +1482,7 @@
         "sectionId": "timing-and-execution-acknowledgements",
         "itemNumber": "15.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#acknowledge-timing",
-        "requirementGuidance": "Document the signing date relative to the start of employment and what consideration moved — Virginia's staged authorities do not settle whether continued employment alone suffices for a mid-employment covenant, so a clean record is the cheap hedge. For agreements entered into, amended, or renewed on or after July 1, 2026, the acknowledgement should also capture any monetary compensation disclosed up front, because that disclosed compensation is what keeps the covenant alive after a termination without cause.",
+        "requirementGuidance": "Document the signing date relative to the start of employment and what consideration moved — Virginia's identified authorities do not settle whether continued employment alone suffices for a mid-employment covenant, so a clean record is the cheap hedge. For agreements entered into, amended, or renewed on or after July 1, 2026, the acknowledgement should also capture any monetary compensation disclosed up front, because that disclosed compensation is what keeps the covenant alive after a termination without cause.",
         "variants": [],
         "sources": [
           {
@@ -1548,7 +1548,7 @@
         "sectionId": "governing-law-venue-dispute-process",
         "itemNumber": "18.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#specify-governing-law-and-venue",
-        "requirementGuidance": "The clause should name governing law, venue, and dispute process. For a Virginia workforce, name Virginia: the staged authorities identify no statutory override of a foreign choice-of-law clause, but a selection designed to sidestep the low-wage ban for workers living and working in Virginia invites a public-policy challenge and signals a form that was never localized.",
+        "requirementGuidance": "The clause should name governing law, venue, and dispute process. For a Virginia workforce, name Virginia: the identified authorities identify no statutory override of a foreign choice-of-law clause, but a selection designed to sidestep the low-wage ban for workers living and working in Virginia invites a public-policy challenge and signals a form that was never localized.",
         "variants": [],
         "sources": []
       },

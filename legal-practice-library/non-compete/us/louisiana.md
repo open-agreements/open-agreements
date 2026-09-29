@@ -94,7 +94,7 @@ The statute's employee exception applies to a person who *is employed* by the em
 
 "Because Clapp was not employed by Rouses when he signed the agreement, it is unenforceable under Louisiana law."[^rouses-prospective]
 
-A later Louisiana First Circuit decision, *Arthur J. Gallagher & Co. v. Annison*, distinguished *Rouses* and supplied a drafting fix. There the employees signed before starting, but each agreement fixed an effective date equal to the employee's first day of work [^annison-effective-date].
+A later Louisiana First Circuit decision, *Arthur J. Gallagher & Co. v. Annison* [^annison-distinguishes-rouses], distinguished *Rouses* [^rouses-prospective] and supplied a drafting fix. There the employees signed before starting, but each agreement fixed an effective date equal to the employee's first day of work [^annison-effective-date].
 
 "But Annison and Cates expressly agreed with Gallagher that the effective date of their employment agreements was the date each commenced their respective employment."[^annison-effective-date]
 
@@ -230,6 +230,8 @@ A confidentiality or non-disclosure agreement is not subject to the parish-namin
 [^rouses-prospective]: **Rouses Enterprises, L.L.C. v. Clapp** — "Because Clapp was not employed by Rouses when he signed the agreement, it is unenforceable under Louisiana law." *Rouses Enters., L.L.C. v. Clapp, No. 21-30293 (5th Cir. Mar. 8, 2022).* <https://www.ca5.uscourts.gov/opinions/unpub/21/21-30293.0.pdf>
 
 [^annison-effective-date]: **Arthur J. Gallagher & Co. v. Annison** — "But Annison and Cates expressly agreed with Gallagher that the effective date of their employment agreements was the date each commenced their respective employment." *Arthur J. Gallagher & Co. v. Annison, 391 So. 3d 1089 (La. Ct. App. 2024).* <https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html>
+
+[^annison-distinguishes-rouses]: **Arthur J. Gallagher & Co. v. Annison** — "We find Rouses, 2022 WL 686332, at *1, factually distinguishable." *Arthur J. Gallagher & Co. v. Annison, 391 So. 3d 1089 (La. Ct. App. 2024).* <https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html>
 
 [^cellone-continued-employment]: **Cellular One, Inc. v. Boyd** — "Defendants signed these agreements as a condition of their continued employment." *Cellular One, Inc. v. Boyd, 653 So. 2d 30 (La. Ct. App. 1995).* <https://www.courtlistener.com/opinion/1154814/cellular-one-inc-v-boyd/#:~:text=Defendants%20signed%20these%20agreements%20as,condition%20of%20their%20continued%20employment.>
 

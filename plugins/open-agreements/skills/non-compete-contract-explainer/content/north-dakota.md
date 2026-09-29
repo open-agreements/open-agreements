@@ -2,7 +2,7 @@
 jurisdiction: "North Dakota"
 slug: north-dakota
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-dakota · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-dakota · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Dakota[^about]
 
@@ -30,7 +30,7 @@ North Dakota voids employee non-competes under N.D. Cent. Code § 9-08-06, one o
 | --- | --- |
 | **Are non-competes enforceable?** | Banned |
 | **Bottom line** | North Dakota voids employee non-competes by statute, with exceptions only for sale-of-goodwill and owner dissolution or dissociation covenants. |
-| **Main law or case** | N.D. Cent. Code § 9-08-06 |
+| **Main law or case** | N.D. Cent. Code § 9-08-06. |
 | **Main exceptions** | Sale of business goodwill; owner dissolution/dissociation; narrow employee anti-raiding non-solicits (Warner); customer non-solicits void |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |
@@ -62,7 +62,7 @@ A covenant inside an exception is not automatically enforceable. The exception k
 
 **Short answer.** Usually no for employee non-competes. Section 9-08-06 makes the restraint to that extent void[^north-dakota-red-pencil-text], so courts strike the invalid restraint rather than save it through a general reasonableness rewrite.
 
-There is an important sale-of-business nuance. Older goodwill cases such as *Igoe*, *Hawkins*, and *Earthworks* allowed partial enforcement where the covenant fit the statutory exception but exceeded the permitted territory. That severability history is not a license to draft an employee non-compete and ask a court to make it reasonable later [^hawkins-sale-covenant-severability][^warner-replacement-clause-void].
+There is an important sale-of-business nuance. Older goodwill cases allowed partial enforcement where the covenant fit the statutory exception but exceeded the permitted territory. *Hawkins* enforced an overbroad sale-of-business covenant in the one county where the purchased business was located and conducted [^hawkins-sale-covenant-severability], and *Earthworks* approved a trial court's limiting a statewide covenant to a single county [^earthworks-county-limit]. That severability history is not a license to draft an employee non-compete and ask a court to make it reasonable later [^hawkins-sale-covenant-severability][^warner-replacement-clause-void].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -97,7 +97,7 @@ North Dakota's jurisdiction-by-agreement statute also gives a court room to refu
 
 **Short answer.** A narrow anti-raiding covenant can be enforceable. *Warner* upheld the possibility of a clause barring a former agent from soliciting or influencing another employee to leave for the new agency [^warner-employee-nonsolicit-not-void].
 
-That answer is narrower than it sounds. The clause in *Warner* targeted solicitation or influence of employees, not competition for customers. *Pruco* read *Warner* the same way but denied preliminary relief on the facts, emphasizing the lack of clear solicitation evidence [^pruco-no-clear-solicitation].
+That answer is narrower than it sounds. The clause in *Warner* targeted solicitation or influence of employees, not competition for customers. *Pruco* read the *Warner* holding [^warner-employee-nonsolicit-not-void] the same way [^pruco-reads-warner] but denied preliminary relief on the facts, emphasizing the lack of clear solicitation evidence [^pruco-no-clear-solicitation].
 
 North Dakota also recognizes a separate duty during employment. An employee may prepare to leave, but cannot secretly solicit the employer's clients or business for the employee's own account while still employed [^biever-during-employment-solicitation].
 
@@ -164,6 +164,8 @@ Employers also can enforce ordinary loyalty duties while employment continues. S
 
 [^hawkins-sale-covenant-severability]: **Hawkins Chemical, Inc. v. McNea** — "Because the property and business purchased from Saunders and McNea were located and conducted in Ward County, we hold the non-competition agreement to be enforceable in that county." *Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982).* <https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/#:~:text=Because%20the%20property%20and%20business,be%20enforceable%20in%20that%20county.>
 
+[^earthworks-county-limit]: **Earthworks, Inc. v. Sehn** — "This non-competition agreement, in violation of NDCC 9-08-06(1), stated its geographical area to encompass the ‘state of North Dakota.’ With ample precedent, the trial court correctly limited the valid area of the non-competition covenant to Burleigh County." *Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 494 (N.D. 1996).* <https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=This%20non%2Dcompetition%20agreement%2C%20in%20violation,non%2Dcompetition%20covenant%20to%20Burleigh%20County.>
+
 [^warner-replacement-clause-void]: **Warner & Co. v. Solberg** — "These limitations constitute a restraint of trade and therefore the agreement is ‘to that extent void.’" *Warner & Co. v. Solberg, 2001 ND 156, ¶ 24, 634 N.W.2d 65.* <https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=These%20limitations%20constitute%20a%20restraint,is%20%E2%80%9Cto%20that%20extent%20void.%E2%80%9D>
 
 [^osborne-choice-forum-unenforceable]: **Osborne v. Brown & Saenger, Inc.** — "Simply put, one may not contract for application of another state’s law or forum if the natural result is to allow enforcement of a non-compete agreement in violation of North Dakota’s longstanding and strong public policy against non-compete agreements." *Osborne v. Brown & Saenger, Inc., 2017 ND 288, ¶ 16, 904 N.W.2d 34.* <https://www.courtlistener.com/opinion/4449595/osborne-v-brown-saenger-inc/#:~:text=Simply%20put%2C%20one%20may%20not,public%20policy%20against%20non%2Dcompete%20agreements.>
@@ -175,6 +177,8 @@ Employers also can enforce ordinary loyalty duties while employment continues. S
 [^warner-trade-secret-rationale]: **Warner & Co. v. Solberg** — "Because of the plain language of the statute, the history of legislation in North Dakota concerning this issue, and because North Dakota has enacted trade-secrets legislation, we decline to do so." *Warner & Co. v. Solberg, 2001 ND 156, ¶ 18, 634 N.W.2d 65.* <https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=Because%20of%20the%20plain%20language,we%20decline%20to%20do%20so.>
 
 [^warner-employee-nonsolicit-not-void]: **Warner & Co. v. Solberg** — "This prohibition is narrowly drawn to penalize only Solberg’s actions of soliciting or influencing an employee to leave Warner and come to work for Vaaler and is not void as a restraint of trade." *Warner & Co. v. Solberg, 2001 ND 156, ¶ 25, 634 N.W.2d 65.* <https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=This%20prohibition%20is%20narrowly%20drawn,as%20a%20restraint%20of%20trade.>
+
+[^pruco-reads-warner]: **Pruco Securities Corp. v. Montgomery** — "However, the North Dakota Supreme Court in Warner and Co. v. Solberg, 634 N.W.2d 65, 73 (N.D.2001), held that a provision which prohibits a former insurance agent from soliciting or influencing an employee to leave and come to work for him at a new insurance agency was not void as a restraint of trade." *Pruco Sec. Corp. v. Montgomery, 264 F. Supp. 2d 862, 869 (D.N.D. 2003).* <https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/#:~:text=However%2C%20the%20North%20Dakota%20Supreme,as%20a%20restraint%20of%20trade.>
 
 [^pruco-no-clear-solicitation]: **Pruco Securities Corp. v. Montgomery** — "Simply stated, the record at this stage is devoid of any competent evidence that Montgomery improperly solicited Prudential agents to follow him to Minnesota Life." *Pruco Sec. Corp. v. Montgomery, 264 F. Supp. 2d 862, 868 (D.N.D. 2003).* <https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/#:~:text=Simply%20stated%2C%20the%20record%20at,follow%20him%20to%20Minnesota%20Life.>
 

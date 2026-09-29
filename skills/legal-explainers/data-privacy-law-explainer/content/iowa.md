@@ -2,7 +2,7 @@
 jurisdiction: "Iowa"
 slug: iowa
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-05"
 human_reviewed_at: null
 next_review_due: "2026-12-02"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/iowa · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/iowa · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Iowa Consumer Privacy Law (ICDPA)[^about]
 
@@ -30,7 +30,7 @@ The Iowa Consumer Data Protection Act gives Iowa consumers rights over their per
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus majority-data-sale) threshold in Iowa, the ICDPA requires a privacy notice, processor contracts, and notice plus an opportunity to opt out before processing sensitive data — but not opt-in consent or a universal opt-out signal — enforced by the Attorney General with a 90-day cure period and no consumer lawsuits. |
-| **Main law** | Iowa Code §§ 715D.1 et seq. (Iowa Consumer Data Protection Act) |
+| **Main law** | Iowa Code § 715D.2(1). |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons conducting business in Iowa (or targeting residents) that, in a calendar year, control or process the data of 100,000+ consumers, or 25,000+ while deriving over 50% of gross revenue from selling data — no revenue floor; nonprofits, government, GLBA and HIPAA entities, and higher-education institutions exempt |
 | **Can consumers sue?** | No |

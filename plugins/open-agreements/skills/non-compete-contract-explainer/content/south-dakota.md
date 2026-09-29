@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-07-01"
 human_reviewed_at: null
 next_review_due: "2026-12-28"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Dakota[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of South Dakota non-compete law under SDCL chapte
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | South Dakota voids restraints on a lawful profession, trade, or business unless they fit a narrowly construed statutory exception, and SDCL 53-9-11 permits an employee non-compete only within its two-year, geographic, existing-customer, and like-business limits. |
-| **Main law or case** | S.D. Codified Laws §§ 53-9-8 and 53-9-11 |
+| **Main law or case** | S.D. Codified Laws § 53-9-8. S.D. Codified Laws § 53-9-11. |
 | **Main exceptions** | Sale-of-goodwill (§ 53-9-9); partnership dissolution (§ 53-9-10); captive insurance agent contractors (§ 53-9-12); healthcare practitioner restrictions voidable for contracts on/after July 1, 2023; owner covenants on transfer of an ownership interest in a business entity, up to three years (HB 1180, effective July 1, 2026) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | No |

@@ -2,7 +2,7 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Montana[^about]
 
@@ -30,7 +30,7 @@ Montana starts from § 28-2-703's restraint-of-trade rule, but the Dobbins parti
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Montana's restraint-of-trade statute voids absolute restraints, but reasonable partial restraints survive under the Dobbins rule of reason, and covered health-care provider non-competes are now banned. |
-| **Main law or case** | Mont. Code Ann. § 28-2-703 (Dobbins, DeGuire & Tucker, P.C. v. Rutherford, 708 P.2d 577 (Mont. 1985)) |
+| **Main law or case** | Mont. Code Ann. § 28-2-703. Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson, 218 Mont. 392, 708 P.2d 577 (1985). Mont. Code Ann. § 28-2-724(1). |
 | **Main exceptions** | Health-care provider ban (§ 28-2-724, HB 198/HB 620, all physicians Jan 1, 2026); sale-of-goodwill (§ 28-2-704); partnership dissolution (§ 28-2-705); employer-initiated termination usually defeats enforcement (Wrigg) |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |
@@ -136,7 +136,7 @@ The 2025 amendments matter for timing. HB 198 added naturopathic physicians, RNs
 > [!CAUTION]
 > **Drafting note.**
 >
-> For a covered provider, § 28-2-724 reaches practice restrictions and restrictions on treating, advising, consulting with, establishing relationships with, or soliciting covered patients alike, so a non-compete recast as a patient non-solicit is void to the same extent as the practice ban it replaces [^montana-healthcare-practice-ban]. Coverage is phased by when the contract was made or renewed: the behavioral-health classes predate the 2025 amendments, HB 198 added naturopathic physicians, registered professional nurses, advanced practice registered nurses, and physician assistants for contracts made or renewed on or after April 16, 2025, and HB 620 added all physicians licensed under Title 37, chapter 3 for contracts made or renewed on or after January 1, 2026, so a renewal or amendment can pull an older agreement into the current regime by its made-or-renewed date [^hb198-effective][^hb620-effective]. The two statutory exceptions are narrow: a covenant tied to the sale and purchase of a practice, and a decreasing-payback repayment provision written for physicians only, which is not an opening for the other covered classes [^montana-healthcare-exceptions].
+> A covered provider's agreement that recasts a practice non-compete as a patient non-solicit or no-treatment clause falls under § 28-2-724 to the same extent as the practice restriction it replaces [^montana-healthcare-practice-ban]. An older agreement renewed on or after an amendment's applicability date (April 16, 2025 for HB 198; January 1, 2026 for HB 620) risks being brought under the expanded covered-provider list [^hb198-effective][^hb620-effective].
 
 ## What trade-secret and severance alternatives remain in Montana? {#trade-secrets-severance}
 

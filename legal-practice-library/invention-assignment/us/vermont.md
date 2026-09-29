@@ -89,7 +89,7 @@ What Vermont does supply is a well-developed posture toward restraints on compet
 
 "When this Court is asked to enforce restrictive covenants against competitive employment, we will proceed with caution, since such restraints ‘run counter to that public policy favoring the right of individuals to freely engage in desirable commercial activity.’"[^roys-proceed-with-caution]
 
-Caution is not hostility. In *Vermont Electric Supply Co. v. Andrus*, the Vermont Supreme Court — restating tests that trace to *Dyar Sales & Machinery Co. v. Bleiler* (1934) — framed enforcement as the default and put the burden of defeating a restraint on the employee, and *Andrus* itself upheld a five-year covenant on its facts [^andrus-enforcement-test].
+Caution is not hostility. In *Vermont Electric Supply Co. v. Andrus*, the Vermont Supreme Court framed enforcement as the default and put the burden of defeating a restraint on the employee [^andrus-enforcement-test], and the court itself affirmed injunctive relief enforcing a five-year covenant on its facts [^andrus-five-year-term][^andrus-injunction-affirmed].
 
 "enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed. The burden of establishing such facts is on the employee."[^andrus-enforcement-test]
 
@@ -101,24 +101,19 @@ The current framework is the Restatement formulation adopted in *Systems and Sof
 
 "This argument fails because it is based on a faulty premise — that noncompetition agreements may be enforced to protect only trade secrets or confidential customer information."[^barnes-protectable-interest]
 
-If a Vermont court found a holdover clause overbroad, the likely — but not guaranteed — outcome is trimming rather than total invalidation. The Second Circuit predicted in *A.N. Deringer, Inc. v. Strough* that Vermont would enforce a defective restrictive covenant to the limit of its validity, and the Vermont Supreme Court in *Summits 7, Inc. v. Kelly* later signaled the same approach [^deringer-partial-enforcement][^summits7-partial-enforcement].
+If a Vermont court found a holdover clause overbroad, the likely — but not guaranteed — outcome is trimming rather than total invalidation. The Second Circuit predicted in *A.N. Deringer, Inc. v. Strough* that Vermont would enforce a defective restrictive covenant to the limit of its validity [^deringer-partial-enforcement], and the Vermont Supreme Court in *Summits 7, Inc. v. Kelly* later signaled the same approach [^summits7-partial-enforcement].
 
 "Thus, we conclude that Vermont would permit enforcement of a defective restrictive covenant to the limit of its validity."[^deringer-partial-enforcement]
 
 "the court may enforce the agreement to the extent that it is reasonable."[^summits7-partial-enforcement]
 
-Neither statement is a square Vermont Supreme Court holding adopting reformation — *Deringer* is a federal court's prediction of Vermont law, and the *Summits 7* passage was not necessary to the judgment — so an overbroad trailing clause still carries real total-invalidation risk.
+Neither statement is a square Vermont Supreme Court holding adopting reformation — *Deringer* is a federal court's prediction of Vermont law [^deringer-partial-enforcement], and *Summits 7* made its statement while declining to reach the employee's geographic-scope challenge, because she had taken a job within a reasonably restricted area, without deciding how far an overbroad covenant could be reformed [^summits7-scope-not-reached] — so an overbroad trailing clause still carries real total-invalidation risk.
 
 One wrinkle cuts in the employer's favor. Vermont treats mid-employment consideration generously: *Summits 7* holds that continued at-will employment alone supports a restrictive covenant signed after hiring, which makes rolling an invention-assignment agreement out to existing Vermont employees easier than in states that demand fresh consideration [^summits7-consideration].
 
 "we agree with the superior court, the majority of other courts, and the recent Restatement draft that continued employment alone is sufficient consideration to support a covenant not to compete entered into during an at-will employment relationship."[^summits7-consideration]
 
-The safe reading is that a modest holdover clause — short, tied to the employer's legitimate interests, and no broader than needed — has a reasonable prospect of enforcement under the *Andrus*/*Barnes* line, while an aggressive one is at meaningful risk, and the invention-specific application of all of it remains undecided.
-
-> [!CAUTION]
-> **Drafting note.**
->
-> Vermont's support for trimming an overbroad restraint rests on a federal court's prediction and a Vermont Supreme Court statement that was not necessary to the judgment, not on a square reformation holding [^deringer-partial-enforcement][^summits7-partial-enforcement]. Draft a trailing invention-assignment clause so it never needs saving: keep the trailing period short, tie it to inventions derived from the employer's confidential information or the employee's actual work, include an own-time carve-out even though no Vermont statute requires one, use present-assignment (*hereby assigns*) wording so title passes automatically, and add express severability and reform-to-reasonable language so a court inclined to trim has a contractual hook. A clause broad enough to restrain the former employee's ordinary work will be measured against the Restatement test — no greater than the employer's legitimate interest needs — and an overbroad one still carries real total-invalidation risk [^barnes-restatement-test].
+The safe reading is that a modest holdover clause — short, tied to the employer's legitimate interests, and no broader than needed — has a reasonable prospect of enforcement under the line running from *Andrus* [^andrus-enforcement-test] to *Barnes* [^barnes-restatement-test], while an aggressive one is at meaningful risk, and the invention-specific application of all of it remains undecided.
 
 > [!NOTE]
 > **Practice note.**
@@ -150,6 +145,10 @@ The safe reading is that a modest holdover clause — short, tied to the employe
 
 [^andrus-enforcement-test]: **Vermont Electric Supply Co. v. Andrus** — "enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed. The burden of establishing such facts is on the employee." *Vermont Electric Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).* <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=enforcement%20will%20be%20ordered%20unless,facts%20is%20on%20the%20employee.>
 
+[^andrus-five-year-term]: **Vermont Electric Supply Co. v. Andrus** — "After a year, he was asked to sign an agreement not to compete in Rutland County, in the business of selling, designing, laying out or displaying kitchens or kitchen cabinets for a period of five years after his employment with the plaintiff ceased." *Vermont Electric Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).* <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=After%20a%20year%2C%20he%20was,employment%20with%20the%20plaintiff%20ceased.>
+
+[^andrus-injunction-affirmed]: **Vermont Electric Supply Co. v. Andrus** — "The judgment awarding injunctive relief is affirmed and the cause is remanded for the computation of damages." *Vermont Electric Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).* <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=The%20judgment%20awarding%20injunctive%20relief,for%20the%20computation%20of%20damages.>
+
 [^barnes-restatement-test]: **Systems and Software, Inc. v. Barnes** — "is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public." *Systems & Software, Inc. v. Barnes, 2005 VT 95, 178 Vt. 389, 886 A.2d 762.* <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=is%20unreasonably%20in%20restraint%20of,likely%20injury%20to%20the%20public.>
 
 [^barnes-protectable-interest]: **Systems and Software, Inc. v. Barnes** — "This argument fails because it is based on a faulty premise — that noncompetition agreements may be enforced to protect only trade secrets or confidential customer information." *Systems & Software, Inc. v. Barnes, 2005 VT 95, 178 Vt. 389, 886 A.2d 762.* <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=This%20argument%20fails%20because%20it,secrets%20or%20confidential%20customer%20information.>
@@ -157,6 +156,8 @@ The safe reading is that a modest holdover clause — short, tied to the employe
 [^deringer-partial-enforcement]: **A.N. Deringer, Inc. v. Strough** — "Thus, we conclude that Vermont would permit enforcement of a defective restrictive covenant to the limit of its validity." *A.N. Deringer, Inc. v. Strough, 103 F.3d 243 (2d Cir. 1996).* <https://www.courtlistener.com/opinion/732308/an-deringer-inc-v-john-m-strough-and-fritz-companies-inc/#:~:text=Thus%2C%20we%20conclude%20that%20Vermont,the%20limit%20of%20its%20validity.>
 
 [^summits7-partial-enforcement]: **Summits 7, Inc. v. Kelly** — "the court may enforce the agreement to the extent that it is reasonable." *Summits 7, Inc. v. Kelly, 2005 VT 97, 178 Vt. 396, 886 A.2d 365.* <https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/#:~:text=the%20court%20may%20enforce%20the,extent%20that%20it%20is%20reasonable.>
+
+[^summits7-scope-not-reached]: **Summits 7, Inc. v. Kelly** — "Lasker does argue that the superior court erred by not addressing whether the geographic scope of the agreement was unreasonably broad, but, as we explain later, we need not consider this issue because Lasker plainly sought and obtained employment within a reasonably restricted geographic area, and the court may enforce the agreement to the extent that it is reasonable." *Summits 7, Inc. v. Kelly, 2005 VT 97, 178 Vt. 396, 886 A.2d 365.* <https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/#:~:text=Lasker%20does%20argue%20that%20the,extent%20that%20it%20is%20reasonable.>
 
 [^summits7-consideration]: **Summits 7, Inc. v. Kelly** — "we agree with the superior court, the majority of other courts, and the recent Restatement draft that continued employment alone is sufficient consideration to support a covenant not to compete entered into during an at-will employment relationship." *Summits 7, Inc. v. Kelly, 2005 VT 97, 178 Vt. 396, 886 A.2d 365.* <https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/#:~:text=we%20agree%20with%20the%20superior%20court%2C,during%20an%20at%2Dwill%20employment%20relationship.>
 

@@ -23,6 +23,33 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### reyes-ramis-cpa-group-p-s-c-v-serra-torres-el-juez-asociado-se-or-kolthoff-87548b2a {#reyes-ramis-cpa-group-p-s-c-v-serra-torres-el-juez-asociado-se-or-kolthoff-87548b2a}
+
+> El Juez Asociado señor Kolthoff Caraballo emitió Opinión de Conformidad a la cual se unieron los Jueces Asociados señores Martínez Torres, Rivera García y Feliberti Cintrón.
+
+- supports: `scope-territory-clients`
+- source_cards: `rr-concurrence`
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
+- link_to_source: <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
+### reyes-ramis-cpa-group-p-s-c-v-serra-torres-en-el-presente-caso-concluimos-a6bd9a6d {#reyes-ramis-cpa-group-p-s-c-v-serra-torres-en-el-presente-caso-concluimos-a6bd9a6d}
+
+> En el presente caso , concluimos que la cláusula de restricción que contrató la CPA Liza Serra Torres de no atender por un término de 16 meses la clientela que Reyes Ramis CPA Group, P.S.C. posee y desarrolló por su cuenta, es válida.
+
+- supports: `scope-territory-clients`
+- source_cards: `rr-judgment`
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
+- link_to_source: <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
+### reyes-ramis-cpa-group-p-s-c-v-serra-torres-es-claro-que-arthur-young-supra-17b02884 {#reyes-ramis-cpa-group-p-s-c-v-serra-torres-es-claro-que-arthur-young-supra-17b02884}
+
+> Es claro que Arthur Young, supra, es un caso que se enmarca en una relación típica de patrono-empleado, en la que existe una clara disparidad entre las fuerzas para negociar al establecer la cláusula de no competencia.
+
+- supports: `scope-territory-clients`
+- source_cards: `rr-employment-frame`
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
+- link_to_source: <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
 ### reyes-ramis-cpa-group-p-s-c-v-serra-torres-no-obstante-es-importante-destacar-que-9024ce17 {#reyes-ramis-cpa-group-p-s-c-v-serra-torres-no-obstante-es-importante-destacar-que-9024ce17}
 
 > No obstante, es importante destacar que esta Curia no estableció como requisito constitutivo de un acuerdo de no competencia el que se limite geográficamente las restricciones impuestas y los clientes que estarán comprendidos.

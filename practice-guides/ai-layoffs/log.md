@@ -1,5 +1,8 @@
 # Ai Layoffs Update Log
 
+## 2026-09-26
+* **Update**: fix: replace public evidence workflow jargon and prevent recurrence (#2741) (5a7454b)
+
 ## 2026-06-20
 * **Update**: fix(content): firm-only sourcing triage — AI-layoff/WARN topics (cluster 2/5, refs #950) (#957) (539e66c)
 

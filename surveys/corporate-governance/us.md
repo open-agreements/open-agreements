@@ -30,7 +30,7 @@ Each row compares one jurisdiction across the survey columns:
 - `saleOfBusiness` — Sale-of-business covenants
 - `customerNonSolicit` — Customer non-solicits
 - `employeeNonSolicit` — Employee non-solicits
-- `futureEffective` — Future effective law
+- `futureEffective` — Upcoming changes
 
-| Jurisdiction | Are non-competes enforceable? | Summary | Main law or case | Main exceptions | When the ban took effect | Can a court narrow it? | Applies to contractors? | Restriction extended during a breach? | Maximum length set by law | Must the employer pay to enforce? | Advance notice required? | Pay or earnings threshold | Sale-of-business covenants | Customer non-solicits | Employee non-solicits | Future effective law |
+| Jurisdiction | Are non-competes enforceable? | Summary | Main law or case | Main exceptions | When the ban took effect | Can a court narrow it? | Applies to contractors? | Restriction extended during a breach? | Maximum length set by law | Must the employer pay to enforce? | Advance notice required? | Pay or earnings threshold | Sale-of-business covenants | Customer non-solicits | Employee non-solicits | Upcoming changes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

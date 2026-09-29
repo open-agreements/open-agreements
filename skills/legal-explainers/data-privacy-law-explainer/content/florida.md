@@ -2,7 +2,7 @@
 jurisdiction: "Florida"
 slug: florida
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/florida · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/florida · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Florida Consumer Privacy Law (FDBR & FIPA)[^about]
 
@@ -30,7 +30,7 @@ Florida's Digital Bill of Rights binds only billion-dollar big-tech controllers,
 | --- | --- |
 | **Law coverage** | Limited-scope law |
 | **Summary** | Florida's Digital Bill of Rights (effective July 1, 2024) imposes full data-rights duties only on billion-dollar big-tech controllers, but its no-threshold sensitive-data-sale consent rule and the Florida Information Protection Act's 30-day breach-notice duties reach virtually every business that handles Floridians' data. |
-| **Main law** | Florida Digital Bill of Rights, Fla. Stat. §§ 501.701–501.722, plus the Florida Information Protection Act (FIPA), Fla. Stat. § 501.171, and FDUTPA, Fla. Stat. §§ 501.201–501.213 |
+| **Main law** | Fla. Stat. § 501.703(1)–(2). Fla. Stat. § 501.171(4)(a). Fla. Stat. § 501.204(1). |
 | **Privacy policy required?** | Yes for FDBR controllers — § 501.711 fixes the contents, requires at least annual updates, and scripts exact word-for-word sale notices; for everyone else, FDUTPA and FTC Act § 5 make a policy that misstates actual practices a deceptive-practice risk |
 | **Who does it cover?** | The FDBR's full rights-and-notice core covers only for-profit controllers with over $1 billion in global revenue that also run a major online-ad business, a consumer smart-speaker voice-assistant service, or a 250,000-app store — but its sensitive-data-sale consent rule has no revenue threshold, and FIPA's security and breach duties reach essentially any business holding Floridians' personal information |
 | **Can consumers sue?** | Limited path |

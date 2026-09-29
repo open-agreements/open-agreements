@@ -2,7 +2,7 @@
 jurisdiction: "Washington"
 slug: washington
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,11 +17,11 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/washington · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/washington · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Washington Consumer Privacy Law (My Health My Data Act)[^about]
 
-Washington has no comprehensive consumer-privacy statute, but the My Health My Data Act (ch. 19.373 RCW) reaches biometrics, precise location, and health inferences across most consumer businesses — and a violation is a per se Consumer Protection Act violation that consumers can sue over.
+Washington State has no comprehensive consumer-privacy statute, but the My Health My Data Act (ch. 19.373 RCW) reaches biometrics, precise location, and health inferences across most consumer businesses — and a violation is a per se Consumer Protection Act violation that consumers can sue over.
 
 
 ## At a glance
@@ -29,8 +29,8 @@ Washington has no comprehensive consumer-privacy statute, but the My Health My D
 | Question | Washington |
 | --- | --- |
 | **Law coverage** | Specific data types only |
-| **Summary** | Washington never passed a comprehensive privacy act, but the My Health My Data Act functions like one for a wide swath of businesses — consumer health data includes biometrics, precise location, and inferences, every covered business needs a separate homepage-linked health-data privacy policy, selling that data requires a signed authorization, and violations carry class-action exposure through the Consumer Protection Act. |
-| **Main law** | My Health My Data Act, ch. 19.373 RCW (main regulated-entity duties operative March 31, 2024; small-business duties generally June 30, 2024; geofencing ban separately in force), alongside the breach-notification statute (ch. 19.255 RCW) and the biometric-identifier statute (ch. 19.375 RCW) — Washington has no comprehensive consumer-privacy act |
+| **Summary** | Washington never passed a comprehensive privacy act, but the My Health My Data Act functions like one for a wide swath of businesses — consumer health data includes biometrics, precise location, and inferences, every covered business needs a separate homepage-linked health-data privacy policy, selling that data requires a signed authorization, and violations carry class-action exposure through the Consumer Protection Act. Its main duties have applied since March 31, 2024, and small businesses' since June 30, 2024. |
+| **Main law** | No comprehensive consumer-privacy law; Wash. Rev. Code § 19.373.020(1)(a). Wash. Rev. Code § 19.255.010(1). Wash. Rev. Code § 19.373.080. Wash. Rev. Code § 19.375.020(1). |
 | **Privacy policy required?** | Yes — a dedicated consumer health data privacy policy with statutorily fixed contents and a prominently published homepage link (RCW 19.373.020); no Washington statute fixes the contents of a general privacy policy |
 | **Who does it cover?** | Any legal entity that conducts business in Washington or targets products or services to Washington consumers and determines how consumer health data is handled — a category that sweeps in biometrics, genetic data, precise location near health services, and health inferences derived from non-health data, so many non-health businesses are covered; small businesses generally had later dates, not an exemption |
 | **Can consumers sue?** | Yes |

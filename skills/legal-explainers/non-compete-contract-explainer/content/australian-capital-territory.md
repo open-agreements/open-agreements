@@ -2,7 +2,7 @@
 jurisdiction: "Australian Capital Territory, Australia"
 slug: australian-capital-territory
 countryCode: AU
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in the Australian Capital Territory[^about]
 
@@ -30,7 +30,7 @@ In the Australian Capital Territory a post-employment non-compete is enforceable
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | An Australian Capital Territory non-compete binds a former employee only so far as it is reasonable to protect a legitimate business interest; there is no statutory read-down power, so an overbroad clause cannot be rewritten — in the Territory's leading case a 24-month restraint on a general manager was upheld, while a parallel restraint failed entirely because an overbroad defined term was embedded in the operative clauses and could not be severed or read down. |
-| **Main law or case** | Common-law restraint of trade (no equivalent of the NSW Restraints of Trade Act 1976) |
+| **Main law or case** | Common-law restraint of trade governs; Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J). |
 | **Main exceptions** | Sale-of-business covenants are judged more leniently; a proposed federal ban would, if enacted, cover most employees earning under the Fair Work Act high-income threshold (with sale-of-business and above-threshold restraints reported to be excluded), but it is not yet law. |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Yes |
@@ -104,15 +104,15 @@ The analysis cuts both ways. In *Lindner v Murdock's Garage* the High Court held
 
 ## Do paid restraints, garden leave, and fresh consideration help in the Australian Capital Territory? {#garden-leave}
 
-**Short answer.** They can strengthen an employer's position, but they do not displace the reasonableness requirement, and no staged Territory authority decides a garden-leave clause as such. What the Territory's leading case does establish is that pay matters to scope: the amount the employee was being paid was treated as a factual issue relevant to the reasonableness of the restraint, because a higher salary may be more consistent with a broader restraint than a lower one [^steadfast-salary-gl].
+**Short answer.** They can strengthen an employer's position, but they do not displace the reasonableness requirement, and no identified Territory authority decides a garden-leave clause as such. What the Territory's leading case does establish is that pay matters to scope: the amount the employee was being paid was treated as a factual issue relevant to the reasonableness of the restraint, because a higher salary may be more consistent with a broader restraint than a lower one [^steadfast-salary-gl].
 
 *Steadfast* took the remuneration point seriously enough to look behind the contract. Part of the general manager's pay was routed through a purported contract with a relative, and Mossop J held that it would not be appropriate to assess the significant restraint period only against the salary stated in the written contract — the real, higher remuneration was the relevant figure [^steadfast-real-remuneration]. The logic runs in both directions: an employee who is genuinely well paid, or paid specifically for the restraint, gives the employer a stronger platform for a broader covenant, while a broad restraint on a modestly paid employee is harder to justify.
 
-Garden leave — keeping the employee employed and paid through a notice period — was not in issue in the staged authorities, so its treatment in the Territory should be regarded as untested. The orthodox approach would be to assess it within the same reasonableness framework as any other restraint, with the continuing pay weighing in the employer's favour rather than guaranteeing enforcement. For mid-employment restraints — covenants introduced after the employee is already on foot — the practical anchor is that validity is assessed at the time the contract containing the restraint is made [^steadfast-tested-at-contract-gl], so a restraint added later is judged on the circumstances then and needs its own consideration.
+Garden leave — keeping the employee employed and paid through a notice period — was not in issue in the identified authorities, so its treatment in the Territory should be regarded as untested. The orthodox approach would be to assess it within the same reasonableness framework as any other restraint, with the continuing pay weighing in the employer's favour rather than guaranteeing enforcement. For mid-employment restraints — covenants introduced after the employee is already on foot — the practical anchor is that validity is assessed at the time the contract containing the restraint is made [^steadfast-tested-at-contract-gl], so a restraint added later is judged on the circumstances then and needs its own consideration.
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus-eb], so an employer seeking to enforce already starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The staged Territory authorities do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled local rule.
+**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus-eb], so an employer seeking to enforce already starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The identified Territory authorities do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled local rule.
 
 The reasonableness analysis assumes a clause the employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus-eb]. Where the employer is the party in serious breach, a court may, applying the general common-law principle, treat the employee as released from the covenant; and in any event the equitable remedies an employer typically needs are discretionary and sensitive to the parties' conduct.
 
@@ -125,14 +125,14 @@ The reasonableness analysis assumes a clause the employer is entitled to rely on
 
 ## Does an Australian Capital Territory non-compete pause or extend if the employee breaches? {#tolling}
 
-**Short answer.** This is an open question, and an employer should not assume the clock stops. No staged Territory authority holds that a restraint period tolls — pauses and then resumes — while a former employee is in breach or while litigation runs. The validity of a restraint is assessed at the time the contract is made [^steadfast-tested-at-contract-tolling], which sits uneasily with a clause that purports to lengthen the restraint automatically depending on the employee's later conduct.
+**Short answer.** This is an open question, and an employer should not assume the clock stops. No identified Territory authority holds that a restraint period tolls — pauses and then resumes — while a former employee is in breach or while litigation runs. The validity of a restraint is assessed at the time the contract is made [^steadfast-tested-at-contract-tolling], which sits uneasily with a clause that purports to lengthen the restraint automatically depending on the employee's later conduct.
 
 The Territory's leading case is itself the best illustration of what happens instead. By the time *Steadfast* reached trial the restraint period had run out, and the claim for an injunction was not pressed because the period during which it might have operated had elapsed [^steadfast-injunction-elapsed]. The court did not extend or revive the restraint to compensate; it turned to money. Mossop J held that an account of profits was the most appropriate remedy because it most accurately responded to the wrongdoer's course of conduct and its consequences for the employer [^steadfast-account-remedy] — and ordered the competing vehicle to disgorge over $1.18 million in profits. In *Steadfast* itself, a breach that outlasted the restraint was answered by monetary relief rather than a longer restraint — the pattern an employer in that position should expect.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> No staged Australian Capital Territory authority validates tolling of the restraint period. Because validity is assessed at the time the contract is made, an automatic extension risks being treated as unreasonable [^steadfast-tested-at-contract-tolling]. In the Territory's leading case, the restraint period expired before trial and the injunction claim fell away; the court instead ordered an account of profits [^steadfast-injunction-elapsed][^steadfast-account-remedy]. The stated duration is therefore the period assessed at contracting, while a breach that outlasts it may give rise to damages or an account of profits.
+> No identified Australian Capital Territory authority validates tolling of the restraint period. Because validity is assessed at the time the contract is made, an automatic extension risks being treated as unreasonable [^steadfast-tested-at-contract-tolling]. In the Territory's leading case, the restraint period expired before trial and the injunction claim fell away; the court instead ordered an account of profits [^steadfast-injunction-elapsed][^steadfast-account-remedy]. The stated duration is therefore the period assessed at contracting, while a breach that outlasts it may give rise to damages or an account of profits.
 
 ## Do Australian Capital Territory restraint rules differ for contractors and business sales? {#contractors-and-sale}
 

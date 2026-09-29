@@ -2,7 +2,7 @@
 jurisdiction: "Oklahoma"
 slug: oklahoma
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/oklahoma · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/oklahoma · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Oklahoma Consumer Privacy Law (OKCDPA)[^about]
 
@@ -30,7 +30,7 @@ The Oklahoma Consumer Data Privacy Act (SB 546) takes effect January 1, 2027, br
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | The Oklahoma Consumer Data Privacy Act (SB 546) does not take effect until January 1, 2027, but the state's rewritten Security Breach Notification Act — Attorney General notice for breaches affecting 500 or more residents, biometric and credential data elements, and penalties keyed to reasonable safeguards — has applied since January 1, 2026, so breach readiness is due now and OKCDPA compliance next January. |
-| **Main law** | Oklahoma Consumer Data Privacy Act, 75A O.S. §§ 300–320 (SB 546, effective January 1, 2027); until then, the Security Breach Notification Act, 24 O.S. §§ 161–166 (as rewritten effective January 1, 2026) plus the Oklahoma Consumer Protection Act |
+| **Main law** | No comprehensive consumer-privacy law in force; 24 O.S. § 163(A). 15 O.S. § 752(13). |
 | **Privacy policy required?** | Yes from January 1, 2027 — a reasonably accessible and clear privacy notice with statutorily fixed contents, plus conspicuous opt-out disclosures for data sales and targeted advertising |
 | **Who does it cover?** | From 2027, controllers and processors doing business in Oklahoma (or targeting Oklahoma residents) that process personal data of 100,000+ consumers a year — or 25,000+ consumers while deriving over half of gross revenue from selling personal data; the breach act already covers any individual or entity owning, licensing, or maintaining computerized personal information, with duties depending on that role |
 | **Can consumers sue?** | Limited path |
@@ -39,7 +39,7 @@ The Oklahoma Consumer Data Privacy Act (SB 546) takes effect January 1, 2027, br
 | **Browser opt-out signals?** | Not required |
 | **Lawsuit detail** | No — the OKCDPA expressly bars private suits and the breach act is enforced by the Attorney General or district attorneys, but the Oklahoma Consumer Protection Act gives consumers a private damages action for deceptive practices |
 | **Who enforces it?** | Oklahoma Attorney General (exclusive under the OKCDPA; district attorneys share breach-act and consumer-protection enforcement) |
-| **Future effective law** | Oklahoma Consumer Data Privacy Act, effective 2027-01-01 (Law coverage: Comprehensive law; Privacy policy rule: Policy contents fixed by law; Consent for sensitive data?: Consent required first) — Current buckets stay on Oklahoma's breach-notification and consumer-protection baseline until the OKCDPA takes effect. |
+| **Upcoming changes** | Oklahoma Consumer Data Privacy Act [75A O.S. § 314(A) (SB 546, eff. Jan. 1, 2027).], effective 2027-01-01 (Law coverage: Comprehensive law; Privacy policy rule: Policy contents fixed by law; Consent for sensitive data?: Consent required first) — Current buckets stay on Oklahoma's breach-notification and consumer-protection baseline until the OKCDPA takes effect. |
 
 ## Which privacy laws apply to your business in Oklahoma — and when? {#which-privacy-laws-apply}
 
@@ -61,7 +61,7 @@ The statute then adds the familiar processor commitments — confidentiality for
 
 ## What rights do Oklahoma consumers get — and is there a universal opt-out? {#consumer-rights-and-opt-outs}
 
-**Short answer.** From January 1, 2027, Oklahoma consumers get the now-standard set: to confirm processing and access their personal data, to correct inaccuracies, to delete personal data provided by or obtained about them, to obtain a portable digital copy, and to opt out of processing for targeted advertising, the *sale* of personal data, or profiling that produces legal or similarly significant effects [^stat-301-rights]. There is no universal opt-out mechanism: the staged act contains no browser-level preference-signal requirement, so that point is an inference from statutory silence; opt-outs operate through requests submitted to the controller [^stat-301-request].
+**Short answer.** From January 1, 2027, Oklahoma consumers get the now-standard set: to confirm processing and access their personal data, to correct inaccuracies, to delete personal data provided by or obtained about them, to obtain a portable digital copy, and to opt out of processing for targeted advertising, the *sale* of personal data, or profiling that produces legal or similarly significant effects [^stat-301-rights]. There is no universal opt-out mechanism: the act text reviewed here contains no browser-level preference-signal requirement, so that point is an inference from statutory silence; opt-outs operate through requests submitted to the controller [^stat-301-request].
 
 The mechanics matter for operations planning. A controller must respond within 45 days of receipt, extendable once by another 45 days when reasonably necessary, and responses are free up to twice a year per consumer (a controller may charge for, or decline, manifestly unfounded, excessive, or repetitive requests — and bears the burden of showing that) [^stat-302-deadline]. A refusal must come with appeal instructions, and the controller must decide the appeal in writing within 60 days, routing denials onward to the Attorney General's complaint mechanism [^stat-303-appeal]. None of this can be contracted away: any contract term that waives or limits these consumer rights is void as contrary to public policy [^stat-304-nowaiver]. The absence of a universal opt-out-signal duty is a real drafting difference from several other state acts — an Oklahoma-only compliance posture does not need signal-recognition plumbing, though a multistate program will usually have it anyway.
 
@@ -83,7 +83,7 @@ Three changes in the current text deserve attention in an incident-response plan
 
 **Short answer.** Under the OKCDPA, enforcement belongs to one office: the Attorney General has exclusive authority to enforce the act [^stat-311-ag], and the act creates no private right of action for an OKCDPA violation or as an OKCDPA-based theory under another law [^stat-313-nopra]. Before suing, the Attorney General must give 30 days' written notice identifying the alleged violations, and may not sue at all if the business cures within that window and provides the required written statement and supporting documentation [^stat-312-cure]. After an uncured violation, civil penalties run up to $7,500 per violation [^stat-313-penalty].
 
-Three Oklahoma-specific features round out the picture. First, the 30-day cure right has no sunset — Section 312 contains no cure expiration date, so the cure-first posture appears permanent rather than a transition-period grace [^stat-312-cure]. Second, the staged act contains no rulemaking grant: the office's only specified implementation duties are to post controller, processor, and consumer-rights information on its website and to run an online complaint mechanism, so the statutory text is the whole rulebook [^stat-311-ag]. Third, the regimes that govern today have sharper teeth than the OKCDPA's. Under the breach act, the Attorney General or a district attorney may recover actual damages plus a civil penalty of up to $150,000 per breach or related series of breaches, except that violations by state-chartered or state-licensed financial institutions are enforced exclusively by the primary state regulator [^stat-165-enforcement] — but an entity that used reasonable safeguards and gave proper notice is not subject to civil penalties and can plead that as an affirmative defense, while one that failed on safeguards but noticed properly faces actual damages and a $75,000 penalty instead of the full amount [^stat-165-defense]. And the Oklahoma Consumer Protection Act — the deception backstop that already reaches privacy misrepresentations — does carry a private right of action: an aggrieved consumer may sue for actual damages, costs, and attorney fees [^stat-761-pra]. So while neither privacy-specific statute lets consumers sue, a privacy promise broken in a consumer transaction can still land a business in front of a private plaintiff today.
+Three Oklahoma-specific features round out the picture. First, the 30-day cure right has no sunset — Section 312 contains no cure expiration date, so the cure-first posture appears permanent rather than a transition-period grace [^stat-312-cure]. Second, the act text reviewed here contains no rulemaking grant: the office's only specified implementation duties are to post controller, processor, and consumer-rights information on its website and to run an online complaint mechanism, so the statutory text is the whole rulebook [^stat-311-ag]. Third, the regimes that govern today have sharper teeth than the OKCDPA's. Under the breach act, the Attorney General or a district attorney may recover actual damages plus a civil penalty of up to $150,000 per breach or related series of breaches, except that violations by state-chartered or state-licensed financial institutions are enforced exclusively by the primary state regulator [^stat-165-enforcement] — but an entity that used reasonable safeguards and gave proper notice is not subject to civil penalties and can plead that as an affirmative defense, while one that failed on safeguards but noticed properly faces actual damages and a $75,000 penalty instead of the full amount [^stat-165-defense]. And the Oklahoma Consumer Protection Act — the deception backstop that already reaches privacy misrepresentations — does carry a private right of action: an aggrieved consumer may sue for actual damages, costs, and attorney fees [^stat-761-pra]. So while neither privacy-specific statute lets consumers sue, a privacy promise broken in a consumer transaction can still land a business in front of a private plaintiff today.
 
 ## How do federal privacy laws interact with Oklahoma's new privacy act? {#federal-overlay}
 

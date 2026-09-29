@@ -2,7 +2,7 @@
 jurisdiction: "North Carolina"
 slug: north-carolina
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/north-carolina · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/north-carolina · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # North Carolina Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ North Carolina has no comprehensive consumer-privacy statute. The Identity Theft
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | North Carolina has not enacted a comprehensive consumer-privacy law; the operative statute is the Identity Theft Protection Act, whose breach-notification, Social Security number, disposal, and security-freeze sections expressly bridge violations into § 75-1.1. |
-| **Main law** | Identity Theft Protection Act, N.C. Gen. Stat. §§ 75-60 to 75-66 (Article 2A of Chapter 75) — North Carolina has no comprehensive consumer-privacy law; breach-notification, Social Security number, disposal, and security-freeze sections contain express § 75-1.1 bridges |
+| **Main law** | No comprehensive consumer-privacy law; N.C. Gen. Stat. § 75-65(a). N.C. Gen. Stat. § 75-1.1(a). |
 | **Privacy policy required?** | No North Carolina statute mandates a general consumer privacy policy or fixes its contents; a materially misleading statement can support a § 75-1.1 or FTC Act § 5 deception theory if the required elements are met, alongside GLBA, HIPAA, and COPPA where those apply |
 | **Who does it cover?** | Any business that owns, licenses, maintains, or possesses personal information of North Carolina residents — in any form, computerized or paper — with no revenue or consumer-volume threshold |
 | **Can consumers sue?** | Limited path |

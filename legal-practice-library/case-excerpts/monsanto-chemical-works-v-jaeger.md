@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Presumptively a contract for the sale of inventions grants rights only to those inventions which existed when the contract was made. If the parties intend to contract for future inventions, language plainly expressive of such purpose must appear.
 
-- supports: `statutory-carve-out`
-- source_cards: `monsanto-future-inventions-canon`
+- supports: `holdover-clause-limit`, `statutory-carve-out`
+- source_cards: `monsanto-future-inventions-canon`, `monsanto-future-inventions-holdover`
 - cited_by: [Employee Invention Assignment in Pennsylvania](../invention-assignment/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1496556/monsanto-chemical-works-v-jaeger/#:~:text=Presumptively%20a%20contract%20for%20the,of%20such%20purpose%20must%20appear.>

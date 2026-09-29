@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maine · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maine · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Maine Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Maine has no comprehensive consumer-privacy statute — LD 1822 was placed in th
 | --- | --- |
 | **Law coverage** | Specific data types only |
 | **Summary** | Maine has no comprehensive consumer-privacy law — the Maine Online Data Privacy Act (LD 1822) was placed in the Legislative Files (DEAD) on April 13, 2026 after the chambers insisted on opposing enactment positions — but it does have the nation's strictest ISP privacy statute, which since July 1, 2020 has required broadband providers serving Maine customers to get opt-in consent before using, disclosing, or selling customer personal information. Every other business builds to the Notice of Risk to Personal Data Act's 30-day breach-notice clock, the Maine Unfair Trade Practices Act, and the federal overlay. |
-| **Main law** | 35-A M.R.S. § 9301 (broadband ISP opt-in privacy law, eff. July 1, 2020) plus the Notice of Risk to Personal Data Act, 10 M.R.S. §§ 1346–1350-B — Maine has no comprehensive consumer-privacy statute |
+| **Main law** | No comprehensive consumer-privacy law; 35-A M.R.S. § 9301(2). 10 M.R.S. § 1348(1)(B). |
 | **Privacy policy required?** | No general mandate — broadband providers must post a clear notice of customers' opt-in rights at the point of sale and on their website; for everyone else, policy contents are driven by FTC Act § 5 and the GLBA, HIPAA, and COPPA overlay |
 | **Who does it cover?** | The ISP law reaches only broadband providers serving customers physically located and billed in Maine; the breach act reaches any person maintaining computerized personal information of Maine residents — including state agencies, municipalities, and universities — with no revenue or volume threshold |
 | **Can consumers sue?** | Limited path |

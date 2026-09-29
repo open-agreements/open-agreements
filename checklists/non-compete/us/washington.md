@@ -2,9 +2,9 @@
 type: Reviewer Checklist
 title: Non-Compete Agreement Reviewer Checklist — Washington
 description: >-
-  A clause-by-clause reviewer checklist for Washington employee restrictive
-  covenant agreements — earnings thresholds, disclosure and consideration
-  timing, layoff pay, and the 2027 ban under chapter 49.62 RCW.
+  A clause-by-clause reviewer checklist for Washington State employee
+  restrictive covenant agreements — earnings thresholds, disclosure and
+  consideration timing, layoff pay, and the 2027 ban under chapter 49.62 RCW.
 resource: 'https://openagreements.org/checklists/non-compete/us/washington'
 timestamp: '2026-06-11'
 tags:
@@ -14,7 +14,7 @@ tags:
 
 # Non-Compete Agreement Reviewer Checklist — Washington[^about]
 
-A clause-by-clause reviewer checklist for Washington employee restrictive covenant agreements — earnings thresholds, disclosure and consideration timing, layoff pay, and the 2027 ban under chapter 49.62 RCW.
+A clause-by-clause reviewer checklist for Washington State employee restrictive covenant agreements — earnings thresholds, disclosure and consideration timing, layoff pay, and the 2027 ban under chapter 49.62 RCW.
 
 ## Parties and cover-term identification {#parties-and-cover-term-identification}
 
@@ -90,7 +90,7 @@ Every item below reads the agreement the way chapter 49.62 RCW does — as a lis
 
 - [ ] **Non-compete covenant** (Optional) — A Washington non-compete is void unless the employer clears every statutory condition — disclosure or consideration, the earnings threshold, layoff pay — and the legislature has already scheduled the clause's extinction for June 30, 2027. If it appears, route the review through the Washington statutory gates at the end of this checklist before anything else. [^wa-rcw-020-all-1][^wa-eshb1155-intent-1] [#permit-non-compete]
 
-- [ ] **Named-competitor narrowing** (Recommended) — A named-competitor list is the economically rational way to draft here. Washington courts can pare an overbroad covenant down, but the act of paring obliges the employer to pay the statutory penalty plus the worker's fees — so a scope that needs no paring is worth real money. [^wa-rcw-080-reform-1] [#narrow-non-compete-by-specified-competitors-when-provided]
+- [ ] **Named-competitor narrowing** (Recommended) — A named-competitor list is the economically rational way to draft here. In a proceeding commenced before June 30, 2027, a Washington court may pare an overbroad noncompetition covenant down, but the act of paring obliges the party seeking enforcement to pay the aggrieved person the statutory penalty plus fees — so a scope that needs no paring is worth real money. ESHB 1155 was enacted with a delayed effective date of June 30, 2027 and will delete that reformation penalty, so the penalty will not apply in a proceeding commenced on or after that date. [^wa-rcw-080-reform-1][^wa-eshb1155-section5-deletion-1][^wa-eshb1155-effective-date-1][^wa-eshb1155-prior-law-proceedings-1][^wa-eshb1155-new-law-proceedings-1] [#narrow-non-compete-by-specified-competitors-when-provided]
 
 - [ ] **Non-investment covenant** (Optional) — Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause runs on the shared Restricted Period — and note that from 2027 the definition expands to capture provisions that force a worker to return, repay, or forfeit compensation for competing, which is exactly the mechanic some investment restraints use. [^wa-eshb1155-forfeiture-1] [#permit-non-investment]
 
@@ -118,11 +118,11 @@ Every item below reads the agreement the way chapter 49.62 RCW does — as a lis
 
 - [ ] **Injunction availability** (Recommended) — Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. Chapter 49.62 RCW supplies no presumption of irreparable injury, so this recital is most of what an enforcing employer brings to the emergency-relief hearing. [#require-injunctive-relief-availability]
 
-- [ ] **Attorney fees and costs** (Optional) — Read any fee clause against the statutory backdrop, which already shifts fees one way: an employer whose covenant violates the chapter — or merely gets reformed — pays the worker's reasonable fees, expenses, and costs on top of the penalty. A one-way employer-favoring clause does not change that exposure. [^wa-rcw-080-penalty-1] [#address-attorneys-fees-and-costs]
+- [ ] **Attorney fees and costs** (Optional) — A fee clause operates against a statutory backdrop that already shifts fees one way: an employer whose covenant violates the chapter pays the worker's reasonable fees, expenses, and costs on top of the penalty, and in a proceeding commenced before June 30, 2027, so does a party seeking enforcement whose covenant merely gets reformed. ESHB 1155, enacted with a delayed effective date of June 30, 2027, will delete the reformation penalty and its fee award for proceedings commenced on or after that date. A one-way employer-favoring clause does not change that exposure. [^wa-rcw-080-penalty-1][^wa-rcw-080-reform-3][^wa-eshb1155-section5-deletion-2][^wa-eshb1155-effective-date-2][^wa-eshb1155-prior-law-proceedings-2][^wa-eshb1155-new-law-proceedings-2] [#address-attorneys-fees-and-costs]
 
 ## Severability and reformation {#severability-and-reformation}
 
-- [ ] **No reliance on court narrowing** (Avoid) — Washington courts will trim an overbroad covenant rather than void it — but trimming is a paid event. Whenever a court reforms, rewrites, modifies, or only partially enforces a covenant, the employer owes the worker the greater of actual damages or the $5,000 penalty plus fees, so read any savings clause as a record of what the overreach will cost, not a safety net. The covenant has to arrive at the courthouse already sized to the legitimate interest. [^wa-emerick-partial-1][^wa-rcw-080-reform-2] [#avoid-reliance-on-judicial-reformation]
+- [ ] **No reliance on court narrowing** (Avoid) — In a proceeding commenced before June 30, 2027, a Washington court may narrow an overbroad noncompetition covenant rather than void it, but narrowing is a paid event. Whenever a court in such a proceeding reforms, rewrites, modifies, or only partially enforces a noncompetition covenant, the party seeking enforcement owes the aggrieved person the greater of actual damages or the $5,000 penalty plus fees, so a savings clause records what the overreach will cost rather than serving as a safety net. ESHB 1155, enacted with a delayed effective date of June 30, 2027, will delete that reformation penalty for proceedings commenced on or after that date. The covenant has to arrive at the courthouse already sized to the legitimate interest. [^wa-emerick-partial-1][^wa-rcw-080-reform-2][^wa-eshb1155-section5-deletion-3][^wa-eshb1155-effective-date-3][^wa-eshb1155-prior-law-proceedings-3][^wa-eshb1155-new-law-proceedings-3] [#avoid-reliance-on-judicial-reformation]
 
 ## Survival {#survival}
 
@@ -216,6 +216,14 @@ The nine items below exist only on this Washington page: they implement the void
 
 [^wa-rcw-080-reform-1]: **RCW 49.62.080** — "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *RCW 49.62.080(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
 
+[^wa-eshb1155-section5-deletion-1]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "(( (3) If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 5 (amending RCW 49.62.080).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-effective-date-1]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "This act takes effect June 30, 2027." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-prior-law-proceedings-1]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-new-law-proceedings-1]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "RCW 49.62.010, 49.62.020, 49.62.080, and 49.62.090 apply to all proceedings commenced on or after the effective date of this section, regardless of when the cause of action arose." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(1) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
 [^wa-eshb1155-forfeiture-1]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "A ‘noncompetition covenant’ also includes any provision in an agreement that threatens, demands, requires, or otherwise effectuates that an individual return, repay, or forfeit any right, benefit, or compensation, as a consequence of the individual engaging in a lawful profession, trade, or business of any kind." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 3.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^wa-mclaren-2]: **NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)** — "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act." *McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
@@ -228,9 +236,27 @@ The nine items below exist only on this Washington page: they implement the void
 
 [^wa-rcw-080-penalty-1]: **RCW 49.62.080** — "If a court or arbitrator determines that a noncompetition covenant violates this chapter, the violator must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *RCW 49.62.080(2).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
 
+[^wa-rcw-080-reform-3]: **RCW 49.62.080** — "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *RCW 49.62.080(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
+
+[^wa-eshb1155-section5-deletion-2]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "(( (3) If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 5 (amending RCW 49.62.080).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-effective-date-2]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "This act takes effect June 30, 2027." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-prior-law-proceedings-2]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-new-law-proceedings-2]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "RCW 49.62.010, 49.62.020, 49.62.080, and 49.62.090 apply to all proceedings commenced on or after the effective date of this section, regardless of when the cause of action arose." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(1) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
 [^wa-emerick-partial-1]: **Emerick v. Cardiac Study Center, Inc.** — "If the trial court determines that certain terms of the covenant are unreasonable—such as the geographic and temporal scope of the restraint—the entire covenant does not fail." *Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015).* <https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/#:~:text=If%20the%20trial%20court%20determines,entire%20covenant%20does%20not%20fail.>
 
 [^wa-rcw-080-reform-2]: **RCW 49.62.080** — "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *RCW 49.62.080(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
+
+[^wa-eshb1155-section5-deletion-3]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "(( (3) If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 5 (amending RCW 49.62.080).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-effective-date-3]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "This act takes effect June 30, 2027." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-prior-law-proceedings-3]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^wa-eshb1155-new-law-proceedings-3]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "RCW 49.62.010, 49.62.020, 49.62.080, and 49.62.090 apply to all proceedings commenced on or after the effective date of this section, regardless of when the cause of action arose." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(1) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^wa-earnings-measure-3]: **RCW 49.62.020** — "Unless the employee's earnings from the party seeking enforcement, when annualized, exceed one hundred thousand dollars per year." *RCW 49.62.020(1)(b).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020>
 

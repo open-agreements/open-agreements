@@ -2,7 +2,7 @@
 jurisdiction: "Arkansas"
 slug: arkansas
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arkansas[^about]
 
@@ -30,7 +30,7 @@ Arkansas non-compete law under Ark. Code Ann. § 4-75-101, enacted by Act 921 of
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Arkansas enforces an employee non-compete that is ancillary, protects a statutory business interest, and is no broader in time and scope than necessary, with overbroad covenants reformed by the court. |
-| **Main law or case** | Ark. Code Ann. § 4-75-101 (Act 921 of 2015; amended by Act 232 of 2025) |
+| **Main law or case** | Ark. Code Ann. § 4-75-101(a). |
 | **Main exceptions** | Physician practice restrictions void (§ 4-75-101(k), 2025); Title 17 Subtitle 3 licensees excluded; non-solicits/NDAs excluded |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -69,7 +69,7 @@ Reasonableness is still contextual. The statute tells courts to consider the nat
 
 "The lack of a specific or defined geographic descriptive restriction in a covenant not to compete agreement does not make the covenant not to compete agreement overly broad under subdivision (a)(2) of this section if the covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer."[^q3-aca-no-geography]
 
-That is a major statutory shift from the old common-law risk. In *Bendinger*, the Arkansas Supreme Court rejected a covenant with no geographic limit because the facts did not justify it; in *NanoMech*, the Eighth Circuit applied pre-Act Arkansas law to invalidate a no-geography, any-capacity covenant [^q3-bendinger-geography][^q3-nanomech-geography].
+That is a major statutory shift from the old common-law risk. In *Bendinger*, the Arkansas Supreme Court rejected a covenant with no geographic limit because the facts did not justify it [^q3-bendinger-geography]; in *NanoMech*, the Eighth Circuit applied pre-Act Arkansas law to invalidate a no-geography, any-capacity covenant [^q3-nanomech-geography].
 
 The current drafting point is practical rather than formalistic. If there is no geography, the covenant needs another limiting mechanism, such as customer scope, activity scope, or business-scope limits tied to the employer's protectable interest [^q3-aca-no-geography][^q3-aca-factors].
 
@@ -94,7 +94,7 @@ The presumption is not a safe harbor for every two-year clause. The statute ties
 
 That mandatory reformation rule is the watershed change from pre-Act Arkansas law. Under the old regime, the contract had to be valid as written, and the court would not narrow it to a reasonable version [^q5-bendinger-no-rewrite][^q5-nanomech-no-narrow].
 
-The temporal framing is important. *Bendinger* and *NanoMech* remain useful for the old all-or-nothing rule, and *Box* confirms Act 921's effective-date line; they should not be cited as current authority against mandatory statutory reformation for a covered post-Act employment covenant [^q5-box-effective-date][^q5-aca-reformation].
+The temporal framing is important. *Bendinger* remains useful for the old all-or-nothing rule [^q5-bendinger-no-rewrite], as does *NanoMech* [^q5-nanomech-no-narrow], and *Box* noted that the statute arguably applied only to an agreement executed after Act 921 took effect, without deciding the question [^q5-box-effective-date]. Those decisions should not be cited as current authority against mandatory statutory reformation for a covered post-Act employment covenant [^q5-aca-reformation].
 
 > [!CAUTION]
 > **Drafting note.**
@@ -195,7 +195,7 @@ Arkansas's covenant statute, Act 921 of 2015, governs employment covenants and e
 
 [^q3-bendinger-geography]: **Bendinger v. Marshalltown Trowel Co.** — "We hold that the failure of the covenant to contain a geographic restriction in this case renders it overbroad." *Bendinger v. Marshalltown Trowel Co., 338 Ark. 410, 994 S.W.2d 468 (1999).* <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=We%20hold%20that%20the%20failure,this%20case%20renders%20it%20overbroad.>
 
-[^q3-nanomech-geography]: **NanoMech, Inc. v. Suresh** — "Under Arkansas law, a noncompete agreement must be valid as written; a court may not narrow it." *NanoMech, Inc. v. Suresh, 777 F.3d 1020 (8th Cir. 2015).* <https://www.courtlistener.com/opinion/2777573/nanomech-inc-v-arunya-suresh/#:~:text=Under%20Arkansas%20law%2C%20a%20noncompete,court%20may%20not%20narrow%20it.>
+[^q3-nanomech-geography]: **NanoMech, Inc. v. Suresh** — "Under the plain language of the agreement, Suresh would be prohibited from working for any company that is a competitor of NanoMech, in any capacity, anywhere in the world. Even though NanoMech’s proprietary interests warrant protection, the leading Arkansas authorities suggest that Suresh’s noncompete agreement unduly infringes on her ability to pursue work in her chosen field, and is therefore overbroad." *NanoMech, Inc. v. Suresh, 777 F.3d 1020 (8th Cir. 2015).* <https://www.courtlistener.com/opinion/2777573/nanomech-inc-v-arunya-suresh/#:~:text=Under%20the%20plain%20language%20of,field%2C%20and%20is%20therefore%20overbroad.>
 
 [^q3-aca-factors]: **Ark. Code Ann. § 4-75-101** — "The reasonableness of a covenant not to compete agreement shall be determined after considering: (A) The nature of the employer's protectable business interest; (B) The geographic scope of the employer's business and whether or not a geographic limitation is feasible under the circumstances; (C) Whether or not the restriction placed on the employee is limited to a specific group of customers or other individuals or entities associated with the employer's business; and (D) The nature of the employer's business." *Ark. Code Ann. § 4-75-101(c).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 

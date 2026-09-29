@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-mexico · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-mexico · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # New Mexico Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ New Mexico has no comprehensive consumer-privacy statute — the 2026 omnibus bi
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | New Mexico has not enacted a comprehensive consumer-privacy law — the Consumer Information and Data Protection Act (HB 214) died in the 2026 session, and aggregator pages reporting a July 1, 2026 effective date are describing a dead bill. What governs today is the Data Breach Notification Act (45-day breach notice, reasonable-security, disposal, and vendor-contract duties) plus the Unfair Practices Act, which can create private damages exposure when a covered privacy-policy or breach-response misstatement causes money or property loss. |
-| **Main law** | Data Breach Notification Act, NMSA 1978, §§ 57-12C-1 to -12, plus the Unfair Practices Act, NMSA 1978, §§ 57-12-1 to -26 — New Mexico has no comprehensive consumer-privacy statute |
+| **Main law** | No comprehensive consumer-privacy law; NMSA 1978, § 57-12C-6(A). NMSA 1978, § 57-12-3. |
 | **Privacy policy required?** | No New Mexico statute mandates a consumer privacy policy or fixes its contents; what you publish is policed by FTC Act § 5 and the Unfair Practices Act, so a knowing policy misstatement tied to a covered transaction can create private exposure if a person loses money or property |
 | **Who does it cover?** | Any person that owns or licenses personal identifying information of New Mexico residents — no revenue or volume threshold; persons subject to GLBA or HIPAA are exempt from the breach act entirely |
 | **Can consumers sue?** | Limited path |

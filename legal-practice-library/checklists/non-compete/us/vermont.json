@@ -50,7 +50,7 @@
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "Vermont",
       "coverage": "Vermont (US)",
-      "lastReviewed": "2026-06-12",
+      "lastReviewed": "2026-09-26",
       "license": "CC BY 4.0",
       "authors": [
         "steven-obiajulu"
@@ -171,7 +171,7 @@
         "sectionId": "parties-and-cover-term-identification",
         "itemNumber": "1.2",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#identify-effective-date",
-        "requirementGuidance": "Every covenant clock needs a defined start, and date discipline carries extra weight while the General Assembly is actively considering non-compete legislation: if a pending bill becomes law, the execution date is what will place an agreement on one side or the other of any new regime. An undated covenant leaves that question open at the worst possible time.",
+        "requirementGuidance": "Every covenant clock needs a defined start. Record the execution and effective dates so counsel can assess any transition provisions if Vermont later enacts a non-compete statute; H.205, the 2026 general-ban bill, was recommitted.",
         "variants": [],
         "sources": [
           {
@@ -181,8 +181,8 @@
             "title": "Vt. H.205 (2025-2026) — Bill Status",
             "citation": "H.205, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (recommitted Mar. 13, 2026).",
             "url": "https://legislature.vermont.gov/bill/status/2026/H.205",
-            "proposition": "H.205, recommitted March 13, 2026, is the umbrella legislative vehicle for Vermont's pending non-compete and stay-or-pay prohibition; the bill text is titled 'An act relating to agreements not to compete'.",
-            "verbatimQuote": "An act relating to agreements not to compete",
+            "proposition": "H.205's status page records the bill's title, An act relating to agreements not to compete, and that the House recommitted it to the Committee on Commerce and Economic Development on March 13, 2026.",
+            "verbatimQuote": "An act relating to agreements not to compete Rep. Michael Marcotte , Rep. David Bosch , Rep. Kevin Christie , Rep. Jonathan Cooper , Rep. Abbey Duke , Rep. Edye Graning , Rep. Martin LaLonde , Rep. Anthony Micklus , Rep. Herb Olson , Rep. Kirk White House Committee on Commerce and Economic Development 3/13/2026 - Rep. Marcotte of Coventry moved to recommit the bill to the Committee on Commerce and Economic Development , which was agreed to",
             "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-h205-effective-date"
           }
         ]
@@ -823,7 +823,7 @@
         "sectionId": "restrictive-covenants-each-independently-includable",
         "itemNumber": "7.4",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#permit-non-compete",
-        "requirementGuidance": "If this clause appears, route the review through the Vermont gates at the end of this checklist: courts proceed with caution before enforcing covenants against competitive employment, and the employer will carry the burden at every step. Then check the legislature — H.205 and H.583 are pending bills that would substantially supersede the common-law framework if enacted, so confirm their status before relying on any template.",
+        "requirementGuidance": "If this clause appears, route the review through the Vermont gates at the end of this checklist: courts proceed with caution before enforcing covenants against competitive employment, and the employer will carry the burden at every step. Do not rely on a statutory ban: H.205 was recommitted, and H.583 became Act 133, whose enacted text has no restrictive-covenant provision.",
         "variants": [],
         "sources": [
           {
@@ -845,20 +845,20 @@
             "title": "Vt. H.205 (2025-2026) — Bill Status",
             "citation": "H.205, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (recommitted Mar. 13, 2026).",
             "url": "https://legislature.vermont.gov/bill/status/2026/H.205",
-            "proposition": "H.205, recommitted March 13, 2026, is the umbrella legislative vehicle for Vermont's pending non-compete and stay-or-pay prohibition; the bill text is titled 'An act relating to agreements not to compete'.",
-            "verbatimQuote": "An act relating to agreements not to compete",
+            "proposition": "H.205's status page records the bill's title, An act relating to agreements not to compete, and that the House recommitted it to the Committee on Commerce and Economic Development on March 13, 2026.",
+            "verbatimQuote": "An act relating to agreements not to compete Rep. Michael Marcotte , Rep. David Bosch , Rep. Kevin Christie , Rep. Jonathan Cooper , Rep. Abbey Duke , Rep. Edye Graning , Rep. Martin LaLonde , Rep. Anthony Micklus , Rep. Herb Olson , Rep. Kirk White House Committee on Commerce and Economic Development 3/13/2026 - Rep. Marcotte of Coventry moved to recommit the bill to the Committee on Commerce and Economic Development , which was agreed to",
             "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-h205-covenants"
           },
           {
-            "sourceId": "vt-h583-covenants",
+            "sourceId": "vt-act133-covenants",
             "authorityType": "primary-law",
             "tier": "primary-source-backed",
-            "title": "Vt. H.583 (2025-2026) — Bill Status",
-            "citation": "H.583, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (passed House Mar. 20, 2026; House concurred in Senate proposal of amendment, May 22, 2026).",
-            "url": "https://legislature.vermont.gov/bill/status/2026/H.583",
-            "proposition": "H.583 — titled 'An act relating to clinical decision making' — would categorically void noncompetition, nondisclosure, and nondisparagement agreements for licensed healthcare professionals.",
-            "verbatimQuote": "An act relating to clinical decision making",
-            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-h583-covenants"
+            "title": "Act 133 (2026) — An act relating to clinical decision making (H.583)",
+            "citation": "2026, No. 133 (Act 133) (H.583).",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT133/ACT133%20As%20Enacted.pdf",
+            "proposition": "Act 133 records that it enacted H.583, an act relating to clinical decision making that adds 18 V.S.A. chapter 233.",
+            "verbatimQuote": "No. 133. An act relating to clinical decision making. (H.583) It is hereby enacted by the General Assembly of the State of Vermont: Sec. 1. 18 V.S.A. chapter 233 is added to read: CHAPTER 233. CLINICAL DECISION MAKING § 9771. DEFINITIONS As used in this chapter: (1) “Health care facility” has the same meaning as in section 9432 of this title.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-act133-covenants"
           }
         ]
       },
@@ -897,7 +897,7 @@
         "sectionId": "non-disparagement",
         "itemNumber": "8.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#require-non-disparagement",
-        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state — and for agreements with licensed healthcare professionals, note that pending H.583 would void nondisparagement agreements alongside non-competes if enacted.",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state.",
         "variants": [],
         "sources": [
           {
@@ -910,17 +910,6 @@
             "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
             "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
             "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-mclaren-macomb-nondisparagement"
-          },
-          {
-            "sourceId": "vt-h583-nondisparagement",
-            "authorityType": "primary-law",
-            "tier": "primary-source-backed",
-            "title": "Vt. H.583 (2025-2026) — Bill Status",
-            "citation": "H.583, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (passed House Mar. 20, 2026; House concurred in Senate proposal of amendment, May 22, 2026).",
-            "url": "https://legislature.vermont.gov/bill/status/2026/H.583",
-            "proposition": "H.583 — titled 'An act relating to clinical decision making' — would categorically void noncompetition, nondisclosure, and nondisparagement agreements for licensed healthcare professionals.",
-            "verbatimQuote": "An act relating to clinical decision making",
-            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-h583-nondisparagement"
           }
         ]
       },
@@ -933,7 +922,7 @@
         "sectionId": "physician-specific-notices-and-carve-outs",
         "itemNumber": "9.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#address-physician-specific-rights",
-        "requirementGuidance": "As of this checklist's review date, Vermont has no categorical healthcare non-compete ban in force: physician covenants run through the same reasonableness test as everyone else's, and the employer carries the same burden. The clause should say so plainly — and it should flag the tracking duty, because H.583 has passed the House and cleared a Senate amendment cycle; if enacted it would void noncompetition, nondisclosure, and nondisparagement agreements for licensed healthcare professionals, with a narrow exception for covenants ancillary to the sale of a 25%-or-greater equity interest.",
+        "requirementGuidance": "Check that the clause holds physician covenants to the ordinary reasonableness test and does not cite a healthcare ban. Vermont has none: physician covenants run through the same test as everyone else's, and H.583 was enacted as Act 133, whose enacted text has no restrictive-covenant provision.",
         "variants": [],
         "sources": [
           {
@@ -944,20 +933,20 @@
             "citation": "Vt. Elec. Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).",
             "url": "https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/",
             "deepLink": "https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=enforcement%20will%20be%20ordered%20unless,it%20is%20to%20be%20performed.",
-            "proposition": "Andrus supports the rule that the common-law reasonableness framework (legitimate interest, employee hardship, public interest) governs Vermont restrictive covenants until and unless H.205 or H.583 displaces it.",
+            "proposition": "Andrus supports the rule that the common-law reasonableness framework (legitimate interest, employee hardship, public interest) governs Vermont restrictive covenants.",
             "verbatimQuote": "enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed.",
             "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-andrus-health-framework"
           },
           {
-            "sourceId": "vt-h583-health",
+            "sourceId": "vt-act133-health",
             "authorityType": "primary-law",
             "tier": "primary-source-backed",
-            "title": "Vt. H.583 (2025-2026) — Bill Status",
-            "citation": "H.583, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (passed House Mar. 20, 2026; House concurred in Senate proposal of amendment, May 22, 2026).",
-            "url": "https://legislature.vermont.gov/bill/status/2026/H.583",
-            "proposition": "H.583 — titled 'An act relating to clinical decision making' — would categorically void noncompetition, nondisclosure, and nondisparagement agreements for licensed healthcare professionals.",
-            "verbatimQuote": "An act relating to clinical decision making",
-            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-h583-health"
+            "title": "Act 133 (2026) — An act relating to clinical decision making (H.583)",
+            "citation": "2026, No. 133 (Act 133) (H.583).",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT133/ACT133%20As%20Enacted.pdf",
+            "proposition": "Act 133 records that it enacted H.583, an act relating to clinical decision making that adds 18 V.S.A. chapter 233.",
+            "verbatimQuote": "No. 133. An act relating to clinical decision making. (H.583) It is hereby enacted by the General Assembly of the State of Vermont: Sec. 1. 18 V.S.A. chapter 233 is added to read: CHAPTER 233. CLINICAL DECISION MAKING § 9771. DEFINITIONS As used in this chapter: (1) “Health care facility” has the same meaning as in section 9432 of this title.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-act133-health"
           }
         ]
       },
@@ -996,7 +985,7 @@
         "sectionId": "tolling-during-breach",
         "itemNumber": "12.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#address-tolling-without-assuming-courts-will-extend-the-term",
-        "requirementGuidance": "The agreement should say expressly whether the clock pauses during a breach, because in Vermont no one else will say it: the Supreme Court refused to extend a covenant whose term litigation delay had exhausted, holding that the term was a matter of contract and that courts construe contracts but will not make them — it would not even accept relabeling the extension as a postponed start date. No staged Vermont source tests an express tolling clause, so treat any extension mechanism as its own restraint that must earn its keep under the reasonableness test, never as boilerplate.",
+        "requirementGuidance": "The agreement should say expressly whether the clock pauses during a breach, because in Vermont no one else will say it: the Supreme Court refused to extend a covenant whose term litigation delay had exhausted, holding that the term was a matter of contract and that courts construe contracts but will not make them — it would not even accept relabeling the extension as a postponed start date. No identified Vermont source tests an express tolling clause, so treat any extension mechanism as its own restraint that must earn its keep under the reasonableness test, never as boilerplate.",
         "variants": [],
         "sources": [
           {
@@ -1162,7 +1151,7 @@
         "sectionId": "governing-law-venue-dispute-process",
         "itemNumber": "17.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#specify-governing-law-and-venue",
-        "requirementGuidance": "Confirm the agreement specifies governing law, venue, and a dispute-resolution process. Restrictive-covenant disputes are jurisdiction-sensitive, and a clear selection binds that risk; the staged Vermont sources state no covenant-specific choice-of-law rule, so review the selection under ordinary conflicts principles.",
+        "requirementGuidance": "Confirm the agreement specifies governing law, venue, and a dispute-resolution process. Restrictive-covenant disputes are jurisdiction-sensitive, and a clear selection binds that risk; the identified Vermont sources state no covenant-specific choice-of-law rule, so review the selection under ordinary conflicts principles.",
         "variants": [],
         "sources": []
       },

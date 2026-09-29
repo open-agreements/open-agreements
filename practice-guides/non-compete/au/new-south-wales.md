@@ -71,7 +71,7 @@ The dividing line drawn in *Lindner v Murdock's Garage* is between protecting an
 
 "An employer must be prepared to face the competition of a former employee if it comes."[^lindner-not-competition-per-se]
 
-Two further cases sharpen the confidential-information limb. In *Buckley v Tutty* (1971) 125 CLR 353, the High Court confirmed the modern reasonableness framework that NSW courts apply, and in *Wright v Gasweld Pty Ltd* (1991) 22 NSWLR 317 the NSW Court of Appeal mapped the spectrum between genuine trade secrets, which can support a restraint, and the general know-how an employee is free to carry away, which cannot. The practical point for drafters is that the interest has to be identified and real; an employer who cannot point to a protectable interest cannot enforce the clause whatever its scope.
+The NSW Court of Appeal has confirmed the confidential-information limb. In *Woolworths Ltd v Olson* it held that the interests an employer may protect by a restraint go beyond goodwill and customers and extend to trade secrets [^olson-interests-extend], and that the separate legal protection against misuse of trade secrets does not make a contractual restraint unreasonable [^olson-trade-secrets]. The practical point for drafters is that the interest has to be identified and real; an employer who cannot point to a protectable interest cannot enforce the clause whatever its scope.
 
 > [!CAUTION]
 > **Drafting note.**
@@ -100,7 +100,7 @@ On garden leave for senior people, *Pearson v HRX Holdings Pty Ltd* [2012] FCAFC
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint is reasonable in the first place [^lindner-onus-reasonable], so an employer seeking an injunction starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The staged New South Wales authorities here do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled NSW rule.
+**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint is reasonable in the first place [^lindner-onus-reasonable], so an employer seeking an injunction starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The identified New South Wales authorities here do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled NSW rule.
 
 The reasonableness analysis assumes a clause an employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus-reasonable]. Where the employer is the party in serious breach, a court may, applying the general common-law principle, treat the employee as released from the covenant, and in any event the equitable remedies an employer needs — chiefly an injunction — are discretionary and sensitive to the employer's own conduct.
 
@@ -178,6 +178,10 @@ Because this is a future legislative matter, employers should treat the timeline
 [^lindner-not-competition-per-se]: **Lindner v Murdock's Garage** — "An employer must be prepared to face the competition of a former employee if it comes." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 
 [^lindner-trade-connection]: **Lindner v Murdock's Garage** — "The knowledge which, because its use may deprive the employer of the business connection which he is entitled to preserve as his own, he may require his employee to abstain from using, is objective knowledge of customers, their peculiarities, their credit and so forth" *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
+
+[^olson-interests-extend]: **Woolworths Ltd v Olson** — "These interests go beyond protection of goodwill and retention of customers and extend to trade secrets (Heydon, op cit, pp87-8, Knogo Corporation v Halligan (1984) ATPR ¶40-460, Kone Elevators Pty Ltd v McNay & Anor (1997) ATPR ¶41-564)." *Woolworths Ltd v Olson [2004] NSWCA 372 (Mason P).* <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
+
+[^olson-trade-secrets]: **Woolworths Ltd v Olson** — "Merely because the law offers a degree of protection against the unauthorised use or dissemination of trade secrets by former employees does not mean that contractual protection is necessarily unreasonable or unavailable." *Woolworths Ltd v Olson [2004] NSWCA 372 (Mason P).* <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 [^olson-tested-at-contract]: **Woolworths Ltd v Olson** — "The validity of the restraint is to be tested at the time of entering into the contract" *Woolworths Ltd v Olson [2004] NSWCA 372.* <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 

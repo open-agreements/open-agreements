@@ -46,7 +46,7 @@
     "slug": "washington",
     "frontmatter": {
       "title": "Non-Compete Agreement Reviewer Checklist — Washington",
-      "description": "A clause-by-clause reviewer checklist for Washington employee restrictive covenant agreements — earnings thresholds, disclosure and consideration timing, layoff pay, and the 2027 ban under chapter 49.62 RCW.",
+      "description": "A clause-by-clause reviewer checklist for Washington State employee restrictive covenant agreements — earnings thresholds, disclosure and consideration timing, layoff pay, and the 2027 ban under chapter 49.62 RCW.",
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "Washington",
       "coverage": "Washington (US)",
@@ -894,7 +894,7 @@
         "sectionId": "restrictive-covenants-each-independently-includable",
         "itemNumber": "7.5",
         "anchor": "https://openagreements.org/checklists/non-compete/us/washington#narrow-non-compete-by-specified-competitors-when-provided",
-        "requirementGuidance": "A named-competitor list is the economically rational way to draft here. Washington courts can pare an overbroad covenant down, but the act of paring obliges the employer to pay the statutory penalty plus the worker's fees — so a scope that needs no paring is worth real money.",
+        "requirementGuidance": "A named-competitor list is the economically rational way to draft here. In a proceeding commenced before June 30, 2027, a Washington court may pare an overbroad noncompetition covenant down, but the act of paring obliges the party seeking enforcement to pay the aggrieved person the statutory penalty plus fees — so a scope that needs no paring is worth real money. ESHB 1155 was enacted with a delayed effective date of June 30, 2027 and will delete that reformation penalty, so the penalty will not apply in a proceeding commenced on or after that date.",
         "variants": [],
         "sources": [
           {
@@ -908,6 +908,54 @@
             "verbatimQuote": "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
             "date": "2024-06-06",
             "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-080-reform-1"
+          },
+          {
+            "sourceId": "wa-eshb1155-section5-deletion-1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 5 (amending RCW 49.62.080).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 5 of ESHB 1155 deletes subsection (3), the reformation penalty, from RCW 49.62.080. The session law marks deleted text by enclosing it in double parentheses and striking it through; the quote opens with that marker.",
+            "verbatimQuote": "(( (3) If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-section5-deletion-1"
+          },
+          {
+            "sourceId": "wa-eshb1155-effective-date-1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 takes effect June 30, 2027.",
+            "verbatimQuote": "This act takes effect June 30, 2027.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-effective-date-1"
+          },
+          {
+            "sourceId": "wa-eshb1155-prior-law-proceedings-1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 7 of ESHB 1155 amends RCW 49.62.100 so that legal proceedings commenced before June 30, 2027 remain governed by chapter 49.62 RCW as it read before that date, which keeps the reformation penalty available in those proceedings.",
+            "verbatimQuote": "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-prior-law-proceedings-1"
+          },
+          {
+            "sourceId": "wa-eshb1155-new-law-proceedings-1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(1) (amending RCW 49.62.100).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 7 of ESHB 1155 amends RCW 49.62.100 so that the amended RCW 49.62.080, without the reformation penalty, applies to all proceedings commenced on or after June 30, 2027, regardless of when the cause of action arose.",
+            "verbatimQuote": "RCW 49.62.010, 49.62.020, 49.62.080, and 49.62.090 apply to all proceedings commenced on or after the effective date of this section, regardless of when the cause of action arose.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-new-law-proceedings-1"
           }
         ]
       },
@@ -1076,7 +1124,7 @@
         "sectionId": "remedies",
         "itemNumber": "13.2",
         "anchor": "https://openagreements.org/checklists/non-compete/us/washington#address-attorneys-fees-and-costs",
-        "requirementGuidance": "Read any fee clause against the statutory backdrop, which already shifts fees one way: an employer whose covenant violates the chapter — or merely gets reformed — pays the worker's reasonable fees, expenses, and costs on top of the penalty. A one-way employer-favoring clause does not change that exposure.",
+        "requirementGuidance": "A fee clause operates against a statutory backdrop that already shifts fees one way: an employer whose covenant violates the chapter pays the worker's reasonable fees, expenses, and costs on top of the penalty, and in a proceeding commenced before June 30, 2027, so does a party seeking enforcement whose covenant merely gets reformed. ESHB 1155, enacted with a delayed effective date of June 30, 2027, will delete the reformation penalty and its fee award for proceedings commenced on or after that date. A one-way employer-favoring clause does not change that exposure.",
         "variants": [],
         "sources": [
           {
@@ -1090,6 +1138,66 @@
             "verbatimQuote": "If a court or arbitrator determines that a noncompetition covenant violates this chapter, the violator must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
             "date": "2024-06-06",
             "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-080-penalty-1"
+          },
+          {
+            "sourceId": "wa-rcw-080-reform-3",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "RCW 49.62.080",
+            "citation": "RCW 49.62.080(3).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080",
+            "proposition": "RCW 49.62.080(3) makes the party seeking enforcement pay the penalty plus fees and costs when a court reforms, rewrites, modifies, or only partially enforces a non-compete.",
+            "verbatimQuote": "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-080-reform-3"
+          },
+          {
+            "sourceId": "wa-eshb1155-section5-deletion-2",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 5 (amending RCW 49.62.080).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 5 of ESHB 1155 deletes subsection (3), the reformation penalty, from RCW 49.62.080. The session law marks deleted text by enclosing it in double parentheses and striking it through; the quote opens with that marker.",
+            "verbatimQuote": "(( (3) If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-section5-deletion-2"
+          },
+          {
+            "sourceId": "wa-eshb1155-effective-date-2",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 takes effect June 30, 2027.",
+            "verbatimQuote": "This act takes effect June 30, 2027.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-effective-date-2"
+          },
+          {
+            "sourceId": "wa-eshb1155-prior-law-proceedings-2",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 7 of ESHB 1155 amends RCW 49.62.100 so that legal proceedings commenced before June 30, 2027 remain governed by chapter 49.62 RCW as it read before that date, which keeps the reformation penalty available in those proceedings.",
+            "verbatimQuote": "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-prior-law-proceedings-2"
+          },
+          {
+            "sourceId": "wa-eshb1155-new-law-proceedings-2",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(1) (amending RCW 49.62.100).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 7 of ESHB 1155 amends RCW 49.62.100 so that the amended RCW 49.62.080, without the reformation penalty, applies to all proceedings commenced on or after June 30, 2027, regardless of when the cause of action arose.",
+            "verbatimQuote": "RCW 49.62.010, 49.62.020, 49.62.080, and 49.62.090 apply to all proceedings commenced on or after the effective date of this section, regardless of when the cause of action arose.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-new-law-proceedings-2"
           }
         ]
       },
@@ -1102,7 +1210,7 @@
         "sectionId": "severability-and-reformation",
         "itemNumber": "14.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/washington#avoid-reliance-on-judicial-reformation",
-        "requirementGuidance": "Washington courts will trim an overbroad covenant rather than void it — but trimming is a paid event. Whenever a court reforms, rewrites, modifies, or only partially enforces a covenant, the employer owes the worker the greater of actual damages or the $5,000 penalty plus fees, so read any savings clause as a record of what the overreach will cost, not a safety net. The covenant has to arrive at the courthouse already sized to the legitimate interest.",
+        "requirementGuidance": "In a proceeding commenced before June 30, 2027, a Washington court may narrow an overbroad noncompetition covenant rather than void it, but narrowing is a paid event. Whenever a court in such a proceeding reforms, rewrites, modifies, or only partially enforces a noncompetition covenant, the party seeking enforcement owes the aggrieved person the greater of actual damages or the $5,000 penalty plus fees, so a savings clause records what the overreach will cost rather than serving as a safety net. ESHB 1155, enacted with a delayed effective date of June 30, 2027, will delete that reformation penalty for proceedings commenced on or after that date. The covenant has to arrive at the courthouse already sized to the legitimate interest.",
         "variants": [],
         "sources": [
           {
@@ -1129,6 +1237,54 @@
             "verbatimQuote": "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
             "date": "2024-06-06",
             "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-080-reform-2"
+          },
+          {
+            "sourceId": "wa-eshb1155-section5-deletion-3",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 5 (amending RCW 49.62.080).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 5 of ESHB 1155 deletes subsection (3), the reformation penalty, from RCW 49.62.080. The session law marks deleted text by enclosing it in double parentheses and striking it through; the quote opens with that marker.",
+            "verbatimQuote": "(( (3) If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-section5-deletion-3"
+          },
+          {
+            "sourceId": "wa-eshb1155-effective-date-3",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 takes effect June 30, 2027.",
+            "verbatimQuote": "This act takes effect June 30, 2027.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-effective-date-3"
+          },
+          {
+            "sourceId": "wa-eshb1155-prior-law-proceedings-3",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 7 of ESHB 1155 amends RCW 49.62.100 so that legal proceedings commenced before June 30, 2027 remain governed by chapter 49.62 RCW as it read before that date, which keeps the reformation penalty available in those proceedings.",
+            "verbatimQuote": "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-prior-law-proceedings-3"
+          },
+          {
+            "sourceId": "wa-eshb1155-new-law-proceedings-3",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(1) (amending RCW 49.62.100).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "Section 7 of ESHB 1155 amends RCW 49.62.100 so that the amended RCW 49.62.080, without the reformation penalty, applies to all proceedings commenced on or after June 30, 2027, regardless of when the cause of action arose.",
+            "verbatimQuote": "RCW 49.62.010, 49.62.020, 49.62.080, and 49.62.090 apply to all proceedings commenced on or after the effective date of this section, regardless of when the cause of action arose.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-new-law-proceedings-3"
           }
         ]
       },

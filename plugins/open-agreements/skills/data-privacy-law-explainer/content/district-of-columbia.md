@@ -2,7 +2,7 @@
 jurisdiction: "District of Columbia"
 slug: district-of-columbia
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/district-of-columbia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/district-of-columbia · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # District of Columbia Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ The District of Columbia has no comprehensive consumer-privacy statute; privacy 
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | The District of Columbia has no omnibus privacy act, but its Consumer Protection Procedures Act lets consumers, testers, nonprofits, and public-interest organizations sue over deceptive data practices, and its breach law adds a reasonable-security duty, Attorney General notice at 50 affected residents, and 18 months of free identity-theft protection when a released Social Security or taxpayer identification number triggers that remedy. |
-| **Main law** | Consumer Protection Procedures Act (CPPA), D.C. Code §§ 28-3901 et seq., plus the consumer security-breach subchapter, D.C. Code §§ 28-3851–3853 — the District has no comprehensive consumer-privacy law |
+| **Main law** | No comprehensive consumer-privacy law; D.C. Code § 28-3904. D.C. Code § 28-3852(a). |
 | **Privacy policy required?** | No District statute mandates a consumer privacy policy or fixes its contents; a policy that misstates practices is an unfair or deceptive trade practice under CPPA § 28-3904(e)–(f), and GLBA, HIPAA, and COPPA supply contents where they apply |
 | **Who does it cover?** | Breach notice reaches a person or entity conducting business in the District that owns or licenses covered electronic data; security, destruction, and vendor-contract duties use the separate conduct triggers in § 28-3852.01; the CPPA reaches merchants supplying consumer goods or services; the District government itself is carved out |
 | **Can consumers sue?** | Yes |

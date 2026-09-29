@@ -2,7 +2,7 @@
 jurisdiction: "Alaska"
 slug: alaska
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/alaska · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/alaska · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Alaska Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Alaska has no comprehensive consumer-privacy statute. Article 1 of the Personal 
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Alaska has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative law covered here is Article 1 of the Personal Information Protection Act, which requires breach notice in the most expeditious time possible and makes a violation an unfair trade practice — but caps private damages at $500 of actual economic loss. The Genetic Privacy Act is the sharp edge of Alaska law, conditioning DNA collection on informed written consent and backing that with $5,000 or $100,000 statutory damages. Everything else in this Alaska-facing program note comes from the federal and sectoral overlay — FTC Act § 5, GLBA, HIPAA, and COPPA — so build to those plus the breach statute, and the program upgrades rather than restarts if Alaska enacts an omnibus law later. |
-| **Main law** | Alaska Personal Information Protection Act Article 1, AS 45.48.010–.090 — breach notification plus a deemed unfair-trade-practice enforcement bridge; Alaska has no comprehensive consumer-privacy law |
+| **Main law** | No comprehensive consumer-privacy law; AS 45.48.010(a). |
 | **Privacy policy required?** | No Alaska statute mandates a general consumer privacy policy or fixes its contents; contents are driven by FTC Act § 5 (a policy that misstates practices is deceptive) and by GLBA, HIPAA, and COPPA where the business is in scope |
 | **Who does it cover?** | Any covered person — a person doing business, a governmental agency, or a person with more than 10 employees — that owns or licenses personal information on Alaska residents; no revenue or consumer-volume threshold |
 | **Can consumers sue?** | Limited path |

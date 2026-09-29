@@ -46,6 +46,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2223795/iowa-glass-depot-inc-v-jindrich/#:~:text=The%20burden%20of%20proving%20reasonableness,to%20enforce%20such%20a%20covenant.>
 
+### iowa-glass-depot-inc-v-jindrich-the-general-rule-in-iowa-is-8e83f3bd {#iowa-glass-depot-inc-v-jindrich-the-general-rule-in-iowa-is-8e83f3bd}
+
+> The general rule in Iowa is that we will enforce a noncompetitive provision in an employment contract if the covenant is reasonably necessary for the protection of the employer's business and is not unreasonably restrictive of the employee's rights nor prejudicial to the public interest.
+
+- supports: `holdover-clause-limit`
+- source_cards: `iowa-glass-general-rule`
+- cited_by: [Employee Invention Assignment in Iowa](../invention-assignment/us/iowa.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2223795/iowa-glass-depot-inc-v-jindrich/#:~:text=The%20general%20rule%20in%20Iowa,prejudicial%20to%20the%20public%20interest.>
+
 ### iowa-glass-depot-inc-v-jindrich-thus-while-his-continued-employment-b4e5a784 {#iowa-glass-depot-inc-v-jindrich-thus-while-his-continued-employment-b4e5a784}
 
 > Thus, while his continued employment served as sufficient consideration for the restrictive covenant, we view Jindrich's gain from the contract to be grossly disproportionate to the injury he would sustain from enforcement of the restrictive covenant.

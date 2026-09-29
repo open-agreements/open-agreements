@@ -87,7 +87,7 @@ The substantive test comes from *Dominic Wenzell, D.M.D. P.C. v. Ingrim*, which,
 
 "(a) the restraint is greater than is needed to protect the promisee's legitimate interest, or (b) the promisee's need is outweighed by the hardship to the promisor and the likely injury to the public."[^wenzell-restatement-188]
 
-One flag on *Wenzell*: it applied that balancing test to a covenant ancillary to the sale of a dental practice, a category Alaska scrutinizes less strictly than employment covenants, so its holding does not set the employment-side standard — the employment-side weight is carried by *Data Management* and *DeCristofaro*.
+One flag on *Wenzell* [^wenzell-sale-of-business]: it applied that balancing test to a covenant ancillary to the sale of a dental practice, a question the court treated as one of first impression, separate from its employment-covenant cases, so its holding does not set the employment-side standard — the employment-side weight is carried by *Data Management* [^data-management-reasonable-alteration] and *DeCristofaro* [^decristofaro-strict-construction].
 
 The distinctive Alaska feature is remedial. In *Data Management, Inc. v. Greene*, the court rejected both the rule that an overbroad covenant is simply void and the mechanical blue-pencil rule, and adopted reasonable alteration — with the burden on the employer [^data-management-reasonable-alteration].
 
@@ -130,6 +130,8 @@ All of this is conditional. Whether Alaska would classify a trailing invention-a
 [^data-management-reasonable-alteration]: **Data Management, Inc. v. Greene** — "The third approach, and the one we adopt, is to hold that if an overbroad covenant not to compete can be reasonably altered to render it enforceable, then the court shall do so unless it determines the covenant was not drafted in good faith. The burden of proving that the covenant was drafted in good faith is on the employer." *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 64 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20third%20approach%2C%20and%20the,faith%20is%20on%20the%20employer.>
 
 [^wenzell-restatement-188]: **Dominic Wenzell, DMD PC v. Ingrim** — "(a) the restraint is greater than is needed to protect the promisee's legitimate interest, or (b) the promisee's need is outweighed by the hardship to the promisor and the likely injury to the public." *Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103 (Alaska 2010) (quoting Restatement (Second) of Contracts § 188(1)).* <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=(a)%20the%20restraint%20is%20greater,likely%20injury%20to%20the%20public.>
+
+[^wenzell-sale-of-business]: **Dominic Wenzell, DMD PC v. Ingrim** — "The enforceability of a non-competition agreement ancillary to the sale of a business is an issue of first impression in Alaska." *Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103 (Alaska 2010).* <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=The%20enforceability%20of%20a%20non%2Dcompetition,of%20first%20impression%20in%20Alaska.>
 
 [^data-management-good-faith-gate]: **Data Management, Inc. v. Greene** — "The trial court must determine whether an employer has overreached willfully and, if so, the court should refuse to alter the covenant." *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20trial%20court%20must%20determine,refuse%20to%20alter%20the%20covenant.>
 

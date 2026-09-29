@@ -2,7 +2,7 @@
 jurisdiction: "Tennessee"
 slug: tennessee
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/tennessee · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/tennessee · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Tennessee Consumer Privacy Law (TIPA)[^about]
 
@@ -30,7 +30,7 @@ The Tennessee Information Protection Act gives Tennessee consumers rights over t
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you exceed the $25 million revenue floor and meet Tennessee's large consumer-volume tests, TIPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with a 60-day cure period and no consumer lawsuits, and uniquely offering an affirmative defense to businesses that maintain a written privacy program conforming to the NIST privacy framework. |
-| **Main law** | Tenn. Code Ann. §§ 47-18-3301 et seq. (Tennessee Information Protection Act) |
+| **Main law** | Tenn. Code Ann. § 47-18-3303. |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Tennessee (or targeting residents) that exceed $25 million in revenue AND either process the information of 175,000+ consumers a year, or 25,000+ while deriving over 50% of gross revenue from selling personal information — a high entry bar; nonprofits, government, GLBA, HIPAA, and higher-education entities exempt |
 | **Can consumers sue?** | No |

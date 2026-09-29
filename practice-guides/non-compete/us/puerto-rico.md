@@ -60,7 +60,7 @@ Timing is the practical trap. In *Cherena v. Coors Brewing Co.*, the federal cou
 
 "Such a consideration in this jurisdiction must be forthcoming at the moment the agreement was entered into and not at the moment of discharge from employment."[^cherena-timing]
 
-The consideration rule is specific to non-competes. In *Soto v. State Industrial Products, Inc.*, the First Circuit declined to extend *Arthur Young*'s special consideration requirement to an arbitration agreement [^soto-scope], a reminder that the *Arthur Young* line is a targeted restrictive-covenant doctrine rather than a general contract rule.
+The consideration rule is specific to non-competes. *Arthur Young*'s special consideration requirement [^ay-consideration] is a targeted restrictive-covenant doctrine rather than a general contract rule. In *Soto v. State Industrial Products, Inc.*, the First Circuit declined to extend the Puerto Rico Supreme Court's continued-employment rule to an arbitration agreement [^soto-scope].
 
 ## How does Puerto Rico treat NDAs, non-solicits, and confidentiality clauses? {#other-covenants}
 
@@ -77,11 +77,11 @@ A genuinely separate covenant can survive, however, even when the non-compete fa
 
 ## How specific must the geographic and customer scope be? {#scope-territory-clients}
 
-**Short answer.** A covenant does not need both a geographic limit and a customer limit; one of them suffices. In *Reyes Ramis CPA Group, P.S.C. v. Serra Torres*, the Supreme Court held that it is not correct to require every non-compete to contain both a territorial and a client restriction [^rr-disjunctive].
+**Short answer.** A covenant does not need both a geographic limit and a customer limit; one of them suffices. *Arthur Young* requires the scope of the prohibition to correspond to the employer's interest as to its object, term, and place of restriction or affected clients [^ay-scope-place-or-clients].
 
-This is a meaningful clarification of *Arthur Young*. The Court explained that it never made a combined geographic-and-client limitation a constitutive requirement of a valid covenant [^rr-scope]. A covenant that is tightly limited to the customers an employee actually served can be reasonable even without a geographic radius, and vice versa.
+A concurring opinion in *Reyes Ramis CPA Group, P.S.C. v. Serra Torres*, by Justice Kolthoff Caraballo and joined by three other justices, read *Arthur Young* [^ay-scope-place-or-clients] the same way: it explained that the Court never made a combined geographic-and-client limitation a constitutive requirement of a valid covenant, and that one of the two suffices [^rr-scope][^rr-disjunctive][^rr-concurrence]. A covenant that is tightly limited to the customers an employee actually served can be reasonable even without a geographic radius, and vice versa.
 
-*Reyes Ramis* also confirms that the strict *Arthur Young* requirements are an employment-law doctrine. The Court held that a non-compete tied to a stock-redemption arrangement among owners did not have to conform fully to the strict conditions established in *Arthur Young* [^rr-stock]. Covenants ancillary to the sale of a business or an ownership exit are analyzed more flexibly than employer-employee restraints.
+The Supreme Court's judgment in *Reyes Ramis* held valid a certified public accountant's 16-month covenant not to serve the clientele that the firm had developed [^rr-judgment]. The reasoning that a covenant tied to a stock-redemption arrangement among owners did not have to conform fully to the strict conditions set for employee covenants comes from a concurring opinion by Justice Kolthoff Caraballo, joined by three other justices, not from an opinion of the Court [^rr-stock][^rr-concurrence]. That concurrence described *Arthur Young* as a case arising from a typical employer-employee relationship with a clear disparity in bargaining power [^rr-employment-frame][^rr-ay-test].
 
 ## Does the restricted period toll or extend if the employee breaches? {#extended-for-breach}
 
@@ -134,11 +134,21 @@ The practical takeaway is stability with a narrow margin. Because the framework 
 
 [^cherena-severable]: **Cherena v. Coors Brewing Co.** — "Thus, although the non-competition clause is null and void, the rest of the provisions contained in the Agreement, including the non-disclosure provisions, are valid and enforceable." *Cherena v. Coors Brewing Co., 20 F. Supp. 2d 282 (D.P.R. 1998).* <https://www.courtlistener.com/opinion/2423610/cherena-v-coors-brewing-co/#:~:text=Thus%2C%20although%20the%20non%2Dcompetition%20clause,provisions%2C%20are%20valid%20and%20enforceable.>
 
-[^rr-disjunctive]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "Por lo tanto, no es correcto afirmar que todo contrato de no competencia debe contener una restricción territorial y de clientela, basta con una de ellas." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 194 D.P.R. ___ (2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+[^ay-scope-place-or-clients]: **Arthur Young & Co. v. Vega III** — "Segundo, el alcance de la prohibición debe corresponder con el interés del patrono, en cuanto a objeto, término y lugar de restricción o clientes afectados." *Arthur Young & Co. v. Vega III, 136 D.P.R. 157 (1994).* <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 
 [^rr-scope]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "No obstante, es importante destacar que esta Curia no estableció como requisito constitutivo de un acuerdo de no competencia el que se limite geográficamente las restricciones impuestas y los clientes que estarán comprendidos." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 194 D.P.R. ___ (2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
 
+[^rr-disjunctive]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "Por lo tanto, no es correcto afirmar que todo contrato de no competencia debe contener una restricción territorial y de clientela, basta con una de ellas." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 194 D.P.R. ___ (2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
+[^rr-concurrence]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "El Juez Asociado señor Kolthoff Caraballo emitió Opinión de Conformidad a la cual se unieron los Jueces Asociados señores Martínez Torres, Rivera García y Feliberti Cintrón." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 2016 TSPR 126 (P.R. 2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
+[^rr-judgment]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "En el presente caso , concluimos que la cláusula de restricción que contrató la CPA Liza Serra Torres de no atender por un término de 16 meses la clientela que Reyes Ramis CPA Group, P.S.C. posee y desarrolló por su cuenta, es válida." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 2016 TSPR 126 (P.R. 2016) (Sentencia).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
 [^rr-stock]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "Por lo tanto, contrario a la conclusión a la que llegaron los foros inferiores, la cláusula de no competencia bajo análisis no tenía que ajustarse íntegramente a las estrictas condiciones establecidas en Arthur Young & Co. v. Vega III , supra." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 194 D.P.R. ___ (2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
+[^rr-employment-frame]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "Es claro que Arthur Young, supra, es un caso que se enmarca en una relación típica de patrono-empleado, en la que existe una clara disparidad entre las fuerzas para negociar al establecer la cláusula de no competencia." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 194 D.P.R. ___ (2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
+[^rr-ay-test]: **Arthur Young & Co. v. Vega III** — "Para ser razonable, un acuerdo de no competir debe reunir los siguientes requisitos: (1) debe ser necesario para proteger un interés legítimo del patrono, (2) no debe imponer al empleado una carga demasiado onerosa, (3) y no debe afectar demasiado al público." *Arthur Young & Co. v. Vega III, 136 D.P.R. 157 (1994).* <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 
 [^ay-duration-2]: **Arthur Young & Co. v. Vega III** — "El término de no competencia no debe exceder de doce meses, entendiéndose que cualquier tiempo adicional es excesivo e innecesario para proteger adecuadamente al patrono." *Arthur Young & Co. v. Vega III, 136 D.P.R. 157 (1994).* <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 

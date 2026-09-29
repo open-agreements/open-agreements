@@ -2,7 +2,7 @@
 jurisdiction: "New York"
 slug: new-york
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-york · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-york · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New York[^about]
 
@@ -30,7 +30,7 @@ New York has no general non-compete statute; employee non-competes are enforceab
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | New York has no general non-compete statute; employee non-competes are enforceable only to the extent reasonable under the common-law BDO Seidman three-part test, with a statutory ban only for broadcast-industry employees. |
-| **Main law or case** | BDO Seidman v. Hirshberg, 93 N.Y.2d 382 (1999) |
+| **Main law or case** | Common law governs, with a broadcast-industry ban; BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 388 (1999). N.Y. Lab. Law § 202-k(2). |
 | **Main exceptions** | Broadcast-employee ban (N.Y. Labor Law § 202-k); sale-of-business/goodwill more favorable |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |

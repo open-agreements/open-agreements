@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Colorado[^about]
 
@@ -28,9 +28,9 @@ Colorado makes most employee non-competes and customer non-solicits void by stat
 
 | Question | Colorado |
 | --- | --- |
-| **Are non-competes enforceable?** | Allowed above a pay level |
+| **Are non-competes enforceable?** | Income-based limits |
 | **Bottom line** | Colorado voids most employee non-competes and customer non-solicits, allowing a non-compete only against a highly compensated worker ($130,014 in 2026) to protect trade secrets — and no compensation level rescues a covenant restricting the practice of medicine, advanced practice registered nursing, or dentistry. |
-| **Main law or case** | C.R.S. § 8-2-113 |
+| **Main law or case** | C.R.S. § 8-2-113(2)(a). C.R.S. § 8-2-113(2)(b). |
 | **Main exceptions** | Health-care provider ban (eff. Aug 6, 2025, SB 25-083); sale-of-business; reasonable confidentiality; capped training-repayment |
 | **When the ban took effect** | Aug 10, 2022 (covenants entered or renewed on/after; HB 22-1317) |
 | **Can a court narrow it?** | Unsettled |

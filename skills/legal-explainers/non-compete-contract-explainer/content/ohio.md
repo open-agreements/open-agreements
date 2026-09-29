@@ -2,7 +2,7 @@
 jurisdiction: "Ohio"
 slug: ohio
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/ohio · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/ohio · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Ohio[^about]
 
@@ -30,7 +30,7 @@ Ohio enforces non-competes only when the restraint is reasonable under the Raimo
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Ohio enforces an employee non-compete only to the extent it is reasonable under the Raimonde test — no broader than needed to protect the employer, not unduly harsh on the employee, and not injurious to the public. |
-| **Main law or case** | Raimonde v. Van Vlerah, 42 Ohio St. 2d 21 (1975) |
+| **Main law or case** | Common law governs employee non-competes; Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975). |
 | **Main exceptions** | Physician public-interest scrutiny; pending S.B. 301 (nonprofit-hospital cap) and S.B. 11 (broad ban) not enacted |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |

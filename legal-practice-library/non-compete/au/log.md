@@ -1,5 +1,13 @@
 # Au Update Log
 
+## 2026-09-28
+* **Update**: content(non-compete): link Main law to source cards (3e5fa1f)
+* **Update**: One chip per named case: Illinois privacy and non-U.S. non-compete guides (#2900 batch A) (#2914) (5aac21b)
+* **Update**: content(non-compete): Main law statements say only what the linked cards support (88efb3e)
+
+## 2026-09-26
+* **Update**: fix: replace public evidence workflow jargon and prevent recurrence (#2741) (5a7454b)
+
 ## 2026-09-18
 * **Update**: content: neutralize Australian guide cautions (#2739) (aeaab49)
 

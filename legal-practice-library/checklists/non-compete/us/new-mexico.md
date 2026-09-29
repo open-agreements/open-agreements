@@ -113,7 +113,7 @@ Review every item below the way a New Mexico court would: an ordinary covenant l
 
 ## Tolling during breach {#tolling-during-breach}
 
-- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as an open New Mexico question. The staged cases enforce or reform fixed restricted periods and announce no tolling rule, so a tolling clause should be drafted as its own restraint, tied to proven breach and a legitimate interest, with no assumption that a court will add time after the original period expires. [^kidskare-fixed-period] [#address-tolling-during-breach]
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as an open New Mexico question. The identified cases enforce or reform fixed restricted periods and announce no tolling rule, so a tolling clause should be drafted as its own restraint, tied to proven breach and a legitimate interest, with no assumption that a court will add time after the original period expires. [^kidskare-fixed-period] [#address-tolling-during-breach]
 
 ## Remedies {#remedies}
 

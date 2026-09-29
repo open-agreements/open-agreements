@@ -57,6 +57,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=It%20appears%20from%20the%20record,in%20need%20of%20such%20care.>
 
+### dominic-wenzell-dmd-pc-v-ingrim-the-enforceability-of-a-non-competition-1d9de1e1 {#dominic-wenzell-dmd-pc-v-ingrim-the-enforceability-of-a-non-competition-1d9de1e1}
+
+> The enforceability of a non-competition agreement ancillary to the sale of a business is an issue of first impression in Alaska.
+
+- supports: `holdover-clause-limit`
+- source_cards: `wenzell-sale-of-business`
+- cited_by: [Employee Invention Assignment in Alaska](../invention-assignment/us/alaska.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=The%20enforceability%20of%20a%20non%2Dcompetition,of%20first%20impression%20in%20Alaska.>
+
 ### dominic-wenzell-dmd-pc-v-ingrim-under-the-second-prong-the-superior-279e0e8a {#dominic-wenzell-dmd-pc-v-ingrim-under-the-second-prong-the-superior-279e0e8a}
 
 > Under the second prong, the superior court must balance Wen-zell's need to protect the goodwill he purchased with the hardship to Ingrim from enforcing the covenant and the likely injury to the public.

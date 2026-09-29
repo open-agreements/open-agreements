@@ -41,6 +41,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
+### woolworths-ltd-v-olson-merely-because-the-law-offers-a-4d5d2035 {#woolworths-ltd-v-olson-merely-because-the-law-offers-a-4d5d2035}
+
+> Merely because the law offers a degree of protection against the unauthorised use or dissemination of trade secrets by former employees does not mean that contractual protection is necessarily unreasonable or unavailable.
+
+- supports: `legitimate-interest`
+- source_cards: `olson-trade-secrets`
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
+- link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
+
 ### woolworths-ltd-v-olson-section-4-1-allows-the-court-to-e44275c8 {#woolworths-ltd-v-olson-section-4-1-allows-the-court-to-e44275c8}
 
 > Section 4(1) allows the court to ignore the fact that the restraint goes beyond what is reasonable, provided the restraint can be enforced to an extent that is reasonable.
@@ -102,4 +111,13 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - supports: `employee-non-compete-enforceability`, `reasonableness`, `reasonableness-factors`, `tolling`
 - source_cards: `olson-tested-at-contract`, `olson-tested-at-contract-reasonableness`, `olson-tested-at-contract-tolling`
 - cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
+- link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
+
+### woolworths-ltd-v-olson-these-interests-go-beyond-protection-of-f91534bb {#woolworths-ltd-v-olson-these-interests-go-beyond-protection-of-f91534bb}
+
+> These interests go beyond protection of goodwill and retention of customers and extend to trade secrets (Heydon, op cit, pp87-8, Knogo Corporation v Halligan (1984) ATPR ¶40-460, Kone Elevators Pty Ltd v McNay & Anor (1997) ATPR ¶41-564).
+
+- supports: `legitimate-interest`
+- source_cards: `olson-interests-extend`
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>

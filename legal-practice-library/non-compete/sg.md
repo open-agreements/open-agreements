@@ -50,7 +50,7 @@ How real this requirement is was shown in 2025. In *FirstCom Academy Pte Ltd v O
 
 **Short answer.** Usually not, without more. If the confidential information is already protected by a separate confidentiality clause, the employer must show the non-compete protects a legitimate interest *over and above* that information — otherwise the court treats the non-compete as a bare attempt to stifle competition and strikes it down [^shopee-over-and-above].
 
-This is the single most important trap in Singapore non-compete drafting. The reasoning, which traces back to *Stratech Systems Ltd v Nyam Chiu Shin* and was reaffirmed in *Man Financial*, is that if a confidentiality clause already does the protective work, a non-compete adds nothing legitimate unless the employer can identify a distinct interest *over and above* that confidentiality protection — otherwise its real purpose must be to prevent competition, which is not a protectable interest.
+This is the single most important trap in Singapore non-compete drafting. The reasoning, which traces back to *Stratech Systems Ltd v Nyam Chiu Shin* [^stratech-over-and-above] and was reaffirmed in *Man Financial* [^mf-over-and-above], is that if a confidentiality clause already does the protective work, a non-compete adds nothing legitimate unless the employer can identify a distinct interest *over and above* that confidentiality protection — otherwise its real purpose must be to prevent competition, which is not a protectable interest.
 
 "Where the protection of confidential information or trade secrets is already covered by another contractual clause, the covenantee will have to demonstrate that the restraint of trade clause in question covers a legitimate proprietary interest over and above the protection of confidential information or trade secrets."[^shopee-over-and-above]
 
@@ -141,16 +141,11 @@ Damages are the weaker tool. Even where an injunction issues, a claim for damage
 
 ## Are new MOM guidelines on non-competes coming? {#upcoming-guidance}
 
-**Short answer.** They are being discussed, but none is in force yet. In its March 2026 Committee of Supply statement, the Ministry of Manpower confirmed it was still discussing with its tripartite partners how and when restraint-of-trade clauses should be used, and that any guidelines will be based on principles the courts have already articulated [^mom-cos]. The Ministry first signalled this in January 2025 [^mom-pq], and as of June 2026 no guideline has been published. Until one is issued, the common-law framework set out above governs.
+**Short answer.** As of the September 26, 2026 review, the most recent Ministry of Manpower statement cited here, its March 3, 2026 Committee of Supply speech, said the Ministry was still discussing restraint-of-trade guidelines with its tripartite partners and that any guidelines will be based on principles the courts have already articulated [^mom-cos]. The Ministry first signalled this in January 2025 [^mom-pq]. The common-law restraint-of-trade framework set out above governs Singapore non-competes.
 
-The Ministry of Manpower, the National Trades Union Congress, and the Singapore National Employers Federation have signalled that tripartite guidelines are coming — likely addressing the use of restraints for lower-wage workers and in retrenchment scenarios — but the guidance has not been published and would, in any event, restate principles the courts already apply rather than override them.
+In its January 2025 written answer, the Ministry of Manpower said it was discussing the guidelines with the National Trades Union Congress and the Singapore National Employers Federation, and that they would be based on established principles the courts have articulated, so a future guideline would restate the principles the courts already apply rather than override them [^mom-pq].
 
 "The Ministry of Manpower is discussing with its tripartite partners – the National Trades Union Congress and the Singapore National Employers Federation – on how and when restrictive clauses in employment contracts can and should be used, based on established principles that the Courts have articulated."[^mom-pq]
-
-> [!NOTE]
-> **Practice note.**
->
-> Do not draft to an anticipated tripartite guideline that does not yet exist. No MOM restraint-of-trade guideline is in force as of June 2026, so the enforceability of a Singapore non-compete still turns entirely on the common-law restraint-of-trade test, and any future guideline is expected to build on those same court-articulated principles [^mom-pq].
 
 
 
@@ -171,6 +166,10 @@ The Ministry of Manpower, the National Trades Union Congress, and the Singapore 
 [^firstcom-no-lpi]: **FirstCom Academy Pte Ltd v Oom Academy Pte Ltd** — "The Restraint of Trade Clauses in Mr Chew's and Ms Leong's LOAs are unenforceable on account of FCA failing to prove that it has a legitimate proprietary interest which ought to be protected by way of a restraint of trade clause." *FirstCom Academy Pte Ltd v Oom Academy Pte Ltd [2025] SGHC 266.* <https://www.elitigation.sg/gd/s/2025_SGHC_266>
 
 [^shopee-over-and-above]: **Shopee Singapore Pte Ltd v Lim Teck Yong** — "Where the protection of confidential information or trade secrets is already covered by another contractual clause, the covenantee will have to demonstrate that the restraint of trade clause in question covers a legitimate proprietary interest over and above the protection of confidential information or trade secrets." *Shopee Singapore Pte Ltd v Lim Teck Yong [2024] SGHC 29.* <https://www.elitigation.sg/gd/s/2024_SGHC_29>
+
+[^stratech-over-and-above]: **Stratech Systems Ltd v Nyam Chiu Shin** — "However, we were of the view that this evidence did not demonstrate any legitimate interest over and above the protection of confidential information." *Stratech Systems Ltd v Nyam Chiu Shin (alias Yan Qiuxin) [2005] SGCA 17; [2005] 2 SLR(R) 579.* <https://www.elitigation.sg/gd/s/2005_SGCA_17>
+
+[^mf-over-and-above]: **Man Financial (S) Pte Ltd v Wong Bark Chuan David** — "More importantly, Stratech reaffirms (at [48]–[49]) the proposition that where the protection of confidential information or trade secrets is already covered by another clause in the contract, the covenantee will have to demonstrate that the restraint of trade clause in question covers a legitimate proprietary interest over and above the protection of confidential information or trade secrets." *Man Financial (S) Pte Ltd v Wong Bark Chuan David [2007] SGCA 53; [2008] 1 SLR(R) 663.* <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
 
 [^shopee-serious-doubts]: **Shopee Singapore Pte Ltd v Lim Teck Yong** — "As set out above, given that such an interest in the protection of confidential information is already protected elsewhere by the ECA, there are serious doubts that Shopee would be able to rely on such an interest in asserting the validity of the Non-Competition Restriction." *Shopee Singapore Pte Ltd v Lim Teck Yong [2024] SGHC 29.* <https://www.elitigation.sg/gd/s/2024_SGHC_29>
 

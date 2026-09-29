@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Mexico[^about]
 
@@ -30,7 +30,7 @@ New Mexico enforces ordinary employee non-competes only when they are reasonable
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | New Mexico enforces ordinary employee non-competes only when reasonable and supported by valid consideration, but a statute makes covered health-care practitioner non-competes unenforceable. |
-| **Main law or case** | Lovelace Clinic v. Murphy, 76 N.M. 645 (1966); NMSA 1978, § 24A-4-2 |
+| **Main law or case** | Common law governs, with a health-care practitioner statute; Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966). NMSA 1978, § 24A-4-2(A). |
 | **Main exceptions** | Health-care practitioner ban (§ 24A-4-2); sale-of-business more lenient |
 | **Can a court narrow it?** | Unsettled |
 | **Applies to contractors?** | — |
@@ -100,11 +100,11 @@ The drafting takeaway is direct: include an express severability and reformation
 > [!CAUTION]
 > **Drafting note.**
 >
-> A bare overbroad New Mexico covenant has no assured rescue: the only staged authority for narrowing one is contract-based, upheld precisely because the agreement itself authorized amendment of an unenforceable provision, and the court declined to decide whether a court may narrow an overbroad covenant without that language [^kidskare-contract-reformation][^kidskare-no-general-ruling]. An express reformation and severability clause supplies that basis, but a primary restriction drawn narrowly at the outset is what survives without needing it.
+> A bare overbroad New Mexico covenant has no assured rescue: the only identified authority for narrowing one is contract-based, upheld precisely because the agreement itself authorized amendment of an unenforceable provision, and the court declined to decide whether a court may narrow an overbroad covenant without that language [^kidskare-contract-reformation][^kidskare-no-general-ruling]. An express reformation and severability clause supplies that basis, but a primary restriction drawn narrowly at the outset is what survives without needing it.
 
 ## Does a New Mexico non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
-**Short answer.** This is an open New Mexico question. The staged New Mexico non-compete cases and statutes do not squarely say that a court may automatically toll or extend a non-compete's restricted period while the former employee is allegedly breaching or while litigation is pending [^q6-lovelace-fixed-period][^q6-kidskare-fixed-period].
+**Short answer.** This is an open New Mexico question. The identified New Mexico non-compete cases and statutes do not squarely say that a court may automatically toll or extend a non-compete's restricted period while the former employee is allegedly breaching or while litigation is pending [^q6-lovelace-fixed-period][^q6-kidskare-fixed-period].
 
 The existing cases enforce or reform fixed restraints under a reasonableness framework. *Lovelace* enforced a physician covenant through the end of the contract's three-year period [^q6-lovelace-fixed-period]. *KidsKare* upheld a reformed one-year and thirty-mile restraint based on the contract's reformation language and the district court's reasonableness findings [^q6-kidskare-fixed-period]. Neither case announces a tolling rule.
 

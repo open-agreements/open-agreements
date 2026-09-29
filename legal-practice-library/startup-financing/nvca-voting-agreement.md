@@ -28,7 +28,7 @@ The Qualified Key Holder definition uses selected service conditions, including 
 
 **Short answer.** The June 2026 NVCA Voting Agreement offers director-designation rights subject to the selected ownership, service and eligibility conditions; an inapplicable designation or one that would violate applicable sanctions falls back to the stockholders entitled to vote under the charter. [^nvca-voting-preferred-designation] [^nvca-voting-common-designation] [^nvca-voting-designation-fallback]
 
-This guide follows the [June 2026 NVCA model](https://nvca.org/wp-content/uploads/2026/06/Voting-Agreement-Updated-June-2026.docx). The [reviewer checklist](/checklists/venture-financing/nvca-voting-agreement) applies the same baseline to a draft. Model wording and selected alternatives are contractual terms, not measurements of market practice. [Not legal advice](/disclaimer).
+This guide follows the [June 2026 NVCA model](https://nvca.org/wp-content/uploads/2026/06/Voting-Agreement-Updated-June-2026.docx). The [reviewer checklist](/checklists/venture-financing/nvca-voting-agreement) applies the same baseline to a draft. Model wording and selected alternatives are contractual terms, not measurements of market practice.
 
 Delaware Section 218(c) permits two or more stockholders to agree in a signed writing how their shares will be voted. [^dgcl-stockholder-voting-agreement]
 

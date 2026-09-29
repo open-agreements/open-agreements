@@ -2,11 +2,11 @@
 type: Case Excerpt
 title: Bulk Frozen Foods Pty Ltd v Excell
 description: >-
-  Bulk Frozen Foods Pty Ltd v Excell [2014] TASSC 58 (Blow CJ), recording a
-  submission of senior counsel for the defendant. — quoted in 1 document(s).
+  Bulk Frozen Foods Pty Ltd v Excell [2014] TASSC 58 (Blow CJ), citing Lindner v
+  Murdock's Garage (1950) 83 CLR 628. — quoted in 1 document(s).
 citation: >-
-  Bulk Frozen Foods Pty Ltd v Excell [2014] TASSC 58 (Blow CJ), recording a
-  submission of senior counsel for the defendant.
+  Bulk Frozen Foods Pty Ltd v Excell [2014] TASSC 58 (Blow CJ), citing Lindner v
+  Murdock's Garage (1950) 83 CLR 628.
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html'
 timestamp: '2026-06-10'
 document_references:
@@ -19,7 +19,7 @@ tags:
 
 # Bulk Frozen Foods Pty Ltd v Excell
 
-*Bulk Frozen Foods Pty Ltd v Excell [2014] TASSC 58 (Blow CJ), recording a submission of senior counsel for the defendant.*
+*Bulk Frozen Foods Pty Ltd v Excell [2014] TASSC 58 (Blow CJ), citing Lindner v Murdock's Garage (1950) 83 CLR 628.*
 
 Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
 
@@ -101,8 +101,8 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > The reasonableness or otherwise of a restraint of trade must be judged by reference to the circumstances at the time of the contract: Lindner v Murdock's Garage [1950] HCA 48 ; (1950) 83 CLR 628 at 653.
 
-- supports: `garden-leave`, `reasonableness-factors`, `tolling`
-- source_cards: `bulk-tested-at-contract`, `bulk-tested-at-contract-gl`, `bulk-tested-at-contract-tolling`
+- supports: `enforceability`, `garden-leave`, `reasonableness-factors`, `tolling`
+- source_cards: `bulk-reasonableness-at-contract`, `bulk-tested-at-contract`, `bulk-tested-at-contract-gl`, `bulk-tested-at-contract-tolling`
 - cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 

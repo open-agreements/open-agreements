@@ -37,6 +37,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Employee Invention Assignment in Kansas](../invention-assignment/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.>
 
+### weber-v-tillman-plaintiff-employer-and-defendant-b6f62fdd {#weber-v-tillman-plaintiff-employer-and-defendant-b6f62fdd}
+
+> Plaintiff employer and defendant employee, both dermatologists, entered into an employment contract which included a covenant not to compete should the employment cease for any reason.
+
+- supports: `healthcare`
+- source_cards: `healthcare-weber-dermatologists`
+- cited_by: [Non-Competes in Kansas](../non-compete/us/kansas.md)
+- link_to_source: <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=Plaintiff%20employer%20and%20defendant%20employee%2C,employment%20cease%20for%20any%20reason.>
+
 ### weber-v-tillman-the-analysis-of-whether-the-873c5a8e {#weber-v-tillman-the-analysis-of-whether-the-873c5a8e}
 
 > The analysis of whether the noncompetition clause is reasonable evaluates these factors: (1) Does the covenant protect a legitimate business interest of the employer? (2) Does the covenant create an undue burden on the employee? (3) Is the covenant injurious to the public welfare? (4) Are the time and territorial limitations contained in the covenant reasonable?
@@ -45,3 +54,12 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - source_cards: `q2-weber-four-factor`, `weber-four-factor-cover`, `weber-four-factor-gate`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=The%20analysis%20of%20whether%20the,contained%20in%20the%20covenant%20reasonable%3F>
+
+### weber-v-tillman-we-are-required-to-enforce-the-345bc507 {#weber-v-tillman-we-are-required-to-enforce-the-345bc507}
+
+> We are required to enforce the noncompetition covenant and affirm the trial court’s grant of an injunction.
+
+- supports: `healthcare`
+- source_cards: `healthcare-weber-enforced`
+- cited_by: [Non-Competes in Kansas](../non-compete/us/kansas.md)
+- link_to_source: <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=We%20are%20required%20to%20enforce,court%E2%80%99s%20grant%20of%20an%20injunction.>

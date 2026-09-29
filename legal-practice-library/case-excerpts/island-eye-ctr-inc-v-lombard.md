@@ -78,6 +78,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - cited_by: [Employee Invention Assignment in Guam](../invention-assignment/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
+### island-eye-ctr-inc-v-lombard-the-edwards-court-found-that-an-43194b2c {#island-eye-ctr-inc-v-lombard-the-edwards-court-found-that-an-43194b2c}
+
+> The Edwards court found that an eighteen-month bar on performing professional services to former clients restricted the employee's ability to practice his profession and was therefore invalid.
+
+- supports: `non-solicitation`
+- source_cards: `q2-ie-edwards`
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
+- link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
+
 ### island-eye-ctr-inc-v-lombard-therefore-we-hold-that-section-88105-378cb126 {#island-eye-ctr-inc-v-lombard-therefore-we-hold-that-section-88105-378cb126}
 
 > Therefore, we hold that section 88105 evidences public policy for employee mobility and every citizen's right to pursue lawful employment or enterprise of his or her choice.

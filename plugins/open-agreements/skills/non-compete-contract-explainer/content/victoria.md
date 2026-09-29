@@ -2,7 +2,7 @@
 jurisdiction: "Victoria, Australia"
 slug: victoria
 countryCode: AU
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/victoria · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/victoria · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Victoria[^about]
 
@@ -30,7 +30,7 @@ In Victoria a post-employment non-compete is presumptively void as a restraint o
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | A Victorian non-compete is presumptively void and binds a former employee only so far as it is reasonable to protect a legitimate interest; there is no statutory read-down power, so a court can only strike out grammatically severable words under the blue-pencil rule, and a carefully drafted multi-limb restraint that severance cannot save fails entirely. |
-| **Main law or case** | Common-law restraint of trade (no equivalent of the NSW Restraints of Trade Act 1976) |
+| **Main law or case** | Common-law restraint of trade governs; Just Group Ltd v Peck [2016] VSCA 334 (the Court). |
 | **Main exceptions** | Sale-of-business covenants are judged more leniently; a proposed federal ban would, if enacted, cover most employees earning under the Fair Work Act high-income threshold (with sale-of-business and above-threshold restraints reported to be excluded), but it is not yet law. |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Yes |
@@ -45,7 +45,7 @@ Victoria is not a per se ban jurisdiction, and it has no statute that sets fixed
 
 "A term in a contract, which is a restraint of trade ('a restraint clause'), is presumed to be void as contrary to public policy."[^just-presumed-void]
 
-Courts apply the doctrine more strictly to employment covenants than to covenants in commercial deals, because an employer is not entitled to be protected from ordinary competition by a former employee [^lindner-face-competition]. The foundational High Court authorities — *Nordenfelt v Maxim Nordenfelt Guns and Ammunition Co* and *Buckley v Tutty* — establish the same framework that Victorian courts continue to apply. The sections that follow work through whether a court can narrow an overbroad clause, why cascading clauses do not guarantee enforcement, what counts as a legitimate interest, how reasonableness of scope is judged, what happens when the employer is the party in breach, and the open question of whether a breach can extend the restraint.
+Courts apply the doctrine more strictly to employment covenants than to covenants in commercial deals, because an employer is not entitled to be protected from ordinary competition by a former employee [^lindner-face-competition]. The High Court stated the starting point in *Lindner v Murdock's Garage*: any contractual restraint of trade is prima facie invalid [^lindner-prima-facie]. The Victorian Court of Appeal restated the presumption in 2016 [^just-presumed-void]. The sections that follow work through whether a court can narrow an overbroad clause, why cascading clauses do not guarantee enforcement, what counts as a legitimate interest, how reasonableness of scope is judged, what happens when the employer is the party in breach, and the open question of whether a breach can extend the restraint.
 
 ## Can a Victorian court narrow an overbroad non-compete? {#court-narrowing}
 

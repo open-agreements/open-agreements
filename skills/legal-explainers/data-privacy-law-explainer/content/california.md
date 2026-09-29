@@ -2,7 +2,7 @@
 jurisdiction: "California"
 slug: california
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/california · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/california · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # California Consumer Privacy Law (CCPA/CPRA)[^about]
 
@@ -30,7 +30,7 @@ California's Consumer Privacy Act, as amended by the CPRA, gives consumers right
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If your business meets a CCPA threshold, you must post a CCPA-compliant privacy policy, honor consumer rights and opt-out signals, put statutory terms in your vendor contracts, and maintain reasonable security — or face CPPA/AG enforcement and, after a breach, consumer suits. |
-| **Main law** | Cal. Civ. Code § 1798.100 et seq. (CCPA, as amended by the CPRA) |
+| **Main law** | Cal. Civ. Code § 1798.140(d)(1). |
 | **Privacy policy required?** | Yes — an online privacy policy with statutorily fixed contents, updated at least every 12 months |
 | **Who does it cover?** | For-profit businesses doing business in California that meet a threshold — e.g., over $25,000,000 in annual gross revenue (CPI-adjusted to $26,625,000 for 2025–2026) |
 | **Can consumers sue?** | Limited path |

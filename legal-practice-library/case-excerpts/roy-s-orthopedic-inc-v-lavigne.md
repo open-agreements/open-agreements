@@ -6,7 +6,7 @@ description: >-
   in 3 document(s).
 citation: 'Roy''s Orthopedic, Inc. v. Lavigne, 142 Vt. 347, 454 A.2d 1242 (1982).'
 resource: 'https://www.courtlistener.com/opinion/2367186/roys-orthopedic-inc-v-lavigne/'
-timestamp: '2026-07-03'
+timestamp: '2026-09-26'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
@@ -27,6 +27,15 @@ tags:
 Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
+
+### roy-s-orthopedic-inc-v-lavigne-since-the-trial-court-failed-to-108f500f {#roy-s-orthopedic-inc-v-lavigne-since-the-trial-court-failed-to-108f500f}
+
+> Since the trial court failed to provide the basis for its conclusion that the restrictive covenant not to compete was reasonable, the trial court’s order must be reversed and the entire cause remanded for a new trial.
+
+- supports: `reasonableness-test`
+- source_cards: `roys-82-reversed`
+- cited_by: [Non-Competes in Vermont](../non-compete/us/vermont.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2367186/roys-orthopedic-inc-v-lavigne/#:~:text=Since%20the%20trial%20court%20failed,remanded%20for%20a%20new%20trial.>
 
 ### roy-s-orthopedic-inc-v-lavigne-the-trial-court-concluded-that-the-b514edac {#roy-s-orthopedic-inc-v-lavigne-the-trial-court-concluded-that-the-b514edac}
 

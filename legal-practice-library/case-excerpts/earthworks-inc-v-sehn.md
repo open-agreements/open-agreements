@@ -42,3 +42,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `earthworks-penalty-restraint`, `nd-earthworks-penalty-cov`, `nd-earthworks-penalty-gate`, `nd-earthworks-penalty-toll`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=The%20statute%20represents%20one%20of,penalty%20if%20he%20does%20so.>
+
+### earthworks-inc-v-sehn-this-non-competition-agreement-in-0beb2f88 {#earthworks-inc-v-sehn-this-non-competition-agreement-in-0beb2f88}
+
+> This non-competition agreement, in violation of NDCC 9-08-06(1), stated its geographical area to encompass the “state of North Dakota.” With ample precedent, the trial court correctly limited the valid area of the non-competition covenant to Burleigh County.
+
+- supports: `court-narrowing`
+- source_cards: `earthworks-county-limit`
+- cited_by: [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- link_to_source: <https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=This%20non%2Dcompetition%20agreement%2C%20in%20violation,non%2Dcompetition%20covenant%20to%20Burleigh%20County.>

@@ -45,8 +45,8 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Para ser razonable, un acuerdo de no competir debe reunir los siguientes requisitos: (1) debe ser necesario para proteger un interés legítimo del patrono, (2) no debe imponer al empleado una carga demasiado onerosa, (3) y no debe afectar demasiado al público.
 
-- supports: `employee-non-compete-enforceability`
-- source_cards: `ay-test`
+- supports: `employee-non-compete-enforceability`, `scope-territory-clients`
+- source_cards: `ay-test`, `rr-ay-test`
 - cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 
@@ -56,6 +56,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `ay-nullity`
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
+- link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
+
+### arthur-young-co-v-vega-iii-segundo-el-alcance-de-la-prohibici-n-bb8f2ebc {#arthur-young-co-v-vega-iii-segundo-el-alcance-de-la-prohibici-n-bb8f2ebc}
+
+> Segundo, el alcance de la prohibición debe corresponder con el interés del patrono, en cuanto a objeto, término y lugar de restricción o clientes afectados.
+
+- supports: `scope-territory-clients`
+- source_cards: `ay-scope-place-or-clients`
 - cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 

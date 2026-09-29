@@ -2,7 +2,7 @@
 jurisdiction: "Northern Mariana Islands"
 slug: cnmi
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Northern Mariana Islands[^about]
 
@@ -30,7 +30,7 @@ The CNMI has no non-compete statute; post-employment covenants are enforceable o
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | The CNMI has no non-compete statute; a post-employment covenant is enforceable only if reasonable under Restatement (Second) of Contracts § 188, which 7 CMC § 3401 imports as Commonwealth law, and the one on-point federal order denied an injunction in a small-island healthcare context. |
-| **Main law or case** | 7 CMC § 3401 (importing Restatement (Second) of Contracts § 188); August Healthcare Grp., LLC v. Manglona |
+| **Main law or case** | Common law governs employee non-competes; 7 CMC § 3401. August Healthcare Grp., LLC v. Manglona, No. 1:12-cv-00008, 2012 WL 12926085 (D. N. Mar. I. Oct. 12, 2012). |
 | **Main exceptions** | No statutory carve-outs; small-island public-interest and hardship factors weigh heavily against healthcare/specialist covenants |
 | **Can a court narrow it?** | Unsettled |
 | **Applies to contractors?** | Unclear |

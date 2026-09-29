@@ -1,0 +1,794 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/hiring/south-africa",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/hiring/south-africa.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/hiring/south-africa",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/hiring/south-africa/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/hiring/south-africa/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "external": true,
+      "title": "CC BY 4.0"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "hiring",
+    "slug": "south-africa",
+    "frontmatter": {
+      "title": "Hiring Reviewer Checklist — South Africa",
+      "description": "Review a South African employee offer for complete particulars, pay calculations, current leave, probation safeguards and unresolved specialist workstreams.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "South Africa",
+      "coverage": "South Africa — employee-offer preparation",
+      "lastReviewed": "2026-09-28",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 9,
+    "sections": [
+      {
+        "sectionId": "employer-and-role",
+        "label": "Employer, role and coverage"
+      },
+      {
+        "sectionId": "hours-and-remuneration",
+        "label": "Hours and remuneration schedule"
+      },
+      {
+        "sectionId": "wage-calculation",
+        "label": "Applicable wage calculation"
+      },
+      {
+        "sectionId": "leave-and-pay",
+        "label": "Completed leave and pay schedule"
+      },
+      {
+        "sectionId": "fairness-and-probation",
+        "label": "Fairness preserved in notice and probation"
+      },
+      {
+        "sectionId": "incorporated-documents",
+        "label": "Accessible complete incorporated documents"
+      },
+      {
+        "sectionId": "restraint-rider",
+        "label": "No generic post-employment restraint"
+      },
+      {
+        "sectionId": "specialist-workstreams",
+        "label": "Separate specialist workstreams"
+      },
+      {
+        "sectionId": "complete-review-record",
+        "label": "Complete documents and decision record"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "employer-and-role",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.employer-and-role",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employer, role and coverage",
+        "sectionId": "employer-and-role",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#employer-and-role",
+        "requirementGuidance": "Identify the employing entity/address, employee/name/occupation, actual workplace(s), start date, employment type and recognised prior service. Flag a parent company named in place of the intended employer, an unresolved remote/cross-border arrangement or unexplained contractor classification. Section 28 excludes an employee working less than 24 hours a month for an employer from Chapter Four. For an employer with fewer than five employees, section 28(2)(a) excludes only sections 29(1)(n), (o), (p), 30, 31 and 33; the other written particulars remain outside that narrow exemption. Act 11 of 2002 deleted the domestic-worker exception in section 28(2)(b), so domestic-worker status supplies no separate exception under that subsection. Check the hire's applicable coverage before treating the section 29 inventory as a statutory duty.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "za-employer-and-role-bcea",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1), original Gazette 18491, 5 December 1997, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "BCEA section 29 requires supplying written particulars on commencement.",
+            "verbatimQuote": "An employer must supply an employee, when the emPloYee commences employment, with the following particulars in writing— (u) the full name and address of the employer; 30 (b) the name and occupation of the employee. or a brief description of the work for which the employee is employed; (c) the place of work, and. where the employee is required or permitted to work at various places. an indication of this; (d) the date on which the employment began; 35",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-role",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(a)–(d), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include occupation/work description, workplace(s) and commencement.",
+            "verbatimQuote": "An employer must supply an employee, when the emPloYee commences employment, with the following particulars in writing— (u) the full name and address of the employer; 30 (b) the name and occupation of the employee. or a brief description of the work for which the employee is employed; (c) the place of work, and. where the employee is required or permitted to work at various places. an indication of this; (d) the date on which the employment began; 35",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-role"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-pay",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(e)–(m), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include ordinary hours/days, wage calculation, overtime and cash payments.",
+            "verbatimQuote": "(e) the employee’s ordinary hours of work and days of work; (f) the employee’s wage or the rate and method of calculating wages: (g) the rate of pay for overtime work; (h) any other cash payments that the employee is entitled to; (i) any payment in kind that the employee is entitled to and the value of the 40 payment in kind; (j) how frequently remuneration will be paid; (k) any deductions to be made from the employee’s remuneration; (1) the leave to which the employee is entitled; (m~ the period of notice required to terminate employment, or if employment is for 45 a specified period, the date when employment is to terminate;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-pay"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-payments-leave",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(e)–(m), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include frequency, deductions and leave.",
+            "verbatimQuote": "(e) the employee’s ordinary hours of work and days of work; (f) the employee’s wage or the rate and method of calculating wages: (g) the rate of pay for overtime work; (h) any other cash payments that the employee is entitled to; (i) any payment in kind that the employee is entitled to and the value of the 40 payment in kind; (j) how frequently remuneration will be paid; (k) any deductions to be made from the employee’s remuneration; (1) the leave to which the employee is entitled; (m~ the period of notice required to terminate employment, or if employment is for 45 a specified period, the date when employment is to terminate;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-payments-leave"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-documents",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(n)–(p), (2)–(4), original Gazette 18491, printed pp. 28–30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29 lists incorporated documents/access and calls for revision when particulars change.",
+            "verbatimQuote": "(II) a description of any council or sectoral determination which covers the employer’s business; (o) any period of employment with a previous employer that counts towards the employees period of employment; 50 (p) a list of any other documents that form part of the contract of employment. indicating a place that is reasonably accessible to the employee where a copy of each may be obtained. (2) When any matter listed in subsection (1) changes— (a) the written particulars must be revised to reflect the change; and 55 30 No. 18491 GOVERNMENT GAZETTE. 5 DECEMBER 1997 Act No. 75, 1997 B.4SJC CONDITIONS OF EMPLOYMENT ACT. 1997 (b) the employee must be supplied with a copy of the document reflecting the change. (3) If an employee is not able to understand the written particulars. the employer must ensure that they are explained to the employee in a language and in a manner that the employee understands. 5 (4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-documents"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-coverage",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 28(1), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original BCEA section 28(1) excludes employment under 24 hours per month from Chapter Four.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-coverage"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-coverage-fields",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, ss. 28–29(1)(b), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Historical original section 28 context includes the domestic-worker limb subsequently deleted by Act 11 of 2002 section 5; read alongside the same-question amendment card. The surviving small-employer exception affects only the enumerated fields/sections.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer. (2) Sections 29(1)(n). (o) and (p), 30.31 and 33 do not apply to- (a) an employer who employs fewer than five employees; and (b) the employment of a domestic worker. Written particulars of employment 29. (1) An employer must supply an employee, when the employee commences employment, with the following particulars in writing— (a) the full name and address of the employer; (b) the name and occupation of the employee. or a brief description of the work 30 for which the employee is employed;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-coverage-fields"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-coverage-employers",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, ss. 28–29(1)(b), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Historical original section 28 context includes the domestic-worker limb subsequently deleted by Act 11 of 2002 section 5; read alongside the same-question amendment card. The surviving small-employer exception affects only the enumerated fields/sections.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer. (2) Sections 29(1)(n). (o) and (p), 30.31 and 33 do not apply to- (a) an employer who employs fewer than five employees; and (b) the employment of a domestic worker. Written particulars of employment 29. (1) An employer must supply an employee, when the employee commences employment, with the following particulars in writing— (a) the full name and address of the employer; (b) the name and occupation of the employee. or a brief description of the work 30 for which the employee is employed;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-coverage-employers"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-coverage-amendment",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Amendment Act 11 of 2002",
+            "citation": "Act 11 of 2002, s. 5; Gazette 23539, 24 June 2002, printed p. 4 (PDF p. 3).",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a11-02.pdf",
+            "proposition": "Section 5 deletes BCEA 28(2)(b); domestic-worker employment is no longer an independent exception under that subsection.",
+            "verbatimQuote": "5. Section 28 of the principal Act is amended by the deletion of subsection (2)(b).",
+            "date": "2002-06-24",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-coverage-amendment"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-workflow",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(2)(b)–(4), original Gazette 18491, printed p. 30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29 addresses supplying changed particulars and understandable explanation.",
+            "verbatimQuote": "(b) the employee must be supplied with a copy of the document reflecting the change. (3) If an employee is not able to understand the written particulars. the employer must ensure that they are explained to the employee in a language and in a manner that the employee understands. 5 (4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-workflow"
+          },
+          {
+            "sourceId": "za-employer-and-role-bcea-workflow-retention",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(4), original Gazette 18491, printed p. 30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29(4) requires three-year post-termination retention of written particulars.",
+            "verbatimQuote": "(4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-employer-and-role-bcea-workflow-retention"
+          }
+        ]
+      },
+      {
+        "requirementId": "hours-and-remuneration",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.hours-and-remuneration",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Hours and remuneration schedule",
+        "sectionId": "hours-and-remuneration",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#hours-and-remuneration",
+        "requirementGuidance": "Look for ordinary days/hours; wage and calculation; overtime treatment; other cash payments; in-kind benefits and value; frequency; deductions; and the identified council/sector regime. Flag a salary-only schedule. Record defined annual earnings and the 2026 threshold Gazette analysis, including the exact excluded sections; use the Gazette rather than the conflicting media summary.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "za-hours-and-remuneration-bcea",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1), original Gazette 18491, 5 December 1997, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "BCEA section 29 requires supplying written particulars on commencement.",
+            "verbatimQuote": "An employer must supply an employee, when the emPloYee commences employment, with the following particulars in writing— (u) the full name and address of the employer; 30 (b) the name and occupation of the employee. or a brief description of the work for which the employee is employed; (c) the place of work, and. where the employee is required or permitted to work at various places. an indication of this; (d) the date on which the employment began; 35",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-role",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(a)–(d), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include occupation/work description, workplace(s) and commencement.",
+            "verbatimQuote": "An employer must supply an employee, when the emPloYee commences employment, with the following particulars in writing— (u) the full name and address of the employer; 30 (b) the name and occupation of the employee. or a brief description of the work for which the employee is employed; (c) the place of work, and. where the employee is required or permitted to work at various places. an indication of this; (d) the date on which the employment began; 35",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-role"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-pay",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(e)–(m), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include ordinary hours/days, wage calculation, overtime and cash payments.",
+            "verbatimQuote": "(e) the employee’s ordinary hours of work and days of work; (f) the employee’s wage or the rate and method of calculating wages: (g) the rate of pay for overtime work; (h) any other cash payments that the employee is entitled to; (i) any payment in kind that the employee is entitled to and the value of the 40 payment in kind; (j) how frequently remuneration will be paid; (k) any deductions to be made from the employee’s remuneration; (1) the leave to which the employee is entitled; (m~ the period of notice required to terminate employment, or if employment is for 45 a specified period, the date when employment is to terminate;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-pay"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-payments-leave",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(e)–(m), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include frequency, deductions and leave.",
+            "verbatimQuote": "(e) the employee’s ordinary hours of work and days of work; (f) the employee’s wage or the rate and method of calculating wages: (g) the rate of pay for overtime work; (h) any other cash payments that the employee is entitled to; (i) any payment in kind that the employee is entitled to and the value of the 40 payment in kind; (j) how frequently remuneration will be paid; (k) any deductions to be made from the employee’s remuneration; (1) the leave to which the employee is entitled; (m~ the period of notice required to terminate employment, or if employment is for 45 a specified period, the date when employment is to terminate;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-payments-leave"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-documents",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(n)–(p), (2)–(4), original Gazette 18491, printed pp. 28–30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29 lists incorporated documents/access and calls for revision when particulars change.",
+            "verbatimQuote": "(II) a description of any council or sectoral determination which covers the employer’s business; (o) any period of employment with a previous employer that counts towards the employees period of employment; 50 (p) a list of any other documents that form part of the contract of employment. indicating a place that is reasonably accessible to the employee where a copy of each may be obtained. (2) When any matter listed in subsection (1) changes— (a) the written particulars must be revised to reflect the change; and 55 30 No. 18491 GOVERNMENT GAZETTE. 5 DECEMBER 1997 Act No. 75, 1997 B.4SJC CONDITIONS OF EMPLOYMENT ACT. 1997 (b) the employee must be supplied with a copy of the document reflecting the change. (3) If an employee is not able to understand the written particulars. the employer must ensure that they are explained to the employee in a language and in a manner that the employee understands. 5 (4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-documents"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-coverage",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 28(1), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original BCEA section 28(1) excludes employment under 24 hours per month from Chapter Four.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-coverage"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-coverage-fields",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, ss. 28–29(1)(b), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Historical original section 28 context includes the domestic-worker limb subsequently deleted by Act 11 of 2002 section 5; read alongside the same-question amendment card. The surviving small-employer exception affects only the enumerated fields/sections.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer. (2) Sections 29(1)(n). (o) and (p), 30.31 and 33 do not apply to- (a) an employer who employs fewer than five employees; and (b) the employment of a domestic worker. Written particulars of employment 29. (1) An employer must supply an employee, when the employee commences employment, with the following particulars in writing— (a) the full name and address of the employer; (b) the name and occupation of the employee. or a brief description of the work 30 for which the employee is employed;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-coverage-fields"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-coverage-employers",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, ss. 28–29(1)(b), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Historical original section 28 context includes the domestic-worker limb subsequently deleted by Act 11 of 2002 section 5; read alongside the same-question amendment card. The surviving small-employer exception affects only the enumerated fields/sections.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer. (2) Sections 29(1)(n). (o) and (p), 30.31 and 33 do not apply to- (a) an employer who employs fewer than five employees; and (b) the employment of a domestic worker. Written particulars of employment 29. (1) An employer must supply an employee, when the employee commences employment, with the following particulars in writing— (a) the full name and address of the employer; (b) the name and occupation of the employee. or a brief description of the work 30 for which the employee is employed;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-coverage-employers"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-coverage-amendment",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Amendment Act 11 of 2002",
+            "citation": "Act 11 of 2002, s. 5; Gazette 23539, 24 June 2002, printed p. 4 (PDF p. 3).",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a11-02.pdf",
+            "proposition": "Section 5 deletes BCEA 28(2)(b); domestic-worker employment is no longer an independent exception under that subsection.",
+            "verbatimQuote": "5. Section 28 of the principal Act is amended by the deletion of subsection (2)(b).",
+            "date": "2002-06-24",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-coverage-amendment"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-workflow",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(2)(b)–(4), original Gazette 18491, printed p. 30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29 addresses supplying changed particulars and understandable explanation.",
+            "verbatimQuote": "(b) the employee must be supplied with a copy of the document reflecting the change. (3) If an employee is not able to understand the written particulars. the employer must ensure that they are explained to the employee in a language and in a manner that the employee understands. 5 (4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-workflow"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-bcea-workflow-retention",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(4), original Gazette 18491, printed p. 30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29(4) requires three-year post-termination retention of written particulars.",
+            "verbatimQuote": "(4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-bcea-workflow-retention"
+          },
+          {
+            "sourceId": "za-hours-and-remuneration-earnings",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "BCEA earnings-threshold determination 2026",
+            "citation": "Government Notice 7384 of 2026, Gazette 54544, 17 April 2026, printed p. 3; determination and definition of earnings.",
+            "url": "https://www.labour.gov.za/DocumentCenter/Regulations%20and%20Notices/Notices/Basic%20Conditions%20of%20Employment/Basic%20Conditions%20of%20Employment%20Act_Determination%20Earnings%20Threshold2026.pdf",
+            "proposition": "The Gazette sets the annual threshold and enumerates the particular working-time provisions excluded above it, effective 1 May 2026.",
+            "verbatimQuote": "Nomakhosazana Meth, Minister of Employment and Labour, hereby in terms of Section 6 (3) of the Basic Conditions of Employment Act, No. 75 of 1997, (the Act), determine that all employees earning in excess of R269 600.90 (Two hundred and sixty-nine thousand, and six hundred rand, ninety cents) per annum be excluded from sections 9, 10, 11, 12, 14, 15, 16, 17(2) and 18(3) of this Act with effect from 1 May 2026. For the purposes of this notice: “Earnings” means the regular annual remuneration before deductions i.e income tax, pension, medical and similar payments but excluding similar payments(contributions) made by the employer in respect of the employee: Provided that subsistence and transport allowances received, achievement awards and payments for overtime worked shall not be regarded as remuneration for the purpose of this notice.",
+            "date": "2026-04-17",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-hours-and-remuneration-earnings"
+          }
+        ]
+      },
+      {
+        "requirementId": "wage-calculation",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.wage-calculation",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Applicable wage calculation",
+        "sectionId": "wage-calculation",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#wage-calculation",
+        "requirementGuidance": "Document ordinary hours, the worker category, the 2026 wage notice provision and any higher applicable sector/collective rate. The R30.23 ordinary-hour rate from 1 March 2026 is subject to the notice’s exceptions and schedules. Flag unexplained monthly-to-hourly conversion, learnership/public-works treatment or omitted sector instruments.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "za-wage-calculation-wage",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "National Minimum Wage Amendment 2026",
+            "citation": "Government Notice R. 7083 of 2026, Gazette 54075, 3 February 2026; commencement, printed p. 3; Schedule 1, items 1–2, printed p. 4; sector schedules, pp. 5–7.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202602/54075rg11941gon7083.pdf",
+            "proposition": "Schedule 1 states the ordinary-hour wage and specified category exceptions.",
+            "verbatimQuote": "1. Subject to item 2, the national minimum wage is R30,23 for each ordinary hour worked. 2. Despite item 1— (a) farm workers are entitled to a minimum wage of R30,23 per hour; (b) domestic workers are entitled to a minimum wage of R30,23 per hour; (c) workers employed on an expanded public works programme are entitled to a minimum wage of R16,62 per hour; and (d) workers who have concluded learnership agreements contemplated in section 17 of the Skills Development Act, 1998 (Act No. 97 of 1998), are entitled to the allowances contained in Schedule 2.",
+            "date": "2026-02-03",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-wage-calculation-wage"
+          },
+          {
+            "sourceId": "za-wage-calculation-wage-commencement",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "National Minimum Wage Amendment 2026",
+            "citation": "Government Notice R. 7083 of 2026, Gazette 54075, 3 February 2026, commencement, printed p. 3.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202602/54075rg11941gon7083.pdf",
+            "proposition": "The Minister fixes 1 March 2026 as the binding date of the amendment.",
+            "verbatimQuote": "I, Nomakhosazana Meth, Minister of Employment and Labour, hereby in terms of section 6(5) of the National Minimum Wage Act, No. 9 of 2018, amend the national minimum wages contained in Schedule 1 and Schedule 2 of the National Minimum Wage Act, published under Government Notice No. 52053 of 4 February 2025, in accordance with the schedules hereto and fix the 1 March 2026 as the date on which this amendment shall become binding.",
+            "date": "2026-02-03",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-wage-calculation-wage-commencement"
+          }
+        ]
+      },
+      {
+        "requirementId": "leave-and-pay",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.leave-and-pay",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Completed leave and pay schedule",
+        "sectionId": "leave-and-pay",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#leave-and-pay",
+        "requirementGuidance": "Require a complete applicable leave schedule. Check the Van Wyk interim order against the parenting situation and any later order or enacted remedy before inserting a parental-leave term. Distinguish leave time, contractual employer pay and UIF benefits. Flag obsolete gender-based boilerplate or an unsupported general employer-paid claim; a proposal is not an enacted remedy. Other leave entitlements require separate verification.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "za-leave-and-pay-leave",
+            "authorityType": "case-law",
+            "tier": "primary-source-backed",
+            "title": "Van Wyk and Others v Minister of Employment and Labour; Commission for Gender Equality and Another v Minister of Employment and Labour and Others [2025] ZACC 20",
+            "citation": "Van Wyk [2025] ZACC 20, 3 October 2025, order paras. 2–4, judgment p. 3; parliamentary-hosted judgment posted May 2026.",
+            "url": "https://www.parliament.gov.za/storage/app/media/OISD/ISD_Related_Constitutional_Court_Judgements/2026/5-may/14-05-2026/judgment-for-issuance-cct-309-23-cct-308-23-werner-van-wyk-others-v-minister-for-employment-and-labour-cge-and-others.pdf",
+            "proposition": "The Court confirmed parental-leave invalidity and suspended invalidity for 36 months.",
+            "verbatimQuote": "2. The declaration made by the High Court, that sections 25, 25A, 25B and 25C of the BCEA dealing with maternity and parental leave, together with the corresponding sections 24, 26A, 27 and 29A of the UIF Act, are invalid and inconsistent with the Constitution to the extent that they unfairly discriminate between different classes of parents as to the length of parental leave available to parents and as to the unemployment benefits to which they are entitled, and the periods for which unemployment benefits are paid, is confirmed. 3. It is declared that section 25B(1) of the BCEA and section 27(1)(c) of the UIF Act are invalid and inconsistent with the Constitution to the extent that they limit parental leave and related benefits to the case where the adopted child is below the age of two years. 4. The declarations of constitutional invalidity referred to in paragraphs 2 and 3 are suspended for a period of 36 months from the date of this order to afford Parliament an opportunity to remedy the constitutional defects giving rise to the constitutional invalidity.",
+            "date": "2025-10-03",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-leave-and-pay-leave"
+          },
+          {
+            "sourceId": "za-leave-and-pay-leave-interim",
+            "authorityType": "case-law",
+            "tier": "primary-source-backed",
+            "title": "Van Wyk and Others v Minister of Employment and Labour; Commission for Gender Equality and Another v Minister of Employment and Labour and Others [2025] ZACC 20",
+            "citation": "Van Wyk [2025] ZACC 20, 3 October 2025, order para. 5(a), section 25(1)–(4A), judgment p. 4.",
+            "url": "https://www.parliament.gov.za/storage/app/media/OISD/ISD_Related_Constitutional_Court_Judgements/2026/5-may/14-05-2026/judgment-for-issuance-cct-309-23-cct-308-23-werner-van-wyk-others-v-minister-for-employment-and-labour-cge-and-others.pdf",
+            "proposition": "Pending remedial legislation, the order reads in leave provisions distinguishing a single/sole employed parent from two employed parents, with medical and timing qualifications.",
+            "verbatimQuote": "5. Pending the coming into force of any remedial legislation as contemplated in paragraph 4, the impugned provisions of the BCEA shall read as follows, the changes being indicated by underlining: (a) Section 25 of the BCEA shall read: “25. Parental leave (1) An employee who is— (a) a single parent; or (b) the only employed party in a parental relationship, is entitled to at least four consecutive months’ parental leave. (2) A female employee who is expecting the birth of a child may commence parental leave— (a) at any time from four weeks before the expected date of birth, unless otherwise agreed; or (b) on a date from which a medical practitioner or a midwife certifies that it is necessary for the employee’s health or that of her unborn child. (2A) Where section 25(2) does not apply, an employee may commence parental leave on— (a) the day that the employee’s child is born; or (b) where section 25B or section 25C is applicable, the date mentioned in section 25B(2) or section 25C(2) as the case may be. (3) No female employee who has given birth to a child may work for six weeks after the birth of her child, unless a medical practitioner or midwife certifies that she is fit to do so. (4) An employee who has a miscarriage during the third trimester of pregnancy or bears a stillborn child is entitled to parental leave for six weeks after the miscarriage or stillbirth, whether or not the employee had commenced parental leave at the time of the miscarriage or stillbirth. (4A) If both parties to a parental relationship are employed, the parties are entitled in the aggregate to four months and ten days’ parental leave, inclusive of any parental leave taken in terms of subsections (2) and (3).",
+            "date": "2025-10-03",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-leave-and-pay-leave-interim"
+          },
+          {
+            "sourceId": "za-leave-and-pay-leave-allocation",
+            "authorityType": "case-law",
+            "tier": "primary-source-backed",
+            "title": "Van Wyk and Others v Minister of Employment and Labour; Commission for Gender Equality and Another v Minister of Employment and Labour and Others [2025] ZACC 20",
+            "citation": "Van Wyk [2025] ZACC 20, 3 October 2025, order para. 5(a), section 25(4C)–(7), judgment p. 5.",
+            "url": "https://www.parliament.gov.za/storage/app/media/OISD/ISD_Related_Constitutional_Court_Judgements/2026/5-may/14-05-2026/judgment-for-issuance-cct-309-23-cct-308-23-werner-van-wyk-others-v-minister-for-employment-and-labour-cge-and-others.pdf",
+            "proposition": "The interim reading-in provides allocation and notice rules and leaves parental benefit payments subject to the UIF framework.",
+            "verbatimQuote": "(4C) If the parties cannot agree on the manner in which the remainder of the parental leave referred to in subsection (4B) is to be taken, such remainder shall be apportioned between the parents in such a way that each parent’s total parental leave is as close as possible to half of four months and ten days, provided that such leave is completed within a period of four months from the birth of the child or, where applicable, from the date referred to in section 25B(2) or 25C(2). (4D) For purposes of subsection (4A), a party shall be deemed to be a party to a parental relationship if such a party has assumed parental rights and responsibilities over the child as contemplated in the Children’s Act, 2005 (Act No. 38 of 2005). (5) An employee must notify an employer in writing, unless the employee is unable to do so, of the date on which the employee intends to— (a) commence parental leave; and (b) return to work after parental leave. (6) Notification in terms of subsection (5) must be given— (a) at least four weeks before the employee intends to commence parental leave; or (b) if it is not reasonably practicable to do so, as soon as is reasonably practicable. (7) The payment of parental benefits will be determined by the Minister subject to the provisions of the Unemployment Insurance Act, 2001 (Act No. 63 of 2001).”",
+            "date": "2025-10-03",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-leave-and-pay-leave-allocation"
+          }
+        ]
+      },
+      {
+        "requirementId": "fairness-and-probation",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.fairness-and-probation",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fairness preserved in notice and probation",
+        "sectionId": "fairness-and-probation",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#fairness-and-probation",
+        "requirementGuidance": "Flag and remove at-will, notice-only dismissal authority or automatic probation termination wording. If probation is used, look for a period set in advance, reasonable job-related duration, assessment standards and appropriate guidance/support. Record an opportunity for representations and their consideration before dismissal or extension. Review actual fair reason/procedure and notice/fixed-term rules; no universal notice period is supplied here.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "za-fairness-and-probation-code",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.14, printed p.11.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "The 2025 Code permits a newly hired employee probation period before confirmation.",
+            "verbatimQuote": "An employer may require a newly hired employee to serve a period of probation before the employee's appointment is confirmed.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code"
+          },
+          {
+            "sourceId": "za-fairness-and-probation-code-purpose",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.15(1), printed p.11.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "Probation serves performance and suitability assessment before confirmation.",
+            "verbatimQuote": "The purpose of probation is to give the employer an opportunity to evaluate the employee's performance and suitability for employment before confirming the appointment.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code-purpose"
+          },
+          {
+            "sourceId": "za-fairness-and-probation-code-safeguard",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.15(2), printed p.11.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "Probation should not be used to deprive employees of permanent-employment status for other purposes.",
+            "verbatimQuote": "Probation should not be used for purposes not contemplated by this Code, to deprive employees of the status of permanent employment.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code-safeguard"
+          },
+          {
+            "sourceId": "za-fairness-and-probation-code-duration",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.16, printed p.11.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "Probation should be predetermined and reasonable by reference to the job and suitability assessment.",
+            "verbatimQuote": "The period of probation should be determined in advance and be of a reasonable duration. The length of the probationary period should be determined with reference to the nature of the job and the time it takes to determine the employee's suitability for continued employment.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code-duration"
+          },
+          {
+            "sourceId": "za-fairness-and-probation-code-guidance",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.17, printed p.12.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "The Code calls for reasonable appropriate guidance during probation.",
+            "verbatimQuote": "During probation an employer should give an employee reasonable guidance, appropriate to the nature and size of the employer and the job, which may include instruction, training or counselling, in order to allow the employee an opportunity to render a satisfactory service.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code-guidance"
+          },
+          {
+            "sourceId": "za-fairness-and-probation-code-guidance-representations",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.18(1), printed p.12.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "Dismissal or extension follows an opportunity for representations and consideration of them.",
+            "verbatimQuote": "An employer may only decide to dismiss an employee or extend the probationary period after the employer has given the employee the opportunity to make representations and the employer has considered any representations made.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code-guidance-representations"
+          },
+          {
+            "sourceId": "za-fairness-and-probation-code-guidance-qualification",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.18(2), printed p.12.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "Probationary conduct/capacity dismissal reasons may be less compelling than after probation.",
+            "verbatimQuote": "Any person deciding about the fairness of a dismissal of an employee related to the employee's conduct or capacity, including poor work performance, during or on expiry of the probationary period, ought to accept, taking into account the purpose of probation, reasons for dismissal that may be less compelling than would be the case in dismissals effected after the completion of the probationary period.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code-guidance-qualification"
+          },
+          {
+            "sourceId": "za-fairness-and-probation-code-fairness",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.5(4), printed p.6.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "For a dismissal not automatically unfair, the employer must show a fair reason and fair procedure.",
+            "verbatimQuote": "In cases where the dismissal is not automatically unfair, the employer must show that the dismissal was for a fair reason and in accordance with a fair procedure.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code-fairness"
+          },
+          {
+            "sourceId": "za-fairness-and-probation-code-fairness-grounds",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Code of Good Practice: Dismissal (2025)",
+            "citation": "GN3470 of 2025, Gazette53294, para.5(2), printed p.6.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/202509/53294gen3470.pdf",
+            "proposition": "The Code identifies conduct, capacity and operational requirements as the three possible fair grounds.",
+            "verbatimQuote": "The Act lists three grounds on which a dismissal may be fair. These are: the conduct of the employee, the capacity of the employee, and the employer's operational requirements.",
+            "date": "2025-09-04",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-fairness-and-probation-code-fairness-grounds"
+          }
+        ]
+      },
+      {
+        "requirementId": "incorporated-documents",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.incorporated-documents",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Accessible complete incorporated documents",
+        "sectionId": "incorporated-documents",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#incorporated-documents",
+        "requirementGuidance": "List every incorporated contractual document, version/date and copy location; reconcile the list with the attachments. Arrange understandable explanation where needed, revision/copy supply when particulars change, and retention. Check current section 28 qualifications; keeping a complete accessible contract set remains this checklist’s preparation recommendation. Flag missing schedules or silent replacement of terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "za-incorporated-documents-bcea",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1), original Gazette 18491, 5 December 1997, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "BCEA section 29 requires supplying written particulars on commencement.",
+            "verbatimQuote": "An employer must supply an employee, when the emPloYee commences employment, with the following particulars in writing— (u) the full name and address of the employer; 30 (b) the name and occupation of the employee. or a brief description of the work for which the employee is employed; (c) the place of work, and. where the employee is required or permitted to work at various places. an indication of this; (d) the date on which the employment began; 35",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-role",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(a)–(d), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include occupation/work description, workplace(s) and commencement.",
+            "verbatimQuote": "An employer must supply an employee, when the emPloYee commences employment, with the following particulars in writing— (u) the full name and address of the employer; 30 (b) the name and occupation of the employee. or a brief description of the work for which the employee is employed; (c) the place of work, and. where the employee is required or permitted to work at various places. an indication of this; (d) the date on which the employment began; 35",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-role"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-pay",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(e)–(m), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include ordinary hours/days, wage calculation, overtime and cash payments.",
+            "verbatimQuote": "(e) the employee’s ordinary hours of work and days of work; (f) the employee’s wage or the rate and method of calculating wages: (g) the rate of pay for overtime work; (h) any other cash payments that the employee is entitled to; (i) any payment in kind that the employee is entitled to and the value of the 40 payment in kind; (j) how frequently remuneration will be paid; (k) any deductions to be made from the employee’s remuneration; (1) the leave to which the employee is entitled; (m~ the period of notice required to terminate employment, or if employment is for 45 a specified period, the date when employment is to terminate;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-pay"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-payments-leave",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(e)–(m), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original particulars include frequency, deductions and leave.",
+            "verbatimQuote": "(e) the employee’s ordinary hours of work and days of work; (f) the employee’s wage or the rate and method of calculating wages: (g) the rate of pay for overtime work; (h) any other cash payments that the employee is entitled to; (i) any payment in kind that the employee is entitled to and the value of the 40 payment in kind; (j) how frequently remuneration will be paid; (k) any deductions to be made from the employee’s remuneration; (1) the leave to which the employee is entitled; (m~ the period of notice required to terminate employment, or if employment is for 45 a specified period, the date when employment is to terminate;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-payments-leave"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-documents",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(1)(n)–(p), (2)–(4), original Gazette 18491, printed pp. 28–30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29 lists incorporated documents/access and calls for revision when particulars change.",
+            "verbatimQuote": "(II) a description of any council or sectoral determination which covers the employer’s business; (o) any period of employment with a previous employer that counts towards the employees period of employment; 50 (p) a list of any other documents that form part of the contract of employment. indicating a place that is reasonably accessible to the employee where a copy of each may be obtained. (2) When any matter listed in subsection (1) changes— (a) the written particulars must be revised to reflect the change; and 55 30 No. 18491 GOVERNMENT GAZETTE. 5 DECEMBER 1997 Act No. 75, 1997 B.4SJC CONDITIONS OF EMPLOYMENT ACT. 1997 (b) the employee must be supplied with a copy of the document reflecting the change. (3) If an employee is not able to understand the written particulars. the employer must ensure that they are explained to the employee in a language and in a manner that the employee understands. 5 (4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-documents"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-coverage",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 28(1), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original BCEA section 28(1) excludes employment under 24 hours per month from Chapter Four.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-coverage"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-coverage-fields",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, ss. 28–29(1)(b), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Historical original section 28 context includes the domestic-worker limb subsequently deleted by Act 11 of 2002 section 5; read alongside the same-question amendment card. The surviving small-employer exception affects only the enumerated fields/sections.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer. (2) Sections 29(1)(n). (o) and (p), 30.31 and 33 do not apply to- (a) an employer who employs fewer than five employees; and (b) the employment of a domestic worker. Written particulars of employment 29. (1) An employer must supply an employee, when the employee commences employment, with the following particulars in writing— (a) the full name and address of the employer; (b) the name and occupation of the employee. or a brief description of the work 30 for which the employee is employed;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-coverage-fields"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-coverage-employers",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, ss. 28–29(1)(b), original Gazette 18491, printed p. 28.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Historical original section 28 context includes the domestic-worker limb subsequently deleted by Act 11 of 2002 section 5; read alongside the same-question amendment card. The surviving small-employer exception affects only the enumerated fields/sections.",
+            "verbatimQuote": "28. (1) This Chapter does not apply to an employee who works less than 24 hours a month for an employer. (2) Sections 29(1)(n). (o) and (p), 30.31 and 33 do not apply to- (a) an employer who employs fewer than five employees; and (b) the employment of a domestic worker. Written particulars of employment 29. (1) An employer must supply an employee, when the employee commences employment, with the following particulars in writing— (a) the full name and address of the employer; (b) the name and occupation of the employee. or a brief description of the work 30 for which the employee is employed;",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-coverage-employers"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-coverage-amendment",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Amendment Act 11 of 2002",
+            "citation": "Act 11 of 2002, s. 5; Gazette 23539, 24 June 2002, printed p. 4 (PDF p. 3).",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a11-02.pdf",
+            "proposition": "Section 5 deletes BCEA 28(2)(b); domestic-worker employment is no longer an independent exception under that subsection.",
+            "verbatimQuote": "5. Section 28 of the principal Act is amended by the deletion of subsection (2)(b).",
+            "date": "2002-06-24",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-coverage-amendment"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-workflow",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(2)(b)–(4), original Gazette 18491, printed p. 30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29 addresses supplying changed particulars and understandable explanation.",
+            "verbatimQuote": "(b) the employee must be supplied with a copy of the document reflecting the change. (3) If an employee is not able to understand the written particulars. the employer must ensure that they are explained to the employee in a language and in a manner that the employee understands. 5 (4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-workflow"
+          },
+          {
+            "sourceId": "za-incorporated-documents-bcea-workflow-retention",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Basic Conditions of Employment Act 75 of 1997 — original Gazette text",
+            "citation": "BCEA, s. 29(4), original Gazette 18491, printed p. 30.",
+            "url": "https://www.gov.za/sites/default/files/gcis_document/201409/a75-97.pdf",
+            "proposition": "Original section 29(4) requires three-year post-termination retention of written particulars.",
+            "verbatimQuote": "(4) Written particulars in terms of this section must be kept by the employer for a period of three years after the termination of employment.",
+            "date": "1997-12-05",
+            "anchor": "https://openagreements.org/checklists/hiring/south-africa#src-za-incorporated-documents-bcea-workflow-retention"
+          }
+        ]
+      },
+      {
+        "requirementId": "restraint-rider",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.restraint-rider",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No generic post-employment restraint",
+        "sectionId": "restraint-rider",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#restraint-rider",
+        "requirementGuidance": "Insert a default post-employment non-compete into the generic first-offer draft. Hold any proposed separate rider outside the offer pending an identified reviewer’s assessment; record protectable interests, access/threat facts, activities, duration, territory and alternatives; complete authority authentication and later-treatment analysis. This is a product drafting safeguard. No safe duration, territory, non-solicit rule or court-rewriting result is verified here.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specialist-workstreams",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.specialist-workstreams",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Separate specialist workstreams",
+        "sectionId": "specialist-workstreams",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#specialist-workstreams",
+        "requirementGuidance": "Resolve confidentiality/IP ownership, employee-data processing, right-to-work and employer/payroll obligations with identified owners and separately reviewed terms. Flag missing schedules and unresolved employer registrations. Record the owner, required assessment and unresolved response for each workstream. This procedural issue inventory does not state the governing rules or establish compliance in those areas.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "complete-review-record",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.south-africa.complete-review-record",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Complete documents and decision record",
+        "sectionId": "complete-review-record",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/hiring/south-africa#complete-review-record",
+        "requirementGuidance": "Replace bracketed inputs, reconcile all attachments, retain dated facts/source-version decisions and deliver the complete documents for acceptance. Record remaining uncertainty explicitly. The checklist supplies no signature-ready offer; checking every box does not resolve an unresearched issue or promise legal readiness.",
+        "variants": [],
+        "sources": []
+      }
+    ]
+  }
+}

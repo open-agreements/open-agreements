@@ -2,7 +2,7 @@
 jurisdiction: "New Jersey"
 slug: new-jersey
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-jersey · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-jersey · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Jersey[^about]
 
@@ -30,7 +30,7 @@ New Jersey enforces non-competes under the common-law Solari/Whitmyer reasonable
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | New Jersey enforces employee non-competes under the common-law Solari/Whitmyer three-part reasonableness test and readily blue-pencils overbroad covenants, though a pending bill would ban most of them. |
-| **Main law or case** | Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970); Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971) |
+| **Main law or case** | Common law governs employee non-competes; Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970). Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971). |
 | **Main exceptions** | Sale-of-business more freely enforceable; physician public-interest scrutiny; psychologist rule (N.J.A.C. 13:42-10.16); attorney ban (RPC 5.6) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -41,7 +41,7 @@ New Jersey enforces non-competes under the common-law Solari/Whitmyer reasonable
 
 **Short answer.** Yes, when reasonable. New Jersey has no general non-compete statute for the ordinary workforce, so enforceability turns on the common-law *Solari/Whitmyer* test: a covenant is enforced only where it protects the employer's legitimate interests, imposes no undue hardship on the employee, and is not injurious to the public [^solari-given-effect][^solari-three-prong].
 
-The standard comes from two early-1970s New Jersey Supreme Court decisions, *Solari Industries, Inc. v. Malady* and *Whitmyer Bros., Inc. v. Doyle*. A post-employment covenant is scrutinized more closely than a covenant tied to the sale of a business, because of the countervailing policy in favor of employee mobility, but it is still given effect when it is reasonable on the facts [^solari-given-effect].
+The standard comes from two early-1970s New Jersey Supreme Court decisions, *Solari Industries, Inc. v. Malady* [^solari-three-prong] and *Whitmyer Bros., Inc. v. Doyle* [^whitmyer-sale-of-business]. A post-employment covenant is scrutinized more closely than a covenant tied to the sale of a business, because of the countervailing policy in favor of employee mobility, but it is still given effect when it is reasonable on the facts [^solari-given-effect].
 
 The three prongs — legitimate interest, undue hardship, and public interest — are weighed together, and the New Jersey Supreme Court restated them in the modern physician case *Community Hospital Group, Inc. v. More* [^more-three-prong].
 
@@ -207,9 +207,9 @@ That outcome leaves New Jersey's *Solari/Whitmyer* reasonableness analysis in co
 
 [^solari-three-prong]: **Solari Industries, Inc. v. Malady** — "It will generally be found to be reasonable where it simply protects the legitimate interests of the employer, imposes no undue hardship on the employee, and is not injurious to the public." *Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970).* <https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=It%20will%20generally%20be%20found,not%20injurious%20to%20the%20public.>
 
-[^more-three-prong]: **Community Hospital Group, Inc. v. More** — "That test requires us to determine whether (1) the restrictive covenant was necessary to protect the employer’s legitimate interests in enforcement, (2) whether it would cause undue hardship to the employee, and (3) whether it would be injurious to the public." *Community Hospital Group, Inc. v. More, 183 N.J. 36 (2005).* <https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=That%20test%20requires%20us%20to,be%20injurious%20to%20the%20public.>
-
 [^whitmyer-sale-of-business]: **Whitmyer Bros., Inc. v. Doyle** — "we pointed out that while a seller’s noncompetitive covenant designed to protect the good will of the business for the buyer is freely enforceable, an employee’s covenant not to compete after the termination of his employment is not as freely enforceable because of well recognized countervailing policy considerations." *Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971).* <https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=we%20pointed%20out%20that%20while,well%20recognized%20countervailing%20policy%20considerations.>
+
+[^more-three-prong]: **Community Hospital Group, Inc. v. More** — "That test requires us to determine whether (1) the restrictive covenant was necessary to protect the employer’s legitimate interests in enforcement, (2) whether it would cause undue hardship to the employee, and (3) whether it would be injurious to the public." *Community Hospital Group, Inc. v. More, 183 N.J. 36 (2005).* <https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=That%20test%20requires%20us%20to,be%20injurious%20to%20the%20public.>
 
 [^hogan-continued-employment]: **Hogan v. Bergen Brunswig Corp.** — "The existence of sufficient consideration to support a post-employment restraint may be found in either the original contract of employment or in a post-employment contract, where the supporting consideration is at least, in part, the continuation of employment." *Hogan v. Bergen Brunswig Corp., 153 N.J. Super. 37 (App. Div. 1977).* <https://www.courtlistener.com/opinion/2358200/hogan-v-bergen-brunswig-corporation/#:~:text=The%20existence%20of%20sufficient%20consideration,part%2C%20the%20continuation%20of%20employment.>
 

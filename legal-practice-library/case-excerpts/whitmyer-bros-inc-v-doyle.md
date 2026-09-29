@@ -1,17 +1,21 @@
 ---
 type: Case Excerpt
 title: 'Whitmyer Bros., Inc. v. Doyle'
-description: 'Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971). — quoted in 2 document(s).'
+description: 'Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971). — quoted in 3 document(s).'
 citation: 'Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971).'
 resource: 'https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/'
-timestamp: '2026-06-12'
+timestamp: '2026-06-30'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/new-jersey
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -19,7 +23,7 @@ tags:
 
 *Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -31,6 +35,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `nj-whitmyer-protectable`, `whitmyer-legitimate-interest`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=But%20the%20employer%20has%20a,in%20protecting%20his%20customer%20relationships.>
+
+### whitmyer-bros-inc-v-doyle-but-under-the-controlling-principles-the-84d048fc {#whitmyer-bros-inc-v-doyle-but-under-the-controlling-principles-the-84d048fc}
+
+> But under the controlling principles, the employer was not entitled to preliminary restraint unless it made a suitable showing that such restraint was necessary to protect its legitimate interests and that it would not impose undue hardship on the employee or injure the public.
+
+- supports: `holdover-clause-limit`
+- source_cards: `whitmyer-three-prong`
+- cited_by: [Employee Invention Assignment in New Jersey](../invention-assignment/us/new-jersey.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=But%20under%20the%20controlling%20principles%2C,employee%20or%20injure%20the%20public.>
 
 ### whitmyer-bros-inc-v-doyle-we-pointed-out-that-while-a-c215c9ef {#whitmyer-bros-inc-v-doyle-we-pointed-out-that-while-a-c215c9ef}
 

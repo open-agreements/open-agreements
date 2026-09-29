@@ -7,7 +7,7 @@ description: >-
 citation: 'Vermont Electric Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).'
 resource: >-
   https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/
-timestamp: '2026-07-03'
+timestamp: '2026-09-26'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
@@ -28,6 +28,15 @@ tags:
 Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
+
+### vermont-electric-supply-co-v-andrus-after-a-year-he-was-asked-78711582 {#vermont-electric-supply-co-v-andrus-after-a-year-he-was-asked-78711582}
+
+> After a year, he was asked to sign an agreement not to compete in Rutland County, in the business of selling, designing, laying out or displaying kitchens or kitchen cabinets for a period of five years after his employment with the plaintiff ceased.
+
+- supports: `holdover-clause-limit`
+- source_cards: `andrus-five-year-term`
+- cited_by: [Employee Invention Assignment in Vermont](../invention-assignment/us/vermont.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=After%20a%20year%2C%20he%20was,employment%20with%20the%20plaintiff%20ceased.>
 
 ### vermont-electric-supply-co-v-andrus-enforcement-will-be-ordered-unless-the-b495ee15 {#vermont-electric-supply-co-v-andrus-enforcement-will-be-ordered-unless-the-b495ee15}
 
@@ -55,3 +64,12 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - source_cards: `andrus-expiry-survival`, `andrus-five-year-county`, `andrus-five-year-defs`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=The%20area%20involved%20was%20Rutland,restrictions%20were%20at%20an%20end.>
+
+### vermont-electric-supply-co-v-andrus-the-judgment-awarding-injunctive-relief-c13f6973 {#vermont-electric-supply-co-v-andrus-the-judgment-awarding-injunctive-relief-c13f6973}
+
+> The judgment awarding injunctive relief is affirmed and the cause is remanded for the computation of damages.
+
+- supports: `holdover-clause-limit`
+- source_cards: `andrus-injunction-affirmed`
+- cited_by: [Employee Invention Assignment in Vermont](../invention-assignment/us/vermont.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=The%20judgment%20awarding%20injunctive%20relief,for%20the%20computation%20of%20damages.>

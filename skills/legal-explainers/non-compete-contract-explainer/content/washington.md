@@ -2,7 +2,7 @@
 jurisdiction: "Washington"
 slug: washington
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,20 +17,20 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Washington[^about]
 
-Washington enforces employee non-competes today only above high, inflation-adjusted earnings thresholds and under strict notice and consideration rules — and a near-total statutory ban takes effect June 30, 2027 under Engrossed Substitute House Bill 1155.
+Washington State enforces employee non-competes today only above high, inflation-adjusted earnings thresholds and under strict notice and consideration rules — and a near-total statutory ban takes effect June 30, 2027 under Engrossed Substitute House Bill 1155.
 
 
 ## At a glance
 
 | Question | Washington |
 | --- | --- |
-| **Are non-competes enforceable?** | Allowed above a pay level |
+| **Are non-competes enforceable?** | Income-based limits |
 | **Bottom line** | Employee non-competes are void unless earnings exceed an inflation-adjusted threshold ($126,858.83 in 2026); a near-total ban takes effect June 30, 2027. |
-| **Main law or case** | RCW ch. 49.62 (ESHB 1155 ban from 2027) |
+| **Main law or case** | RCW 49.62.020(1)(b). |
 | **Main exceptions** | Confidentiality, trade-secret, qualifying sale-of-business and franchise covenants; narrow non-solicits |
 | **When the ban took effect** | Near-total ban effective June 30, 2027 (ESHB 1155) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
@@ -138,40 +138,44 @@ RCW 49.62.050 forecloses the standard workaround of routing a Washington worker'
 
 ## What are the penalties for an unenforceable Washington non-compete? {#penalties}
 
-**Short answer.** At least $5,000 per worker, plus fees — and the penalty is triggered even if a court only partially enforces or rewrites the covenant. The attorney general may also pursue relief [^rcw-080-penalty][^rcw-080-reformation-penalty-penalties][^rcw-080-ag].
+**Short answer.** If a court or arbitrator finds that a Washington non-compete violates chapter 49.62 RCW, the violator must pay the aggrieved worker the greater of actual damages or $5,000, plus fees, and in any proceeding commenced before June 30, 2027, the same penalty applies when a court only partially enforces or rewrites the covenant [^rcw-080-penalty][^rcw-080-reformation-penalty-penalties][^eshb1155-prior-law-proceedings-penalties]. The attorney general may also pursue relief [^rcw-080-ag].
 
-If a court or arbitrator finds a covenant violates the chapter, the violator must pay the aggrieved person the greater of actual damages or a $5,000 statutory penalty, plus reasonable attorneys' fees, expenses, and costs [^rcw-080-penalty]. Critically, the same penalty applies when a court reforms, rewrites, modifies, or only partially enforces the covenant — so an employer cannot rely on judicial blue-penciling to escape liability [^rcw-080-reformation-penalty-penalties].
+If a court or arbitrator finds a covenant violates the chapter, the violator must pay the aggrieved person the greater of actual damages or a $5,000 statutory penalty, plus reasonable attorneys' fees, expenses, and costs [^rcw-080-penalty]. Critically, in a proceeding commenced before June 30, 2027, the same penalty applies when a court reforms, rewrites, modifies, or only partially enforces the covenant — so the party seeking enforcement cannot rely on judicial blue-penciling to escape liability [^rcw-080-reformation-penalty-penalties][^eshb1155-prior-law-proceedings-penalties].
+
+For proceedings commenced on or after June 30, 2027, section 5 of Engrossed Substitute House Bill 1155 removes the separate reformation penalty by deleting RCW 49.62.080(3) effective that date [^eshb1155-section5-deletion-penalties][^rcw-080-effective-2027-penalties][^eshb1155-effective-date-penalties]. Section 7 amends RCW 49.62.100 so that a legal proceeding commenced before June 30, 2027 is governed by the chapter as it read before that date, which keeps the reformation penalty available in that proceeding [^eshb1155-prior-law-proceedings-penalties].
 
 > [!NOTE]
 > **Practice note.**
 >
-> Presenting an overbroad covenant and hoping a court will trim it is itself the risk. Because the penalty attaches even to a partially enforced or reformed covenant, the safer course is to draft within the statutory conditions from the outset rather than rely on a savings clause [^rcw-080-reformation-penalty-penalties][^rcw-080-penalty].
+> A savings clause that relies on a court to trim an overbroad covenant leaves the party seeking enforcement owing the penalty and fees whenever the court reforms or only partially enforces that covenant in a proceeding commenced before June 30, 2027 [^rcw-080-reformation-penalty-penalties][^rcw-080-penalty][^eshb1155-prior-law-proceedings-penalties].
 
 ## Are covenants outside the Act judged by a reasonableness test in Washington? {#common-law-reasonableness}
 
-**Short answer.** Yes. Chapter 49.62 RCW preserves the common law, and for a covenant the statute does not void, Washington courts apply a three-factor reasonableness test [^rcw-090-common-law][^perry-three-factors].
+**Short answer.** Yes: in a proceeding commenced before June 30, 2027, Washington courts judge a covenant that chapter 49.62 RCW does not void under a three-factor reasonableness test; in a later proceeding every noncompetition covenant is void regardless of when it was entered into, and the amended statute does not say whether courts will keep applying that test to covenants outside the ban [^perry-three-factors][^rcw-090-common-law][^eshb1155-prior-law-proceedings-common-law][^rcw-020-effective-2027-common-law][^eshb1155-new-law-proceedings-common-law][^eshb1155-section6-deletion-common-law][^rcw-090-effective-2027-common-law].
 
-The Act expressly does not revoke or impede the development of the common law [^rcw-090-common-law]. So a covenant that clears the statutory conditions — or one the statute does not reach — is still tested for reasonableness. Under *Perry v. Moran*, that test weighs three factors: whether the restraint is necessary to protect the employer's business or goodwill, whether it imposes a greater restraint than reasonably necessary, and the degree of injury to the public [^perry-three-factors]. *Emerick v. Cardiac Study Center, Inc.* confirms the modern formulation that a covenant is enforceable if reasonable [^emerick-enforceable-if-reasonable].
+In its current version, the Act expressly does not revoke or impede the development of the common law [^rcw-090-common-law]. So a covenant that clears the statutory conditions — or one the statute does not reach — is still tested for reasonableness. Under *Perry v. Moran*, that test weighs three factors: whether the restraint is necessary to protect the employer's business or goodwill, whether it imposes a greater restraint than reasonably necessary, and the degree of injury to the public [^perry-three-factors]. *Emerick v. Cardiac Study Center, Inc.* confirms the modern formulation that a covenant is enforceable if reasonable [^emerick-enforceable-if-reasonable].
 
 "Whether a covenant is reasonable involves a consideration of three factors: (1) whether restraint is necessary for the protection of the business or goodwill of the employer, (2) whether it imposes upon the employee any greater restraint than is reasonably necessary to secure the employer's business or goodwill, and (3) whether the degree of injury to the public is such loss of the service and skill of the employee as to warrant nonenforcement of the covenant."[^perry-three-factors]
+
+That savings clause has an end date. Section 6 of ESHB 1155 deletes RCW 49.62.090(2) effective June 30, 2027 [^eshb1155-section6-deletion-common-law][^eshb1155-effective-date-common-law]. From that date, RCW 49.62.090 has two subsections. Subsection (1) says the chapter displaces conflicting tort, restitutionary, contract, and other Washington law pertaining to liability for competition by employees or independent contractors with their employers or principals, as appropriate. Subsection (2) says the chapter does not amend or modify chapter 19.108 RCW, Washington's trade secrets act [^rcw-090-effective-2027-common-law]. After that date, RCW 49.62.090 no longer expressly preserves the common law, amended subsection (1) displaces only conflicting law, and the statute does not say whether courts will keep applying the common-law reasonableness analysis to covenants outside the ban [^eshb1155-section6-deletion-common-law][^rcw-090-effective-2027-common-law]. Under section 7, a legal proceeding commenced before June 30, 2027 is governed by the chapter as it read before that date, so the savings clause still applies in that proceeding [^eshb1155-prior-law-proceedings-common-law]. Under section 7(1), the amended RCW 49.62.020 and 49.62.090 apply to every proceeding commenced on or after June 30, 2027, regardless of when the cause of action arose [^eshb1155-new-law-proceedings-common-law]. In such a proceeding, every noncompetition covenant is void and unenforceable regardless of when the parties entered into it, so a reasonableness showing cannot save a covenant the ban covers [^eshb1155-ban-common-law][^rcw-020-effective-2027-common-law][^eshb1155-new-law-proceedings-common-law].
 
 > [!NOTE]
 > **Practice note.**
 >
-> This reasonableness analysis governs only until the 2027 ban. Once ESHB 1155 takes effect on June 30, 2027, a covered non-competition covenant is void regardless of how reasonable it is, so the common-law test will matter mainly for covenants the ban does not reach — such as true non-solicits and qualifying sale-of-business covenants [^eshb1155-ban-common-law][^rcw-090-common-law].
+> A customer non-solicit drafted to last longer than 18 months after termination, or to reach customers with whom the employee neither established nor substantially developed a direct relationship, falls outside the nonsolicitation-agreement exclusion in a proceeding commenced on or after June 30, 2027. The clause is then a noncompetition covenant if it restrains the employee from engaging in a lawful business, and it is void and unenforceable [^rcw-010-effective-2027-nonsolicit-common-law][^rcw-010-effective-2027-exclusions-common-law][^rcw-010-effective-2027-noncompete-common-law][^rcw-020-effective-2027-common-law][^eshb1155-new-law-proceedings-common-law].
 
 ## Will a Washington court rewrite or partially enforce an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** A court can reform an overbroad covenant, but doing so triggers the statutory penalty. Washington courts have long enforced a covenant only to the extent it is reasonable, yet RCW 49.62.080 makes the employer pay the $5,000 penalty whenever a court reforms or partially enforces one [^woodmay-reasonable-extent-court-narrowing][^emerick-partial][^rcw-080-reformation-penalty-court-narrowing].
+**Short answer.** In a proceeding commenced before June 30, 2027, a court can reform an overbroad covenant, but doing so triggers the statutory penalty [^woodmay-reasonable-extent-court-narrowing][^rcw-080-reformation-penalty-court-narrowing][^eshb1155-prior-law-proceedings-court-narrowing]. Washington courts have long enforced a covenant only to the extent it is reasonable, yet in a proceeding commenced before June 30, 2027, RCW 49.62.080 makes the party seeking enforcement pay the greater of actual damages or a $5,000 penalty, plus fees, whenever a court reforms or partially enforces one [^woodmay-reasonable-extent-court-narrowing][^emerick-partial][^rcw-080-reformation-penalty-court-narrowing][^eshb1155-prior-law-proceedings-court-narrowing].
 
 Washington follows the reasonable-extent rule from *Wood v. May*: a court of equity enforces a restraint against a former employee only to the extent it is reasonable and necessary to protect a legitimate business interest [^woodmay-reasonable-extent-court-narrowing]. *Emerick* applies that to modern covenants, holding that when some terms are unreasonable the entire covenant does not fail — the court may modify it [^emerick-partial].
 
-But under the current statute, reformation is not free. RCW 49.62.080 imposes the $5,000 penalty (or greater actual damages) plus fees whenever a court reforms, rewrites, modifies, or only partially enforces a covenant [^rcw-080-reformation-penalty-court-narrowing]. For a clause-by-clause pass over a specific agreement drafted to these rules, the [Washington non-compete reviewer checklist](/checklists/non-compete/us/washington) walks the full covenant suite item by item with each requirement's force level.
+But under the current statute, reformation is not free. RCW 49.62.080 imposes the $5,000 penalty (or greater actual damages) plus fees whenever a court reforms, rewrites, modifies, or only partially enforces a covenant [^rcw-080-reformation-penalty-court-narrowing]. Section 5 of ESHB 1155 deletes that penalty effective June 30, 2027 [^eshb1155-section5-deletion-court-narrowing][^rcw-080-effective-2027-court-narrowing][^eshb1155-effective-date-court-narrowing]. Under section 7, a proceeding commenced before June 30, 2027 is governed by the chapter as it read before that date, so a court that reforms a covenant in that proceeding still triggers the penalty [^eshb1155-prior-law-proceedings-court-narrowing]. Once the amended chapter governs, from June 30, 2027, it is a violation for an employer to enforce or attempt to enforce any non-competition covenant [^eshb1155-enforcement-violation-court-narrowing][^eshb1155-effective-date-court-narrowing]; a proceeding commenced before that date remains under prior law [^eshb1155-prior-law-proceedings-court-narrowing]. For a clause-by-clause pass over a specific agreement drafted to these rules, the [Washington non-compete reviewer checklist](/checklists/non-compete/us/washington) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> A Washington court can reform an overbroad covenant rather than void it, but the act of reforming or partially enforcing one triggers the statutory penalty against the party seeking enforcement, so a covenant that leans on judicial narrowing to cure overbreadth exposes the employer to the very penalty at issue. The restraint that holds without that cost is the one already drawn to the minimum scope, duration, and geography the legitimate interest requires [^rcw-080-reformation-penalty-court-narrowing][^woodmay-reasonable-extent-court-narrowing].
+> An overbroad covenant drafted to rely on judicial narrowing exposes the party seeking enforcement to the statutory penalty and fees if a court reforms or only partially enforces it in a proceeding commenced before June 30, 2027. The restraint that holds without that cost is the one already drawn to the minimum scope, duration, and geography the legitimate interest requires [^rcw-080-reformation-penalty-court-narrowing][^eshb1155-prior-law-proceedings-court-narrowing][^woodmay-reasonable-extent-court-narrowing].
 
 ## Does a Washington non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -193,12 +197,17 @@ Signed on March 23, 2026 and effective June 30, 2027, ESHB 1155 (chapter 149, La
 - **Enforcement itself becomes unlawful.** It is a violation to enforce, attempt to enforce, or threaten to enforce a non-compete, to represent that a worker is subject to one, or to enter into one [^eshb1155-enforcement-violation].
 - **Affirmative notice duty.** By October 1, 2027, employers must make reasonable efforts to tell current and former workers whose covenant is still within its time period that it is void [^eshb1155-notice-duty].
 - **Forfeiture and clawback clauses are captured.** The expanded definition reaches any provision requiring a worker to return, repay, or forfeit compensation as a consequence of competing [^eshb1155-forfeiture].
-- **The thresholds disappear.** ESHB 1155 repeals the independent-contractor threshold (RCW 49.62.030), the annual-adjustment section (RCW 49.62.040), and the broadcasting-industry rule (RCW 49.44.190) [^eshb1155-repeals].
+- **The thresholds disappear.** Section 4 of ESHB 1155 rewrites RCW 49.62.020 so that all non-competes are void regardless of when they were signed, which removes the employee earnings threshold along with the other conditions in that section [^eshb1155-voidall]. Section 8 separately repeals the independent-contractor threshold (RCW 49.62.030), the annual-adjustment section (RCW 49.62.040), and the broadcasting-industry rule (RCW 49.44.190) [^eshb1155-repeals].
 
 > [!NOTE]
 > **Practice note.**
 >
 > Start planning now, not in 2027. The ban applies regardless of when a covenant was signed and adds an October 1, 2027 notice obligation, so employers should inventory existing Washington covenants and prepare worker notices well before the effective date. Re-verify the enrolled text before acting, because implementing guidance may follow [^eshb1155-voidall][^eshb1155-notice-duty].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Without an inventory of every non-compete the employer has entered into, including each Non-Compete Covenant in agreements like this one, and the date each restricted period ends, an employer risks omitting current or former workers from the written notice it must make reasonable efforts to provide by October 1, 2027, stating that their non-compete is void and unenforceable [^eshb1155-notice-duty][^eshb1155-voidall].
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Washington*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/washington.
 
@@ -270,21 +279,57 @@ Signed on March 23, 2026 and effective June 30, 2027, ESHB 1155 (chapter 149, La
 
 [^rcw-080-reformation-penalty-penalties]: **RCW 49.62.080** — "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *RCW 49.62.080(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
 
+[^eshb1155-prior-law-proceedings-penalties]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
 [^rcw-080-ag]: **RCW 49.62.080** — "Upon a violation of this chapter, the attorney general, on behalf of a person or persons, may pursue any and all relief." *RCW 49.62.080(1).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
 
-[^rcw-090-common-law]: **RCW 49.62.090** — "Except as otherwise provided in this chapter, this chapter does not revoke, modify, or impede the development of the common law." *RCW 49.62.090(2).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.090>
+[^eshb1155-section5-deletion-penalties]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "(( (3) If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 5 (amending RCW 49.62.080).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^rcw-080-effective-2027-penalties]: **RCW 49.62.080 (effective June 30, 2027)** — "A person aggrieved by a violation of this chapter may bring a cause of action to pursue any and all relief provided for in subsection (2) of this section." *RCW 49.62.080(1) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
+
+[^eshb1155-effective-date-penalties]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "This act takes effect June 30, 2027." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^perry-three-factors]: **Perry v. Moran** — "Whether a covenant is reasonable involves a consideration of three factors: (1) whether restraint is necessary for the protection of the business or goodwill of the employer, (2) whether it imposes upon the employee any greater restraint than is reasonably necessary to secure the employer's business or goodwill, and (3) whether the degree of injury to the public is such loss of the service and skill of the employee as to warrant nonenforcement of the covenant." *Perry v. Moran, 109 Wn.2d 691 (1987).* <https://www.courtlistener.com/opinion/1453982/perry-v-moran/#:~:text=Whether%20a%20covenant%20is%20reasonable,warrant%20nonenforcement%20of%20the%20covenant.>
 
+[^rcw-090-common-law]: **RCW 49.62.090 (effective until June 30, 2027)** — "Except as otherwise provided in this chapter, this chapter does not revoke, modify, or impede the development of the common law." *RCW 49.62.090(2).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.090>
+
+[^eshb1155-prior-law-proceedings-common-law]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^rcw-020-effective-2027-common-law]: **RCW 49.62.020 (effective June 30, 2027)** — "Beginning on June 30, 2027, all noncompetition covenants are void and unenforceable regardless of when the parties entered into the noncompetition covenant." *RCW 49.62.020(1) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020>
+
+[^eshb1155-new-law-proceedings-common-law]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "RCW 49.62.010, 49.62.020, 49.62.080, and 49.62.090 apply to all proceedings commenced on or after the effective date of this section, regardless of when the cause of action arose." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(1) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^eshb1155-section6-deletion-common-law]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "(( (2) Except as otherwise provided in this chapter, this chapter does not revoke, modify, or impede the development of the common law." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 6 (amending RCW 49.62.090).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^rcw-090-effective-2027-common-law]: **RCW 49.62.090 (effective June 30, 2027)** — "Subject to subsection (2) of this section, this chapter displaces conflicting tort, restitutionary, contract, including contract principles relating to discharge by assent or alteration, and other laws of this state pertaining to liability for competition by employees or independent contractors with their employers or principals, as appropriate. (2) This chapter does not amend or modify chapter 19.108 RCW." *RCW 49.62.090(1)-(2) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.090>
+
 [^emerick-enforceable-if-reasonable]: **Emerick v. Cardiac Study Center, Inc.** — "Under Washington law, noncompete covenants are enforceable if they are reasonable and lawful." *Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015).* <https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/#:~:text=Under%20Washington%20law%2C%20noncompete%20covenants,they%20are%20reasonable%20and%20lawful.>
+
+[^eshb1155-effective-date-common-law]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "This act takes effect June 30, 2027." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^eshb1155-ban-common-law]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "The legislature hereby intends to ban noncompetition covenants for all Washington-based workers and businesses." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 1(3).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
+[^rcw-010-effective-2027-nonsolicit-common-law]: **RCW 49.62.010 (effective June 30, 2027)** — "if the employee established or substantially developed a direct relationship with the customer, patient, client, or prospect through the employee's work for the employer and the prohibition expires no later than 18 months following termination of employment. An agreement that directly or indirectly prohibits the acceptance or transaction of business with a customer, patient, or client is not a ‘nonsolicitation agreement.’" *RCW 49.62.010(4) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010>
+
+[^rcw-010-effective-2027-exclusions-common-law]: **RCW 49.62.010 (effective June 30, 2027)** — "A ‘noncompetition covenant’ does not include: (i) A nonsolicitation agreement; (ii) a confidentiality agreement; (iii) a covenant prohibiting use or disclosure of trade secrets or inventions; (iv) a covenant entered into by a person purchasing or selling the goodwill of a business or otherwise acquiring or disposing of an ownership interest, but only if the person signing the covenant purchases, sells, acquires, or disposes of an ownership interest representing one percent or more of the business;" *RCW 49.62.010(3)(e)(i)-(iv) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010>
+
+[^rcw-010-effective-2027-noncompete-common-law]: **RCW 49.62.010 (effective June 30, 2027)** — "‘Noncompetition covenant’ includes every written or oral covenant, agreement, or contract that prohibits or restrains an employee or independent contractor from engaging in a lawful profession, trade, or business of any kind." *RCW 49.62.010(3)(a) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010>
+
 [^woodmay-reasonable-extent-court-narrowing]: **Wood v. May** — "It is well settled that a court of equity will use its power to enforce a restriction against a former employee's competition only to the extent that such restriction is reasonable and necessary to protect a legitimate business interest of the employer." *Wood v. May, 73 Wn.2d 307 (1968).* <https://www.courtlistener.com/opinion/1207148/wood-v-may/#:~:text=It%20is%20well%20settled%20that,business%20interest%20of%20the%20employer.>
+
+[^rcw-080-reformation-penalty-court-narrowing]: **RCW 49.62.080** — "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *RCW 49.62.080(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
+
+[^eshb1155-prior-law-proceedings-court-narrowing]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "Legal proceedings commenced before the effective date of this section will be governed by this chapter as amended prior to the effective date of this section." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^emerick-partial]: **Emerick v. Cardiac Study Center, Inc.** — "If the trial court determines that certain terms of the covenant are unreasonable—such as the geographic and temporal scope of the restraint—the entire covenant does not fail." *Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015).* <https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/#:~:text=If%20the%20trial%20court%20determines,entire%20covenant%20does%20not%20fail.>
 
-[^rcw-080-reformation-penalty-court-narrowing]: **RCW 49.62.080** — "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *RCW 49.62.080(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
+[^eshb1155-section5-deletion-court-narrowing]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "(( (3) If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 5 (amending RCW 49.62.080).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^rcw-080-effective-2027-court-narrowing]: **RCW 49.62.080 (effective June 30, 2027)** — "A person aggrieved by a violation of this chapter may bring a cause of action to pursue any and all relief provided for in subsection (2) of this section." *RCW 49.62.080(1) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080>
+
+[^eshb1155-effective-date-court-narrowing]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "This act takes effect June 30, 2027." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^eshb1155-enforcement-violation-court-narrowing]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "It is a violation of this chapter for an employer to enforce, attempt to enforce, or threaten to enforce against an employee or worker any noncompetition covenant, to represent that the employee or worker is subject to a noncompetition covenant, or to enter into or attempt to enter into a noncompetition covenant with an employee or worker." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4(2).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^rcw-020-duration-tolling]: **RCW 49.62.020** — "A court or arbitrator must presume that any noncompetition covenant with a duration exceeding eighteen months after termination of employment is unreasonable and unenforceable." *RCW 49.62.020(2).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020>
 

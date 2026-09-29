@@ -2,7 +2,7 @@
 jurisdiction: "Oregon"
 slug: oregon
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-05"
 human_reviewed_at: null
 next_review_due: "2026-12-02"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/oregon · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/oregon · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Oregon Consumer Privacy Law (OCPA)[^about]
 
@@ -30,7 +30,7 @@ The Oregon Consumer Privacy Act gives Oregon consumers rights over their persona
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus 25%-data-sale-revenue) threshold in Oregon, the OCPA requires a privacy notice with prescribed contents, opt-in consent to process sensitive data, recognition of a universal opt-out signal, and processor contracts — enforced by the Attorney General with civil penalties up to $7,500 per violation, no consumer lawsuits, and no general right to cure after January 1, 2026. |
-| **Main law** | Or. Rev. Stat. §§ 646A.570–646A.589 (Oregon Consumer Privacy Act) |
+| **Main law** | Or. Rev. Stat. § 646A.572(1)(a). |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Oregon (or targeting residents) that, in a calendar year, control or process the personal data of 100,000+ consumers, or 25,000+ while deriving 25% or more of annual gross revenue from selling personal data — no dollar revenue floor; nonprofits covered; GLBA financial institutions, insurers, and public bodies are exempt at the entity level, while HIPAA-regulated health data is exempt only at the data level (so HIPAA-covered businesses still comply for non-exempt data) |
 | **Can consumers sue?** | No |

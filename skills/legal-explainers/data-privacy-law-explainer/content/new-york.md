@@ -2,7 +2,7 @@
 jurisdiction: "New York"
 slug: new-york
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-york · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-york · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # New York Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ New York has no comprehensive consumer-privacy act. The SHIELD Act (GBL §§ 899
 | --- | --- |
 | **Law coverage** | Specific data types only |
 | **Summary** | New York has not enacted a comprehensive consumer-privacy law, but the SHIELD Act already requires almost every business holding New Yorkers' private information — with no revenue or in-state-presence threshold — to run a reasonable data-security program, to report breaches within 30 days, and to expect Attorney General enforcement under separate SHIELD and breach-notice provisions. Since June 20, 2025 the Child Data Protection Act has added a default-deny regime for processing personal data of users under 18, including a sale ban subject to statutory exceptions. There is no general privacy-policy mandate, so the policy slice is governed by the rule that whatever you publish must be true; the moving piece to watch is the twice-passed Health Information Privacy Act, which would add a strict consumer-health-data regime if it becomes law. |
-| **Main law** | SHIELD Act — N.Y. Gen. Bus. Law § 899-bb (reasonable-safeguards duty) and § 899-aa (breach notification) — plus the Child Data Protection Act (GBL art. 39-FF, in force since June 20, 2025) and GBL § 349; New York has no comprehensive consumer-privacy statute |
+| **Main law** | No comprehensive consumer-privacy law; N.Y. Gen. Bus. Law § 899-bb(2)(a). N.Y. Gen. Bus. Law § 899-aa(2). N.Y. Gen. Bus. Law § 899-ff(1). N.Y. Gen. Bus. Law § 349(a). |
 | **Privacy policy required?** | No general New York statute mandates a consumer privacy policy or fixes its contents; a published policy that misstates practices is actionable under GBL § 349 and FTC Act § 5, and GLBA, HIPAA, and COPPA supply required contents where they apply |
 | **Who does it cover?** | Any person or business, wherever located, that owns or licenses computerized data including the private information of a New York resident — no in-state-presence, revenue, or volume threshold; small businesses get scaled (not waived) duties; the Child Data Protection Act covers operators of online services with New York users under 18 |
 | **Can consumers sue?** | Limited path |

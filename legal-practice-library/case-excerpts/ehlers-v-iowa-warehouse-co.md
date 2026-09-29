@@ -42,3 +42,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `ia-ehlers-bad-faith`, `q5-ehlers-bad-faith`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse-company/#:~:text=No%20covenant%20placed%20in%20the,should%20be%20enforced%20in%20equity.>
+
+### ehlers-v-iowa-warehouse-co-we-now-overrule-brecher-v-brown-aa501f6f {#ehlers-v-iowa-warehouse-co-we-now-overrule-brecher-v-brown-aa501f6f}
+
+> We now overrule Brecher v. Brown (1945), 235 Iowa 627 , 17 N.W.2d 377 , and adopt the rule that unless the facts and circumstances indicate bad faith on the part of the employer, we will enforce noncompetitive covenants to the extent they are reasonably necessary to protect his legitimate interests without imposing undue hardship on the employee when the public interest is not adversely affected.
+
+- supports: `sale-of-business`
+- source_cards: `q10-ehlers-reform`
+- cited_by: [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse-company/#:~:text=We%20now%20overrule%20Brecher%20v.,interest%20is%20not%20adversely%20affected.>

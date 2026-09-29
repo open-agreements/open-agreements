@@ -42,7 +42,7 @@ Review every item below the way a South Dakota court would: the baseline statute
 
 - [ ] **Covered customers limited to existing customers** (Required) — The statute permits an agreement not to solicit existing customers of the employer — that is the entire grant. A defined customer class reaching prospects, long-departed accounts, or a whole market widens the clause past the exception's text, and the definition should describe people the worker may not pursue, not people the worker may never serve, because an agreement not to solicit is not an agreement not to sell. [^sd-5911-defs][^sd-dolly-sell-defs] [#limit-covered-customers-to-existing-customers]
 
-- [ ] **Covered employees** (Recommended) — Keep the anti-poaching class to colleagues the departing worker actually worked with during a stated look-back window. No staged South Dakota authority blesses a worker's own no-recruit promise, so the conservative reading treats it like every other restraint here: drafted narrowly, with nothing left for a court to read against the employer. [#define-covered-employees]
+- [ ] **Covered employees** (Recommended) — Keep the anti-poaching class to colleagues the departing worker actually worked with during a stated look-back window. No identified South Dakota authority blesses a worker's own no-recruit promise, so the conservative reading treats it like every other restraint here: drafted narrowly, with nothing left for a court to read against the employer. [#define-covered-employees]
 
 - [ ] **Protected business interests** (Recommended) — Recite the interests, but do not expect them to substitute for statutory fit. South Dakota does not start from a free-floating reasonableness test — the covenant lives or dies on whether it sits inside a chapter 53-9 exception, read narrowly — so the recital frames the clause without rescuing it. [^sd-amrim-defs] [#define-protected-interests]
 
@@ -84,7 +84,7 @@ Review every item below the way a South Dakota court would: the baseline statute
 
 ## Restrictive covenants (each independently includable) {#restrictive-covenants-each-independently-includable}
 
-- [ ] **Employee non-solicit** (Optional) — Optional, and the least-mapped covenant in the suite here: the staged South Dakota authority addresses no-hire promises between businesses, not a worker's own promise not to recruit former colleagues. What is settled is that the employer cannot achieve the same restraint through a side agreement with a customer or vendor — that pattern has its own gate at the end of this checklist. [^sd-densmore-cov] [#permit-employee-nonsolicit]
+- [ ] **Employee non-solicit** (Optional) — Optional, and the least-mapped covenant in the suite here: the identified South Dakota authority addresses no-hire promises between businesses, not a worker's own promise not to recruit former colleagues. What is settled is that the employer cannot achieve the same restraint through a side agreement with a customer or vendor — that pattern has its own gate at the end of this checklist. [^sd-densmore-cov] [#permit-employee-nonsolicit]
 
 - [ ] **Customer non-solicit** (Optional) — Despite the softer name, this clause travels inside the same statutory lane as the non-compete: existing customers only, a specified area, a like business carried on there, and two years from termination of the agreement. Review it with exactly the rigor the non-compete gets, plus the solicitation-only limit. [^sd-5911-cov] [#permit-customer-nonsolicit]
 

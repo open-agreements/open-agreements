@@ -2,19 +2,23 @@
 type: Case Excerpt
 title: Whittaker General Medical Corp. v. Daniel
 description: >-
-  Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989). — quoted in 2
+  Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989). — quoted in 3
   document(s).
 citation: 'Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).'
 resource: >-
   https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/
-timestamp: '2026-06-12'
+timestamp: '2026-06-30'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/north-carolina
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -22,7 +26,7 @@ tags:
 
 *Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -30,10 +34,19 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > If a contract by an employee in restraint of competition is too broad to be a reasonable protection to the employer’s business it will not be enforced.
 
-- supports: `duration-limits`, `restrictive-covenants-each-independently-includable`
-- source_cards: `nc-daniel-overbroad`, `q3-daniel-overbroad`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- supports: `duration-limits`, `holdover-clause-limit`, `restrictive-covenants-each-independently-includable`
+- source_cards: `nc-daniel-overbroad`, `q3-daniel-overbroad`, `whittaker-too-broad`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Employee Invention Assignment in North Carolina](../invention-assignment/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=If%20a%20contract%20by%20an,it%20will%20not%20be%20enforced.>
+
+### whittaker-general-medical-corp-v-daniel-if-the-contract-is-separable-however-d895585d {#whittaker-general-medical-corp-v-daniel-if-the-contract-is-separable-however-d895585d}
+
+> If the contract is separable, however, and one part is reasonable, the courts will enforce the reasonable provision.
+
+- supports: `holdover-clause-limit`
+- source_cards: `whittaker-separable`
+- cited_by: [Employee Invention Assignment in North Carolina](../invention-assignment/us/north-carolina.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=If%20the%20contract%20is%20separable%2C,will%20enforce%20the%20reasonable%20provision.>
 
 ### whittaker-general-medical-corp-v-daniel-such-covenants-are-enforceable-in-this-19c9c3d0 {#whittaker-general-medical-corp-v-daniel-such-covenants-are-enforceable-in-this-19c9c3d0}
 

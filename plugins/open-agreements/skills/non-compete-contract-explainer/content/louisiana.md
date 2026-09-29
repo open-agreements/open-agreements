@@ -2,7 +2,7 @@
 jurisdiction: "Louisiana"
 slug: louisiana
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/louisiana · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/louisiana · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Louisiana[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of Louisiana non-compete law under La. R.S. 23:92
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Louisiana voids every non-compete by default and enforces one only if it fits a narrow statutory exception with named parishes and a two-year cap, so most out-of-state templates fail. |
-| **Main law or case** | La. R.S. 23:921 |
+| **Main law or case** | La. R.S. 23:921(A)(1). |
 | **Main exceptions** | Employee exception (subsection C, 2-yr/named parishes); sale of business; physician burn-off limits; automobile salesmen banned; intern/apprentice ban (Aug 1, 2026) |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Unclear |
@@ -112,7 +112,7 @@ The statute's employee exception applies to a person who *is employed* by the em
 
 "Because Clapp was not employed by Rouses when he signed the agreement, it is unenforceable under Louisiana law."[^rouses-prospective]
 
-A later Louisiana First Circuit decision, *Arthur J. Gallagher & Co. v. Annison*, distinguished *Rouses* and supplied a drafting fix. There the employees signed before starting, but each agreement fixed an effective date equal to the employee's first day of work [^annison-effective-date].
+A later Louisiana First Circuit decision, *Arthur J. Gallagher & Co. v. Annison* [^annison-distinguishes-rouses], distinguished *Rouses* [^rouses-prospective] and supplied a drafting fix. There the employees signed before starting, but each agreement fixed an effective date equal to the employee's first day of work [^annison-effective-date].
 
 "But Annison and Cates expressly agreed with Gallagher that the effective date of their employment agreements was the date each commenced their respective employment."[^annison-effective-date]
 
@@ -246,6 +246,8 @@ A confidentiality or non-disclosure agreement is not subject to the parish-namin
 [^rouses-prospective]: **Rouses Enterprises, L.L.C. v. Clapp** — "Because Clapp was not employed by Rouses when he signed the agreement, it is unenforceable under Louisiana law." *Rouses Enters., L.L.C. v. Clapp, No. 21-30293 (5th Cir. Mar. 8, 2022).* <https://www.ca5.uscourts.gov/opinions/unpub/21/21-30293.0.pdf>
 
 [^annison-effective-date]: **Arthur J. Gallagher & Co. v. Annison** — "But Annison and Cates expressly agreed with Gallagher that the effective date of their employment agreements was the date each commenced their respective employment." *Arthur J. Gallagher & Co. v. Annison, 391 So. 3d 1089 (La. Ct. App. 2024).* <https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html>
+
+[^annison-distinguishes-rouses]: **Arthur J. Gallagher & Co. v. Annison** — "We find Rouses, 2022 WL 686332, at *1, factually distinguishable." *Arthur J. Gallagher & Co. v. Annison, 391 So. 3d 1089 (La. Ct. App. 2024).* <https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html>
 
 [^cellone-continued-employment]: **Cellular One, Inc. v. Boyd** — "Defendants signed these agreements as a condition of their continued employment." *Cellular One, Inc. v. Boyd, 653 So. 2d 30 (La. Ct. App. 1995).* <https://www.courtlistener.com/opinion/1154814/cellular-one-inc-v-boyd/#:~:text=Defendants%20signed%20these%20agreements%20as,condition%20of%20their%20continued%20employment.>
 

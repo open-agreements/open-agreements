@@ -2,7 +2,7 @@
 jurisdiction: "Australia"
 slug: au
 countryCode: AU
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-16"
 human_reviewed_at: null
 next_review_due: "2026-12-13"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Australia[^about]
 
@@ -30,7 +30,7 @@ Australia treats post-employment non-competes under the common-law restraint-of-
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Australian non-competes are presumptively void restraints of trade and bind a former worker only so far as reasonably necessary to protect a legitimate business interest, with NSW adding a statutory read-down power. |
-| **Main law or case** | Lindner v Murdock's Garage [1950] HCA 48; Restraints of Trade Act 1976 (NSW) |
+| **Main law or case** | Common law governs Australian employee restraints of trade; Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J). |
 | **Main exceptions** | Sale-of-business judged more leniently; NSW statutory read-down; proposed federal ban (not yet law) |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Yes |

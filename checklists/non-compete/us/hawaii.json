@@ -300,7 +300,7 @@
         "sectionId": "definitions",
         "itemNumber": "2.4",
         "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-restricted-territory",
-        "requirementGuidance": "Geographic scope is examined alongside duration and breadth, and the contract's own territory controls what can be enforced — in the staged case law an injunction entered statewide was sent back to be trimmed to the covenant's County of Honolulu limit. Define the territory precisely and size it to where the protected interest actually operates.",
+        "requirementGuidance": "Geographic scope is examined alongside duration and breadth, and the contract's own territory controls what can be enforced — in the identified case law an injunction entered statewide was sent back to be trimmed to the covenant's County of Honolulu limit. Define the territory precisely and size it to where the protected interest actually operates.",
         "variants": [],
         "sources": [
           {
@@ -564,7 +564,7 @@
         "sectionId": "timing-and-execution-acknowledgements",
         "itemNumber": "3.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#acknowledge-timing",
-        "requirementGuidance": "Look for the worker's acknowledgement of when the covenant was signed relative to the start of employment and what was exchanged for it. No staged Hawaii statute conditions enforceability on a particular consideration form, but a clean record of timing and exchange is cheap evidence if procedural fairness is ever contested — and it documents the legitimate purpose the covenant will need to show.",
+        "requirementGuidance": "Look for the worker's acknowledgement of when the covenant was signed relative to the start of employment and what was exchanged for it. No identified Hawaii statute conditions enforceability on a particular consideration form, but a clean record of timing and exchange is cheap evidence if procedural fairness is ever contested — and it documents the legitimate purpose the covenant will need to show.",
         "variants": [],
         "sources": []
       },
@@ -951,7 +951,7 @@
         "sectionId": "physician-specific-notices-and-carve-outs",
         "itemNumber": "9.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#address-physician-specific-rights",
-        "requirementGuidance": "The staged Hawaii sources contain no physician-specific covenant statute, so the dedicated clause does honest work by saying what governs: a physician covenant passes through the same restraint-of-trade framework as any other — legitimate ancillary purpose, no substantial lessening of competition, reasonable scope. A clause that states that treatment expressly keeps the question reviewable instead of leaving the physician to assume some special regime exists.",
+        "requirementGuidance": "The identified Hawaii sources contain no physician-specific covenant statute, so the dedicated clause does honest work by saying what governs: a physician covenant passes through the same restraint-of-trade framework as any other — legitimate ancillary purpose, no substantial lessening of competition, reasonable scope. A clause that states that treatment expressly keeps the question reviewable instead of leaving the physician to assume some special regime exists.",
         "variants": [],
         "sources": []
       },
@@ -1013,7 +1013,7 @@
         "sectionId": "tolling-during-breach",
         "itemNumber": "12.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#address-tolling-during-breach",
-        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Hawaii question. The staged authorities do not resolve whether a covenant period pauses during breach or litigation, and an extension-on-breach clause lengthens the actual restraint, so it has to be justified under the same ancillary-purpose and reasonable-duration limits that govern the covenant itself. Do not assume a court will enforce it.",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Hawaii question. The identified authorities do not resolve whether a covenant period pauses during breach or litigation, and an extension-on-breach clause lengthens the actual restraint, so it has to be justified under the same ancillary-purpose and reasonable-duration limits that govern the covenant itself. Do not assume a court will enforce it.",
         "variants": [],
         "sources": [
           {
@@ -1101,7 +1101,7 @@
         "sectionId": "severability-and-reformation",
         "itemNumber": "14.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#draft-to-the-protected-interest-rather-than-rely-on-narrowing",
-        "requirementGuidance": "Read the severability clause as architecture, not insurance. The staged Hawaii authorities supply no rule that a court will rewrite an overbroad covenant into an enforceable one: the closest example trimmed an injunction back to the covenant's own county limit — correcting enforcement to the contract's terms, not rewriting the contract — and the covenant that lacked a legitimate ancillary purpose failed outright rather than being saved by narrower wording. Expect each restriction to be drafted at the minimum scope its protected interest supports, in separable tiers a court can enforce or strike cleanly, rather than a broad clause paired with a savings provision that asks the court to do the tailoring.",
+        "requirementGuidance": "Read the severability clause as architecture, not insurance. The identified Hawaii authorities supply no rule that a court will rewrite an overbroad covenant into an enforceable one: the closest example trimmed an injunction back to the covenant's own county limit — correcting enforcement to the contract's terms, not rewriting the contract — and the covenant that lacked a legitimate ancillary purpose failed outright rather than being saved by narrower wording. Expect each restriction to be drafted at the minimum scope its protected interest supports, in separable tiers a court can enforce or strike cleanly, rather than a broad clause paired with a savings provision that asks the court to do the tailoring.",
         "variants": [],
         "sources": [
           {

@@ -2,7 +2,7 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Idaho[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of Idaho non-compete law under Idaho Code title 4
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Idaho enforces non-competes only against key employees or key independent contractors and only if reasonable, with an 18-month duration safe harbor and mandatory judicial modification of overbroad terms. |
-| **Main law or case** | Idaho Code §§ 44-2701 to 44-2704 |
+| **Main law or case** | Idaho Code § 44-2701. |
 | **Main exceptions** | Only key employees/independent contractors; healthcare weighed against patient access; sale-of-business reviewed less strictly |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Yes |
@@ -112,8 +112,6 @@ That blue-pencil rule is strong, but it is not a license to omit essential terms
 
 *Blaskiewicz* applied the statute's modification power after chapter 44-27 was enacted. It faulted the district court for declaring the covenant void without considering statutory modification [^blaskiewicz-blue-pencil-statute].
 
-In practice, *Brand Makers Promotional Products, LLC v. Archibald* refused to rewrite a covenant that lacked geographic and line-of-business limits, while *Timberline Drilling v. American Drilling* reduced a five-year period to eighteen months. Those cases are useful drafting context, but the source corpus here does not include quote-verified text for them.
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -147,7 +145,7 @@ That makes no-service or non-dealing clauses a drafting risk. A clause that bars
 
 ## Does an Idaho non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
-**Short answer.** Idaho law is unsettled. No Idaho statute or Idaho appellate decision in the staged source corpus squarely addresses whether a non-compete term tolls during breach or litigation, so the safer answer is that the issue remains open.
+**Short answer.** Idaho law is unsettled. No Idaho statute or Idaho appellate decision in the identified source corpus squarely addresses whether a non-compete term tolls during breach or litigation, so the safer answer is that the issue remains open.
 
 The statutory tension is real. Section 44-2704 presumes terms of eighteen months or less reasonable and requires additional consideration for a direct-competition restriction that exceeds eighteen months [^idaho-44-2704-tolling-tension]. Section 44-2703 tells courts to modify unreasonable covenants and enforce them as modified [^idaho-44-2703-tolling-modification].
 

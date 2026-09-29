@@ -2,7 +2,7 @@
 jurisdiction: "West Virginia"
 slug: west-virginia
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/west-virginia · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/west-virginia · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # West Virginia Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ West Virginia has no comprehensive consumer-privacy statute. The operative state
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | West Virginia has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative state statutes are the breach-notification article — enforced exclusively by the Attorney General, with civil penalties capped at $150,000 per breach and available only for repeated and willful violations — and the West Virginia Consumer Credit and Protection Act, whose deceptive-practices article carries a consumer private right of action for actual damages or $200 after a 45-day pre-suit cure window. Everything else in a West Virginia-facing privacy program comes from the federal and sectoral overlay — FTC Act § 5, GLBA, HIPAA, and COPPA — so build to those and to the breach statute, and the program upgrades rather than restarts if West Virginia later enacts an omnibus law. |
-| **Main law** | West Virginia breach-notification article, W. Va. Code §§ 46A-2A-101 to 46A-2A-105, plus the WVCCPA unfair-or-deceptive-practices article (W. Va. Code § 46A-6-104) — West Virginia has no comprehensive consumer-privacy law |
+| **Main law** | No comprehensive consumer-privacy law; W. Va. Code § 46A-2A-102(a). W. Va. Code § 46A-6-104. |
 | **Privacy policy required?** | No West Virginia statute mandates a general consumer privacy policy or fixes its contents; a policy that misstates actual practices invites FTC Act § 5 and WVCCPA deception exposure, and GLBA, HIPAA, and COPPA supply the contents where those regimes apply |
 | **Who does it cover?** | Any individual or entity — corporations, partnerships, limited liability companies, associations, governments, for profit or not — that owns or licenses computerized personal information of West Virginia residents; no revenue or consumer-volume threshold |
 | **Can consumers sue?** | Limited path |

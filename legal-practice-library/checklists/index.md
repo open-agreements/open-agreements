@@ -4,6 +4,7 @@
 
 * [Corporate Governance](corporate-governance/)
 * [Founder Separation](founder-separation/)
+* [Hiring](hiring/)
 * [Invention Assignment](invention-assignment/)
 * [Non Compete](non-compete/)
 * [Privacy Policy](privacy-policy/)

@@ -1,5 +1,14 @@
 # Non Compete Update Log
 
+## 2026-09-28
+* **Update**: content(non-compete): link Main law to source cards (3e5fa1f)
+* **Update**: One chip per named case: Illinois privacy and non-U.S. non-compete guides (#2900 batch A) (#2914) (5aac21b)
+* **Update**: content(non-compete): Main law statements say only what the linked cards support (88efb3e)
+
+## 2026-09-26
+* **Update**: content(non-compete): date the Singapore and Michigan reform status from the last official record (0053843)
+* **Update**: content(non-compete): tighten the Michigan and Singapore status passages after peer review (91f35ec)
+
 ## 2026-07-06
 * **Update**: feat(restrictive-covenant): employee non-solicit 24-month market default, benchmark-grounded rationales, tolling benchmark row (#1540) (#1587) (d0e30e9)
 * **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)

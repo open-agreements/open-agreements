@@ -93,8 +93,6 @@ That blue-pencil rule is strong, but it is not a license to omit essential terms
 
 *Blaskiewicz* applied the statute's modification power after chapter 44-27 was enacted. It faulted the district court for declaring the covenant void without considering statutory modification [^blaskiewicz-blue-pencil-statute].
 
-In practice, *Brand Makers Promotional Products, LLC v. Archibald* refused to rewrite a covenant that lacked geographic and line-of-business limits, while *Timberline Drilling v. American Drilling* reduced a five-year period to eighteen months. Those cases are useful drafting context, but the source corpus here does not include quote-verified text for them.
-
 > [!CAUTION]
 > **Drafting note.**
 >
@@ -128,7 +126,7 @@ That makes no-service or non-dealing clauses a drafting risk. A clause that bars
 
 ## Does an Idaho non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
-**Short answer.** Idaho law is unsettled. No Idaho statute or Idaho appellate decision in the staged source corpus squarely addresses whether a non-compete term tolls during breach or litigation, so the safer answer is that the issue remains open.
+**Short answer.** Idaho law is unsettled. No Idaho statute or Idaho appellate decision in the identified source corpus squarely addresses whether a non-compete term tolls during breach or litigation, so the safer answer is that the issue remains open.
 
 The statutory tension is real. Section 44-2704 presumes terms of eighteen months or less reasonable and requires additional consideration for a direct-competition restriction that exceeds eighteen months [^idaho-44-2704-tolling-tension]. Section 44-2703 tells courts to modify unreasonable covenants and enforce them as modified [^idaho-44-2703-tolling-modification].
 

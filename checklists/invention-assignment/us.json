@@ -38,14 +38,14 @@
       "rel": "related-form",
       "href": "https://openagreements.org/templates/openagreements-confidentiality-invention-assignment-agreement",
       "type": "text/html",
-      "title": "Confidentiality & Invention Assignment Agreement (CIIAA)"
+      "title": "Confidential Information and Invention Assignment Agreement (CIIAA)"
     }
   ],
   "data": {
     "topic": "invention-assignment",
     "slug": "us",
     "frontmatter": {
-      "title": "Confidentiality and Invention Assignment Agreement Reviewer Checklist",
+      "title": "Confidential Information and Invention Assignment Agreement Reviewer Checklist",
       "description": "A document-type reviewer checklist for a confidentiality and invention assignment agreement, covering present assignment mechanics, lawful carve-outs and notices, confidentiality scope, post-employment cooperation, return obligations, monitoring disclosures, and technology controls.",
       "eyebrow": "Reviewer Checklist",
       "coverage": "U.S. confidentiality and invention assignment agreement",

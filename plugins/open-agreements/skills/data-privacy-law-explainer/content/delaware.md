@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-06"
 human_reviewed_at: null
 next_review_due: "2026-12-03"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/delaware · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/delaware · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Delaware Consumer Privacy Law (DPDPA)[^about]
 
@@ -30,7 +30,7 @@ The Delaware Personal Data Privacy Act gives Delaware residents rights over thei
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you control or process the data of 35,000 Delaware residents (or 10,000 plus a fifth of revenue from selling data), the DPDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Department of Justice, whose temporary right-to-cure expired at the end of 2025, with no consumer lawsuits. |
-| **Main law** | Del. Code tit. 6 §§ 12D-101 et seq. (Delaware Personal Data Privacy Act) |
+| **Main law** | Del. Code tit. 6 § 12D-103(a). |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Delaware (or targeting residents) that control or process the data of 35,000+ consumers a year, or 10,000+ while deriving more than 20% of gross revenue from selling data — no revenue floor, and only insurance-crime nonprofits are exempt |
 | **Can consumers sue?** | No |

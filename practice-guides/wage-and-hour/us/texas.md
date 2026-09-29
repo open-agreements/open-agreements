@@ -70,15 +70,15 @@ An employee who quits, by contrast, is paid on the ordinary payroll cycle rather
 
 ## What is the penalty for late pay? {#late-pay-penalty}
 
-**Short answer.** Texas has no California-style continuing-wage penalty. When an employer pays wages late or not at all, the remedy runs through an administrative wage claim at the Texas Workforce Commission, and the Commission may add a bad-faith administrative penalty on top of the wages owed [^tex-lab-code-sec-61-053]. That penalty is modest and capped — the lesser of the wages at issue or $1,000 — not a daily accrual, so late-pay exposure in Texas is far smaller than in penalty states [^tex-lab-code-sec-61-053-cap].
+**Short answer.** Texas has no California-style continuing-wage penalty. When an employer pays wages late or not at all, the remedy runs through an administrative wage claim at the Texas Workforce Commission, and the Commission may add a bad-faith administrative penalty on top of the wages owed [^tex-lab-code-sec-61-053]. This administrative penalty is capped at the lesser of the wages in question or claimed, or $1,000; it does not accrue as a daily continuing-wage penalty [^tex-lab-code-sec-61-053-cap].
 
 Section 61.053 authorizes the penalty only on a finding of bad faith, and it can cut both ways — the Commission may also penalize an employee who brings a wage claim in bad faith.
 
 "If the commission examiner, a wage claim appeal tribunal, or the commission determines that an employer acted in bad faith in not paying wages as required by this chapter, the examiner, tribunal, or commission, in addition to ordering the payment of the wages, may assess an administrative penalty against the employer."[^tex-lab-code-sec-61-053]
 
-The cap keeps the penalty small in absolute terms, which is why the real deterrent in Texas is the separate criminal exposure for an employer that hires or keeps a worker intending to avoid paying wages, not the administrative penalty itself.
-
 "An administrative penalty assessed under this section may not exceed the lesser of: (1) the amount of the wages in question or claimed; or (2) $1,000."[^tex-lab-code-sec-61-053-cap]
+
+Separate from the administrative penalty, Section 61.019 makes it an offense for an employer to fail after demand to pay wages owed if the employer intended at hiring to avoid paying those wages, or intends to avoid paying them and to continue employing the worker [^tex-lab-code-sec-61-019].
 
 ## How often must workers be paid? {#pay-frequency}
 
@@ -161,6 +161,8 @@ Texas employees also retain the full federal remedy: a private FLSA action for u
 [^tex-lab-code-sec-61-053]: **Texas Labor Code Sec. 61.053** — "If the commission examiner, a wage claim appeal tribunal, or the commission determines that an employer acted in bad faith in not paying wages as required by this chapter, the examiner, tribunal, or commission, in addition to ordering the payment of the wages, may assess an administrative penalty against the employer." *Texas Labor Code Sec. 61.053.* <https://statutes.capitol.texas.gov/Docs/LA/htm/LA.61.htm>
 
 [^tex-lab-code-sec-61-053-cap]: **Texas Labor Code Sec. 61.053** — "An administrative penalty assessed under this section may not exceed the lesser of: (1) the amount of the wages in question or claimed; or (2) $1,000." *Texas Labor Code Sec. 61.053.* <https://statutes.capitol.texas.gov/Docs/LA/htm/LA.61.htm>
+
+[^tex-lab-code-sec-61-019]: **Texas Labor Code Sec. 61.019** — "An employer commits an offense if: (1) at the time of hiring an employee, the employer intends to avoid payment of wages owed to the employee; and (2) the employer fails after demand to pay those wages. (b) An employer commits an offense if the employer: (1) intends to avoid payment of wages owed to an employee; (2) intends to continue to employ the employee; and (3) fails after demand to pay those wages." *Texas Labor Code Sec. 61.019.* <https://statutes.capitol.texas.gov/Docs/LA/htm/LA.61.htm>
 
 [^tex-lab-code-sec-61-011]: **Texas Labor Code Sec. 61.011** — "An employer shall pay wages to an employee other than an employee covered by Subsection (a) at least twice a month." *Texas Labor Code Sec. 61.011.* <https://statutes.capitol.texas.gov/Docs/LA/htm/LA.61.htm>
 

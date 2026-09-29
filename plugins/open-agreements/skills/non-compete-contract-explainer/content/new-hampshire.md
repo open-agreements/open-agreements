@@ -2,7 +2,7 @@
 jurisdiction: "New Hampshire"
 slug: new-hampshire
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-hampshire · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-hampshire · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Hampshire[^about]
 
@@ -28,11 +28,11 @@ New Hampshire enforces reasonable non-competes under a common-law test, but RSA 
 
 | Question | New Hampshire |
 | --- | --- |
-| **Are non-competes enforceable?** | Allowed above a pay level |
+| **Are non-competes enforceable?** | Income-based limits |
 | **Bottom line** | New Hampshire enforces reasonable non-competes under a three-part common-law test, but voids them for low-wage employees (at or below 200% of the federal minimum wage) and requires pre-acceptance notice to new hires. |
-| **Main law or case** | Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979); RSA 275:70 and RSA 275:70-a |
+| **Main law or case** | Common law governs, with statutory notice and low-wage rules; Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979). RSA 275:70. RSA 275:70-a, II(b). |
 | **Main exceptions** | Low-wage ban (≤200% federal min wage); pre-acceptance notice (RSA 275:70); geographic-practice bans for physicians/nurses/APRNs/podiatrists; sale-of-business |
-| **When the ban took effect** | APRN health-care ban eff. Aug 23, 2025 (low-wage ban date not stated) |
+| **When the ban took effect** | Low-wage ban effective Sept. 8, 2019; APRN health-care ban effective Aug. 23, 2025 |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
 | **Restriction extended during a breach?** | Unsettled — no controlling authority |

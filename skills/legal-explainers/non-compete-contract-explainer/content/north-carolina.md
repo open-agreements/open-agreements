@@ -2,7 +2,7 @@
 jurisdiction: "North Carolina"
 slug: north-carolina
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-carolina · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-carolina · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Carolina[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of North Carolina non-compete law, including the 
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | North Carolina enforces an employee non-compete only if it is in writing, supported by consideration, reasonable in time and territory, and protects a legitimate business interest. |
-| **Main law or case** | common law (Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989)); writing requirement N.C. Gen. Stat. § 75-4 |
+| **Main law or case** | Common law governs, with a statutory writing requirement; Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989). N.C. Gen. Stat. § 75-4. |
 | **Main exceptions** | Physician/health-care covenants face a public-policy bar (Zaldivar); pending HB 269 (<$75k) and SB 673 (hospital) not enacted |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Unclear |
@@ -57,7 +57,7 @@ The writing requirement is statutory. Section 75-4 makes any agreement limiting 
 > [!CAUTION]
 > **Drafting note.**
 >
-> North Carolina has no general non-compete statute, so every covenant in the agreement is a partial restraint of trade that stands or falls on the five-element common-law test: it must be in writing, part of an employment contract, supported by valuable consideration, reasonable as to time and territory, and designed to protect a legitimate business interest and not against public policy [^q1-ridgway-five-factor][^q1-daniel-five-factor]. Because the covenant is read strictly against the drafter, a single defective element defeats the whole restraint and a North Carolina court will not rewrite an overbroad one — a category the state's restraint-of-trade statute already disfavors [^q1-gs-75-1][^q1-kuykendall-partial-restraint]. The broader covenants in the family are measured the same way: a no-business-with-covered-customers restraint reaches even customer-initiated business and survives only where it is supported by consideration, reasonably necessary to protect the covenantee, and not against public policy, and a non-investment restraint sits under that same reasonableness test rather than outside it [^q1-kuykendall-partial-restraint]. The analysis travels with an assignment — a successor enforcing an assigned covenant faces the same five-element test and the same strike-only severance the original employer faced, so an assignment moves the covenant without strengthening it [^q1-ridgway-five-factor].
+> A North Carolina covenant that misses any one of the five elements, such as a restraint signed without valuable consideration or one broader in time or territory than a legitimate business interest requires, risks being unenforceable [^q1-ridgway-five-factor][^q1-daniel-five-factor]. A no-business-with-covered-customers or non-investment restraint is also a non-competition restraint, so it risks the same result when it is not reasonably necessary to protect the covenantee [^q1-kuykendall-partial-restraint].
 
 ## What consideration does a North Carolina non-compete require? {#consideration}
 

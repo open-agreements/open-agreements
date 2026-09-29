@@ -2,7 +2,7 @@
 jurisdiction: "Maryland"
 slug: maryland
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maryland · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maryland · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maryland[^about]
 
@@ -30,7 +30,7 @@ Maryland enforces non-competes only when the restraint is reasonable under commo
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Maryland enforces an ordinary employee non-compete only if it is reasonable under the Becker common-law test, but a statute voids covenants outright for low-wage, veterinary, and many health care workers. |
-| **Main law or case** | Becker v. Bailey, 268 Md. 93 (1973); Md. Code, Lab. & Empl. § 3-716 |
+| **Main law or case** | Common law governs, with statutory bans for some worker groups; Becker v. Bailey, 268 Md. 93 (1973). Md. Code, Lab. & Empl. § 3-716(a)(3). |
 | **Main exceptions** | Low-wage ban (≤150% min wage); veterinary ban; health-care ≤$350k ban; high-earner clinician cap (1 yr/10 mi); client/patient-list carve-out |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Unclear |
@@ -149,7 +149,7 @@ The statutory void in Section 3-716 does not reach an anti-raiding covenant, bec
 
 ## Does a Maryland non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
-**Short answer.** This is an open Maryland question. No staged Maryland statute or appellate decision squarely endorses automatic judicial tolling or enforcement of an extension-on-breach clause after the stated restricted period expires [^ruhl-reasonableness-backdrop][^becker-reasonableness-backdrop].
+**Short answer.** This is an open Maryland question. No identified Maryland statute or appellate decision squarely endorses automatic judicial tolling or enforcement of an extension-on-breach clause after the stated restricted period expires [^ruhl-reasonableness-backdrop][^becker-reasonableness-backdrop].
 
 Maryland law on pausing the clock during a violation, or extending a covenant for the length of litigation, is unsettled. The safest reading is that any such extension still has to satisfy the same reasonableness test that governs the covenant itself [^ruhl-reasonableness-backdrop]. If an extension-on-breach clause turns a fixed one-year restraint into an open-ended one, a court could find it unreasonable on the facts [^becker-reasonableness-backdrop].
 
@@ -181,16 +181,18 @@ A broader 2025 effort to clarify that § 3-716 reaches only post-separation rest
 
 ## Are sale-of-business non-competes judged differently in Maryland? {#sale-of-business}
 
-**Short answer.** Yes — though on old authority. Maryland has no non-compete statute, and a covenant a seller gives when selling a business and its goodwill is enforced under common-law reasonableness far more readily than an employee covenant. The leading Maryland decisions are old and lightly litigated, so treat this as well-settled but dated.
+**Short answer.** Yes: in Maryland, a seller's covenant given on the sale of a business that is founded on sufficient consideration and confined to a reasonably limited area is, as a general rule, enforced by injunction almost as a matter of course [^anderson-conditions]. Maryland's non-compete statute, Labor and Employment § 3-716, addresses provisions in employment contracts [^sale-3716-employment-scope]. *Anderson v. Truitt*, the decision cited here for the seller rule, stated it in a suit it dismissed because the buyers were improper parties [^anderson-improper-parties].
 
 In *Anderson v. Truitt*, the Court of Appeals stated that where a seller's covenant rests on consideration and is confined to a reasonably limited area, the purchasers of the business are entitled to injunctive enforcement almost as a matter of course [^anderson-matter-of-course].
 
 "purchasers of the business are, as a general rule, and almost as a matter of course, entitled to the aid of a court of equity by injunction to secure them in their contract rights."[^anderson-matter-of-course]
 
+*Anderson* (1930) stated that rule in a suit that failed because the buyers were improper parties [^anderson-improper-parties], and the court expressed its opinion on the remaining questions without granting relief [^anderson-opinion-expressed]. Within *Anderson*, the seller rule is therefore a statement the court made without applying it to grant relief. *Becker v. Bailey*, the source of the modern Maryland reasonableness test, involved an employment covenant rather than a sale of a business [^sale-becker-employment-rule].
+
 > [!NOTE]
 > **Practice note.**
 >
-> *Anderson* (1930) and the earlier *Guerand v. Dandelet* are the on-point Maryland seller authorities; the modern Maryland non-compete cases (Becker, Deuerling) are all employment covenants. *Anderson* stated the rule in a suit it ultimately dismissed on other grounds, so treat it as persuasive rather than a square holding, and confirm it still holds before relying on it in a close case [^anderson-matter-of-course].
+> A seller's covenant that runs only to the individual buyers, when those buyers transfer the business to a corporation, can leave the buyers without standing to enforce it. In *Anderson*, once the business was held by a corporation, only the corporation could sue to restrain a breach of the covenant, and the individual buyers' suit failed [^anderson-only-corporation-may-sue]. In *Anderson*, the rights in the covenant vested in the corporation because all parties agreed at the time of the sale that it would be formed to take over the business [^anderson-corporation-rights]. A purchase agreement that states which entity will hold the benefit of the covenant makes clear which party has to bring an enforcement suit.
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Maryland*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/maryland.
 
@@ -270,4 +272,18 @@ In *Anderson v. Truitt*, the Court of Appeals stated that where a seller's coven
 
 [^sb591-2023-threshold]: **2023 Md. Laws ch. 266 (S.B. 591)** — "FOR the purpose of altering the application of the prohibition on including a noncompete or conflict of interest provision in an employment contract or similar document or agreement" *2023 Md. Laws ch. 266 (S.B. 591).* <https://mgaleg.maryland.gov/2023rs/Chapters_noln/CH_266_sb0591t.pdf>
 
+[^anderson-conditions]: **Anderson v. Truitt** — "Given the collateral stipulation, founded upon sufficient consideration, to abstain from such a competing business within a reasonably limited area, the;purchasers of the business are, as a general rule, and almost as a matter of course, entitled to the aid of a court of equity by injunction to secure them in their contract rights." *Anderson v. Truitt, 158 Md. 193, 148 A. 223 (1930).* <https://www.courtlistener.com/opinion/3485410/anderson-v-truitt/#:~:text=Given%20the%20collateral%20stipulation%2C%20founded,them%20in%20their%20contract%20rights.>
+
+[^sale-3716-employment-scope]: **Md. Code, Lab. & Empl. § 3-716** — "A noncompete or conflict of interest provision in an employment contract or a similar document or agreement that restricts the ability of an employee to enter into employment with a new employer or to become self–employed in the same or similar business or trade shall be null and void as being against the public policy of the State." *Md. Code, Lab. & Empl. § 3-716(a)(3).* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716>
+
+[^anderson-improper-parties]: **Anderson v. Truitt** — "There can be no substitution of the corporation as a party by amendment, as we find the appellants to be improper parties, and entirely new parties cannot be substituted by amendment." *Anderson v. Truitt, 158 Md. 193, 148 A. 223 (1930).* <https://www.courtlistener.com/opinion/3485410/anderson-v-truitt/#:~:text=There%20can%20be%20no%20substitution,cannot%20be%20substituted%20by%20amendment.>
+
 [^anderson-matter-of-course]: **Anderson v. Truitt** — "purchasers of the business are, as a general rule, and almost as a matter of course, entitled to the aid of a court of equity by injunction to secure them in their contract rights." *Anderson v. Truitt, 158 Md. 193, 148 A. 223 (1930).* <https://www.courtlistener.com/opinion/3485410/anderson-v-truitt/#:~:text=purchasers%20of%20the%20business%20are%2C,them%20in%20their%20contract%20rights.>
+
+[^anderson-opinion-expressed]: **Anderson v. Truitt** — "As the case appears to have been fully presented, we have nevertheless expressed the opinion of this court on all its questions in order to save expense and delay in proceedings upon a new bill." *Anderson v. Truitt, 158 Md. 193, 148 A. 223 (1930).* <https://www.courtlistener.com/opinion/3485410/anderson-v-truitt/#:~:text=As%20the%20case%20appears%20to,proceedings%20upon%20a%20new%20bill.>
+
+[^sale-becker-employment-rule]: **Becker v. Bailey** — "The general rule in Maryland is that if a restrictive covenant in an employment contract is supported by adequate consideration and is ancillary to the employment contract, an employee’s agreement not to compete with his employer upon leaving the employment will be upheld ‘if the restraint is confined within limits which are no wider as to area and duration than are reasonably necessary for the protection of the business of the employer and do not impose undue hardship on the employee or disregard the interests of the public.’" *Becker v. Bailey, 268 Md. 93 (1973).* <https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=The%20general%20rule%20in%20Maryland,the%20interests%20of%20the%20public.%E2%80%9D>
+
+[^anderson-only-corporation-may-sue]: **Anderson v. Truitt** — "It seems to this court that the better reasoning supports the view that only the corporation may now sue to restrain the violation of the covenant." *Anderson v. Truitt, 158 Md. 193, 148 A. 223 (1930).* <https://www.courtlistener.com/opinion/3485410/anderson-v-truitt/#:~:text=It%20seems%20to%20this%20court,the%20violation%20of%20the%20covenant.>
+
+[^anderson-corporation-rights]: **Anderson v. Truitt** — "There can be no doubt of the vesting in the corporation of rights in the covenant, for simultaneously with the original sale it was agreed by all parties to it that the corporation should be formed to take over the business, and all converted their interests into shares of stock." *Anderson v. Truitt, 158 Md. 193, 148 A. 223 (1930).* <https://www.courtlistener.com/opinion/3485410/anderson-v-truitt/#:~:text=There%20can%20be%20no%20doubt,interests%20into%20shares%20of%20stock.>

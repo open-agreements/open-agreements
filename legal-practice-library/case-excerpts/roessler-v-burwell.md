@@ -23,6 +23,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### roessler-v-burwell-the-defendant-received-the-benefit-he-16f42182 {#roessler-v-burwell-the-defendant-received-the-benefit-he-16f42182}
+
+> The defendant received the benefit he sought in that he was continued in the employment more than four years after the agreement was made, until he voluntarily left it.
+
+- supports: `continued-employment-consideration`
+- source_cards: `roessler-continued-employment-consideration`
+- cited_by: [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- link_to_source: <https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/#:~:text=The%20defendant%20received%20the%20benefit,until%20he%20voluntarily%20left%20it.>
+
 ### roessler-v-burwell-the-limitation-of-the-solicitation-to-d8c159e0 {#roessler-v-burwell-the-limitation-of-the-solicitation-to-d8c159e0}
 
 > The limitation of the solicitation to such customers was one well calculated to afford to the plaintiff a reasonable protection in his business against deprivation of customers with whom the defendant had very likely established friendly relations, and whom he could approach upon the definite basis of affording them as good or better service than the plaintiff had done in the past.

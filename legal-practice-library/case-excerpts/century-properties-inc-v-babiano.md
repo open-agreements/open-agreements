@@ -23,6 +23,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### century-properties-inc-v-babiano-as-clearly-stipulated-the-parties-wanted-e27f34d1 {#century-properties-inc-v-babiano-as-clearly-stipulated-the-parties-wanted-e27f34d1}
+
+> As clearly stipulated, the parties wanted to apply said clause during the pendency of Babiano' s employment, and CPI correctly invoked the same before the labor tribunals to resist the farmer's claim for unpaid commissions on account of his breach of the said clause while the employer-employee relationship between them still subsisted.
+
+- supports: `during-employment`
+- source_cards: `century-labor-tribunals`
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
+- link_to_source: <https://lawphil.net/judjuris/juri2016/jul2016/gr_220978_2016.html>
+
 ### century-properties-inc-v-babiano-finally-if-undersigned-breaches-any-1454344b {#century-properties-inc-v-babiano-finally-if-undersigned-breaches-any-1454344b}
 
 > Finally, if undersigned breaches any terms of this contract, forms of compensation including commissions and incentives will be forfeited.

@@ -82,3 +82,12 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - source_cards: `scott-customer-confidential-information`, `scott-customer-list`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20plaintiff%E2%80%99s%20knowledge%20of%20the,a%20reasonable%20period%20of%20time.>
+
+### scott-v-general-iron-welding-co-thus-the-plaintiff-is-not-being-162670db {#scott-v-general-iron-welding-co-thus-the-plaintiff-is-not-being-162670db}
+
+> Thus, the plaintiff is not being deprived of the opportunity to earn a livelihood for himself and his family or of employment at his trade.
+
+- supports: `holdover-clause-limit`
+- source_cards: `scott-livelihood`
+- cited_by: [Employee Invention Assignment in Connecticut](../invention-assignment/us/connecticut.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=Thus%2C%20the%20plaintiff%20is%20not,of%20employment%20at%20his%20trade.>

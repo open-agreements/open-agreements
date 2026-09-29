@@ -2,7 +2,7 @@
 jurisdiction: "Mississippi"
 slug: mississippi
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/mississippi · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/mississippi · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Mississippi[^about]
 
@@ -30,7 +30,7 @@ Mississippi enforces non-competes only when the restraint is reasonable under co
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Mississippi enforces a non-compete only if the employer proves it is reasonable in time, territory, and activity to protect a legitimate interest, and it will not be enforced after a bad-faith firing. |
-| **Main law or case** | common law (Texas Road Boring Co. v. Parker, 194 So. 2d 885 (Miss. 1967)) |
+| **Main law or case** | Common law governs employee non-competes; Texas Road Boring Co. of La.-Miss. v. Parker, 194 So. 2d 885 (Miss. 1967). |
 | **Main exceptions** | Bad-faith-termination defense (Empiregas); minors may disaffirm; lawyers barred (R. 5.6); no health-care statutory ban |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -41,14 +41,14 @@ Mississippi enforces non-competes only when the restraint is reasonable under co
 
 **Short answer.** Yes, sometimes. Mississippi is a common-law reasonableness state, not a general ban state and not a statutory-cap state. A non-compete is enforceable only if it is reasonable when the court weighs three competing interests — the employer's, the employee's, and the public's — and the employer carries the burden of proving that reasonableness [^texas-road-boring-three-aspects][^redd-foster-disfavored].
 
-There is no Mississippi non-compete statute. The enforceability analysis is judge-made, rooted in decisions like *Donahoe v. Tatum* and *Texas Road Boring Co. v. Parker*, which frame the inquiry as a balance rather than a checklist [^donahoe-reasonable-balance]. Courts treat these covenants as restraints on trade and individual freedom, so they are disfavored and construed strictly against the drafting employer [^redd-foster-disfavored].
+There is no Mississippi non-compete statute. The enforceability analysis is judge-made, rooted in decisions like *Donahoe v. Tatum* [^donahoe-reasonable-balance] and *Texas Road Boring Co. v. Parker* [^texas-road-boring-three-aspects], which frame the inquiry as a balance rather than a checklist. Courts treat these covenants as restraints on trade and individual freedom, so they are disfavored and construed strictly against the drafting employer [^redd-foster-disfavored].
 
 Because the restraint must protect a legitimate business interest — trade secrets, confidential information, customer goodwill, or an employer's investment in specialized training — a covenant that exists only to suppress ordinary competition fails. Mississippi separately protects proprietary information by statute under the Mississippi Uniform Trade Secrets Act, Miss. Code Ann. §§ 75-26-1 to 75-26-19, which supplies injunctive relief and damages independent of any contract.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Mississippi has no general non-compete statute, so every covenant in the agreement stands or falls on the balance of three interests — the rights of the employer, the rights of the employee, and the rights of the public — and the employer carries the burden of proving the restraint reasonable in time, territory, and restrained activity [^texas-road-boring-three-aspects]. A court treats these covenants as restraints on trade and individual freedom, so they are disfavored and any ambiguity is construed strictly against the drafting employer [^redd-foster-disfavored], weighed to maintain a reasonable balance between the employer's protection and the employee's freedom to work [^donahoe-reasonable-balance]. A covenant that cannot be tied to customer goodwill, confidential information, or another protectable interest fails that test — the investment restraint is the hardest of all to justify. Trade-secret protection, in turn, survives only on the reasonable efforts that surround it: the return, deletion, and certification of confidential material form the contemporaneous record an employer would need if protected material later surfaced at a competitor.
+> A Mississippi covenant carried over from another form without facts supporting its time, territory, or activity limits risks being refused enforcement, because these covenants are disfavored and courts weigh the employee's and the public's rights alongside the employer's [^texas-road-boring-three-aspects][^redd-foster-disfavored].
 
 ## Is continued at-will employment enough consideration for a Mississippi non-compete? {#consideration}
 
@@ -118,7 +118,7 @@ In *Kennedy v. Metropolitan Life Insurance Co.*, the covenant barred conduct tha
 > [!CAUTION]
 > **Drafting note.**
 >
-> Each restraint reaches only the conduct it names. A customer non-solicit built on the Solicit definition reaches only the employee's active diversion; stopping a former employee from serving customers who come to them on their own falls to the separate No Business with Covered Customers covenant and its express no-acceptance language. A clause barring conduct that would tend to divert business was held ambiguous precisely because it did not expressly prohibit accepting business from former customers who came over on their own initiative, and the court construed that ambiguity against the employer [^kennedy-ambiguous-accepting]. An express no-acceptance provision can, in appropriate cases, be reasonable and enforceable [^kennedy-accepting-can-be-valid]. That no-acceptance covenant is the heavier restraint, defensible only where it is genuinely needed and sized at least as tightly to the customer goodwill it protects; a customer non-solicit backed by the confidentiality and trade-secret terms is often a sturdier, more readily enforceable protection than a broad non-compete.
+> A customer non-solicit built on the Solicit definition in the [OpenAgreements Mississippi restrictive covenant form](/templates/openagreements-restrictive-covenant-mississippi) risks not reaching former customers who come to the employee on their own, because a clause that did not expressly prohibit accepting their business was held ambiguous and construed against the employer [^kennedy-ambiguous-accepting]. Stopping that business depends on the separate No Business with Covered Customers covenant and its express no-acceptance language, which can be enforceable in appropriate cases [^kennedy-accepting-can-be-valid].
 
 ## Does a Mississippi non-compete toll or extend during breach or litigation? {#extended-for-breach}
 

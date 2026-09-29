@@ -52,6 +52,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
 
+### man-financial-s-pte-ltd-v-wong-bark-chuan-david-more-importantly-stratech-reaffirms-at-8179d3fa {#man-financial-s-pte-ltd-v-wong-bark-chuan-david-more-importantly-stratech-reaffirms-at-8179d3fa}
+
+> More importantly, Stratech reaffirms (at [48]–[49]) the proposition that where the protection of confidential information or trade secrets is already covered by another clause in the contract, the covenantee will have to demonstrate that the restraint of trade clause in question covers a legitimate proprietary interest over and above the protection of confidential information or trade secrets.
+
+- supports: `confidentiality-overlap`
+- source_cards: `mf-over-and-above`
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
+- link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
+
 ### man-financial-s-pte-ltd-v-wong-bark-chuan-david-the-second-proprietary-interest-that-is-3677f672 {#man-financial-s-pte-ltd-v-wong-bark-chuan-david-the-second-proprietary-interest-that-is-3677f672}
 
 > The second proprietary interest that is traditionally recognised as well as protected by the courts in the employment context is that of trade connection.

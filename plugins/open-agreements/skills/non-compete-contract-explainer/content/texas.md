@@ -2,7 +2,7 @@
 jurisdiction: "Texas"
 slug: texas
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/texas · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/texas · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Texas[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of Texas non-compete law under the Covenants Not 
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Texas enforces non-competes that are ancillary to an otherwise enforceable agreement and reasonable in time, geography, and scope, with overbroad covenants reformed rather than voided. |
-| **Main law or case** | Tex. Bus. & Com. Code § 15.50 (Covenants Not to Compete Act) |
+| **Main law or case** | Tex. Bus. & Com. Code § 15.50(a). |
 | **Main exceptions** | Physician buyout/1-yr limits & good-cause rule (§ 15.50(b),(d)); dentist/nurse/PA buyout limits (§ 15.501) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |

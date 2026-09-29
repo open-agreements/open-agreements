@@ -2,7 +2,7 @@
 jurisdiction: "Alabama"
 slug: alabama
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alabama · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alabama · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alabama[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of Alabama non-compete law under the 2016 Restric
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Alabama voids non-competes by default but enforces an employee covenant that fits the Restrictive Covenant Act's narrow safe harbor, protects a statutory interest, and is properly signed. |
-| **Main law or case** | Ala. Code § 8-1-190 et seq. (Restrictive Covenant Act) |
+| **Main law or case** | Ala. Code § 8-1-190(a). |
 | **Main exceptions** | Sale of business; current-customer non-solicit (18-mo); employee no-hire for uniquely essential workers; professional exemption (physicians, CPAs, veterinarians, physical therapists) |
 | **Can a court narrow it?** | Yes — rewrites to reasonable |
 | **Applies to contractors?** | Unclear |
@@ -58,7 +58,7 @@ An employee non-compete escapes that rule only if it fits the employee exception
 
 The exceptions are listed in § 8-1-190(b). They are the entire universe of allowed restraints; anything that does not fit one of the six is void. The employee-facing categories carry the most-cited duration presumptions.
 
-For a sale-of-business covenant, a one-year restraint is presumed reasonable [^ala-8-1-190-sale]. The customer non-solicitation exception reaches only *current* customers, not former or merely prospective ones, and for such a covenant the presumed-reasonable period is eighteen months or as long as post-separation consideration is paid, whichever is greater.
+For a covenant by a seller of a business's goodwill, a restraint of one year or less is presumed reasonable [^ala-8-1-190-sale][^ala-8-1-190-sale-goodwill]. The customer non-solicitation exception reaches only *current* customers, not former or merely prospective ones, and for such a covenant the presumed-reasonable period is eighteen months or as long as post-separation consideration is paid, whichever is greater.
 
 "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable."[^ala-8-1-190-nonsolicit]
 
@@ -215,6 +215,8 @@ Because the legislature labeled its restrictive-covenant rules fundamental publi
 [^ala-8-1-190-sale]: **Ala. Code § 8-1-190** — "Restraints of one year or less are presumed to be reasonable." *Ala. Code § 8-1-190(b)(3).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 
 [^ala-8-1-190-nonsolicit]: **Ala. Code § 8-1-190** — "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable." *Ala. Code § 8-1-190(b)(5).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
+
+[^ala-8-1-190-sale-goodwill]: **Ala. Code § 8-1-190** — "One who sells the good will of a business may agree with the buyer to refrain from carrying on or engaging in a similar business and from soliciting customers of such business within a specified geographic area so long as the buyer, or any entity deriving title to the good will from that business, carries on a like business therein, subject to reasonable time and place restraints." *Ala. Code § 8-1-190(b)(3).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 
 [^ala-8-1-190-no-hire]: **Ala. Code § 8-1-190** — "A contract between two or more persons or businesses or a person and a business limiting their ability to hire or employ the agent, servant, or employees of a party to the contract where the agent, servant, or employee holds a position uniquely essential to the management, organization, or service of the business." *Ala. Code § 8-1-190(b)(1).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 

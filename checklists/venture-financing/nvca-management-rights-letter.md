@@ -48,7 +48,7 @@ Review the selected July 2020 NVCA Management Rights Letter terms and the actual
 
 - [ ] **Company and investor execution** (Recommended) — Reconcile letterhead, investor addressee, effective purchase and company/investor signature roles. Confirm signatory names, titles and authority against the actual entities; do not rely solely on bracket labels in the model signature specimen. [^nvca-mrl-purchase-execution] [#complete-execution]
 
-[Not legal advice](/disclaimer). Original explanation: CC BY 4.0. Quoted NVCA materials retain their original rights.
+Original explanation: CC BY 4.0. Quoted NVCA materials retain their original rights.
 
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-16. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for July 2020 NVCA model; conditional VCOC and CFIUS context coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *NVCA Management Rights Letter Reviewer Checklist*, OpenAgreements (last updated September 16, 2026), https://openagreements.org/checklists/venture-financing/nvca-management-rights-letter.

@@ -2,7 +2,7 @@
 jurisdiction: "Texas"
 slug: texas
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-04"
 human_reviewed_at: null
 next_review_due: "2026-12-01"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/texas · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/texas · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Texas Consumer Privacy Law (TDPSA)[^about]
 
@@ -30,7 +30,7 @@ The Texas Data Privacy and Security Act gives Texas consumers rights over their 
 | --- | --- |
 | **Law coverage** | Comprehensive law |
 | **Summary** | If you do business in Texas and are not an SBA small business, the TDPSA requires a specific privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced solely by the Attorney General, with no consumer lawsuits. |
-| **Main law** | Tex. Bus. & Com. Code ch. 541 (Texas Data Privacy and Security Act) |
+| **Main law** | Tex. Bus. & Com. Code § 541.002(a). |
 | **Privacy policy required?** | Yes — a reasonably accessible and clear notice with statutorily fixed contents |
 | **Who does it cover?** | Anyone who does business in Texas (or sells products/services to Texans), processes or sells personal data, and is not a small business as defined by the U.S. Small Business Administration — no revenue or data-volume threshold |
 | **Can consumers sue?** | No |

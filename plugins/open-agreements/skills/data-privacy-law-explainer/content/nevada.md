@@ -2,7 +2,7 @@
 jurisdiction: "Nevada"
 slug: nevada
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/nevada · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/nevada · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Nevada Consumer Privacy Law[^about]
 
@@ -29,8 +29,8 @@ Nevada regulates consumer privacy through scoped statutes in NRS chapter 603A: w
 | Question | Nevada |
 | --- | --- |
 | **Law coverage** | Limited-scope law |
-| **Summary** | Nevada has no omnibus privacy law, but NRS chapter 603A requires a website privacy notice with five fixed elements, honors opt-outs of monetary-consideration sales of covered information, and requires opt-in consent and a dedicated privacy policy for consumer health data. |
-| **Main law** | NRS ch. 603A — internet privacy notice and sale opt-out (NRS 603A.300–.360), consumer health data (NRS 603A.400–.550, effective March 31, 2024), and data security and breach notification (NRS 603A.010–.290); Nevada has no comprehensive consumer-privacy act |
+| **Summary** | Nevada has no omnibus privacy law, but NRS chapter 603A requires a website privacy notice with five fixed elements, honors opt-outs of monetary-consideration sales of covered information, and requires opt-in consent and a dedicated privacy policy for consumer health data (since March 31, 2024). |
+| **Main law** | No comprehensive consumer-privacy law; NRS 603A.340(1). NRS 603A.345. NRS 603A.500(1)–(2). NRS 603A.210(1). NRS 603A.220(1). |
 | **Privacy policy required?** | Yes — website operators need an accessible privacy notice with five fixed content elements under NRS 603A.340, and a business handling consumer health data needs a separate health-data privacy policy under NRS 603A.495 |
 | **Who does it cover?** | Operators of commercial websites and online services that collect covered information from Nevada consumers (constitutional-nexus test, no revenue or volume threshold), data brokers that resell that information, regulated entities that handle consumer health data, and any data collector holding Nevadans' personal information |
 | **Can consumers sue?** | No |

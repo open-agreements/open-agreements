@@ -1,5 +1,21 @@
 # Us Update Log
 
+## 2026-09-28
+* **Update**: One chip per named case: Illinois privacy and non-U.S. non-compete guides (#2900 batch A) (#2914) (5aac21b)
+* **Update**: content(privacy): shorten the Ohio privacy guide with signal-plus-next-sentence openers (#2903) (#2925) (6c11e57)
+
+## 2026-09-27
+* **Update**: content(privacy): link upcoming law and keep the Main law column to law in force (0a4abcf)
+* **Update**: content(privacy): link Main law to source cards (803dc32)
+* **Update**: content(privacy): rewrite the Ohio privacy guide in plain language (#2876) (#2895) (8fb6534)
+* **Update**: Washington: ESHB 1155 notice deadline and 2027 changes; say Washington State (#2886, #2880) (#2898) (933e73b)
+
+## 2026-09-26
+* **Update**: fix: refresh privacy law status and financing workflow links (0cea93f)
+* **Update**: fix: replace public evidence workflow jargon and prevent recurrence (#2741) (5a7454b)
+* **Update**: fix: address survey content advisory citations and stale wording (5f16426)
+* **Update**: fix: scope privacy citations and remove remaining future-relative wording (bbc6af0)
+
 ## 2026-08-24
 * **Update**: content(la): Louisiana is a baseline privacy state until the LDPA takes effect on 2027-01-01 (#2230) (ea02346)
 

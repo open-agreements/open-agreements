@@ -80,7 +80,7 @@ Two features of *Vigitron* are worth keeping distinct. The ownership holding rod
 
 Two gaps define the New Hampshire picture. First, there is no statute: nothing caps the duration of a post-employment trailing assignment or otherwise limits what such a clause may reach. Second, our review found no New Hampshire decision applying the reasonableness limits specifically to an invention-holdover clause, so the invention-specific application of the rule is a prediction rather than settled law.
 
-What New Hampshire does supply is a general reasonableness standard for restraints growing out of the employment relationship. In *Concord Orthopaedics Professional Ass'n v. Forbes*, the New Hampshire Supreme Court restated the test, quoting its earlier formulation in *Moore v. Dover Veterinary Hospital* [^concord-three-prong].
+What New Hampshire does supply is a general reasonableness standard for restraints growing out of the employment relationship. In *Concord Orthopaedics Professional Ass'n v. Forbes*, the New Hampshire Supreme Court restated the test, quoting its own earlier formulation of it [^concord-three-prong].
 
 "A restraint on employment is reasonable only if it is no greater than necessary for the protection of the employer’s legitimate interest, does not impose undue hardship on the employee, and is not injurious to the public"[^concord-three-prong]
 

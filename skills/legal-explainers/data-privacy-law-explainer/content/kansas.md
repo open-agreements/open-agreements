@@ -2,7 +2,7 @@
 jurisdiction: "Kansas"
 slug: kansas
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kansas · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kansas · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Kansas Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Kansas has no comprehensive consumer-privacy statute. The operative framework is
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Kansas has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative statutes are the 2006 data-breach notification law — a twice-gated, identity-theft-keyed notice duty with no fixed day-count — and the Kansas Consumer Protection Act, whose deception and unconscionability rules are what make a published privacy policy enforceable against the business that wrote it. Everything else rides the federal and sectoral overlay, so build to FTC Act § 5, GLBA, HIPAA, and COPPA and the program will be easier to adapt if Kansas later enacts an omnibus law. |
-| **Main law** | Kansas data-breach notification statute, K.S.A. 50-7a01 and 50-7a02, plus the Kansas Consumer Protection Act, K.S.A. 50-623 et seq. — Kansas has no comprehensive consumer-privacy law |
+| **Main law** | No comprehensive consumer-privacy law; K.S.A. 50-7a02(a). K.S.A. 50-626(a). |
 | **Privacy policy required?** | No Kansas statute mandates a consumer privacy policy or fixes its contents; a policy that misstates actual practices is reachable as a deceptive act under the KCPA and FTC Act § 5, and GLBA, HIPAA, and COPPA supply notice duties where they apply |
 | **Who does it cover?** | The breach statute reaches any person that conducts business in Kansas and owns or licenses computerized personal information of Kansas residents; the KCPA reaches any supplier in consumer transactions — no revenue or consumer-volume thresholds |
 | **Can consumers sue?** | Limited path |

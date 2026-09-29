@@ -24,6 +24,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### white-heat-products-co-v-thomas-prima-facie-a-wheel-intended-to-e1661d81 {#white-heat-products-co-v-thomas-prima-facie-a-wheel-intended-to-e1661d81}
+
+> Prima facie, a wheel intended to be used for grinding purpose is not an invention relating to the manufacture of bricks, stone products or earthenware products, especially when we consider the rule that in cases of this kind where the product of an inventive mind is sought to be appropriated under an agreement to assign to another, the language of the agreement must be clear and show an unmistakable intention that the particular matter covered by the invention or patent is within the intention of the parties: Allison Bros. Co. v. Allison, 144 N. Y. 21 ; Joliet Mfg. Co. v. Dice, 105 Ill. 649 . Measured by this rule the wording of the contract of 1911 fails to measure up to the required standard.
+
+- supports: `default-ownership`
+- source_cards: `whiteheat-clear-language-default`
+- cited_by: [Employee Invention Assignment in Pennsylvania](../invention-assignment/us/pennsylvania.md)
+- link_to_source: <https://www.courtlistener.com/opinion/6385584/white-heat-products-co-v-thomas/#:~:text=Prima%20facie%2C%20a%20wheel%20intended,up%20to%20the%20required%20standard.>
+
 ### white-heat-products-co-v-thomas-where-the-product-of-an-inventive-bae35720 {#white-heat-products-co-v-thomas-where-the-product-of-an-inventive-bae35720}
 
 > where the product of an inventive mind is sought to be appropriated under an agreement to assign to another, the language of the agreement must be clear and show an unmistakable intention that the particular matter covered by the invention or patent is within the intention of the parties

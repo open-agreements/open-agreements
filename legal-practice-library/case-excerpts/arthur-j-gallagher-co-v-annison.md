@@ -33,3 +33,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `annison-effective-date`, `la-annison-cover`, `la-annison-gate`, `la-annison-timing`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html>
+
+### arthur-j-gallagher-co-v-annison-we-find-rouses-2022-wl-686332-46bd31bc {#arthur-j-gallagher-co-v-annison-we-find-rouses-2022-wl-686332-46bd31bc}
+
+> We find Rouses, 2022 WL 686332, at *1, factually distinguishable.
+
+- supports: `prospective-employee`
+- source_cards: `annison-distinguishes-rouses`
+- cited_by: [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
+- link_to_source: <https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html>

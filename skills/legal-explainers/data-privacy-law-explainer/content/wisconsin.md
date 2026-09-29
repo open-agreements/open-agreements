@@ -2,7 +2,7 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wisconsin · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wisconsin · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Wisconsin Consumer Privacy Law[^about]
 
@@ -30,7 +30,7 @@ Wisconsin has no comprehensive consumer-privacy statute — the 2025–26 Wiscon
 | --- | --- |
 | **Law coverage** | No comprehensive law |
 | **Summary** | Wisconsin has no comprehensive consumer-privacy law — the 2025–26 Wisconsin Data Privacy Act bills (AB 172/SB 166) failed on March 23, 2026 — so there are no general data-rights, consent, or processor-contract duties under state law. The operative state statute is the breach-notification law, Wis. Stat. § 134.98, which sets a 45-day notice clock but prescribes no penalty, names no enforcer, and creates no private right of action; its practical teeth are evidentiary use in negligence suits plus possible federal FTC Act exposure for unfair or deceptive conduct. The rest of a Wisconsin program rides sectoral statutes — record disposal, patient health records, insurance data security — and the federal overlay, with the codified § 995.50 right of privacy supplying Wisconsin's only general privacy private action. |
-| **Main law** | No comprehensive consumer-privacy law — Wis. Stat. § 134.98 (breach notification) is the operative general statute, alongside sectoral rules (§§ 134.97, 146.84, ch. 601 subch. IX), the § 995.50 right of privacy, and the federal overlay |
+| **Main law** | No comprehensive consumer-privacy law; Wis. Stat. § 134.98(2)(a)–(b). Wis. Stat. § 134.97(2). Wis. Stat. § 146.84(1)(b)–(bm). Wis. Stat. § 995.50(1). |
 | **Privacy policy required?** | No Wisconsin statute mandates a consumer privacy policy or fixes its contents; the operative rules are FTC Act § 5 (unfair or deceptive conduct can create federal exposure), § 100.18 (untrue, deceptive or misleading public representations), and the GLBA, HIPAA, and COPPA notice rules where the business is in scope |
 | **Who does it cover?** | § 134.98 covers any entity — expressly including state and local government — that conducts business in Wisconsin and maintains personal information, licenses personal information in the state, maintains depository accounts for residents, or lends money to residents; no size or revenue threshold |
 | **Can consumers sue?** | Yes |

@@ -65,7 +65,7 @@ That is the same premise the U.S. Supreme Court restated in *Stanford v. Roche* 
 
 "Since 1790, the patent law has operated on the premise that rights in an invention belong to the inventor."[^stanford-inventor-baseline]
 
-The first exception is the employee hired to invent. Under *United States v. Dubilier Condenser Corp.*, an employee engaged to make a particular invention who succeeds during the term of service must assign the resulting patent to the employer — a rule the *Preston* court likewise recognized for employees hired specifically to invent [^dubilier-hired-to-invent].
+The first exception is the employee hired to invent. Under *United States v. Dubilier Condenser Corp.*, an employee engaged to make a particular invention who succeeds during the term of service must assign the resulting patent to the employer [^dubilier-hired-to-invent]. The *Preston* court likewise recognized the general rule that employers own inventions created by employees who are hired to invent [^preston-hired-to-invent-rule].
 
 "One employed to make an invention, who succeeds, during his term of service, in accomplishing that task, is bound to assign to his employer any patent obtained."[^dubilier-hired-to-invent]
 
@@ -147,6 +147,8 @@ The consequence of overreach is severe, because Wyoming abolished the blue-penci
 [^stanford-inventor-baseline]: **Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Systems** — "Since 1790, the patent law has operated on the premise that rights in an invention belong to the inventor." *Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Sys., Inc., 563 U.S. 776 (2011).* <https://www.courtlistener.com/opinion/218133/board-of-trustees-of-the-leland-stanford-junior-university-v-roche/#:~:text=Since%201790%2C%20the%20patent%20law,invention%20belong%20to%20the%20inventor.>
 
 [^dubilier-hired-to-invent]: **United States v. Dubilier Condenser Corp.** — "One employed to make an invention, who succeeds, during his term of service, in accomplishing that task, is bound to assign to his employer any patent obtained." *United States v. Dubilier Condenser Corp., 289 U.S. 178 (1933).* <https://www.courtlistener.com/opinion/1087847/united-states-v-dubilier-condenser-corp/#:~:text=One%20employed%20to%20make%20an,his%20employer%20any%20patent%20obtained.>
+
+[^preston-hired-to-invent-rule]: **Preston v. Marathon Oil Co.** — "Both Goodyear and Hebbard involved employees who were hired specifically to invent products and, as such, could have been decided using the general rule that employers own any inventions created by employees who are hired to invent." *Preston v. Marathon Oil Co., 2012 WY 66, 277 P.3d 81 (Wyo. 2012).* <https://www.courtlistener.com/opinion/2330166/preston-v-marathon-oil-co/#:~:text=Both%20Goodyear%20and%20Hebbard%20involved,who%20are%20hired%20to%20invent.>
 
 [^preston-shop-right-scope]: **Preston v. Marathon Oil Co.** — "Where the employee is not hired specifically to design or invent, but nevertheless conceives of a device during working hours with the use of the employer's materials and equipment, the employer is granted an irrevocable but nonexclusive right to use the invention under the shop-right rule." *Preston v. Marathon Oil Co., 2012 WY 66, 277 P.3d 81 (Wyo. 2012) (quoting 27 Am. Jur. 2d Employment Relationship § 188 (2011)).* <https://www.courtlistener.com/opinion/2330166/preston-v-marathon-oil-co/#:~:text=Where%20the%20employee%20is%20not,invention%20under%20the%20shop%2Dright%20rule.>
 

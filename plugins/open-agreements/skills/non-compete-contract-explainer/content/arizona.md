@@ -2,7 +2,7 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-content_packaged_at: "2026-09-23"
+content_packaged_at: "2026-09-28"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-09-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arizona[^about]
 
@@ -30,7 +30,7 @@ A question-by-question summary of Arizona non-compete law, including the common-
 | --- | --- |
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Arizona has no general non-compete statute; an employee covenant is enforceable under common law only if reasonable and no broader than necessary to protect a legitimate business interest. |
-| **Main law or case** | common law (Valley Medical Specialists v. Farber, 982 P.2d 1277 (Ariz. 1999)) |
+| **Main law or case** | Common law governs employee non-competes; Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999). |
 | **Main exceptions** | Broadcast-employee ban (A.R.S. § 23-494); physicians enforceable only under heightened scrutiny |
 | **Can a court narrow it?** | Only strikes wording |
 | **Applies to contractors?** | Unclear |
@@ -71,7 +71,7 @@ Even where an interest exists, reasonableness is measured against the burden on 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Each covenant in the family — non-compete, non-solicit, non-dealing, non-investment — depends on the legitimate business interest it protects. Arizona has no general non-compete statute and no statutory safe harbor: each covenant is enforceable only so long as it is no broader than necessary to protect that interest, and the interest inquiry is the threshold, so a covenant fails where the employer has no protectable interest in the relationship restrained [^q2-hilb-protectable][^q2-hilb-holding]. Hardship to the employee is weighed in the same analysis, so no acknowledgment, consideration recital, or irreparable-harm stipulation rescues an unreasonable restraint [^q2-amex-reasonable][^q2-amex-hardship]. Two things carry through the rest of the agreement: real Specified Competitors named in Cover Terms are strong evidence the restraint is no greater than necessary; and an assignee inherits the analysis unchanged — whoever enforces a covenant must show its own protectable interest behind the restraint, because an assignment moves the covenant without strengthening it. A non-investment covenant aimed at active or material participation in private competitors, resting on the passive-public-holdings carve-out, stays tied to the interest rather than to ordinary investing.
+> A non-compete, non-solicit, non-dealing, or non-investment covenant that reaches a customer, account, or activity in which the employer has no protectable interest risks going unenforced as to that relationship, as the covenant in *Hilb, Rogal & Hamilton* did for the account at issue [^q2-hilb-protectable][^q2-hilb-holding]. A covenant drawn broader than the interest behind it faces the same risk [^q2-amex-reasonable].
 
 ## Will an Arizona court narrow or rewrite an overbroad non-compete? {#court-narrowing}
 
