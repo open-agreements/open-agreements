@@ -2,7 +2,7 @@
 jurisdiction: "Washington"
 slug: washington
 countryCode: US
-content_packaged_at: "2026-09-28"
+content_packaged_at: "2026-09-29"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-09-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Washington[^about]
 
@@ -38,6 +38,7 @@ Washington State enforces employee non-competes today only above high, inflation
 | **Restriction extended during a breach?** | Not addressed by statute |
 | **Maximum length set by law** | 18 months (longer presumed unreasonable) |
 | **Must the employer pay to enforce?** | Yes — if laid off |
+| **Upcoming changes** | Near-total non-compete ban (ESHB 1155) [RCW 49.62.020(1) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).], effective 2027-06-30 (Are non-competes enforceable?: Banned) — Beginning on June 30, 2027, all noncompetition covenants are void and unenforceable regardless of when the parties entered into the noncompetition covenant. |
 
 ## Are employee non-compete agreements enforceable in Washington? {#employee-non-compete-enforceability}
 

@@ -51,3 +51,21 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - source_cards: `dier-own-time-facts`
 - cited_by: [Employee Invention Assignment in South Dakota](../invention-assignment/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2135639/rural-pennington-county-tax-assn-v-dier/#:~:text=Nothing%20in%20the%20record%20establishes%20that%20county,to%20any%20degree%20of%20significance.>
+
+### rural-pennington-county-tax-ass-n-v-dier-the-taxpayer-group-s-argument-under-sdcl-3279402d {#rural-pennington-county-tax-ass-n-v-dier-the-taxpayer-group-s-argument-under-sdcl-3279402d}
+
+> The taxpayer group’s argument under SDCL 60-2-10 leads to no different conclusion.
+
+- supports: `default-ownership`
+- source_cards: `dier-60-2-10-no-different`
+- cited_by: [Employee Invention Assignment in South Dakota](../invention-assignment/us/south-dakota.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2135639/rural-pennington-county-tax-assn-v-dier/#:~:text=The%20taxpayer%20group%E2%80%99s%20argument%20under,leads%20to%20no%20different%20conclusion.>
+
+### rural-pennington-county-tax-ass-n-v-dier-various-recitations-of-the-rules-7e9f0ba2 {#rural-pennington-county-tax-ass-n-v-dier-various-recitations-of-the-rules-7e9f0ba2}
+
+> Various recitations of the rules applicable to determining an employer’s entitlement to the inventions of his employee can be found.
+
+- supports: `default-ownership`
+- source_cards: `dier-recitations`
+- cited_by: [Employee Invention Assignment in South Dakota](../invention-assignment/us/south-dakota.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2135639/rural-pennington-county-tax-assn-v-dier/#:~:text=Various%20recitations%20of%20the%20rules,his%20employee%20can%20be%20found.>

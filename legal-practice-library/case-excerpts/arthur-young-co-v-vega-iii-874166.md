@@ -35,6 +35,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - cited_by: [Employee Invention Assignment in Puerto Rico](../invention-assignment/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8588745/young-v-vega/#:~:text=El%20t%C3%A9rmino%20de%20no%20competencia,para%20proteger%20adecuadamente%20al%20patrono.>
 
+### arthur-young-co-v-vega-iii-874166-en-la-medida-en-que-estos-65721e87 {#arthur-young-co-v-vega-iii-874166-en-la-medida-en-que-estos-65721e87}
+
+> En la medida en que estos contratos incumplan con las condiciones anteriores, se considerarán, además de contrarios a la buena fe contractual, violadores del orden público (20) por restringir de forma excesiva e injustificada la libertad de trabajo del empleado y la libertad de selección del público en general.
+
+- supports: `holdover-clause-limit`
+- source_cards: `arthur-young-public-order`
+- cited_by: [Employee Invention Assignment in Puerto Rico](../invention-assignment/us/puerto-rico.md)
+- link_to_source: <https://www.courtlistener.com/opinion/8588745/young-v-vega/#:~:text=En%20la%20medida%20en%20que,selecci%C3%B3n%20del%20p%C3%BAblico%20en%20general.>
+
 ### arthur-young-co-v-vega-iii-874166-finalmente-es-indispensable-que-los-eef30158 {#arthur-young-co-v-vega-iii-874166-finalmente-es-indispensable-que-los-eef30158}
 
 > Finalmente, es indispensable que los pactos de no competencia consten por escrito.

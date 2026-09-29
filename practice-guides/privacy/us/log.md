@@ -3,6 +3,11 @@
 ## 2026-09-28
 * **Update**: One chip per named case: Illinois privacy and non-U.S. non-compete guides (#2900 batch A) (#2914) (5aac21b)
 * **Update**: content(privacy): shorten the Ohio privacy guide with signal-plus-next-sentence openers (#2903) (#2925) (6c11e57)
+* **Update**: Ohio privacy guide: state absences plainly, not in a reviewer's voice (#2999) (7cf7603)
+* **Update**: content(privacy): Vermont's § 2449a–2449j range cites both endpoint headings (9088207)
+* **Update**: content(surveys): Washington's upcoming note says only what its card supports; move Vermont's § 2449j chip (a4ca2dc)
+* **Update**: content(surveys): list Colorado's 2027 farm overtime threshold and Washington's ESHB 1155 as upcoming law (b38d4a7)
+* **Update**: content(surveys): qualify Washington's upcoming note, cite § 2449j, trim Colorado's note (b8ef0ec)
 
 ## 2026-09-27
 * **Update**: content(privacy): link upcoming law and keep the Main law column to law in force (0a4abcf)

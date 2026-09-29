@@ -2,6 +2,7 @@
 
 ## 2026-09-28
 * **Update**: One chip per named case: cards for the nine cases batch B could not source (#2900) (#2947) (0016d13)
+* **Update**: One chip per named case: restore the names #2933 removed, and the Puerto Rico and South Dakota findings (#2900) (#3000) (17357c7)
 * **Update**: content(invention-assignment): Rhode Island Main law links the invention-assignment exclusion (1e4c16b)
 * **Update**: One chip per named case: ten invention-assignment guides, Puerto Rico to Wyoming (#2900 batch D2) (#2933) (5227aa5)
 * **Update**: One chip per case: invention-assignment batch B, 13 of 22 findings (#2900) (#2917) (5449817)

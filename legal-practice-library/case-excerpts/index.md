@@ -112,6 +112,7 @@
 * [Cahill v. Regan](cahill-v-regan.md) - Cahill v. Regan, 5 N.Y.2d 292 (1959). — quoted in 1 document(s).
 * [Cain v. Redbox Automated Retail, LLC, 136 F. Supp. 3d 824 (E.D. Mich. 2015)](cain-v-redbox-automated-retail-llc-136-f-supp-3d-824-e-d-mich-2015.md) - Cain v. Redbox Automated Retail, LLC, 136 F. Supp. 3d 824 (E.D. Mich. 2015). — quoted in 1 document(s).
 * [Calhoun v. Jack Doheny Companies, Inc.](calhoun-v-jack-doheny-companies-inc.md) - Calhoun v. Jack Doheny Cos., 969 F.3d 232 (5th Cir. 2020) (later withdrawn as moot). — quoted in 2 document(s).
+* [California Eastern Laboratories, Inc. v. Gould](california-eastern-laboratories-inc-v-gould.md) - Cal. E. Labs., Inc. v. Gould, 896 F.2d 400 (9th Cir. 1990). — quoted in 1 document(s).
 * [Camco, Inc. v. Baker](camco-inc-v-baker.md) - Camco, Inc. v. Baker, 113 Nev. 512, 936 P.2d 829 (1997). — quoted in 2 document(s).
 * [Cantor Fitzgerald, L.P. v. Ainslie](cantor-fitzgerald-l-p-v-ainslie.md) - Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 690 (Del. 2024). — quoted in 2 document(s).
 * [Cardoni v. Prosperity Bank](cardoni-v-prosperity-bank.md) - Cardoni v. Prosperity Bank, 805 F.3d 573 (5th Cir. 2015). — quoted in 3 document(s).
@@ -186,6 +187,7 @@
 * [Dur-A-Flex, Inc. v. Dy](dur-a-flex-inc-v-dy.md) - Dur-A-Flex, Inc. v. Dy, 349 Conn. 513 (2024). — quoted in 2 document(s).
 * [Durapin, Inc. v. American Products, Inc.](durapin-inc-v-american-products-inc.md) - Durapin, Inc. v. American Products, Inc., 559 A.2d 1051 (R.I. 1989). — quoted in 3 document(s).
 * [Durrell v. Tech Electronics, Inc.](durrell-v-tech-electronics-inc.md) - Durrell v. Tech Elecs., Inc., No. 4:16-cv-01367, 2016 WL 6833956 (E.D. Mo. Nov. 15, 2016). — quoted in 2 document(s).
+* [Dyar Sales & Machinery Co. v. Bleiler](dyar-sales-machinery-co-v-bleiler.md) - Dyar Sales & Mach. Co. v. Bleiler, 106 Vt. 425, 175 A. 27 (1934). — quoted in 1 document(s).
 * [Dyer v. Intera Corp.](dyer-v-intera-corp.md) - Dyer v. Intera Corp., 870 F.2d 1063 (6th Cir. 1989). — quoted in 1 document(s).
 * [Dynamex Operations West, Inc. v. Superior Court](dynamex-operations-west-inc-v-superior-court.md) - Dynamex Operations West, Inc. v. Superior Court. — quoted in 1 document(s).
 * [E.T. Products, LLC v. D.E. Miller Holdings, Inc.](e-t-products-llc-v-d-e-miller-holdings-inc.md) - E.T. Products, LLC v. D.E. Miller Holdings, Inc., 872 F.3d 464 (7th Cir. 2017). — quoted in 1 document(s).
@@ -207,7 +209,7 @@
 * [Environmental Products Co., Inc. v. Duncan](environmental-products-co-inc-v-duncan.md) - Envtl. Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981). — quoted in 1 document(s).
 * [Environmental Products Co. v. Duncan](environmental-products-co-v-duncan.md) - Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981). — quoted in 2 document(s).
 * [Environmental Services, Inc. v. Carter](environmental-services-inc-v-carter.md) - Env't Servs., Inc. v. Carter, 9 So. 3d 1258 (Fla. 5th DCA 2009). — quoted in 2 document(s).
-* [Erie Railroad Co. v. Tompkins](erie-railroad-co-v-tompkins.md) - Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938). — quoted in 1 document(s).
+* [Erie Railroad Co. v. Tompkins](erie-railroad-co-v-tompkins.md) - Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938). — quoted in 2 document(s).
 * [Exxon Mobil Corp. v. Drennen, 452 S.W.3d 319 (Tex. 2014)](exxon-mobil-corp-v-drennen-452-s-w-3d-319-tex-2014.md) - Exxon Mobil Corp. v. Drennen, 452 S.W.3d 319 (Tex. 2014). — quoted in 1 document(s).
 * [F.A. Bartlett Tree Expert Co. v. Barrington](f-a-bartlett-tree-expert-co-v-barrington.md) - F.A. Bartlett Tree Expert Co. v. Barrington, 353 Mass. 585 (1968). — quoted in 2 document(s).
 * [Farm Bureau Life Ins. Co. v. Dolly](farm-bureau-life-ins-co-v-dolly.md) - Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 13, 910 N.W.2d 196. — quoted in 2 document(s).
@@ -281,6 +283,7 @@
 * [Herring Gas Co. v. Pine Belt Gas, Inc.](herring-gas-co-v-pine-belt-gas-inc.md) - Herring Gas Co. v. Pine Belt Gas, Inc., 2 So. 3d 636 (Miss. 2009). — quoted in 2 document(s).
 * [Hess v. Gebhard & Co., Inc.](hess-v-gebhard-co-inc.md) - Hess v. Gebhard & Co., Inc., 570 Pa. 148, 808 A.2d 912 (Pa. 2002). — quoted in 4 document(s).
 * [Hewett v. Samsonite Corp.](hewett-v-samsonite-corp.md) - Hewett v. Samsonite Corp., 32 Colo. App. 150, 507 P.2d 1119 (1973). — quoted in 1 document(s).
+* [Heyde Cos. v. Dove Healthcare, LLC](heyde-cos-v-dove-healthcare-llc.md) - Heyde Cos. v. Dove Healthcare, LLC, 2002 WI 131, 258 Wis. 2d 28, 654 N.W.2d 830. — quoted in 1 document(s).
 * [Hickman v. Taylor, 329 U.S. 495 (1947)](hickman-v-taylor-329-u-s-495-1947.md) - Hickman v. Taylor, 329 U.S. 495 (1947). — quoted in 1 document(s).
 * [Hilb, Rogal & Hamilton Co. of Arizona v. McKinney](hilb-rogal-hamilton-co-of-arizona-v-mckinney.md) - Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997). — quoted in 2 document(s).
 * [Hinckley Allen, AI Platforms and the Risk of Privilege Waiver: Critical Lesso...](hinckley-allen-ai-platforms-and-the-risk-of-privilege-waiver-critical-lesso.md) - Hinckley Allen, AI Platforms and the Risk of Privilege Waiver: Critical Lessons from United States v. Heppner. — quoted in 1 document(s).
@@ -361,6 +364,7 @@
 * [Mata v. Avianca, Inc., 678 F. Supp. 3d 443 (S.D.N.Y. 2023)](mata-v-avianca-inc-678-f-supp-3d-443-s-d-n-y-2023.md) - Mata v. Avianca, Inc., 678 F. Supp. 3d 443 (S.D.N.Y. 2023). — quoted in 1 document(s).
 * [Matter of Vega (Postmates Inc.)](matter-of-vega-postmates-inc.md) - Matter of Vega (Postmates Inc.), 35 N.Y.3d 131 (2020). — quoted in 1 document(s).
 * [Matter of William Mattar, P.C. v. Riley, 2025 NY Slip Op 02680](matter-of-william-mattar-p-c-v-riley-2025-ny-slip-op-02680.md) - Matter of William Mattar, P.C. v. Riley, 2025 NY Slip Op 02680. — quoted in 3 document(s).
+* [Matthew v. Herman](matthew-v-herman.md) - Matthew v. Herman, 56 V.I. 674 (V.I. 2012). — quoted in 1 document(s).
 * [Mattis v. Lally](mattis-v-lally.md) - Mattis v. Lally, 138 Conn. 51, 82 A.2d 155 (1951). — quoted in 1 document(s).
 * [Mattison v. Johnston](mattison-v-johnston.md) - Mattison v. Johnston, 152 Ariz. 109, 730 P.2d 286 (Ct. App. 1986). — quoted in 2 document(s).
 * [Mayer Hoffman McCann, P.C. v. Barton](mayer-hoffman-mccann-p-c-v-barton.md) - Mayer Hoffman McCann, P.C. v. Barton, 614 F.3d 893 (8th Cir. 2010). — quoted in 1 document(s).
@@ -533,6 +537,7 @@
 * [Seneca One Finance, Inc. v. Bloshuk](seneca-one-finance-inc-v-bloshuk.md) - Seneca One Fin., Inc. v. Bloshuk, 214 F. Supp. 3d 457 (D. Md. 2016). — quoted in 2 document(s).
 * [Sentry Force Security, LLC v. Barrera](sentry-force-security-llc-v-barrera.md) - Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 14 (Va. Ct. App. Jan. 27, 2026) (unpublished). — quoted in 2 document(s).
 * [Senture, LLC v. Dietrich](senture-llc-v-dietrich.md) - Senture, LLC v. Dietrich, 575 F. Supp. 2d 724 (E.D. Va. 2008). — quoted in 2 document(s).
+* [Sermons v. Caine & Estes Insurance Agency, Inc.](sermons-v-caine-estes-insurance-agency-inc.md) - Sermons v. Caine & Estes Ins. Agency, Inc., 275 S.C. 506, 273 S.E.2d 338 (1980) (quoting Oxman v. Sherman, 239 S.C. 218, 122 S.E.2d 559 (1961)). — quoted in 1 document(s).
 * [Shelton v. Guam Service Games](shelton-v-guam-service-games.md) - Shelton v. Guam Service Games, 239 F.2d 902 (9th Cir. 1956). — quoted in 2 document(s).
 * [Shopee Singapore Pte Ltd v Lim Teck Yong](shopee-singapore-pte-ltd-v-lim-teck-yong.md) - Shopee Singapore Pte Ltd v Lim Teck Yong [2024] SGHC 29. — quoted in 1 document(s).
 * [Sidco Paper Co. v. Aaron](sidco-paper-co-v-aaron.md) - Sidco Paper Co. v. Aaron, 351 A.2d 250 (Pa. 1976). — quoted in 2 document(s).
@@ -540,6 +545,7 @@
 * [Silver Spring Bleaching & Dyeing Co. v. Woolworth](silver-spring-bleaching-dyeing-co-v-woolworth.md) - Silver Spring Bleaching & Dyeing Co. v. Woolworth, 16 R.I. 729, 19 A. 528 (1890). — quoted in 1 document(s).
 * [Silver v. Goldberger](silver-v-goldberger.md) - Silver v. Goldberger, 231 Md. 1, 188 A.2d 155 (1963). — quoted in 1 document(s).
 * [Simko, Inc. v. Graymar Co.](simko-inc-v-graymar-co.md) - Simko, Inc. v. Graymar Co., 55 Md. App. 561 (1983). — quoted in 2 document(s).
+* [Simon v. Joseph](simon-v-joseph.md) - Simon v. Joseph, 59 V.I. 611 (V.I. 2013). — quoted in 1 document(s).
 * [Sisk v. Scripps Media, Inc.](sisk-v-scripps-media-inc.md) - Sisk v. Scripps Media, Inc., No. 8:24CV86, 2024 WL 1175140 (D. Neb. Mar. 18, 2024). — quoted in 2 document(s).
 * [Sisters of Charity Health System, Inc. v. Farrago](sisters-of-charity-health-system-inc-v-farrago.md) - Sisters of Charity Health Sys., Inc. v. Farrago, 2011 ME 62, ¶ 10, 21 A.3d 110. — quoted in 2 document(s).
 * [Skycam, LLC v. Bennett](skycam-llc-v-bennett.md) - Skycam, LLC v. Bennett, 900 F. Supp. 2d 1264 (N.D. Okla. 2012). — quoted in 1 document(s).

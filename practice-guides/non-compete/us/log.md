@@ -4,12 +4,18 @@
 * **Update**: One chip per named case: cards for the nine cases batch B could not source (#2900) (#2947) (0016d13)
 * **Update**: One chip per named case: twelve U.S. non-compete guides (#2900 batch C2) (#2934) (03cc794)
 * **Update**: One chip per named case: twelve U.S. non-compete guides (#2900 batch C1) (#2924) (0c43ef4)
+* **Update**: One chip per named case: restore the names #2933 removed, and the Puerto Rico and South Dakota findings (#2900) (#3000) (17357c7)
+* **Update**: content(non-compete): Washington's upcoming entry cites the card that quotes both the ban and its date (240b41e)
 * **Update**: Add primary-law source cards for three sale-of-business statutes (FL, AL, RI) (#2969) (2929bac)
 * **Update**: Cut six long drafting notes in West Virginia, Alaska, Arizona, and Connecticut to mistake, clause, and consequence (#2913) (2f56801)
 * **Update**: content(non-compete): link Main law to source cards (3e5fa1f)
 * **Update**: Washington: common-law savings clause deleted June 30, 2027; checklist reformation-penalty end date (#2929) (#2931) (452e62f)
 * **Update**: Washington: reformation penalty ends June 30, 2027; October 1, 2027 notice on the template page (#2901) (#2922) (7c61974)
 * **Update**: content(non-compete): Main law statements say only what the linked cards support (88efb3e)
+* **Update**: content(surveys): upcoming-law notes restate only their cards' quotes (952e290)
+* **Update**: content(surveys): Washington's upcoming note says only what its card supports; move Vermont's § 2449j chip (a4ca2dc)
+* **Update**: content(surveys): list Colorado's 2027 farm overtime threshold and Washington's ESHB 1155 as upcoming law (b38d4a7)
+* **Update**: content(surveys): qualify Washington's upcoming note, cite § 2449j, trim Colorado's note (b8ef0ec)
 
 ## 2026-09-27
 * **Update**: One chip per case: spec rule, LLM-judged audit, Kentucky fix (#2877) (#2892) (0882192)

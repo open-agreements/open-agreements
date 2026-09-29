@@ -2,7 +2,7 @@
 jurisdiction: "Ohio"
 slug: ohio
 countryCode: US
-content_packaged_at: "2026-09-28"
+content_packaged_at: "2026-09-29"
 law_checked_through: "2026-09-27"
 human_reviewed_at: null
 next_review_due: "2027-03-26"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/ohio · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/ohio · **Snapshot as of:** 2026-09-29 · License: CC BY 4.0 · © openagreements.org
 
 # Ohio Consumer Privacy Law[^about]
 
@@ -42,11 +42,11 @@ Ohio has no comprehensive consumer-privacy law. The main Ohio rules are the 45-d
 
 ## Which privacy laws apply to your business in Ohio? {#which-privacy-laws-apply}
 
-**Short answer.** This review found no comprehensive Ohio consumer-privacy law; instead, Ohio law requires notice of qualifying data breaches, bans deceptive acts in consumer transactions, and gives a lawsuit defense to businesses with a qualifying cybersecurity program [^q1-breach-duty] [^q1-cspa-deception] [^q1-dpa-defense].
+**Short answer.** Our review found no comprehensive Ohio consumer-privacy law; instead, Ohio law requires notice of qualifying data breaches, bans deceptive acts in consumer transactions, and gives a lawsuit defense to businesses with a qualifying cybersecurity program [^q1-breach-duty] [^q1-cspa-deception] [^q1-dpa-defense].
 The breach-notice law requires a person or business that owns or licenses computerized personal information to notify Ohio residents of a qualifying data breach [^q1-breach-duty]; some health-care and financial organizations are exempt [^q1-exempt-hipaa] [^q1-exempt-fi]. The Ohio Data Protection Act gives a business with a qualifying written cybersecurity program a defense to tort claims that blame a data breach on weak security [^q1-dpa-defense]. Federal law adds the FTC Act, GLBA for financial institutions, HIPAA for covered health entities, and COPPA for websites and online services directed to children [^q1-ftc5] [^q1-glba-notice] [^q1-hipaa-notice] [^q1-coppa-notice].
 A multistate business must also comply with each other state's privacy law that applies to it; the [50-state consumer privacy survey](/surveys/privacy/us) compares them.
 
-This review found no Ohio statute giving residents a general right to see, delete, correct, or move their personal data, or to opt out of data sales or targeted ads. It found no universal opt-out-signal rule and no general duty to give notice at collection, get consent, or run data-protection assessments.
+Our review found no Ohio statute that gives residents a general right to see, delete, correct, or move their personal data, or to opt out of data sales or targeted ads. It found no universal opt-out-signal rule and no general duty to give notice at collection, get consent, or run data-protection assessments.
 
 Two narrower Ohio rules also apply:
 
@@ -90,7 +90,7 @@ The data must also be unencrypted and unredacted [^q4-personal-info]. So a breac
 
 **How to give notice.** Notice may be written, by phone, or electronic if that is the business's main way of reaching the resident [^q4-methods]. Substitute notice is allowed if the business lacks enough contact information, notice would cost more than $250,000, or more than 500,000 residents are affected. A business with 10 or fewer employees has a separate substitute if notice would cost more than $10,000. Each substitute has its own steps, set out in the statute [^q4-substitute-notice].
 
-**What else the law requires.** This review found nothing in § 1349.19 that sets the notice's contents or requires notice to the Attorney General. If more than 1,000 Ohio residents must be told about one breach, the business must also tell the nationwide consumer reporting agencies without unreasonable delay [^q4-cra]. Any waiver of the statute is void [^q4-waiver].
+**What else the law requires.** Section 1349.19 sets who must be notified, when, and by what method [^q4-breach-duty] [^q4-timing] [^q4-methods]. Our review found nothing in § 1349.19 that sets the notice's contents or requires notice to the Attorney General. If more than 1,000 Ohio residents must be told about one breach, the business must also tell the nationwide consumer reporting agencies without unreasonable delay [^q4-cra]. Any waiver of the statute is void [^q4-waiver].
 
 **Insurance companies have a faster deadline.** An insurance licensee must report a qualifying cybersecurity event to the superintendent of insurance as promptly as possible and no later than three business days after it determines the event occurred [^q4-insurance-event]. It must also follow the consumer breach-notice law where it applies and send the superintendent a copy of its consumer notice [^q4-insurance-consumer-notice].
 
@@ -120,7 +120,7 @@ A business regulated under HIPAA, GLBA, FISMA, or HITECH may instead conform to 
 - **It creates no right to sue.** The chapter provides no private right of action, including a class action [^q5-dpa-no-pra].
 - **It covers only those tort claims.** Contract claims, other non-tort claims, and suits outside Ohio under another state's law are outside its text [^q5-dpa-defense].
 
-This review found no reported Ohio appellate decision on what *reasonably conforms* requires, so records matter: the framework mapping, dated reviews, and proof the business followed the program.
+We found no reported Ohio appellate decision on what *reasonably conforms* requires, so records matter: the framework mapping, dated reviews, and proof the business followed the program.
 
 ## Can a consumer sue your business in Ohio over privacy? {#consumer-lawsuit}
 
@@ -139,9 +139,9 @@ A violator must also pay the Attorney General's costs of investigating and suing
 
 **Attorney General enforcement of the Consumer Sales Practices Act.** The Attorney General may seek a declaratory judgment or an injunction when it has reasonable cause to believe a supplier is violating the Act and action is in the public interest [^q6-ag-cspa]. Its class actions are limited to certain listed practices, violations of earlier Attorney General rules, and practices that earlier published Ohio court decisions found unlawful [^q6-ag-cspa-class].
 
-**Privacy claims under the Act.** This review found no earlier Ohio rule or published decision that declares a specific data-privacy or data-security practice deceptive, as the triple-damages and class-action limit requires.
+**Privacy claims under the Act.** We found no earlier Ohio rule or published decision that declares a specific data-privacy or data-security practice deceptive, as the triple-damages and class-action limit requires.
 
-The Act also covers only a consumer transaction: a sale or other transfer of goods, a service, a franchise, or an intangible to an individual for mainly personal, family, or household purposes, or a solicitation to supply any of these [^q6-consumer-transaction]. This review found no Ohio appellate decision that settles whether a free, ad-supported online service fits that definition.
+The Act also covers only a consumer transaction: a sale or other transfer of goods, a service, a franchise, or an intangible to an individual for mainly personal, family, or household purposes, or a solicitation to supply any of these [^q6-consumer-transaction]. We found no Ohio appellate decision that settles whether a free, ad-supported online service fits that definition.
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from an Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Ohio Consumer Privacy Law*, OpenAgreements (last updated September 27, 2026), https://openagreements.org/practice-guides/privacy/us/ohio.
 

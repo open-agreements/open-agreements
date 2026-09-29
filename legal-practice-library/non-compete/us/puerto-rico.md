@@ -98,11 +98,11 @@ Because there is no Puerto Rico authority on point, the question is genuinely op
 
 ## What recent developments should employers monitor? {#recent-developments}
 
-**Short answer.** As of June 2, 2026, the governing framework remains the *Arthur Young* line of cases. The Supreme Court last restated and refined that test in *Reyes Ramis* in 2016, and no Puerto Rico statute has displaced it [^rr-current].
+**Short answer.** As of June 2, 2026, the governing framework is the three-part reasonableness test of *Arthur Young* [^ay-test-current]. The refinements of the test associated with *Reyes Ramis* (2016) come from a concurring opinion by Justice Kolthoff Caraballo, joined by three other justices, not from an opinion of the Court [^rr-current][^rr-current-concurrence].
 
 Two background developments matter for monitoring but do not change the Puerto Rico rule. Puerto Rico's labor reform legislation did not codify a non-compete standard, so the judge-made *Arthur Young* test still controls. And the federal FTC Non-Compete Rule was challenged and, as of this review, has been treated as unenforceable, so it is not an operative Puerto Rico rule either.
 
-The practical takeaway is stability with a narrow margin. Because the framework is judicial, the most reliable signal of change would be a new Supreme Court decision rather than a bill, and *Reyes Ramis* remains the most recent word: the strict requirements apply to employer-employee covenants, with a single territorial or customer limit sufficing [^rr-current].
+The practical takeaway is stability with a narrow margin. Because the framework is judicial, the most reliable signal of change would be a new Supreme Court decision rather than a bill, and in *Reyes Ramis* the statement that a single territorial or customer limit suffices appears in the concurrence, not in an opinion of the Court [^rr-current][^rr-current-concurrence].
 
 
 
@@ -154,4 +154,8 @@ The practical takeaway is stability with a narrow margin. Because the framework 
 
 [^emc-contract]: **EMC Corp. v. Arturi** — "Being forewarned, EMC could have contracted, as the district judge noted, for tolling the term of the restriction during litigation, or for a period of restriction to commence upon preliminary finding of breach." *EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011).* <https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=Being%20forewarned%2C%20EMC%20could%20have,upon%20preliminary%20finding%20of%20breach.>
 
+[^ay-test-current]: **Arthur Young & Co. v. Vega III** — "Para ser razonable, un acuerdo de no competir debe reunir los siguientes requisitos: (1) debe ser necesario para proteger un interés legítimo del patrono, (2) no debe imponer al empleado una carga demasiado onerosa, (3) y no debe afectar demasiado al público." *Arthur Young & Co. v. Vega III, 136 D.P.R. 157 (1994).* <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
+
 [^rr-current]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "Por lo tanto, no es correcto afirmar que todo contrato de no competencia debe contener una restricción territorial y de clientela, basta con una de ellas." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 194 D.P.R. ___ (2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
+[^rr-current-concurrence]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "El Juez Asociado señor Kolthoff Caraballo emitió Opinión de Conformidad a la cual se unieron los Jueces Asociados señores Martínez Torres, Rivera García y Feliberti Cintrón." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 2016 TSPR 126 (P.R. 2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>

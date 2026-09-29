@@ -75,7 +75,7 @@ The starting point is substance over label. In *Manitowoc Co. v. Lanning*, the W
 
 "we conclude that Lanning's non-solicitation of employees provision is a restraint of trade governed by Wis. Stat. § 103.465"[^lanning-restraint]
 
-*Lanning* restated the rule it drew from an earlier Wisconsin Supreme Court decision — that the statute essentially deals with restraint of trade regardless of what the drafter labeled the restriction [^lanning-heyde].
+*Lanning* restated the rule [^lanning-heyde] that the Wisconsin Supreme Court had stated in *Heyde Cos. v. Dove Healthcare*: the statute essentially deals with restraint of trade and applies regardless of how the restriction is labeled [^heyde-label-irrelevant].
 
 "essentially deals with restraint of trade . . . regardless of whether a restriction is labeled a 'non-disclosure' provision or a 'covenant not to compete.'"[^lanning-heyde]
 
@@ -83,7 +83,7 @@ A trailing invention-assignment clause fits that logic: to the extent it sweeps 
 
 Extending the *Lanning* line to holdover assignments is a prediction, not a holding. Our review found no Wisconsin decision — state or federal — applying § 103.465 to an invention-assignment clause; the § 103.465 case law concerns non-competes, non-solicits, and confidentiality covenants. So a court could conceivably treat an assignment of property rights as something other than a covered restraint. The safer working assumption, given how consistently Wisconsin courts have refused to let labels control, is that an aggressive holdover clause would be tested for reasonableness like any other post-employment restraint [^lanning-restraint].
 
-The nearest invention-specific precedent is regional and persuasive only. In *Guth v. Minnesota Mining & Manufacturing Co.*, decided in 1934, the Seventh Circuit held that employment-contract provisions requiring assignment of future inventions without limit in time or subject matter were contrary to public policy [^guth-limitless-public-policy], while enforcing the contract's reasonable provisions [^guth-divisible].
+The nearest invention-specific precedent is regional and persuasive only. In *Guth v. Minnesota Mining & Manufacturing Co.*, decided in 1934 — before *Erie Railroad Co. v. Tompkins* required federal courts to apply state law outside matters governed by the Constitution or Acts of Congress [^erie-state-law] — the Seventh Circuit held that employment-contract provisions requiring assignment of future inventions without limit in time or subject matter were contrary to public policy [^guth-limitless-public-policy], while enforcing the contract's reasonable provisions [^guth-divisible].
 
 "Assignments in gross of future inventions are not favored."[^guth-gross]
 
@@ -118,6 +118,10 @@ What makes Wisconsin unusual is the remedy. *Guth* saved the reasonable parts of
 [^stat-103465-void-in-toto]: **Wis. Stat. § 103.465** — "Any covenant, described in this section, imposing an unreasonable restraint is illegal, void and unenforceable even as to any part of the covenant or performance that would be a reasonable restraint." *Wis. Stat. § 103.465.* <https://docs.legis.wisconsin.gov/statutes/statutes/103/465>
 
 [^lanning-heyde]: **The Manitowoc Company, Inc. v. Lanning** — "essentially deals with restraint of trade . . . regardless of whether a restriction is labeled a 'non-disclosure' provision or a 'covenant not to compete.'" *The Manitowoc Co., Inc. v. Lanning, 2018 WI 6 (quoting Heyde Cos. v. Dove Healthcare, LLC, 2002 WI 131).* <https://www.courtlistener.com/opinion/4460470/the-manitowoc-company-inc-v-john-m-lanning/#:~:text=essentially%20deals%20with%20restraint%20of,a%20'covenant%20not%20to%20compete.'>
+
+[^heyde-label-irrelevant]: **Heyde Cos. v. Dove Healthcare, LLC** — "This court has recognized that § 103.465 essentially deals with restraint of trade and has held that the statute applies regardless of whether a restriction is labeled a ‘non-disclosure’ provision or a ‘covenant not to compete.’" *Heyde Cos. v. Dove Healthcare, LLC, 2002 WI 131, 258 Wis. 2d 28, 654 N.W.2d 830.* <https://www.courtlistener.com/opinion/1996506/heyde-companies-v-dove-healthcare-llc/#:~:text=This%20court%20has%20recognized%20that,a%20%E2%80%9Ccovenant%20not%20to%20compete.%E2%80%9D>
+
+[^erie-state-law]: **Erie Railroad Co. v. Tompkins** — "Except in matters governed by the Federal Constitution or by Acts of Congress, the law to be applied in any case is the law of the State. And whether the law of the State shall be declared by its Legislature in a statute or by its highest court in a decision is not a matter of federal concern. There is no federal general common law." *Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938).* <https://www.courtlistener.com/opinion/103012/erie-railroad-v-tompkins/#:~:text=Except%20in%20matters%20governed%20by,no%20federal%20general%20common%20law.>
 
 [^guth-limitless-public-policy]: **Guth v. Minnesota Mining & Mfg. Co.** — "Upon the facts peculiar to this ease we are convinced that those provisions of the contract which were limitless in extent of time and in subject matter of invention were contrary to public policy." *Guth v. Minnesota Mining & Mfg. Co., 72 F.2d 385 (7th Cir. 1934).* <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=Upon%20the%20facts%20peculiar%20to,were%20contrary%20to%20public%20policy.>
 

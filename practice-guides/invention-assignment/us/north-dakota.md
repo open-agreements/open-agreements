@@ -71,7 +71,7 @@ The court then applied that rule to the facts — the inventor had been hired fo
 
 "The district court found that Louis Keller was hired for his inventive abilities."[^keller-hired-for-inventive-abilities]
 
-What converts that Eighth Circuit prediction into North Dakota law is *Berdahl*: the state supreme court expressly followed the *Keller* interpretation, and its formulation preserves the same escape hatch — an agreement to the contrary displaces the statutory default [^berdahl-adopts-keller]. That is how the *Keller* inventors retained an ownership interest in their patent despite the statute [^keller-kept-ownership].
+What converts that Eighth Circuit prediction into North Dakota law is *Berdahl*, in which the state supreme court expressly followed the interpretation of § 34-02-11 described above [^berdahl-adopts-keller]. Its formulation preserves the same escape hatch — an agreement to the contrary displaces the statutory default [^berdahl-adopts-keller]. That is how the *Keller* inventors retained an ownership interest in their patent despite the statute [^keller-kept-ownership].
 
 "Following the Keller interpretation of N.D.C.C. § 34-02-11, we conclude, absent an agreement to the contrary, the commissions earned by Berdahl belonged to the Bank."[^berdahl-adopts-keller]
 

@@ -27,8 +27,8 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > El Juez Asociado señor Kolthoff Caraballo emitió Opinión de Conformidad a la cual se unieron los Jueces Asociados señores Martínez Torres, Rivera García y Feliberti Cintrón.
 
-- supports: `scope-territory-clients`
-- source_cards: `rr-concurrence`
+- supports: `recent-developments`, `scope-territory-clients`
+- source_cards: `rr-concurrence`, `rr-current-concurrence`
 - cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
 
