@@ -156,8 +156,8 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### Functional non-compete
 
-For Minnesota agreements after July 1, 2023, separate permitted confidentiality, trade-secret, customer-list, and nonsolicitation language from any ban on working for a competitor. A nonsolicit that functions like a work ban may be treated as non-compete risk even if the label is different .
+For Minnesota agreements after July 1, 2023, separate permitted confidentiality, trade-secret, customer-list, and nonsolicitation language from any ban on working for a competitor. A nonsolicit that functions like a work ban may be treated as non-compete risk even if the label is different.
 
 ### Law and forum
 
-Do not rely on Delaware, New York, Texas, or another state's law to preserve a Minnesota employee non-compete. For workers who primarily reside and work in Minnesota, use Minnesota forum and Minnesota law for section 181.988 disputes, or expect the employee to challenge the clause .
+Do not rely on Delaware, New York, Texas, or another state's law to preserve a Minnesota employee non-compete. For workers who primarily reside and work in Minnesota, use Minnesota forum and Minnesota law for section 181.988 disputes, or expect the employee to challenge the clause.
