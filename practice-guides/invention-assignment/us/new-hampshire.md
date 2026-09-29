@@ -68,7 +68,7 @@ New Hampshire adopted that framework in *Vigitron, Inc. v. Ferguson*, a dispute 
 
 "accomplish a prescribed result, or aid in the development of products belongs to the employer in the absence of a written contract to assign."[^vigitron-hired-to-invent]
 
-Short of hired-to-invent facts, the employer's fallback under *Dubilier* is the equitable shop right — a limited license to use the invention, not ownership of it — where the employee used the employer's time, tools, and materials. *Vigitron* polices the boundary between the two doctrines: the shop right is available only when the employee was not engaged to develop the very product at issue [^vigitron-shop-right].
+Short of hired-to-invent facts, the employer's fallback under *Dubilier* is the equitable shop right — a limited license to use the invention, not ownership of it — where the employee used the employer's time, tools, and materials. *Vigitron* polices the boundary between the hired-to-invent rule and the shop right: the shop right is available only when the employee was not engaged to develop the very product at issue [^vigitron-shop-right].
 
 "A precondition for the application of the ‘shop right’ rule is that the employee not be hired for the purpose of developing the product in question."[^vigitron-shop-right]
 

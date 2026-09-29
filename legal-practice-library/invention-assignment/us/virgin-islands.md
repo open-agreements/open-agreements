@@ -40,6 +40,8 @@ In *Government of the Virgin Islands v. Connor*, the same court restated the wor
 
 "courts should consider ‘three non-dispositive factors’ to determine Virgin Islands common law: ‘(1) whether any Virgin Islands courts have previously adopted a particular rule; (2) the position taken by a majority of courts from other jurisdictions; and (3) most importantly, which approach represents the soundest rule for the Virgin Islands.’"[^connor-three-factors]
 
+The factor list predates *Connor*. In *Matthew v. Herman* (2012), the court described the three non-dispositive factors it had used to decide whether to adopt a Restatement approach [^matthew-three-factors]. In *Simon v. Joseph* (2013), it stated the same three factors, in the same words, as its method for choosing a common-law rule [^simon-three-factors].
+
 *Connor* also confirmed that the old reception statute no longer controls at all, tracing its demise to the 2004 statute that established the modern territorial judiciary [^connor-implicit-repeal].
 
 "the Legislature implicitly repealed 1 V.I.C. § 4 through its adoption of 4 V.I.C. § 21 in 2004."[^connor-implicit-repeal]
@@ -121,6 +123,10 @@ Three limits on the analogy keep this cell at unsettled rather than a reasonable
 [^banks-no-mechanical]: **Banks v. International Rental & Leasing Corp.** — "We conclude that the Legislature did not intend for section 4 of title 1 to compel this Court to mechanically apply the most recent Restatement." *Banks v. Int'l Rental & Leasing Corp., 55 V.I. 967 (V.I. 2011).* <https://www.courtlistener.com/opinion/8676262/banks-v-international-rental-leasing-corp/#:~:text=We%20conclude%20that%20the%20Legislature,apply%20the%20most%20recent%20Restatement.>
 
 [^connor-three-factors]: **Government of the Virgin Islands v. Connor** — "courts should consider ‘three non-dispositive factors’ to determine Virgin Islands common law: ‘(1) whether any Virgin Islands courts have previously adopted a particular rule; (2) the position taken by a majority of courts from other jurisdictions; and (3) most importantly, which approach represents the soundest rule for the Virgin Islands.’" *Gov't of the V.I. v. Connor, 60 V.I. 597 (V.I. 2014).* <https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810860/File/Opinions/Published/2014/File16.pdf>
+
+[^matthew-three-factors]: **Matthew v. Herman** — "With that in mind, we then considered three non-dispositive factors to guide us in our determination of whether we should adopt the Restatement approach." *Matthew v. Herman, 56 V.I. 674 (V.I. 2012).* <https://www.courtlistener.com/opinion/8676310/matthew-v-herman/#:~:text=With%20that%20in%20mind%2C%20we,should%20adopt%20the%20Restatement%20approach.>
+
+[^simon-three-factors]: **Simon v. Joseph** — "In doing so, this Court considers three non-dispositive factors: (1) whether any Virgin Islands courts have previously adopted a particular rule; (2) the position taken by a majority of courts from other jurisdictions; and (3) most importantly, which approach represents the soundest rule for the Virgin Islands." *Simon v. Joseph, 59 V.I. 611 (V.I. 2013).* <https://www.courtlistener.com/opinion/8676440/simon-v-joseph/#:~:text=In%20doing%20so%2C%20this%20Court,rule%20for%20the%20Virgin%20Islands.>
 
 [^connor-implicit-repeal]: **Government of the Virgin Islands v. Connor** — "the Legislature implicitly repealed 1 V.I.C. § 4 through its adoption of 4 V.I.C. § 21 in 2004." *Gov't of the V.I. v. Connor, 60 V.I. 597 (V.I. 2014).* <https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810860/File/Opinions/Published/2014/File16.pdf>
 

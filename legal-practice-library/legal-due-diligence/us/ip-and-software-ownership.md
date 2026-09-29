@@ -19,7 +19,7 @@ Copyright ownership, registration, and open-source license conditions in acquisi
 
 This practice note addresses the ownership and enforceability of a target’s software copyright in a private acquisition. It supplements [Legal due diligence in a private acquisition](/practice-guides/legal-due-diligence).
 
-## Unpublished code has no three-month grace period {#unpublished-code-remedies}
+## What happens if unpublished software is registered after copyright infringement begins? {#unpublished-code-remedies}
 
 **Short answer.** For an unpublished work, registration after infringement began bars statutory damages and attorney's fees for that infringement, subject to the opening exceptions in section 412 [^usc-17-412]. The three-month grace period in section 412(2) applies only to infringement after first publication. Internally developed code that has never been distributed to the public ordinarily remains unpublished [^usc-17-101-publication-remedies]. A post-closing registration cannot restore the two remedies for infringement that already commenced. Qualifying preregistration before infringement is an exception, but section 412 requires registration by the earlier of three months after first publication or one month after the owner learns of the infringement.
 
@@ -27,7 +27,7 @@ This practice note addresses the ownership and enforceability of a target’s so
 
 "(1) any infringement of copyright in an unpublished work commenced before the effective date of its registration; or (2) any infringement of copyright commenced after first publication of the work and before the effective date of its registration, unless such registration is made within three months after the first publication of the work."[^usc-17-412]
 
-## Authorship and work made for hire determine initial ownership {#initial-ownership}
+## Who owns software written by employees or contractors for a company? {#initial-ownership}
 
 **Short answer.** Code written for the target belongs initially to its author, so the target owns it from creation only if the code is a work made for hire [^usc-17-201a][^usc-17-201b]. For a work made for hire, section 201(b) treats the employer or commissioning party as the author and owner unless a signed writing provides otherwise [^usc-17-201b]. Section 101 has two branches: employee work within the scope of employment, and commissioned work within one of nine categories under a signed work-made-for-hire agreement [^usc-17-101-wfh][^usc-17-101-commissioned]. None of the nine categories names software, so ordinary application or infrastructure code qualifies only if it fits a listed category such as a compilation or a contribution to a collective work [^usc-17-101-commissioned]. Reid treats the branches as mutually exclusive and uses agency law to classify the hired creator [^ccnv-v-reid-490us730]. Payment alone does not give a company ownership of, or an exclusive license in, code a contractor authored outside the work-made-for-hire definition [^usc-17-204-initial-ownership][^usc-17-101-transfer-initial-ownership].
 
@@ -39,7 +39,7 @@ This practice note addresses the ownership and enforceability of a target’s so
 
 "The structure of § 101 indicates that a work for hire can arise through one of two mutually exclusive means, one for employees and one for independent contractors, and ordinary canons of statutory interpretation indicate that the classification of a particular hired party should be made with reference to agency law."[^ccnv-v-reid-490us730]
 
-## A transfer generally needs the owner’s signed writing {#contractor-assignment}
+## How does a contractor transfer copyright ownership of software? {#contractor-assignment}
 
 **Short answer.** Section 204(a) makes a transfer of copyright ownership invalid without a written instrument, note, or memorandum signed by the owner or authorized agent, except for a transfer by operation of law [^usc-17-204]. Section 101 includes an assignment or exclusive license in a transfer, but excludes a nonexclusive license [^usc-17-101-transfer]. Payment and an unsigned engagement therefore do not establish a copyright transfer. A nonexclusive license conveys no copyright ownership interest to the company. Whether the company holds an implied nonexclusive license is a separate question governed by case law, not by sections 101 or 204(a).
 
@@ -47,7 +47,7 @@ This practice note addresses the ownership and enforceability of a target’s so
 
 "A transfer of copyright ownership, other than by operation of law, is not valid unless an instrument of conveyance, or a note or memorandum of the transfer, is in writing and signed by the owner of the rights conveyed or such owner's duly authorized agent."[^usc-17-204]
 
-## Protection starts on fixation, while section 411 gates suit {#protection-and-suit}
+## Does software copyright have to be registered before filing an infringement lawsuit? {#protection-and-suit}
 
 **Short answer.** Registration is not needed for protection, but a United States work generally must be preregistered or registered before an infringement suit can be filed [^usc-17-408][^usc-17-411]. Original code receives copyright protection when fixed [^usc-17-102]. Fourth Estate holds that an application alone is insufficient; the Copyright Office must register the claim [^fourth-estate-586us296]. A refused applicant may sue after a proper submission and service of the complaint on the Register, but registrability remains open for the court, and the Register may appear [^usc-17-411-refusal]. For an unpublished work, the United States work test turns on all authors’ nationality, domicile, or habitual residence; the statutory headquarters alternative expressly covers unpublished audiovisual works [^usc-17-101-us-work].
 
@@ -60,19 +60,19 @@ This practice note addresses the ownership and enforceability of a target’s so
 
 "We hold, in accord with the United States Court of Appeals for the Eleventh Circuit, that registration occurs, and a copyright claimant may commence an infringement suit, when the Copyright Office registers a copyright."[^fourth-estate-586us296]
 
-## Computer programs qualify only when prepared for commercial distribution {#preregistration}
+## Can software qualify for copyright preregistration? {#preregistration}
 
 **Short answer.** Software qualifies for preregistration only if it is unpublished and being prepared for commercial distribution to the public [^cfr-37-202-16-eligibility][^cfr-37-202-16-distribution]. Computer programs are a designated preregistration class [^cfr-37-202-16]. Section 408(f) concerns unpublished works being prepared for commercial distribution [^usc-17-408-preregistration]. Internal software with no plan for distribution does not satisfy that condition.
 
 "(v) Computer programs (including videogames); or"[^cfr-37-202-16]
 
-## Publication turns on distribution of copies {#publication}
+## When is software considered published under copyright law? {#publication}
 
 **Short answer.** Software is published when copies are distributed to the public or offered to a group for further distribution, public performance, or public display; public performance or display alone does not publish it [^usc-17-101-publication]. Internal use without distribution does not publish code. The Copyright Office guidance says streaming may not distribute a copy when a user receives none [^compendium-1008-3]. Hosted access without a delivered copy therefore calls for a publication analysis rather than an assumption based on commercial availability.
 
 "A public performance or display of a work does not of itself constitute publication."[^usc-17-101-publication]
 
-## The claim depends on an exclusive right and the license grant {#license-rights}
+## When does breaching a software component license amount to copyright infringement? {#license-rights}
 
 **Short answer.** A component license breach can become infringement when the conduct exceeds a condition of the grant and violates an exclusive right, subject to statutory limitations [^jacobsen-conditions-covenants][^usc-17-501a][^usc-17-106]. Copyright law reserves reproduction, adaptation, and distribution rights to the owner [^usc-17-106]. A separate covenant can leave the license grant intact. Statutory limitations may also permit conduct without a license. The Federal Circuit’s Jacobsen decision addresses the distinction for the Artistic License, not every open-source license [^jacobsen-conditions-covenants].
 
@@ -82,7 +82,7 @@ This practice note addresses the ownership and enforceability of a target’s so
 
 "Thus, if the terms of the Artistic License allegedly violated are both covenants and conditions, they may serve to limit the scope of the license and are governed by copyright law. If they are merely covenants, by contrast, they are governed by contract law."[^jacobsen-conditions-covenants]
 
-## Jacobsen and Bitmanagement require attention to the term and the remedy {#license-conditions}
+## What has the Federal Circuit decided about copyright claims for software license violations? {#license-conditions}
 
 **Short answer.** Under the Federal Circuit’s rule, a breached license term supports a copyright-infringement claim only if it is a condition of the license rather than a covenant, and the court presumes it is a covenant unless a condition is clearly intended [^bitmanagement-scope-test][^bitmanagement-covenant-presumption]. The court held that the Artistic License terms in Jacobsen were copyright conditions and that the Flexera term in Bitmanagement was a condition on an implied license [^jacobsen-disposition][^bitmanagement-flexera-condition]. Jacobsen remanded without deciding infringement or entitlement to an injunction. Bitmanagement involved an implied license with a government user [^bitmanagement-implied-license]. Bitmanagement found the presumption rebutted on its facts [^bitmanagement-flexera-condition]. These Federal Circuit decisions do not establish a national rule for every open-source license or presume injunctive relief. For infringement of a published component before registration, section 412 removes statutory damages and attorney's fees unless registration occurred within three months after first publication, subject to its opening exceptions [^usc-17-412-oss].
 

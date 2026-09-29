@@ -2,7 +2,7 @@
 jurisdiction: "Nevada"
 slug: nevada
 countryCode: US
-content_packaged_at: "2026-09-28"
+content_packaged_at: "2026-09-29"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nevada · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nevada · **Snapshot as of:** 2026-09-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nevada[^about]
 
@@ -85,7 +85,7 @@ For older agreements, *Duong* adds a separate path. Even before the statute appl
 > [!CAUTION]
 > **Drafting note.**
 >
-> NRS 613.195(6) makes judicial revision of an overbroad but consideration-supported Nevada covenant mandatory rather than discretionary, and *Tough Turtle Turf* confirms that this duty superseded *Golden Road*'s rule that an unreasonable covenant was wholly unenforceable [^q3-nrs-613-195-revision][^q3-tough-turtle-overruled]. The revision power has limits a covenant cannot lean on: a covenant unsupported by valuable consideration stays unenforceable, and the court revises rather than rewrites, so it will not supply missing essential terms or build a new bargain for the parties [^q3-tough-turtle-rewrite]. A covenant drawn within the enforceable range at signing is enforced as written, while one drafted to be rescued by revision risks being the covenant the court declines to remake [^q3-tough-turtle-mandatory].
+> NRS 613.195(6) makes judicial revision of an overbroad but consideration-supported Nevada covenant mandatory rather than discretionary [^q3-nrs-613-195-revision], and *Tough Turtle Turf* confirms [^q3-tough-turtle-overruled] that this duty superseded *Golden Road*'s rule that an unreasonable covenant was wholly unenforceable [^q3-golden-road-old-rule]. The revision power has limits a covenant cannot lean on: a covenant unsupported by valuable consideration stays unenforceable, and the court revises rather than rewrites, so it will not supply missing essential terms or build a new bargain for the parties [^q3-tough-turtle-rewrite]. A covenant drawn within the enforceable range at signing is enforced as written, while one drafted to be rescued by revision risks being the covenant the court declines to remake [^q3-tough-turtle-mandatory].
 
 ## Can a Nevada non-compete apply to an hourly-wage worker? {#hourly-wage-workers}
 

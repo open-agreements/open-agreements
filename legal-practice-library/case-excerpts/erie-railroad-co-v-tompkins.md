@@ -1,13 +1,16 @@
 ---
 type: Case Excerpt
 title: Erie Railroad Co. v. Tompkins
-description: 'Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938). — quoted in 1 document(s).'
+description: 'Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938). — quoted in 2 document(s).'
 citation: 'Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938).'
 resource: 'https://www.courtlistener.com/opinion/103012/erie-railroad-v-tompkins/'
 timestamp: '2026-07-02'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/invention-assignment/us/indiana'
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/wisconsin
 tags:
   - case-law
   - invention-assignment
@@ -17,7 +20,7 @@ tags:
 
 *Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -27,5 +30,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `holdover-clause-limit`
 - source_cards: `erie-state-law`
-- cited_by: [Employee Invention Assignment in Indiana](../invention-assignment/us/indiana.md)
+- cited_by: [Employee Invention Assignment in Indiana](../invention-assignment/us/indiana.md), [Employee Invention Assignment in Wisconsin](../invention-assignment/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/103012/erie-railroad-v-tompkins/#:~:text=Except%20in%20matters%20governed%20by,no%20federal%20general%20common%20law.>

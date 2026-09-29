@@ -2,7 +2,7 @@
 jurisdiction: "Puerto Rico"
 slug: puerto-rico
 countryCode: US
-content_packaged_at: "2026-09-28"
+content_packaged_at: "2026-09-29"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/puerto-rico · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/puerto-rico · **Snapshot as of:** 2026-09-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Puerto Rico[^about]
 
@@ -31,7 +31,7 @@ Puerto Rico has no non-compete statute; post-employment covenants are enforceabl
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Puerto Rico has no non-compete statute; a covenant is enforceable only if it satisfies the strict three-part Arthur Young reasonableness test — capped at twelve months, supported by real consideration, and in writing — and courts void rather than rewrite any covenant that falls short. |
 | **Main law or case** | Case law governs employee non-competes; Arthur Young & Co. v. Vega III, 136 D.P.R. 157 (1994). |
-| **Main exceptions** | Covenants ancillary to a sale of business / ownership exit (e.g. stock-redemption) judged more flexibly than the strict Arthur Young employer-employee test (Reyes Ramis) |
+| **Main exceptions** | Covenants ancillary to a sale of business / ownership exit (e.g. stock-redemption) may be judged more flexibly than the strict Arthur Young employer-employee test (reasoning of the Reyes Ramis concurrence, not an opinion of the Court) |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |
 | **Restriction extended during a breach?** | Silent — risky if it pushes enforcement past the 12-month ceiling |
@@ -118,11 +118,11 @@ Because there is no Puerto Rico authority on point, the question is genuinely op
 
 ## What recent developments should employers monitor? {#recent-developments}
 
-**Short answer.** As of June 2, 2026, the governing framework remains the *Arthur Young* line of cases. The Supreme Court last restated and refined that test in *Reyes Ramis* in 2016, and no Puerto Rico statute has displaced it [^rr-current].
+**Short answer.** As of June 2, 2026, the governing framework is the three-part reasonableness test of *Arthur Young* [^ay-test-current]. The refinements of the test associated with *Reyes Ramis* (2016) come from a concurring opinion by Justice Kolthoff Caraballo, joined by three other justices, not from an opinion of the Court [^rr-current][^rr-current-concurrence].
 
 Two background developments matter for monitoring but do not change the Puerto Rico rule. Puerto Rico's labor reform legislation did not codify a non-compete standard, so the judge-made *Arthur Young* test still controls. And the federal FTC Non-Compete Rule was challenged and, as of this review, has been treated as unenforceable, so it is not an operative Puerto Rico rule either.
 
-The practical takeaway is stability with a narrow margin. Because the framework is judicial, the most reliable signal of change would be a new Supreme Court decision rather than a bill, and *Reyes Ramis* remains the most recent word: the strict requirements apply to employer-employee covenants, with a single territorial or customer limit sufficing [^rr-current].
+The practical takeaway is stability with a narrow margin. Because the framework is judicial, the most reliable signal of change would be a new Supreme Court decision rather than a bill, and in *Reyes Ramis* the statement that a single territorial or customer limit suffices appears in the concurrence, not in an opinion of the Court [^rr-current][^rr-current-concurrence].
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Puerto Rico. This article synthesizes Puerto Rico primary law and is not legal advice from a Puerto Rico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Puerto Rico*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/puerto-rico.
 
@@ -172,4 +172,8 @@ The practical takeaway is stability with a narrow margin. Because the framework 
 
 [^emc-contract]: **EMC Corp. v. Arturi** — "Being forewarned, EMC could have contracted, as the district judge noted, for tolling the term of the restriction during litigation, or for a period of restriction to commence upon preliminary finding of breach." *EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011).* <https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=Being%20forewarned%2C%20EMC%20could%20have,upon%20preliminary%20finding%20of%20breach.>
 
+[^ay-test-current]: **Arthur Young & Co. v. Vega III** — "Para ser razonable, un acuerdo de no competir debe reunir los siguientes requisitos: (1) debe ser necesario para proteger un interés legítimo del patrono, (2) no debe imponer al empleado una carga demasiado onerosa, (3) y no debe afectar demasiado al público." *Arthur Young & Co. v. Vega III, 136 D.P.R. 157 (1994).* <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
+
 [^rr-current]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "Por lo tanto, no es correcto afirmar que todo contrato de no competencia debe contener una restricción territorial y de clientela, basta con una de ellas." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 194 D.P.R. ___ (2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
+
+[^rr-current-concurrence]: **Reyes Ramis CPA Group, P.S.C. v. Serra Torres** — "El Juez Asociado señor Kolthoff Caraballo emitió Opinión de Conformidad a la cual se unieron los Jueces Asociados señores Martínez Torres, Rivera García y Feliberti Cintrón." *Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 2016 TSPR 126 (P.R. 2016).* <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>

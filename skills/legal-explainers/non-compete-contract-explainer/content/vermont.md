@@ -2,7 +2,7 @@
 jurisdiction: "Vermont"
 slug: vermont
 countryCode: US
-content_packaged_at: "2026-09-28"
+content_packaged_at: "2026-09-29"
 law_checked_through: "2026-09-26"
 human_reviewed_at: null
 next_review_due: "2027-03-25"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/vermont · **Snapshot as of:** 2026-09-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/vermont · **Snapshot as of:** 2026-09-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Vermont[^about]
 
@@ -155,7 +155,7 @@ As of September 2026, the common-law reasonableness test of *Andrus* governs Ver
 
 **Narrow confidentiality and NDA terms.** Vermont's reasonableness scrutiny in *Andrus* and *Barnes* applies to restrictive covenants generally, so NDA terms that operate as practical work bans carry non-compete risk [^alternatives-andrus-reasonableness-test][^alternatives-barnes-restatement-framing]. Confidentiality clauses tied to actual confidential information and trade-secret subject matter are easier to defend [^vtsa-4602-injunctive].
 
-**Sale-of-business covenants.** As *Fine Foods*, *Foti Fuels*, and *Miller v. Flegenheimer* together show, covenants ancillary to a real arms-length sale get more breathing room than employment covenants [^alternatives-fine-foods-sale-covenant][^alternatives-foti-fuels-sale-consideration][^alternatives-miller-sale-term-open]. Tie the covenant to dedicated transaction consideration and limit it to the geography of the acquired goodwill [^alternatives-fine-foods-sale-covenant].
+**Sale-of-business covenants.** As *Fine Foods* [^alternatives-fine-foods-sale-covenant], *Foti Fuels* [^alternatives-foti-fuels-sale-consideration], and *Miller v. Flegenheimer* [^alternatives-miller-sale-term-open] together show, covenants ancillary to a real arms-length sale get more breathing room than employment covenants. A sale-of-business covenant is better supported when it has separate transaction consideration and reasonable geographic limits [^alternatives-fine-foods-sale-covenant].
 
 **Garden leave.** A paid notice-period structure keeps the employee on the payroll — employed but not working — during the notice period, so any restriction operates while the employment relationship is still intact rather than as a post-termination restraint. Vermont courts have not yet tested how that structure fares under the reasonableness analysis, so treat it as an untested option rather than a guaranteed work-around. H.205, which would have regulated stay-or-pay and other separation-payment structures, was recommitted and not enacted [^alternatives-vt-h205-status-page].
 
