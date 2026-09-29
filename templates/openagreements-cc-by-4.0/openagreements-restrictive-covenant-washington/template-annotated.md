@@ -219,12 +219,12 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### Independent consideration for a post-hire covenant
 
-A restrictive covenant a worker signs after employment has already commenced is validly formed only where it is supported by independent consideration given at the time the covenant is reached; continued at-will employment alone is not consideration, so a post-hire covenant backed only by keeping an existing worker on the payroll is unsupported and unenforceable . Identifiable new value given specifically in exchange for the covenant — a signing or retention bonus, an equity grant, or a promotion — is what carries a post-hire covenant across that line, and a placeholder left unfilled leaves the covenant resting on nothing the statute recognizes.
+A restrictive covenant a worker signs after employment has already commenced is validly formed only where it is supported by independent consideration given at the time the covenant is reached; continued at-will employment alone is not consideration, so a post-hire covenant backed only by keeping an existing worker on the payroll is unsupported and unenforceable. Identifiable new value given specifically in exchange for the covenant — a signing or retention bonus, an equity grant, or a promotion — is what carries a post-hire covenant across that line, and a placeholder left unfilled leaves the covenant resting on nothing the statute recognizes.
 
 ### Customer non-acceptance clauses treated as non-competes
 
-A customer non-acceptance or no-business clause is not a safe substitute for a non-solicit. Because the 2024 amendment treats any agreement that directly or indirectly prohibits accepting or transacting business with a customer as a non-compete, drafting around the threshold by forbidding the customer relationship instead of the solicitation pulls the clause back inside RCW 49.62.020 .
+A customer non-acceptance or no-business clause is not a safe substitute for a non-solicit. Because the 2024 amendment treats any agreement that directly or indirectly prohibits accepting or transacting business with a customer as a non-compete, drafting around the threshold by forbidding the customer relationship instead of the solicitation pulls the clause back inside RCW 49.62.020.
 
 ### Written notice to workers by October 1, 2027
 
-Without an inventory of every non-compete the employer has entered into, including each Non-Compete Covenant in agreements like this one, and the date each restricted period ends, an employer risks omitting current or former workers from the written notice it must make reasonable efforts to provide by October 1, 2027, stating that their non-compete is void and unenforceable .
+Without an inventory of every non-compete the employer has entered into, including each Non-Compete Covenant in agreements like this one, and the date each restricted period ends, an employer risks omitting current or former workers from the written notice it must make reasonable efforts to provide by October 1, 2027, stating that their non-compete is void and unenforceable.

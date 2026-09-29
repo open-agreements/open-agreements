@@ -224,24 +224,24 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### The statutory legitimate-interest limit
 
-A Maine non-compete is contrary to public policy and enforceable only to the extent it is reasonable and no broader than necessary to protect one of the statute's three legitimate business interests — trade secrets, non-trade-secret confidential information, or goodwill — so a covenant aimed at ordinary competition sits outside the statutory frame and does not hold . The common law measures the same restraint: it must sweep no wider than the interest at issue requires, and duration, geography, and the nature of the protected interest are weighed together as a fact-intensive question, so a term or radius carried from another form is measured against an interest it was never sized to .
+A Maine non-compete is contrary to public policy and enforceable only to the extent it is reasonable and no broader than necessary to protect one of the statute's three legitimate business interests — trade secrets, non-trade-secret confidential information, or goodwill — so a covenant aimed at ordinary competition sits outside the statutory frame and does not hold. The common law measures the same restraint: it must sweep no wider than the interest at issue requires, and duration, geography, and the nature of the protected interest are weighed together as a fact-intensive question, so a term or radius carried from another form is measured against an interest it was never sized to.
 
 ### Pre-offer disclosure and review-window timing
 
-Maine's pre-offer disclosure and 3-business-day copy requirements sit upstream of signing, so a signature collected on time does not cure a missed disclosure or a shortened review window, and the covenant is exposed even where the executed agreement looks complete .
+Maine's pre-offer disclosure and 3-business-day copy requirements sit upstream of signing, so a signature collected on time does not cure a missed disclosure or a shortened review window, and the covenant is exposed even where the executed agreement looks complete.
 
 ### Employer-to-employer no-poach terms
 
-Section 599-B's ban is not limited to a stand-alone no-poach contract: it reaches a no-solicit or no-hire term buried in a franchise, contractor, or subcontractor arrangement between two or more employers, and it bars entering into, enforcing, or threatening to enforce such a term alike . A violation is a civil violation carrying a fine of not less than $5,000 enforced by the Maine Department of Labor, so a commercial agreement that quietly restricts who may hire another employer's workers carries statutory exposure independent of any employee covenant .
+Section 599-B's ban is not limited to a stand-alone no-poach contract: it reaches a no-solicit or no-hire term buried in a franchise, contractor, or subcontractor arrangement between two or more employers, and it bars entering into, enforcing, or threatening to enforce such a term alike. A violation is a civil violation carrying a fine of not less than $5,000 enforced by the Maine Department of Labor, so a commercial agreement that quietly restricts who may hire another employer's workers carries statutory exposure independent of any employee covenant.
 
 ### Confidentiality alternative and its ceiling
 
-A confidentiality definition that expressly excludes the general skill and knowledge the employee acquired on the job matches the nondisclosure clause in _Bernier_, which did not prohibit the employee from using that skill and knowledge .
+A confidentiality definition that expressly excludes the general skill and knowledge the employee acquired on the job matches the nondisclosure clause in _Bernier_, which did not prohibit the employee from using that skill and knowledge.
 
 ### Alternative covenants before a non-compete
 
-Under Maine's noncompete statute, 26 M.R.S. § 599-A(2), a non-compete may be presumed necessary if an alternative restrictive covenant cannot adequately protect the legitimate business interest. The alternatives the statute names include nonsolicitation, nondisclosure, and confidentiality agreements . A non-compete used without a record showing that those alternatives were considered and found inadequate starts a step behind the statute's own ordering.
+Under Maine's noncompete statute, 26 M.R.S. § 599-A(2), a non-compete may be presumed necessary if an alternative restrictive covenant cannot adequately protect the legitimate business interest. The alternatives the statute names include nonsolicitation, nondisclosure, and confidentiality agreements. A non-compete used without a record showing that those alternatives were considered and found inadequate starts a step behind the statute's own ordering.
 
 ### The health-care-practitioner restriction and its made-or-renewed trigger
 
-L.D. 2200's non-owner employee health-care-practitioner restriction applies to non-competes entered into or renewed on or after its July 29, 2026 effective date, so the trigger is the made-or-renewed date rather than when a dispute arises . A covenant for such a practitioner renewed on or after that date is measured against the new rule even if the original agreement predates it. The older published § 599-A text alone does not show that change .
+L.D. 2200's non-owner employee health-care-practitioner restriction applies to non-competes entered into or renewed on or after its July 29, 2026 effective date, so the trigger is the made-or-renewed date rather than when a dispute arises. A covenant for such a practitioner renewed on or after that date is measured against the new rule even if the original agreement predates it. The older published § 599-A text alone does not show that change.

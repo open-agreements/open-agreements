@@ -228,8 +228,8 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### Legitimate business interest
 
-A naked interest in avoiding ordinary competition is not protectable. Plead and prove a specific interest from the statutory categories — or an analogous one supported by evidence — because a restraint not tied to a legitimate business interest is void and unenforceable .
+A naked interest in avoiding ordinary competition is not protectable. Plead and prove a specific interest from the statutory categories — or an analogous one supported by evidence — because a restraint not tied to a legitimate business interest is void and unenforceable.
 
 ### Choice act non-solicits
 
-The CHOICE Act defines _covered noncompete_ and _covered garden leave_ agreements but does not mention non-solicitation clauses. A four-year CHOICE Act non-compete may sit beside a non-solicit that still defaults to section 542.335's two-year presumption, so draft and analyze the two clauses separately rather than assuming the four-year term carries over .
+The CHOICE Act defines _covered noncompete_ and _covered garden leave_ agreements but does not mention non-solicitation clauses. A four-year CHOICE Act non-compete may sit beside a non-solicit that still defaults to section 542.335's two-year presumption, so draft and analyze the two clauses separately rather than assuming the four-year term carries over.

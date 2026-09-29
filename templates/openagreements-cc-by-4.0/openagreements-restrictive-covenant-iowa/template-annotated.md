@@ -201,20 +201,20 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### Independent-contractor covenants
 
-An independent-contractor covenant runs the same three-prong reasonableness analysis as an employee covenant, with no lighter standard for contractor status. A restraint that requires a contractor to forsake the customers the contractor brought to the relationship is unreasonable and unenforceable , so a covenant reaching a contractor's own book of business is the exposed case.
+An independent-contractor covenant runs the same three-prong reasonableness analysis as an employee covenant, with no lighter standard for contractor status. A restraint that requires a contractor to forsake the customers the contractor brought to the relationship is unreasonable and unenforceable, so a covenant reaching a contractor's own book of business is the exposed case.
 
 ### Notice letters resting on an overbroad covenant
 
-A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant an Iowa court would narrow to the activities, territory, and duration the worker actually handled , or one an occupation statute voids outright, gives the notice little to rest on and can expose the employer to a claim for interfering with the new employment. The notice that holds is built on a restraint the employer is prepared to defend on all three reasonableness prongs.
+A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant an Iowa court would narrow to the activities, territory, and duration the worker actually handled, or one an occupation statute voids outright, gives the notice little to rest on and can expose the employer to a claim for interfering with the new employment. The notice that holds is built on a restraint the employer is prepared to defend on all three reasonableness prongs.
 
 ### Tolling
 
-An extension-on-breach clause adds to the covenant's total duration, and Iowa enforces a non-compete only to the extent reasonably necessary to protect the employer without undue hardship on the employee . An open-ended extension, or one that assumes a court will revive an expired covenant, risks being cut back or left unenforced.
+An extension-on-breach clause adds to the covenant's total duration, and Iowa enforces a non-compete only to the extent reasonably necessary to protect the employer without undue hardship on the employee. An open-ended extension, or one that assumes a court will revive an expired covenant, risks being cut back or left unenforced.
 
 ### Customer restrictions sized to actual relationships
 
-A no-business clause covering unsolicited customer business reaches transactions that a solicitation-only clause leaves unrestricted. A customer restriction broader than the activities and territory the worker actually served risks being trimmed back to them, as the covenant in _Farm Bureau_ was .
+A no-business clause covering unsolicited customer business reaches transactions that a solicitation-only clause leaves unrestricted. A customer restriction broader than the activities and territory the worker actually served risks being trimmed back to them, as the covenant in _Farm Bureau_ was.
 
 ### Secrecy protection
 
-An agreement that relies on a non-compete without reasonable measures to keep information secret risks that information failing chapter 550's trade-secret definition, which requires reasonable secrecy efforts . Information outside the definition loses the statute's injunction and damages remedies, which otherwise protect a trade secret without any covenant .
+An agreement that relies on a non-compete without reasonable measures to keep information secret risks that information failing chapter 550's trade-secret definition, which requires reasonable secrecy efforts. Information outside the definition loses the statute's injunction and damages remedies, which otherwise protect a trade secret without any covenant.
