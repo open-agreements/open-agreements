@@ -1,0 +1,1585 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "external": true,
+      "title": "CC BY 4.0"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "fund-formation",
+    "slug": "hedge-fund-limited-partnership-agreement",
+    "frontmatter": {
+      "title": "Hedge Fund Limited Partnership Agreement Reviewer Checklist",
+      "description": "A clause-by-clause reviewer checklist for a hedge fund limited partnership agreement, a hedge fund here meaning an open-end private investment fund organized as a Delaware limited partnership and relying on Section 3(c)(1), written first for the manager setting the terms and second for a smaller investor signing without counsel, in the order that matters to both: what the manager charges, how and when money can come back out, how capital and gains are accounted for, what the manager may do and when it answers for it, costs and reporting, and how the agreement can be changed or the fund wound up.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "Hedge fund limited partnership agreement for a fully funded, open-end Delaware limited partnership — not a closed-end drawdown fund such as a private equity fund",
+      "lastReviewed": "2026-09-02",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 53,
+    "sections": [
+      {
+        "sectionId": "what-the-manager-charges",
+        "label": "What the Manager Charges"
+      },
+      {
+        "sectionId": "getting-money-back-out",
+        "label": "Getting Money Back Out"
+      },
+      {
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "label": "Capital Accounts and How Gains Are Split"
+      },
+      {
+        "sectionId": "what-the-manager-may-do",
+        "label": "What the Manager May Do"
+      },
+      {
+        "sectionId": "costs-reports-and-valuation",
+        "label": "Costs, Reports and Valuation"
+      },
+      {
+        "sectionId": "changing-the-deal-and-winding-down",
+        "label": "Changing the Deal and Winding Down"
+      },
+      {
+        "sectionId": "formation-and-general-terms",
+        "label": "Formation and General Terms"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "state-the-management-fee",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.state-the-management-fee",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Management fee rate stated, or its absence made deliberate",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#state-the-management-fee",
+        "requirementGuidance": "Confirm the agreement either states the management fee rate or makes clear that no asset-based fee is charged. Both are real positions in limited partnership agreements filed with the SEC, whose fee terms include none at all, with the general partner paid solely through its profit share, and a monthly management fee equal to 0.125% (an annual rate of 1.5%) of each investor's portfolio. What should not survive review is silence: a fee the agreement neither states nor expressly leaves to a named advisory contract.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "solasglas-management-fee",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 3.6",
+            "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 3.6 (dated May 1, 2026), filed as Exhibit 10.1 to Greenlight Capital Re, Ltd.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm#:~:text=Subject%20to%20any%20special%20arrangements,to%20the%20Investment%20Advisory%20Agreement.",
+            "proposition": "Solasglas charges a management fee of 0.125% monthly, an annual rate of 1.5%, debited against each limited partner's capital account.",
+            "verbatimQuote": "Subject to any special arrangements with Special Limited Partners, as of the first day of each month, a monthly management fee equal to 0.125% (an annual rate of 1.5%) of each Limited Partner’s Investment Portfolio (the “Management Fee”), for such month shall be debited against the Capital Account of such Limited Partner and paid in cash to the Investment Advisor pursuant to the Investment Advisory Agreement.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-solasglas-management-fee"
+          },
+          {
+            "sourceId": "lion-fund-incentive-and-hurdle",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.02",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.02 (dated May 26, 2021), filed as Exhibit 10.1 to Biglari Holdings Inc. Form 8-K.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=As%20of%20the%20end%20of%20each%20calendar,Accounts%20of%20the%20General%20Partner.",
+            "proposition": "The Lion Fund II charges no management fee and takes a 25% incentive reallocation of the increase in net asset value above a hurdle rate of 6% per annum during the shared services agreement, otherwise 5% per annum.",
+            "verbatimQuote": "As of the end of each calendar year, with respect to each Limited Partner other than The Lion Fund, L.P., an Incentive Reallocation in an amount equal to 25% of the Net Increase in Net Asset Value, calculated with respect to each Capital Contribution by such Limited Partner, that exceeds the Hurdle Rate with respect to such Capital Contribution and subject to the “Loss Carryforward” (as defined below) is debited from such Limited Partner's Adjusted Capital and Capital Accounts and credited to the Adjusted Capital and Capital Accounts of the General Partner.",
+            "pullQuoteLocator": "As of the end of each calendar|Accounts of the General Partner.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-incentive-and-hurdle"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-the-fee-base-and-timing",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.state-the-fee-base-and-timing",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fee base, period, and whether it is charged in advance",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#state-the-fee-base-and-timing",
+        "requirementGuidance": "Check what the fee is a percentage of, over what period, and whether it is taken at the start of the period or the end. The base is not always the plain capital account balance, so the same headline rate can produce a different dollar charge. Confirm the agreement says how a mid-period subscription or withdrawal is prorated, since a fee charged monthly in advance is otherwise ambiguous for money that arrives on the fifteenth.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-fee-waiver-discretion",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.address-fee-waiver-discretion",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager's power to reduce or waive the fee for particular investors",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#address-fee-waiver-discretion",
+        "requirementGuidance": "Look for the clause letting the manager reduce, waive, rebate, or calculate the fee differently for one or more investors without amending the agreement. This is the clause that makes fee side letters operative, and its practical effect is that the stated rate is a ceiling rather than a uniform price. Where it is present, check whether the agreement also requires disclosure of those arrangements to other investors.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-the-performance-share",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.state-the-performance-share",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Performance share percentage stated",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#state-the-performance-share",
+        "requirementGuidance": "Verify the agreement states the percentage of gains the manager takes. The share is negotiated, not a default; limited partnership agreements filed with the SEC include twenty percent of a limited partner's net increase after the management fee and loss recovery balance, and an Incentive Reallocation in an amount equal to 25% of the Net Increase in Net Asset Value, above a hurdle and with no management fee. Read the percentage together with the hurdle and the loss carryforward rather than on its own.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "lion-fund-incentive-and-hurdle",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.02",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.02 (dated May 26, 2021), filed as Exhibit 10.1 to Biglari Holdings Inc. Form 8-K.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=As%20of%20the%20end%20of%20each%20calendar,Accounts%20of%20the%20General%20Partner.",
+            "proposition": "The Lion Fund II charges no management fee and takes a 25% incentive reallocation of the increase in net asset value above a hurdle rate of 6% per annum during the shared services agreement, otherwise 5% per annum.",
+            "verbatimQuote": "As of the end of each calendar year, with respect to each Limited Partner other than The Lion Fund, L.P., an Incentive Reallocation in an amount equal to 25% of the Net Increase in Net Asset Value, calculated with respect to each Capital Contribution by such Limited Partner, that exceeds the Hurdle Rate with respect to such Capital Contribution and subject to the “Loss Carryforward” (as defined below) is debited from such Limited Partner's Adjusted Capital and Capital Accounts and credited to the Adjusted Capital and Capital Accounts of the General Partner.",
+            "pullQuoteLocator": "As of the end of each calendar|Accounts of the General Partner.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-incentive-and-hurdle"
+          },
+          {
+            "sourceId": "third-point-incentive-allocation",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 4.1.2",
+            "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 4.1.2 (dated July 31, 2018), filed as Exhibit 10.33.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm#:~:text=Subject%20to%20Section%204.1.2.3%20and,General%20Partner%20(the%20%E2%80%9CIncentive%20Allocation%E2%80%9D).",
+            "proposition": "Third Point Enhanced reallocates 20% of a limited partner's net increase for the fiscal year to the general partner, after deducting the management fee and the partner's loss recovery account balance.",
+            "verbatimQuote": "Subject to Section 4.1.2.3 and Section 4.1.2.7, at the end of each Fiscal Year of the Partnership, twenty percent (20%) of the result of (x) the Net Increase, if any, allocated to a Limited Partner’s Capital Account for such Fiscal Year, minus (y) the Management Fee debited from such Capital Account for such Fiscal Year, minus (z) such Partner’s Loss Recovery Account balance for such Fiscal Year, shall be reallocated to the General Partner (the “Incentive Allocation”).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-third-point-incentive-allocation"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-performance-share-form",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.identify-performance-share-form",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Profit share taken as a reallocation or paid as a fee",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#identify-performance-share-form",
+        "requirementGuidance": "Check whether the manager's profit share moves between capital accounts inside the partnership or is paid out as a fee to the management company. Some filed agreements use the reallocation form: the amount moves to the general partner's capital account, under names such as an Incentive Allocation or an Incentive Reallocation. The distinction matters to the manager's own tax position and to what an investor is actually giving up, so confirm the agreement is consistent with itself and with the private placement memorandum rather than mixing the two vocabularies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "third-point-incentive-allocation",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 4.1.2",
+            "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 4.1.2 (dated July 31, 2018), filed as Exhibit 10.33.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm#:~:text=Subject%20to%20Section%204.1.2.3%20and,General%20Partner%20(the%20%E2%80%9CIncentive%20Allocation%E2%80%9D).",
+            "proposition": "Third Point Enhanced reallocates 20% of a limited partner's net increase for the fiscal year to the general partner, after deducting the management fee and the partner's loss recovery account balance.",
+            "verbatimQuote": "Subject to Section 4.1.2.3 and Section 4.1.2.7, at the end of each Fiscal Year of the Partnership, twenty percent (20%) of the result of (x) the Net Increase, if any, allocated to a Limited Partner’s Capital Account for such Fiscal Year, minus (y) the Management Fee debited from such Capital Account for such Fiscal Year, minus (z) such Partner’s Loss Recovery Account balance for such Fiscal Year, shall be reallocated to the General Partner (the “Incentive Allocation”).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-third-point-incentive-allocation"
+          },
+          {
+            "sourceId": "lion-fund-incentive-and-hurdle",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.02",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.02 (dated May 26, 2021), filed as Exhibit 10.1 to Biglari Holdings Inc. Form 8-K.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=As%20of%20the%20end%20of%20each%20calendar,Accounts%20of%20the%20General%20Partner.",
+            "proposition": "The Lion Fund II charges no management fee and takes a 25% incentive reallocation of the increase in net asset value above a hurdle rate of 6% per annum during the shared services agreement, otherwise 5% per annum.",
+            "verbatimQuote": "As of the end of each calendar year, with respect to each Limited Partner other than The Lion Fund, L.P., an Incentive Reallocation in an amount equal to 25% of the Net Increase in Net Asset Value, calculated with respect to each Capital Contribution by such Limited Partner, that exceeds the Hurdle Rate with respect to such Capital Contribution and subject to the “Loss Carryforward” (as defined below) is debited from such Limited Partner's Adjusted Capital and Capital Accounts and credited to the Adjusted Capital and Capital Accounts of the General Partner.",
+            "pullQuoteLocator": "As of the end of each calendar|Accounts of the General Partner.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-incentive-and-hurdle"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-loss-carryforward-or-its-absence",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.state-loss-carryforward-or-its-absence",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Loss carryforward or high-water mark stated, including its absence",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#state-loss-carryforward-or-its-absence",
+        "requirementGuidance": "Confirm the agreement states whether the performance allocation is subject to an investor-level loss carryforward or high-water mark. If it is, record its calculation and its treatment on reset, transfer, partial withdrawal, full withdrawal, and series or class changes. If it is not, confirm the agreement says so expressly. The review tests disclosure of the economic term, not whether the fund adopts an investor-favorable outcome.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-return-hurdle",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.address-return-hurdle",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Minimum return before the manager shares in gains",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#address-return-hurdle",
+        "requirementGuidance": "Check whether the profit share accrues only above a stated return. A hurdle is optional, and where one appears its form varies: limited partnership agreements filed with the SEC include a five percent annualized internal rate of return and a flat rate of six or five percent per annum, depending on whether a services agreement is in force. Where a hurdle is present, confirm whether it is a hard hurdle (the manager shares only in the excess) or a soft one with a catch-up, because the two produce very different numbers at modest returns.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "carlyle-hurdle-amount",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), Definitions (Hurdle Amount)",
+            "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement, Definitions (dated Oct. 1, 2025), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm#:~:text=For%20any%20period%20during%20a,Investor%20Units%20over%20the%20period.",
+            "proposition": "Carlyle Private Equity Partners Fund defines its hurdle as the amount producing a 5% annualized internal rate of return on the net asset value of its investor units.",
+            "verbatimQuote": "For any period during a Reference Period, a Hurdle Amount means that amount that results in a 5% annualized internal rate of return on the Net Asset Value of the Investor Units of the Fund outstanding at the beginning of the then-current Reference Period and all Investor Units issued since the beginning of the then-current Reference Period, calculated in accordance with recognized industry practices and taking into account: (i) the timing and amount of all distributions accrued or paid (without duplication) on all such Investor Units minus all Fund Expenses; and (ii) all issuances of Investor Units over the period.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-carlyle-hurdle-amount"
+          },
+          {
+            "sourceId": "lion-fund-incentive-and-hurdle",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.02",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.02 (dated May 26, 2021), filed as Exhibit 10.1 to Biglari Holdings Inc. Form 8-K.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=As%20of%20the%20end%20of%20each%20calendar,Accounts%20of%20the%20General%20Partner.",
+            "proposition": "The Lion Fund II charges no management fee and takes a 25% incentive reallocation of the increase in net asset value above a hurdle rate of 6% per annum during the shared services agreement, otherwise 5% per annum.",
+            "verbatimQuote": "As of the end of each calendar year, with respect to each Limited Partner other than The Lion Fund, L.P., an Incentive Reallocation in an amount equal to 25% of the Net Increase in Net Asset Value, calculated with respect to each Capital Contribution by such Limited Partner, that exceeds the Hurdle Rate with respect to such Capital Contribution and subject to the “Loss Carryforward” (as defined below) is debited from such Limited Partner's Adjusted Capital and Capital Accounts and credited to the Adjusted Capital and Capital Accounts of the General Partner.",
+            "pullQuoteLocator": "As of the end of each calendar|Accounts of the General Partner.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-incentive-and-hurdle"
+          }
+        ]
+      },
+      {
+        "requirementId": "fix-crystallization-timing",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.fix-crystallization-timing",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the profit share is locked in",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.8",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#fix-crystallization-timing",
+        "requirementGuidance": "Confirm the agreement fixes the point at which the accrued profit share becomes the manager's for good. Limited partnership agreements filed with the SEC include annual measurement at fiscal year end, crystallization on a full or partial withdrawal for the amount withdrawn, quarterly allocations with a year-to-date true-up, and crystallization on the disposition of a substantial investment position. Check that the agreement says what happens to an accrued but uncrystallized amount if the fund is dissolved mid-period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "third-point-incentive-allocation",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 4.1.2",
+            "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 4.1.2 (dated July 31, 2018), filed as Exhibit 10.33.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm#:~:text=Subject%20to%20Section%204.1.2.3%20and,General%20Partner%20(the%20%E2%80%9CIncentive%20Allocation%E2%80%9D).",
+            "proposition": "Third Point Enhanced reallocates 20% of a limited partner's net increase for the fiscal year to the general partner, after deducting the management fee and the partner's loss recovery account balance.",
+            "verbatimQuote": "Subject to Section 4.1.2.3 and Section 4.1.2.7, at the end of each Fiscal Year of the Partnership, twenty percent (20%) of the result of (x) the Net Increase, if any, allocated to a Limited Partner’s Capital Account for such Fiscal Year, minus (y) the Management Fee debited from such Capital Account for such Fiscal Year, minus (z) such Partner’s Loss Recovery Account balance for such Fiscal Year, shall be reallocated to the General Partner (the “Incentive Allocation”).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-third-point-incentive-allocation"
+          },
+          {
+            "sourceId": "third-point-partial-withdrawal-allocation",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 4.1.2.7",
+            "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 4.1.2.7 (dated July 31, 2018), filed as Exhibit 10.33.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm#:~:text=If%20a%20Limited%20Partner%20withdraws,end%20of%20a%20Fiscal%20Year.",
+            "proposition": "Third Point Enhanced allocates the incentive allocation on the withdrawn portion of a capital account as if a full or partial withdrawal date were the end of a fiscal year.",
+            "verbatimQuote": "If a Limited Partner withdraws all or a portion of its Capital Account on a date other than at the end of a Fiscal Year, then Net Increase and Net Decrease, as the case may be, allocable to such Capital Account shall be determined through the withdrawal date as if such date were the end of the Fiscal Year, and an Incentive Allocation with respect to the portion of the Capital Account withdrawn shall be allocated as if such withdrawal date were the end of a Fiscal Year.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-third-point-partial-withdrawal-allocation"
+          },
+          {
+            "sourceId": "seidman-incentive-true-up",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 9(a)(iii)",
+            "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 9(a)(iii) (dated Oct. 15, 2005), filed as Exhibit 99.5.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt#:~:text=If%20the%20Incentive%20Allocation%20pursuant,to%20their%20respective%20Capital%20Accounts.",
+            "proposition": "Seidman reallocates to the limited partners any year-to-date incentive allocation exceeding twenty percent of the fiscal year's net profits.",
+            "verbatimQuote": "If the Incentive Allocation pursuant to clause (ii) above from the beginning of the Fiscal Year exceeds twenty (20%) percent of the Net Profits of the Fiscal Year, such excess amount shall be re-allocated to the Limited Partners in proportion to their respective Capital Accounts.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-seidman-incentive-true-up"
+          },
+          {
+            "sourceId": "stilwell-disposition-crystallization",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 4.3",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 4.3 (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=As%20of%20the%20close%20of%20each,Account%20of%20such%20Limited%20Partner.",
+            "proposition": "Stilwell Value Partners I makes its incentive allocation at the close of each performance period, generally when the partnership disposes of a substantial investment, or on a complete or partial withdrawal.",
+            "verbatimQuote": "As of the close of each Performance Period (generally, when the Partnership disposes of a substantial investment), the General Partner’s Capital Account will be credited with an Incentive Allocation with respect to each Limited Partner, and an Incentive Allocation will be debited from each Limited Partner’s Capital Account, or, in the case of a complete or partial withdrawal by a Limited Partner of his, her or its Capital Account balance when the Partnership has not disposed of a substantial investment, the Incentive Allocation will be debited only from the Capital Account of such Limited Partner.",
+            "pullQuoteLocator": "As of the close of each|Account of such Limited Partner.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-disposition-crystallization"
+          }
+        ]
+      },
+      {
+        "requirementId": "confirm-performance-allocation-eligibility",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.confirm-performance-allocation-eligibility",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rule 205-3 performance-allocation eligibility applied when federally required",
+        "sectionId": "what-the-manager-charges",
+        "itemNumber": "1.9",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#confirm-performance-allocation-eligibility",
+        "requirementGuidance": "If the adviser is registered or required to be registered with the Commission and the fund charges a performance allocation, confirm the contract limits that compensation to clients permitted by Advisers Act section 205(a)(1) and Rule 205-3 when section 205(a)(1) applies. For a section 3(c)(1) fund, test each equity owner charged the allocation. Section 205(b)(4) makes section 205(a)(1) inapplicable to an advisory contract with a section 3(c)(7) fund; a separate contract or state rule may still require a qualified-client screen. If the adviser is state-registered, record the governing state performance-compensation rule separately. Use the current Commission order for indexed thresholds and record the as-of date.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "advisers-act-205-a-1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Investment Advisers Act of 1940 § 205(a)(1), 15 U.S.C. § 80b-5(a)(1)",
+            "citation": "15 U.S.C. § 80b-5(a)(1).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section80b-5&num=0&edition=prelim",
+            "proposition": "A registered investment adviser may not enter into an advisory contract providing for compensation based on a share of capital gains or capital appreciation of the client's funds, except as the statute and Commission rules permit.",
+            "verbatimQuote": "No investment adviser registered or required to be registered with the Commission shall enter into, extend, or renew any investment advisory contract, or in any way perform any investment advisory contract entered into, extended, or renewed on or after November 1, 1940, if such contract- (1) provides for compensation to the investment adviser on the basis of a share of capital gains upon or capital appreciation of the funds or any portion of the funds of the client;",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-advisers-act-205-a-1"
+          },
+          {
+            "sourceId": "advisers-act-205-b-4",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Investment Advisers Act of 1940 § 205(b)(4), 15 U.S.C. § 80b-5(b)(4)",
+            "citation": "15 U.S.C. § 80b-5(b)(4).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section80b-5&num=0&edition=prelim",
+            "proposition": "Section 205(a)(1) does not apply to an advisory contract with a company excepted from the Investment Company Act definition under section 3(c)(7).",
+            "verbatimQuote": "Paragraph (1) of subsection (a) shall not- (1) be construed to prohibit an investment advisory contract which provides for compensation based upon the total value of a fund averaged over a definite period, or as of definite dates, or taken as of a definite date; (2) apply to an investment advisory contract with- (A) an investment company registered under subchapter I of this chapter, or (B) any other person (except a trust, governmental plan, collective trust fund, or separate account referred to in section 80a–3(c)(11) of this title), provided that the contract relates to the investment of assets in excess of $1 million, if the contract provides for compensation based on the asset value of the company or fund under management averaged over a specified period and increasing and decreasing proportionately with the investment performance of the company or fund over a specified period in relation to the investment record of an appropriate index of securities prices or such other measure of investment performance as the Commission by rule, regulation, or order may specify; (3) apply with respect to any investment advisory contract between an investment adviser and a business development company, as defined in this subchapter, if (A) the compensation provided for in such contract does not exceed 20 per centum of the realized capital gains upon the funds of the business development company over a specified period or as of definite dates, computed net of all realized capital losses and unrealized capital depreciation, and the condition of section 80a–60(a)(4)(B)(iii) of this title is satisfied, and (B) the business development company does not have outstanding any option, warrant, or right issued pursuant to section 80a–60(a)(4)(B) of this title and does not have a profit-sharing plan described in section 80a–56(n) of this title; (4) apply to an investment advisory contract with a company excepted from the definition of an investment company under section 80a–3(c)(7) of this title; or",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-advisers-act-205-b-4"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-the-lock-up",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.state-the-lock-up",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Lock-up period stated, or confirmed to be none",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#state-the-lock-up",
+        "requirementGuidance": "Confirm how long an investor's money cannot be withdrawn at all after it comes in, or that there is no such period. Filed lock-ups include two years from the date the investment was accepted, eight full fiscal quarters plus a month, and a first withdrawal date of March 31 of the fifth year after the contribution. Check whether the lock-up runs per contribution or per investor, since a fund with a per-contribution lock-up staggers liquidity for anyone who adds money later.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "stilwell-two-year-lock-up",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), art. VI",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement art. VI (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=Except%20as%20otherwise%20provided%20in%20this%20Agreement%2C%20Limited,was%20accepted%20into%20the%20Partnership.",
+            "proposition": "Stilwell Value Partners I locks each investment up until the second anniversary of the date that investment was accepted.",
+            "verbatimQuote": "Except as otherwise provided in this Agreement, Limited Partners will not be permitted to withdraw any investment until the expiration of the second anniversary of the date such investment was accepted into the Partnership.",
+            "pullQuoteLocator": "Except as otherwise provided in this Agreement, Limited|was accepted into the Partnership.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-two-year-lock-up"
+          },
+          {
+            "sourceId": "seidman-quarterly-withdrawal-and-notice",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 20",
+            "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 20 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt#:~:text=A%20Limited%20Partner%20who%20shall,the%20amount%20to%20be%20withdrawn.",
+            "proposition": "Seidman permits withdrawals as of the end of any fiscal quarter after a lock-up of eight full fiscal quarters plus one month, on not less than ninety days' prior written notice.",
+            "verbatimQuote": "A Limited Partner who shall have been a Limited Partner for at least eight full Fiscal Quarters plus one month shall have the right, as of the end of any Fiscal Quarter, or at other times at the discretion of the General Partner, to withdraw all or a portion of the amount of such Partner's Capital Account, so long as the General Partner receives written notice of the intended withdrawal not less than ninety (90) days prior to the withdrawal, stating the amount to be withdrawn.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-seidman-quarterly-withdrawal-and-notice"
+          },
+          {
+            "sourceId": "lion-fund-five-year-withdrawal",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 11.01(A)",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 11.01(A) (dated May 26, 2021), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=A%20Limited%20Partner%20may%20withdraw,occurring%20every%20five%20years%20thereafter.",
+            "proposition": "The Lion Fund II permits withdrawal of the capital attributable to a contribution as of March 31 of the fifth year after the contribution year, and every five years thereafter.",
+            "verbatimQuote": "A Limited Partner may withdraw all or any portion of its Capital Account attributable to a particular Capital Contribution as of March 31 of the fifth year after the year in which such Limited Partner made such contribution, and every March 31 occurring every five years thereafter.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-five-year-withdrawal"
+          }
+        ]
+      },
+      {
+        "requirementId": "fix-withdrawal-dates",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.fix-withdrawal-dates",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Withdrawal dates fixed once the lock-up has run",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#fix-withdrawal-dates",
+        "requirementGuidance": "Confirm the agreement fixes the dates as of which an investor may withdraw. Filed withdrawal dates include quarter end, month end, and any business day. Watch for liquidity that is not on the calendar at all, such as withdrawals only when the fund disposes of a substantial position or otherwise with the general partner's consent, which can be withheld in its sole discretion. That is a materially different instrument from a quarterly fund and should be described as such wherever the fund is offered.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "seidman-quarterly-withdrawal-and-notice",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 20",
+            "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 20 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt#:~:text=A%20Limited%20Partner%20who%20shall,the%20amount%20to%20be%20withdrawn.",
+            "proposition": "Seidman permits withdrawals as of the end of any fiscal quarter after a lock-up of eight full fiscal quarters plus one month, on not less than ninety days' prior written notice.",
+            "verbatimQuote": "A Limited Partner who shall have been a Limited Partner for at least eight full Fiscal Quarters plus one month shall have the right, as of the end of any Fiscal Quarter, or at other times at the discretion of the General Partner, to withdraw all or a portion of the amount of such Partner's Capital Account, so long as the General Partner receives written notice of the intended withdrawal not less than ninety (90) days prior to the withdrawal, stating the amount to be withdrawn.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-seidman-quarterly-withdrawal-and-notice"
+          },
+          {
+            "sourceId": "solasglas-business-day-withdrawal",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.2(b)",
+            "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.2(b) (dated May 1, 2026), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm#:~:text=Subject%20to%20the%20obligations%20of,business%20on%20any%20Business%20Day.",
+            "proposition": "Solasglas permits a limited partner to withdraw all or part of its capital account as of the close of business on any business day.",
+            "verbatimQuote": "Subject to the obligations of the Limited Partners set forth in Section 3.1(c), a Limited Partner may voluntarily withdraw all or part of its Capital Account as of the close of business on any Business Day.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-solasglas-business-day-withdrawal"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-the-notice-period",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.state-the-notice-period",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Advance notice required for a withdrawal",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#state-the-notice-period",
+        "requirementGuidance": "Check how much advance written notice a withdrawal requires and confirm it is stated in days or business days rather than left at large. The spread is the point: filed notice terms include written notice to the General Partner at least 3 Business Days prior to the proposed withdrawal date, ninety days, and notice received within a March window that opens once every five years. Confirm the agreement says whether a notice can be revoked, and what happens to a notice that is caught by a suspension.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "solasglas-three-business-days-notice",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.2",
+            "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.2 (dated May 1, 2026), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm#:~:text=If%20a%20Limited%20Partner%20wishes,Capital%20Account%20in%20such%20notice.",
+            "proposition": "Solasglas requires only three business days' prior written notice of a withdrawal.",
+            "verbatimQuote": "If a Limited Partner wishes to withdraw funds, it must give written notice to the General Partner at least 3 Business Days prior to the proposed withdrawal date indicating the amount to be withdrawn from such Limited Partner’s Capital Account in such notice.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-solasglas-three-business-days-notice"
+          },
+          {
+            "sourceId": "seidman-quarterly-withdrawal-and-notice",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 20",
+            "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 20 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt#:~:text=A%20Limited%20Partner%20who%20shall,the%20amount%20to%20be%20withdrawn.",
+            "proposition": "Seidman permits withdrawals as of the end of any fiscal quarter after a lock-up of eight full fiscal quarters plus one month, on not less than ninety days' prior written notice.",
+            "verbatimQuote": "A Limited Partner who shall have been a Limited Partner for at least eight full Fiscal Quarters plus one month shall have the right, as of the end of any Fiscal Quarter, or at other times at the discretion of the General Partner, to withdraw all or a portion of the amount of such Partner's Capital Account, so long as the General Partner receives written notice of the intended withdrawal not less than ninety (90) days prior to the withdrawal, stating the amount to be withdrawn.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-seidman-quarterly-withdrawal-and-notice"
+          },
+          {
+            "sourceId": "lion-fund-march-notice-window",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 11.01(A)",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 11.01(A) (dated May 26, 2021), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=A%20Limited%20Partner%20requesting%20a,withdrawal%20is%20to%20be%20effected.",
+            "proposition": "The Lion Fund II requires written notice of a withdrawal to be received by the general partner between March 1 and March 31 of the withdrawal year.",
+            "verbatimQuote": "A Limited Partner requesting a withdrawal pursuant to this Section 11.01(A) must provide written notice to the General Partner that must actually be received by the General Partner between March 1 and March 31 of the year in which such withdrawal is to be effected.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-march-notice-window"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-withdrawal-cap",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.identify-withdrawal-cap",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Cap on aggregate withdrawals in a single period",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#identify-withdrawal-cap",
+        "requirementGuidance": "Look for a cap on how much can leave the fund on one withdrawal date, and read it as a term that can turn a valid full withdrawal request into a partial payment. Some filed agreements impose such a cap, whether on aggregate monthly withdrawals at ten percent of net asset value at the general partner's discretion or on quarterly redemptions at three percent of units outstanding, with express discretion to exceed it. Where a cap exists, confirm three things: how requests are cut back (for example, pro rata), whether the unfilled balance rolls to the next date automatically or must be resubmitted, and whether the cap is measured at the fund alone or across parallel vehicles.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "apollo-ten-percent-withdrawal-cap",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Apollo IG Core Replacement, L.P., Second Amended and Restated Agreement of Limited Partnership (2026), § 6.02(b)",
+            "citation": "Apollo IG Core Replacement, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 6.02(b) (dated June 30, 2026), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm#:~:text=In%20addition%2C%20aggregate%20withdrawals%20during,same%20Investments%20with%20the%20Partnership.",
+            "proposition": "Apollo IG Core Replacement caps aggregate withdrawals in any calendar month at 10% of the partnership's net asset value, at the general partner's discretion.",
+            "verbatimQuote": "In addition, aggregate withdrawals during any calendar month shall be limited, at the General Partner’s discretion, to 10% (or such higher percentage as the General Partner determines in its sole discretion) of the Net Asset Value attributable to the Partnership as of the last day of the calendar month (the “10% Threshold”); provided that the General Partner, in its sole discretion, may elect to apply the 10% Threshold on an aggregated basis with respect to the Partnership and any corresponding series or class of interests in any Parallel Fund, which series or class of interests is established to facilitate participation by investors on a side-by-side and pro rata basis in the same Investments with the Partnership.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-apollo-ten-percent-withdrawal-cap"
+          },
+          {
+            "sourceId": "carlyle-three-percent-redemption-cap",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), Annex B (Redemption Program)",
+            "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement, Annex B (dated Oct. 1, 2025), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm#:~:text=In%20addition%2C%20redemptions%20under%20this,limitation%20in%20any%20calendar%20quarter.",
+            "proposition": "Carlyle Private Equity Partners Fund limits redemptions in any calendar quarter to 3% of redeemable units outstanding.",
+            "verbatimQuote": "In addition, redemptions under this Redemption Program will be limited in any calendar quarter to 3% of Redeemable Units outstanding (either by number of Redeemable Units or aggregate NAV of the Fund) (including NAV attributable to any Feeder Fund and any Parallel Fund) as of the last Business Day of the immediately preceding calendar quarter; provided that the General Partner may, in its sole discretion and in accordance with the Partnership Agreement, cause the Fund to offer to redeem Redeemable Units in an amount that exceeds such 3% quarterly volume limitation in any calendar quarter.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-carlyle-three-percent-redemption-cap"
+          }
+        ]
+      },
+      {
+        "requirementId": "scope-suspension-power",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.scope-suspension-power",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Suspension power and the triggers that switch it on",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#scope-suspension-power",
+        "requirementGuidance": "Confirm the manager's power to suspend withdrawals, the payment of proceeds, or the determination of net asset value, and read the trigger list closely: this is the term that can stop redemptions entirely rather than merely slow them. Limited partnership agreements filed with the SEC include suspension of the redemption program alone and suspension of withdrawal rights, distributions, and the determination of net asset value. Check whether pending requests are honoured, revoked, or held when a suspension begins, whether the manager must notify investors, and whether the suspension ends on a stated condition or only when the manager declares it over.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "carlyle-redemption-program-suspension",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), § 8.6 (Redemption of Units)",
+            "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement § 8.6 (dated Oct. 1, 2025), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm#:~:text=The%20General%20Partner%20may%20amend,regulatory%20or%20other%20structuring%20reasons.",
+            "proposition": "Carlyle Private Equity Partners Fund lets the general partner amend or suspend its redemption program when, in its reasonable judgment, doing so is in the fund's best interest.",
+            "verbatimQuote": "The General Partner may amend or suspend the Redemption Program if in its reasonable judgment it deems such action to be in the Fund’s best interest, including, but not limited to, for tax, regulatory or other structuring reasons.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-carlyle-redemption-program-suspension"
+          },
+          {
+            "sourceId": "apollo-suspension-power",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Apollo IG Core Replacement, L.P., Second Amended and Restated Agreement of Limited Partnership (2026), § 6.07(b)",
+            "citation": "Apollo IG Core Replacement, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 6.07(b) (dated June 30, 2026), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm#:~:text=The%20General%20Partner%2C%20in%20its%20sole%20discretion%2C%20may%20suspend,dealings%20are%20restricted%20or%20suspended%3B",
+            "proposition": "Apollo IG Core Replacement lets the general partner suspend withdrawal rights, quarterly distributions, and the determination of net asset value, in whole or in part.",
+            "verbatimQuote": "The General Partner, in its sole discretion, may suspend withdrawal rights, Quarterly Distributions and/or the determination of the Net Asset Value of each Limited Partner’s Capital Account(s), in whole or in part: (i) during any period in which any stock exchange or over-the-counter market on which a substantial portion of the Partnership’s Investments are quoted, traded or dealt in is closed, other than for ordinary holidays and weekends, or during periods in which dealings are restricted or suspended;",
+            "pullQuoteLocator": "The General Partner, in its sole discretion, may suspend|dealings are restricted or suspended;",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-apollo-suspension-power"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-audit-holdback",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.address-audit-holdback",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Portion of the payout held back until the annual audit",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#address-audit-holdback",
+        "requirementGuidance": "Check whether part of a withdrawing investor's balance is retained until the fund's annual financial statements are complete, and how much. Limited partnership agreements filed with the SEC state the initial payment as a percentage on differing bases, such as at least eighty-five percent of the amount due within thirty days, and a withdrawal can separately be subject to reserves for liabilities and contingencies. Confirm the agreement says when the holdback is released and whether it carries interest, because an unreleased holdback is an interest-free loan to the fund.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "stilwell-audit-holdback",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 6.3",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 6.3 (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=Except%20as%20provided%20in%20Section,completion%20of%20the%20Partnership%E2%80%99s%20audit.",
+            "proposition": "Stilwell pays at least 85% of a withdrawing partner's balance within 30 days of the withdrawal date, holding the remainder back.",
+            "verbatimQuote": "Except as provided in Section 6.3(f) payment of at least eighty-five percent (85%) of the amount due to a withdrawing Partner shall be made within thirty (30) days after the Withdrawal Date (or such earlier date as the General Partner may agree with a Limited Partner), with the remainder of the proceeds to be sent upon completion of the Partnership’s audit.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-audit-holdback"
+          },
+          {
+            "sourceId": "stilwell-withdrawal-reserves",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 6.3(h)",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 6.3(h) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=The%20right%20of%20any%20Partner,for%20in%20Section%205.5%20herein.",
+            "proposition": "Stilwell Value Partners I makes a partner's withdrawal right subject to the general partner's provision for partnership liabilities and reserves for contingencies.",
+            "verbatimQuote": "The right of any Partner to make a withdrawal from his, her, or its Capital Account pursuant to the provisions of this Section 6.3 is subject to the provision by the General Partner for all Partnership liabilities and for reserves for contingencies provided for in Section 5.5 herein.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-withdrawal-reserves"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-early-withdrawal-charge",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.address-early-withdrawal-charge",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Charge for withdrawing before a threshold period",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#address-early-withdrawal-charge",
+        "requirementGuidance": "Check whether an early exit is priced rather than forbidden. Limited partnership agreements filed with the SEC include a five percent deduction from units held less than two years, for the benefit of the fund and so indirectly the remaining investors. Where such a charge exists, confirm who receives it. A charge paid to the fund compensates the investors who stay; a charge paid to the manager is additional compensation and should be read alongside the fee items above.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "carlyle-early-redemption-deduction",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), Annex B (Early Redemption Deduction)",
+            "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement, Annex B (dated Oct. 1, 2025), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm#:~:text=Subject%20to%20limited%20exceptions%2C%20Redeemable,and%20therefore%20indirectly%20the%20Shareholders.",
+            "proposition": "Carlyle deducts 5% of net asset value from units redeemed before they have been outstanding two years, for the benefit of the fund.",
+            "verbatimQuote": "Subject to limited exceptions, Redeemable Units that have not been outstanding for at least two (2) years will be subject to an early redemption deduction equal to 5% of the value of the NAV of the Redeemable Units being redeemed (calculated as of the Redemption Date) (the “Early Redemption Deduction”) for the benefit of the Fund and therefore indirectly the Shareholders.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-carlyle-early-redemption-deduction"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-in-kind-payment",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.address-in-kind-payment",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager's power to pay a withdrawal in securities",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#address-in-kind-payment",
+        "requirementGuidance": "Check whether the manager may satisfy a withdrawal by distributing securities instead of cash. A power to pay out in securities or other property instead of cash is not by itself a concern; what to look for is whether it may be exercised selectively, whether the distributed assets must be a pro rata slice of the portfolio or may be chosen by the manager, how they are valued for the purpose, and whether the investor gets advance notice. A discretionary, non-pro-rata in-kind power lets a manager hand the least liquid holdings to the investor who leaves.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "scope-forced-withdrawal",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.scope-forced-withdrawal",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager's power to force an investor out",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#scope-forced-withdrawal",
+        "requirementGuidance": "Confirm the manager's power to compel a withdrawal and read the trigger. Some agreements confine it to a reason: an investor whose participation would create a regulatory, tax, or plan-asset problem, or whose eligibility representations have stopped being true. Others reserve it at large, permitting a required withdrawal for any reason or no reason, or termination of an interest on five days' notice whenever the general partner finds that in the partnership's best interest. A wide power is a market position rather than a defect, but it should be disclosed as one, and confirm the payout mechanic for a forced exit matches the voluntary one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "stilwell-compulsory-withdrawal",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 6.3(g)",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 6.3(g) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=The%20General%20Partner%20in%20its%20sole%20discretion%20may%20at,Partner%20in%20its%20sole%20discretion.",
+            "proposition": "Stilwell Value Partners I lets the general partner require a limited partner to withdraw all or part of its capital account at any time, for any reason or no reason at all.",
+            "verbatimQuote": "The General Partner in its sole discretion may at any time, for any reason, or no reason at all, require a Limited Partner to withdraw all or any portion of his Capital Account pursuant to this Section 6.3, effective on any date designated by the General Partner in its sole discretion.",
+            "pullQuoteLocator": "The General Partner in its sole discretion may at|Partner in its sole discretion.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-compulsory-withdrawal"
+          },
+          {
+            "sourceId": "lion-fund-mandatory-withdrawal",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 8.04 (Mandatory Withdrawal)",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 8.04 (dated May 26, 2021), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=The%20General%20Partner%20in%20its%20sole%20discretion%20may,any%20reason%20or%20no%20reason.",
+            "proposition": "The Lion Fund II lets the general partner, in its sole discretion, cause the withdrawal of all or part of a limited partner's interests for any reason or no reason.",
+            "verbatimQuote": "The General Partner in its sole discretion may cause the withdrawal of all or any part of a Limited Partner's Interests in the Fund, in accordance with Section 11.05 for any reason or no reason.",
+            "pullQuoteLocator": "The General Partner in its sole discretion may|any reason or no reason.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-mandatory-withdrawal"
+          },
+          {
+            "sourceId": "seidman-forced-withdrawal",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 20",
+            "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 20 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt#:~:text=Any%20Limited%20Partner's%20interest%20in,best%20interest%20of%20the%20Partnership.",
+            "proposition": "Seidman lets the partnership terminate any limited partner's interest at any time on five days' prior written notice, when the general partner determines termination to be in the partnership's best interest.",
+            "verbatimQuote": "Any Limited Partner's interest in the Partnership may be terminated by the Partnership at any time upon 5 days prior written notice, so long as the General Partner determines the termination to be in the best interest of the Partnership.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-seidman-forced-withdrawal"
+          }
+        ]
+      },
+      {
+        "requirementId": "transfer-requires-manager-consent",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.transfer-requires-manager-consent",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Whether an investor may sell its interest, and on whose consent",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#transfer-requires-manager-consent",
+        "requirementGuidance": "Confirm the agreement says whether an investor may transfer, assign, pledge, or encumber its interest. Withdrawing is not the only way out, and silence here is not neutral: unless the partnership agreement provides otherwise, Delaware law provides that A partnership interest is assignable in whole or in part and that the assignee takes the profits, losses, and distributions the assignor was entitled to, so an agreement that says nothing leaves the fund's economics saleable to people the manager never screened. Some filed agreements restrict transfers in nearly the same words: no transfer is valid and no transferee becomes a substituted limited partner without the general partner's prior written consent, withheld in its sole discretion. Read the consent standard in every subsection rather than only the first: a sole-discretion standard for the transfer itself can sit beside a subsection admitting the transferee on a consent which consent shall not be unreasonably withheld, followed by a sole-discretion standard for becoming a substituted limited partner.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "drulpa-17-702-a",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Delaware Revised Uniform Limited Partnership Act § 17-702(a), 6 Del. C. § 17-702(a)",
+            "citation": "6 Del. C. § 17-702(a).",
+            "url": "https://delcode.delaware.gov/title6/c017/sc07/index.html",
+            "proposition": "Unless the partnership agreement provides otherwise, a Delaware partnership interest is assignable in whole or in part, and the assignment entitles the assignee to the profits, losses, distributions, and allocations the assignor was entitled to, without making the assignee a partner.",
+            "verbatimQuote": "Unless otherwise provided in the partnership agreement: (1) A partnership interest is assignable in whole or in part; (2) An assignment of a partnership interest does not dissolve a limited partnership or entitle the assignee to become or to exercise any rights or powers of a partner; (3) An assignment of a partnership interest entitles the assignee to share in such profits and losses, to receive such distribution or distributions, and to receive such allocation of income, gain, loss, deduction, or credit or similar item to which the assignor was entitled, to the extent assigned; and (4) A partner ceases to be a partner and to have the power to exercise any rights or powers of a partner upon assignment of all of its partnership interests.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-drulpa-17-702-a"
+          },
+          {
+            "sourceId": "solasglas-substitution-consent",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.3(d)",
+            "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.3(d) (dated May 1, 2026), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm#:~:text=Subsequent%20to%20receipt%20of%20the,becomes%20a%20substituted%20Limited%20Partner.",
+            "proposition": "In the subsection governing admission of a substitute limited partner, Solasglas describes the general partner's consent as one that shall not be unreasonably withheld: a different standard from the sole discretion its transfer-consent subsection reserves.",
+            "verbatimQuote": "Subsequent to receipt of the consent of the General Partner (which consent shall not be unreasonably withheld), an authorized transferee is entitled to the allocations and distributions attributable to the Interest transferred to such transferee and to transfer such Interest in accordance with the terms of this Agreement; provided, however, that such transferee is not entitled to the other rights of a Limited Partner as a result of such transfer until he or she becomes a substituted Limited Partner.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-solasglas-substitution-consent"
+          },
+          {
+            "sourceId": "solasglas-transfer-consent",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.3(b)",
+            "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.3(b) (dated May 1, 2026), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm#:~:text=No%20Transfer%20of%20any%20Limited,discretion%20of%20the%20General%20Partner.",
+            "proposition": "Solasglas makes no transfer of a limited partner's interest valid without the general partner's prior written consent, which may be withheld for any reason or for no reason in its sole discretion.",
+            "verbatimQuote": "No Transfer of any Limited Partner’s Interest, whether voluntary or involuntary, is valid or effective, and no transferee becomes a substituted Limited Partner, unless the prior written consent of the General Partner has been obtained, which consent may be withheld for any reason or for no reason in the sole discretion of the General Partner.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-solasglas-transfer-consent"
+          },
+          {
+            "sourceId": "stilwell-transfer-consent",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 6.1(b)",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 6.1(b) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=No%20Transfer%20of%20any%20Limited,the%20General%20Partner%E2%80%99s%20sole%20discretion.",
+            "proposition": "Stilwell Value Partners I makes no transfer of a limited partner's interest valid without the general partner's prior written consent, which may be denied in the general partner's sole discretion.",
+            "verbatimQuote": "No Transfer of any Limited Partner’s interest in the Partnership, whether voluntary or involuntary, shall be valid or effective, and no transferee shall become a substituted Limited Partner, unless the prior written consent of the General Partner has been obtained, which consent may be denied in the General Partner’s sole discretion.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-transfer-consent"
+          }
+        ]
+      },
+      {
+        "requirementId": "respect-statutory-distribution-limit",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.respect-statutory-distribution-limit",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Distribution language does not purport to override Delaware law",
+        "sectionId": "getting-money-back-out",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#respect-statutory-distribution-limit",
+        "requirementGuidance": "Check that no distribution provision purports to override Delaware's statutory limit. The statute applies whether or not the agreement recites it, so silence is not itself a defect; flag language that authorizes a distribution when, after giving it effect, the liabilities counted by section 17-607(a) would exceed the fair value of the partnership's assets.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "drulpa-17-607",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Delaware Revised Uniform Limited Partnership Act § 17-607(a), 6 Del. C. § 17-607(a)",
+            "citation": "6 Del. C. § 17-607(a).",
+            "url": "https://delcode.delaware.gov/title6/c017/sc06/index.html",
+            "proposition": "A Delaware limited partnership may not make a distribution to a partner if, after giving effect to it, the partnership's liabilities other than to partners on account of their interests and non-recourse liabilities would exceed the fair value of its assets.",
+            "verbatimQuote": "A limited partnership shall not make a distribution to a partner to the extent that at the time of the distribution, after giving effect to the distribution, all liabilities of the limited partnership, other than liabilities to partners on account of their partnership interests and liabilities for which the recourse of creditors is limited to specified property of the limited partnership, exceed the fair value of the assets of the limited partnership",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-drulpa-17-607"
+          }
+        ]
+      },
+      {
+        "requirementId": "maintain-capital-account-per-investor",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.maintain-capital-account-per-investor",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "A separate capital account maintained for each investor",
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#maintain-capital-account-per-investor",
+        "requirementGuidance": "Confirm the agreement requires a separate capital account per partner and says what is credited to it (added to the partner's balance) and what is debited from it (subtracted from the balance): contributions and allocated gains are credited, and withdrawals, fees, the profit share, and allocated losses are debited. Check that the maintenance rule is tied to the partnership tax capital-accounting rules where the fund intends the allocations to be respected for tax, for example by maintaining accounts in accordance with the capital accounting rules set forth in Treasury Regulations Section 1.704-1(b)(2)(iv).",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "lion-fund-capital-account-rules",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 1.09",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 1.09 (dated May 26, 2021), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=%E2%80%9CCapital%20Account%E2%80%9D%20means%20the%20account,in%20Treasury%20Regulations%20Section%201.704%2D1(b)(2)(iv).",
+            "proposition": "The Lion Fund II maintains partner capital accounts under the capital-accounting rules of Treasury Regulations section 1.704-1(b)(2)(iv).",
+            "verbatimQuote": "“Capital Account” means the account established for each Partner, which shall be established and maintained in accordance with the capital accounting rules set forth in Treasury Regulations Section 1.704-1(b)(2)(iv).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-capital-account-rules"
+          }
+        ]
+      },
+      {
+        "requirementId": "confirm-no-further-capital-calls",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.confirm-no-further-capital-calls",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Investors cannot be compelled to contribute more",
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#confirm-no-further-capital-calls",
+        "requirementGuidance": "Confirm the agreement states that an investor is not obligated to contribute beyond its subscription. This is the fork between a fully-funded trading fund and a closed-end fund that draws capital down against a binding commitment, and it should be unambiguous on the face of the agreement, because the two structures differ in almost every other respect: liquidity, the shape of the profit share, and how expenses are borne. Where additional contributions are permitted but not required, check who decides and as of what dates they are accepted.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "admission-of-new-investors",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.admission-of-new-investors",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "The dates on which new investors may join",
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#admission-of-new-investors",
+        "requirementGuidance": "Check the dates as of which the manager may admit new investors and take additional money from existing ones, and confirm a person admitted is bound by the agreement without every existing investor having to sign again. Delaware's default is unanimity (after formation a person who is not an assignee is admitted at the time provided in and upon compliance with the partnership agreement or, if the partnership agreement does not so provide, upon the consent of all partners) which a fund taking monthly subscriptions cannot run on. Limited partnership agreements filed with the SEC include admission in the general partner's sole discretion, without advance notice to or consent of the existing limited partners, and admission only with their prior unanimous written consent, which fits a fund whose investors are a single corporate group rather than a market of subscribers. Confirm the admission date lines up with the date capital is valued and allocations begin, so a mid-period subscriber neither shares in gains it did not fund nor funds gains it does not share.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "drulpa-17-301-b",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Delaware Revised Uniform Limited Partnership Act § 17-301(b)(1), 6 Del. C. § 17-301(b)(1)",
+            "citation": "6 Del. C. § 17-301(b)(1).",
+            "url": "https://delcode.delaware.gov/title6/c017/sc03/index.html",
+            "proposition": "After a Delaware limited partnership is formed, a person who is not an assignee becomes a limited partner at the time the partnership agreement provides, or (if the partnership agreement does not provide for it) only upon the consent of all partners.",
+            "verbatimQuote": "After the formation of a limited partnership, a person is admitted as a limited partner of the limited partnership: (1) In the case of a person who is not an assignee of a partnership interest, including a person acquiring a partnership interest directly from the limited partnership and a person to be admitted as a limited partner of the limited partnership without acquiring a partnership interest in the limited partnership, at the time provided in and upon compliance with the partnership agreement or, if the partnership agreement does not so provide, upon the consent of all partners or as otherwise provided in the partnership agreement;",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-drulpa-17-301-b"
+          },
+          {
+            "sourceId": "stilwell-admission-discretion",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 3.1(a)",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 3.1(a) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=The%20General%20Partner%20may%2C%20on,(iv)%20of%20Section%206.1(c)%20herein.",
+            "proposition": "Stilwell Value Partners I lets the general partner admit limited partners on the closing date and at such other times as it determines in its sole discretion, without advance notice to or consent of the existing limited partners.",
+            "verbatimQuote": "The General Partner may, on the Closing Date and at such other times as the General Partner may determine in its sole discretion, and without advance notice to or consent of the Limited Partners, admit as a Limited Partner any Person who shall execute a counterpart of this Agreement or otherwise agree in writing to be bound hereby unless the investment by such Person in the Partnership would have any of the effects described in clauses (i) through (iv) of Section 6.1(c) herein.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-admission-discretion"
+          },
+          {
+            "sourceId": "solasglas-admission-unanimous-consent",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.1(a)(i)",
+            "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.1(a)(i) (dated May 1, 2026), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm#:~:text=The%20General%20Partner%20may%2C%20with,(vi)%20of%20Section%205.3(c)%20herein.",
+            "proposition": "Solasglas lets the general partner admit a limited partner as of the first day of any calendar month, or at such other times as it determines, only with the prior unanimous written consent of the existing limited partners.",
+            "verbatimQuote": "The General Partner may, with the prior unanimous written consent of the Limited Partners, as of the first day of any calendar month, or at such other times as the General Partner may determine, admit as a Limited Partner any Person who executes this Agreement or any other writing evidencing the intent of such Person to become a Limited Partner, unless the investment by such Limited Partner in the Partnership would have any of the effects described in clauses (i) through (vi) of Section 5.3(c) herein.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-solasglas-admission-unanimous-consent"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-manager-investment",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.disclose-manager-investment",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "The manager's own money in the fund",
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "itemNumber": "3.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#disclose-manager-investment",
+        "requirementGuidance": "Check whether the agreement puts any of the manager's own capital into the fund, and whether it can be taken out again. Limited partnership agreements filed with the SEC include a stated minimum the general partner must keep in the fund and no requirement at all. Where a floor exists, confirm whether it is a covenant or merely a notice trigger, and whether the manager's interest is subject to the same lock-up and notice terms as everyone else's.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-allocation-periods",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.define-allocation-periods",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Accounting period defined for pushing gains into accounts",
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "itemNumber": "3.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#define-allocation-periods",
+        "requirementGuidance": "Confirm the agreement defines the period at the end of which profit and loss are allocated across the capital accounts, and that the period closes on every event that changes the relative sizes of those accounts: a contribution, a withdrawal, and any regular valuation date such as month end. Without an interim close, an investor who joins mid-period shares in gains it was not exposed to. Check that the allocation is made in proportion to opening balances and that the defined term used here is the same one the fee and profit-share clauses rely on.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "separate-tax-allocations",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.separate-tax-allocations",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Tax allocations handled separately from book allocations",
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "itemNumber": "3.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#separate-tax-allocations",
+        "requirementGuidance": "Confirm the agreement allocates tax items on their own rules rather than assuming they follow the book allocation. Look for language tying the allocations to the substantial-economic-effect regulations and for a built-in-gain provision addressing property contributed in kind. Confirm the agreement names whoever will act for the fund in a tax proceeding (filings before the current regime say tax matters partner, later ones say partnership representative) and check that the term used matches the years the fund will actually be filing for.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "carve-out-new-issues",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.carve-out-new-issues",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Separate allocation of new-issue profits",
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "itemNumber": "3.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#carve-out-new-issues",
+        "requirementGuidance": "Where the fund may buy IPO shares, check for a separate allocation mechanic for new issues, meaning shares bought in an initial public offering, so that investors who are restricted persons are excluded from those profits. The FINRA rule works on the broker-dealer side (a member may not sell, or cause to be sold, a new issue to any account in which a restricted person has a beneficial interest) so the fund's own compliance runs through this allocation clause and the investor questionnaire behind it. Confirm the mechanic uses a dedicated sub-account rather than an after-the-fact adjustment, and that the agreement lets the manager collect and re-verify restricted-person status.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "finra-rule-5130",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "FINRA Rule 5130(a)(1) (Restrictions on the Purchase and Sale of Initial Equity Public Offerings)",
+            "citation": "FINRA Rule 5130(a)(1).",
+            "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/5130",
+            "proposition": "A FINRA member may not sell a new issue to any account in which a restricted person has a beneficial interest, except as the rule otherwise permits.",
+            "verbatimQuote": "A member or a person associated with a member may not sell, or cause to be sold, a new issue to any account in which a restricted person has a beneficial interest, except as otherwise permitted herein.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-finra-rule-5130"
+          },
+          {
+            "sourceId": "lion-fund-new-issues",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.06 (New Issues)",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.06 (dated May 26, 2021), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=In%20the%20event%20that%20the,permitted%20under%20the%20FINRA%20Rules.",
+            "proposition": "The Lion Fund II authorizes the general partner to allocate new-issue profits and losses among the partners in a manner permitted by the FINRA rules.",
+            "verbatimQuote": "In the event that the Fund invests in securities that are considered to be \"New Issues\", as that term is defined in the Rules of the Financial Industry Regulatory Authority, Inc., as may be amended from time to time (the \"FINRA Rules\"), the General Partner shall be permitted to take all such actions as it deems are necessary to ensure that the profits and losses from New Issues are allocated among the Partners in a manner permitted under the FINRA Rules.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-new-issues"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-illiquid-holdings-bucket",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.address-illiquid-holdings-bucket",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Separate accounting for illiquid or hard-to-value holdings",
+        "sectionId": "capital-accounts-and-how-gains-are-split",
+        "itemNumber": "3.8",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#address-illiquid-holdings-bucket",
+        "requirementGuidance": "Check whether the manager may designate particular illiquid or hard-to-value holdings and account for them in a segregated sub-account, so that they are valued, charged, and paid out on their own timetable. Some filed agreements provide for this, whether as a sub-account for assets the general partner designates or as an amendment power to create segregated accounts for restricted securities. Where the mechanic exists, check what may be designated, whether an investor can be moved into it after subscribing, whether the profit share is charged on unrealized gains, and how a withdrawal is handled while a designation is outstanding. Also test a write-down larger than that investor's remaining Capital Account: who bears the excess, how much positive manager capital is available, whether anyone must restore a deficit, and who receives later recovery gains? Limited partnership agreements filed with the SEC include a rule that allocates the excess to the general partner's capital account and lets later gains recapture it for the general partner.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "solasglas-designated-securities",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 3.5(b)",
+            "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 3.5(b) (dated May 1, 2026), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm#:~:text=Whenever%20the%20Partnership%20makes%20an,transactions%20involving%20such%20Designated%20Security.",
+            "proposition": "Solasglas requires a separate sub-account for each participating partner whenever the partnership holds an asset the general partner has designated a Designated Security.",
+            "verbatimQuote": "Whenever the Partnership makes an investment that is in a Designated Security or whenever an existing investment is first designated as a Designated Security by the General Partner, the Partnership shall establish a Sub-Account with respect to each Partner that participates in such Designated Security to reflect such Partner’s Capital Account’s pro rata share of all allocations and distributions attributable to transactions involving such Designated Security.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-solasglas-designated-securities"
+          },
+          {
+            "sourceId": "lion-fund-segregated-accounts",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 14.07 (Amendments)",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 14.07 (dated May 26, 2021), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=Notwithstanding%20any%20provision%20herein%20to,the%20intent%20of%20this%20Agreement.",
+            "proposition": "The Lion Fund II lets the general partner amend the agreement without limited-partner consent to create segregated accounts to hold restricted securities.",
+            "verbatimQuote": "Notwithstanding any provision herein to the contrary, this Agreement may be amended by the General Partner without the consent of any Limited Partners to: (i) to create segregated accounts to hold Restricted Securities (along with any related changes necessary to create such segregated accounts and ensure the equitable treatment of all Partners), (ii) add to the representations, duties, or obligations of the General Partner; (iii) cure any ambiguity; or (iv) correct or supplement any provision of this Agreement which may be inconsistent with any other provision hereof or add any provisions with respect to matters or questions arising out of this Agreement not inconsistent with the intent of this Agreement.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-segregated-accounts"
+          },
+          {
+            "sourceId": "stilwell-deficit-to-general-partner",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 4.4",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 4.4 (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=To%20the%20extent%20that%20any,Section%204.4%20not%20previously%20recovered.",
+            "proposition": "The filed Stilwell agreement allocates to the general partner any debit that would reduce a limited partner's capital account below zero and gives the general partner later credits until those debits are recovered.",
+            "verbatimQuote": "To the extent that any debits to the Capital Account of any Limited Partner pursuant to any provision of this Article IV would reduce the balance of the Capital Account of any Limited Partner below zero, that portion of any such debit shall instead be allocated to the Capital Account of the General Partner. Any credits in any subsequent Fiscal Period which would otherwise be allocable pursuant to this Article IV to the Capital Account of any Limited Partner previously affected by the application of this Section 4.4 shall instead be allocated to the Capital Account of the General Partner in such amounts as are necessary to offset all previous debits attributable to such Limited Partner pursuant to this Section 4.4 not previously recovered.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-deficit-to-general-partner"
+          }
+        ]
+      },
+      {
+        "requirementId": "enumerate-manager-authority",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.enumerate-manager-authority",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager's management and investment authority",
+        "sectionId": "what-the-manager-may-do",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#enumerate-manager-authority",
+        "requirementGuidance": "Confirm the agreement vests management and investment authority in the manager and enumerates the powers being granted: trading, borrowing, short selling, retaining brokers and administrators, settling claims, and organizing subsidiaries or trading vehicles. Read the list as a grant rather than a limit: what is not listed may be swept up by a catch-all. Where the fund invests through master funds, aggregators, or special-purpose vehicles, confirm the authority reaches those structures, since fees and the profit share may be charged at that level too.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-investor-no-management-role",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.state-investor-no-management-role",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Authority allocated and investor governance rights flagged",
+        "sectionId": "what-the-manager-may-do",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#state-investor-no-management-role",
+        "requirementGuidance": "Confirm the agreement identifies the allocation of authority between the general partner and limited partners, and flag investor consent, committee, or advisory rights for jurisdiction-specific review. Do not treat a recital that limited partners do not manage the business as independently preserving limited liability; statutory status and actual conduct remain relevant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "drulpa-17-303",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Delaware Revised Uniform Limited Partnership Act § 17-303(a), 6 Del. C. § 17-303(a)",
+            "citation": "6 Del. C. § 17-303(a).",
+            "url": "https://delcode.delaware.gov/title6/c017/sc03/index.html",
+            "proposition": "A Delaware limited partner is not liable for the partnership's obligations unless it is also a general partner or participates in the control of the business.",
+            "verbatimQuote": "A limited partner is not liable for the obligations of a limited partnership unless he or she is also a general partner or, in addition to the exercise of the rights and powers of a limited partner, he or she participates in the control of the business.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-drulpa-17-303"
+          }
+        ]
+      },
+      {
+        "requirementId": "read-the-standard-of-care-carveouts",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.read-the-standard-of-care-carveouts",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "The conduct carved out of the manager's protection",
+        "sectionId": "what-the-manager-may-do",
+        "itemNumber": "4.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#read-the-standard-of-care-carveouts",
+        "requirementGuidance": "Read the exculpation carve-out word by word and count what is in it, because each word is a route to recovery that would otherwise be closed. Filed carve-outs include gross negligence, willful misconduct, and bad faith alone; the longer fraud, bad faith, willful misconduct, gross negligence, a willful and material breach of this Agreement; and the Investment Company Act formulation of willful misfeasance, bad faith, gross negligence, or reckless disregard. Delaware permits a partnership agreement to limit or eliminate liability for breach of duty, so a short list is enforceable, not a drafting slip, which is exactly why it needs reading rather than skimming.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "carlyle-disabling-conduct",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), § 4.2(a) (Exculpation)",
+            "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement § 4.2(a) (dated Oct. 1, 2025), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm#:~:text=Except%20as%20otherwise%20provided%20in,such%20capacity%20with%20gross%20negligence.",
+            "proposition": "Carlyle's exculpation carve-out, defined as Disabling Conduct, covers fraud, bad faith, willful misconduct, gross negligence, and a willful and material breach of the agreement.",
+            "verbatimQuote": "Except as otherwise provided in the Act, the General Partner shall be subject to all of the liabilities of a partner in a partnership without limited partners to (i) Persons other than the Fund and the Shareholders and (ii) subject to the other provisions of this Agreement, the Fund and the Shareholders; provided that to the fullest extent permitted by law, none of the General Partner, the Investment Advisor, their Affiliates (but excluding any Parallel Fund), members, shareholders, stockholders, unitholders or partners (in each case in their respective capacities as such), officers, directors, employees, Carlyle Operating Executives, advisors, the Directors, the Partnership Representative, the Designated Individual and any other Person who serves at the request of the General Partner on behalf of the Fund as an officer, director, partner, member, senior advisor, operating executive, similar consultant or employee of or advisor to any other entity (each, an “Indemnified Party”), shall be liable to the Fund or to any Shareholder for (i) any act performed or omission made by such Indemnified Party in connection with the conduct of the business and affairs of the Fund or otherwise in connection with this Agreement or the matters contemplated herein, unless such act or omission resulted from “Disabling Conduct,” which shall mean fraud, bad faith, willful misconduct, gross negligence, a willful and material breach of this Agreement or the Advisory Agreement by such Indemnified Party or (ii) any mistake, negligence, dishonesty or bad faith of any broker or other agent of the Fund unless such Indemnified Party was responsible for the selection or monitoring of such broker or agent and acted in such capacity with gross negligence.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-carlyle-disabling-conduct"
+          },
+          {
+            "sourceId": "drulpa-17-1101-f",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Delaware Revised Uniform Limited Partnership Act § 17-1101(f), 6 Del. C. § 17-1101(f)",
+            "citation": "6 Del. C. § 17-1101(f).",
+            "url": "https://delcode.delaware.gov/title6/c017/sc11/index.html",
+            "proposition": "A Delaware partnership agreement may limit or eliminate liability for breach of contract and breach of duties, except for a bad-faith violation of the implied contractual covenant of good faith and fair dealing.",
+            "verbatimQuote": "A partnership agreement may provide for the limitation or elimination of any and all liabilities for breach of contract and breach of duties (including fiduciary duties) of a partner or other person to a limited partnership or to another partner or to an other person that is a party to or is otherwise bound by a partnership agreement; provided, that a partnership agreement may not limit or eliminate liability for any act or omission that constitutes a bad faith violation of the implied contractual covenant of good faith and fair dealing.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-drulpa-17-1101-f"
+          }
+        ]
+      },
+      {
+        "requirementId": "check-fiduciary-duty-modification",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.check-fiduciary-duty-modification",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "Whether fiduciary duties are restricted or eliminated",
+        "sectionId": "what-the-manager-may-do",
+        "itemNumber": "4.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#check-fiduciary-duty-modification",
+        "requirementGuidance": "Look for language expanding, restricting, or eliminating the duties the manager would otherwise owe, and for a standard such as sole discretion attached to decisions that affect investors' economics. Delaware provides that duties may be expanded or restricted or eliminated by provisions in the partnership agreement, subject to one floor: the implied contractual covenant of good faith and fair dealing cannot be eliminated. Confirm the agreement does not purport to waive that covenant, and treat any broad duty-elimination clause as a point to raise with counsel rather than boilerplate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "drulpa-17-1101-d",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Delaware Revised Uniform Limited Partnership Act § 17-1101(d), 6 Del. C. § 17-1101(d)",
+            "citation": "6 Del. C. § 17-1101(d).",
+            "url": "https://delcode.delaware.gov/title6/c017/sc11/index.html",
+            "proposition": "A Delaware partnership agreement may expand, restrict, or eliminate a partner's duties, including fiduciary duties, but may not eliminate the implied contractual covenant of good faith and fair dealing.",
+            "verbatimQuote": "To the extent that, at law or in equity, a partner or other person has duties (including fiduciary duties) to a limited partnership or to another partner or to another person that is a party to or is otherwise bound by a partnership agreement, the partner’s or other person’s duties may be expanded or restricted or eliminated by provisions in the partnership agreement; provided that the partnership agreement may not eliminate the implied contractual covenant of good faith and fair dealing.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-drulpa-17-1101-d"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-indemnity-and-advancement",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.review-indemnity-and-advancement",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Indemnity of the manager and advancement of expenses",
+        "sectionId": "what-the-manager-may-do",
+        "itemNumber": "4.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#review-indemnity-and-advancement",
+        "requirementGuidance": "Confirm the fund's indemnity of the manager, its affiliates, and their personnel carries the same conduct categories as the liability clause. A final-merits condition on the indemnity exception can still make indemnification broader than exculpation: a settlement without a merits decision may leave fund assets paying a claim alleging those categories. Check whether legal costs are advanced as they are incurred and, if so, whether the recipient must undertake to repay them if the carve-out is later established. Check too whether the indemnity is payable only out of fund assets rather than by the investors personally.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-other-funds-and-conflicts",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.disclose-other-funds-and-conflicts",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager free to run other funds and trade for its own account",
+        "sectionId": "what-the-manager-may-do",
+        "itemNumber": "4.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#disclose-other-funds-and-conflicts",
+        "requirementGuidance": "Confirm the agreement says plainly that the manager need not devote its full time to this fund and may manage other accounts, including competing ones, without accounting to the fund for the results. This is not the problem in itself; the problem is a fund whose offering materials imply exclusivity the agreement does not require. Where the manager runs parallel vehicles, check for an allocation-of-opportunities provision and for how principal and cross transactions between affiliated funds are authorized.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "authorize-side-letters",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.authorize-side-letters",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Authority to give individual investors different terms",
+        "sectionId": "what-the-manager-may-do",
+        "itemNumber": "4.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#authorize-side-letters",
+        "requirementGuidance": "Check whether the agreement expressly authorizes separate written agreements with individual investors that modify its terms, since without that authority a side letter sits awkwardly against the agreement it contradicts. Some filed agreements authorize side letters expressly, whether defined as side letters or similar separate written agreements, the provisions of which may modify the terms of this Agreement or as agreements with certain limited partners altering or supplementing its terms. Where the power exists, note whether anything requires disclosure to other investors or a most-favoured-nation election.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "third-point-side-letters",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 1.52 (Other Agreements)",
+            "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 1.52 (dated July 31, 2018), filed as Exhibit 10.33.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm#:~:text=%E2%80%9COther%20Agreements%E2%80%9D%20shall%20mean%20side,special%20or%20more%20favorable%20rights.",
+            "proposition": "Third Point Enhanced expressly contemplates side letters that modify the terms of the partnership agreement and grant individual investors more favourable rights.",
+            "verbatimQuote": "“Other Agreements” shall mean side letters or similar separate written agreements, the provisions of which may modify the terms of this Agreement, including any agreement with a Limited Partner that provides for special or more favorable rights.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-third-point-side-letters"
+          },
+          {
+            "sourceId": "apollo-other-agreements",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Apollo IG Core Replacement, L.P., Second Amended and Restated Agreement of Limited Partnership (2026), § 11.02 (Other Agreements)",
+            "citation": "Apollo IG Core Replacement, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 11.02 (dated June 30, 2026), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm#:~:text=Notwithstanding%20anything%20to%20the%20contrary%20in%20this%20Agreement%2C%20or,which%20such%20Interests%20are%20offered.",
+            "proposition": "Apollo IG Core Replacement lets the general partner, without the consent of any limited partner, enter into agreements with certain limited partners that establish, alter, or supplement their rights under the partnership agreement.",
+            "verbatimQuote": "Notwithstanding anything to the contrary in this Agreement, or of any Subscription Agreement, the Partners hereto acknowledge and agree that the General Partner on its own behalf or on behalf of the Partnership, in its sole discretion and without prior notice to or further act, approval or consent of any Limited Partner, may enter into agreements (“Other Agreements”) with certain Limited Partners that have the effect of establishing rights under, or altering or supplementing the terms of, this Agreement or of any Subscription Agreement with respect to such Limited Partner, including with respect to the Management Fee, withdrawal rights, information rights, voting rights or other rights or the currency in respect of which such Interests are offered.",
+            "pullQuoteLocator": "Notwithstanding anything to the contrary in this Agreement, or|which such Interests are offered.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-apollo-other-agreements"
+          }
+        ]
+      },
+      {
+        "requirementId": "enumerate-fund-borne-expenses",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.enumerate-fund-borne-expenses",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Expenses the fund bears, enumerated",
+        "sectionId": "costs-reports-and-valuation",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#enumerate-fund-borne-expenses",
+        "requirementGuidance": "Confirm the agreement lists the costs charged to the fund: brokerage and trading costs, legal, audit, administration, custody, research, insurance, regulatory filings, and taxes. Read the length of the list as the substance: a short list with a broad catch-all shifts more to investors than a long enumerated one, because the catch-all is what a disputed charge will be argued under. Check specifically for research and data costs, insurance premiums covering the manager, and the costs of organizing subsidiaries or trading vehicles.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "assign-manager-overhead",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.assign-manager-overhead",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager's own overhead kept off the fund",
+        "sectionId": "costs-reports-and-valuation",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#assign-manager-overhead",
+        "requirementGuidance": "Confirm the manager's office rent, personnel costs, and general overhead sit with the manager rather than the fund, so the management fee is what pays for them. This is the boundary where expense disputes actually arise, and limited partnership agreements filed with the SEC include putting organizational expenses and all costs other than legal, audit, accounting, reporting, and trading costs on the general partner, and paying the general partner up to one percent per annum of fund capital expressly to cover overhead. Where overhead is reimbursed rather than absorbed, treat that as part of the fee stack and read it with the fee items.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-expense-cap",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.address-expense-cap",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Ceiling on total expenses charged to the fund",
+        "sectionId": "costs-reports-and-valuation",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#address-expense-cap",
+        "requirementGuidance": "Check whether anything caps total fund expenses at a percentage of net assets and requires the manager to absorb or reimburse the excess. Where filed agreements cap expenses, the levels differ by structure: filed caps include specified expenses held to 0.60% for a first twelve months, total expenses held to 1.25% through fee waivers and reimbursement, and reimbursement of expenses above 1.75% of average net assets. Where a cap exists, read what it excludes: filed caps exclude items such as trading costs, taxes, indemnification, and underlying-fund fees, and the carve-outs can be larger than the cap.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "third-point-expense-cap",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 8.2",
+            "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 8.2 (dated July 31, 2018), filed as Exhibit 10.33.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm#:~:text=Notwithstanding%20anything%20herein%2C%20unless%20otherwise,such%20excess%20to%20the%20Partnership.",
+            "proposition": "Third Point Enhanced requires the investment manager to reimburse the partnership for operational expenses above 1.75% of average net assets for a fiscal year.",
+            "verbatimQuote": "Notwithstanding anything herein, unless otherwise approved in writing by the Board, to the extent the aggregate amount of the Expenses payable by the Partnership for any Fiscal Year (which, for purposes of this Section 8.2(b), Expenses shall exclude, (A) any Expenses incurred pursuant to Section 8.2(a)(vii) and Section 8.2(a)(xvii), (B) use of “soft dollars,” (C) any indemnification payments made pursuant to Section 6.5 and that may be covered under Section 8.2(a)(viii) and (D) the Management Fee) exceed the product of (x) 0.0175 and (y) the average Net Assets (calculated as the average Net Assets as of each calendar month end) for such Fiscal Year, then the Investment Manager shall reimburse the amount of such excess to the Partnership.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-third-point-expense-cap"
+          },
+          {
+            "sourceId": "endowment-master-expense-cap",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Endowment PMF Master Fund, L.P., Amended and Restated Agreement of Limited Partnership (2014), § 3.11(b)",
+            "citation": "The Endowment PMF Master Fund, L.P., Am. & Restated Agreement of Ltd. P'ship § 3.11(b) (dated Feb. 18, 2014), filed as Exhibit 99.A.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1597218/000119312514060638/d667770dex99a1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1597218/000119312514060638/d667770dex99a1.htm#:~:text=The%20Partnership%20shall%20not%20enter,the%20Partnership%E2%80%99s%20business%20(%E2%80%9CExcluded%20Expenses%E2%80%9D).",
+            "proposition": "The Endowment PMF Master Fund's adviser must waive its management fee and reimburse expenses to hold total partnership expenses to 1.25% of net assets each fiscal year, subject to stated exclusions.",
+            "verbatimQuote": "The Partnership shall not enter into an Investment Advisory Agreement with any Adviser unless such Adviser, pursuant to such Investment Advisory Agreement or otherwise, agrees to waive and/or reimburse the Partnership for its Management Fee and, to the extent necessary, reimburse the Master Fund for expenses incurred, solely to the extent necessary to limit the total expenses of the Partnership in each Fiscal Year to an amount equal to 1.25% of the Partnership’s Net Assets, excluding fees and expenses directly charged by underlying investment funds and underlying investment fund managers, borrowing and other trading and execution costs and fees, taxes, litigation and indemnification expenses, judgments and other extraordinary expenses not incurred in the ordinary course of the Partnership’s business (“Excluded Expenses”).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-endowment-master-expense-cap"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-annual-audit",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.require-annual-audit",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Audit promise, standard, auditor, deadline, and liquidation treatment stated",
+        "sectionId": "costs-reports-and-valuation",
+        "itemNumber": "5.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#require-annual-audit",
+        "requirementGuidance": "Confirm the agreement states whether an annual audit is promised, the accounting standard, the auditor qualification, the delivery deadline, and the treatment on liquidation. An annual audit is strong practice but is not universal merely because an adviser has custody; the separate conditional Rule 206(4)-2 item applies if the adviser relies on the pooled-vehicle audit route.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "satisfy-custody-rule-pooled-vehicle-audit-route",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.satisfy-custody-rule-pooled-vehicle-audit-route",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rule 206(4)-2 pooled-vehicle audit route satisfied when relied on",
+        "sectionId": "costs-reports-and-valuation",
+        "itemNumber": "5.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#satisfy-custody-rule-pooled-vehicle-audit-route",
+        "requirementGuidance": "If the adviser is registered or required to be registered with the Commission and relies on the pooled-vehicle audit route, confirm the agreement requires annual GAAP audits, delivery to all investors within 120 days after fiscal year end, an independent public accountant registered with and subject to regular PCAOB inspection, and a liquidation audit distributed promptly after completion.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "advisers-act-custody-pooled-vehicle-audit",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.206(4)-2(b)(4): Limited partnerships subject to annual audit",
+            "citation": "17 C.F.R. § 275.206(4)-2(b)(4)(i)–(iii).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206(4)-2",
+            "proposition": "For a pooled investment vehicle using the rule 206(4)-2(b)(4) audit route, the audit conditions are annual GAAP audited statements distributed to all limited partners within 120 days of fiscal year end, an independent accountant registered with and subject to regular inspection by the PCAOB, and prompt distribution of a liquidation audit.",
+            "verbatimQuote": "You are not required to comply with paragraphs (a)(2) and (a)(3) of this section and you shall be deemed to have complied with paragraph (a)(4) of this section with respect to the account of a limited partnership (or limited liability company, or another type of pooled investment vehicle) that is subject to audit (as defined in rule 1-02(d) of Regulation S-X (17 CFR 210.1-02(d))): (i) At least annually and distributes its audited financial statements prepared in accordance with generally accepted accounting principles to all limited partners (or members or other beneficial owners) within 120 days of the end of its fiscal year; (ii) By an independent public accountant that is registered with, and subject to regular inspection as of the commencement of the professional engagement period, and as of each calendar year-end, by, the Public Company Accounting Oversight Board in accordance with its rules; and (iii) Upon liquidation and distributes its audited financial statements prepared in accordance with generally accepted accounting principles to all limited partners (or members or other beneficial owners) promptly after the completion of such audit.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-advisers-act-custody-pooled-vehicle-audit"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-tax-information",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.require-tax-information",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Annual tax information for investors",
+        "sectionId": "costs-reports-and-valuation",
+        "itemNumber": "5.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#require-tax-information",
+        "requirementGuidance": "Confirm the fund must furnish each investor the information it needs to file its own returns for the year. Check whether the agreement commits to a date or only to reasonable promptness: a fund that regularly delivers after the individual filing deadline forces every investor into an extension, and the agreement is where that expectation should be set. Where investors include tax-exempt or non-US persons, confirm the agreement addresses the additional reporting they will need.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "review-valuation-authority",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.review-valuation-authority",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Who values the portfolio, and on what standard",
+        "sectionId": "costs-reports-and-valuation",
+        "itemNumber": "5.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#review-valuation-authority",
+        "requirementGuidance": "Confirm the agreement says who values the fund's assets and against what standard: market prices where available, fair value determined in good faith otherwise, and any named valuation policy incorporated by reference. Every other number in the agreement is calculated off this one: the management fee, the profit share, and the amount a withdrawing investor receives. Check whether the manager's determination is conclusive on investors, whether hard-to-value positions get an independent check, and whether the agreement permits different values for the audited statements and for internal purposes.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "check-information-rights-and-confidentiality",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.check-information-rights-and-confidentiality",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality obligations and the right to withhold information",
+        "sectionId": "costs-reports-and-valuation",
+        "itemNumber": "5.8",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#check-information-rights-and-confidentiality",
+        "requirementGuidance": "Read the confidentiality article from both directions. One half restricts what an investor may do with information about the fund's positions and its other investors; the other half lets the manager withhold information it considers proprietary, which narrows the books-and-records right an investor would otherwise have. Check whether the manager's withholding right is bounded by a category such as trade secrets or is at large, and whether the confidentiality obligation carves out disclosures compelled by law or by a regulator.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-amendment-threshold",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.state-amendment-threshold",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Investor consent required to amend the agreement",
+        "sectionId": "changing-the-deal-and-winding-down",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#state-amendment-threshold",
+        "requirementGuidance": "Confirm the agreement states what consent an amendment requires. Filed consent thresholds include the general partner plus partners holding at least half the capital-account value, fifty-one percent of interests, more than half of the affected accounts, and the consent of all partners. Check whether an investor whose own economics are singled out has a separate protection; some filed agreements bar an amendment to a partner's allocations without that partner's consent.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "seidman-amendment-threshold",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 26",
+            "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 26 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt#:~:text=This%20Agreement%20may%20be%20amended%2C,not%20consented%20to%20such%20amendment.",
+            "proposition": "Seidman requires the general partner plus partners holding at least 50% of total capital-account value to amend the agreement.",
+            "verbatimQuote": "This Agreement may be amended, in whole or in part, by the written consent of (a) the General Partner, and (b) Partners the value of whose Capital Account constitute not less than fifty percent (50%) of the total value of all Capital Accounts of the Partnership, provided that no such amendment shall affect the allocation of Net Profit or Net Loss to any Partner who has not consented to such amendment.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-seidman-amendment-threshold"
+          },
+          {
+            "sourceId": "lion-fund-economic-amendment-consent",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 14.07 (Amendments)",
+            "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 14.07 (dated May 26, 2021), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm#:~:text=No%20amendment%20or%20modification%20which,duly%20executed%20by%20all%20Partners.",
+            "proposition": "The Lion Fund II makes an amendment that affects, other than in a de minimis way, a limited partner's interest in capital, profit or loss, or distributions or allocations effective only if executed by all partners.",
+            "verbatimQuote": "No amendment or modification which affects, other than in a de minims way, the interest of any Limited Partner in the capital, profit or loss of, or distributions or allocations with respect to, the Fund shall be effective as to any Limited Partner unless such amendment or modification is set forth in a document duly executed by all Partners.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-lion-fund-economic-amendment-consent"
+          }
+        ]
+      },
+      {
+        "requirementId": "bound-unilateral-amendment-power",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.bound-unilateral-amendment-power",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager's power to amend without investor consent",
+        "sectionId": "changing-the-deal-and-winding-down",
+        "itemNumber": "6.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#bound-unilateral-amendment-power",
+        "requirementGuidance": "Read the manager's unilateral amendment power and check what bounds it. A limit to changes that are not adverse, or not materially adverse, can sit beside a list of housekeeping categories (curing ambiguities, admitting partners, satisfying a tax or regulatory requirement) and beside separate routes that permit adverse changes. The power can be drafted broadly, permitting amendment without notification to, or the consent of the Limited Partners so long as it is not materially adverse. Note who decides whether a change is materially adverse; where the agreement leaves that to the manager, the limit is thinner than it reads. Limited partnership agreements filed with the SEC include a special power to amend tax-allocation provisions to comply with the regulations, and adverse changes conditioned on the consent of each affected partner, on independent-director approval with notice and redemption offers, or on a reasonable opportunity for an affected investor to withdraw first.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "stilwell-unilateral-amendment",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 9.1(a)",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 9.1(a) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=The%20Partnership%20Agreement%20may%20be,to%20the%20Limited%20Partners%E2%80%99%20interests.",
+            "proposition": "Stilwell permits the general partner to amend the agreement without notifying or obtaining the consent of the limited partners, so long as the amendment is not materially adverse to their interests.",
+            "verbatimQuote": "The Partnership Agreement may be amended by the General Partner in its sole discretion without notification to, or the consent of the Limited Partners, at any time and without any limitation, so long as such amendment is not materially adverse to the Limited Partners’ interests.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-unilateral-amendment"
+          },
+          {
+            "sourceId": "carlyle-tax-allocation-amendment",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), § 10.5",
+            "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement § 10.5 (dated Oct. 1, 2025), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm#:~:text=Sections%2010.2%20to%2010.5%20may,to%20provisions%20of%20this%20Agreement.",
+            "proposition": "Carlyle Private Equity Partners Fund lets the general partner amend its tax-allocation sections without shareholder consent where necessary to comply with the Treasury Regulations or to give economic effect to the agreement.",
+            "verbatimQuote": "Sections 10.2 to 10.5 may be amended at any time by the General Partner without the consent of any other Shareholder or any other Person, if necessary to comply with such regulations or to ensure that allocations hereunder give economic effect to provisions of this Agreement.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-carlyle-tax-allocation-amendment"
+          },
+          {
+            "sourceId": "stilwell-affected-partner-consent",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 9.1(b)",
+            "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 9.1(b) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm#:~:text=Notwithstanding%20subsection%20(a)%2C%20any%20amendment,adversely%20affected%20thereby%20is%20obtained.",
+            "proposition": "Stilwell Value Partners I requires the prior written consent of each adversely affected partner for amendments increasing contribution obligations, reducing capital accounts other than in accordance with § 3.4(d), or altering allocation, distribution, or withdrawal rights.",
+            "verbatimQuote": "Notwithstanding subsection (a), any amendment which would (i) increase the obligation of any Partner to make any Capital Contribution to the Partnership, (ii) reduce the Capital Account of any Partner other than in accordance with Section 3.4(d), or (iii) alter any Partner’s rights with respect to allocation of Net Profit or Net Loss or with respect to distributions and withdrawals may only be made if the prior written consent of each Partner adversely affected thereby is obtained.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-stilwell-affected-partner-consent"
+          },
+          {
+            "sourceId": "carlyle-independent-director-amendment",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), § 11.3(a)",
+            "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement § 11.3(a) (dated Oct. 1, 2025), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm#:~:text=The%20terms%20and%20provisions%20of,approval%20of%20the%20Independent%20Directors).",
+            "proposition": "Carlyle Private Equity Partners Fund permits amendment with the general partner's written consent, but an amendment the general partner views as materially adverse to shareholders in the aggregate requires independent-director approval and takes effect only after notice and at least two redemption offers.",
+            "verbatimQuote": "The terms and provisions of this Agreement may be modified, amended or waived at any time and from time to time with the written consent of the General Partner (including an amendment in the form of a merger, consolidation, conversion or similar transaction into a successor entity to the Fund); provided that any modification, amendment or waiver that is viewed by the General Partner in its sole discretion, as a whole together with all such modification, amendment or waiver, as having a material adverse effect on the Shareholders in the aggregate shall require the approval of the Independent Directors and will not take effect until the Shareholders have received notice of such modification, amendment or waiver (including through a 1934 Act report) and, following receipt of such notice, at least two (2) redemption offers of Units have taken place (it being understood by the parties hereto that an amendment to this Agreement made in accordance with Section 11.3(f) shall not be construed to have a material adverse effect on the Shareholders in the aggregate and shall not require the approval of the Independent Directors).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-carlyle-independent-director-amendment"
+          },
+          {
+            "sourceId": "apollo-adverse-amendment-withdrawal",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Apollo IG Core Replacement, L.P., Second Amended and Restated Agreement of Limited Partnership (2026), § 11.05(d)",
+            "citation": "Apollo IG Core Replacement, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 11.05(d) (dated June 30, 2026), filed as Exhibit 3.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm#:~:text=Notwithstanding%20anything%20to%20the%20contrary%20in%20this%20Section,effective%20date%20of%20such%20amendment.",
+            "proposition": "Apollo IG Core Replacement lets the general partner amend the agreement without limited-partner consent if each materially and adversely affected limited partner is given a reasonable opportunity to withdraw before the amendment takes effect.",
+            "verbatimQuote": "Notwithstanding anything to the contrary in this Section 11.05 (Amendments to Partnership Agreement), this Agreement may be amended by the General Partner without the consent of the Limited Partners, at any time and without limitation, if any Limited Partner that would be materially and adversely affected by such amendment is given a reasonable opportunity to withdraw from the Partnership prior to the effective date of such amendment.",
+            "pullQuoteLocator": "Notwithstanding anything to the contrary in this Section|effective date of such amendment.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-apollo-adverse-amendment-withdrawal"
+          }
+        ]
+      },
+      {
+        "requirementId": "list-dissolution-triggers",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.list-dissolution-triggers",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Events that dissolve the fund",
+        "sectionId": "changing-the-deal-and-winding-down",
+        "itemNumber": "6.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#list-dissolution-triggers",
+        "requirementGuidance": "Confirm the agreement lists what dissolves the fund rather than leaving it to the statutory defaults, such as the manager's election, its withdrawal, bankruptcy, or removal, expiry of any stated term, a judicial decree, and possibly a stated investor vote or a floor on net assets. Check whether the fund continues if the general partner ceases to serve, and if so on what mechanic, since a fund that dissolves automatically on that event has a materially different risk profile.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "set-liquidation-payment-order",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.set-liquidation-payment-order",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Order of payment on a wind-up, and who liquidates",
+        "sectionId": "changing-the-deal-and-winding-down",
+        "itemNumber": "6.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#set-liquidation-payment-order",
+        "requirementGuidance": "Confirm the agreement sets the order in which assets are applied on liquidation (creditors, then reserves for contingent liabilities, then amounts owed to partners otherwise than on account of capital, then the capital accounts) and names who acts as liquidator. Check how reserves are sized and when any unused reserve is released, and confirm the treatment of an accrued but uncrystallized profit share, which is otherwise a live question at exactly the moment nobody wants one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "name-the-governing-statute",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.name-the-governing-statute",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Delaware formation statute named",
+        "sectionId": "formation-and-general-terms",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#name-the-governing-statute",
+        "requirementGuidance": "Confirm the agreement names the Delaware Revised Uniform Limited Partnership Act as the statute under which the fund is formed. The statute supplies defaults the agreement does not displace, but omission of the recital does not itself change the entity's formation or make the economics unpriceable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "drulpa-17-1101-c",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Delaware Revised Uniform Limited Partnership Act § 17-1101(c), 6 Del. C. § 17-1101(c)",
+            "citation": "6 Del. C. § 17-1101(c).",
+            "url": "https://delcode.delaware.gov/title6/c017/sc11/index.html",
+            "proposition": "Delaware's limited partnership statute declares a policy of giving maximum effect to freedom of contract and to the enforceability of partnership agreements.",
+            "verbatimQuote": "It is the policy of this chapter to give maximum effect to the principle of freedom of contract and to the enforceability of partnership agreements.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-drulpa-17-1101-c"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Delaware governing law identified",
+        "sectionId": "formation-and-general-terms",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#identify-governing-law",
+        "requirementGuidance": "Confirm the agreement selects Delaware governing law and identify any article governed by another law. Treat a split choice as deliberate only after confirming it is not a drafting artifact of an incorporated annex.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-dispute-forum",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.identify-dispute-forum",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Where disputes are heard",
+        "sectionId": "formation-and-general-terms",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#identify-dispute-forum",
+        "requirementGuidance": "Check whether disputes go to court or to arbitration, and note which, because the two differ in cost, speed, appealability, and whether anything becomes public. Limited partnership agreements filed with the SEC include no forum clause, Delaware or New York courts, and an arbitration clause providing that disputes, including any claims of arbitrability, shall be finally settled by arbitration. Where arbitration is chosen, confirm the seat, the rules, the number of arbitrators, and whether the clause reaches claims against the manager as well as against the fund.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "endowment-master-arbitration",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "The Endowment PMF Master Fund, L.P., Amended and Restated Agreement of Limited Partnership (2014), § 8.5 (Arbitration)",
+            "citation": "The Endowment PMF Master Fund, L.P., Am. & Restated Agreement of Ltd. P'ship § 8.5 (dated Feb. 18, 2014), filed as Exhibit 99.A.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1597218/000119312514060638/d667770dex99a1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1597218/000119312514060638/d667770dex99a1.htm#:~:text=To%20the%20extent%20such%20action,be%20finally%20settled%20by%20arbitration.",
+            "proposition": "The Endowment PMF Master Fund sends every dispute arising out of or relating to the agreement or the partnership, including questions of arbitrability, to binding arbitration, to the extent such treatment is consistent with the Investment Company Act of 1940 and other applicable law.",
+            "verbatimQuote": "To the extent such action is consistent with the provisions of the 1940 Act and other applicable law, any dispute, controversy, or claim arising out of, relating to, or in connection with this Agreement, or the breach, termination, or validity thereof, or any dispute, controversy, or claim arising out of, relating to, or in connection with the Partnership, including any claims of arbitrability, shall be finally settled by arbitration.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-endowment-master-arbitration"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-power-of-attorney",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.review-power-of-attorney",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Power of attorney scoped when one is granted",
+        "sectionId": "formation-and-general-terms",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#review-power-of-attorney",
+        "requirementGuidance": "If the agreement grants the manager a power of attorney, confirm it states the scope and enumerates the authorized acts. Absence of a power is not itself a defect; where one exists, flag language that lets the manager sign amendments or other instruments beyond the authority otherwise granted by the agreement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-investor-eligibility-representations",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.require-investor-eligibility-representations",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Cross-document check: investor eligibility representations compared",
+        "sectionId": "formation-and-general-terms",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#require-investor-eligibility-representations",
+        "requirementGuidance": "Compare any investor-eligibility representations in the limited partnership agreement with the subscription agreement. Record the documents and versions compared, the reviewer, and the review date. This is a cross-document prompt carried here for now; the collection and verification of investor representations belong in a separate offering-compliance and closing checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ica-3c1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Investment Company Act of 1940 § 3(c)(1), 15 U.S.C. § 80a-3(c)(1)",
+            "citation": "15 U.S.C. § 80a-3(c)(1).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section80a-3&num=0&edition=prelim",
+            "proposition": "An issuer whose outstanding securities are beneficially owned by not more than one hundred persons and which is not making and does not presently propose to make a public offering is excepted from the definition of investment company.",
+            "verbatimQuote": "Any issuer whose outstanding securities (other than short-term paper) are beneficially owned by not more than one hundred persons (or, in the case of a qualifying venture capital fund, 250 persons) and which is not making and does not presently propose to make a public offering of its securities.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-ica-3c1"
+          }
+        ]
+      },
+      {
+        "requirementId": "confirm-execution-mechanics",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-limited-partnership-agreement.confirm-execution-mechanics",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Counterparts, notices, severability and entire agreement",
+        "sectionId": "formation-and-general-terms",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#confirm-execution-mechanics",
+        "requirementGuidance": "Confirm the closing mechanics are present and workable: execution in counterparts, so investors admitted at different closings are bound without a single signature page; a notices clause with a delivery method and a deemed-receipt rule; severability; and an entire-agreement clause. Check that the entire-agreement clause is reconciled with the side-letter authority: an unqualified merger clause and an express side-letter power in the same document is a conflict worth resolving before signature rather than after.",
+        "variants": [],
+        "sources": []
+      }
+    ]
+  }
+}

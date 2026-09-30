@@ -1,0 +1,1098 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "external": true,
+      "title": "CC BY 4.0"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "fund-formation",
+    "slug": "hedge-fund-private-placement-memorandum",
+    "frontmatter": {
+      "title": "Hedge Fund Private Placement Memorandum Reviewer Checklist",
+      "description": "A section-by-section reviewer checklist for a hedge fund private placement memorandum, a hedge fund here meaning an open-end private investment fund organized as a Delaware limited partnership and relying on Section 3(c)(1): the summary of principal terms, what the investor actually pays, how and when money comes back, the offering exemption and investor-eligibility gates, strategy and risk disclosure, conflicts of interest, valuation and reporting, and the tax, ERISA, and anti-money-laundering disclosures.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "U.S. hedge fund private placement memorandum for a fully funded, open-end fund — not a closed-end drawdown fund such as a private equity fund",
+      "lastReviewed": "2026-09-02",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 54,
+    "sections": [
+      {
+        "sectionId": "the-summary-of-principal-terms",
+        "label": "The summary of principal terms"
+      },
+      {
+        "sectionId": "what-the-investor-actually-pays",
+        "label": "What the investor actually pays"
+      },
+      {
+        "sectionId": "how-and-when-money-comes-back",
+        "label": "How and when money comes back"
+      },
+      {
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "label": "Who may invest, and under what exemption"
+      },
+      {
+        "sectionId": "the-strategy-and-its-risks",
+        "label": "The strategy and its risks"
+      },
+      {
+        "sectionId": "conflicts-of-interest",
+        "label": "Conflicts of interest"
+      },
+      {
+        "sectionId": "valuation-reporting-and-service-providers",
+        "label": "Valuation, reporting, and service providers"
+      },
+      {
+        "sectionId": "tax-erisa-and-anti-money-laundering",
+        "label": "Tax, ERISA, and anti-money-laundering"
+      },
+      {
+        "sectionId": "legends-and-subscription-mechanics",
+        "label": "Legends and subscription mechanics",
+        "boilerplate": true
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "include-a-summary-of-principal-terms",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.include-a-summary-of-principal-terms",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "A summary of principal terms leads the document",
+        "sectionId": "the-summary-of-principal-terms",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#include-a-summary-of-principal-terms",
+        "requirementGuidance": "Confirm the memorandum opens with a summary of principal terms (a table or a run of short captioned paragraphs stating the fund's structure, minimum investment, fees, lock-up, withdrawal rights, and fiscal year) before the narrative sections. This is the part investors actually read and compare, and its absence forces a reader to reconstruct the deal from prose scattered across sixty pages. The summary is not a substitute for the body: it should say so, and say that the partnership agreement and subscription documents govern.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "reconcile-the-summary-with-the-partnership-agreement",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.reconcile-the-summary-with-the-partnership-agreement",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Every summary term traced back to the governing documents",
+        "sectionId": "the-summary-of-principal-terms",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#reconcile-the-summary-with-the-partnership-agreement",
+        "requirementGuidance": "Read each line of the summary against the limited partnership agreement it purports to summarize, and against the fee, withdrawal, and allocation sections of the memorandum itself. Drift between the summary and the governing documents is a consequential substantive defect, because the summary is what the investor relied on while the partnership agreement is what controls. Three numbers deserve a line-by-line trace: the incentive allocation rate and its crystallization period, the withdrawal notice period, and the definition of net asset value the fee is charged on.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-the-fund-structure-and-domicile",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.identify-the-fund-structure-and-domicile",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entity, domicile, and any master-feeder or parallel structure named",
+        "sectionId": "the-summary-of-principal-terms",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#identify-the-fund-structure-and-domicile",
+        "requirementGuidance": "Confirm the memorandum names the offering entity, its form and state or country of organization, and (where the fund invests through a master fund, a parallel vehicle, or a trading subsidiary) describes that structure and where the assets and the fees actually sit. A feeder's investors bear expenses at both levels, and a memorandum that describes only the feeder understates what the investor pays and misstates where the investment risk is taken.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "class-or-series-structure",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.class-or-series-structure",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Multiple classes or series named, with what differs between them",
+        "sectionId": "the-summary-of-principal-terms",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#class-or-series-structure",
+        "requirementGuidance": "Where the fund may issue more than one class or series of interests, confirm the memorandum says so, states what differs between them (management fee, performance allocation, lock-up and withdrawal rights, currency exposure) and says who may create a further class and on what notice. A single stated fee rate in a multi-class fund understates the range an investor could be offered. The reservation itself is the disclosure to read closely: where the general partner may create classes with different fees and withdrawal rights without notice to or approval of the limited partners, the summary states the terms of one class on one day rather than the terms of the fund. Where a fund runs several portfolios or sub-series with genuinely different liquidity, confirm the summary of terms distinguishes them instead of averaging them.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-the-minimum-investment-and-any-waiver",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-minimum-investment-and-any-waiver",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Minimum investment stated, with the manager's discretion to waive it",
+        "sectionId": "the-summary-of-principal-terms",
+        "itemNumber": "1.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-minimum-investment-and-any-waiver",
+        "requirementGuidance": "Confirm the memorandum states the minimum initial subscription and any minimum for additional subscriptions, and says plainly whether the general partner may waive or reduce them. A disclosed waiver power is unobjectionable; an unstated one is not, because a waived minimum for one investor is a preferential term the other investors were never told about.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "sponsor-capital-commitment",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.sponsor-capital-commitment",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "What the sponsor has put into its own fund",
+        "sectionId": "the-summary-of-principal-terms",
+        "itemNumber": "1.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#sponsor-capital-commitment",
+        "requirementGuidance": "Check whether the memorandum says what the general partner, the manager, or their principals have invested or intend to invest in the fund, and in what form. The statement may be a flat dollar figure or only an unquantified intention to invest, and the two cannot be compared with each other; a memorandum may also say nothing at all. Where an amount is given, confirm it is a commitment rather than an expectation, and check whether that capital carries the same fees, lock-up, and withdrawal terms an investor's does: a general partner free to withdraw its capital at any time makes a weaker alignment claim than the dollar figure alone suggests.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-the-management-fee-rate-and-its-basis",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-management-fee-rate-and-its-basis",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Management fee rate, basis, and timing stated, including its absence",
+        "sectionId": "what-the-investor-actually-pays",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-management-fee-rate-and-its-basis",
+        "requirementGuidance": "Confirm the memorandum states the management fee rate, basis, accrual period, payment timing, proration, and the vehicle level at which it is charged, or says expressly that no asset-based management fee is charged.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-the-performance-allocation-and-its-crystallization",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-performance-allocation-and-its-crystallization",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Performance allocation and crystallization stated, including its absence",
+        "sectionId": "what-the-investor-actually-pays",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-performance-allocation-and-its-crystallization",
+        "requirementGuidance": "Confirm the memorandum states the performance or incentive allocation rate, measurement period, crystallization events, investor-level or fund-level calculation, and treatment of realized and unrealized gains, or says expressly that no performance allocation is charged.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-any-hurdle-and-loss-carryforward",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-any-hurdle-and-loss-carryforward",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Hurdle and high-water mark stated: including their absence",
+        "sectionId": "what-the-investor-actually-pays",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-any-hurdle-and-loss-carryforward",
+        "requirementGuidance": "Confirm the memorandum says whether the incentive allocation is subject to a preferred return or hurdle rate and to a loss carryforward or high-water mark, and describes what happens to a loss carryforward on a partial withdrawal. Where there is no hurdle or no high-water mark, the memorandum should say so in terms: silence can read as a high-water mark that is not there.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "confirm-qualified-client-status-for-the-performance-allocation",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.confirm-qualified-client-status-for-the-performance-allocation",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rule 205-3 qualified-client standard applied to the performance allocation",
+        "sectionId": "what-the-investor-actually-pays",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#confirm-qualified-client-status-for-the-performance-allocation",
+        "requirementGuidance": "If the adviser is registered or required to be registered with the Commission and charges a performance allocation, confirm the contract limits that compensation to clients permitted by Advisers Act section 205(a)(1) and Rule 205-3 when section 205(a)(1) applies. For a section 3(c)(1) fund, test each equity owner charged the allocation. Section 205(b)(4) makes section 205(a)(1) inapplicable to an advisory contract with a section 3(c)(7) fund; a separate contract or state rule may still require a qualified-client screen. A state-registered adviser requires a separate state-law analysis. Use the current Commission order for indexed thresholds and record the as-of date.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "advisers-act-qualified-client-exemption",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.205-3(a): Exemption from the compensation prohibition of section 205(a)(1)",
+            "citation": "17 C.F.R. § 275.205-3(a).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.205-3",
+            "proposition": "Advisers Act section 205(a)(1) does not prohibit a performance-based advisory contract where the client entering into it is a qualified client as defined in rule 205-3(d)(1): the gate a fund's incentive allocation must clear when the adviser is registered.",
+            "verbatimQuote": "The provisions of section 205(a)(1) of the Act (15 U.S.C. 80b-5(a)(1)) will not be deemed to prohibit an investment adviser from entering into, performing, renewing or extending an investment advisory contract that provides for compensation to the investment adviser on the basis of a share of the capital gains upon, or the capital appreciation of, the funds, or any portion of the funds, of a client, Provided, That the client entering into the contract subject to this section is a qualified client, as defined in paragraph (d)(1) of this section.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-qualified-client-exemption"
+          },
+          {
+            "sourceId": "advisers-act-qualified-client-threshold",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.205-3(d)(1): Definition of qualified client",
+            "citation": "17 C.F.R. § 275.205-3(d)(1)(i), (d)(1)(ii)(A).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.205-3",
+            "proposition": "The qualified-client assets-under-management and net-worth thresholds are not fixed in the rule text: each is the applicable dollar amount specified in the Commission's most recent inflation-adjustment order, so a memorandum that recites a figure must recite the current one.",
+            "verbatimQuote": "For the purposes of this section: (1) The term qualified client means: (i) A natural person who, or a company that, immediately after entering into the contract has, under the management of the investment adviser, at least the applicable dollar amount specified in the most recent order; (ii) A natural person who, or a company that, the investment adviser entering into the contract (and any person acting on his behalf) reasonably believes, immediately prior to entering into the contract, either: (A) Has a net worth (together, in the case of a natural person, with assets held jointly with a spouse) of more than the applicable dollar amount specified in the most recent order.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-qualified-client-threshold"
+          },
+          {
+            "sourceId": "advisers-act-qualified-client-lookthrough",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.205-3(b): Identification of the client",
+            "citation": "17 C.F.R. § 275.205-3(b).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.205-3",
+            "proposition": "For a private investment company, each equity owner charged performance compensation is treated as a client for Rule 205-3.",
+            "verbatimQuote": "In the case of a private investment company, as defined in paragraph (d)(3) of this section, an investment company registered under the Investment Company Act of 1940, or a business development company, as defined in section 202(a)(22) of the Act (15 U.S.C. 80b-2(a)(22)), each equity owner of any such company (except for the investment adviser entering into the contract and any other equity owners not charged a fee on the basis of a share of capital gains or capital appreciation) will be considered a client for purposes of paragraph (a) of this section.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-qualified-client-lookthrough"
+          },
+          {
+            "sourceId": "advisers-act-private-investment-company-definition",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.205-3(d)(3): Private investment company",
+            "citation": "17 C.F.R. § 275.205-3(d)(3).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.205-3",
+            "proposition": "Rule 205-3 defines private investment company by reference to Investment Company Act section 3(c)(1), not section 3(c)(7).",
+            "verbatimQuote": "The term private investment company means a company that would be defined as an investment company under section 3(a) of the Investment Company Act of 1940 (15 U.S.C. 80a-3(a)) but for the exception provided from that definition by section 3(c)(1) of such Act (15 U.S.C. 80a-3(c)(1)).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-private-investment-company-definition"
+          },
+          {
+            "sourceId": "advisers-act-205-b-4",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Investment Advisers Act of 1940 § 205(b)(4), 15 U.S.C. § 80b-5(b)(4)",
+            "citation": "15 U.S.C. § 80b-5(b)(4).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section80b-5&num=0&edition=prelim",
+            "proposition": "Section 205(a)(1) does not apply to an advisory contract with a company excepted from the Investment Company Act definition under section 3(c)(7).",
+            "verbatimQuote": "Paragraph (1) of subsection (a) shall not- (1) be construed to prohibit an investment advisory contract which provides for compensation based upon the total value of a fund averaged over a definite period, or as of definite dates, or taken as of a definite date; (2) apply to an investment advisory contract with- (A) an investment company registered under subchapter I of this chapter, or (B) any other person (except a trust, governmental plan, collective trust fund, or separate account referred to in section 80a–3(c)(11) of this title), provided that the contract relates to the investment of assets in excess of $1 million, if the contract provides for compensation based on the asset value of the company or fund under management averaged over a specified period and increasing and decreasing proportionately with the investment performance of the company or fund over a specified period in relation to the investment record of an appropriate index of securities prices or such other measure of investment performance as the Commission by rule, regulation, or order may specify; (3) apply with respect to any investment advisory contract between an investment adviser and a business development company, as defined in this subchapter, if (A) the compensation provided for in such contract does not exceed 20 per centum of the realized capital gains upon the funds of the business development company over a specified period or as of definite dates, computed net of all realized capital losses and unrealized capital depreciation, and the condition of section 80a–60(a)(4)(B)(iii) of this title is satisfied, and (B) the business development company does not have outstanding any option, warrant, or right issued pursuant to section 80a–60(a)(4)(B) of this title and does not have a profit-sharing plan described in section 80a–56(n) of this title; (4) apply to an investment advisory contract with a company excepted from the definition of an investment company under section 80a–3(c)(7) of this title; or",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-205-b-4"
+          }
+        ]
+      },
+      {
+        "requirementId": "itemize-the-expenses-the-fund-bears",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.itemize-the-expenses-the-fund-bears",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fund-borne expenses itemized, and manager-borne expenses named",
+        "sectionId": "what-the-investor-actually-pays",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#itemize-the-expenses-the-fund-bears",
+        "requirementGuidance": "Confirm the memorandum itemizes the expenses charged to the fund (brokerage and transaction costs, administration, audit, legal, custody, research, insurance, regulatory filings, and any allocated technology or operations charge) and separately names what the manager pays out of its own fee. An open-ended catch-all such as and all other expenses of the fund is the item to push on, because it is where overhead migrates from the manager's fee to the investor's capital account.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-organizational-expenses-and-any-amortization",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-organizational-expenses-and-any-amortization",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Organizational and offering expenses: amount, cap, and amortization",
+        "sectionId": "what-the-investor-actually-pays",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-organizational-expenses-and-any-amortization",
+        "requirementGuidance": "Confirm the memorandum states who bears the fund's organizational and offering expenses, any cap on them, and whether they are expensed as incurred or amortized over a stated period. Amortization is a real economic term, not an accounting footnote: it shifts formation cost from early investors onto later ones, and it can put the memorandum's stated net asset value at odds with the audited financial statements, which is worth flagging where the fund also promises audited statements prepared under U.S. generally accepted accounting principles.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-placement-agent-compensation",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-placement-agent-compensation",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Placement agent and selling compensation disclosed, and who pays it",
+        "sectionId": "what-the-investor-actually-pays",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-placement-agent-compensation",
+        "requirementGuidance": "Where the fund uses a placement agent, an affiliated marketer, or a solicitor, confirm the memorandum discloses the compensation arrangement and says whether it is borne by the fund, by the manager, or charged to the subscribing investor. Investor-level selling charges that reduce the amount actually invested belong in the summary of terms, not only in a later section.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-the-lock-up-and-withdrawal-frequency",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-lock-up-and-withdrawal-frequency",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Lock-up and withdrawal dates stated, with the manager's discretion to waive",
+        "sectionId": "how-and-when-money-comes-back",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-lock-up-and-withdrawal-frequency",
+        "requirementGuidance": "Confirm the memorandum states any initial lock-up, whether it is a hard lock or a soft lock payable with a fee, whether it runs per subscription or per investor, and on what dates withdrawals are permitted once it lapses. Confirm it also says whether the general partner may waive the lock-up, since a waivable lock-up that is silently waived for some investors is a preferential-liquidity term the rest of the fund is bearing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-the-withdrawal-notice-and-payment-timing",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-withdrawal-notice-and-payment-timing",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice period and payment timing stated, including any holdback",
+        "sectionId": "how-and-when-money-comes-back",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-withdrawal-notice-and-payment-timing",
+        "requirementGuidance": "Confirm the memorandum states the written-notice period a withdrawal requires, when proceeds are paid after the withdrawal date, and whether a portion is held back pending the annual audit. A holdback is ordinary; an undisclosed one is the disclosure defect. Trace the notice period against the partnership agreement: the two documents can drift on this term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-redemption-gates",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-redemption-gates",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Redemption gates and cutback mechanics stated, including their absence",
+        "sectionId": "how-and-when-money-comes-back",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-redemption-gates",
+        "requirementGuidance": "Confirm the memorandum states whether an investor-level or fund-level redemption gate applies. If one applies, record the percentage, measurement level and date, allocation of cutbacks, treatment of unfilled requests, and any waiver discretion; if none applies, confirm it says so expressly.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-redemption-suspensions",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-redemption-suspensions",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Withdrawal, payment, and NAV suspensions stated, including their absence",
+        "sectionId": "how-and-when-money-comes-back",
+        "itemNumber": "3.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-redemption-suspensions",
+        "requirementGuidance": "Confirm the memorandum states whether the general partner may suspend withdrawals, payment of proceeds, or calculation of net asset value. If it may, record the triggers, notice, treatment of pending requests, and termination condition; if it may not, confirm it says so expressly.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-side-pockets-and-designated-investments",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-side-pockets-and-designated-investments",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Side pockets and designated investments disclosed, including their absence",
+        "sectionId": "how-and-when-money-comes-back",
+        "itemNumber": "3.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-side-pockets-and-designated-investments",
+        "requirementGuidance": "Confirm the memorandum states whether assets may be placed in side pockets, designated-investment accounts, or similar illiquid buckets. If they may, record eligibility, valuation, fee treatment, allocation, release or realization mechanics, and post-withdrawal participation. If performance compensation can be allocated on unrealized gains, check disclosure of a later write-down that exceeds an investor's capital, who bears the uncovered loss, any limit on manager capital available to absorb it, and whether later gains can repay affected investors. Do not infer that a composite example is common merely because each component appears in a filing. If buckets are absent, confirm the memorandum says so expressly.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-in-kind-distributions",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-in-kind-distributions",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "In-kind distributions disclosed, including their absence",
+        "sectionId": "how-and-when-money-comes-back",
+        "itemNumber": "3.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-in-kind-distributions",
+        "requirementGuidance": "Confirm the memorandum states whether withdrawal or liquidation proceeds may be distributed in kind. If they may, record valuation, selection, transfer-cost, fractional-interest, and investor-eligibility mechanics; if they may not, confirm it says so expressly.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-any-early-withdrawal-fee-and-its-recipient",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-any-early-withdrawal-fee-and-its-recipient",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Early-withdrawal fee stated, with who receives it",
+        "sectionId": "how-and-when-money-comes-back",
+        "itemNumber": "3.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-any-early-withdrawal-fee-and-its-recipient",
+        "requirementGuidance": "Where a withdrawal before a stated date carries a fee, confirm the memorandum states the percentage, the period it applies to, and whether the fee is paid to the fund for the benefit of remaining investors or to the general partner. Those are materially different terms, and only one of them is a liquidity-protection mechanism.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "warn-that-the-interests-are-illiquid",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.warn-that-the-interests-are-illiquid",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Illiquidity and transfer restriction stated as a risk, not only as a legend",
+        "sectionId": "how-and-when-money-comes-back",
+        "itemNumber": "3.8",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#warn-that-the-interests-are-illiquid",
+        "requirementGuidance": "Confirm the illiquidity of the interests appears as a substantive risk factor and not only in the cover legends: there is no secondary market, transfers require the general partner's consent, and the withdrawal rights just described are the only exit. Where the fund's assets are less liquid than its stated withdrawal terms, that mismatch is itself the disclosure: say what the manager would do if withdrawal requests exceeded what the portfolio could fund.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-the-offering-exemption-relied-on",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.identify-the-offering-exemption-relied-on",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rule 506 route confirmed and memorandum statements reconciled",
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#identify-the-offering-exemption-relied-on",
+        "requirementGuidance": "Confirm that the offering team has selected and documented whether it relies on Rule 506(b) or Rule 506(c), then reconcile the memorandum's exemption, solicitation, purchaser-eligibility, verification, and disclosure statements with the route actually used. A memorandum may cite Rule 506 generally if those statements are accurate for the selected route; naming only Rule 506 does not preserve a Rule 506(b) claim after general solicitation or replace Rule 506(c)'s accredited-purchaser verification. Record the selected route, supporting offering records, reviewer, and review date. Rule 506(b) permits no general solicitation and can admit eligible non-accredited purchasers with required information; Rule 506(c) permits general solicitation only with accredited purchasers whose status the issuer takes reasonable steps to verify.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "reg-d-general-solicitation-prohibition",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.502(c): Limitation on manner of offering",
+            "citation": "17 C.F.R. § 230.502(c).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.502",
+            "proposition": "Except as provided in rule 504(b)(1) or rule 506(c), neither the issuer nor any person acting on its behalf may offer or sell securities in reliance on Regulation D through general solicitation or general advertising.",
+            "verbatimQuote": "Except as provided in § 230.504(b)(1) or § 230.506(c), neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising, including, but not limited to, the following: (1) Any advertisement, article, notice or other communication published in any newspaper, magazine, or similar media or broadcast over television or radio; and",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-general-solicitation-prohibition"
+          },
+          {
+            "sourceId": "reg-d-506c-verification",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.506(c): Offerings not subject to limitation on manner of offering",
+            "citation": "17 C.F.R. § 230.506(c)(2)(ii).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.506",
+            "proposition": "In a rule 506(c) offering the issuer must take reasonable steps to verify that purchasers are accredited investors.",
+            "verbatimQuote": "The issuer shall take reasonable steps to verify that purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-506c-verification"
+          },
+          {
+            "sourceId": "reg-d-non-accredited-information",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.502(b): Information requirements",
+            "citation": "17 C.F.R. § 230.502(b)(1).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.502",
+            "proposition": "Selling to even one non-accredited investor under rule 506(b) triggers a specified information package that must be furnished a reasonable time prior to sale.",
+            "verbatimQuote": "If the issuer sells securities under § 230.506(b) to any purchaser that is not an accredited investor, the issuer shall furnish the information specified in paragraph (b)(2) of this section to such purchaser a reasonable time prior to sale.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-non-accredited-information"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-the-accredited-investor-standard",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-accredited-investor-standard",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Accredited-investor standard stated as the rule states it",
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-accredited-investor-standard",
+        "requirementGuidance": "Confirm the memorandum describes the accredited-investor standard accurately and dates it to the time of sale: the definition reaches a person who comes within a listed category, or who the issuer reasonably believes comes within any of the following categories, at the time of the sale of the securities to that person. Check the natural-person tests against the current rule text rather than against a prior version of the memorandum: the net-worth test excludes the primary residence, the income test has separate individual and joint thresholds, and the rule now includes categories keyed to professional certifications and to knowledgeable employees of the fund.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "reg-d-accredited-investor-definition",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.501(a): Accredited investor",
+            "citation": "17 C.F.R. § 230.501(a).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.501",
+            "proposition": "Accredited-investor status is tested at the time of sale and may rest on the issuer's reasonable belief that the purchaser comes within one of the enumerated categories.",
+            "verbatimQuote": "§ 230.501 Definitions and terms used in Regulation D. As used in Regulation D (§ 230.500 et seq. of this chapter), the following terms shall have the meaning indicated: (a) Accredited investor. Accredited investor shall mean any person who comes within any of the following categories, or who the issuer reasonably believes comes within any of the following categories, at the time of the sale of the securities to that person:",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-accredited-investor-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "match-marketing-conduct-to-the-exemption",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.match-marketing-conduct-to-the-exemption",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "Offering-process check: no marketing or sale outside the exemption's conditions",
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "itemNumber": "4.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#match-marketing-conduct-to-the-exemption",
+        "requirementGuidance": "If the offering relies on Rule 506(b), confirm that neither the issuer nor any person acting on its behalf offered or sold through general solicitation or general advertising. If it relies on Rule 506(c), confirm that no interest was sold to a purchaser who is not accredited or whose accredited status the issuer did not take reasonable steps to verify. Record the exemption, external marketing channels and verification steps reviewed, reviewer, and review date. The memorandum cannot establish that conduct by itself.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "reg-d-general-solicitation-prohibition",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.502(c): Limitation on manner of offering",
+            "citation": "17 C.F.R. § 230.502(c).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.502",
+            "proposition": "Except as provided in rule 504(b)(1) or rule 506(c), neither the issuer nor any person acting on its behalf may offer or sell securities in reliance on Regulation D through general solicitation or general advertising.",
+            "verbatimQuote": "Except as provided in § 230.504(b)(1) or § 230.506(c), neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising, including, but not limited to, the following: (1) Any advertisement, article, notice or other communication published in any newspaper, magazine, or similar media or broadcast over television or radio; and",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-general-solicitation-prohibition"
+          },
+          {
+            "sourceId": "reg-d-506c-verification",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.506(c): Offerings not subject to limitation on manner of offering",
+            "citation": "17 C.F.R. § 230.506(c)(2)(ii).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.506",
+            "proposition": "In a rule 506(c) offering the issuer must take reasonable steps to verify that purchasers are accredited investors.",
+            "verbatimQuote": "The issuer shall take reasonable steps to verify that purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-506c-verification"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-the-investment-company-act-exclusion",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-investment-company-act-exclusion",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Section 3(c)(1) or 3(c)(7) named, with the eligibility standard that follows from it",
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "itemNumber": "4.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-investment-company-act-exclusion",
+        "requirementGuidance": "Confirm the memorandum names the Investment Company Act exclusion the fund relies on and applies the investor standard that goes with it. A section 3(c)(1) fund is limited to an issuer beneficially owned by not more than one hundred persons that is not making and does not presently propose to make a public offering. A section 3(c)(7) fund has no comparable holder cap but its securities must be owned exclusively by persons who, at the time of acquisition of such securities, are qualified purchasers, a materially higher standard than accredited investor, resting on an investments test rather than a net-worth test. A memorandum that recites both exclusions, or that pairs a 3(c)(7) recital with an accredited-investor-only subscription agreement, has an internal inconsistency to resolve before it goes out.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ica-3c1-beneficial-owner-limit",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "15 U.S.C. § 80a-3(c)(1): Further exemptions",
+            "citation": "15 U.S.C. § 80a-3(c)(1).",
+            "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2D-subchapI-sec80a-3.htm",
+            "proposition": "A fund relying on Investment Company Act section 3(c)(1) must keep its outstanding securities beneficially owned by not more than 100 persons (250 for a qualifying venture capital fund) and must not make or propose a public offering.",
+            "verbatimQuote": "Any issuer whose outstanding securities (other than short-term paper) are beneficially owned by not more than one hundred persons (or, in the case of a qualifying venture capital fund, 250 persons) and which is not making and does not presently propose to make a public offering of its securities.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-ica-3c1-beneficial-owner-limit"
+          },
+          {
+            "sourceId": "ica-3c7-qualified-purchasers",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "15 U.S.C. § 80a-3(c)(7): Further exemptions",
+            "citation": "15 U.S.C. § 80a-3(c)(7)(A).",
+            "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2D-subchapI-sec80a-3.htm",
+            "proposition": "A fund relying on Investment Company Act section 3(c)(7) must have securities owned exclusively by persons who were qualified purchasers at the time they acquired them, and must not make or propose to make a public offering.",
+            "verbatimQuote": "Any issuer, the outstanding securities of which are owned exclusively by persons who, at the time of acquisition of such securities, are qualified purchasers, and which is not making and does not at that time propose to make a public offering of such securities.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-ica-3c7-qualified-purchasers"
+          }
+        ]
+      },
+      {
+        "requirementId": "commit-to-the-form-d-filing",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.commit-to-the-form-d-filing",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Offering-process check: Form D responsibility and filing record",
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "itemNumber": "4.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#commit-to-the-form-d-filing",
+        "requirementGuidance": "An issuer selling securities in reliance on Rule 504 or Rule 506 must file Form D no later than 15 calendar days after the first sale. Record the responsible person, first-sale date, deadline, filing or accession number, amendment calendar, and review date. The memorandum cannot satisfy the filing obligation by itself, and Form D filing is not a condition to Rule 506.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "reg-d-form-d-filing",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.503(a): Filing of notice of sales",
+            "citation": "17 C.F.R. § 230.503(a)(1).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.503",
+            "proposition": "An issuer relying on rule 506 must file a Form D notice of sales with the Commission no later than 15 calendar days after the first sale in the offering.",
+            "verbatimQuote": "An issuer offering or selling securities in reliance on § 230.504 or § 230.506 must file with the Commission a notice of sales containing the information required by Form D (17 CFR 239.500) for each new offering of securities no later than 15 calendar days after the first sale of securities in the offering, unless the end of that period falls on a Saturday, Sunday or holiday, in which case the due date would be the first business day following.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-form-d-filing"
+          }
+        ]
+      },
+      {
+        "requirementId": "furnish-information-to-non-accredited-purchasers",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.furnish-information-to-non-accredited-purchasers",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Offering-process check: Rule 502(b) information delivery recorded",
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "itemNumber": "4.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#furnish-information-to-non-accredited-purchasers",
+        "requirementGuidance": "If a Rule 506(b) offering admits a non-accredited purchaser, confirm the issuer furnished the information specified by Rule 502(b)(2) a reasonable time before sale. Record the information package, the document or supplement carrying each item, who furnished it, and the date furnished. If the memorandum is the delivery vehicle, compare its contents with Rule 502(b)(2); the memorandum alone cannot establish timely delivery.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "reg-d-non-accredited-information",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.502(b): Information requirements",
+            "citation": "17 C.F.R. § 230.502(b)(1).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.502",
+            "proposition": "Selling to even one non-accredited investor under rule 506(b) triggers a specified information package that must be furnished a reasonable time prior to sale.",
+            "verbatimQuote": "If the issuer sells securities under § 230.506(b) to any purchaser that is not an accredited investor, the issuer shall furnish the information specified in paragraph (b)(2) of this section to such purchaser a reasonable time prior to sale.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-non-accredited-information"
+          }
+        ]
+      },
+      {
+        "requirementId": "record-rule-506d-covered-person-diligence",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.record-rule-506d-covered-person-diligence",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Offering-process check: Rule 506(d) covered-person diligence recorded",
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "itemNumber": "4.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#record-rule-506d-covered-person-diligence",
+        "requirementGuidance": "Record the Rule 506(d) covered-person population, the facts-and-circumstances inquiry performed, who performed it, and the date. Identify any reasonable-care exception, Commission waiver, or issuing-authority determination and the resulting effect on Rule 506 before sale. The memorandum's text cannot establish that this diligence occurred; this check belongs in a separate offering-compliance and closing checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "reg-d-bad-actor-diligence",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.506(d)(2): Exceptions from bad-actor disqualification",
+            "citation": "17 C.F.R. § 230.506(d)(2)(ii)–(iv) & Instruction to paragraph (d)(2)(iv).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.506",
+            "proposition": "Rule 506(d) preserves Commission-waiver, issuing-authority, and reasonable-care exceptions, and reasonable care requires a facts-and-circumstances factual inquiry into disqualifications.",
+            "verbatimQuote": "(ii) Upon a showing of good cause and without prejudice to any other action by the Commission, if the Commission determines that it is not necessary under the circumstances that an exemption be denied; (iii) If, before the relevant sale, the court or regulatory authority that entered the relevant order, judgment or decree advises in writing (whether contained in the relevant judgment, order or decree or separately to the Commission or its staff) that disqualification under paragraph (d)(1) of this section should not arise as a consequence of such order, judgment or decree; or (iv) If the issuer establishes that it did not know and, in the exercise of reasonable care, could not have known that a disqualification existed under paragraph (d)(1) of this section. Instruction to paragraph (d)(2)(iv). An issuer will not be able to establish that it has exercised reasonable care unless it has made, in light of the circumstances, factual inquiry into whether any disqualifications exist.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-bad-actor-diligence"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-pre-2013-rule-506e-bad-actor-matters",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-pre-2013-rule-506e-bad-actor-matters",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Pre-September 23, 2013 Rule 506(e) matters disclosed in writing when present",
+        "sectionId": "who-may-invest-and-under-what-exemption",
+        "itemNumber": "4.8",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-pre-2013-rule-506e-bad-actor-matters",
+        "requirementGuidance": "If a matter that would otherwise trigger Rule 506(d)(1) occurred before September 23, 2013, confirm the memorandum or a clearly identified written supplement describes it and is furnished a reasonable time before sale.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "reg-d-bad-actor-disclosure",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.506(e): Disclosure of prior bad actor events",
+            "citation": "17 C.F.R. § 230.506(e).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.506",
+            "proposition": "A matter that would have triggered rule 506(d) disqualification but occurred before September 23, 2013 must be described in writing to each purchaser a reasonable time prior to sale.",
+            "verbatimQuote": "The issuer shall furnish to each purchaser, a reasonable time prior to sale, a description in writing of any matters that would have triggered disqualification under paragraph (d)(1) of this section but occurred before September 23, 2013.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-reg-d-bad-actor-disclosure"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-cftc-nfa-status",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-cftc-nfa-status",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "CFTC/NFA registration, exclusion, or exemption stated when commodity interests are traded",
+        "sectionId": "the-strategy-and-its-risks",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-cftc-nfa-status",
+        "requirementGuidance": "If the strategy trades commodity interests or swaps, confirm the memorandum states whether the manager is registered as a commodity pool operator or commodity trading adviser or identifies the precise CFTC exclusion or exemption claimed. Record filing and annual-affirmation work separately; the memorandum cannot satisfy those external tasks.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nfa-cpo-cta-exemptions",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "NFA Exemptions: CPO and CTA exemption filing and annual affirmation",
+            "citation": "NFA, Exemptions, introductory paragraph (accessed Sept. 2, 2026).",
+            "url": "https://www.nfa.futures.org/electronic-filing-systems/exemptions.html",
+            "proposition": "CPOs and CTAs file Part 4 exclusions or exemptions through NFA's Exemptions System.",
+            "verbatimQuote": "Commodity pool operators (CPO) and commodity trading advisors (CTA) must electronically file with NFA notices of exclusion or exemption from CFTC Part 4 Requirements using NFA's Exemptions System.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-nfa-cpo-cta-exemptions"
+          },
+          {
+            "sourceId": "nfa-cpo-cta-annual-affirmation",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "NFA Exemptions: Annual Affirmation Process",
+            "citation": "NFA, Exemptions, Annual Affirmation Process (accessed Sept. 2, 2026).",
+            "url": "https://www.nfa.futures.org/electronic-filing-systems/exemptions.html",
+            "proposition": "Specified CPO and CTA exemptions or exclusions require annual affirmation within 60 days after calendar year end.",
+            "verbatimQuote": "CFTC regulations require any person claiming an exemption or exclusion from CPO registration under CFTC Regulation 4.5, 4.13(a)(1), 4.13(a)(2), 4.13(a)(3), 4.13(a)(5) or an exemption from CTA registration under 4.14(a)(8) to annually affirm the applicable notice of exemption or exclusion within 60 days of the calendar year end.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-nfa-cpo-cta-annual-affirmation"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-the-investment-objective-and-program",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-investment-objective-and-program",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Objective and program described in enough detail to be tested against",
+        "sectionId": "the-strategy-and-its-risks",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-investment-objective-and-program",
+        "requirementGuidance": "Confirm the memorandum states the investment objective and describes the program in enough substance that an investor could later tell whether the manager departed from it: the markets and instruments traded, the sources of return, the typical holding period, and the decision process. A program described only as opportunistic or multi-strategy gives the manager latitude but gives the investor nothing to hold the disclosure against.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-leverage-and-concentration-policy",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-leverage-and-concentration-policy",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Leverage, borrowing, short selling, and concentration policy stated",
+        "sectionId": "the-strategy-and-its-risks",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-leverage-and-concentration-policy",
+        "requirementGuidance": "Confirm the memorandum states the fund's leverage policy (whether there is a stated limit or none, how leverage is measured, and whether it includes notional exposure through derivatives) together with its policy on borrowing, short selling, and position concentration. Where there is no limit, the memorandum should say so directly rather than leave the reader to infer it; an unlimited leverage policy that the reader has to deduce from a risk factor is a disclosure problem even though an unlimited leverage policy is not.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "match-the-risk-factors-to-the-actual-strategy",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.match-the-risk-factors-to-the-actual-strategy",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "Material risk factors written for this strategy, without a safe harbor",
+        "sectionId": "the-strategy-and-its-risks",
+        "itemNumber": "5.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#match-the-risk-factors-to-the-actual-strategy",
+        "requirementGuidance": "Confirm the memorandum does not make an untrue statement of material fact or omit a material fact necessary to make its statements about the investment program and its risks, in light of the circumstances, not misleading. Then read the risk factors against the actual program: describe material, strategy-specific risks through their mechanisms and remove inherited risks that do not apply. Materiality remains a facts-and-circumstances legal judgment.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "advisers-act-pooled-vehicle-antifraud",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.206(4)-8: Pooled investment vehicles",
+            "citation": "17 C.F.R. § 275.206(4)-8(a)(1).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206(4)-8",
+            "proposition": "It is a fraudulent, deceptive, or manipulative act under Advisers Act section 206(4) for an adviser to a pooled investment vehicle to make an untrue statement of material fact, or omit a material fact necessary to make its statements not misleading, to an investor or prospective investor in the pool.",
+            "verbatimQuote": "It shall constitute a fraudulent, deceptive, or manipulative act, practice, or course of business within the meaning of section 206(4) of the Act (15 U.S.C. 80b-6(4)) for any investment adviser to a pooled investment vehicle to: (1) Make any untrue statement of a material fact or to omit to state a material fact necessary to make the statements made, in the light of the circumstances under which they were made, not misleading, to any investor or prospective investor in the pooled investment vehicle; or",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-pooled-vehicle-antifraud"
+          },
+          {
+            "sourceId": "securities-act-17a-antifraud",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Securities Act of 1933 § 17(a), 15 U.S.C. § 77q(a)",
+            "citation": "15 U.S.C. § 77q(a)(1)–(3).",
+            "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2A-subchapI-sec77q.htm",
+            "proposition": "Securities Act section 17(a) prohibits specified fraudulent conduct in the offer or sale of securities.",
+            "verbatimQuote": "It shall be unlawful for any person in the offer or sale of any securities (including security-based swaps) or any security-based swap agreement (as defined in section 78c(a)(78) 1 of this title) by the use of any means or instruments of transportation or communication in interstate commerce or by use of the mails, directly or indirectly— (1) to employ any device, scheme, or artifice to defraud, or (2) to obtain money or property by means of any untrue statement of a material fact or any omission to state a material fact necessary in order to make the statements made, in light of the circumstances under which they were made, not misleading; or (3) to engage in any transaction, practice, or course of business which operates or would operate as a fraud or deceit upon the purchaser.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-securities-act-17a-antifraud"
+          },
+          {
+            "sourceId": "exchange-act-rule-10b-5",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 240.10b-5: Employment of manipulative and deceptive devices",
+            "citation": "17 C.F.R. § 240.10b-5(a)–(c).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-240/subpart-A/section-240.10b-5",
+            "proposition": "Exchange Act Rule 10b-5 prohibits specified deceptive conduct in connection with the purchase or sale of a security.",
+            "verbatimQuote": "It shall be unlawful for any person, directly or indirectly, by the use of any means or instrumentality of interstate commerce, or of the mails or of any facility of any national securities exchange, (a) To employ any device, scheme, or artifice to defraud, (b) To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made, in the light of the circumstances under which they were made, not misleading, or (c) To engage in any act, practice, or course of business which operates or would operate as a fraud or deceit upon any person, in connection with the purchase or sale of any security.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-exchange-act-rule-10b-5"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-limited-operating-history-and-no-assurance",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-limited-operating-history-and-no-assurance",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Limited operating history and no assurance of achieving the objective",
+        "sectionId": "the-strategy-and-its-risks",
+        "itemNumber": "5.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-limited-operating-history-and-no-assurance",
+        "requirementGuidance": "For a new fund, confirm the memorandum discloses the absence of an operating history and states that no assurance can be given that the objective will be achieved. Where performance of a predecessor fund, a separate account, or a personal trading record is shown, confirm the memorandum explains the basis of that record, how it differs from what an investor in this fund would have experienced, and whether it is net of the fees this fund charges.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "key-person-risk",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.key-person-risk",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Dependence on named individuals disclosed as a risk",
+        "sectionId": "the-strategy-and-its-risks",
+        "itemNumber": "5.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#key-person-risk",
+        "requirementGuidance": "Confirm the memorandum discloses that results depend on a small number of individuals and says what would follow if they stopped being involved. This is a different assertion from describing who they are: the biographies establish the track record, and this risk factor says the track record can walk out of the door. Check whether the risk factor names the individuals. Where the fund or the partnership agreement carries a key-person provision that suspends new investment or opens a withdrawal window, confirm the memorandum describes that mechanism rather than leaving the risk factor to stand on its own.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-counterparty-and-prime-broker-risk",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-counterparty-and-prime-broker-risk",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Counterparty, prime broker, and custody risk disclosed",
+        "sectionId": "the-strategy-and-its-risks",
+        "itemNumber": "5.7",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-counterparty-and-prime-broker-risk",
+        "requirementGuidance": "Confirm the memorandum discloses what happens to fund assets if a prime broker, custodian, clearing firm, or derivatives counterparty fails, including the fund's exposure to assets that may be rehypothecated or held outside a segregated account, and any concentration in a single prime broker. Confirm it also names the operational risks the fund actually runs: cyber intrusion, trade error, key-vendor failure, and business continuity.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-other-accounts-and-allocation-of-opportunities",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-other-accounts-and-allocation-of-opportunities",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Other accounts, time allocation, and how opportunities are allocated",
+        "sectionId": "conflicts-of-interest",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-other-accounts-and-allocation-of-opportunities",
+        "requirementGuidance": "Confirm the memorandum discloses every other fund, managed account, or proprietary account the manager and its principals trade, the fact that they will not devote full time to this fund, and the method by which investment opportunities and partial fills are allocated among them. Where another account pays higher fees or has a different liquidity profile, the incentive that creates should be named rather than left to the reader.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-manager-valuation-of-fund-assets",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-manager-valuation-of-fund-assets",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager's role in valuation disclosed as a conflict, not only as a procedure",
+        "sectionId": "conflicts-of-interest",
+        "itemNumber": "6.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-manager-valuation-of-fund-assets",
+        "requirementGuidance": "Confirm the memorandum says plainly that the manager, or a valuation committee it controls, determines the value of positions that have no readily available market price, and that its management fee and incentive allocation are calculated on those values. Confirm the independence check (an administrator, an auditor, or an independent pricing source) is described accurately rather than overstated.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-brokerage-selection-and-soft-dollars",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-brokerage-selection-and-soft-dollars",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Brokerage selection, soft dollars, and affiliated transactions disclosed",
+        "sectionId": "conflicts-of-interest",
+        "itemNumber": "6.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-brokerage-selection-and-soft-dollars",
+        "requirementGuidance": "Confirm the memorandum describes how brokers are selected, whether the fund pays more than the lowest available commission in exchange for research or brokerage services within the section 28(e) safe harbor, and how the manager handles services that benefit other clients or the manager itself. Confirm any capital-introduction relationship is disclosed as a factor in broker selection, and that transactions with the manager, its affiliates, or another fund it manages are described together with the consent or independent-review mechanism that governs them.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-side-letters-and-preferential-terms",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-side-letters-and-preferential-terms",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Side letters disclosed, with the categories of terms they may grant",
+        "sectionId": "conflicts-of-interest",
+        "itemNumber": "6.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-side-letters-and-preferential-terms",
+        "requirementGuidance": "Confirm the memorandum discloses that the general partner may enter into side letters granting particular investors terms not available to others, and describes the categories of terms involved: fee discounts, enhanced liquidity, capacity rights, and additional portfolio transparency. Enhanced liquidity and additional transparency are the two that disadvantage the other investors in a stress, so a disclosure that lists only fee discounts understates the arrangement. Confirm whether the fund commits to any most-favored-nation election, and if not, say so.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "describe-exculpation-and-indemnification-of-the-manager",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.describe-exculpation-and-indemnification-of-the-manager",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Exculpation and indemnification described, with its standard of conduct",
+        "sectionId": "conflicts-of-interest",
+        "itemNumber": "6.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#describe-exculpation-and-indemnification-of-the-manager",
+        "requirementGuidance": "Confirm the memorandum describes the exculpation and indemnification the partnership agreement gives the general partner and the manager, states the standard of conduct that forfeits it, and notes that the federal securities laws limit any waiver of liability arising under them. Where the manager may advance its own defense costs out of fund assets, that belongs in the fee and expense discussion as well as here.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "describe-the-valuation-policy",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.describe-the-valuation-policy",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Valuation policy stated, including hard-to-value positions",
+        "sectionId": "valuation-reporting-and-service-providers",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#describe-the-valuation-policy",
+        "requirementGuidance": "Confirm the memorandum describes how net asset value is determined, the pricing sources used for each class of instrument, the treatment of positions with no readily available market price, and the general partner's discretion to depart from a stated source. Confirm the valuation date and the fee calculation date are the same date, or that the memorandum explains why they are not.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "name-the-service-providers",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.name-the-service-providers",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Service providers named, with the caveat that they do not advise investors",
+        "sectionId": "valuation-reporting-and-service-providers",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#name-the-service-providers",
+        "requirementGuidance": "Confirm the memorandum names the administrator, auditor, prime broker or custodian, and counsel, and states that fund counsel represents the fund or the manager and not the investors: an emerging-manager memorandum that names a well-known law firm without that sentence invites exactly the inference the sentence exists to prevent. Where a service provider is affiliated with the manager, or where a role is performed in-house rather than by an independent third party, say so in terms.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "principal-biographies",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.principal-biographies",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named biographies of the people making the investment decisions",
+        "sectionId": "valuation-reporting-and-service-providers",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#principal-biographies",
+        "requirementGuidance": "Confirm the memorandum gives named biographies of the people who will actually make the investment decisions (the portfolio managers and the principals of the general partner and the manager) covering the experience the investor is being asked to underwrite. Read the section against the rest of the document: the people named here should be the people the key-person risk factor names, the roles should match the service-provider section, and any track record shown elsewhere should have been earned by someone on this list. For an emerging manager this is where most of the fund's credibility sits, and a memorandum that omits it is offering a strategy with no person attached.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-the-adviser-registration-status",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.state-the-adviser-registration-status",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Adviser's registration status stated accurately",
+        "sectionId": "valuation-reporting-and-service-providers",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#state-the-adviser-registration-status",
+        "requirementGuidance": "Confirm the memorandum states whether the manager is registered with the Commission as an investment adviser, is a state-registered adviser, or is relying on an exemption and files as an exempt reporting adviser, and does not imply that registration is an endorsement or that an exempt adviser is unregulated. Registration status carries downstream consequences the memorandum should be consistent with, including the qualified-client screen on the performance allocation and the custody and reporting obligations described elsewhere in the document.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "commit-to-audited-financials-and-periodic-reporting",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.commit-to-audited-financials-and-periodic-reporting",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Audit and periodic-reporting commitment stated, including its absence",
+        "sectionId": "valuation-reporting-and-service-providers",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#commit-to-audited-financials-and-periodic-reporting",
+        "requirementGuidance": "Confirm the memorandum states whether investors will receive annual audited financial statements and periodic reports. If promised, record the accounting basis, auditor qualification, delivery deadline, and frequency and content of interim reporting; if not promised, confirm it says so expressly.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-custody-rule-pooled-vehicle-audit-route",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.disclose-custody-rule-pooled-vehicle-audit-route",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rule 206(4)-2 pooled-vehicle audit route disclosed when relied on",
+        "sectionId": "valuation-reporting-and-service-providers",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-custody-rule-pooled-vehicle-audit-route",
+        "requirementGuidance": "If the adviser is registered or required to be registered with the Commission and relies on the pooled-vehicle audit route, confirm the memorandum discloses annual GAAP audits, delivery within 120 days after fiscal year end, an independent PCAOB-registered and inspected accountant, and a liquidation audit distributed promptly after completion.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "advisers-act-custody-pooled-vehicle-audit",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.206(4)-2(b)(4): Limited partnerships subject to annual audit",
+            "citation": "17 C.F.R. § 275.206(4)-2(b)(4)(i)–(iii).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206(4)-2",
+            "proposition": "For a pooled investment vehicle using the rule 206(4)-2(b)(4) audit route, the audit conditions are annual GAAP audited statements distributed to all limited partners within 120 days of fiscal year end, an independent accountant registered with and subject to regular inspection by the PCAOB, and prompt distribution of a liquidation audit.",
+            "verbatimQuote": "You are not required to comply with paragraphs (a)(2) and (a)(3) of this section and you shall be deemed to have complied with paragraph (a)(4) of this section with respect to the account of a limited partnership (or limited liability company, or another type of pooled investment vehicle) that is subject to audit (as defined in rule 1-02(d) of Regulation S-X (17 CFR 210.1-02(d))): (i) At least annually and distributes its audited financial statements prepared in accordance with generally accepted accounting principles to all limited partners (or members or other beneficial owners) within 120 days of the end of its fiscal year; (ii) By an independent public accountant that is registered with, and subject to regular inspection as of the commencement of the professional engagement period, and as of each calendar year-end, by, the Public Company Accounting Oversight Board in accordance with its rules; and (iii) Upon liquidation and distributes its audited financial statements prepared in accordance with generally accepted accounting principles to all limited partners (or members or other beneficial owners) promptly after the completion of such audit.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-custody-pooled-vehicle-audit"
+          }
+        ]
+      },
+      {
+        "requirementId": "describe-partnership-tax-treatment-and-schedule-k-1-timing",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.describe-partnership-tax-treatment-and-schedule-k-1-timing",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Partnership treatment, allocations, and realistic Schedule K-1 timing",
+        "sectionId": "tax-erisa-and-anti-money-laundering",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#describe-partnership-tax-treatment-and-schedule-k-1-timing",
+        "requirementGuidance": "Confirm the memorandum states that the fund is intended to be treated as a partnership rather than as an association taxable as a corporation, describes how profit, loss, and tax items are allocated among partners, and gives a realistic expectation for Schedule K-1 delivery. Confirm it also says the investor may owe tax on allocated income in a year the investor received no distribution and that the discussion is general, that no ruling has been sought, and that each investor should consult their own tax adviser.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tax-exempt-and-non-us-investors",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.address-tax-exempt-and-non-us-investors",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Tax-exempt and non-U.S. investor consequences addressed",
+        "sectionId": "tax-erisa-and-anti-money-laundering",
+        "itemNumber": "8.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#address-tax-exempt-and-non-us-investors",
+        "requirementGuidance": "Where the fund will accept tax-exempt or non-U.S. investors, confirm the memorandum addresses what that means for them: unrelated business taxable income where the fund uses leverage, and withholding, effectively connected income, and information-reporting consequences for non-U.S. investors. Where the fund does not intend to accept them, the cleaner disclosure is to say so and have the subscription documents match.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-erisa-plan-asset-status",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.address-erisa-plan-asset-status",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "ERISA 25 percent test stated class by class when benefit plan investors may subscribe",
+        "sectionId": "tax-erisa-and-anti-money-laundering",
+        "itemNumber": "8.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#address-erisa-plan-asset-status",
+        "requirementGuidance": "If benefit plan investors may subscribe, confirm the memorandum states the fund's intended plan-asset position and accurately describes the 25 percent test: immediately after each acquisition, benefit plan investors must hold less than 25 percent of the value of each class, excluding the interests specified by the regulation, with look-through treatment for entities whose underlying assets include plan assets. Confirm the monitoring and rejection or withdrawal mechanism or, if the fund expects to hold plan assets, the resulting fiduciary framework.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "erisa-plan-asset-25-percent-test",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "29 CFR 2510.3-101(f)(1): Participation by benefit plan investors",
+            "citation": "29 C.F.R. § 2510.3-101(f)(1).",
+            "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XXV/subchapter-B/part-2510/section-2510.3-101",
+            "proposition": "Benefit-plan-investor participation is significant when 25 percent or more of the value of any class of equity interests is held by benefit plan investors immediately after the most recent acquisition of any equity interest.",
+            "verbatimQuote": "Equity participation in an entity by benefit plan investors is “significant” on any date if, immediately after the most recent acquisition of any equity interest in the entity, 25 percent or more of the value of any class of equity interests in the entity is held by benefit plan investors (as defined in paragraph (f)(2)).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-erisa-plan-asset-25-percent-test"
+          }
+        ]
+      },
+      {
+        "requirementId": "describe-the-anti-money-laundering-program",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.describe-the-anti-money-laundering-program",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Investment-adviser AML rule described accurately when effective and applicable",
+        "sectionId": "tax-erisa-and-anti-money-laundering",
+        "itemNumber": "8.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#describe-the-anti-money-laundering-program",
+        "requirementGuidance": "If the adviser is SEC-registered or is an exempt reporting adviser and the memorandum is dated on or after January 1, 2028, confirm it describes the applicable AML and suspicious-activity-reporting program accurately. FinCEN postponed the investment-adviser rule from January 1, 2026 to January 1, 2028. Separately confirm the memorandum accurately describes any sanctions screening, information rights, refusal, freeze, or withdrawal procedures that apply before then.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fincen-investment-adviser-aml-postponement",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "FinCEN Issues Final Rule to Postpone Effective Date of Investment Adviser Rule to 2028",
+            "citation": "FinCEN, Final Rule Postponement Notice (Dec. 31, 2025).",
+            "url": "https://www.fincen.gov/news/news-releases/fincen-issues-final-rule-postpone-effective-date-investment-adviser-rule-2028",
+            "proposition": "FinCEN postponed the effective date of the investment-adviser AML/CFT and suspicious-activity-reporting rule from January 1, 2026 until January 1, 2028.",
+            "verbatimQuote": "Today, the U.S. Department of the Treasury’s Financial Crimes Enforcement Network (FinCEN) issued a final rule to extend the effective date of the rule establishing Anti-Money Laundering/Countering the Financing of Terrorism Program and Suspicious Activity Report Filing Requirements for Registered Investment Advisers and Exempt Reporting Advisers (IA AML Rule) from January 1, 2026, until January 1, 2028.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-fincen-investment-adviser-aml-postponement"
+          }
+        ]
+      },
+      {
+        "requirementId": "carry-the-standard-offering-legends",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.carry-the-standard-offering-legends",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Cover legends present, accurate, and consistent with the exemption claimed",
+        "sectionId": "legends-and-subscription-mechanics",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#carry-the-standard-offering-legends",
+        "requirementGuidance": "Confirm the cover carries the standard legends and that each is accurate for this offering: that the securities are not registered and are subject to restrictions on transfer and resale, that no regulator has approved the offering or passed on the accuracy of the memorandum, that the memorandum is confidential and for the named recipient, that it is not legal, tax, or investment advice, and that no person is authorized to give information beyond it. A legend that contradicts the body (a confidentiality legend in a memorandum for a publicly marketed rule 506(c) offering, or a legend promising an exemption the offering does not actually rely on) is worse than no legend, because it is the first thing a reader reads.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "describe-the-subscription-and-acceptance-process",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.describe-the-subscription-and-acceptance-process",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Subscription process, funding, closings, and acceptance discretion described",
+        "sectionId": "legends-and-subscription-mechanics",
+        "itemNumber": "9.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#describe-the-subscription-and-acceptance-process",
+        "requirementGuidance": "Confirm the memorandum states what a subscriber must deliver, where funds are sent and whether they are held in escrow before admission, when closings occur, and that the general partner may accept or reject any subscription in whole or in part in its discretion. Confirm the date of the memorandum appears on the cover and that the document says how a supplement or amendment will be delivered: a stale memorandum circulated after a term has changed is the failure mode this item exists to prevent.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "align-investor-representations-with-the-eligibility-standards",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-private-placement-memorandum.align-investor-representations-with-the-eligibility-standards",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Cross-document check: subscription representations compared with eligibility standards",
+        "sectionId": "legends-and-subscription-mechanics",
+        "itemNumber": "9.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#align-investor-representations-with-the-eligibility-standards",
+        "requirementGuidance": "Compare the subscription agreement's investor representations with every eligibility standard stated in the memorandum. Record the documents and versions compared, reviewer, review date, and any mismatch. The memorandum cannot establish which representations were signed, collected, or verified; this check belongs in a separate offering-compliance and closing checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "advisers-act-pooled-vehicle-antifraud-mechanics",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.206(4)-8(a): Pooled investment vehicles",
+            "citation": "17 C.F.R. § 275.206(4)-8(a)(1).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206(4)-8",
+            "proposition": "Rule 206(4)-8(a)(1) prohibits an adviser to a pooled investment vehicle from making an untrue statement of material fact, or omitting a material fact necessary to make its statements not misleading, to an investor or prospective investor.",
+            "verbatimQuote": "It shall constitute a fraudulent, deceptive, or manipulative act, practice, or course of business within the meaning of section 206(4) of the Act (15 U.S.C. 80b-6(4)) for any investment adviser to a pooled investment vehicle to: (1) Make any untrue statement of a material fact or to omit to state a material fact necessary to make the statements made, in the light of the circumstances under which they were made, not misleading, to any investor or prospective investor in the pooled investment vehicle; or",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-pooled-vehicle-antifraud-mechanics"
+          }
+        ]
+      }
+    ]
+  }
+}

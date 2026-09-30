@@ -19,6 +19,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Asset Purchase](asset-purchase/)
 * [Corporate Governance](corporate-governance/)
 * [Founder Separation](founder-separation/)
+* [Fund Formation](fund-formation/)
 * [Hiring](hiring/)
 * [International Agreements](international-agreements/)
 * [Invention Assignment](invention-assignment/)

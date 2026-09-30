@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "skill": "sell-side-transaction-readiness",
-  "snapshotAsOf": "2026-09-29",
-  "sourceCommit": "059a427ad5d125a9b40938e44e581032b951c79c",
+  "snapshotAsOf": "2026-09-30",
+  "sourceCommit": "37946a9384a7bd8d80d00176b85d31bf1e7328bd",
   "canonicalUrl": "https://openagreements.org/practice-guides/sell-side-transaction-readiness/us",
   "sourcePath": "content/pillars/sell-side-transaction-readiness.mdoc",
   "content": "content/practice-guide.md"
