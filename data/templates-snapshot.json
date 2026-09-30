@@ -19024,6 +19024,533 @@
       ]
     },
     {
+      "name": "openagreements-hedge-fund-limited-partnership-agreement",
+      "tier": "internal",
+      "display_name": "Hedge Fund Limited Partnership Agreement",
+      "category": "fund-formation",
+      "description": "Limited partnership agreement for a hedge fund, meaning an open-end private investment fund organized as a Delaware limited partnership and relying on Section 3(c)(1) of the Investment Company Act. Investors subscribe and withdraw on stated dates rather than committing capital to be drawn down, so it suits a fully funded trading fund and not a closed-end fund.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-hedge-fund-limited-partnership-agreement",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors using selected provisions from identified public private investment fund partnership agreements. The cited sources are not a representative market sample. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "fund_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the Delaware limited partnership",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the general partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "manager_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the investment manager",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Fund",
+          "description": "Effective date of the agreement",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "principal_office",
+          "type": "string",
+          "required": false,
+          "section": "Fund",
+          "description": "Principal office address of the partnership",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "fiscal_year_end",
+          "type": "string",
+          "required": false,
+          "section": "Fund",
+          "description": "Last day of the partnership fiscal year",
+          "default": "December 31",
+          "default_value_rationale": null
+        },
+        {
+          "name": "management_fee_rate",
+          "type": "string",
+          "required": true,
+          "section": "Economics",
+          "description": "Annual management fee rate expressed as a percentage",
+          "default": "2.0%",
+          "default_value_rationale": "A 2.0% rate is a drafting placeholder, not a value derived from the two-document partnership-agreement comparison; conform it to the approved term sheet."
+        },
+        {
+          "name": "management_fee_frequency",
+          "type": "enum",
+          "required": false,
+          "section": "Economics",
+          "description": "Frequency at which the management fee is charged in advance",
+          "default": "quarterly",
+          "default_value_rationale": "Quarterly charging is a drafting placeholder; neither agreement in the cited comparison charges quarterly.",
+          "options": [
+            "monthly",
+            "quarterly",
+            "semi-annually",
+            "annually"
+          ]
+        },
+        {
+          "name": "performance_allocation_percent",
+          "type": "string",
+          "required": true,
+          "section": "Economics",
+          "description": "Percentage of eligible net profits reallocated to the general partner",
+          "default": "20%",
+          "default_value_rationale": "Both agreements in the cited two-document comparison state a 20% rate or tier. The comparison is not a market sample."
+        },
+        {
+          "name": "lock_up_months",
+          "type": "number",
+          "required": true,
+          "section": "Liquidity",
+          "description": "Separate initial, nonrenewing lock-up period in months for each capital contribution",
+          "default": "12",
+          "default_value_rationale": "Twelve months is a drafting placeholder; the cited comparison records a two-year lock in one agreement and no observation in the other."
+        },
+        {
+          "name": "withdrawal_frequency",
+          "type": "enum",
+          "required": true,
+          "section": "Liquidity",
+          "description": "Frequency of permitted withdrawals after the applicable lock-up",
+          "default": "quarterly",
+          "default_value_rationale": "Quarterly withdrawals are a drafting placeholder; the cited comparison records daily withdrawals in one agreement and withdrawals on a portfolio event in the other.",
+          "options": [
+            "monthly",
+            "quarterly",
+            "semi-annually",
+            "annually",
+            "year-end-only"
+          ]
+        },
+        {
+          "name": "withdrawal_notice_days",
+          "type": "number",
+          "required": true,
+          "section": "Liquidity",
+          "description": "Calendar days of advance written notice required for a withdrawal",
+          "default": "60",
+          "default_value_rationale": "Sixty days is a drafting placeholder; the cited comparison records three days in one agreement and no observation in the other."
+        },
+        {
+          "name": "minimum_initial_investment",
+          "type": "string",
+          "required": true,
+          "section": "Subscriptions",
+          "description": "Minimum initial capital contribution stated as a formatted dollar amount",
+          "default": "$1,000,000",
+          "default_value_rationale": "One million dollars is a drafting placeholder; both memoranda in the cited comparison state $250,000. It remains subject to the general partner’s waiver discretion."
+        },
+        {
+          "name": "gate_percent",
+          "type": "string",
+          "required": true,
+          "section": "Liquidity",
+          "description": "Maximum percentage of partnership net asset value payable on one withdrawal date",
+          "default": "25%",
+          "default_value_rationale": "A 25% fund-level gate preserves meaningful periodic liquidity while protecting the portfolio."
+        },
+        {
+          "name": "limited_partner_name",
+          "type": "string",
+          "required": false,
+          "section": "Investor",
+          "description": "Legal name of the limited partner signing this counterpart",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "limited_partner_address",
+          "type": "string",
+          "required": false,
+          "section": "Investor",
+          "description": "Notice address of the limited partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "limited_partner_initial_contribution",
+          "type": "string",
+          "required": false,
+          "section": "Investor",
+          "description": "Initial capital contribution of the limited partner as a formatted dollar amount",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Name of the authorized signatory for the general partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Title of the authorized signatory for the general partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "arbitration_enabled",
+          "type": "boolean",
+          "required": false,
+          "section": "Disputes",
+          "description": "Replace the default Delaware Court of Chancery forum with binding arbitration seated in New York",
+          "default": "false",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
+      "name": "openagreements-hedge-fund-private-placement-memorandum",
+      "tier": "internal",
+      "display_name": "Hedge Fund Private Placement Memorandum",
+      "category": "fund-formation",
+      "description": "Private placement memorandum skeleton for a hedge fund, meaning an open-end private investment fund organized as a Delaware limited partnership and relying on Section 3(c)(1) of the Investment Company Act, offering its interests under Rule 506 of Regulation D.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-hedge-fund-private-placement-memorandum",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors using selected provisions from identified public private investment fund offering memoranda. The cited sources are not a representative market sample. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "fund_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the Delaware limited partnership",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the general partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "manager_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the investment manager",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "offering_date",
+          "type": "date",
+          "required": false,
+          "section": "Offering",
+          "description": "Date of the private placement memorandum",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "fund_address",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Principal business address of the fund",
+          "default": "[Fund address]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_address",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Principal business address of the general partner",
+          "default": "[General partner address]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "manager_address",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Principal business address of the investment manager",
+          "default": "[Investment manager address]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "adviser_registration_status",
+          "type": "enum",
+          "required": false,
+          "section": "Directory",
+          "description": "Registration or exempt-reporting status of the investment manager",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "sec_registered",
+            "sec_registration_required",
+            "state_registered",
+            "exempt_reporting_adviser",
+            "other_unregistered"
+          ]
+        },
+        {
+          "name": "administrator_name",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Legal name of the fund administrator",
+          "default": "[Administrator name]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "administrator_address",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Business address of the fund administrator",
+          "default": "[Administrator address]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "auditor_name",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Legal name of the independent auditor",
+          "default": "[Auditor name]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "auditor_address",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Business address of the independent auditor",
+          "default": "[Auditor address]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "prime_broker_name",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Legal name of the prime broker or custodian",
+          "default": "[Prime broker or custodian name]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "prime_broker_address",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Business address of the prime broker or custodian",
+          "default": "[Prime broker or custodian address]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "legal_counsel_name",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Legal name of fund legal counsel",
+          "default": "[Legal counsel name]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "legal_counsel_address",
+          "type": "string",
+          "required": false,
+          "section": "Directory",
+          "description": "Business address of fund legal counsel",
+          "default": "[Legal counsel address]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "management_fee_rate",
+          "type": "string",
+          "required": true,
+          "section": "Economics",
+          "description": "Annual management fee rate expressed as a percentage",
+          "default": "2.0%",
+          "default_value_rationale": "The Apex memorandum states 2.0% and Smithson states 1.0%/0.9%. The two-document comparison is not a market sample."
+        },
+        {
+          "name": "management_fee_frequency",
+          "type": "enum",
+          "required": false,
+          "section": "Economics",
+          "description": "Frequency at which the management fee is charged in advance",
+          "default": "quarterly",
+          "default_value_rationale": "Quarterly charging is a drafting placeholder; both memoranda in the cited comparison charge monthly.",
+          "options": [
+            "monthly",
+            "quarterly",
+            "semi-annually",
+            "annually"
+          ]
+        },
+        {
+          "name": "performance_allocation_percent",
+          "type": "string",
+          "required": true,
+          "section": "Economics",
+          "description": "Percentage of eligible net profits reallocated to the general partner",
+          "default": "20%",
+          "default_value_rationale": "A 20% reallocation is a drafting placeholder; the cited comparison records 25% in one memorandum and no performance allocation in the other."
+        },
+        {
+          "name": "lock_up_months",
+          "type": "number",
+          "required": true,
+          "section": "Liquidity",
+          "description": "Separate initial, nonrenewing lock-up period in months for each capital contribution",
+          "default": "12",
+          "default_value_rationale": "A twelve-month initial lock for each contribution is a selected liquidity term that can be changed for the fund."
+        },
+        {
+          "name": "withdrawal_frequency",
+          "type": "enum",
+          "required": true,
+          "section": "Liquidity",
+          "description": "Frequency of permitted withdrawals after the applicable lock-up",
+          "default": "quarterly",
+          "default_value_rationale": "Apex permits quarterly withdrawals and Smithson permits monthly withdrawals. The two-document comparison is not a market sample.",
+          "options": [
+            "monthly",
+            "quarterly",
+            "semi-annually",
+            "annually"
+          ]
+        },
+        {
+          "name": "withdrawal_notice_days",
+          "type": "number",
+          "required": true,
+          "section": "Liquidity",
+          "description": "Calendar days of advance written notice required for a withdrawal",
+          "default": "60",
+          "default_value_rationale": "Both memoranda in the cited comparison state sixty days. The comparison is not a market sample."
+        },
+        {
+          "name": "minimum_initial_investment",
+          "type": "string",
+          "required": true,
+          "section": "Subscriptions",
+          "description": "Minimum initial subscription stated as a formatted dollar amount",
+          "default": "$1,000,000",
+          "default_value_rationale": "One million dollars is a drafting placeholder; both memoranda in the cited comparison state $250,000. It remains subject to waiver."
+        },
+        {
+          "name": "gate_percent",
+          "type": "string",
+          "required": true,
+          "section": "Liquidity",
+          "description": "Maximum percentage of fund net asset value payable on one withdrawal date",
+          "default": "25%",
+          "default_value_rationale": "A 25% fund-level gate matches the corresponding partnership-agreement baseline."
+        },
+        {
+          "name": "investment_objective",
+          "type": "string",
+          "required": true,
+          "section": "Investment Program",
+          "description": "Concise statement of the fund investment objective, in one or two sentences of free text",
+          "default": "[The Fund seeks long-term capital appreciation by investing primarily in publicly traded U.S. equity securities.]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "investment_strategy",
+          "type": "string",
+          "required": true,
+          "section": "Investment Program",
+          "description": "Operational description of the strategy, markets, instruments, and process, as one or more paragraphs of free text",
+          "default": "[The Manager takes long and short positions in U.S.-listed companies with market capitalizations above $1 billion, selected through fundamental research. Positions are typically held for six to eighteen months.]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "leverage_policy",
+          "type": "string",
+          "required": false,
+          "section": "Investment Program",
+          "description": "Free-text description of permitted borrowing and leveraged exposure, including any limit and how it is measured",
+          "default": "[The Fund may borrow from its prime broker and may use short sales and exchange-traded options. Gross exposure will not exceed 200% of the Fund's net asset value, measured when each position is added.]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "concentration_policy",
+          "type": "string",
+          "required": false,
+          "section": "Investment Program",
+          "description": "Free-text description of diversification or concentration limits",
+          "default": "[No single issuer will represent more than 15% of the Fund's net asset value, measured when the position is added.]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "manager_principals_description",
+          "type": "string",
+          "required": false,
+          "section": "Management",
+          "description": "Free-text paragraph identifying each individual principal of the Manager by first and last name, with title and relevant investment experience; not an entity name",
+          "default": "[Jane Doe is the Manager's founder and chief investment officer. She previously spent ten years as a portfolio manager at a registered investment adviser.]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "strategy_specific_risks_description",
+          "type": "string",
+          "required": false,
+          "section": "Risk Factors",
+          "description": "Free-text narrative of the risks arising from the selected strategy and instruments, as one or more paragraphs",
+          "default": "[Short Selling. A short sale can lose more than the amount invested, because the price of a borrowed security has no upper limit.]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "placement_agent_compensation",
+          "type": "string",
+          "required": false,
+          "section": "Expenses",
+          "description": "Placement-agent recipient, compensation, payer, any fee offset or cap, and the payer of any excess above that offset or cap",
+          "default": "[None, or identify recipient, compensation, payer, offsets or caps, and who pays any excess]",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-privacy-policy",
       "tier": "internal",
       "display_name": "Consumer Privacy Policy",
