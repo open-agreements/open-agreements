@@ -1,0 +1,154 @@
+name: Hedge Fund Limited Partnership Agreement
+category: fund-formation
+description: Limited partnership agreement for a hedge fund, meaning an open-end private investment fund organized as a Delaware limited partnership and relying on Section 3(c)(1) of the Investment Company Act. Investors subscribe and withdraw on stated dates rather than committing capital to be drawn down, so it suits a fully funded trading fund and not a closed-end fund.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-hedge-fund-limited-partnership-agreement
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors using selected provisions from identified public private investment fund partnership agreements. The cited sources are not a representative market sample. Licensed under CC BY 4.0.
+fields:
+  - name: fund_name
+    type: string
+    description: Legal name of the Delaware limited partnership
+    section: Fund
+  - name: general_partner_name
+    type: string
+    description: Legal name of the general partner
+    section: Fund
+  - name: manager_name
+    type: string
+    description: Legal name of the investment manager
+    section: Fund
+  - name: effective_date
+    type: date
+    description: Effective date of the agreement
+    section: Fund
+  - name: principal_office
+    type: string
+    description: Principal office address of the partnership
+    section: Fund
+  - name: fiscal_year_end
+    type: string
+    description: Last day of the partnership fiscal year
+    default: December 31
+    section: Fund
+  - name: management_fee_rate
+    type: string
+    description: Annual management fee rate expressed as a percentage
+    default: 2.0%
+    default_value_rationale: A 2.0% rate is a drafting placeholder, not a value derived from the two-document partnership-agreement comparison; conform it to the approved term sheet.
+    rationale_source: editorial
+    section: Economics
+  - name: management_fee_frequency
+    type: enum
+    description: Frequency at which the management fee is charged in advance
+    options:
+      - monthly
+      - quarterly
+      - semi-annually
+      - annually
+    default: quarterly
+    default_value_rationale: Quarterly charging is a drafting placeholder; neither agreement in the cited comparison charges quarterly.
+    rationale_source: editorial
+    section: Economics
+  - name: performance_allocation_percent
+    type: string
+    description: Percentage of eligible net profits reallocated to the general partner
+    default: 20%
+    default_value_rationale: Both agreements in the cited two-document comparison state a 20% rate or tier. The comparison is not a market sample.
+    rationale_source: benchmark
+    benchmark_ref: limited-partnership-agreement/performance-allocation-rate
+    section: Economics
+  - name: lock_up_months
+    type: number
+    description: Separate initial, nonrenewing lock-up period in months for each capital contribution
+    default: 12
+    default_value_rationale: Twelve months is a drafting placeholder; the cited comparison records a two-year lock in one agreement and no observation in the other.
+    rationale_source: editorial
+    section: Liquidity
+  - name: withdrawal_frequency
+    type: enum
+    description: Frequency of permitted withdrawals after the applicable lock-up
+    options:
+      - monthly
+      - quarterly
+      - semi-annually
+      - annually
+      - year-end-only
+    default: quarterly
+    default_value_rationale: Quarterly withdrawals are a drafting placeholder; the cited comparison records daily withdrawals in one agreement and withdrawals on a portfolio event in the other.
+    rationale_source: editorial
+    section: Liquidity
+  - name: withdrawal_notice_days
+    type: number
+    description: Calendar days of advance written notice required for a withdrawal
+    default: 60
+    default_value_rationale: Sixty days is a drafting placeholder; the cited comparison records three days in one agreement and no observation in the other.
+    rationale_source: editorial
+    section: Liquidity
+  - name: minimum_initial_investment
+    type: string
+    description: Minimum initial capital contribution stated as a formatted dollar amount
+    default: $1,000,000
+    default_value_rationale: One million dollars is a drafting placeholder; both memoranda in the cited comparison state $250,000. It remains subject to the general partner’s waiver discretion.
+    rationale_source: editorial
+    section: Subscriptions
+  - name: gate_percent
+    type: string
+    description: Maximum percentage of partnership net asset value payable on one withdrawal date
+    default: 25%
+    default_value_rationale: A 25% fund-level gate preserves meaningful periodic liquidity while protecting the portfolio.
+    section: Liquidity
+  - name: limited_partner_name
+    type: string
+    description: Legal name of the limited partner signing this counterpart
+    section: Investor
+  - name: limited_partner_address
+    type: string
+    description: Notice address of the limited partner
+    section: Investor
+  - name: limited_partner_initial_contribution
+    type: string
+    description: Initial capital contribution of the limited partner as a formatted dollar amount
+    section: Investor
+  - name: general_partner_signatory_name
+    type: string
+    description: Name of the authorized signatory for the general partner
+    section: Signatures
+  - name: general_partner_signatory_title
+    type: string
+    description: Title of the authorized signatory for the general partner
+    section: Signatures
+  - name: arbitration_enabled
+    type: boolean
+    description: Replace the default Delaware Court of Chancery forum with binding arbitration seated in New York
+    help: Leave unselected to keep disputes in the Delaware Court of Chancery. Select to require arbitration under the American Arbitration Association Commercial Arbitration Rules, seated in New York, New York.
+    default: false
+    section: Disputes
+priority_fields:
+  - fund_name
+  - general_partner_name
+  - manager_name
+  - management_fee_rate
+  - performance_allocation_percent
+  - lock_up_months
+  - withdrawal_frequency
+  - withdrawal_notice_days
+  - minimum_initial_investment
+  - gate_percent
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - general-partner
+  - limited-partner
+signature_roles:
+  - general-partner
+  - limited-partner
+mutation_policy: terms
+maturity: experimental
