@@ -14,6 +14,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 
 * [Corporate Governance](corporate-governance/)
 * [Founder Separation](founder-separation/)
+* [Fund Formation](fund-formation/)
 * [Hiring](hiring/)
 * [Invention Assignment](invention-assignment/)
 * [Non Compete](non-compete/)
