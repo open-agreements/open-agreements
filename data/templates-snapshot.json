@@ -19024,6 +19024,87 @@
       ]
     },
     {
+      "name": "openagreements-hedge-fund-investor-questionnaire",
+      "tier": "internal",
+      "display_name": "Hedge Fund Investor Questionnaire",
+      "category": "fund-formation",
+      "description": "Investor questionnaire for a hedge fund, meaning an open-end private investment fund organized as a Delaware limited partnership, that collects the facts the general partner needs to decide whether a subscriber may be admitted: accredited-investor and qualified-client status, the Investment Company Act beneficial-owner count, benefit plan status, tax and anti-money-laundering information, bad-actor facts, and FINRA new-issue eligibility. It is completed with the Hedge Fund Subscription Agreement.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-hedge-fund-investor-questionnaire",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors using selected provisions from identified public private investment fund subscription documents filed with the SEC. The cited sources are not a representative market sample. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "fund_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the Delaware limited partnership",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the general partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "manager_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the investment manager",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "limited_partner_name",
+          "type": "string",
+          "required": true,
+          "section": "Investor",
+          "description": "Legal name of the subscribing investor completing the questionnaire",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_client_aum_threshold",
+          "type": "string",
+          "required": true,
+          "section": "Eligibility",
+          "description": "Assets-under-management amount in the Commission's most recent Rule 205-3 order, as a formatted dollar amount",
+          "default": "$1,400,000",
+          "default_value_rationale": "The amount set by SEC Order IA-6961 (2026) for Rule 205-3(d)(1)(i). It is indexed about every five years, so confirm the most recent order before use."
+        },
+        {
+          "name": "qualified_client_net_worth_threshold",
+          "type": "string",
+          "required": true,
+          "section": "Eligibility",
+          "description": "Net-worth amount in the Commission's most recent Rule 205-3 order, as a formatted dollar amount",
+          "default": "$2,700,000",
+          "default_value_rationale": "The amount set by SEC Order IA-6961 (2026) for Rule 205-3(d)(1)(ii)(A). It is indexed about every five years, so confirm the most recent order before use."
+        },
+        {
+          "name": "qualified_purchaser_screen",
+          "type": "boolean",
+          "required": true,
+          "section": "Eligibility",
+          "description": "Require every investor to complete the qualified-purchaser section, for a fund that relies on Section 3(c)(7)",
+          "default": "false",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-hedge-fund-limited-partnership-agreement",
       "tier": "internal",
       "display_name": "Hedge Fund Limited Partnership Agreement",
@@ -19546,6 +19627,159 @@
           "section": "Expenses",
           "description": "Placement-agent recipient, compensation, payer, any fee offset or cap, and the payer of any excess above that offset or cap",
           "default": "[None, or identify recipient, compensation, payer, offsets or caps, and who pays any excess]",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
+      "name": "openagreements-hedge-fund-subscription-agreement",
+      "tier": "internal",
+      "display_name": "Hedge Fund Subscription Agreement",
+      "category": "fund-formation",
+      "description": "Subscription agreement for a hedge fund, meaning an open-end private investment fund organized as a Delaware limited partnership, through which an investor applies to buy a limited partnership interest on a subscription date and becomes bound by the fund's limited partnership agreement. It is drafted for the manager's side and works with the Hedge Fund Investor Questionnaire, which collects the facts the investor representations rely on.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-hedge-fund-subscription-agreement",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors using selected provisions from identified public private investment fund subscription agreements filed with the SEC. The cited sources are not a representative market sample. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "fund_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the Delaware limited partnership",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the general partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "manager_name",
+          "type": "string",
+          "required": true,
+          "section": "Fund",
+          "description": "Legal name of the investment manager",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_address",
+          "type": "string",
+          "required": false,
+          "section": "Fund",
+          "description": "Principal business address of the general partner, used for notices to the fund",
+          "default": "[General partner address]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "offering_date",
+          "type": "date",
+          "required": true,
+          "section": "Offering",
+          "description": "Date of the private placement memorandum delivered with this agreement",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "minimum_initial_investment",
+          "type": "string",
+          "required": true,
+          "section": "Offering",
+          "description": "Minimum initial capital contribution stated as a formatted dollar amount",
+          "default": "$1,000,000",
+          "default_value_rationale": "Matches the limited partnership agreement and private placement memorandum placeholder so the three documents state one minimum; conform all three to the approved term sheet."
+        },
+        {
+          "name": "subscription_date",
+          "type": "date",
+          "required": true,
+          "section": "Subscription",
+          "description": "Subscription date as of which the investor asks to be admitted or to add capital",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "subscription_deadline_business_days",
+          "type": "number",
+          "required": false,
+          "section": "Subscription",
+          "description": "Business days before the subscription date by which completed documents and cleared funds must be received",
+          "default": "5",
+          "default_value_rationale": "Five business days is a drafting placeholder. The Persimmon Growth Partners Fund subscription documents filed with the SEC require documents five business days, and a wire four business days, before each monthly transaction date; one public filing is not a market sample."
+        },
+        {
+          "name": "limited_partner_name",
+          "type": "string",
+          "required": true,
+          "section": "Investor",
+          "description": "Legal name of the subscribing investor, which becomes the limited partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "limited_partner_address",
+          "type": "string",
+          "required": false,
+          "section": "Investor",
+          "description": "Notice address of the subscribing investor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "limited_partner_initial_contribution",
+          "type": "string",
+          "required": true,
+          "section": "Investor",
+          "description": "Capital contribution the investor subscribes for, as a formatted dollar amount",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "limited_partner_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Name of the individual signing for the investor, or the investor's own name if an individual",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "limited_partner_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Title or capacity of the individual signing for an entity investor",
+          "default": "[Title, or \"Individual\"]",
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Name of the authorized signatory for the general partner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_partner_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Title of the authorized signatory for the general partner",
+          "default": null,
           "default_value_rationale": null
         }
       ]

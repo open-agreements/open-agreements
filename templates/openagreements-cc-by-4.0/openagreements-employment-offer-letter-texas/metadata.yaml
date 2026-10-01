@@ -2,7 +2,7 @@ name: Employment Offer Letter (Texas)
 category: employment
 description: State-specific employee offer letter template for employees primarily working in Texas.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter-texas
-version: 0.1.0
+version: 0.5.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true

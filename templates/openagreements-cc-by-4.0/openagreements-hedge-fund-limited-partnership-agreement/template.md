@@ -36,7 +36,26 @@ The Partnership began upon the filing of its certificate of limited partnership 
 
 The Partnership may invest and trade in securities, financial instruments, commodities, currencies, derivatives, cash equivalents, and other property selected by the General Partner, and may conduct any lawful activity incidental to that purpose.
 
-Each Limited Partner represents on admission and throughout its investment that it is acquiring its Interest for investment and not with a view to distribution; must bear the economic risk of its investment for an indefinite period of time; and has provided complete information reasonably requested for securities-law, tax, sanctions, and anti-money-laundering compliance. The General Partner may rely on those representations and may require updated certifications. Each Limited Partner must be a person whom the General Partner reasonably believes is an accredited investor as defined in Regulation D under the Securities Act, or must otherwise be eligible to purchase its Interest under the exemption from registration on which the offering relies; the accredited-investor status of a Limited Partner's equity owners is required only where the Limited Partner's own status depends on them under Rule 501(a). Each Limited Partner must also meet the requirements of paragraph (d)(1) of Rule 205-3 under the Investment Advisers Act of 1940 or successor provision, and, where that rule treats the equity owners of a Limited Partner that is a private investment company as defined in Rule 205-3(d)(3), an investment company registered under the Investment Company Act, or a business development company as clients, each such equity owner must meet those requirements. That qualification is a condition of admission for every Limited Partner, whether or not the Performance Allocation is charged to it and whether or not Rule 205-3 applies to the Performance Allocation. The offering-eligibility requirement stated above, including the alternative eligibility route under the exemption from registration on which the offering relies, and that qualification may not be waived.
+Each Limited Partner represents on admission and throughout its investment that:
+
+- it is acquiring its Interest for investment and not with a view to distribution;
+- it must bear the economic risk of its investment for an indefinite period of time; and
+- it has provided complete information reasonably requested for securities-law, tax, sanctions, and anti-money-laundering compliance.
+
+The General Partner may rely on those representations and may require updated certifications.
+
+Each Limited Partner must be a person whom the General Partner reasonably believes is an accredited investor as defined in Regulation D under the Securities Act, or must otherwise be eligible to purchase its Interest under the exemption from registration on which the offering relies; the accredited-investor status of a Limited Partner's equity owners is required only where the Limited Partner's own status depends on them under Rule 501(a). The offering-eligibility requirement stated above, including the alternative eligibility route under the exemption from registration on which the offering relies, may not be waived.
+
+Each Limited Partner must also meet the requirements of paragraph (d)(1) of Rule 205-3 under the Investment Advisers Act of 1940 or successor provision, and, where that rule treats the equity owners of a Limited Partner that is a private investment company as defined in Rule 205-3(d)(3), an investment company registered under the Investment Company Act, or a business development company as clients, each such equity owner must meet those requirements. That qualification is a condition of admission for every Limited Partner, whether or not the Performance Allocation is charged to it and whether or not Rule 205-3 applies to the Performance Allocation.
+
+The General Partner may waive the qualified-client requirement for a particular person by a written side letter with that person, but only if, when the waiver is granted:
+
+- the Manager is neither registered nor required to be registered as an investment adviser with the Securities and Exchange Commission, so that section 205(a)(1) of the Investment Advisers Act of 1940 and Rule 205-3 do not apply to the Manager;
+- the Manager is neither registered nor required to be registered as an investment adviser under the law of any state that applies section 205(a)(1) or Rule 205-3, or a corresponding restriction on performance-based compensation, to advisers registered or required to be registered under that law;
+- the General Partner has confirmed under applicable state law that the Manager does not rely on any exemption from state investment-adviser registration that requires every beneficial owner of the Partnership's securities to be a qualified client; and
+- the private placement memorandum discloses that the General Partner may grant that waiver by side letter.
+
+A waiver relaxes only this Agreement's admission condition and does not waive, or require any person to waive, compliance with the Investment Advisers Act of 1940 or any state law. If, after a waiver is granted, applicable law would prohibit charging the Performance Allocation to the person for whom the qualified-client requirement was waived, the Partnership shall not charge the Performance Allocation to that person for any period in which it is prohibited, and the General Partner may require that person to withdraw under Article VIII.
 
 ### Partners and Limited Liability
 
@@ -130,7 +149,21 @@ The General Partner may waive or reduce a Performance Allocation for any Partner
 
 ### Exclusive Authority
 
-The General Partner has exclusive authority to manage and control the Partnership. It may acquire, hold, finance, hedge, lend, borrow against, vote, tender, exchange, and dispose of investments; sell short and use derivatives; open bank, custody, prime-brokerage, and trading accounts; borrow money and grant liens on Partnership assets; retain and terminate the Manager and other service providers; enter contracts; settle claims; make tax elections; establish reserves; value assets; admit Partners; require withdrawals; and take any other action it considers necessary or advisable for the Partnership's business.
+The General Partner has exclusive authority to manage and control the Partnership. It may:
+
+- acquire, hold, finance, hedge, lend, borrow against, vote, tender, exchange, and dispose of investments;
+- sell short and use derivatives;
+- open bank, custody, prime-brokerage, and trading accounts;
+- borrow money and grant liens on Partnership assets;
+- retain and terminate the Manager and other service providers;
+- enter contracts;
+- settle claims;
+- make tax elections;
+- establish reserves;
+- value assets;
+- admit Partners;
+- require withdrawals; and
+- take any other action it considers necessary or advisable for the Partnership's business.
 
 The General Partner may delegate authority to the Manager, an affiliate, or another agent and remains entitled to rely in good faith on professionals and service providers selected with reasonable care.
 
@@ -180,7 +213,16 @@ If aggregate withdrawal requests for a withdrawal date exceed {gate_percent} of 
 
 ### Suspension of Withdrawals
 
-The General Partner may suspend withdrawals, payment of withdrawal proceeds, or determination of net asset value when a principal market is closed or materially disrupted; reliable prices are unavailable; disposing of assets would be unlawful or materially prejudicial to Partners; a service provider or counterparty cannot complete material transactions; an emergency impairs the Partnership's operations; or the General Partner otherwise determines that a suspension is necessary to value assets fairly or protect the Partnership. A suspended request will be processed after the suspension ends unless withdrawn with the General Partner's consent.
+The General Partner may suspend withdrawals, payment of withdrawal proceeds, or determination of net asset value when:
+
+- a principal market is closed or materially disrupted;
+- reliable prices are unavailable;
+- disposing of assets would be unlawful or materially prejudicial to Partners;
+- a service provider or counterparty cannot complete material transactions;
+- an emergency impairs the Partnership's operations; or
+- the General Partner otherwise determines that a suspension is necessary to value assets fairly or protect the Partnership.
+
+A suspended request will be processed after the suspension ends unless withdrawn with the General Partner's consent.
 
 ### Payment of Withdrawals
 
@@ -200,7 +242,7 @@ The General Partner may require a Limited Partner to withdraw all or part of its
 
 ### Transfers
 
-No Limited Partner may sell, assign, pledge, encumber, or otherwise transfer any Interest without the General Partner's prior written consent, which may be withheld in its sole discretion. A purported transfer without consent is void. No transfer is valid or effective unless the General Partner in its sole discretion determines, after consultation with legal counsel acting for the Partnership, that the transfer will not require registration of any interest in the Partnership under any securities laws, subject the Partnership or the General Partner to a requirement to register under any securities or commodities laws, cause the Partnership to be treated as a publicly traded partnership for U.S. federal income tax purposes under section 7704(b) of the Internal Revenue Code, or violate or be inconsistent with any representation or warranty made by the transferring Limited Partner at the time it subscribed. No transfer is valid or effective unless the transferee, and each of its equity owners that Article I would require to qualify, satisfies the eligibility requirements that Article I imposes on a Limited Partner, including the qualified-client requirement, whether or not the transferee is admitted as a substitute Limited Partner. The transferring Limited Partner shall provide sufficient information to allow legal counsel acting for the Partnership to make that determination and shall pay or cause to be paid all of the Partnership's out-of-pocket expenses connected with the transfer.
+No Limited Partner may sell, assign, pledge, encumber, or otherwise transfer any Interest without the General Partner's prior written consent, which may be withheld in its sole discretion. A purported transfer without consent is void. No transfer is valid or effective unless the General Partner in its sole discretion determines, after consultation with legal counsel acting for the Partnership, that the transfer will not require registration of any interest in the Partnership under any securities laws, subject the Partnership or the General Partner to a requirement to register under any securities or commodities laws, cause the Partnership to be treated as a publicly traded partnership for U.S. federal income tax purposes under section 7704(b) of the Internal Revenue Code, or violate or be inconsistent with any representation or warranty made by the transferring Limited Partner at the time it subscribed. No transfer is valid or effective unless the transferee, and each of its equity owners that Article I would require to qualify, satisfies the eligibility requirements that Article I imposes on a Limited Partner, including the qualified-client requirement unless the General Partner has waived that requirement for the transferee under Article I, whether or not the transferee is admitted as a substitute Limited Partner. The transferring Limited Partner shall provide sufficient information to allow legal counsel acting for the Partnership to make that determination and shall pay or cause to be paid all of the Partnership's out-of-pocket expenses connected with the transfer.
 
 Unless admitted as a substitute Limited Partner, a permitted transferee receives only the economic rights transferred and no right to participate as a Partner.
 
@@ -238,19 +280,38 @@ Except as provided below, this Agreement may be amended by the General Partner w
 
 ### Unilateral Amendments
 
-Subject in every case to the affected-Partner consent protections in the preceding clause, the General Partner may amend this Agreement without Limited Partner consent to cure an ambiguity or inconsistency; correct an error; comply with law or preserve a tax, securities, or regulatory status; reflect an authorized admission, withdrawal, or transfer; or establish an account arrangement authorized by this Agreement. Each such amendment, and any other amendment made without Limited Partner consent, must not materially and adversely affect any Limited Partner. A change outside this authority requires the consents specified in the preceding clause. The General Partner shall give notice of a material amendment promptly after it becomes effective.
+Subject in every case to the affected-Partner consent protections in the preceding clause, the General Partner may amend this Agreement without Limited Partner consent to:
+
+- cure an ambiguity or inconsistency;
+- correct an error;
+- comply with law or preserve a tax, securities, or regulatory status;
+- reflect an authorized admission, withdrawal, or transfer; or
+- establish an account arrangement authorized by this Agreement.
+
+Each such amendment, and any other amendment made without Limited Partner consent, must not materially and adversely affect any Limited Partner. A change outside this authority requires the consents specified in the preceding clause. The General Partner shall give notice of a material amendment promptly after it becomes effective.
 
 ## Article XII: Dissolution and Winding Up
 
 ### Dissolution
 
-The Partnership will dissolve upon the General Partner's written election; the withdrawal, dissolution, bankruptcy, or other cessation of the General Partner unless the Partnership is continued in the manner permitted by Delaware law; the entry of a decree of judicial dissolution under Section 17-802 of the Delaware Revised Uniform Limited Partnership Act; or any other event requiring dissolution under this Agreement or non-waivable law.
+The Partnership will dissolve upon:
+
+- the General Partner's written election;
+- the withdrawal, dissolution, bankruptcy, or other cessation of the General Partner unless the Partnership is continued in the manner permitted by Delaware law;
+- the entry of a decree of judicial dissolution under Section 17-802 of the Delaware Revised Uniform Limited Partnership Act; or
+- any other event requiring dissolution under this Agreement or non-waivable law.
 
 The General Partner shall wind up the Partnership or appoint a liquidator. If the General Partner is unable to act or appoint a liquidator, Limited Partners holding more than fifty percent of the aggregate Limited Partner Capital Accounts shall appoint a person to liquidate the business and administrative affairs of the Partnership.
 
 ### Liquidation
 
-The liquidator shall sell or distribute Partnership assets and apply proceeds first to pay or make reasonable provision for the debts, liabilities and obligations of the Partnership, other than debts to the Partners as Partners, and the expenses of liquidation; second to such debts as are owing to the Partners as Partners; and then to Partners in proportion to their positive Capital Account balances after all final allocations, including the Performance Allocation. Subject to the Delaware Revised Uniform Limited Partnership Act, the liquidator shall establish appropriate reserves for all claims and obligations, including all contingent, conditional or unmatured claims and obligations, in an amount that the liquidator deems appropriate. Released reserves follow the same payment order. Assets distributed in kind shall be valued as of the actual date of their distribution, and any gain or loss (as computed for book purposes) attributable to property distributed in kind shall be included in the net profit or net loss for the Fiscal Period ending on the date of that distribution. No Partner is required to restore a negative Capital Account unless separately agreed in writing; this does not limit tax reimbursements expressly required by Article III.
+The liquidator shall sell or distribute Partnership assets and apply proceeds:
+
+- first to pay or make reasonable provision for the debts, liabilities and obligations of the Partnership, other than debts to the Partners as Partners, and the expenses of liquidation;
+- second to such debts as are owing to the Partners as Partners; and
+- then to Partners in proportion to their positive Capital Account balances after all final allocations, including the Performance Allocation.
+
+Subject to the Delaware Revised Uniform Limited Partnership Act, the liquidator shall establish appropriate reserves for all claims and obligations, including all contingent, conditional or unmatured claims and obligations, in an amount that the liquidator deems appropriate. Released reserves follow the same payment order. Assets distributed in kind shall be valued as of the actual date of their distribution, and any gain or loss (as computed for book purposes) attributable to property distributed in kind shall be included in the net profit or net loss for the Fiscal Period ending on the date of that distribution. No Partner is required to restore a negative Capital Account unless separately agreed in writing; this does not limit tax reimbursements expressly required by Article III.
 
 The Partnership terminates when its assets have been distributed, its liabilities have been discharged or reserved for, and its certificate of limited partnership has been canceled.
 
@@ -258,7 +319,14 @@ The Partnership terminates when its assets have been distributed, its liabilitie
 
 ### Power of Attorney
 
-Each Limited Partner irrevocably appoints the General Partner, with power of substitution, as its attorney-in-fact to execute, acknowledge, deliver, and file the certificate of limited partnership; amendments reflecting admissions, withdrawals, transfers, dissolution, or other actions authorized by this Agreement; tax or regulatory elections and filings; and instruments reasonably necessary to carry out this Agreement. This special power is coupled with an interest, survives incapacity and transfer, and ends for a Limited Partner after its complete withdrawal except for actions relating to periods when it was a Partner.
+Each Limited Partner irrevocably appoints the General Partner, with power of substitution, as its attorney-in-fact to execute, acknowledge, deliver, and file:
+
+- the certificate of limited partnership;
+- amendments reflecting admissions, withdrawals, transfers, dissolution, or other actions authorized by this Agreement;
+- tax or regulatory elections and filings; and
+- instruments reasonably necessary to carry out this Agreement.
+
+This special power is coupled with an interest, survives incapacity and transfer, and ends for a Limited Partner after its complete withdrawal except for actions relating to periods when it was a Partner.
 
 ### Notices
 
@@ -274,7 +342,7 @@ Notwithstanding the forum selected under Governing Law and Forum, any dispute, c
 
 ### Miscellaneous
 
-This Agreement, the subscription documents, and any written side letter between the Partnership and a Partner constitute the agreement concerning that Partner's Interest. Subject to the consents required by Article XI, each Partner agrees that any terms contained in a side letter with another Partner will govern with respect to that other Partner notwithstanding the provisions of this Agreement or any subscription agreement, except that no side letter may waive or modify the investor eligibility requirements of Article I, and that the Partner will have no rights in respect of those granted in favor of that other Partner.
+This Agreement, the subscription documents, and any written side letter between the Partnership and a Partner constitute the agreement concerning that Partner's Interest. Subject to the consents required by Article XI, each Partner agrees that any terms contained in a side letter with another Partner will govern with respect to that other Partner notwithstanding the provisions of this Agreement or any subscription agreement, except that no side letter may waive or modify the investor eligibility requirements of Article I other than by a waiver of the qualified-client requirement that satisfies the conditions Article I states for it, and that the Partner will have no rights in respect of those granted in favor of that other Partner.
 
 This Agreement shall be binding upon and inure to the benefit of the Partners and their respective successors, but the rights and obligations of the Partners shall not be assignable, transferable, or delegable except as provided in Article IX. If a provision is unenforceable, it will be enforced to the maximum extent permitted and the remaining provisions will continue in effect. Headings are for convenience only. This Agreement may be signed in counterparts and by electronic signature, each of which is treated as an original.
 
