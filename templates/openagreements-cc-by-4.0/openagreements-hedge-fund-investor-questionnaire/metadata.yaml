@@ -1,0 +1,68 @@
+name: Hedge Fund Investor Questionnaire
+category: fund-formation
+description: 'Investor questionnaire for a hedge fund, meaning an open-end private investment fund organized as a Delaware limited partnership, that collects the facts the general partner needs to decide whether a subscriber may be admitted: accredited-investor and qualified-client status, the Investment Company Act beneficial-owner count, benefit plan status, tax and anti-money-laundering information, bad-actor facts, and FINRA new-issue eligibility. It is completed with the Hedge Fund Subscription Agreement.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-hedge-fund-investor-questionnaire
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors using selected provisions from identified public private investment fund subscription documents filed with the SEC. The cited sources are not a representative market sample. Licensed under CC BY 4.0.
+fields:
+  - name: fund_name
+    type: string
+    description: Legal name of the Delaware limited partnership
+    section: Fund
+  - name: general_partner_name
+    type: string
+    description: Legal name of the general partner
+    section: Fund
+  - name: manager_name
+    type: string
+    description: Legal name of the investment manager
+    section: Fund
+  - name: limited_partner_name
+    type: string
+    description: Legal name of the subscribing investor completing the questionnaire
+    section: Investor
+  - name: qualified_client_aum_threshold
+    type: string
+    description: Assets-under-management amount in the Commission's most recent Rule 205-3 order, as a formatted dollar amount
+    default: $1,400,000
+    section: Eligibility
+    default_value_rationale: The amount set by SEC Order IA-6961 (2026) for Rule 205-3(d)(1)(i). It is indexed about every five years, so confirm the most recent order before use.
+    rationale_source: editorial
+  - name: qualified_client_net_worth_threshold
+    type: string
+    description: Net-worth amount in the Commission's most recent Rule 205-3 order, as a formatted dollar amount
+    default: $2,700,000
+    section: Eligibility
+    default_value_rationale: The amount set by SEC Order IA-6961 (2026) for Rule 205-3(d)(1)(ii)(A). It is indexed about every five years, so confirm the most recent order before use.
+    rationale_source: editorial
+  - name: qualified_purchaser_screen
+    type: boolean
+    description: Require every investor to complete the qualified-purchaser section, for a fund that relies on Section 3(c)(7)
+    help: Leave unselected for a fund that relies on Section 3(c)(1), as the Hedge Fund Limited Partnership Agreement and Private Placement Memorandum do; the qualified-purchaser section then serves only as a route to qualified-client status. Select it only after conforming those documents to a Section 3(c)(7) fund.
+    default: false
+    section: Eligibility
+priority_fields:
+  - fund_name
+  - general_partner_name
+  - manager_name
+  - limited_partner_name
+  - qualified_client_aum_threshold
+  - qualified_client_net_worth_threshold
+  - qualified_purchaser_screen
+artifact_kind: other
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - fund
+  - limited-partner
+signature_roles:
+  - limited-partner
+mutation_policy: terms
+maturity: experimental

@@ -7,7 +7,7 @@ description: >-
   in Illinois.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter-illinois
-version: 0.1.0
+version: 0.5.0
 license: CC-BY-4.0
 allow_derivatives: true
 artifact_kind: letter
@@ -33,7 +33,7 @@ style_id: openagreements-default-v1
 document:
   title: Employment Offer Letter
   label: OpenAgreements Employment Offer Letter (Illinois)
-  version: 0.1.0
+  version: 0.5.0
   license: Free to use under CC BY 4.0
   include_cloud_doc_line: true
   cover_row_height: 700
@@ -162,7 +162,13 @@ Employment is expected to begin on the start date listed in Cover Terms, subject
 {% clause id="base-compensation-and-payroll" %}
 ### Base Compensation and Payroll
 
-{% requirement id="base-compensation-stated" %}Company will pay the base salary or hourly compensation listed in Cover Terms{% /requirement %} {% requirement id="payroll-schedule" %}in accordance with Company's regular payroll practices{% /requirement %}, subject to {% requirement id="tax-withholding-deductions" %}required withholdings, deductions, and payroll tax obligations{% /requirement %}.
+{% requirement id="base-compensation-stated" %}Company will pay the base salary or hourly compensation listed in Cover Terms{% /requirement %} {% requirement id="payroll-schedule" %}in accordance with Company's regular payroll practices{% /requirement %}, subject to {% requirement id="tax-withholding-deductions" %}required withholdings, deductions, and payroll tax obligations{% /requirement %}. {% requirement id="salary-basis-pay-description" %}If Cover Terms list an annual base salary, that salary is paid in regular installments on Company's regular paydays and will not be reduced because of variations in the quality or quantity of Employee's work, except as applicable law permits{% /requirement %}.
+{% /clause %}
+
+{% clause id="wage-and-hour-classification" %}
+### Wage-and-Hour Classification
+
+Company will classify Employee's position under applicable wage-and-hour laws. {% requirement id="reclassification-reserved" %}Company may reclassify the position if the position's duties or applicable law change, or if Company determines that the position was not correctly classified. If Company reclassifies the position as eligible for overtime pay, Company may, after notice to Employee and for pay periods after the reclassification only, convert Employee's compensation to an hourly rate, and Employee will be paid overtime as applicable law requires{% /requirement %}. A reclassification does not reduce wages Employee earned before it takes effect.
 {% /clause %}
 
 {% clause id="state-specific-employment-notices" %}
@@ -198,7 +204,11 @@ Employee may be eligible to participate in benefit and {% requirement id="paid-t
 {% clause id="policies-confidentiality-and-company-property" %}
 ### Policies, Confidentiality, and Company Property
 
-As a condition of employment, {% requirement id="company-policies-compliance" %}Employee must comply with Company written policies, security requirements, confidentiality obligations, and lawful workplace rules{% /requirement %}, including policies covering information handling, code and device access, and return of Company property.
+As a condition of employment, {% requirement id="company-policies-compliance" %}Employee must comply with Company written policies, security requirements, and lawful workplace rules{% /requirement %}, including policies covering code and device access, and must return Company property when employment ends or when Company requests it. Employee's confidentiality obligations to Company are those set out in Employee's confidentiality and inventions assignment agreement, which Employee signs separately; this offer letter does not add to them.
+
+Nothing in this offer letter, or in any Company policy it requires Employee to follow, restricts Employee from reporting possible violations of law to a government agency or attorney, making disclosures protected by whistleblower laws, or discussing wages, hours, or working conditions as protected by law. Employee does not need Company's prior approval to make those disclosures or to notify Company that they were made.
+
+Employee's confidentiality and inventions assignment agreement sets out the notice of immunity under the Defend Trade Secrets Act (18 U.S.C. § 1833(b)).
 {% /clause %}
 
 {% clause id="outside-activities-and-conflicts" %}

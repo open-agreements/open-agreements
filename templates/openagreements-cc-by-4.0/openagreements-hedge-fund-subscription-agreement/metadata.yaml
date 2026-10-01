@@ -1,0 +1,102 @@
+name: Hedge Fund Subscription Agreement
+category: fund-formation
+description: Subscription agreement for a hedge fund, meaning an open-end private investment fund organized as a Delaware limited partnership, through which an investor applies to buy a limited partnership interest on a subscription date and becomes bound by the fund's limited partnership agreement. It is drafted for the manager's side and works with the Hedge Fund Investor Questionnaire, which collects the facts the investor representations rely on.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-hedge-fund-subscription-agreement
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors using selected provisions from identified public private investment fund subscription agreements filed with the SEC. The cited sources are not a representative market sample. Licensed under CC BY 4.0.
+fields:
+  - name: fund_name
+    type: string
+    description: Legal name of the Delaware limited partnership
+    section: Fund
+  - name: general_partner_name
+    type: string
+    description: Legal name of the general partner
+    section: Fund
+  - name: manager_name
+    type: string
+    description: Legal name of the investment manager
+    section: Fund
+  - name: general_partner_address
+    type: string
+    description: Principal business address of the general partner, used for notices to the fund
+    default: '[General partner address]'
+    section: Fund
+  - name: offering_date
+    type: date
+    description: Date of the private placement memorandum delivered with this agreement
+    section: Offering
+  - name: minimum_initial_investment
+    type: string
+    description: Minimum initial capital contribution stated as a formatted dollar amount
+    default: $1,000,000
+    section: Offering
+    default_value_rationale: Matches the limited partnership agreement and private placement memorandum placeholder so the three documents state one minimum; conform all three to the approved term sheet.
+    rationale_source: editorial
+  - name: subscription_date
+    type: date
+    description: Subscription date as of which the investor asks to be admitted or to add capital
+    section: Subscription
+  - name: subscription_deadline_business_days
+    type: number
+    description: Business days before the subscription date by which completed documents and cleared funds must be received
+    default: 5
+    section: Subscription
+    default_value_rationale: Five business days is a drafting placeholder. The Persimmon Growth Partners Fund subscription documents filed with the SEC require documents five business days, and a wire four business days, before each monthly transaction date; one public filing is not a market sample.
+    rationale_source: editorial
+  - name: limited_partner_name
+    type: string
+    description: Legal name of the subscribing investor, which becomes the limited partner
+    section: Investor
+  - name: limited_partner_address
+    type: string
+    description: Notice address of the subscribing investor
+    section: Investor
+  - name: limited_partner_initial_contribution
+    type: string
+    description: Capital contribution the investor subscribes for, as a formatted dollar amount
+    section: Investor
+  - name: limited_partner_signatory_name
+    type: string
+    description: Name of the individual signing for the investor, or the investor's own name if an individual
+    section: Signatures
+  - name: limited_partner_signatory_title
+    type: string
+    description: Title or capacity of the individual signing for an entity investor
+    default: '[Title, or "Individual"]'
+    section: Signatures
+  - name: general_partner_signatory_name
+    type: string
+    description: Name of the authorized signatory for the general partner
+    section: Signatures
+  - name: general_partner_signatory_title
+    type: string
+    description: Title of the authorized signatory for the general partner
+    section: Signatures
+priority_fields:
+  - fund_name
+  - general_partner_name
+  - manager_name
+  - limited_partner_name
+  - limited_partner_initial_contribution
+  - subscription_date
+  - minimum_initial_investment
+  - offering_date
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - general-partner
+  - limited-partner
+signature_roles:
+  - limited-partner
+  - general-partner
+mutation_policy: terms
+maturity: experimental

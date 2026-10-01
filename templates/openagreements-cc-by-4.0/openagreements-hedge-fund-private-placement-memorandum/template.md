@@ -20,7 +20,17 @@ The Interests have not been registered under the Securities Act or state securit
 
 The Fund will not register as an investment company under the Investment Company Act and intends to rely on Section 3(c)(1). The General Partner will limit beneficial ownership as necessary to preserve that exclusion, including the statutory limit of not more than one hundred beneficial owners.
 
-Each investor must be a person whom the General Partner reasonably believes is an accredited investor as defined in Regulation D under the Securities Act, or must otherwise be eligible to purchase Interests under the exemption on which the offering relies; an equity owner's accredited-investor status is required only where the investor's own status depends on it under Rule 501(a). Each investor must be a qualified client under paragraph (d)(1) of Rule 205-3 under the Investment Advisers Act of 1940, and, where that rule treats the equity owners of an investor that is a private investment company as defined in Rule 205-3(d)(3), a registered investment company, or a business development company as clients, each such equity owner must be a qualified client under that paragraph. That criterion is a condition of admission for every investor, whether or not the Performance Allocation is charged to it, and may not be waived.
+Each investor must be a person whom the General Partner reasonably believes is an accredited investor as defined in Regulation D under the Securities Act, or must otherwise be eligible to purchase Interests under the exemption on which the offering relies; an equity owner's accredited-investor status is required only where the investor's own status depends on it under Rule 501(a).
+
+Each investor must be a qualified client under paragraph (d)(1) of Rule 205-3 under the Investment Advisers Act of 1940, and, where that rule treats the equity owners of an investor that is a private investment company as defined in Rule 205-3(d)(3), a registered investment company, or a business development company as clients, each such equity owner must be a qualified client under that paragraph. That criterion is a condition of admission for every investor, whether or not the Performance Allocation is charged to it.
+
+The General Partner may waive it for a particular investor by written side letter, but only if, when the waiver is granted:
+
+- the Manager is neither registered nor required to be registered as an investment adviser with the Securities and Exchange Commission, so that section 205(a)(1) of the Investment Advisers Act of 1940 and Rule 205-3 do not apply to the Manager;
+- the Manager is neither registered nor required to be registered as an investment adviser under the law of any state that applies section 205(a)(1) or Rule 205-3, or a corresponding restriction on performance-based compensation, to advisers registered or required to be registered under that law; and
+- the General Partner has confirmed under applicable state law that the Manager does not rely on any exemption from state investment-adviser registration that requires every beneficial owner of the Fund's securities to be a qualified client.
+
+A waiver relaxes only the Fund's contractual admission condition; the accredited-investor requirement, including the alternative eligibility route under the exemption on which the offering relies, and the other eligibility requirements described in this memorandum may not be waived. If, after a waiver is granted, applicable law would prohibit charging the Performance Allocation to that investor, the Fund will not charge it to that investor for any period in which it is prohibited, and the General Partner may require the investor to withdraw.
 
 The Interests are speculative, illiquid, and involve a high degree of risk. An investor must be able to bear the loss of its entire investment for an indefinite period.
 
@@ -70,11 +80,11 @@ This summary highlights the principal terms of the offering. It is qualified in 
 
 **Reports.** The Limited Partnership Agreement requires the General Partner to furnish quarterly unaudited Capital Account statements, annual financial statements prepared in accordance with U.S. generally accepted accounting principles and audited by an independent certified public accountant within 120 days after each fiscal year end, audited financial statements promptly after completion of an audit upon liquidation, and annual tax information.
 
-**Transfers.** Interests may be transferred only with the General Partner's prior written consent and satisfaction of legal, tax, and regulatory conditions, and only to a transferee that meets the Fund's investor eligibility requirements, including qualified-client status, whether or not it is admitted as a substitute limited partner. A transferee succeeds to the transferor's Capital Account to the extent of the transferred Interest, together with its share of the performance calculation balances, and holds it as a separate Capital Account; a Performance Allocation is determined on a transfer only when a substitute limited partner is admitted for the transferor's entire Interest.
+**Transfers.** Interests may be transferred only with the General Partner's prior written consent and satisfaction of legal, tax, and regulatory conditions, and only to a transferee that meets the Fund's investor eligibility requirements, including qualified-client status unless the General Partner has waived that criterion for the transferee on the conditions stated under Important Offering Legends, whether or not it is admitted as a substitute limited partner. A transferee succeeds to the transferor's Capital Account to the extent of the transferred Interest, together with its share of the performance calculation balances, and holds it as a separate Capital Account; a Performance Allocation is determined on a transfer only when a substitute limited partner is admitted for the transferor's entire Interest.
 
 **Amendments and Winding Up.** Amendments generally require the General Partner and holders of more than fifty percent of Limited Partner Capital Accounts, subject to affected-investor consent protections. The General Partner may make specified administrative or compliance amendments without consent only if no Limited Partner is materially and adversely affected and the protected consent rights are respected. The General Partner winds up the Fund or appoints a liquidator; if it cannot do either, holders of more than fifty percent of Limited Partner Capital Accounts select the liquidator. Creditors and appropriate liability reserves are paid or provided for first, debts owing to investors as partners next, and remaining positive Capital Accounts last.
 
-**Side Letters.** The General Partner may enter side letters with particular investors that modify fees, liquidity, information rights, or other terms, subject to the Limited Partnership Agreement's required consents. Terms in a side letter with another investor govern with respect to that investor, and other investors will have no rights in respect of those terms. A side letter does not waive or modify the investor eligibility requirements described in this memorandum.
+**Side Letters.** The General Partner may enter side letters with particular investors that modify fees, liquidity, information rights, or other terms, subject to the Limited Partnership Agreement's required consents. Terms in a side letter with another investor govern with respect to that investor, and other investors will have no rights in respect of those terms. A side letter does not waive or modify the investor eligibility requirements described in this memorandum, except that the General Partner may waive the qualified-client criterion for a particular investor on the conditions stated under Important Offering Legends.
 
 ### Investment Program
 
@@ -106,7 +116,15 @@ The Management Fee and Performance Allocation are described in the Summary of Pr
 
 The Fund bears its actual organization and offering expenses, including legal, accounting, filing, printing, and subscription-processing costs.
 
-The Fund also bears brokerage and trading costs; borrowing and financing charges; administration, audit, tax, custody, prime-brokerage, legal, regulatory, insurance, research, technology dedicated to the Fund, valuation, reporting, investigation, litigation, and winding-up costs; taxes; and other expenses directly attributable to its business. The Manager bears its ordinary office rent, employee compensation, and general overhead except for costs specifically attributable to the Fund.
+The Fund also bears:
+
+- brokerage and trading costs;
+- borrowing and financing charges;
+- administration, audit, tax, custody, prime-brokerage, legal, regulatory, insurance, research, technology dedicated to the Fund, valuation, reporting, investigation, litigation, and winding-up costs;
+- taxes; and
+- other expenses directly attributable to its business.
+
+The Manager bears its ordinary office rent, employee compensation, and general overhead except for costs specifically attributable to the Fund.
 
 **Placement Agents.** {placement_agent_compensation}
 
@@ -214,8 +232,13 @@ Subscription money and withdrawal proceeds ordinarily must move through an accou
 
 ### Subscription Procedure
 
-A prospective investor must obtain and review this memorandum, the Limited Partnership Agreement, the subscription agreement, and the investor questionnaire; complete and sign the subscription materials; provide all requested tax and compliance documents; and send cleared funds by the deadline stated in the subscription instructions.
+A prospective investor must:
 
-The subscription documents require the investor to represent, among other matters, that it is an accredited investor (relying on its equity owners' status only where its own status depends on them) or is otherwise eligible under the exemption on which the offering relies; that it is a qualified client under paragraph (d)(1) of Rule 205-3 and that, if it is a private investment company as defined in Rule 205-3(d)(3), a registered investment company, or a business development company, each equity owner that rule treats as a client is also a qualified client under that paragraph; is acquiring the Interest for its own account and not for distribution; must bear the economic risk of its investment for an indefinite period of time; has reviewed the offering documents and had an opportunity to ask questions; if it is a benefit plan investor, that the investment was independently selected by the plan fiduciary; and has provided accurate tax and sanctions information and the information reasonably requested to identify any equity owners to whom either test applies.
+- obtain and review this memorandum, the Limited Partnership Agreement, the subscription agreement, and the investor questionnaire;
+- complete and sign the subscription materials;
+- provide all requested tax and compliance documents; and
+- send cleared funds by the deadline stated in the subscription instructions.
+
+The subscription documents require the investor to represent, among other matters, that it is an accredited investor (relying on its equity owners' status only where its own status depends on them) or is otherwise eligible under the exemption on which the offering relies; that it is a qualified client under paragraph (d)(1) of Rule 205-3 and that, if it is a private investment company as defined in Rule 205-3(d)(3), a registered investment company, or a business development company, each equity owner that rule treats as a client is also a qualified client under that paragraph, or, where the General Partner has waived the qualified-client criterion for it on the conditions stated under Important Offering Legends, that it holds that written waiver; is acquiring the Interest for its own account and not for distribution; must bear the economic risk of its investment for an indefinite period of time; has reviewed the offering documents and had an opportunity to ask questions; if it is a benefit plan investor, that the investment was independently selected by the plan fiduciary; and has provided accurate tax and sanctions information and the information reasonably requested to identify any equity owners to whom either test applies.
 
 The General Partner may accept or reject a subscription in whole or in part for any reason and may accept less than the stated minimum. A subscription is not accepted until the General Partner signs or otherwise records its acceptance and the investor is admitted as a Limited Partner.

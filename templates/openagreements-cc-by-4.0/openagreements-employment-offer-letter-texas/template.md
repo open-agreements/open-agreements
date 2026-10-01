@@ -56,7 +56,11 @@ Employment is expected to begin on the start date listed in Cover Terms, subject
 
 ### Base Compensation and Payroll
 
-Company will pay the base salary or hourly compensation listed in Cover Terms in accordance with Company's regular payroll practices, subject to required withholdings, deductions, and payroll tax obligations.
+Company will pay the base salary or hourly compensation listed in Cover Terms in accordance with Company's regular payroll practices, subject to required withholdings, deductions, and payroll tax obligations. If Cover Terms list an annual base salary, that salary is paid in regular installments on Company's regular paydays and will not be reduced because of variations in the quality or quantity of Employee's work, except as applicable law permits.
+
+### Wage-and-Hour Classification
+
+Company will classify Employee's position under applicable wage-and-hour laws. Company may reclassify the position if the position's duties or applicable law change, or if Company determines that the position was not correctly classified. If Company reclassifies the position as eligible for overtime pay, Company may, after notice to Employee and for pay periods after the reclassification only, convert Employee's compensation to an hourly rate, and Employee will be paid overtime as applicable law requires. A reclassification does not reduce wages Employee earned before it takes effect.
 
 ### Texas Employment Notices
 
@@ -80,7 +84,11 @@ Employee will primarily work from the location listed in Cover Terms. Company ma
 
 ### Policies, Confidentiality, and Company Property
 
-As a condition of employment, Employee must comply with Company written policies, security requirements, confidentiality obligations, and lawful workplace rules, including policies covering information handling, code and device access, and return of Company property.
+As a condition of employment, Employee must comply with Company written policies, security requirements, and lawful workplace rules, including policies covering code and device access, and must return Company property when employment ends or when Company requests it. Employee's confidentiality obligations to Company are those set out in Employee's confidentiality and inventions assignment agreement, which Employee signs separately; this offer letter does not add to them.
+
+Nothing in this offer letter, or in any Company policy it requires Employee to follow, restricts Employee from reporting possible violations of law to a government agency or attorney, making disclosures protected by whistleblower laws, or discussing wages, hours, or working conditions as protected by law. Employee does not need Company's prior approval to make those disclosures or to notify Company that they were made.
+
+Employee's confidentiality and inventions assignment agreement sets out the notice of immunity under the Defend Trade Secrets Act (18 U.S.C. § 1833(b)).
 
 ### Outside Activities and Conflicts
 
