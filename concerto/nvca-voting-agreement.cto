@@ -7,7 +7,7 @@ import org.accordproject.contract.Contract from https://models.accordproject.org
  *
  * Standard-form voting agreement for venture capital financings, covering
  * board composition, drag-along rights, and stockholder voting obligations.
- * Source: https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx
+ * Source: https://nvca.org/wp-content/uploads/2026/06/Voting-Agreement-Updated-June-2026.docx
  */
 
 enum Preferred_director_eligibility_basisType {
