@@ -1,9 +1,22 @@
 name: Professional Services Agreement
 category: professional-services
 description: >-
-  A professional services agreement with key terms, statement of work, and standard terms, based on Common Paper's
-  standard form. Covers consulting and professional services engagements including deliverables, IP ownership, fees, and
-  liability.
+  Common Paper's Professional Services Agreement covers consulting and can serve as a software implementation agreement.
+  Its SOW sets services, deliverables, fees and customer obligations; terms address deliverable IP, liability limits,
+  selected acceptance and written change orders.
+reader_note:
+  title: Implementation agreement for software services
+  text: >-
+    This form can cover a Provider's software implementation services for a Customer under a statement of work (SOW).
+    The SOW identifies services, deliverables, fees, timing and customer obligations. Project-specific milestones,
+    system access, dependencies and documentation or handoff deliverables belong in the agreed SOW; the form does not
+    supply a ready-made implementation plan. Section 1.4's acceptance process applies only when selected in the SOW,
+    with rejection and resubmission periods set there. A Deliverable not rejected within the Rejection Period is deemed
+    approved; rejection requires written notice with reasonable detail about unmet SOW requirements. A Change Order binds the parties only when they agree in writing.
+    This is a separate services agreement; Common Paper also offers a Cloud Service Agreement with an optional
+    Professional Services field for services alongside a software subscription.
+  href: /templates/common-paper-statement-of-work
+  linkLabel: Compare the Statement of Work template
 source_url: https://commonpaper.com/standards/professional-services-agreement/1.1
 version: '1.1'
 license: CC-BY-4.0

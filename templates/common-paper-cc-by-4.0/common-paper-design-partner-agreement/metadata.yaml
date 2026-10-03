@@ -1,8 +1,18 @@
 name: Design Partner Agreement
 category: deals-partnerships
 description: >-
-  A design partner agreement cover page and standard terms, based on Common Paper's standard form. Covers partnerships
-  where a company provides early access to a product in development in exchange for feedback and collaboration.
+  Common Paper's standard form can serve as a SaaS design partner agreement template for early product access,
+  feedback, optional fees, confidentiality and feedback ownership. Unlike a non-binding letter of intent (LOI),
+  its signed Cover Page incorporates the Standard Terms into a binding agreement.
+reader_note:
+  title: SaaS design partner agreement template or LOI?
+  text: >-
+    This form covers early product access and feedback during a design partnership. Both parties sign the Cover Page,
+    which incorporates Common Paper's version 1.3 Standard Terms into a binding agreement. Common Paper's Letter of
+    Intent instead assists negotiation of a future definitive agreement and is non-binding except for its
+    Confidentiality portion.
+  href: /templates/common-paper-letter-of-intent
+  linkLabel: Compare the Letter of Intent template
 source_url: https://commonpaper.com/standards/design-partner-agreement/1.3
 version: '1.3'
 license: CC-BY-4.0
