@@ -2,9 +2,9 @@
 type: Reviewer Checklist
 title: Privacy Policy Reviewer Checklist
 description: >-
-  A clause-by-clause reviewer checklist for privacy policies covering business
-  identification, data disclosures, consumer rights, opt-outs, consent, and
-  maintenance.
+  Review a U.S. privacy policy against identity and contact disclosures, data
+  uses, consumer rights, opt-outs, consent, and maintenance; pair it with the
+  applicable state law, including California CCPA/CPRA requirements.
 resource: 'https://openagreements.org/checklists/privacy-policy/us'
 timestamp: '2026-06-17'
 tags:
@@ -14,7 +14,11 @@ tags:
 
 # Privacy Policy Reviewer Checklist[^about]
 
-A clause-by-clause reviewer checklist for privacy policies covering business identification, data disclosures, consumer rights, opt-outs, consent, and maintenance.
+Review a U.S. privacy policy against identity and contact disclosures, data uses, consumer rights, opt-outs, consent, and maintenance; pair it with the applicable state law, including California CCPA/CPRA requirements.
+
+This checklist reviews the policy as a document. Its state-law items apply when the business falls within the relevant statute; a privacy policy does not by itself establish that the business is covered. For California, the review begins with the [CCPA/CPRA applicability and notice requirements](/practice-guides/privacy/us/california), then uses the [privacy policy template](/templates/openagreements-privacy-policy) and the review items below.
+
+The coverage decision, the live policy, and the delivery of each point-of-collection notice need separate records. In California, notice at collection is a timed obligation. For online collection, [11 CCR § 7012(f)](https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf) permits a link shown at or before collection that goes directly to the policy section containing the required notice; a generic link to the start of the policy is insufficient. The California guide identifies those duties before the policy text is scored against this checklist.
 
 ## Identity, scope, and contact {#identity-scope-and-contact}
 
@@ -50,9 +54,9 @@ A clause-by-clause reviewer checklist for privacy policies covering business ide
 
 ## Sensitive-data consent {#sensitive-data-consent}
 
-- [ ] **Opt-in consent for sensitive data** (Required) — When a state privacy regime covers the business and it processes sensitive data, it must satisfy the governing state's sensitive-data rule before processing. Opt-in affirmative consent is the rule in most states and the strict baseline a multistate policy should adopt; a few states, such as Iowa, instead require clear notice and an opt-out [^ia-icdpa-sensitive-optout]. Where consent governs, it is captured by an affirmative flow, not implied by a paragraph in the policy. [^tx-tdpsa-sensitive-consent] [#obtain-consent-for-sensitive-data]
+- [ ] **Opt-in consent for sensitive data** (Required) — The policy and consent flow match the governing state's sensitive-data rule before processing begins. Texas requires affirmative consent for sensitive-data processing [^tx-tdpsa-sensitive-consent]; Iowa instead requires clear notice and an opt-out [^ia-icdpa-sensitive-optout]. Where consent governs, the flow captures an affirmative choice rather than treating a paragraph in the policy as consent [^tx-tdpsa-sensitive-consent]. [#obtain-consent-for-sensitive-data]
 
-- [ ] **Known child data routed through COPPA** (Required) — When the business has known child users — a child under 13, as COPPA defines the term — it must handle that child's data in accordance with COPPA, as the comprehensive acts incorporate. This is a federal duty, tied to online collection by covered operators, independent of any state coverage flag, and it is narrower than the separate minor-user duties some states impose for teens. [^tx-tdpsa-sensitive-consent] [#route-known-child-data-through-coppa]
+- [ ] **Known child data routed through COPPA** (Required) — A website or online service directed to children, or an operator with actual knowledge that it collects personal information from a child under 13, complies with the [federal COPPA statute](https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title15-section6502); that duty applies regardless of state coverage. Where a state privacy law also incorporates COPPA for known-child sensitive data, that condition applies too: Texas and Iowa expressly do so [^tx-tdpsa-sensitive-consent][^ia-icdpa-sensitive-optout]. [#route-known-child-data-through-coppa]
 
 ## Maintenance and accuracy {#maintenance-and-accuracy}
 
@@ -108,9 +112,9 @@ A clause-by-clause reviewer checklist for privacy policies covering business ide
 
 [^co-cpa-uoom]: **Colo. Rev. Stat. § 6-1-1306** — "a controller that processes personal data for purposes of targeted advertising or the sale of personal data shall allow consumers to exercise the right to opt out of the processing of personal data concerning the consumer for purposes of targeted advertising or the sale of personal data pursuant to subsections (1)(a)(I)(A) and (1)(a)(I)(B) of this section by controllers through a user-selected universal opt-out mechanism that meets the technical specifications established by the attorney general pursuant to section 6-1-1313." *Colo. Rev. Stat. § 6-1-1306(1)(a)(IV)(B).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-06.pdf>
 
-[^ia-icdpa-sensitive-optout]: **Iowa Code § 715D.4** — "A controller shall not process sensitive data collected from a consumer for a nonexempt purpose without the consumer having been presented with clear notice and an opportunity to opt out of such processing, or, in the case of the processing of sensitive data concerning a known child, without processing such data in accordance with the federal Children’s Online Privacy Protection Act, 15 U.S.C. §6501 et seq." *Iowa Code § 715D.4(2).* <https://www.legis.iowa.gov/docs/code/2025/715D.4.pdf>
-
 [^tx-tdpsa-sensitive-consent]: **Tex. Bus. & Com. Code § 541.101** — "process the sensitive data of a consumer without obtaining the consumer's consent, or, in the case of processing the sensitive data of a known child, without processing that data in accordance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.)." *Tex. Bus. & Com. Code § 541.101(b)(4).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm>
+
+[^ia-icdpa-sensitive-optout]: **Iowa Code § 715D.4** — "A controller shall not process sensitive data collected from a consumer for a nonexempt purpose without the consumer having been presented with clear notice and an opportunity to opt out of such processing, or, in the case of the processing of sensitive data concerning a known child, without processing such data in accordance with the federal Children’s Online Privacy Protection Act, 15 U.S.C. §6501 et seq." *Iowa Code § 715D.4(2).* <https://www.legis.iowa.gov/docs/code/2025/715D.4.pdf>
 
 [^ca-ccpa-policy-contents]: **Cal. Civ. Code § 1798.130** — "Disclose the following information in its online privacy policy or policies if the business has an online privacy policy or policies and in any California-specific description of consumers’ privacy rights, or if the business does not maintain those policies, on its internet website, and update that information at least once every 12 months:" *Cal. Civ. Code § 1798.130(a)(5).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.130>
 

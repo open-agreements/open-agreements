@@ -1,5 +1,11 @@
 # Us Update Log
 
+## 2026-10-02
+* **Update**: Restore source cards for named cases: Pressed Steel, Karlin, Vita, Ashland, Dynamex, Mothering Justice (#2993) (#3080) (fc46f34)
+
+## 2026-09-30
+* **Update**: Add the federal whistleblower notice and pay-discussion question to U.S. invention-assignment and non-compete guides (#2948) (6c393c5)
+
 ## 2026-09-11
 * **Update**: Clarify guide answers and put supporting sources beside the claims (#2639) (0e3cf23)
 * **Update**: Improve employment documents and qualify observed practice-guide answers (#2634) (d7a16df)

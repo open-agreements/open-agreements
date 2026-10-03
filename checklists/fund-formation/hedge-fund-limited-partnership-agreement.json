@@ -95,8 +95,8 @@
         "sources": [
           {
             "sourceId": "solasglas-management-fee",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 3.6",
             "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 3.6 (dated May 1, 2026), filed as Exhibit 10.1 to Greenlight Capital Re, Ltd.",
             "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
@@ -107,8 +107,8 @@
           },
           {
             "sourceId": "lion-fund-incentive-and-hurdle",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.02",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.02 (dated May 26, 2021), filed as Exhibit 10.1 to Biglari Holdings Inc. Form 8-K.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -160,8 +160,8 @@
         "sources": [
           {
             "sourceId": "lion-fund-incentive-and-hurdle",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.02",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.02 (dated May 26, 2021), filed as Exhibit 10.1 to Biglari Holdings Inc. Form 8-K.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -173,8 +173,8 @@
           },
           {
             "sourceId": "third-point-incentive-allocation",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 4.1.2",
             "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 4.1.2 (dated July 31, 2018), filed as Exhibit 10.33.",
             "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
@@ -199,8 +199,8 @@
         "sources": [
           {
             "sourceId": "third-point-incentive-allocation",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 4.1.2",
             "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 4.1.2 (dated July 31, 2018), filed as Exhibit 10.33.",
             "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
@@ -211,8 +211,8 @@
           },
           {
             "sourceId": "lion-fund-incentive-and-hurdle",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.02",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.02 (dated May 26, 2021), filed as Exhibit 10.1 to Biglari Holdings Inc. Form 8-K.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -251,8 +251,8 @@
         "sources": [
           {
             "sourceId": "carlyle-hurdle-amount",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), Definitions (Hurdle Amount)",
             "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement, Definitions (dated Oct. 1, 2025), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
@@ -263,8 +263,8 @@
           },
           {
             "sourceId": "lion-fund-incentive-and-hurdle",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.02",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.02 (dated May 26, 2021), filed as Exhibit 10.1 to Biglari Holdings Inc. Form 8-K.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -290,8 +290,8 @@
         "sources": [
           {
             "sourceId": "third-point-incentive-allocation",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 4.1.2",
             "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 4.1.2 (dated July 31, 2018), filed as Exhibit 10.33.",
             "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
@@ -302,8 +302,8 @@
           },
           {
             "sourceId": "third-point-partial-withdrawal-allocation",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 4.1.2.7",
             "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 4.1.2.7 (dated July 31, 2018), filed as Exhibit 10.33.",
             "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
@@ -314,8 +314,8 @@
           },
           {
             "sourceId": "seidman-incentive-true-up",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 9(a)(iii)",
             "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 9(a)(iii) (dated Oct. 15, 2005), filed as Exhibit 99.5.",
             "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
@@ -326,8 +326,8 @@
           },
           {
             "sourceId": "stilwell-disposition-crystallization",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 4.3",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 4.3 (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -389,8 +389,8 @@
         "sources": [
           {
             "sourceId": "stilwell-two-year-lock-up",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), art. VI",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement art. VI (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -402,8 +402,8 @@
           },
           {
             "sourceId": "seidman-quarterly-withdrawal-and-notice",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 20",
             "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 20 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
             "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
@@ -414,8 +414,8 @@
           },
           {
             "sourceId": "lion-fund-five-year-withdrawal",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 11.01(A)",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 11.01(A) (dated May 26, 2021), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -440,8 +440,8 @@
         "sources": [
           {
             "sourceId": "seidman-quarterly-withdrawal-and-notice",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 20",
             "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 20 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
             "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
@@ -452,8 +452,8 @@
           },
           {
             "sourceId": "solasglas-business-day-withdrawal",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.2(b)",
             "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.2(b) (dated May 1, 2026), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
@@ -478,8 +478,8 @@
         "sources": [
           {
             "sourceId": "solasglas-three-business-days-notice",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.2",
             "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.2 (dated May 1, 2026), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
@@ -490,8 +490,8 @@
           },
           {
             "sourceId": "seidman-quarterly-withdrawal-and-notice",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 20",
             "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 20 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
             "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
@@ -502,8 +502,8 @@
           },
           {
             "sourceId": "lion-fund-march-notice-window",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 11.01(A)",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 11.01(A) (dated May 26, 2021), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -528,8 +528,8 @@
         "sources": [
           {
             "sourceId": "apollo-ten-percent-withdrawal-cap",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Apollo IG Core Replacement, L.P., Second Amended and Restated Agreement of Limited Partnership (2026), § 6.02(b)",
             "citation": "Apollo IG Core Replacement, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 6.02(b) (dated June 30, 2026), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm",
@@ -540,8 +540,8 @@
           },
           {
             "sourceId": "carlyle-three-percent-redemption-cap",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), Annex B (Redemption Program)",
             "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement, Annex B (dated Oct. 1, 2025), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
@@ -566,8 +566,8 @@
         "sources": [
           {
             "sourceId": "carlyle-redemption-program-suspension",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), § 8.6 (Redemption of Units)",
             "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement § 8.6 (dated Oct. 1, 2025), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
@@ -578,8 +578,8 @@
           },
           {
             "sourceId": "apollo-suspension-power",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Apollo IG Core Replacement, L.P., Second Amended and Restated Agreement of Limited Partnership (2026), § 6.07(b)",
             "citation": "Apollo IG Core Replacement, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 6.07(b) (dated June 30, 2026), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm",
@@ -605,8 +605,8 @@
         "sources": [
           {
             "sourceId": "stilwell-audit-holdback",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 6.3",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 6.3 (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -617,8 +617,8 @@
           },
           {
             "sourceId": "stilwell-withdrawal-reserves",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 6.3(h)",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 6.3(h) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -643,8 +643,8 @@
         "sources": [
           {
             "sourceId": "carlyle-early-redemption-deduction",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), Annex B (Early Redemption Deduction)",
             "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement, Annex B (dated Oct. 1, 2025), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
@@ -682,8 +682,8 @@
         "sources": [
           {
             "sourceId": "stilwell-compulsory-withdrawal",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 6.3(g)",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 6.3(g) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -695,8 +695,8 @@
           },
           {
             "sourceId": "lion-fund-mandatory-withdrawal",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 8.04 (Mandatory Withdrawal)",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 8.04 (dated May 26, 2021), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -708,8 +708,8 @@
           },
           {
             "sourceId": "seidman-forced-withdrawal",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 20",
             "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 20 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
             "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
@@ -745,8 +745,8 @@
           },
           {
             "sourceId": "solasglas-substitution-consent",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.3(d)",
             "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.3(d) (dated May 1, 2026), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
@@ -757,8 +757,8 @@
           },
           {
             "sourceId": "solasglas-transfer-consent",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.3(b)",
             "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.3(b) (dated May 1, 2026), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
@@ -769,8 +769,8 @@
           },
           {
             "sourceId": "stilwell-transfer-consent",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 6.1(b)",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 6.1(b) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -820,8 +820,8 @@
         "sources": [
           {
             "sourceId": "lion-fund-capital-account-rules",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 1.09",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 1.09 (dated May 26, 2021), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -870,8 +870,8 @@
           },
           {
             "sourceId": "stilwell-admission-discretion",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 3.1(a)",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 3.1(a) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -882,8 +882,8 @@
           },
           {
             "sourceId": "solasglas-admission-unanimous-consent",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 5.1(a)(i)",
             "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 5.1(a)(i) (dated May 1, 2026), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
@@ -958,8 +958,8 @@
           },
           {
             "sourceId": "lion-fund-new-issues",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 5.06 (New Issues)",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 5.06 (dated May 26, 2021), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -984,8 +984,8 @@
         "sources": [
           {
             "sourceId": "solasglas-designated-securities",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Solasglas Investments, LP, Third Amended and Restated Exempted Limited Partnership Agreement (2026), § 3.5(b)",
             "citation": "Solasglas Investments, LP, Third Am. & Restated Exempted Ltd. P'ship Agreement § 3.5(b) (dated May 1, 2026), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1385613/000138561326000098/a3rdarlpaforsolasglasinves.htm",
@@ -996,8 +996,8 @@
           },
           {
             "sourceId": "lion-fund-segregated-accounts",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 14.07 (Amendments)",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 14.07 (dated May 26, 2021), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -1008,8 +1008,8 @@
           },
           {
             "sourceId": "stilwell-deficit-to-general-partner",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 4.4",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 4.4 (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -1072,8 +1072,8 @@
         "sources": [
           {
             "sourceId": "carlyle-disabling-conduct",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), § 4.2(a) (Exculpation)",
             "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement § 4.2(a) (dated Oct. 1, 2025), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
@@ -1155,13 +1155,13 @@
         "sectionId": "what-the-manager-may-do",
         "itemNumber": "4.7",
         "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#authorize-side-letters",
-        "requirementGuidance": "Check whether the agreement expressly authorizes separate written agreements with individual investors that modify its terms, since without that authority a side letter sits awkwardly against the agreement it contradicts. Some filed agreements authorize side letters expressly, whether defined as side letters or similar separate written agreements, the provisions of which may modify the terms of this Agreement or as agreements with certain limited partners altering or supplementing its terms. Where the power exists, note whether anything requires disclosure to other investors or a most-favoured-nation election.",
+        "requirementGuidance": "Check whether the agreement expressly authorizes separate written agreements with individual investors that modify its terms, since without that authority a side letter sits awkwardly against the agreement it contradicts. Some filed agreements authorize side letters expressly, whether defined as side letters or similar separate written agreements, the provisions of which may modify the terms of this Agreement or as agreements with certain limited partners altering or supplementing its terms. Where the power exists, note whether anything requires disclosure to other investors or a most-favoured-nation election. Where the agreement makes qualified-client status an admission condition for every investor, check whether the side-letter clause carves eligibility out of what a side letter may change and, if it lets the general partner waive the qualified-client screen, confirm that the waiver is available only to a manager neither registered nor required to be registered with the Commission, so that section 205(a)(1) does not reach it, that it is conditioned, after checking the law of each state where the manager is registered, is required to be registered, or relies on a registration exemption, on that law neither applying the same restriction to the manager nor tying the exemption to every investor being a qualified client, that the performance allocation stops for a waived investor if a later change would make charging it unlawful, and that the waiver is disclosed in the memorandum. The offering-eligibility requirement, accredited-investor status or eligibility under the exemption on which the offering relies, should stay non-waivable.",
         "variants": [],
         "sources": [
           {
             "sourceId": "third-point-side-letters",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 1.52 (Other Agreements)",
             "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 1.52 (dated July 31, 2018), filed as Exhibit 10.33.",
             "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
@@ -1172,8 +1172,8 @@
           },
           {
             "sourceId": "apollo-other-agreements",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Apollo IG Core Replacement, L.P., Second Amended and Restated Agreement of Limited Partnership (2026), § 11.02 (Other Agreements)",
             "citation": "Apollo IG Core Replacement, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 11.02 (dated June 30, 2026), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm",
@@ -1182,6 +1182,17 @@
             "verbatimQuote": "Notwithstanding anything to the contrary in this Agreement, or of any Subscription Agreement, the Partners hereto acknowledge and agree that the General Partner on its own behalf or on behalf of the Partnership, in its sole discretion and without prior notice to or further act, approval or consent of any Limited Partner, may enter into agreements (“Other Agreements”) with certain Limited Partners that have the effect of establishing rights under, or altering or supplementing the terms of, this Agreement or of any Subscription Agreement with respect to such Limited Partner, including with respect to the Management Fee, withdrawal rights, information rights, voting rights or other rights or the currency in respect of which such Interests are offered.",
             "pullQuoteLocator": "Notwithstanding anything to the contrary in this Agreement, or|which such Interests are offered.",
             "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-apollo-other-agreements"
+          },
+          {
+            "sourceId": "advisers-act-205-a-1-side-letters",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Investment Advisers Act of 1940 § 205(a)(1), 15 U.S.C. § 80b-5(a)(1)",
+            "citation": "15 U.S.C. § 80b-5(a)(1).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section80b-5&num=0&edition=prelim",
+            "proposition": "Section 205(a)(1) reaches only an investment adviser registered or required to be registered with the Commission, so its restriction on gain-based compensation does not apply to a manager that is neither.",
+            "verbatimQuote": "No investment adviser registered or required to be registered with the Commission shall enter into, extend, or renew any investment advisory contract, or in any way perform any investment advisory contract entered into, extended, or renewed on or after November 1, 1940, if such contract- (1) provides for compensation to the investment adviser on the basis of a share of capital gains upon or capital appreciation of the funds or any portion of the funds of the client;",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-limited-partnership-agreement#src-advisers-act-205-a-1-side-letters"
           }
         ]
       },
@@ -1225,8 +1236,8 @@
         "sources": [
           {
             "sourceId": "third-point-expense-cap",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Third Point Enhanced LP, Amended and Restated Exempted Limited Partnership Agreement (2018), § 8.2",
             "citation": "Third Point Enhanced LP, Am. & Restated Exempted Ltd. P'ship Agreement § 8.2 (dated July 31, 2018), filed as Exhibit 10.33.",
             "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
@@ -1237,8 +1248,8 @@
           },
           {
             "sourceId": "endowment-master-expense-cap",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Endowment PMF Master Fund, L.P., Amended and Restated Agreement of Limited Partnership (2014), § 3.11(b)",
             "citation": "The Endowment PMF Master Fund, L.P., Am. & Restated Agreement of Ltd. P'ship § 3.11(b) (dated Feb. 18, 2014), filed as Exhibit 99.A.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1597218/000119312514060638/d667770dex99a1.htm",
@@ -1340,8 +1351,8 @@
         "sources": [
           {
             "sourceId": "seidman-amendment-threshold",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Seidman Investment Partnership II, L.P., Second Amended and Restated Agreement of Limited Partnership (2005), § 26",
             "citation": "Seidman Investment Partnership II, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 26 (dated Oct. 15, 2005), filed as Exhibit 99.5.",
             "url": "https://www.sec.gov/Archives/edgar/data/1026081/000113379606000145/cb61088ex995.txt",
@@ -1352,8 +1363,8 @@
           },
           {
             "sourceId": "lion-fund-economic-amendment-consent",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Lion Fund II, L.P., Second Amended and Restated Partnership Agreement (2021), § 14.07 (Amendments)",
             "citation": "The Lion Fund II, L.P., Second Am. & Restated P'ship Agreement § 14.07 (dated May 26, 2021), filed as Exhibit 10.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1726173/000172617321000019/exhibit101to8-k.htm",
@@ -1378,8 +1389,8 @@
         "sources": [
           {
             "sourceId": "stilwell-unilateral-amendment",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 9.1(a)",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 9.1(a) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -1390,8 +1401,8 @@
           },
           {
             "sourceId": "carlyle-tax-allocation-amendment",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), § 10.5",
             "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement § 10.5 (dated Oct. 1, 2025), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
@@ -1402,8 +1413,8 @@
           },
           {
             "sourceId": "stilwell-affected-partner-consent",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Stilwell Value Partners I, L.P., Amended and Restated Limited Partnership Agreement (2008), § 9.1(b)",
             "citation": "Stilwell Value Partners I, L.P., Am. & Restated Ltd. P'ship Agreement § 9.1(b) (dated Oct. 1, 2008), filed as Exhibit 10.56.",
             "url": "https://www.sec.gov/Archives/edgar/data/1118148/000095012310023944/k48957exv10w56.htm",
@@ -1414,8 +1425,8 @@
           },
           {
             "sourceId": "carlyle-independent-director-amendment",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Carlyle Private Equity Partners Fund, L.P., Amended and Restated Limited Partnership Agreement (2025), § 11.3(a)",
             "citation": "Carlyle Private Equity Partners Fund, L.P., Am. & Restated Ltd. P'ship Agreement § 11.3(a) (dated Oct. 1, 2025), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2065337/000206533725000014/exhibit31-cpeparlimitedpar.htm",
@@ -1426,8 +1437,8 @@
           },
           {
             "sourceId": "apollo-adverse-amendment-withdrawal",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Apollo IG Core Replacement, L.P., Second Amended and Restated Agreement of Limited Partnership (2026), § 11.05(d)",
             "citation": "Apollo IG Core Replacement, L.P., Second Am. & Restated Agreement of Ltd. P'ship § 11.05(d) (dated June 30, 2026), filed as Exhibit 3.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/2074450/000095014226002263/eh260816275_ex0301.htm",
@@ -1517,8 +1528,8 @@
         "sources": [
           {
             "sourceId": "endowment-master-arbitration",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "The Endowment PMF Master Fund, L.P., Amended and Restated Agreement of Limited Partnership (2014), § 8.5 (Arbitration)",
             "citation": "The Endowment PMF Master Fund, L.P., Am. & Restated Agreement of Ltd. P'ship § 8.5 (dated Feb. 18, 2014), filed as Exhibit 99.A.1.",
             "url": "https://www.sec.gov/Archives/edgar/data/1597218/000119312514060638/d667770dex99a1.htm",

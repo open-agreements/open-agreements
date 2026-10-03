@@ -1,5 +1,17 @@
 # Us Update Log
 
+## 2026-10-02
+* **Update**: content: put Illinois minimum-wage demand in rendered SEO metadata (16c2448)
+* **Update**: content: index the observed Illinois wage question verbatim (19d57e6)
+* **Update**: content: address Illinois demand peer-review wording findings (4216cc2)
+* **Update**: content: answer Illinois minimum-wage visitor searches (a3c949e)
+* **Update**: content: record illinois source verification date (ab3468a)
+* **Update**: content: keep local wage caution focused on payment (dab5670)
+* **Update**: Restore source cards for named cases: Pressed Steel, Karlin, Vita, Ashland, Dynamex, Mothering Justice (#2993) (#3080) (fc46f34)
+
+## 2026-10-01
+* **Update**: Wage and hour: Nevada practice guide (#2962) (543702c)
+
 ## 2026-09-28
 * **Update**: content(surveys): upcoming-law notes restate only their cards' quotes (952e290)
 * **Update**: content(surveys): list Colorado's 2027 farm overtime threshold and Washington's ESHB 1155 as upcoming law (b38d4a7)

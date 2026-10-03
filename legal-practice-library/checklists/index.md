@@ -3,6 +3,7 @@
 ## Sections
 
 * [Corporate Governance](corporate-governance/)
+* [Employment Offer Letter](employment-offer-letter/)
 * [Founder Separation](founder-separation/)
 * [Fund Formation](fund-formation/)
 * [Hiring](hiring/)

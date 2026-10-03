@@ -4,7 +4,7 @@ title: Wood v. May
 description: 'Wood v. May, 73 Wn.2d 307 (1968). — quoted in 2 document(s).'
 citation: 'Wood v. May, 73 Wn.2d 307 (1968).'
 resource: 'https://www.courtlistener.com/opinion/1207148/wood-v-may/'
-timestamp: '2026-06-11'
+timestamp: '2026-09-30'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/washington'

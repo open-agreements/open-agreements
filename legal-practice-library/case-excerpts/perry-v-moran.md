@@ -4,7 +4,7 @@ title: Perry v. Moran
 description: 'Perry v. Moran, 109 Wn.2d 691 (1987). — quoted in 1 document(s).'
 citation: 'Perry v. Moran, 109 Wn.2d 691 (1987).'
 resource: 'https://www.courtlistener.com/opinion/1453982/perry-v-moran/'
-timestamp: '2026-06-03'
+timestamp: '2026-09-30'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/washington'

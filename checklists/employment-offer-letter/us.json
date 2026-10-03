@@ -1,0 +1,1313 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/employment-offer-letter/us",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/employment-offer-letter/us.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/employment-offer-letter/us",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/employment-offer-letter/us/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/employment-offer-letter/us/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "external": true,
+      "title": "CC BY 4.0"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-employment-offer-letter",
+      "type": "text/html",
+      "title": "Employment Offer Letter"
+    }
+  ],
+  "data": {
+    "topic": "employment-offer-letter",
+    "slug": "us",
+    "frontmatter": {
+      "title": "Employment Offer Letter Reviewer Checklist",
+      "description": "A reviewer checklist for employment offer letters covering pay, classification, equity, benefits, work terms, conditions, and acceptance.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "U.S. employers (federal law with state notice examples)",
+      "lastReviewed": "2026-09-30",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 34,
+    "sections": [
+      {
+        "sectionId": "compensation-and-payroll",
+        "label": "Compensation and payroll"
+      },
+      {
+        "sectionId": "wage-and-hour-classification",
+        "label": "Wage-and-hour classification"
+      },
+      {
+        "sectionId": "equity-and-benefits",
+        "label": "Equity and benefits"
+      },
+      {
+        "sectionId": "role-reporting-and-schedule",
+        "label": "Role, reporting, and schedule"
+      },
+      {
+        "sectionId": "work-location-and-arrangement",
+        "label": "Work location and arrangement"
+      },
+      {
+        "sectionId": "conditions-of-employment-and-conduct",
+        "label": "Conditions of employment and conduct"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "offer-mechanics",
+        "label": "Offer mechanics"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "state-base-compensation",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-base-compensation",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Base salary or hourly rate",
+        "sectionId": "compensation-and-payroll",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-base-compensation",
+        "requirementGuidance": "Record whether the letter states a base salary or hourly rate and the period it covers. If absent or inconsistent with the approved offer, note the unresolved pay term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-zura-salary",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=The%20Company%20will%20pay%20you,the%20Company%E2%80%99s%20standard%20payroll%20practices.",
+            "proposition": "The Zura Bio offer letter states an annualized base salary, paid semi-monthly under the company's standard payroll practices, less withholdings.",
+            "verbatimQuote": "The Company will pay you an annualized base salary of $655,000 USD, paid semi-monthly, less payroll deductions, required taxes, withholdings and payable in accordance with the Company’s standard payroll practices.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q1-zura-salary"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-payroll-schedule",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-payroll-schedule",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Payment on the regular payroll schedule",
+        "sectionId": "compensation-and-payroll",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-payroll-schedule",
+        "requirementGuidance": "Record whether the letter says compensation is paid on the company’s regular payroll schedule. If it names a different schedule or none, note the discrepancy for payroll review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-nightfood-payroll",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026)",
+            "citation": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026), filed as Exhibit 10.3.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm#:~:text=The%20Company%20will%20pay%20Employee,standard%20payroll%20practices%20(currently%20semimonthly).",
+            "proposition": "The NightFood employment agreement pays base salary in accordance with the company's standard payroll practices, currently semimonthly.",
+            "verbatimQuote": "The Company will pay Employee a base salary at the annual rate of $100,000, less applicable withholdings and deductions, paid in accordance with the Company’s standard payroll practices (currently semimonthly).",
+            "date": "2026-02-17",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q1-nightfood-payroll"
+          }
+        ]
+      },
+      {
+        "requirementId": "subject-compensation-to-withholding",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.subject-compensation-to-withholding",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Compensation subject to withholding",
+        "sectionId": "compensation-and-payroll",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#subject-compensation-to-withholding",
+        "requirementGuidance": "The letter should state that all compensation is subject to legally required tax withholding and deductions, as filed offer letters do. Flag a promise of gross pay that carries no withholding qualifier. The qualifier does not create the employer's duty, which applies whatever the letter says: federal law requires the employer to withhold income tax from wages and to collect the employee's share of FICA tax by deducting it from wages.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-bridgebio-withholding",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TheRas, Inc. (BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024)",
+            "citation": "TheRas, Inc. (d/b/a BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024), filed as Exhibit 10.15.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm#:~:text=All%20forms%20of%20compensation%20referred,other%20deductions%20required%20by%20law.",
+            "proposition": "The BridgeBio Oncology Therapeutics offer letter makes all compensation it describes subject to applicable withholding, payroll taxes and deductions required by law.",
+            "verbatimQuote": "All forms of compensation referred to in this Offer Letter are subject to reduction to reflect applicable withholding and payroll taxes and other deductions required by law.",
+            "date": "2024-08-12",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q1-bridgebio-withholding"
+          },
+          {
+            "sourceId": "q1-zura-withholding",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=Your%20salary%20and%20any%20bonus,and%20local%20taxes%20and%20withholdings.",
+            "proposition": "The Zura Bio offer letter makes salary and any bonus subject to federal, state and local taxes and withholdings.",
+            "verbatimQuote": "Your salary and any bonus will be subject to customary federal, state, and local taxes and withholdings.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q1-zura-withholding"
+          },
+          {
+            "sourceId": "q1-3402",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "26 U.S.C. § 3402 — Income tax collected at source",
+            "citation": "26 U.S.C. § 3402(a)(1).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section3402&num=0&edition=prelim",
+            "proposition": "26 U.S.C. § 3402(a)(1) requires every employer paying wages to deduct and withhold income tax from those wages.",
+            "verbatimQuote": "Except as otherwise provided in this section, every employer making payment of wages shall deduct and withhold upon such wages a tax determined in accordance with tables or computational procedures prescribed by the Secretary.",
+            "date": "1954-08-16",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q1-3402"
+          },
+          {
+            "sourceId": "q1-3102",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "26 U.S.C. § 3102 — Deduction of tax from wages",
+            "citation": "26 U.S.C. § 3102(a).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section3102&num=0&edition=prelim",
+            "proposition": "26 U.S.C. § 3102(a) requires the employer to collect the employee's FICA tax by deducting it from wages as and when paid.",
+            "verbatimQuote": "The tax imposed by section 3101 shall be collected by the employer of the taxpayer, by deducting the amount of the tax from the wages as and when paid.",
+            "date": "1954-08-16",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q1-3102"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-overtime-eligibility-for-nonexempt",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.provide-overtime-eligibility-for-nonexempt",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Overtime for non-exempt hires",
+        "sectionId": "compensation-and-payroll",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#provide-overtime-eligibility-for-nonexempt",
+        "requirementGuidance": "For a nonexempt hire, record whether the letter states overtime eligibility. If it omits overtime or says the hire cannot receive it, flag the mismatch for classification review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-nightfood-overtime",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026)",
+            "citation": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026), filed as Exhibit 10.3.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm#:~:text=If%20Employee%20is%20reclassified%20as,will%20be%20paid%20if%20worked.",
+            "proposition": "The NightFood employment agreement provides that if the employee is reclassified as non-exempt, hours worked will be recorded and overtime worked will be paid.",
+            "verbatimQuote": "If Employee is reclassified as non-exempt, the Company will compensate Employee in compliance with applicable law and will require accurate recording of all hours worked; unauthorized overtime may be subject to discipline but will be paid if worked.",
+            "date": "2026-02-17",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q1-nightfood-overtime"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-exempt-classification",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-exempt-classification",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Exempt classification stated in the letter",
+        "sectionId": "wage-and-hour-classification",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-exempt-classification",
+        "requirementGuidance": "Record whether the letter states that the job is exempt and that the employee is not eligible for overtime pay. The statement is optional and does not decide the question: a title or label does not establish exempt status, which turns on the job's salary and duties. Where the letter states the classification, confirm that it matches the company's documented classification analysis. See the practice guide for why this guide prefers to leave the label out.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q2-zura-exempt",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=This%20is%20an%20exempt%20position%2C,are%20not%20eligible%20for%20overtime.",
+            "proposition": "The Zura Bio offer letter states that the position is exempt and that the executive is not eligible for overtime.",
+            "verbatimQuote": "This is an exempt position, which means you are paid on a salary basis for the job you perform, not by the hour, and you are not eligible for overtime.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q2-zura-exempt"
+          },
+          {
+            "sourceId": "q2-title",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 C.F.R. § 541.2 — Job titles insufficient",
+            "citation": "29 C.F.R. § 541.2.",
+            "url": "https://www.ecfr.gov/current/title-29/section-541.2",
+            "proposition": "29 C.F.R. § 541.2 states that a job title alone is insufficient to establish exempt status.",
+            "verbatimQuote": "A job title alone is insufficient to establish the exempt status of an employee.",
+            "date": "2004-04-23",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q2-title"
+          },
+          {
+            "sourceId": "q2-541-2",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 C.F.R. § 541.2 — Job titles insufficient",
+            "citation": "29 C.F.R. § 541.2.",
+            "url": "https://www.ecfr.gov/current/title-29/section-541.2",
+            "proposition": "29 C.F.R. § 541.2 requires exempt or nonexempt status to be determined by whether the employee's salary and duties meet the Part 541 requirements.",
+            "verbatimQuote": "The exempt or nonexempt status of any particular employee must be determined on the basis of whether the employee's salary and duties meet the requirements of the regulations in this part.",
+            "date": "2004-04-23",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q2-541-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "describe-pay-on-salary-basis",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.describe-pay-on-salary-basis",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Salary described on a salary basis",
+        "sectionId": "wage-and-hour-classification",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#describe-pay-on-salary-basis",
+        "requirementGuidance": "For a job the company treats as exempt from overtime under an exemption that requires a salary basis, the letter should state a predetermined salary paid in regular installments that is not reduced for variations in the quality or quantity of the work. Salary basis is the general pay rule for the executive, administrative and professional exemptions, but administrative and professional employees may instead be paid on a fee basis, certain computer employees may instead be paid hourly at a regulatory minimum rate, and the pay requirements do not apply to teachers, licensed lawyers and doctors actually practicing their profession, or medical interns and residents. For such a job, flag a pay term stated only as an hourly or daily rate with no guaranteed weekly salary, or a reserved reduction for slow weeks; a pay term that pairs a rate with a guaranteed weekly salary raises separate questions for counsel.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q3-602",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 C.F.R. § 541.602 — Salary basis",
+            "citation": "29 C.F.R. § 541.602(a).",
+            "url": "https://www.ecfr.gov/current/title-29/section-541.602",
+            "proposition": "29 C.F.R. § 541.602(a) defines pay on a salary basis as a predetermined amount received each pay period, weekly or less often, that is not reduced because of variations in the quality or quantity of the work performed.",
+            "verbatimQuote": "An employee will be considered to be paid on a “salary basis” within the meaning of this part if the employee regularly receives each pay period on a weekly, or less frequent basis, a predetermined amount constituting all or part of the employee's compensation, which amount is not subject to reduction because of variations in the quality or quantity of the work performed.",
+            "date": "2026-05-15",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q3-602"
+          },
+          {
+            "sourceId": "q3-zura-salary-basis",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=This%20is%20an%20exempt%20position%2C,are%20not%20eligible%20for%20overtime.",
+            "proposition": "The Zura Bio offer letter tells the executive that pay is on a salary basis for the job performed, not by the hour.",
+            "verbatimQuote": "This is an exempt position, which means you are paid on a salary basis for the job you perform, not by the hour, and you are not eligible for overtime.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q3-zura-salary-basis"
+          },
+          {
+            "sourceId": "q3-lantronix-salary-basis",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Lantronix, Inc., Amendment to Chief Financial Officer Offer Letter (Jan. 1, 2026)",
+            "citation": "Lantronix, Inc., Amendment to Offer Letter (Jan. 1, 2026), filed as Exhibit 10.1.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1114925/000168316826000113/lantronix_ex1001.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1114925/000168316826000113/lantronix_ex1001.htm#:~:text=You%20will%20be%20classified%20as,all%20hours%20that%20you%20work.",
+            "proposition": "The Lantronix offer letter amendment states that the salary is paid on a salary basis and compensates the officer for all hours worked.",
+            "verbatimQuote": "You will be classified as an exempt employee, and your salary will be paid on a salary basis and is intended to compensate you for all hours that you work.",
+            "date": "2026-01-01",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q3-lantronix-salary-basis"
+          },
+          {
+            "sourceId": "checklist-salary-basis-white-collar-scope",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 C.F.R. § 541.600(a) — Salary basis for the white-collar exemptions",
+            "citation": "29 C.F.R. § 541.600(a).",
+            "url": "https://www.ecfr.gov/current/title-29/section-541.600",
+            "proposition": "29 C.F.R. § 541.600(a) requires pay on a salary basis for the executive, administrative and professional exemptions, and lets administrative and professional employees be paid on a fee basis instead.",
+            "verbatimQuote": "To qualify as an exempt executive, administrative or professional employee under section 13(a)(1) of the Act, an employee must be compensated on a salary basis at a rate of not less than $684 per week (or $455 per week if employed in the Commonwealth of the Northern Mariana Islands, Guam, Puerto Rico, or the U.S. Virgin Islands by employers other than the Federal Government, or $380 per week if employed in American Samoa by employers other than the Federal Government), exclusive of board, lodging or other facilities. Administrative and professional employees may also be paid on a fee basis, as defined in § 541.605.",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-checklist-salary-basis-white-collar-scope"
+          },
+          {
+            "sourceId": "checklist-salary-basis-computer-employee-hourly",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 C.F.R. § 541.600(d) — Hourly pay for computer employees",
+            "citation": "29 C.F.R. § 541.600(d).",
+            "url": "https://www.ecfr.gov/current/title-29/section-541.600",
+            "proposition": "29 C.F.R. § 541.600(d) lets the compensation requirement for computer employees be met by hourly pay of at least $27.63 an hour.",
+            "verbatimQuote": "In the case of computer employees, the compensation requirement also may be met by compensation on an hourly basis at a rate not less than $27.63 an hour, as provided in § 541.400(b).",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-checklist-salary-basis-computer-employee-hourly"
+          },
+          {
+            "sourceId": "checklist-salary-basis-professional-exceptions",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 C.F.R. § 541.600(e) — Professionals excepted from the salary requirements",
+            "citation": "29 C.F.R. § 541.600(e).",
+            "url": "https://www.ecfr.gov/current/title-29/section-541.600",
+            "proposition": "29 C.F.R. § 541.600(e) lifts the compensation requirements for teachers, for licensed practitioners of law or medicine actually engaged in that practice, and for medical interns and residents.",
+            "verbatimQuote": "In the case of professional employees, the compensation requirements in this section shall not apply to employees engaged as teachers (see § 541.303); employees who hold a valid license or certificate permitting the practice of law or medicine or any of their branches and are actually engaged in the practice thereof (see § 541.304); or to employees who hold the requisite academic degree for the general practice of medicine and are engaged in an internship or resident program pursuant to the practice of the profession (see § 541.304).",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-checklist-salary-basis-professional-exceptions"
+          }
+        ]
+      },
+      {
+        "requirementId": "reserve-right-to-reclassify",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.reserve-right-to-reclassify",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reserved right to reclassify",
+        "sectionId": "wage-and-hour-classification",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#reserve-right-to-reclassify",
+        "requirementGuidance": "Record whether the letter addresses reclassification, for example by providing that if the employee is reclassified as non-exempt, hours worked will be recorded and overtime paid as the law requires. As its own drafting preference, the practice guide recommends that the letter reserve the company’s right to reclassify the job if its duties or the law change or the original classification proves wrong, and to move pay to an hourly rate with overtime for later pay periods only. Flag a reservation drafted to reach back to earlier weeks: unpaid overtime for those weeks remains owed, and the employer may also owe an equal amount as liquidated damages.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q4-nightfood-reclassify",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026)",
+            "citation": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026), filed as Exhibit 10.3.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm#:~:text=If%20Employee%20is%20reclassified%20as,will%20be%20paid%20if%20worked.",
+            "proposition": "The NightFood employment agreement provides for reclassification to non-exempt status, with hours recorded and overtime paid under applicable law after reclassification.",
+            "verbatimQuote": "If Employee is reclassified as non-exempt, the Company will compensate Employee in compliance with applicable law and will require accurate recording of all hours worked; unauthorized overtime may be subject to discipline but will be paid if worked.",
+            "date": "2026-02-17",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q4-nightfood-reclassify"
+          },
+          {
+            "sourceId": "q4-216",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 U.S.C. § 216(b) — Fair Labor Standards Act damages and right of action",
+            "citation": "29 U.S.C. § 216(b).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title29-section216&edition=prelim",
+            "proposition": "29 U.S.C. § 216(b) makes an employer that violates the FLSA overtime requirement liable for the unpaid overtime compensation and an additional equal amount as liquidated damages.",
+            "verbatimQuote": "Any employer who violates the provisions of section 206 or section 207 of this title shall be liable to the employee or employees affected in the amount of their unpaid minimum wages, or their unpaid overtime compensation, as the case may be, and in an additional equal amount as liquidated damages.",
+            "date": "1938-06-25",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q4-216"
+          }
+        ]
+      },
+      {
+        "requirementId": "document-duties-analysis",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.document-duties-analysis",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Documented duties and salary analysis",
+        "sectionId": "wage-and-hour-classification",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#document-duties-analysis",
+        "requirementGuidance": "Before the offer issues, the company should document a duties and salary analysis supporting the classification under federal law and the law of the state where the employee will work. Flag a job treated as exempt with no such analysis, because exempt status turns on the job's salary and duties rather than on the letter.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q5-fp-self-audit",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "DOL Expected To Propose Higher Salary Threshold For Overtime Exemptions: What You Need To Know",
+            "citation": "Fisher Phillips, DOL Expected To Propose Higher Salary Threshold For Overtime Exemptions: What You Need To Know (Apr. 14, 2023).",
+            "url": "https://www.fisherphillips.com/en/insights/insights/congress-raise-exempt-salary-threshold-new-overtime-rule-proposal",
+            "proposition": "Fisher Phillips advises employers to self-audit and update job descriptions so they reflect the duties employees actually perform and confirm that the employees remain properly classified as exempt.",
+            "verbatimQuote": "So, as you evaluate your employees’ salary data, you should also use this as an opportunity to do a self-audit reviewing and updating job descriptions to ensure they accurately reflect the duties employees perform and that they are still properly classified as exempt.",
+            "date": "2023-04-14",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q5-fp-self-audit"
+          },
+          {
+            "sourceId": "q5-541-2",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 C.F.R. § 541.2 — Job titles insufficient",
+            "citation": "29 C.F.R. § 541.2.",
+            "url": "https://www.ecfr.gov/current/title-29/section-541.2",
+            "proposition": "29 C.F.R. § 541.2 requires exempt or nonexempt status to be determined by whether the employee's salary and duties meet the Part 541 requirements.",
+            "verbatimQuote": "The exempt or nonexempt status of any particular employee must be determined on the basis of whether the employee's salary and duties meet the requirements of the regulations in this part.",
+            "date": "2004-04-23",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q5-541-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "adopt-salary-basis-safe-harbor-policy",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.adopt-salary-basis-safe-harbor-policy",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Written policy against improper deductions",
+        "sectionId": "wage-and-hour-classification",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#adopt-salary-basis-safe-harbor-policy",
+        "requirementGuidance": "The company should maintain a clearly communicated written policy that prohibits improper salary deductions, provides a complaint mechanism, and commits to reimburse improper deductions and to comply in the future. Confirm each element is there, and flag a missing one: the federal safe harbor for an employer with such a policy, under which improper deductions the employer reimburses do not cost the exemption unless the employer willfully keeps making them after complaints, depends on all of them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q5-fp-safe-harbor",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Wage-Hour Compliance Series: Avoiding Improper Salary Deductions",
+            "citation": "Fisher Phillips, Wage-Hour Compliance Series: Avoiding Improper Salary Deductions (Oct. 21, 2013).",
+            "url": "https://www.fisherphillips.com/en/insights/publication/flsa-regulations-the-impact-of-improper-salary-deductions",
+            "proposition": "Fisher Phillips recommends that employers adopt and publish a salary-deduction safe harbor policy to improve wage-hour compliance and support defenses.",
+            "verbatimQuote": "Employers can improve wage-hour compliance, and bolster potential defenses, by adopting and publishing such a safe harbor policy.",
+            "date": "2013-10-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q5-fp-safe-harbor"
+          },
+          {
+            "sourceId": "q5-603",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "29 C.F.R. § 541.603 — Effect of improper deductions from salary",
+            "citation": "29 C.F.R. § 541.603(d).",
+            "url": "https://www.ecfr.gov/current/title-29/section-541.603",
+            "proposition": "29 C.F.R. § 541.603(d) provides that an employer with a clearly communicated policy prohibiting improper deductions, a complaint mechanism, reimbursement and a good-faith commitment to comply does not lose the exemption unless it willfully violates the policy after employee complaints.",
+            "verbatimQuote": "If an employer has a clearly communicated policy that prohibits the improper pay deductions specified in § 541.602(a) and includes a complaint mechanism, reimburses employees for any improper deductions and makes a good faith commitment to comply in the future, such employer will not lose the exemption for any employees unless the employer willfully violates the policy by continuing to make improper deductions after receiving employee complaints.",
+            "date": "2004-04-23",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q5-603"
+          }
+        ]
+      },
+      {
+        "requirementId": "deliver-statutory-wage-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.deliver-statutory-wage-notice",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory wage notice at hire",
+        "sectionId": "wage-and-hour-classification",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#deliver-statutory-wage-notice",
+        "requirementGuidance": "Where state law requires a written wage notice at hire, the company must give the employee a written notice at hiring that contains the information the statute specifies. Confirm the notice was given and that it covers each statutory item. New York requires a pay notice at hiring, and its statute directs the labor commissioner to prepare templates for that notice. California also requires one but excludes an employee exempt from overtime, so a California hire treated as exempt whose job does not qualify was owed the notice as well. As a drafting approach rather than a statutory requirement, delivering the notice as its own document, separate from the offer letter, keeps the notice's required content from depending on the letter's wording; flag a file that relies on the offer letter alone to supply the notice's items.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q5-ny-notice",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "N.Y. Lab. Law § 195 — Notice and record-keeping requirements",
+            "citation": "N.Y. Lab. Law § 195(1)(a).",
+            "url": "https://www.nysenate.gov/legislation/laws/LAB/195",
+            "proposition": "New York Labor Law § 195(1)(a) requires every employer to give employees, at the time of hiring, a written notice in English and the employee's primary language stating the rate or rates of pay and their basis and any allowances claimed as part of the minimum wage.",
+            "verbatimQuote": "provide his or her employees, in writing in English and in the language identified by each employee as the primary language of such employee, at the time of hiring, a notice containing the following information: the rate or rates of pay and basis thereof, whether paid by the hour, shift, day, week, salary, piece, commission, or other; allowances, if any, claimed as part of the minimum wage, including tip, meal, or lodging allowances; the benefit portion of the minimum rate of home care aide total compensation as defined in section thirty-six hundred fourteen-c of the public health law",
+            "date": "2011-04-09",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q5-ny-notice"
+          },
+          {
+            "sourceId": "q5-ny-rate",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "N.Y. Lab. Law § 195 — Notice and record-keeping requirements",
+            "citation": "N.Y. Lab. Law § 195(1)(a).",
+            "url": "https://www.nysenate.gov/legislation/laws/LAB/195",
+            "proposition": "New York Labor Law § 195(1)(a) requires the pay notice for an employee who is not exempt from overtime to state the regular hourly rate and overtime rate of pay.",
+            "verbatimQuote": "For all employees who are not exempt from overtime compensation as established in the commissioner's minimum wage orders or otherwise provided by New York state law or regulation, the notice must state the regular hourly rate and overtime rate of pay; (b) The commissioner shall prepare templates that comply with the requirements of paragraph (a) of this subdivision.",
+            "date": "2011-04-09",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q5-ny-rate"
+          },
+          {
+            "sourceId": "q5-cal-notice",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Cal. Lab. Code § 2810.5 — Written notice to employees at hiring",
+            "citation": "Cal. Lab. Code § 2810.5(a)(1).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=2810.5",
+            "proposition": "California Labor Code § 2810.5(a)(1) requires an employer to give each employee at the time of hiring a written notice stating the rate or rates of pay and their basis, including any overtime rates.",
+            "verbatimQuote": "At the time of hiring, an employer shall provide to each employee a written notice, in the language the employer normally uses to communicate employment-related information to the employee, containing the following information: (A) The rate or rates of pay and basis thereof, whether paid by the hour, shift, day, week, salary, piece, commission, or otherwise, including any rates for overtime, as applicable.",
+            "date": "2024-01-01",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q5-cal-notice"
+          },
+          {
+            "sourceId": "q5-cal-exempt",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Cal. Lab. Code § 2810.5 — Written notice to employees at hiring",
+            "citation": "Cal. Lab. Code § 2810.5(c)(2).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=2810.5",
+            "proposition": "California Labor Code § 2810.5(c)(2) excludes from the hiring-notice requirement an employee who is exempt from overtime by statute or Industrial Welfare Commission wage order.",
+            "verbatimQuote": "(c) For purposes of this section, “employee” does not include any of the following: (1) An employee directly employed by the state or any political subdivision thereof, including any city, county, city and county, or special district. (2) An employee who is exempt from the payment of overtime wages by statute or the wage orders of the Industrial Welfare Commission.",
+            "date": "2024-01-01",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q5-cal-exempt"
+          }
+        ]
+      },
+      {
+        "requirementId": "consider-separate-arbitration-agreement",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.consider-separate-arbitration-agreement",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Separate arbitration agreement",
+        "sectionId": "wage-and-hour-classification",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#consider-separate-arbitration-agreement",
+        "requirementGuidance": "The company should consider a separate arbitration agreement with a class and collective action waiver. Record whether one is in use, and flag a waiver drafted without the federal carve-out that lets a person alleging a sexual harassment or sexual assault dispute elect out of arbitration. See the practice guide for the limits on waiving California's representative claims.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q6-skillsoft-class-waiver",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Skillsoft Corp., Chief Financial Officer Offer Letter (May 13, 2026)",
+            "citation": "Skillsoft Corp., Chief Financial Officer Offer Letter (May 13, 2026), Annex III § 10(C), filed as Exhibit 10.7.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1774675/000143774926019986/ex_971297.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1774675/000143774926019986/ex_971297.htm#:~:text=I%20agree%20that%20Covered%20Claims,such%20claim%20(%E2%80%9CClass%20Action%20Waiver%E2%80%9D).",
+            "proposition": "The arbitration agreement annexed to the Skillsoft offer letter, in its restrictive covenants agreement rather than the letter's own terms, limits arbitration to individual claims and waives class and collective actions.",
+            "verbatimQuote": "I agree that Covered Claims will only be arbitrated on an individual basis only, and that Company Group and I both waive any right for any Covered Claim to be brought, heard, decided, or arbitrated as a class action, collective action, or one involving different employees and the arbitrator will have no authority to hear preside over any such claim (“Class Action Waiver”).",
+            "date": "2026-05-13",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q6-skillsoft-class-waiver"
+          },
+          {
+            "sourceId": "q6-nightfood-class-waiver",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026)",
+            "citation": "NightFood Holdings, Inc., Employment Agreement § 9.4 (Feb. 17, 2026), filed as Exhibit 10.3.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm#:~:text=To%20the%20maximum%20extent%20permitted%20by%20law%2C%20disputes,may%20be%20pursued%20in%20arbitration.",
+            "proposition": "The NightFood employment agreement's arbitration section limits arbitration to individual claims and bars class, collective and representative claims in arbitration.",
+            "verbatimQuote": "To the maximum extent permitted by law, disputes will be brought in arbitration only on an individual basis; no class, collective, or representative claims may be pursued in arbitration.",
+            "date": "2026-02-17",
+            "pullQuoteLocator": "To the maximum extent permitted by law, disputes|may be pursued in arbitration.",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q6-nightfood-class-waiver"
+          },
+          {
+            "sourceId": "q6-402",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "9 U.S.C. § 402 — Ending Forced Arbitration of Sexual Assault and Sexual Harassment Act",
+            "citation": "9 U.S.C. § 402(a).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title9-section402&num=0&edition=prelim",
+            "proposition": "9 U.S.C. § 402(a) makes a predispute arbitration agreement or joint-action waiver invalid and unenforceable, at the election of the person alleging a sexual harassment or sexual assault dispute, for a case relating to that dispute.",
+            "verbatimQuote": "Notwithstanding any other provision of this title, at the election of the person alleging conduct constituting a sexual harassment dispute or sexual assault dispute, or the named representative of a class or in a collective action alleging such conduct, no predispute arbitration agreement or predispute joint-action waiver shall be valid or enforceable with respect to a case which is filed under Federal, Tribal, or State law and relates to the sexual assault dispute or the sexual harassment dispute.",
+            "date": "2022-03-03",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q6-402"
+          }
+        ]
+      },
+      {
+        "requirementId": "describe-equity-award",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.describe-equity-award",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Equity award subject to board approval and plan",
+        "sectionId": "equity-and-benefits",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#describe-equity-award",
+        "requirementGuidance": "Record whether the letter describes a proposed equity or option award as subject to board approval and the equity plan and award documents. If it states an unconditional grant or conflicts with the operative documents, note the gap for correction.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q7-bridgebio-option",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TheRas, Inc. (BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024)",
+            "citation": "TheRas, Inc. (d/b/a BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024), filed as Exhibit 10.15.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm#:~:text=Subject%20to%20the%20approval%20of,Company%E2%80%99s%20equity%20incentive%20plan%20(%E2%80%9COption%E2%80%9D).",
+            "proposition": "The BridgeBio Oncology Therapeutics offer letter makes the stock option grant subject to board approval and the company's equity incentive plan.",
+            "verbatimQuote": "Subject to the approval of the Company’s Board of Directors (the “Board”), the Company will grant you an option to purchase 4,986,157 shares of the Company’s common stock at a per share exercise price equal to the then-current fair market value in accordance with the Company’s equity incentive plan (“Option”).",
+            "date": "2024-08-12",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q7-bridgebio-option"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-equity-vesting-schedule",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-equity-vesting-schedule",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Vesting schedule",
+        "sectionId": "equity-and-benefits",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-equity-vesting-schedule",
+        "requirementGuidance": "Record whether the letter states a vesting schedule for a proposed equity award. If stated, compare it with the plan and award documents and note any mismatch; if omitted, note that the operative documents must supply the schedule.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q7-zura-vesting",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=As%20soon%20as%20practicable%20following,through%20each%20applicable%20vesting%20date.",
+            "proposition": "The Zura Bio offer letter states a four-year vesting schedule for the new-hire option, with 25% vesting at the first anniversary and the rest quarterly.",
+            "verbatimQuote": "As soon as practicable following your employment start date, you will receive an option to purchase 2,934,107 Class A ordinary shares of the Company (the “New-Hire Option Award”) to be vested over 4 years, with 25% vesting on the first anniversary of the applicable vesting commencement date and the remainder vesting quarterly thereafter, as set forth in the equity award agreement governing the New-Hire Option Award and subject to your continued employment with the Company through each applicable vesting date.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q7-zura-vesting"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-benefits-eligibility",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-benefits-eligibility",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Benefits eligibility",
+        "sectionId": "equity-and-benefits",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-benefits-eligibility",
+        "requirementGuidance": "Record whether the letter states eligibility to participate in company benefit plans on the same basis as similarly situated employees. Note an omission or a promise of specific coverage that conflicts with plan terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q7-nightfood-benefits",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026)",
+            "citation": "NightFood Holdings, Inc., Employment Agreement (Feb. 17, 2026), filed as Exhibit 10.3.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1593001/000149315226007440/ex10-3.htm#:~:text=Employee%20will%20be%20eligible%20to,terminate%20plans%20at%20any%20time.",
+            "proposition": "The NightFood employment agreement makes the employee eligible for benefit plans on the same basis as similarly situated employees, subject to plan terms.",
+            "verbatimQuote": "Employee will be eligible to participate in employee benefit plans, if any, on the same basis as similarly situated employees, subject to plan terms and the Company’s right to amend or terminate plans at any time.",
+            "date": "2026-02-17",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q7-nightfood-benefits"
+          }
+        ]
+      },
+      {
+        "requirementId": "reserve-benefits-modification",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.reserve-benefits-modification",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reserved right to change benefit programs",
+        "sectionId": "equity-and-benefits",
+        "itemNumber": "3.4",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#reserve-benefits-modification",
+        "requirementGuidance": "Record whether the letter reserves the company’s ability to change or end its benefit plans or programs. If omitted or contradicted by a fixed benefits promise, note the possible inconsistency.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q7-bridgebio-benefits-change",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TheRas, Inc. (BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024)",
+            "citation": "TheRas, Inc. (d/b/a BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024), filed as Exhibit 10.15.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm#:~:text=The%20Company%20reserves%20the%20right,or%20programs%20at%20any%20time.",
+            "proposition": "The BridgeBio Oncology Therapeutics offer letter reserves the company's right to modify, amend or cancel its benefit plans at any time.",
+            "verbatimQuote": "The Company reserves the right to modify, amend or cancel any of its benefits plans or programs at any time.",
+            "date": "2024-08-12",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q7-bridgebio-benefits-change"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-paid-time-off",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.address-paid-time-off",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Vacation and paid time off",
+        "sectionId": "equity-and-benefits",
+        "itemNumber": "3.5",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#address-paid-time-off",
+        "requirementGuidance": "Record whether the letter addresses vacation or paid time off, including accrual, carryover, or an unlimited non-accrual policy. If absent or inconsistent with the company policy, note the unresolved treatment.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q7-bridgebio-pto",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TheRas, Inc. (BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024)",
+            "citation": "TheRas, Inc. (d/b/a BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024), filed as Exhibit 10.15.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm#:~:text=You%20will%20be%20eligible%20for,effect%20from%20time%20to%20time.",
+            "proposition": "The BridgeBio Oncology Therapeutics offer letter addresses paid time off by reference to the company's paid time off policy.",
+            "verbatimQuote": "You will be eligible for paid time off in accordance with the Company’s applicable paid time off policy, as may be in effect from time to time.",
+            "date": "2024-08-12",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q7-bridgebio-pto"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-statutory-benefits",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.acknowledge-statutory-benefits",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Benefits required by law",
+        "sectionId": "equity-and-benefits",
+        "itemNumber": "3.6",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#acknowledge-statutory-benefits",
+        "requirementGuidance": "Record whether the letter acknowledges benefits that applicable law requires the employer to provide, in addition to its voluntary programs. If omitted, note the omission without treating the letter as the source of any such benefit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q7-corsair-sick-leave",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Corsair Memory, Inc., Chief Financial Officer Offer Letter (Nov. 11, 2025)",
+            "citation": "Corsair Memory, Inc., Chief Financial Officer Offer Letter (Nov. 11, 2025), filed as Exhibit 10.6 to Corsair Gaming, Inc. Form 10-K.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1743759/000119312526067833/crsr-ex10_6.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1743759/000119312526067833/crsr-ex10_6.htm#:~:text=You%20will%20be%20eligible%20for,effect%20from%20time%20to%20time.",
+            "proposition": "The Corsair offer letter acknowledges eligibility for paid sick leave in accordance with applicable law as well as company policy.",
+            "verbatimQuote": "You will be eligible for paid time off (PTO) vacation and/or paid sick leave in accordance with applicable law and Company policy in effect from time to time.",
+            "date": "2025-11-11",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q7-corsair-sick-leave"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-position-and-title",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-position-and-title",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Position or job title",
+        "sectionId": "role-reporting-and-schedule",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-position-and-title",
+        "requirementGuidance": "Record whether the letter identifies the position and job title. If either is missing or differs from the approved role, note the inconsistency.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q8-zura-position",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=I%20am%20delighted%20to%20make,and%20approval%20of%20the%20Board.",
+            "proposition": "The Zura Bio offer letter identifies the position as the full-time role of Chief Executive Officer, reporting to the Board.",
+            "verbatimQuote": "I am delighted to make you an offer for the full-time position of Chief Executive Officer for Zura Bio Limited and the Zura Bio Group of companies (including Zura Bio Inc., a subsidiary of Zura Bio Limited, together with its affiliated companies (the “Company”)) reporting to the Company’s Board of Directors (the “Board”), with such offer subject in all respects to the authorization and approval of the Board.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q8-zura-position"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-reporting-relationship",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-reporting-relationship",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reporting relationship",
+        "sectionId": "role-reporting-and-schedule",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-reporting-relationship",
+        "requirementGuidance": "Record whether the letter identifies the employee’s reporting relationship. If absent or inconsistent with the hiring plan, note who will supervise the role.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q8-bridgebio-reporting",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TheRas, Inc. (BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024)",
+            "citation": "TheRas, Inc. (d/b/a BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024), filed as Exhibit 10.15.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm#:~:text=As%20Chief%20Medical%20and%20Development%20Officer%2C,to%20the%20Chief%20Executive%20Officer.",
+            "proposition": "The BridgeBio Oncology Therapeutics offer letter states that the officer will report to the Chief Executive Officer.",
+            "verbatimQuote": "As Chief Medical and Development Officer, you will report to the Chief Executive Officer.",
+            "date": "2024-08-12",
+            "pullQuoteLocator": "As Chief Medical and Development Officer,|to the Chief Executive Officer.",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q8-bridgebio-reporting"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-employment-basis",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-employment-basis",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Full-time or part-time basis",
+        "sectionId": "role-reporting-and-schedule",
+        "itemNumber": "4.3",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-employment-basis",
+        "requirementGuidance": "Record whether the letter describes the position as full-time or part-time. If omitted or inconsistent with the approved schedule, note the open term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q8-zura-full-time",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=As%20a%20full%2Dtime%20employee%20for,and%2For%20of%20Zura%20Bio%20Group.",
+            "proposition": "The Zura Bio offer letter describes the executive as a full-time employee with customary duties and duties the Board assigns.",
+            "verbatimQuote": "As a full-time employee for the Company, you will have responsibility for performing those duties as are customary for, and are consistent with, such position, as well as those duties as may be assigned to you from time to time by the Board and which may relate to the business of the Company and/or of Zura Bio Group.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q8-zura-full-time"
+          }
+        ]
+      },
+      {
+        "requirementId": "reserve-right-to-change-duties",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.reserve-right-to-change-duties",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reserved right to change duties",
+        "sectionId": "role-reporting-and-schedule",
+        "itemNumber": "4.4",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#reserve-right-to-change-duties",
+        "requirementGuidance": "Record whether the letter reserves the company’s ability to change the employee’s duties. If the reservation is absent or a fixed-duty promise conflicts with it, note the limitation for review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q8-bridgebio-duties",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TheRas, Inc. (BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024)",
+            "citation": "TheRas, Inc. (d/b/a BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024), filed as Exhibit 10.15.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm#:~:text=Although%20your%20job%20duties%2C%20title%2C,Executive%20Officer%20of%20the%20Company.",
+            "proposition": "The BridgeBio Oncology Therapeutics offer letter states that job duties, title, reporting structure and compensation may change in the company's sole discretion.",
+            "verbatimQuote": "Although your job duties, title, reporting structure, compensation and benefits, as well as the Company’s benefit plans and personnel policies and procedures, may change from time to time in the Company’s sole discretion, the “at will” nature of your employment may only be changed in an express written agreement signed by you and the Chief Executive Officer of the Company.",
+            "date": "2024-08-12",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q8-bridgebio-duties"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-work-location",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-work-location",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Work location or remote status",
+        "sectionId": "work-location-and-arrangement",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-work-location",
+        "requirementGuidance": "Record whether the letter states the primary work location or remote-work arrangement. If omitted or inconsistent with the approved arrangement, note the location that needs confirmation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q9-skillsoft-location",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Skillsoft Corp., Chief Financial Officer Offer Letter (May 13, 2026)",
+            "citation": "Skillsoft Corp., Chief Financial Officer Offer Letter (May 13, 2026), filed as Exhibit 10.7.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1774675/000143774926019986/ex_971297.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1774675/000143774926019986/ex_971297.htm#:~:text=You%20will%20perform%20substantially%20all,on%20behalf%20of%20the%20Company.",
+            "proposition": "The Skillsoft offer letter states the states from which the officer will perform substantially all of the work.",
+            "verbatimQuote": "You will perform substantially all of your work for Skillsoft from California and New York, where you reside, subject to any business-related travel you may undertake on behalf of the Company.",
+            "date": "2026-05-13",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q9-skillsoft-location"
+          }
+        ]
+      },
+      {
+        "requirementId": "reserve-travel-and-location-flexibility",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.reserve-travel-and-location-flexibility",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Travel and location flexibility",
+        "sectionId": "work-location-and-arrangement",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#reserve-travel-and-location-flexibility",
+        "requirementGuidance": "Record whether the letter reserves the ability to require business travel or change the work location. If absent or contradicted by a permanent remote-work promise, note the restriction.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q9-zura-travel",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=While%20you%20will%20primarily%20provide,the%20needs%20of%20the%20business.",
+            "proposition": "The Zura Bio offer letter states that the executive works primarily from home and may be required to travel as the business needs.",
+            "verbatimQuote": "While you will primarily provide services from your home in Florida, you may be required to engage in occasional travel in accordance with the needs of the business.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q9-zura-travel"
+          }
+        ]
+      },
+      {
+        "requirementId": "condition-on-confidentiality-agreement",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.condition-on-confidentiality-agreement",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality and invention-assignment agreement",
+        "sectionId": "conditions-of-employment-and-conduct",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#condition-on-confidentiality-agreement",
+        "requirementGuidance": "Record whether the offer is conditioned on signing a confidentiality and invention-assignment agreement at or before the start date. If the condition is missing or the agreement is unavailable, note the gap.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q10-zura-ciia",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=As%20a%20condition%20of%20employment,any%20current%20or%20prior%20employer.",
+            "proposition": "The Zura Bio offer letter requires the executive to sign the company's confidential information and inventions agreement on the start date as a condition of employment.",
+            "verbatimQuote": "As a condition of employment at the Company, on your start date, you will be required to sign the Company’s Employee Confidential Information & Inventions Agreement (“CIIA”), in which you agree, among other things, not to disclose to the Company or use in your employment with the Company any confidential or proprietary information or trade secrets of any current or prior employer.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q10-zura-ciia"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-compliance-with-policies",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.require-compliance-with-policies",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Compliance with company policies",
+        "sectionId": "conditions-of-employment-and-conduct",
+        "itemNumber": "6.2",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#require-compliance-with-policies",
+        "requirementGuidance": "Record whether the letter requires compliance with company rules, policies, practices, and procedures. If absent or framed as a promise that policies cannot change, note the inconsistency.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q10-zura-policies",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=If%20you%20join%20the%20Company,adopted%20from%20time%20to%20time.",
+            "proposition": "The Zura Bio offer letter requires the executive to abide by the company's rules, policies and procedures and changes to them.",
+            "verbatimQuote": "If you join the Company as Chief Executive Officer, you agree to abide by the rules, regulations, instructions, personnel practices, policies and procedures of the Company and Zura Bio Group and any changes therein which may be adopted from time to time.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q10-zura-policies"
+          }
+        ]
+      },
+      {
+        "requirementId": "prohibit-use-of-prior-employer-information",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.prohibit-use-of-prior-employer-information",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "No use of a former employer’s information",
+        "sectionId": "conditions-of-employment-and-conduct",
+        "itemNumber": "6.3",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#prohibit-use-of-prior-employer-information",
+        "requirementGuidance": "Record whether the letter prohibits bringing, using, or disclosing a former employer’s confidential information or property. If absent or narrowed to only physical materials, note the gap.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q10-zura-prior-employer",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=You%20agree%20not%20to%20bring,for%20their%20possession%20and%20use.",
+            "proposition": "The Zura Bio offer letter bars the executive from bringing or using a former employer's non-public materials without that employer's written authorization.",
+            "verbatimQuote": "You agree not to bring to the Company or use in the performance of your responsibilities at the Company any materials or documents of a former employer that are not generally available to the public, unless you have obtained express written authorization from the former employer for their possession and use.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q10-zura-prior-employer"
+          }
+        ]
+      },
+      {
+        "requirementId": "condition-on-work-authorization",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.condition-on-work-authorization",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Proof of work authorization",
+        "sectionId": "conditions-of-employment-and-conduct",
+        "itemNumber": "6.4",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#condition-on-work-authorization",
+        "requirementGuidance": "The letter should condition the offer on the employee providing proof of identity and authorization to work in the United States, consistent with the employer's separate Form I-9 verification process, as filed offer letters do. Flag an unconditional offer that omits this condition for correction. The condition does not create the employer's duty, which applies whatever the letter says: federal law requires the employer to attest, on the designated form, that it examined documents verifying the individual's authorization to work.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q10-zura-work-authorization",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=For%20purposes%20of%20federal%20immigration,employment%20in%20the%20United%20States.",
+            "proposition": "The Zura Bio offer letter requires the executive to provide documentary evidence of identity and eligibility for employment in the United States.",
+            "verbatimQuote": "For purposes of federal immigration law, you will be required to provide to the Company documentary evidence of your identity and eligibility for employment in the United States.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q10-zura-work-authorization"
+          },
+          {
+            "sourceId": "q10-bridgebio-work-authorization",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TheRas, Inc. (BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024)",
+            "citation": "TheRas, Inc. (d/b/a BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024), filed as Exhibit 10.15.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm#:~:text=As%20with%20any%20employee%2C%20you,work%20in%20the%20United%20States.",
+            "proposition": "The BridgeBio Oncology Therapeutics offer letter requires satisfactory proof of identity and legal authorization to work in the United States.",
+            "verbatimQuote": "As with any employee, you must submit satisfactory proof of your identity and your legal authorization to work in the United States.",
+            "date": "2024-08-12",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q10-bridgebio-work-authorization"
+          },
+          {
+            "sourceId": "q10-1324a",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 U.S.C. § 1324a — Unlawful employment of aliens",
+            "citation": "8 U.S.C. § 1324a(b)(1)(A).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title8-section1324a&num=0&edition=prelim",
+            "proposition": "8 U.S.C. § 1324a(b)(1)(A) requires an employer to attest, under penalty of perjury and on the designated form, that it verified the individual's work authorization by examining specified documents.",
+            "verbatimQuote": "The person or entity must attest, under penalty of perjury and on a form designated or established by the Attorney General by regulation, that it has verified that the individual is not an unauthorized alien by examining- (i) a document described in subparagraph (B), or (ii) a document described in subparagraph (C) and a document described in subparagraph (D).",
+            "date": "1986-11-06",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q10-1324a"
+          }
+        ]
+      },
+      {
+        "requirementId": "condition-on-background-check",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.condition-on-background-check",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Background check contingency",
+        "sectionId": "conditions-of-employment-and-conduct",
+        "itemNumber": "6.5",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#condition-on-background-check",
+        "requirementGuidance": "Record whether the offer is contingent on satisfactory background or reference checks when the company plans to conduct them. If the condition is missing or conflicts with the screening process, note the discrepancy.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q10-zura-background",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=This%20offer%20is%20contingent%20upon,background%20investigation%20and%2For%20reference%20check.",
+            "proposition": "The Zura Bio offer letter makes the offer contingent on clearing a background investigation or reference check.",
+            "verbatimQuote": "This offer is contingent upon a clearance of such a background investigation and/or reference check.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q10-zura-background"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice-where-letter-imposes-confidentiality",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.disclose-dtsa-notice-where-letter-imposes-confidentiality",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Federal trade-secret whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#disclose-dtsa-notice-where-letter-imposes-confidentiality",
+        "requirementGuidance": "Where the letter itself imposes confidentiality or non-disclosure obligations, including by making compliance with confidentiality obligations one of its terms, it must give the federal whistleblower-immunity notice. The threshold question is whether the letter imposes those obligations itself or only conditions employment on signing the confidentiality and invention assignment agreement. The statute's only alternative to the full notice is a cross-reference to a reporting-policy document the employee receives. A cross-reference to a companion agreement's notice is neither form of compliance. Notice given in that agreement still matters for remedies: an employer that gives no notice cannot be awarded the Defend Trade Secrets Act's exemplary damages or attorney fees in an action against an employee who was not given it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-dtsa-immunity-notice"
+          },
+          {
+            "sourceId": "dtsa-notice-policy-cross-reference",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Defend Trade Secrets Act — policy-document alternative, 18 U.S.C. § 1833(b)(3)(B)",
+            "citation": "18 U.S.C. § 1833(b)(3)(B).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20be%20considered,a%20suspected%20violation%20of%20law.",
+            "proposition": "An employer complies with the notice requirement by cross-referencing a policy document, provided to the employee, that sets out the employer's reporting policy for a suspected violation of law.",
+            "verbatimQuote": "An employer shall be considered to be in compliance with the notice requirement in subparagraph (A) if the employer provides a cross-reference to a policy document provided to the employee that sets forth the employer's reporting policy for a suspected violation of law.",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-dtsa-notice-policy-cross-reference"
+          },
+          {
+            "sourceId": "dtsa-notice-noncompliance",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Defend Trade Secrets Act — consequence of omitting the notice, 18 U.S.C. § 1833(b)(3)(C)",
+            "citation": "18 U.S.C. § 1833(b)(3)(C).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=If%20an%20employer%20does%20not,whom%20notice%20was%20not%20provided.",
+            "proposition": "An employer that does not give the required notice may not be awarded exemplary damages or attorney fees in a trade-secret action against an employee who did not receive it.",
+            "verbatimQuote": "If an employer does not comply with the notice requirement in subparagraph (A), the employer may not be awarded exemplary damages or attorney fees under subparagraph (C) or (D) of section 1836(b)(3) in an action against an employee to whom notice was not provided.",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-dtsa-notice-noncompliance"
+          }
+        ]
+      },
+      {
+        "requirementId": "cross-reference-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.cross-reference-dtsa-notice",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Cross-reference to the companion agreement's notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#cross-reference-dtsa-notice",
+        "requirementGuidance": "Where the letter leaves confidentiality to the confidentiality and invention assignment agreement, it should cross-reference the whistleblower-immunity notice in that agreement. Filed offer-letter exhibits record the employee's acknowledgment of the notice and point to its full text in a separate exhibit. Confirm that the agreement the cross-reference names actually carries the notice.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "palo-alto-dtsa-notice-acknowledgment",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Palo Alto Networks, Inc., Chief Financial Officer Offer Letter (June 19, 2020)",
+            "citation": "Palo Alto Networks, Inc., Offer Letter (June 19, 2020), filed as Exhibit 10.1 to Form 8-K (June 23, 2020).",
+            "url": "https://www.sec.gov/Archives/edgar/data/1327567/000119312520176553/d921076dex101.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1327567/000119312520176553/d921076dex101.htm#:~:text=In%20addition%2C%20I%20hereby%20acknowledge,is%20attached%20in%20Exhibit%20B.",
+            "proposition": "The Palo Alto Networks offer-letter exhibit records the employee's acknowledgment that the company gave the Defend Trade Secrets Act immunity notice, and points to the notice's full text in a separate exhibit.",
+            "verbatimQuote": "In addition, I hereby acknowledge that the Company has provided me with notice in compliance with the Defend Trade Secrets Act of 2016 regarding immunity from liability for limited disclosures of trade secrets. The full text of the notice is attached in Exhibit B.",
+            "date": "2020-06-19",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-palo-alto-dtsa-notice-acknowledgment"
+          },
+          {
+            "sourceId": "twist-bioscience-dtsa-notice-acknowledgment",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Twist Bioscience Corporation, Chief Financial Officer Employment Agreement Letter (Dec. 18, 2023)",
+            "citation": "Twist Bioscience Corp., Employment Agreement Letter (Dec. 18, 2023), filed as Exhibit 10.1 to Form 10-Q (Feb. 2, 2024).",
+            "url": "https://www.sec.gov/Archives/edgar/data/1581280/000162828024003051/twst-adamlaponisagreementx.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1581280/000162828024003051/twst-adamlaponisagreementx.htm#:~:text=In%20addition%2C%20I%20hereby%20acknowledge,is%20attached%20in%20Exhibit%20B.",
+            "proposition": "The Twist Bioscience offer-letter exhibit records the employee's acknowledgment that the company gave the Defend Trade Secrets Act immunity notice, and points to the notice's full text in a separate exhibit.",
+            "verbatimQuote": "In addition, I hereby acknowledge that the Company has provided me with notice in compliance with the Defend Trade Secrets Act of 2016 regarding immunity from liability for limited disclosures of trade secrets. The full text of the notice is attached in Exhibit B.",
+            "date": "2023-12-18",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-twist-bioscience-dtsa-notice-acknowledgment"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-activity-from-letter-confidentiality",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.carve-out-nlra-activity-from-letter-confidentiality",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "Pay-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#carve-out-nlra-activity-from-letter-confidentiality",
+        "requirementGuidance": "Where the letter itself imposes confidentiality or non-disclosure obligations, those obligations must not reach covered employees' discussion of wages and working conditions. Federal labor law protects private-sector employees' concerted activity for mutual aid or protection, including joining together to improve wages and working conditions. Under the work-rule standard the Board adopted in 2023, a rule with a reasonable tendency to chill that activity is presumptively unlawful unless the employer shows a legitimate and substantial interest it cannot serve with a narrower rule. The standard may change; the statutory right does not depend on it. An express carve-out makes the letter's reach on that point explicit. A letter that imposes no confidentiality obligation of its own has nothing to carve out, because the handbook rule or companion agreement is tested on its own terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,section%20158(a)(3)%20of%20this%20title.",
+            "proposition": "Section 7 gives employees the right to engage in concerted activities for mutual aid or protection, the statutory basis for carving discussion of pay and working conditions out of confidentiality restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection, and shall also have the right to refrain from any or all of such activities except to the extent that such right may be affected by an agreement requiring membership in a labor organization as a condition of employment as authorized in section 158(a)(3) of this title.",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "stericycle-work-rule-standard",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "NLRB news release on Stericycle, Inc., 372 NLRB No. 113 (2023) — work-rule standard",
+            "citation": "Stericycle, Inc., 372 NLRB No. 113 (2023); NLRB Office of Public Affairs, Board Adopts New Standard for Assessing Lawfulness of Work Rules (Aug. 2, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-adopts-new-standard-for-assessing-lawfulness-of-work-rules",
+            "proposition": "Under the work-rule standard the Board adopted in 2023, a rule with a reasonable tendency to chill employees from exercising their Section 7 rights is presumptively unlawful unless the employer proves a legitimate and substantial business interest it cannot advance with a more narrowly tailored rule.",
+            "verbatimQuote": "Under the new standard adopted in Stericycle, the General Counsel must prove that a challenged rule has a reasonable tendency to chill employees from exercising their rights. If the General Counsel does so, then the rule is presumptively unlawful. However, the employer may rebut the presumption by proving that the rule advances a legitimate and substantial business interest and that the employer is unable to advance that interest with a more narrowly tailored rule.",
+            "date": "2023-08-02",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-stericycle-work-rule-standard"
+          },
+          {
+            "sourceId": "nlrb-wages-working-conditions",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "National Labor Relations Board, statement of the agency's mission",
+            "citation": "NLRB Office of Public Affairs, news release of Feb. 21, 2023 (agency mission statement).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The National Labor Relations Board protects the right of private-sector employees, with or without a union, to join together to improve wages, benefits, and working conditions.",
+            "verbatimQuote": "Established in 1935, the National Labor Relations Board is an independent federal agency that protects employees from unfair labor practices and protects the right of private sector employees to join together, with or without a union, to improve wages, benefits and working conditions.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-nlrb-wages-working-conditions"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-offer-expiration",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.state-offer-expiration",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Offer expiration date",
+        "sectionId": "offer-mechanics",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#state-offer-expiration",
+        "requirementGuidance": "Record whether the letter gives a date by which the offer must be accepted. If missing or inconsistent with recruiting instructions, note the open acceptance window.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q11-bridgebio-deadline",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TheRas, Inc. (BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024)",
+            "citation": "TheRas, Inc. (d/b/a BridgeBio Oncology Therapeutics), Offer Letter (Aug. 12, 2024), filed as Exhibit 10.15.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1869105/000121390025075190/ea025066201ex10-15_bridge.htm#:~:text=To%20accept%20this%20offer%20of,August%2016%20th%20%2C%202024.",
+            "proposition": "The BridgeBio Oncology Therapeutics offer letter sets a date by which the candidate must sign and return the letter to accept.",
+            "verbatimQuote": "To accept this offer of employment, please sign and return this Offer Letter and the Restrictive Covenants Agreement by August 16 th , 2024.",
+            "date": "2024-08-12",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q11-bridgebio-deadline"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-bonus-eligibility",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.address-bonus-eligibility",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Bonus eligibility",
+        "sectionId": "offer-mechanics",
+        "itemNumber": "8.2",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#address-bonus-eligibility",
+        "requirementGuidance": "Record whether the letter states any bonus eligibility and ties administration to the company’s bonus program. If it promises a fixed payment that conflicts with program terms, note the discrepancy.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q11-zura-bonus",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=You%20will%20also%20be%20eligible,base%20salary%20(the%20%E2%80%9CAnnual%20Bonus%E2%80%9D).",
+            "proposition": "The Zura Bio offer letter states eligibility for an annual discretionary bonus with a target stated as a percentage of base salary.",
+            "verbatimQuote": "You will also be eligible to earn an annual discretionary bonus, with a target bonus amount of 55% of your annual base salary (the “Annual Bonus”).",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q11-zura-bonus"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-acceptance-by-signature",
+        "specRequirementId": "REQ-labor-and-employment-law.employment-offer-letter.provide-acceptance-by-signature",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Acceptance by signature",
+        "sectionId": "offer-mechanics",
+        "itemNumber": "8.3",
+        "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#provide-acceptance-by-signature",
+        "requirementGuidance": "Record whether the letter calls for acceptance by signing and returning it. If missing, note that the file may lack a signed record of assent to the offer terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q11-zura-signature",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Zura Bio Limited, Chief Executive Officer Offer Letter (Jan. 21, 2026)",
+            "citation": "Zura Bio Ltd., Chief Executive Officer Offer Letter (Jan. 21, 2026), filed as Exhibit 10.2.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1855644/000110465926006326/tm263758d1_ex10-2.htm#:~:text=If%20the%20terms%20of%20this,agreement%20to%20the%20provisions%20herein.",
+            "proposition": "The Zura Bio offer letter asks the executive to accept by signing in the space provided.",
+            "verbatimQuote": "If the terms of this contingent offer are acceptable to you, please sign in the space provided below indicating your agreement to the provisions herein.",
+            "date": "2026-01-21",
+            "anchor": "https://openagreements.org/checklists/employment-offer-letter/us#src-q11-zura-signature"
+          }
+        ]
+      }
+    ]
+  }
+}

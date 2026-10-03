@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-content_packaged_at: "2026-09-30"
+content_packaged_at: "2026-10-03"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-09-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-10-03 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Delaware[^about]
 
@@ -173,6 +173,20 @@ This is a narrow licensing rule, not a general employee non-compete statute. It 
 
 The through-line is not that Delaware became anti-enforcement. It is that Delaware separates contract forms carefully and demands fact-specific tailoring before enforcing true restraints on work.
 
+## What does federal law require a non-compete or confidentiality agreement in Delaware to say about whistleblowers and pay? {#federal-notices-and-pay-discussion}
+
+**Short answer.** An employee confidentiality, non-compete, or invention assignment agreement signed or updated now that governs trade secrets or other confidential information must give the Defend Trade Secrets Act whistleblower-immunity notice, and for employees the National Labor Relations Act covers, Section 7 of that Act protects concerted activity, including joining together over pay and working conditions, that a broad confidentiality clause can restrict.[^dtsa-notice-duty][^nlra-section-7-rights][^nlrb-wages-working-conditions]
+The employer may satisfy the notice duty by cross-referencing a qualifying policy document provided to the employee, but an employer that omits the notice may not be awarded exemplary damages or attorney fees under the Defend Trade Secrets Act in an action against an employee who was not given notice.[^dtsa-notice-policy-cross-reference][^dtsa-notice-noncompliance]
+
+The notice describes a federal immunity: an individual cannot be held liable under federal or state trade-secret law for disclosing a trade secret in confidence to a government official or an attorney solely to report or investigate a suspected violation of law, or in a court filing made under seal.[^dtsa-immunity-scope] For an agreement signed or updated now, the duty to give that notice reaches any agreement with an employee that governs trade secrets or other confidential information, whatever else the agreement does.[^dtsa-notice-duty]
+
+Section 7 gives employees the National Labor Relations Act covers a statutory right to engage in concerted activity for mutual aid or protection, including joining together to improve pay and working conditions. For employees the Act covers, the Board's work-rule standard adopted in 2023 makes a rule presumptively unlawful if it has a reasonable tendency to chill employees from exercising their Section 7 rights; an employer can rebut that presumption only by showing a legitimate and substantial business interest it cannot serve with a more narrowly tailored rule.[^nlra-section-7-rights][^nlrb-wages-working-conditions][^stericycle-work-rule-standard] The 2023 standard may change, but the Section 7 right it enforces is statutory. State law may add its own requirements for the same clauses.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
+
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Delaware*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/delaware.
 
 [^fp-uc-reasonableness-test]: **FP UC Holdings, LLC v. Hamilton** — "Instead, our courts carefully review the covenants to assure they ‘(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.’" *FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020).* <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D>
@@ -268,3 +282,17 @@ The through-line is not that Delaware became anti-enforcement. It is that Delawa
 [^payscale-recent-track]: **Payscale Inc. v. Norman** — "Accordingly, the trial court erred in dismissing Payscale’s claim that Norman breached the non-compete provision." *Payscale Inc. v. Norman, No. 297, 2025, slip op. at 18 (Del. Mar. 19, 2026).* <https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=Accordingly%2C%20the%20trial%20court%20erred,Norman%20breached%20the%20non%2Dcompete%20provision.>
 
 [^lkq-recent-rsu]: **LKQ Corp. v. Rutledge** — "The United States Court of Appeals for the Seventh Circuit is considering an appeal raising a similar forfeiture-for- competition dispute under Delaware law but arising from a company’s restricted stock unit agreements." *LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024).* <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=The%20United%20States%20Court%20of%20Appeals%20for%20the%20Seventh%20Circuit%20is,company%E2%80%99s%20restricted%20stock%20unit%20agreements.>
+
+[^dtsa-notice-duty]: **Defend Trade Secrets Act — employer notice requirement, 18 U.S.C. § 1833(b)(3)(A)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
+
+[^nlra-section-7-rights]: **NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157** — "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection, and shall also have the right to refrain from any or all of such activities except to the extent that such right may be affected by an agreement requiring membership in a labor organization as a condition of employment as authorized in section 158(a)(3) of this title." *29 U.S.C. § 157 (NLRA § 7).* <https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,section%20158(a)(3)%20of%20this%20title.>
+
+[^nlrb-wages-working-conditions]: **National Labor Relations Board, statement of the agency's mission** — "Established in 1935, the National Labor Relations Board is an independent federal agency that protects employees from unfair labor practices and protects the right of private sector employees to join together, with or without a union, to improve wages, benefits and working conditions." *NLRB Office of Public Affairs, news release of Feb. 21, 2023 (agency mission statement).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
+
+[^dtsa-notice-policy-cross-reference]: **Defend Trade Secrets Act — policy-document alternative, 18 U.S.C. § 1833(b)(3)(B)** — "An employer shall be considered to be in compliance with the notice requirement in subparagraph (A) if the employer provides a cross-reference to a policy document provided to the employee that sets forth the employer's reporting policy for a suspected violation of law." *18 U.S.C. § 1833(b)(3)(B).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20be%20considered,a%20suspected%20violation%20of%20law.>
+
+[^dtsa-notice-noncompliance]: **Defend Trade Secrets Act — consequence of omitting the notice, 18 U.S.C. § 1833(b)(3)(C)** — "If an employer does not comply with the notice requirement in subparagraph (A), the employer may not be awarded exemplary damages or attorney fees under subparagraph (C) or (D) of section 1836(b)(3) in an action against an employee to whom notice was not provided." *18 U.S.C. § 1833(b)(3)(C).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=If%20an%20employer%20does%20not,whom%20notice%20was%20not%20provided.>
+
+[^dtsa-immunity-scope]: **Defend Trade Secrets Act — whistleblower immunity, 18 U.S.C. § 1833(b)(1)** — "An individual shall not be held criminally or civilly liable under any Federal or State trade secret law for the disclosure of a trade secret that— (A) is made— (i) in confidence to a Federal, State, or local government official, either directly or indirectly, or to an attorney; and (ii) solely for the purpose of reporting or investigating a suspected violation of law; or (B) is made in a complaint or other document filed in a lawsuit or other proceeding, if such filing is made under seal." *18 U.S.C. § 1833(b)(1).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20individual%20shall%20not%20be,filing%20is%20made%20under%20seal.>
+
+[^stericycle-work-rule-standard]: **NLRB news release on Stericycle, Inc., 372 NLRB No. 113 (2023) — work-rule standard** — "Under the new standard adopted in Stericycle, the General Counsel must prove that a challenged rule has a reasonable tendency to chill employees from exercising their rights. If the General Counsel does so, then the rule is presumptively unlawful. However, the employer may rebut the presumption by proving that the rule advances a legitimate and substantial business interest and that the employer is unable to advance that interest with a more narrowly tailored rule." *Stericycle, Inc., 372 NLRB No. 113 (2023); NLRB Office of Public Affairs, Board Adopts New Standard for Assessing Lawfulness of Work Rules (Aug. 2, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-adopts-new-standard-for-assessing-lawfulness-of-work-rules>

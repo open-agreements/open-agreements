@@ -6,7 +6,7 @@ description: >-
   document(s).
 citation: 'Labriola v. Pollard Group, Inc., 152 Wn.2d 828 (2004).'
 resource: 'https://www.courtlistener.com/opinion/4908367/labriola-v-pollard-group-inc/'
-timestamp: '2026-06-11'
+timestamp: '2026-09-30'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/washington'

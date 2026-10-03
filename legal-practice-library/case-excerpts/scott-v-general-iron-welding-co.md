@@ -6,7 +6,7 @@ description: >-
   quoted in 3 document(s).
 citation: 'Scott v. General Iron & Welding Co., 171 Conn. 132, 368 A.2d 111 (1976).'
 resource: 'https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/'
-timestamp: '2026-07-02'
+timestamp: '2026-10-02'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/connecticut'
@@ -35,7 +35,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`
 - source_cards: `scott-geographic-area-reasonable`, `scott-territory`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut (CT) — Agreement Enforceability](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=A%20restrictive%20covenant%20which%20protects,unreasonable%20with%20respect%20to%20area.>
 
 ### scott-v-general-iron-welding-co-in-determining-whether-a-restrictive-83a5b363 {#scott-v-general-iron-welding-co-in-determining-whether-a-restrictive-83a5b363}
@@ -44,7 +44,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `holdover-clause-limit`, `tolling-during-breach`
 - source_cards: `scott-reasonableness-backdrop-for-tolling`, `scott-reasonableness-test`, `scott-tolling-backdrop`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Employee Invention Assignment in Connecticut](../invention-assignment/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Employee Invention Assignment in Connecticut](../invention-assignment/us/connecticut.md), [Non-Competes in Connecticut (CT) — Agreement Enforceability](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20determining%20whether%20a%20restrictive,of%20the%20restraint%20it%20imposes.%E2%80%9D>
 
 ### scott-v-general-iron-welding-co-in-order-to-be-valid-and-b6153e5c {#scott-v-general-iron-welding-co-in-order-to-be-valid-and-b6153e5c}
@@ -53,7 +53,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `connecticut-statutory-gates`, `employee-non-compete-enforceability`, `employee-non-solicitation`, `holdover-clause-limit`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ct-ens-scott-reason`, `scott-employee-noncompete-reasonableness`, `scott-fair-protection`, `scott-five-factor-gate`, `scott-reasonableness-covenants`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Employee Invention Assignment in Connecticut](../invention-assignment/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Employee Invention Assignment in Connecticut](../invention-assignment/us/connecticut.md), [Non-Competes in Connecticut (CT) — Agreement Enforceability](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.>
 
 ### scott-v-general-iron-welding-co-in-this-case-the-court-could-221d6cfa {#scott-v-general-iron-welding-co-in-this-case-the-court-could-221d6cfa}
@@ -62,7 +62,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`
 - source_cards: `scott-duration`, `scott-five-year-duration`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut (CT) — Agreement Enforceability](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20this%20case%2C%20the%20court,defendant%20to%20acquire%20its%20customers.>
 
 ### scott-v-general-iron-welding-co-the-interests-of-the-employee-himself-6bb837d0 {#scott-v-general-iron-welding-co-the-interests-of-the-employee-himself-6bb837d0}
@@ -71,7 +71,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `connecticut-statutory-gates`, `definitions`, `employee-non-compete-enforceability`, `employee-non-solicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ct-ens-scott-livelihood`, `scott-employee-livelihood`, `scott-livelihood-covenants`, `scott-livelihood-defs`, `scott-livelihood-gate`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut (CT) — Agreement Enforceability](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20interests%20of%20the%20employee,supporting%20himself%20and%20his%20family.>
 
 ### scott-v-general-iron-welding-co-the-plaintiff-s-knowledge-of-the-55ba8059 {#scott-v-general-iron-welding-co-the-plaintiff-s-knowledge-of-the-55ba8059}
@@ -80,7 +80,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`
 - source_cards: `scott-customer-confidential-information`, `scott-customer-list`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut (CT) — Agreement Enforceability](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20plaintiff%E2%80%99s%20knowledge%20of%20the,a%20reasonable%20period%20of%20time.>
 
 ### scott-v-general-iron-welding-co-thus-the-plaintiff-is-not-being-162670db {#scott-v-general-iron-welding-co-thus-the-plaintiff-is-not-being-162670db}

@@ -25,7 +25,7 @@ Primary-source-backed legal practice guides, projected from openagreements.org a
 | AI & the Workforce | AI in hiring and adverse-action, workforce AI policies, and outside-counsel transitions. | 20 practice guides | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library) | [HTML](https://openagreements.org/practice-guides) |
 | Privacy-Policy Requirement Phrasings | Preferred phrasings for what a U.S. consumer privacy policy must disclose. | 8 practice guides | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/privacy-policy) | [HTML](https://openagreements.org/practice-guides/privacy/us) |
 
-Backed by 673 verbatim [case excerpts](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/case-excerpts) — the passages our practice guides rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.
+Backed by 696 verbatim [case excerpts](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/case-excerpts) — the passages our practice guides rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.
 
 ## Choose an agreement template
 
@@ -232,6 +232,12 @@ Side-by-side comparison tables across jurisdictions. The web pages also publish 
 |--------|----------|------|
 | U.S. 50-State Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/us.md) | [HTML](https://openagreements.org/surveys/non-compete/us) |
 | U.S. asset-purchase survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/asset-purchase/us.md) | [HTML](https://openagreements.org/surveys/asset-purchase/us) |
+| U.S. asset-purchase-after-closing survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/asset-purchase-after-closing/us.md) | [HTML](https://openagreements.org/surveys/asset-purchase-after-closing/us) |
+| U.S. asset-purchase-closing-and-handover survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/asset-purchase-closing-and-handover/us.md) | [HTML](https://openagreements.org/surveys/asset-purchase-closing-and-handover/us) |
+| U.S. asset-purchase-price-and-payment survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/asset-purchase-price-and-payment/us.md) | [HTML](https://openagreements.org/surveys/asset-purchase-price-and-payment/us) |
+| U.S. asset-purchase-signing-to-closing survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/asset-purchase-signing-to-closing/us.md) | [HTML](https://openagreements.org/surveys/asset-purchase-signing-to-closing/us) |
+| U.S. asset-purchase-structure-and-parties survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/asset-purchase-structure-and-parties/us.md) | [HTML](https://openagreements.org/surveys/asset-purchase-structure-and-parties/us) |
+| U.S. asset-purchase-what-transfers survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/asset-purchase-what-transfers/us.md) | [HTML](https://openagreements.org/surveys/asset-purchase-what-transfers/us) |
 | U.S. corporate-governance survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/corporate-governance/us.md) | [HTML](https://openagreements.org/surveys/corporate-governance/us) |
 | U.S. founder-separation survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/founder-separation/us.md) | [HTML](https://openagreements.org/surveys/founder-separation/us) |
 | U.S. invention-assignment survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/invention-assignment/us.md) | [HTML](https://openagreements.org/surveys/invention-assignment/us) |

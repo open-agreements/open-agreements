@@ -1,0 +1,1119 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "external": true,
+      "title": "CC BY 4.0"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "fund-formation",
+    "slug": "hedge-fund-subscription-agreement",
+    "frontmatter": {
+      "title": "Hedge Fund Subscription Agreement Reviewer Checklist",
+      "description": "A section-by-section review checklist for a hedge fund subscription agreement for a Delaware limited partnership relying on Section 3(c)(1).",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "U.S. hedge fund subscription agreement for a fully funded, open-end fund, read with its limited partnership agreement and private placement memorandum. Not a closed-end drawdown fund such as a private equity fund",
+      "lastReviewed": "2026-09-30",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 19,
+    "sections": [
+      {
+        "sectionId": "subscription-and-admission",
+        "label": "Subscription and admission"
+      },
+      {
+        "sectionId": "eligibility-representations",
+        "label": "Eligibility representations"
+      },
+      {
+        "sectionId": "compliance-information",
+        "label": "Compliance information"
+      },
+      {
+        "sectionId": "power-of-attorney-indemnity-and-side-letters",
+        "label": "Power of attorney, indemnity, and side letters"
+      },
+      {
+        "sectionId": "investment-manager-outside-the-united-states",
+        "label": "Investment manager outside the United States"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "reserve-acceptance-and-rejection",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.reserve-acceptance-and-rejection",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "General partner may accept or reject in whole or part; rejected funds returned",
+        "sectionId": "subscription-and-admission",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#reserve-acceptance-and-rejection",
+        "requirementGuidance": "Confirm the general partner may accept or reject a subscription in whole or in part, rejected funds are returned promptly, the fund is bound only on acceptance, and the investor cannot revoke the subscription once delivered. Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-ilpa-accept",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "ILPA Model Subscription Agreement (2018), clause 2.3",
+            "citation": "Institutional Limited Partners Association, Model Subscription Agreement, clause 2.3 (2018)",
+            "url": "https://ilpa.org/wp-content/uploads/2018/05/ILPA-Model-Subscription-Agreement-Final.pdf",
+            "proposition": "ILPA's model subscription agreement binds the applicant to the partnership agreement on acceptance and lets the general partner accept or reject the application in whole or in part.",
+            "verbatimQuote": "and, following such acceptance, the Applicant shall have all the rights and shall observe and comply with and be bound by all of the obligations of a Limited Partner set forth in the Partnership Agreement. For the avoidance of doubt, the Applicant acknowledges and agrees that the General Partner may, in its sole discretion, accept or reject this Agreement in whole or in part and admit the Applicant as a Limited Partner with a lesser Commitment than the Applicant applied for.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-ilpa-accept"
+          },
+          {
+            "sourceId": "sa-persimmon-reject",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Persimmon Growth Partners Fund, L.P., Subscription Agreement (2010)",
+            "citation": "Persimmon Growth Partners Fund, L.P., Subscription Documents, Exhibit 99.2(p) to Form N-2 (2010)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm#:~:text=The%20Subscriber%20acknowledges%20that%20the,this%20Agreement%20will%20be%20void.",
+            "proposition": "A subscription agreement filed with the SEC lets the general partner reject a subscription in whole or in part and requires prompt return of rejected funds.",
+            "verbatimQuote": "The Subscriber acknowledges that the General Partner may reject the Subscriber’s subscription, in whole or in part, for any reason and in its sole discretion. If rejected, the Fund will promptly return the subscription funds without interest and this Agreement will be void.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-persimmon-reject"
+          },
+          {
+            "sourceId": "sa-cifc-reject",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "CIFC Direct Lending Evergreen Fund, Subscription Documents (2026)",
+            "citation": "CIFC Direct Lending Evergreen Fund, Confidential Subscription Documents, Exhibit 10.5 to Form 10/A (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm#:~:text=The%20Subscriber%20understands%20that%20the,as%20the%20Subscriber%E2%80%99s%20%E2%80%9CCapital%20Contribution%E2%80%9D).",
+            "proposition": "A subscription agreement filed with the SEC reserves the fund's right to reject a subscription in whole or in part.",
+            "verbatimQuote": "The Subscriber understands that the Fund reserves the right to reject the subscription evidenced by this Subscription Agreement in whole or in part for any reason whatsoever (the amount of the capital contribution accepted by the Fund is specified on the Fund’s signature page hereto and is referred to herein as the Subscriber’s “Capital Contribution”).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-cifc-reject"
+          },
+          {
+            "sourceId": "sa-sage-irrevocable",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Sage Fund, Limited Partnership, Subscription Agreement (2009)",
+            "citation": "Sage Fund, Limited Partnership, Subscription Agreement, Exhibit 10.1 to Form 10 (2009)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm#:~:text=Subscription%20Irrevocable%20The%20Subscriber%20understands,has%20been%20accepted%20or%20rejected.",
+            "proposition": "A subscription agreement filed with the SEC makes the subscription irrevocable by the subscriber once made.",
+            "verbatimQuote": "Subscription Irrevocable The Subscriber understands that this subscription, once made, is irrevocable by the Subscriber, and that the General Partner will advise the Subscriber as soon as practicable whether this Subscription Agreement, together with all or a portion of the subscription, has been accepted or rejected.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-sage-irrevocable"
+          }
+        ]
+      },
+      {
+        "requirementId": "join-the-partnership-agreement-on-admission",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.join-the-partnership-agreement-on-admission",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Admission and joinder to the partnership agreement, which governs conflicts",
+        "sectionId": "subscription-and-admission",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#join-the-partnership-agreement-on-admission",
+        "requirementGuidance": "Confirm the time of admission matches the partnership agreement's admission clause, the investor becomes bound by the partnership agreement when admitted, and the partnership agreement controls if the two documents conflict. Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "delaware-admission-of-limited-partners",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Delaware Revised Uniform Limited Partnership Act § 17-301(b), 6 Del. C. § 17-301(b)",
+            "citation": "6 Del. C. § 17-301(b)(1).",
+            "url": "https://delcode.delaware.gov/title6/c017/sc03/index.html",
+            "proposition": "6 Del. C. § 17-301(b) provides that, after formation, a person is admitted as a limited partner as the partnership agreement provides or, if it does not provide, on the consent of all partners.",
+            "verbatimQuote": "After the formation of a limited partnership, a person is admitted as a limited partner of the limited partnership: (1) In the case of a person who is not an assignee of a partnership interest, including a person acquiring a partnership interest directly from the limited partnership and a person to be admitted as a limited partner of the limited partnership without acquiring a partnership interest in the limited partnership, at the time provided in and upon compliance with the partnership agreement or, if the partnership agreement does not so provide, upon the consent of all partners or as otherwise provided in the partnership agreement;",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-delaware-admission-of-limited-partners"
+          },
+          {
+            "sourceId": "sa-ilpa-accept",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "ILPA Model Subscription Agreement (2018), clause 2.3",
+            "citation": "Institutional Limited Partners Association, Model Subscription Agreement, clause 2.3 (2018)",
+            "url": "https://ilpa.org/wp-content/uploads/2018/05/ILPA-Model-Subscription-Agreement-Final.pdf",
+            "proposition": "ILPA's model subscription agreement binds the applicant to the partnership agreement on acceptance and lets the general partner accept or reject the application in whole or in part.",
+            "verbatimQuote": "and, following such acceptance, the Applicant shall have all the rights and shall observe and comply with and be bound by all of the obligations of a Limited Partner set forth in the Partnership Agreement. For the avoidance of doubt, the Applicant acknowledges and agrees that the General Partner may, in its sole discretion, accept or reject this Agreement in whole or in part and admit the Applicant as a Limited Partner with a lesser Commitment than the Applicant applied for.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-ilpa-accept"
+          },
+          {
+            "sourceId": "sa-bhm-admission",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "BHM Discretionary Futures Fund L.P., Subscription/Exchange Agreement (2011)",
+            "citation": "BHM Discretionary Futures Fund L.P., Subscription/Exchange Agreement, Exhibit 10.3 to Form 10 (2011)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1504886/000119312511047651/dex103.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1504886/000119312511047651/dex103.htm#:~:text=ACCEPTANCE%20OF%20THE%20LIMITED%20PARTNERSHIP,signed%20the%20Limited%20Partnership%20Agreement.",
+            "proposition": "A subscription agreement filed with the SEC admits the investor as a limited partner when its name is entered on the books and binds it to every term of the limited partnership agreement.",
+            "verbatimQuote": "ACCEPTANCE OF THE LIMITED PARTNERSHIP AGREEMENT(S) You agree that as of the date that your name is entered on the books of the Partnership, you shall become a limited partner of the Partnership. You also agree to each and every term of the Limited Partnership Agreement as if you signed the Limited Partnership Agreement.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-bhm-admission"
+          },
+          {
+            "sourceId": "sa-sage-admission",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Sage Fund, Limited Partnership, Subscription Agreement (2009)",
+            "citation": "Sage Fund, Limited Partnership, Subscription Agreement, Exhibit 10.1 to Form 10 (2009)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm#:~:text=Acceptance%20of%20Agreement%20of%20Limited,Subscriber%E2%80%99s%20signature%20were%20subscribed%20thereto.",
+            "proposition": "A subscription agreement filed with the SEC makes the subscriber a limited partner on acceptance of its funds and binds it to every term of the partnership agreement.",
+            "verbatimQuote": "Acceptance of Agreement of Limited Partnership The Subscriber agrees that as of the date of the acceptance of the Subscriber’s subscription funds by the Fund, the Subscriber shall become a Limited Partner, and the Subscriber hereby agrees to each and every term of the Agreement of Limited Partnership as if the Subscriber’s signature were subscribed thereto.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-sage-admission"
+          },
+          {
+            "sourceId": "sa-persimmon-lpa-governs",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Persimmon Growth Partners Fund, L.P., Subscription Agreement (2010)",
+            "citation": "Persimmon Growth Partners Fund, L.P., Subscription Documents, Exhibit 99.2(p) to Form N-2 (2010)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm#:~:text=In%20the%20event%20of%20any,the%20Partnership%20Agreement%20shall%20govern.",
+            "proposition": "A subscription agreement filed with the SEC provides that the partnership agreement governs over a conflicting document executed under the subscription power of attorney.",
+            "verbatimQuote": "In the event of any conflict between the provisions of the Partnership Agreement and any document executed or filed by the attorney-in-fact pursuant to this Power of Attorney, the Partnership Agreement shall govern.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-persimmon-lpa-governs"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-the-subscription-deadlines-and-funding",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.state-the-subscription-deadlines-and-funding",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Document and funding deadlines stated, with funds from the investor's own account",
+        "sectionId": "subscription-and-admission",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#state-the-subscription-deadlines-and-funding",
+        "requirementGuidance": "Confirm the agreement states when completed documents and cleared funds must arrive before each subscription date, how funds are sent, that they come from an account at a financial institution where the investor is the customer, and what happens to funds received early, consistently with the memorandum. Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-mfa-wired-funds",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Managed Funds Association, Sound Practices for Hedge Fund Managers, Appendix IV, Recommendation 2.2.1",
+            "citation": "Managed Funds Association, Sound Practices for Hedge Fund Managers, Appendix IV, Recommendation 2.2.1 (CFTC-hosted copy)",
+            "url": "https://www.cftc.gov/sites/default/files/idc/groups/public/@swaps/documents/file/soundpractices.pdf",
+            "proposition": "MFA's sound practices treat funds wired from a financial institution in a FATF jurisdiction where the investor is a customer as generally sufficient identification of a natural-person investor.",
+            "verbatimQuote": "In order to confirm the identity of a natural person, a Hedge Fund Manager should take reasonable steps to ascertain the Investor’s name and address, and, if applicable, social security number or taxpayer identification number. Where funds are wired to the Hedge Fund Manager or the administrator from a financial institution located in a “FATF jurisdiction”13 in which the investor is a customer, no additional information is generally necessary, unless the Investor is considered a Prohibited Investor or high risk Investor, as discussed in Recommendations 2.3 and 2.4, on the following pages.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-mfa-wired-funds"
+          },
+          {
+            "sourceId": "sa-persimmon-deadline",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Persimmon Growth Partners Fund, L.P., Subscription Agreement (2010)",
+            "citation": "Persimmon Growth Partners Fund, L.P., Subscription Documents, Exhibit 99.2(p) to Form N-2 (2010)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm#:~:text=Subscription%20materials%20for%20initial%20investments,the%20relevant%20Monthly%20Transaction%20Date.",
+            "proposition": "A subscription agreement filed with the SEC requires initial subscription materials at least five business days before the monthly transaction date.",
+            "verbatimQuote": "Subscription materials for initial investments must be received in proper form by the Administrator at least five (5) Business Days prior to the relevant Monthly Transaction Date and subsequent investment requests must be received in proper form by the Administrator at least four (4) Business Days prior to the relevant Monthly Transaction Date.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-persimmon-deadline"
+          },
+          {
+            "sourceId": "sa-cifc-deadline",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "CIFC Direct Lending Evergreen Fund, Subscription Documents (2026)",
+            "citation": "CIFC Direct Lending Evergreen Fund, Confidential Subscription Documents, Exhibit 10.5 to Form 10/A (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm#:~:text=The%20Subscription%20Agreement%20must%20be,Fund%20in%20its%20sole%20discretion.",
+            "proposition": "A subscription agreement filed with the SEC requires the agreement to arrive five business days before the first day of a calendar month.",
+            "verbatimQuote": "The Subscription Agreement must be received no later than five (5) Business Days prior to the first day of a calendar month (each, a “Subscription Date”), or such other period acceptable to the Fund in its sole discretion.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-cifc-deadline"
+          },
+          {
+            "sourceId": "sa-sage-funds-held",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Sage Fund, Limited Partnership, Subscription Agreement (2009)",
+            "citation": "Sage Fund, Limited Partnership, Subscription Agreement, Exhibit 10.1 to Form 10 (2009)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm#:~:text=Subscription%20funds%20received%20and%20accepted,at%20a%20closing%20each%20month.",
+            "proposition": "A subscription agreement filed with the SEC holds subscription funds in a separate bank account until the monthly closing.",
+            "verbatimQuote": "Subscription funds received and accepted by the Fund will be held in a separate bank account and will be released to the Fund for trading at a closing each month.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-sage-funds-held"
+          }
+        ]
+      },
+      {
+        "requirementId": "use-the-partnership-agreement-terms",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.use-the-partnership-agreement-terms",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Shared deal terms taken from the partnership agreement",
+        "sectionId": "subscription-and-admission",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#use-the-partnership-agreement-terms",
+        "requirementGuidance": "Confirm the fund name, general partner, manager, minimum investment, and subscription date match the partnership agreement and memorandum, and that the agreement refers to the partnership agreement for withdrawal rights, fees, transfers, and dispute resolution rather than restating them. Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-bhm-admission",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "BHM Discretionary Futures Fund L.P., Subscription/Exchange Agreement (2011)",
+            "citation": "BHM Discretionary Futures Fund L.P., Subscription/Exchange Agreement, Exhibit 10.3 to Form 10 (2011)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1504886/000119312511047651/dex103.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1504886/000119312511047651/dex103.htm#:~:text=ACCEPTANCE%20OF%20THE%20LIMITED%20PARTNERSHIP,signed%20the%20Limited%20Partnership%20Agreement.",
+            "proposition": "A subscription agreement filed with the SEC admits the investor as a limited partner when its name is entered on the books and binds it to every term of the limited partnership agreement.",
+            "verbatimQuote": "ACCEPTANCE OF THE LIMITED PARTNERSHIP AGREEMENT(S) You agree that as of the date that your name is entered on the books of the Partnership, you shall become a limited partner of the Partnership. You also agree to each and every term of the Limited Partnership Agreement as if you signed the Limited Partnership Agreement.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-bhm-admission"
+          },
+          {
+            "sourceId": "sa-sage-admission",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Sage Fund, Limited Partnership, Subscription Agreement (2009)",
+            "citation": "Sage Fund, Limited Partnership, Subscription Agreement, Exhibit 10.1 to Form 10 (2009)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm#:~:text=Acceptance%20of%20Agreement%20of%20Limited,Subscriber%E2%80%99s%20signature%20were%20subscribed%20thereto.",
+            "proposition": "A subscription agreement filed with the SEC makes the subscriber a limited partner on acceptance of its funds and binds it to every term of the partnership agreement.",
+            "verbatimQuote": "Acceptance of Agreement of Limited Partnership The Subscriber agrees that as of the date of the acceptance of the Subscriber’s subscription funds by the Fund, the Subscriber shall become a Limited Partner, and the Subscriber hereby agrees to each and every term of the Agreement of Limited Partnership as if the Subscriber’s signature were subscribed thereto.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-sage-admission"
+          }
+        ]
+      },
+      {
+        "requirementId": "verify-accredited-status-in-a-rule-506c-offering",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.verify-accredited-status-in-a-rule-506c-offering",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rule 506(c) offering: reasonable steps to verify accredited status",
+        "sectionId": "eligibility-representations",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#verify-accredited-status-in-a-rule-506c-offering",
+        "requirementGuidance": "In a Rule 506(c) offering, every purchaser must be an accredited investor and the fund must take reasonable steps to verify that status. In a fact-specific view, SEC staff accepted a minimum investment of at least $200,000 for a natural person or $1,000,000 for an entity accredited by its total assets, on conditions including the purchaser's written representations that it is accredited and that the minimum is not third-party financed for the investment, and the issuer's lack of actual knowledge to the contrary. Practice Guide (Rule 506(b) and 506(c))",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rule-506c-all-accredited",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.506(c)(2)(i): Purchasers in a Rule 506(c) offering",
+            "citation": "17 C.F.R. § 230.506(c)(2)(i).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.506",
+            "proposition": "Rule 506(c) requires all purchasers of securities sold in an offering under that paragraph to be accredited investors.",
+            "verbatimQuote": "All purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-rule-506c-all-accredited"
+          },
+          {
+            "sourceId": "rule-506c-verification",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.506(c)(2)(ii): Verification of accredited-investor status",
+            "citation": "17 C.F.R. § 230.506(c)(2)(ii).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.506",
+            "proposition": "Rule 506(c) requires the issuer to take reasonable steps to verify that purchasers are accredited investors.",
+            "verbatimQuote": "The issuer shall take reasonable steps to verify that purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-rule-506c-verification"
+          },
+          {
+            "sourceId": "sa-sifma-506c-general-solicitation",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "SIFMA, Guidance on Rule 506(c) Verification (June 23, 2014)",
+            "citation": "Securities Industry and Financial Markets Association, SIFMA Guidance on Rule 506(c) Verification, at 1 (June 23, 2014)",
+            "url": "https://www.sifma.org/wp-content/uploads/2017/05/sifma-guidance-on-rule-506c-verification.pdf",
+            "proposition": "SIFMA's Rule 506(c) guidance summarizes that Rule 506(c) permits general solicitation if all purchasers are accredited and the issuer takes reasonable steps to verify their status.",
+            "verbatimQuote": "In July 2013, the SEC amended Rule 506 of Regulation D under the Securities Act of 1933 to permit the use of general solicitation in securities offerings conducted under new paragraph (c) of Rule 506, provided that all purchasers in the offering are “accredited investors” and the issuer takes “reasonable steps” to verify such status.1 This “reasonable verification” requirement applies only to Rule 506(c) offerings, is separate from the requirement that sales be limited to accredited investors and must be satisfied even if all purchasers happen to be accredited investors. These amendments took effect on September 23, 2013.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-sifma-506c-general-solicitation"
+          },
+          {
+            "sourceId": "sa-latham-nal",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "SEC Division of Corporation Finance, Latham & Watkins LLP no-action letter (Mar. 12, 2025)",
+            "citation": "Latham & Watkins LLP, SEC No-Action Letter (Mar. 12, 2025)",
+            "url": "https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/latham-watkins-503c-031225",
+            "deepLink": "https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/latham-watkins-503c-031225#:~:text=We%20agree%20that%20a%20high,Regulation%20D%20are%20accredited%20investors.",
+            "proposition": "SEC staff agreed that a high minimum investment, with written representations of accreditation under specified categories and that the minimum investment is not third-party financed, and no actual knowledge to the contrary, including for each equity owner of an entity accredited through its owners, can be reasonable steps to verify in a Rule 506(c) offering.",
+            "verbatimQuote": "We agree that a high minimum investment amount is a relevant factor in verifying accredited investor status. As you note, the Commission stated that “if the terms of the offering require a high minimum investment amount and a purchaser is able to meet those terms, then the likelihood of that purchaser satisfying the definition of accredited investor may be sufficiently high such that, absent any facts that indicate that the purchaser is not an accredited investor, it may be reasonable for the issuer to take fewer steps to verify or, in certain cases, no additional steps to verify accredited investor status other than to confirm that the purchaser’s cash investment is not being financed by a third party.” Securities Act Release No. 9415 (July 10, 2013). We also note your representation that the minimum investment amount would be accompanied by written representations, from the purchaser, as to: (1) their accreditation (under Rule 501(a)(5) or (a)(6) if they are a natural person, or under Rule 501(a)(3), (7), (8), (9) or (12) if they are a legal entity), and (2) the fact that the purchaser's minimum investment amount (and, for purchasers that are legal entities accredited solely from the accredited investor status of all of their equity owners, the minimum investment amount of each of the purchaser’s equity owners) is not financed in whole or in part by any third party for the specific purpose of making the particular investment in the issuer. In addition, we note your representation that the issuer would have no actual knowledge of any facts that indicate: that any purchaser is not an accredited investor; or that the minimum investment amount of any purchaser (and, for purchasers that are legal entities accredited solely from the accredited investor status of all of their equity owners, the minimum investment amount of any such equity owner) is financed in whole or in part by any third-party for the specific purpose of making the particular investment in the issuer. Whether an issuer has taken reasonable steps to verify that a purchaser is an accredited investor is an objective determination by the issuer (or those acting on its behalf), in the context of the particular facts and circumstances of each purchaser and transaction. Based on the representations in your letter, we agree the issuer could reasonably conclude that it has taken reasonable steps to verify that purchasers of securities sold in an offering under Rule 506(c) of Regulation D are accredited investors.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-latham-nal"
+          },
+          {
+            "sourceId": "sa-latham-incoming-natural-person",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Latham & Watkins LLP, request letter to the SEC Division of Corporation Finance (Mar. 6, 2025), natural persons",
+            "citation": "Latham & Watkins LLP, Request for No-Action Relief under Rule 506(c) of Regulation D, at 3 (Mar. 6, 2025)",
+            "url": "https://www.sec.gov/files/corpfin/no-action/latham-watkins506c-031225-incoming.pdf",
+            "proposition": "The request letter on which SEC staff based its March 12, 2025 no-action response pairs a $200,000 minimum investment by a natural person with written representations that the purchaser is accredited and that its minimum investment is not financed by a third party.",
+            "verbatimQuote": "For purchasers who are natural persons, the issuer obtains in writing from the purchaser: • representations that: o the purchaser is an accredited investor, as defined in Rule 501(a)(5) or Rule 501(a)(6); and o the purchaser’s minimum investment amount is not financed in whole or in part by any third party for the specific purpose of making the particular investment in the issuer; and • an agreement to make a $200,000 minimum investment (including pursuant to a binding commitment to invest at least a minimum cash amount in one or more installments, as and when called by the issuer).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-latham-incoming-natural-person"
+          },
+          {
+            "sourceId": "sa-latham-incoming-entity",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Latham & Watkins LLP, request letter to the SEC Division of Corporation Finance (Mar. 6, 2025), legal entities",
+            "citation": "Latham & Watkins LLP, Request for No-Action Relief under Rule 506(c) of Regulation D, at 3 (Mar. 6, 2025)",
+            "url": "https://www.sec.gov/files/corpfin/no-action/latham-watkins506c-031225-incoming.pdf",
+            "proposition": "The request letter on which SEC staff based its March 12, 2025 no-action response pairs a $1,000,000 minimum investment by a legal entity accredited by its total assets with written representations that the purchaser is accredited and that its minimum investment is not financed by a third party.",
+            "verbatimQuote": "For purchasers that are legal entities, the issuer obtains in writing from the purchaser: • representations that: o the purchaser is an accredited investor, as defined in Rule 501(a)(3), Rule 501(a)(7), Rule 501(a)(9), or Rule 501(a)(12); and o the purchaser’s minimum investment amount is not financed in whole or in part by any third party for the specific purpose of making the particular investment in the issuer; and • an agreement to make a $1,000,000 minimum investment (including pursuant to a binding commitment to invest at least a minimum cash amount in one or more installments, as and when called by the issuer).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-latham-incoming-entity"
+          },
+          {
+            "sourceId": "sa-r9415-min-investment",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "SEC Release No. 33-9415, Eliminating the Prohibition Against General Solicitation (2013), pp. 32-33",
+            "citation": "Eliminating the Prohibition Against General Solicitation and General Advertising in Rule 506 and Rule 144A Offerings, Securities Act Release No. 33-9415, at 32-33 (July 10, 2013)",
+            "url": "https://www.sec.gov/files/rules/final/2013/33-9415.pdf",
+            "proposition": "Release 33-9415 treats a checkbox questionnaire alone as insufficient and a purchaser's ability to meet a high minimum investment as relevant to verification.",
+            "verbatimQuote": "that a person check a box in a questionnaire or sign a form, absent other information about the purchaser indicating accredited investor status. The terms of the offering will also affect whether the verification methods used by the issuer are reasonable. We continue to believe that there is merit to the view that a purchaser’s ability to meet a high minimum investment amount could be a relevant factor to the issuer’s evaluation of the types of steps that would be reasonable to take in order to verify that purchaser’s status as an accredited investor. By way of example, the ability of a purchaser to satisfy a minimum investment amount requirement that is sufficiently high such that only accredited investors could reasonably be expected to meet it, with a direct cash investment that is not financed by the issuer or by any third party, could be taken into consideration in verifying accredited investor status.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-r9415-min-investment"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-performance-compensation-to-qualified-clients",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.limit-performance-compensation-to-qualified-clients",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Performance allocation: qualified-client representation",
+        "sectionId": "eligibility-representations",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#limit-performance-compensation-to-qualified-clients",
+        "requirementGuidance": "The performance allocation must be limited to qualified clients, with each equity owner that bears it through an investing private investment company, registered investment company, or business development company treated as the client, unless the manager is neither registered nor required to be registered with the Commission, such as an exempt reporting adviser (a state-registered manager should check its state's rule; a stricter screen in the partnership agreement still applies). Confirm the agreement obtains the qualified-client representation, and that no side-letter waiver of the fund's contractual screen reaches this legal limit. Practice Guide (Who can be charged a performance fee) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "advisers-act-205-a-1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Investment Advisers Act of 1940 § 205(a)(1), 15 U.S.C. § 80b-5(a)(1)",
+            "citation": "15 U.S.C. § 80b-5(a)(1).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section80b-5&num=0&edition=prelim",
+            "proposition": "Section 205(a)(1) bars an adviser registered or required to be registered with the Commission from a contract that pays it a share of a client's capital gains or appreciation, subject to exemptions.",
+            "verbatimQuote": "No investment adviser registered or required to be registered with the Commission shall enter into, extend, or renew any investment advisory contract, or in any way perform any investment advisory contract entered into, extended, or renewed on or after November 1, 1940, if such contract- (1) provides for compensation to the investment adviser on the basis of a share of capital gains upon or capital appreciation of the funds or any portion of the funds of the client;",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-advisers-act-205-a-1"
+          },
+          {
+            "sourceId": "qualified-client-exemption",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.205-3(a): Qualified-client exemption",
+            "citation": "17 C.F.R. § 275.205-3(a).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.205-3",
+            "proposition": "Rule 205-3(a) permits performance-based compensation under a contract with a qualified client.",
+            "verbatimQuote": "The provisions of section 205(a)(1) of the Act (15 U.S.C. 80b-5(a)(1)) will not be deemed to prohibit an investment adviser from entering into, performing, renewing or extending an investment advisory contract that provides for compensation to the investment adviser on the basis of a share of the capital gains upon, or the capital appreciation of, the funds, or any portion of the funds, of a client, Provided, That the client entering into the contract subject to this section is a qualified client, as defined in paragraph (d)(1) of this section.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-qualified-client-exemption"
+          },
+          {
+            "sourceId": "qualified-client-look-through",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.205-3(b): Identification of the client",
+            "citation": "17 C.F.R. § 275.205-3(b).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.205-3",
+            "proposition": "Rule 205-3(b) treats each equity owner of a private investment company, registered investment company, or business development company that is charged gain-based compensation as a client.",
+            "verbatimQuote": "In the case of a private investment company, as defined in paragraph (d)(3) of this section, an investment company registered under the Investment Company Act of 1940, or a business development company, as defined in section 202(a)(22) of the Act (15 U.S.C. 80b-2(a)(22)), each equity owner of any such company (except for the investment adviser entering into the contract and any other equity owners not charged a fee on the basis of a share of capital gains or capital appreciation) will be considered a client for purposes of paragraph (a) of this section.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-qualified-client-look-through"
+          },
+          {
+            "sourceId": "sa-hatteras-eligibility-purpose",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Hatteras Multi-Strategy Institutional Fund, L.P., Subscription Agreement (2006)",
+            "citation": "Hatteras Multi-Strategy Institutional Fund, L.P., Form of Subscription Agreement, Exhibit 99.(p) to Form N-2 (2006)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1382143/000095013706013292/c10376exv99wxpy.txt",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1382143/000095013706013292/c10376exv99wxpy.txt#:~:text=The%20information%20requested%20in%20this,the%20Fund%20and%20their%20risks.",
+            "proposition": "A subscription agreement filed with the SEC collects the information needed to determine accredited-investor and qualified-client status.",
+            "verbatimQuote": "The information requested in this Subscription Agreement is needed in order to ensure compliance with the appropriate regulations and to determine (1) whether an investment in the Fund by the Investor is suitable in light of the Investor's financial position, (2) whether the Investor meets certain minimum net worth(2) tests to be deemed an \"accredited investor\" as defined in Regulation D and has such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of the investment, (3) whether the Investor meets the minimum net worth test to be deemed a \"qualified client\" for purposes of Rule 205-3 promulgated under the Investment Advisers Act of 1940 (the \"Advisers Act\") by the SEC and has such knowledge and experience in financial matters that it is able to understand the \"Performance Allocation\" being made by the Fund and their risks.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-hatteras-eligibility-purpose"
+          },
+          {
+            "sourceId": "sa-tcw-qualified-client",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TCW Specialty Lending IX LLC, Subscription Agreement (2026)",
+            "citation": "TCW Specialty Lending IX LLC, Subscription Agreement, Exhibit 10.7 to Form 10 (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm#:~:text=2.%20Qualified%20Client.%20(Please%20indicate,worth%20of%20more%20than%20%242%2C200%2C000.",
+            "proposition": "A subscription agreement filed with the SEC asks a company subscriber to represent whether it is a qualified client by assets under management or net worth.",
+            "verbatimQuote": "2. Qualified Client. (Please indicate whether the following representation is applicable by checking the appropriate box.) The Subscriber is a company3 that is not (i) a private investment company excepted from registration by Section 3(c)(1) of the Investment Company Act, (ii) an investment company4 registered under the Investment Company Act; or (iii) a business development company (as defined in Section 202(a)(22) of the Advisers Act) (each, a “Look-Through Entity”) and satisfies one or both of the following criteria: (a) will have at least $1,100,000 under the management of the Investment Manager; and/or (b) has a net worth of more than $2,200,000.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-tcw-qualified-client"
+          }
+        ]
+      },
+      {
+        "requirementId": "match-the-partnership-agreement-eligibility-screens",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.match-the-partnership-agreement-eligibility-screens",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Every admission condition in the partnership agreement has a matching representation",
+        "sectionId": "eligibility-representations",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#match-the-partnership-agreement-eligibility-screens",
+        "requirementGuidance": "Confirm the subscription agreement and questionnaire ask for the facts behind every admission condition in the limited partnership agreement, such as accredited-investor status or another route the offering exemption allows, qualified-client status, and qualified-purchaser status in a Section 3(c)(7) fund. They may limit the questions to the partnership agreement's own conditions and offer no waiver of a condition it makes non-waivable. Practice Guide (Subscription eligibility) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-constitution-qualifications",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Constitution Capital Evergreen Partnership Fund, LLC, Confidential Private Placement Memorandum (2026)",
+            "citation": "Constitution Capital Evergreen Partnership Fund, LLC, Confidential Private Placement Memorandum, filed as Part A of Form N-2 (Post-Effective Amendment, 2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2102111/000121390026044539/ea0285996-01_posami.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2102111/000121390026044539/ea0285996-01_posami.htm#:~:text=Investors%20who%20meet%20such%20qualifications,completed%20by%20each%20prospective%20investor.",
+            "proposition": "A private placement memorandum filed with the SEC places the qualifications required to invest in the subscription documents each investor completes.",
+            "verbatimQuote": "Investors who meet such qualifications are referred to in this Memorandum as “Eligible Investors.” The qualifications required to invest in the Fund appear in subscription documents that must be completed by each prospective investor.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-constitution-qualifications"
+          },
+          {
+            "sourceId": "sa-hatteras-eligibility-purpose",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Hatteras Multi-Strategy Institutional Fund, L.P., Subscription Agreement (2006)",
+            "citation": "Hatteras Multi-Strategy Institutional Fund, L.P., Form of Subscription Agreement, Exhibit 99.(p) to Form N-2 (2006)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1382143/000095013706013292/c10376exv99wxpy.txt",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1382143/000095013706013292/c10376exv99wxpy.txt#:~:text=The%20information%20requested%20in%20this,the%20Fund%20and%20their%20risks.",
+            "proposition": "A subscription agreement filed with the SEC collects the information needed to determine accredited-investor and qualified-client status.",
+            "verbatimQuote": "The information requested in this Subscription Agreement is needed in order to ensure compliance with the appropriate regulations and to determine (1) whether an investment in the Fund by the Investor is suitable in light of the Investor's financial position, (2) whether the Investor meets certain minimum net worth(2) tests to be deemed an \"accredited investor\" as defined in Regulation D and has such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of the investment, (3) whether the Investor meets the minimum net worth test to be deemed a \"qualified client\" for purposes of Rule 205-3 promulgated under the Investment Advisers Act of 1940 (the \"Advisers Act\") by the SEC and has such knowledge and experience in financial matters that it is able to understand the \"Performance Allocation\" being made by the Fund and their risks.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-hatteras-eligibility-purpose"
+          }
+        ]
+      },
+      {
+        "requirementId": "collect-beneficial-owner-count-information",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.collect-beneficial-owner-count-information",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Facts needed to count beneficial owners under Section 3(c)(1)",
+        "sectionId": "eligibility-representations",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#collect-beneficial-owner-count-information",
+        "requirementGuidance": "In a Section 3(c)(1) fund, confirm the agreement requires the investor to answer the questionnaire's beneficial-ownership questions and report changes, looking through a company investor that holds 10% or more of the fund's voting securities and is, or but for Section 3(c)(1) or 3(c)(7) would be, an investment company. Practice Guide (3(c)(1) and 3(c)(7) funds) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "section-3c1-limit",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "15 U.S.C. § 80a-3(c)(1): Private-fund exclusion",
+            "citation": "15 U.S.C. § 80a-3(c)(1).",
+            "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2D-subchapI-sec80a-3.htm",
+            "proposition": "Investment Company Act section 3(c)(1) excludes an issuer whose outstanding securities are beneficially owned by not more than one hundred persons and which is not making a public offering.",
+            "verbatimQuote": "Notwithstanding subsection (a), none of the following persons is an investment company within the meaning of this subchapter: (1) Any issuer whose outstanding securities (other than short-term paper) are beneficially owned by not more than one hundred persons (or, in the case of a qualifying venture capital fund, 250 persons) and which is not making and does not presently propose to make a public offering of its securities.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-section-3c1-limit"
+          },
+          {
+            "sourceId": "section-3c1-look-through",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "15 U.S.C. § 80a-3(c)(1)(A): Company-investor look-through",
+            "citation": "15 U.S.C. § 80a-3(c)(1)(A).",
+            "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2D-subchapI-sec80a-3.htm",
+            "proposition": "Section 3(c)(1)(A) counts a company investor as one beneficial owner unless it owns 10 percent or more of the issuer's voting securities and is, or but for section 3(c)(1) or 3(c)(7) would be, an investment company.",
+            "verbatimQuote": "Beneficial ownership by a company shall be deemed to be beneficial ownership by one person, except that, if the company owns 10 per centum or more of the outstanding voting securities of the issuer, and is or, but for the exception provided for in this paragraph or paragraph (7), would be an investment company, the beneficial ownership shall be deemed to be that of the holders of such company's outstanding securities (other than short-term paper).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-section-3c1-look-through"
+          },
+          {
+            "sourceId": "sa-persimmon-beneficial-owners",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Persimmon Growth Partners Fund, L.P., Subscription Agreement (2010)",
+            "citation": "Persimmon Growth Partners Fund, L.P., Subscription Documents, Exhibit 99.2(p) to Form N-2 (2010)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm#:~:text=The%20Subscriber%20warrants%20that%20it,Subscriber%E2%80%99s%20investment%20in%20the%20Fund.",
+            "proposition": "A subscription agreement filed with the SEC asks for the subscriber's number of beneficial owners and requires notice of changes.",
+            "verbatimQuote": "The Subscriber warrants that it will promptly notify the General Partner in writing of any changes to the number of beneficial owners at any time during the Subscriber’s investment in the Fund.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-persimmon-beneficial-owners"
+          },
+          {
+            "sourceId": "sa-tcw-beneficial-owners",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TCW Specialty Lending IX LLC, Subscription Agreement (2026)",
+            "citation": "TCW Specialty Lending IX LLC, Subscription Agreement, Exhibit 10.7 to Form 10 (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm#:~:text=3.3%20Number%20of%20Beneficial%20Owners.,its%20investment%20entity%20is%20__________.",
+            "proposition": "A subscription agreement filed with the SEC asks a 3(c)(1) fund subscriber for its number of beneficial owners.",
+            "verbatimQuote": "3.3 Number of Beneficial Owners. If the Subscriber checked the box in question 3.2(ii) above, the number of beneficial owners (as determined under Section 3(c)(1) of the Investment Company Act, as applicable) of its investment entity is __________.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-tcw-beneficial-owners"
+          }
+        ]
+      },
+      {
+        "requirementId": "ask-for-facts-not-legal-conclusions",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.ask-for-facts-not-legal-conclusions",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Representations about facts the investor knows, not legal conclusions",
+        "sectionId": "eligibility-representations",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#ask-for-facts-not-legal-conclusions",
+        "requirementGuidance": "Confirm each representation that turns on a legal definition, such as restricted person or benefit plan investor, asks the investor to confirm facts it knows or can determine, such as its net worth, its owners, the forms it filed, or events in its history, and leaves the general partner to apply the definition. Practice Guide (Subscription eligibility)",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-ilpa-factual-reps",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "ILPA Model Subscription Agreement (2018), clause 3 drafting note",
+            "citation": "Institutional Limited Partners Association, Model Subscription Agreement, clause 3 drafting note (2018)",
+            "url": "https://ilpa.org/wp-content/uploads/2018/05/ILPA-Model-Subscription-Agreement-Final.pdf",
+            "proposition": "ILPA's model subscription agreement limits applicant representations to factual matters without legal determinations.",
+            "verbatimQuote": "[Representations and warranties to be limited to factual matters (i.e. not including any legal determinations) that the Applicant can assess easily and without taking specialist or jurisdiction-specific advice.]",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-ilpa-factual-reps"
+          },
+          {
+            "sourceId": "sa-ilpa-objective-facts",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "ILPA Model Subscription Agreement (2018), Schedule 4 drafting note",
+            "citation": "Institutional Limited Partners Association, Model Subscription Agreement, Schedule 4 drafting note (2018)",
+            "url": "https://ilpa.org/wp-content/uploads/2018/05/ILPA-Model-Subscription-Agreement-Final.pdf",
+            "proposition": "ILPA's model subscription agreement drafts the U.S. securities and tax representations as requests for objective facts, with no determinations as to law.",
+            "verbatimQuote": "[Insert US-securities and tax specific representations, drafted as requests for objective facts (i.e., with no determinations as to law) about the Applicant that it can be reasonably be expected to determine without the advice of counsel or accountants.]",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-ilpa-objective-facts"
+          }
+        ]
+      },
+      {
+        "requirementId": "make-factual-inquiry-for-rule-506d",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.make-factual-inquiry-for-rule-506d",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rule 506(d): factual inquiry of any investor that will hold 20% or more",
+        "sectionId": "compliance-information",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#make-factual-inquiry-for-rule-506d",
+        "requirementGuidance": "In a Rule 506 offering, a beneficial owner of 20% or more of the fund's outstanding voting equity securities, calculated on the basis of voting power, is a covered person, and relying on Rule 506(d)'s reasonable-care exception requires factual inquiry in light of the circumstances. Confirm the subscription documents identify any investor that will hold 20% or more, ask the disqualification questions, and require updates. Practice Guide (Subscription compliance information) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rule-506d-covered-persons",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.506(d)(1): Bad-actor disqualification",
+            "citation": "17 C.F.R. § 230.506(d)(1).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.506",
+            "proposition": "Rule 506(d)(1) makes the exemption unavailable if a covered person, including a beneficial owner of 20% or more of the issuer's outstanding voting equity securities calculated on the basis of voting power, has a disqualifying event.",
+            "verbatimQuote": "No exemption under this section shall be available for a sale of securities if the issuer; any predecessor of the issuer; any affiliated issuer; any director, executive officer, other officer participating in the offering, general partner or managing member of the issuer; any beneficial owner of 20% or more of the issuer's outstanding voting equity securities, calculated on the basis of voting power; any promoter connected with the issuer in any capacity at the time of such sale; any investment manager of an issuer that is a pooled investment fund; any person that has been or will be paid (directly or indirectly) remuneration for solicitation of purchasers in connection with such sale of securities; any general partner or managing member of any such investment manager or solicitor; or any director, executive officer or other officer participating in the offering of any such investment manager or solicitor or general partner or managing member of such investment manager or solicitor:",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-rule-506d-covered-persons"
+          },
+          {
+            "sourceId": "rule-506d-factual-inquiry",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 230.506(d)(2)(iv) and instruction: Reasonable care",
+            "citation": "17 C.F.R. § 230.506(d)(2)(iv), instruction.",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.506",
+            "proposition": "The reasonable-care exception to Rule 506(d) requires the issuer to have made factual inquiry into whether disqualifications exist.",
+            "verbatimQuote": "An issuer will not be able to establish that it has exercised reasonable care unless it has made, in light of the circumstances, factual inquiry into whether any disqualifications exist.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-rule-506d-factual-inquiry"
+          },
+          {
+            "sourceId": "sa-cifc-rule-506d",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "CIFC Direct Lending Evergreen Fund, Subscription Documents (2026)",
+            "citation": "CIFC Direct Lending Evergreen Fund, Confidential Subscription Documents, Exhibit 10.5 to Form 10/A (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm#:~:text=(r)Rule%20506(d).%20(i)The%20Subscriber%20is,the%20disposition%20of%2C%20such%20securities.",
+            "proposition": "A subscription agreement filed with the SEC asks the subscriber to represent the Rule 506(d) facts assuming it owned 20 percent or more of the fund's voting equity.",
+            "verbatimQuote": "(r)Rule 506(d). (i)The Subscriber is not subject to any conviction, order, judgment, decree, suspension, expulsion, bar, injunction, investigation or proceeding, and has not filed or been named in a registration statement or Regulation A offering statement, such that the Fund (i) would be unable to rely on Rule 506 of Regulation D under the Securities Act or (ii) would be required to make disclosures under Rule 506(d) of Regulation D under the Securities Act, in each case assuming the Subscriber were to own, directly or indirectly, 7 through any contract, arrangement, understanding, relationship or otherwise, twenty percent (20%) or more of the outstanding voting equity securities of the Fund, calculated on the basis of (1) voting power, which includes the power to vote, or to direct the voting of, such securities; and/or (2) investment power, which includes the power to dispose, or to direct the disposition of, such securities.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-cifc-rule-506d"
+          },
+          {
+            "sourceId": "sa-tcw-bad-actor",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TCW Specialty Lending IX LLC, Subscription Agreement (2026)",
+            "citation": "TCW Specialty Lending IX LLC, Subscription Agreement, Exhibit 10.7 to Form 10 (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm#:~:text=6.13.1%20The%20Subscriber%20agrees%20to,records%20of%2C%20courts%20and%20regulators.",
+            "proposition": "A subscription agreement filed with the SEC obliges the subscriber to provide information the fund requests to determine whether it is a bad actor.",
+            "verbatimQuote": "6.13.1 The Subscriber agrees to provide the Fund, promptly and at any time before or after acceptance of this Subscription Agreement, any information that the Fund may reasonably request in order to determine whether the Subscriber is a Bad Actor, including, without limitation, filings with, and records of, courts and regulators.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-tcw-bad-actor"
+          }
+        ]
+      },
+      {
+        "requirementId": "collect-anti-money-laundering-information",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.collect-anti-money-laundering-information",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Identity, beneficial ownership, sanctions, and source-of-funds information",
+        "sectionId": "compliance-information",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#collect-anti-money-laundering-information",
+        "requirementGuidance": "Confirm the agreement obtains the identity, beneficial-ownership, sanctions, and source-of-funds information and representations the fund's onboarding procedures call for, and lets the general partner reject, block, or compel withdrawal of an investment when the law requires it. It should describe the fund's actual practice, not FinCEN's investment-adviser program rule, whose effective date is January 1, 2028. Practice Guide (Subscriptions) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-mfa-subscription-docs",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Managed Funds Association, Sound Practices for Hedge Fund Managers, Appendix IV, Recommendation 2.2",
+            "citation": "Managed Funds Association, Sound Practices for Hedge Fund Managers, Appendix IV, Recommendation 2.2 (CFTC-hosted copy)",
+            "url": "https://www.cftc.gov/sites/default/files/idc/groups/public/@swaps/documents/file/soundpractices.pdf",
+            "proposition": "MFA's sound practices say fund subscription documents should require an investor to confirm its identity evidence, agree to provide AML information, and give source-of-funds and sanctions representations.",
+            "verbatimQuote": "Appropriate Identity Provisions Included in Subscription Documents. Fund subscription documents should generally require an Investor to: • Represent and covenant that all evidence of identity provided is genuine and all related information furnished is accurate; 18 | Appendix IV • Agree to provide any information deemed necessary by the Hedge Fund Manager to comply with its AML responsibilities and policies; and • In the case of a Direct Investor, represent that it is investing solely as principal and not for the benefit of any third parties.12 Investor Representations. Hedge Fund subscription agreements should contain a general set of representations from the Investor, stating that they are in compliance with various U.S. federal, state, and international laws and regulations, as well as a set of other disclosures relevant to AML and OFAC compliance. The representation should include statements with respect to the legitimacy of the source of funds being invested, the status of the Investor as a Prohibited Investor, or “Senior Foreign Political Figure/Politically Exposed Person” or “SFPF/PEP”, and if the Investor is a fund of funds or an entity that is acting as an agent or nominee, the representation that the Investor has adopted AML procedures. See Recommendation 2.4.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-mfa-subscription-docs"
+          },
+          {
+            "sourceId": "fincen-adviser-aml-postponement",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "FinCEN Issues Final Rule to Postpone Effective Date of Investment Adviser Rule to 2028",
+            "citation": "FinCEN, Final Rule Postponement Notice (Dec. 31, 2025).",
+            "url": "https://www.fincen.gov/news/news-releases/fincen-issues-final-rule-postpone-effective-date-investment-adviser-rule-2028",
+            "proposition": "FinCEN postponed the effective date of the investment-adviser AML/CFT program and suspicious-activity-reporting rule from January 1, 2026 until January 1, 2028.",
+            "verbatimQuote": "Today, the U.S. Department of the Treasury’s Financial Crimes Enforcement Network (FinCEN) issued a final rule to extend the effective date of the rule establishing Anti-Money Laundering/Countering the Financing of Terrorism Program and Suspicious Activity Report Filing Requirements for Registered Investment Advisers and Exempt Reporting Advisers (IA AML Rule) from January 1, 2026, until January 1, 2028.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-fincen-adviser-aml-postponement"
+          },
+          {
+            "sourceId": "sa-persimmon-aml",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Persimmon Growth Partners Fund, L.P., Subscription Agreement (2010)",
+            "citation": "Persimmon Growth Partners Fund, L.P., Subscription Documents, Exhibit 99.2(p) to Form N-2 (2010)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm#:~:text=(i)%20The%20amounts%20contributed%20by,on%20the%20OFAC%20Control%20List.",
+            "proposition": "A subscription agreement filed with the SEC has the subscriber represent the lawful source of its funds and its sanctions status.",
+            "verbatimQuote": "(i) The amounts contributed by it to the Fund were not and are not directly or indirectly derived from activities that contravene U.S. federal or state laws or regulations and international laws and regulations, including anti-money laundering laws and regulations, and the proceeds from the Subscriber’s investment in the Fund will not be used to finance any illegal activities; (ii) Neither it, nor any person controlling, controlled by, or under common control with it, nor any person having a beneficial interest in it, is an individual, organization, or entity listed on the List of Specially Designated Nationals and Blocked Persons (the “OFAC Control List”) maintained by the U.S. Office of Foreign Assets Control (“OFAC”), and it is not investing and will not invest in the Fund on behalf of or for the benefit of any individual, organization, or entity listed on the OFAC Control List.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-persimmon-aml"
+          },
+          {
+            "sourceId": "sa-persimmon-block",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Persimmon Growth Partners Fund, L.P., Subscription Agreement (2010)",
+            "citation": "Persimmon Growth Partners Fund, L.P., Subscription Documents, Exhibit 99.2(p) to Form N-2 (2010)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm#:~:text=The%20Subscriber%20acknowledges%20that%2C%20if%2C,result%20of%20blocking%20the%20investment.",
+            "proposition": "A subscription agreement filed with the SEC warns that the fund may be obligated to block the investment of a subscriber on the OFAC list.",
+            "verbatimQuote": "The Subscriber acknowledges that, if, following its subscription in the Fund, the General Partner and the Administrator reasonably believe that the Subscriber is listed on the OFAC Control List or has otherwise breached its representations and covenants as to its identity, the Fund may be obligated to block the Subscriber’s investment in accordance with applicable law, and the Subscriber shall have no claim against the Fund, the General Partner or the Administrator for any form of damages as a result of blocking the investment.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-persimmon-block"
+          },
+          {
+            "sourceId": "sa-cifc-shell-bank",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "CIFC Direct Lending Evergreen Fund, Subscription Documents (2026)",
+            "citation": "CIFC Direct Lending Evergreen Fund, Confidential Subscription Documents, Exhibit 10.5 to Form 10/A (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm#:~:text=(g)The%20Subscriber%E2%80%99s%20Capital%20Contributions%20to,with%20international%20anti%2Dmoney%20laundering%20principles.",
+            "proposition": "A subscription agreement filed with the SEC has the subscriber represent that its contributions do not come through a foreign shell bank.",
+            "verbatimQuote": "(g)The Subscriber’s Capital Contributions to the Fund do not originate from, nor shall they be routed through, an account maintained at a Foreign Shell Bank,6 an “offshore bank” or a bank organized or chartered under the laws of a jurisdiction that is designated as non-cooperative with international anti-money laundering principles.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-cifc-shell-bank"
+          }
+        ]
+      },
+      {
+        "requirementId": "collect-new-issue-status",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.collect-new-issue-status",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "IPO eligibility: FINRA Rule 5130 and 5131 status collected before the fund buys IPO shares",
+        "sectionId": "compliance-information",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#collect-new-issue-status",
+        "requirementGuidance": "If the fund may buy shares in IPOs (FINRA Rules 5130 and 5131), confirm the agreement relies on the questionnaire's IPO-eligibility answers, requires updates, and lets the general partner treat an investor as ineligible until it answers, consistently with the partnership agreement's new-issue allocation clause. Practice Guide (Subscription compliance information) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "finra-5130-restriction",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "FINRA Rule 5130(a)(1): Restrictions on the purchase and sale of initial equity public offerings",
+            "citation": "FINRA Rule 5130(a)(1).",
+            "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/5130",
+            "proposition": "FINRA Rule 5130 generally prohibits a member from selling a new issue to an account in which a restricted person has a beneficial interest, subject to the rule's exceptions.",
+            "verbatimQuote": "A member or a person associated with a member may not sell, or cause to be sold, a new issue to any account in which a restricted person has a beneficial interest, except as otherwise permitted herein.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-finra-5130-restriction"
+          },
+          {
+            "sourceId": "finra-5131-spinning",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "FINRA Rule 5131(b)(1): Spinning",
+            "citation": "FINRA Rule 5131(b)(1)(A).",
+            "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/5131",
+            "proposition": "FINRA Rule 5131(b)(1) restricts a member's allocation of new issues to accounts in which an executive officer or director of a public company or covered non-public company, or a person materially supported by one, has a beneficial interest, in the circumstances the rule lists.",
+            "verbatimQuote": "No member or person associated with a member may allocate shares of a new issue to any account in which an executive officer or director of a public company or a covered non-public company, or a person materially supported by such executive officer or director, has a beneficial interest: (A) if the company is currently an investment banking services client of the member or the member has received compensation from the company for investment banking services in the past 12 months;",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-finra-5131-spinning"
+          },
+          {
+            "sourceId": "sa-persimmon-new-issue",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Persimmon Growth Partners Fund, L.P., Subscription Agreement (2010)",
+            "citation": "Persimmon Growth Partners Fund, L.P., Subscription Documents, Exhibit 99.2(p) to Form N-2 (2010)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm#:~:text=The%20Subscriber%20further%20represents%20that,answers%20cease%20to%20be%20accurate.",
+            "proposition": "A subscription agreement filed with the SEC collects FINRA Rule 5130 information so the fund can buy new issues and requires notice if answers cease to be accurate.",
+            "verbatimQuote": "The Subscriber further represents that all answers set forth in the New Issue Questionnaire contained herein are accurate and that the Subscriber will notify the Fund if at any time such answers cease to be accurate.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-persimmon-new-issue"
+          },
+          {
+            "sourceId": "sa-tcw-new-issue",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TCW Specialty Lending IX LLC, Subscription Agreement (2026)",
+            "citation": "TCW Specialty Lending IX LLC, Subscription Agreement, Exhibit 10.7 to Form 10 (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm#:~:text=To%20permit%20the%20Fund%20to%20invest,all%20respects%20describe%20the%20Subscriber.",
+            "proposition": "A subscription agreement filed with the SEC has the subscriber complete FINRA Rule 5130 and 5131 questions so the fund can invest in initial public offerings.",
+            "verbatimQuote": "To permit the Fund to invest in initial public offerings of equity securities in compliance with Rule 5130 (the “New Issue Rule”) and Rule 5131 (the “Anti Spinning Rule”) adopted by the Financial Industry Regulatory Authority, the Subscriber has completed Part B of Annex I hereto, and hereby acknowledges that one or more of the categories set forth in such Annex correctly and in all respects describe the Subscriber.",
+            "pullQuoteLocator": "To permit the Fund to invest|all respects describe the Subscriber.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-tcw-new-issue"
+          }
+        ]
+      },
+      {
+        "requirementId": "collect-benefit-plan-status",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.collect-benefit-plan-status",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Benefit plan status collected to monitor the 25% test",
+        "sectionId": "compliance-information",
+        "itemNumber": "3.4",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#collect-benefit-plan-status",
+        "requirementGuidance": "Confirm the agreement and questionnaire collect each investor's benefit plan status and, for an investing entity, the share of its equity held by benefit plan investors, and that a plan investor represents an independent fiduciary made the decision to invest. Practice Guide (Retirement-plan investors) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "plan-asset-25-percent-test",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "29 CFR 2510.3-101(f)(1): Significant participation by benefit plan investors",
+            "citation": "29 C.F.R. § 2510.3-101(f)(1).",
+            "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XXV/subchapter-B/part-2510/section-2510.3-101",
+            "proposition": "Benefit-plan-investor participation is significant when 25 percent or more of the value of any class of equity interests is held by benefit plan investors immediately after the most recent acquisition of any equity interest.",
+            "verbatimQuote": "Equity participation in an entity by benefit plan investors is “significant” on any date if, immediately after the most recent acquisition of any equity interest in the entity, 25 percent or more of the value of any class of equity interests in the entity is held by benefit plan investors (as defined in paragraph (f)(2)).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-plan-asset-25-percent-test"
+          },
+          {
+            "sourceId": "sa-persimmon-plan-fiduciary",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Persimmon Growth Partners Fund, L.P., Subscription Agreement (2010)",
+            "citation": "Persimmon Growth Partners Fund, L.P., Subscription Documents, Exhibit 99.2(p) to Form N-2 (2010)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1277878/000114420410046448/v194732_ex99-2p.htm#:~:text=(ii)%20the%20decision%20to%20invest,the%20fiduciary%E2%80%99s%20responsibilities%20under%20ERISA.",
+            "proposition": "A subscription agreement filed with the SEC has a plan investor represent that the fiduciary signing is independent of the fund and general partner.",
+            "verbatimQuote": "(ii) the decision to invest the Plan’s assets in the Fund is a prudent one and is consistent with the responsibilities imposed upon the Plan’s fiduciaries with regard to their investment decisions under ERISA; (iii) the fiduciary or other person signing this Agreement is independent of the Fund, the General Partner and each of their respective affiliates; and (iv) this subscription and the investment contemplated hereby is in accordance with all requirements applicable to the Plan under its governing instruments and under ERISA and is consistent with the fiduciary’s responsibilities under ERISA.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-persimmon-plan-fiduciary"
+          },
+          {
+            "sourceId": "sa-cifc-plan-percentage",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "CIFC Direct Lending Evergreen Fund, Subscription Documents (2026)",
+            "citation": "CIFC Direct Lending Evergreen Fund, Confidential Subscription Documents, Exhibit 10.5 to Form 10/A (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm#:~:text=The%20percentage%20of%20equity%20interests,treated%20as%20including%20plan%20assets.",
+            "proposition": "A subscription questionnaire filed with the SEC asks an entity investor what percentage of its equity benefit plan investors hold.",
+            "verbatimQuote": "The percentage of equity interests in the Subscriber held by Benefit Plan Investors will not exceed ______%; ☐ An insurance company general account the assets of which are treated as including plan assets.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-cifc-plan-percentage"
+          }
+        ]
+      },
+      {
+        "requirementId": "collect-tax-forms",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.collect-tax-forms",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Form W-9 or W-8 and FATCA and CRS self-certification required and kept current",
+        "sectionId": "compliance-information",
+        "itemNumber": "3.5",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#collect-tax-forms",
+        "requirementGuidance": "Confirm the agreement requires a Form W-9 from a United States person or the applicable Form W-8 from anyone else, any Foreign Account Tax Compliance Act and Common Reporting Standard self-certification the fund needs, and prompt updates, and leaves withholding and the charging of taxes to an investor to the partnership agreement. Practice Guide (Subscription compliance information) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-ilpa-information",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "ILPA Model Subscription Agreement (2018), clause 4.1",
+            "citation": "Institutional Limited Partners Association, Model Subscription Agreement, clause 4.1 (2018)",
+            "url": "https://ilpa.org/wp-content/uploads/2018/05/ILPA-Model-Subscription-Agreement-Final.pdf",
+            "proposition": "ILPA's model subscription agreement obliges the applicant to provide information reasonably requested for anti-money-laundering and know-your-customer compliance and for withholding-tax relief.",
+            "verbatimQuote": "4.1 The Applicant hereby represents and warrants that it shall promptly provide the General Partner with any such information relating to the Applicant (or its direct or indirect owners) that is reasonably requested from time to time by the General Partner and that the General Partner determines in good faith are necessary in order for any of (a) the Partnership, (b) any Limited Partner, (c) the General Partner, (d) any entity in which the Partnership holds (directly or indirectly) an interest, or (e) any Affiliate of any of the foregoing, to allow any such Person to comply with or satisfy any requirement imposed on such Person under any law or regulation (including without limitation any anti-money laundering or “know your customer” laws, regulations or rules) or to assist the Partnership in obtaining any exemption, reduction or refund of any withholding or other taxes imposed on the Partnership, on amounts paid to the Partnership or on amounts payable by the Partnership, by any competent legal, tax or regulatory authority.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-ilpa-information"
+          },
+          {
+            "sourceId": "sa-sage-tax-forms",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Sage Fund, Limited Partnership, Subscription Agreement (2009)",
+            "citation": "Sage Fund, Limited Partnership, Subscription Agreement, Exhibit 10.1 to Form 10 (2009)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1083768/000114036109010294/ex10_1.htm#:~:text=14.%20Taxpayer%20Certification%20(a)%20U.S.,(i.e.%2C%20W%2D8BEN%2C%20W%2D8ECI%20or%20W%2D8IMY).",
+            "proposition": "A subscription agreement filed with the SEC requires a Form W-9 from U.S. subscribers and the applicable Form W-8 from others.",
+            "verbatimQuote": "14. Taxpayer Certification (a) U.S. Citizens and Residents. Complete the attached Form W-9. (b) Non-U.S. Citizens and Residents. Provide the appropriate IRS Form W-8 (i.e., W-8BEN, W-8ECI or W-8IMY).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-sage-tax-forms"
+          },
+          {
+            "sourceId": "sa-cifc-tax-forms",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "CIFC Direct Lending Evergreen Fund, Subscription Documents (2026)",
+            "citation": "CIFC Direct Lending Evergreen Fund, Confidential Subscription Documents, Exhibit 10.5 to Form 10/A (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2056516/000119312526307369/ck0002056516-ex10_5.htm#:~:text=Read%20the%20Subscription%20Agreement%20in,as%20described%20on%20Attachment%20C.",
+            "proposition": "Subscription documents filed with the SEC require a Form W-9 or the applicable Form W-8.",
+            "verbatimQuote": "Read the Subscription Agreement in its entirety and complete: a.Attachment A, Sign and date both copies of the Signature Pages to the Subscription Agreement; b.The information requested in the Subscriber Questionnaire on Attachment B of the Subscription Agreement; and c.(A)(i) Substitute IRS Form W-9 Certifications or (ii) an IRS Form W-9; or (B) an appropriate IRS Form W-8 (IRS Form W-8BEN, IRS Form W-8BEN-E, IRS Form W-8EXP, IRS Form W-8IMY or IRS Form W-8ECI, as applicable) as described on Attachment C.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-cifc-tax-forms"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-public-records-laws",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.address-public-records-laws",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Public-records status disclosed and handled",
+        "sectionId": "compliance-information",
+        "itemNumber": "3.6",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#address-public-records-laws",
+        "requirementGuidance": "Confirm the agreement asks whether the investor is subject to the Freedom of Information Act or a state public-records law, and which ones, requires notice if it later becomes subject to one, and lets the general partner limit the confidential information it gives that investor. Practice Guide (Subscription compliance information) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-bhm-foia",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "BHM Discretionary Futures Fund L.P., Subscription/Exchange Agreement (2011)",
+            "citation": "BHM Discretionary Futures Fund L.P., Subscription/Exchange Agreement, Exhibit 10.3 to Form 10 (2011)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1504886/000119312511047651/dex103.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1504886/000119312511047651/dex103.htm#:~:text=(21)%20You%20represent%20and%20warrant,Partnership%20or%20the%20Trading%20Advisor.",
+            "proposition": "A subscription agreement filed with the SEC asks the subscriber to disclose whether it is subject to the Freedom of Information Act or a similar public-disclosure law.",
+            "verbatimQuote": "(21) You represent and warrant that, except as you may disclose in writing to the General Partner, you are not subject to the Freedom of Information Act or any similar state, county or municipal legislation or regulation under which you are or may be compelled to disclose to the public any information regarding your investment in the Partnership or the Trading Advisor.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-bhm-foia"
+          },
+          {
+            "sourceId": "sa-tcw-foia",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "TCW Specialty Lending IX LLC, Subscription Agreement (2026)",
+            "citation": "TCW Specialty Lending IX LLC, Subscription Agreement, Exhibit 10.7 to Form 10 (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2107057/000119312526116167/d107142dex107.htm#:~:text=The%20Subscriber%20is%20subject%20to%20the%20Freedom,which%20the%20Subscriber%20is%20subject.",
+            "proposition": "A subscription agreement filed with the SEC asks whether the subscriber is subject to FOIA or a state public-records law and which ones.",
+            "verbatimQuote": "The Subscriber is subject to the Freedom of Information Act, 5 U.S.C. § 552 (“FOIA”), any state public records access laws, any state or other jurisdiction’s laws similar in intent or effect to FOIA, or any similar statutory or legal right that might result in the disclosure of confidential information relating to the Fund (together with FOIA, “Public Disclosure Laws”). Please indicate the relevant Public Disclosure Laws to which the Subscriber is subject.",
+            "pullQuoteLocator": "The Subscriber is subject to the Freedom|which the Subscriber is subject.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-tcw-foia"
+          },
+          {
+            "sourceId": "sa-diameter-foia-limits",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Diameter Credit Company, subscription agreement terms for FOIA subscribers (2023)",
+            "citation": "Diameter Credit Company, Exhibit 4.1 to Form 10 (2023)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1916099/000119312523296595/d547408dex41.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1916099/000119312523296595/d547408dex41.htm#:~:text=Freedom%20of%20Information%20Act%2C%20or,in%20such%20Subscriber%E2%80%99s%20Subscription%20Agreement.",
+            "proposition": "Fund documents filed with the SEC let the adviser withhold or limit the confidential information given to a subscriber subject to FOIA or a similar public-records law, and require the subscriber to say if it becomes subject to one.",
+            "verbatimQuote": "Freedom of Information Act, or any similar statutory or regulatory disclosure requirement of any state or other jurisdiction (collectively, “FOIA”), that there is a reasonable likelihood that a request to such Subscriber pursuant to FOIA or any such law or statutory or regulatory requirement would result in the disclosure of Non-Public Information, other than aggregate performance information about the Company (including aggregate cash flows and overall “IRRs”), the year of formation of the Company, aggregate Capital Commitments to the Company and information about a Subscriber’s own Capital Commitment and Unused Capital Commitment (collectively, “Fund Level Information”), the Adviser may (1) withhold all or any part of the information otherwise to be provided to such Subscriber other than Fund Level Information and redacted annual financial statements, (2) require such Subscriber to return, to the extent permitted by applicable law, any copies of any such information provided to it by the Adviser or the Company, (3) make any such information available to such Subscriber at the Adviser’s offices or at the offices of another person that has agreed to keep such information confidential, or (4) make such information available to such Subscriber only on the Company’s website in password-protected, non-downloadable, non-printable format. Each Subscriber shall promptly notify the Adviser if at any time such Subscriber is or becomes subject to FOIA, to the extent not previously set forth in such Subscriber’s Subscription Agreement.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-diameter-foia-limits"
+          },
+          {
+            "sourceId": "sa-macquarie-foia-notice",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Macquarie fund subscription booklet: FOIA investors (2026)",
+            "citation": "Macquarie fund, Subscription Agreement, Exhibit 4.1 (2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/2050809/000110465926089138/tm2621272d1_ex4-1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/2050809/000110465926089138/tm2621272d1_ex4-1.htm#:~:text=If%20the%20Subscriber%20is%20subject,subsequent%20to%20the%20date%20hereof.",
+            "proposition": "A subscription agreement filed with the SEC has the subscriber indicate whether it is subject to the Freedom of Information Act and promptly notify the adviser if it later becomes subject to it.",
+            "verbatimQuote": "If the Subscriber is subject to the Freedom of Information Act, as amended (a \"FOIA Subscriber\"), the Subscriber has so indicated by checking the appropriate box on the signature page hereto. The Subscriber agrees that it shall promptly notify the Adviser if it becomes a FOIA Subscriber at any time subsequent to the date hereof.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-macquarie-foia-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-the-investor-indemnity",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.cap-the-investor-indemnity",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Investor indemnity limited to untrue representations and capped",
+        "sectionId": "power-of-attorney-indemnity-and-side-letters",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#cap-the-investor-indemnity",
+        "requirementGuidance": "Confirm any investor indemnity is limited to losses from representations that were untrue when made and capped at the amount subscribed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-ilpa-indemnity",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "ILPA Model Subscription Agreement (2018), clause 6.2",
+            "citation": "Institutional Limited Partners Association, Model Subscription Agreement, clause 6.2 (2018)",
+            "url": "https://ilpa.org/wp-content/uploads/2018/05/ILPA-Model-Subscription-Agreement-Final.pdf",
+            "proposition": "ILPA's model subscription agreement limits the applicant's indemnity to breaches of its representations and caps it at its commitment.",
+            "verbatimQuote": "6.2 To the fullest extent permitted by law (and with the intention that this clause [7] will be enforceable by them), the Applicant hereby irrevocably agrees to hold each Relying Entity harmless from any liability for, and indemnify each of them against, any and all claims, liabilities, demands, losses, damages, costs and expenses whatsoever or howsoever arising as a result of any breach by the Applicant of any representations or warranty given by it in this Agreement, [provided that the aggregate amount that the Applicant can be required to pay pursuant to this clause [6.2] shall not exceed the amount of such Applicant’s Commitment.]",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-ilpa-indemnity"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-the-power-of-attorney",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.limit-the-power-of-attorney",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Power of attorney limited to signing the partnership agreement",
+        "sectionId": "power-of-attorney-indemnity-and-side-letters",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#limit-the-power-of-attorney",
+        "requirementGuidance": "Confirm any power of attorney is limited to executing a counterpart signature page to the partnership agreement, and neither expands nor narrows the partnership agreement's own power of attorney.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-ilpa-poa",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "ILPA Model Subscription Agreement (2018), clause 5",
+            "citation": "Institutional Limited Partners Association, Model Subscription Agreement, clause 5 (2018)",
+            "url": "https://ilpa.org/wp-content/uploads/2018/05/ILPA-Model-Subscription-Agreement-Final.pdf",
+            "proposition": "ILPA's model subscription agreement limits the applicant's power of attorney to executing the partnership agreement on its behalf.",
+            "verbatimQuote": "POWER OF ATTORNEY The Applicant hereby irrevocably authorises the General Partner pursuant, and upon acceptance of the Applicant's Commitment in accordance with, this Agreement by the General Partner, to execute the Partnership Agreement on the Applicant's behalf as the Applicant's attorney.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-ilpa-poa"
+          },
+          {
+            "sourceId": "sa-ilpa-poa-note",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "ILPA Model Subscription Agreement (2018), note 8",
+            "citation": "Institutional Limited Partners Association, Model Subscription Agreement, note 8 (2018)",
+            "url": "https://ilpa.org/wp-content/uploads/2018/05/ILPA-Model-Subscription-Agreement-Final.pdf",
+            "proposition": "ILPA's model subscription agreement notes that where the partnership agreement has a customary power of attorney there is no reason for the subscription power of attorney to extend beyond executing the partnership agreement.",
+            "verbatimQuote": "[Provided that the Partnership Agreement contains a customary PoA there should not be any reason for the PoA to extend further than executing the Partnership Agreement. In some jurisdictions – including the US - it is customary for the Agreement to include a signature page to the Partnership Agreement. If that is the case, then it may not strictly be necessary to include any PoA.]",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-ilpa-poa-note"
+          }
+        ]
+      },
+      {
+        "requirementId": "leave-investor-concessions-to-side-letters",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.leave-investor-concessions-to-side-letters",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fund-side representations and investor-specific terms left to side letters",
+        "sectionId": "power-of-attorney-indemnity-and-side-letters",
+        "itemNumber": "4.3",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#leave-investor-concessions-to-side-letters",
+        "requirementGuidance": "A form may omit representations by the fund or general partner, most-favored-nation rights, and other investor-specific terms, leaving them to side letters; if it does, confirm the memorandum and partnership agreement say what the investor needs to rely on. Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sa-thirdpoint-side-letters",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Third Point Enhanced LP, Amended and Restated Limited Partnership Agreement (2018)",
+            "citation": "Third Point Enhanced LP, Amended and Restated Limited Partnership Agreement, Exhibit 10.33 (2018)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1576018/000157601818000072/exhibit1033amendedandresta.htm#:~:text=%E2%80%9COther%20Agreements%E2%80%9D%20shall%20mean%20side,special%20or%20more%20favorable%20rights.",
+            "proposition": "A limited partnership agreement filed with the SEC contemplates side letters that may give a limited partner special or more favorable rights.",
+            "verbatimQuote": "“Other Agreements” shall mean side letters or similar separate written agreements, the provisions of which may modify the terms of this Agreement, including any agreement with a Limited Partner that provides for special or more favorable rights.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-thirdpoint-side-letters"
+          }
+        ]
+      },
+      {
+        "requirementId": "adjust-for-a-non-us-investment-manager",
+        "specRequirementId": "REQ-fund-formation.hedge-fund-subscription-agreement.adjust-for-a-non-us-investment-manager",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Manager outside the United States: documents reflect its adviser status",
+        "sectionId": "investment-manager-outside-the-united-states",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#adjust-for-a-non-us-investment-manager",
+        "requirementGuidance": "If the investment manager's principal office and place of business is outside the United States, the subscription documents should reflect its Investment Advisers Act status, as registered, exempt as a non-U.S. private fund adviser, or a foreign private adviser, and its home-country requirements. The Hedge Fund Subscription Agreement (Manager Outside the U.S.) makes these changes. Practice Guide (Manager outside the United States) Examples:",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "foreign-private-adviser-exemption",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Investment Advisers Act of 1940 § 203(b)(3), 15 U.S.C. § 80b-3(b)(3)",
+            "citation": "15 U.S.C. § 80b-3(b)(1)-(3).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section80b-3&num=0&edition=prelim",
+            "proposition": "Section 203(b)(3) exempts a foreign private adviser from the registration requirement of section 203(a).",
+            "verbatimQuote": "The provisions of subsection (a) shall not apply to- (1) any investment adviser, other than an investment adviser who acts as an investment adviser to any private fund, all of whose clients are residents of the State within which such investment adviser maintains his or its principal office and place of business, and who does not furnish advice or issue analyses or reports with respect to securities listed or admitted to unlisted trading privileges on any national securities exchange; (2) any investment adviser whose only clients are insurance companies; (3) any investment adviser that is a foreign private adviser;",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-foreign-private-adviser-exemption"
+          },
+          {
+            "sourceId": "foreign-private-adviser-definition",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Investment Advisers Act of 1940 § 202(a)(30), 15 U.S.C. § 80b-2(a)(30)",
+            "citation": "15 U.S.C. § 80b-2(a)(30)(A)-(C).",
+            "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section80b-2&num=0&edition=prelim",
+            "proposition": "Section 202(a)(30) defines a foreign private adviser by the absence of a U.S. place of business, fewer than 15 U.S. clients and private fund investors, and less than $25 million attributable to them, among other conditions.",
+            "verbatimQuote": "The term \"foreign private adviser\" means any investment adviser who- (A) has no place of business in the United States; (B) has, in total, fewer than 15 clients and investors in the United States in private funds advised by the investment adviser; (C) has aggregate assets under management attributable to clients in the United States and investors in the United States in private funds advised by the investment adviser of less than $25,000,000, or such higher amount as the Commission may, by rule, deem appropriate in accordance with the purposes of this subchapter; and",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-foreign-private-adviser-definition"
+          },
+          {
+            "sourceId": "non-us-private-fund-adviser-exemption",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.203(m)-1(b): Non-United States private fund advisers",
+            "citation": "17 C.F.R. § 275.203(m)-1(b).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.203(m)-1",
+            "proposition": "Rule 203(m)-1(b) exempts an adviser with its principal office outside the United States whose only U.S.-person clients are qualifying private funds and whose U.S.-managed assets are private fund assets of less than $150 million.",
+            "verbatimQuote": "(b) Non-United States investment advisers. For purposes of section 203(m) of the Act (15 U.S.C. 80b-3(m)), an investment adviser with its principal office and place of business outside of the United States is exempt from the requirement to register under section 203 of the Act if: (1) The investment adviser has no client that is a United States person except for one or more qualifying private funds; and (2) All assets managed by the investment adviser at a place of business in the United States are solely attributable to private fund assets, the total value of which is less than $150 million.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-non-us-private-fund-adviser-exemption"
+          },
+          {
+            "sourceId": "sa-grantpark-home-regulator",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Grant Park Futures Fund LP, Form S-1/A prospectus (2018)",
+            "citation": "Grant Park Futures Fund LP, Registration Statement on Form S-1/A (2018)",
+            "url": "https://www.sec.gov/Archives/edgar/data/845698/000155837018004652/s-1a.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/845698/000155837018004652/s-1a.htm#:~:text=Transtrend%20is%20also%20licensed%20as,for%20the%20Financial%20Markets%20(%E2%80%9CAFM%E2%80%9D).",
+            "proposition": "A fund offering document filed with the SEC discloses that a trading advisor based outside the United States is licensed and regulated by its home-country regulator.",
+            "verbatimQuote": "Transtrend is also licensed as a portfolio manager, and subject to, among others, regulation by the Netherlands Authority for the Financial Markets (“AFM”).",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-grantpark-home-regulator"
+          },
+          {
+            "sourceId": "sa-patria-foreign-private-adviser",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
+            "title": "Patria Investments Ltd, response to SEC staff comments (Dec. 17, 2020)",
+            "citation": "Patria Investments Ltd, Letter to the SEC Division of Corporation Finance (DRSLTR, Dec. 17, 2020)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1825570/000095010320024381/filename1.htm",
+            "deepLink": "https://www.sec.gov/Archives/edgar/data/1825570/000095010320024381/filename1.htm#:~:text=Our%20other%20investment%20adviser%20subsidiaries,Act%20and%20Rule%20202(a)(30)%2D1%20thereunder.",
+            "proposition": "A registrant filing with the SEC states that its non-U.S. investment adviser subsidiaries are exempt from Advisers Act registration as foreign private advisers.",
+            "verbatimQuote": "Our other investment adviser subsidiaries (“Non-US Adviser Subsidiaries”), to the extent they act as investment advisers within the meaning of the Advisers Act, are exempt from registration thereunder by virtue of, among other things, the foreign private adviser exemption set forth in Sections 202(a)(30) and 203(b)(3) of the Advisers Act and Rule 202(a)(30)-1 thereunder.",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-subscription-agreement#src-sa-patria-foreign-private-adviser"
+          }
+        ]
+      }
+    ]
+  }
+}

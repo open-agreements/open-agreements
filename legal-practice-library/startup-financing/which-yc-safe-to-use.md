@@ -1,10 +1,10 @@
 ---
 type: Practice Guide
-title: Which YC SAFE should I use?
+title: 'YC SAFE templates: which post-money form should I use?'
 description: >-
-  A founder-and-investor guide to choosing among Y Combinator's post-money SAFE
-  forms — valuation cap vs discount vs uncapped MFN, what the blanks mean, the
-  pro-rata side letter, and the securities and QSBS questions.
+  Choose the YC post-money SAFE template that fits the deal: valuation cap,
+  discount, or MFN. Compare the forms, complete the blanks, understand dilution,
+  and review pro-rata and securities questions.
 resource: >-
   https://openagreements.org/practice-guides/startup-financing/which-yc-safe-to-use
 timestamp: '2026-06-24'
@@ -13,17 +13,19 @@ tags:
   - which-yc-safe-to-use
 ---
 
-# Which YC SAFE should I use?[^about]
+# YC SAFE templates: which post-money form should I use?[^about]
 
-A founder-and-investor guide to choosing among Y Combinator's post-money SAFE forms — valuation cap vs discount vs uncapped MFN, what the blanks mean, the pro-rata side letter, and the securities and QSBS questions.
+Choose the YC post-money SAFE template that fits the deal: valuation cap, discount, or MFN. Compare the forms, complete the blanks, understand dilution, and review pro-rata and securities questions.
 
 ## Which YC SAFE form should I use? {#which-yc-safe-form}
 
-**Short answer.** For most early rounds the answer is the post-money SAFE with a valuation cap and no discount — it is what most of the market uses and what Carta calls the standard pre-seed instrument. Y Combinator ships three current US post-money forms (valuation-cap-only, discount-only, and an uncapped MFN form) plus an optional Pro Rata Side Letter; a cap-and-discount form was a fourth YC form that YC retired in 2021. You fill in blanks but otherwise should not edit the form.
+**Short answer.** For many early rounds, the YC post-money SAFE with a valuation cap and no discount is the starting form; Carta calls that structure the standard pre-seed instrument. [^carta-cap-no-discount-standard] The parties fill in the selected YC form's blanks and bracketed terms and leave its text unchanged [^yc-no-modification].
 
 Start from what the market actually does. Carta reports that the cap-only structure is "the standard pre-seed instrument"[^carta-cap-no-discount-standard], and its 2024 data backs that up: "62% of SAFEs on Carta have a valuation cap and no discount. A further 29% have a valuation cap AND a discount. 8% have just a discount and only a tiny fraction have neither term applied."[^carta-safe-term-distribution] Unless an investor specifically wants to defer pricing entirely, the cap-only form is the default a founder will encounter and should expect. [^carta-cap-no-discount-standard][^carta-safe-term-distribution]
 
 To use the selected form, open the [valuation-cap SAFE](/templates/yc-safe-valuation-cap), [discount SAFE](/templates/yc-safe-discount), [MFN SAFE](/templates/yc-safe-mfn), or [pro-rata side letter](/templates/yc-safe-pro-rata-side-letter). For the cap-only form, use the [review checklist](/checklists/safes/yc-post-money-safe-valuation-cap) before completing the blanks.
+
+The agreed economics determine the file: a negotiated cap without a discount points to the cap-only form; a discount without a cap points to the discount-only form; and a deal that defers both terms needs the separate MFN form. If the deal includes both a cap and a discount, no current YC form fits: YC retired its combined form in 2021, leaving a single-term YC form or a non-YC instrument as the available choices. Editing the cap-only SAFE would make its no-modification statement inaccurate and turn it into a non-YC instrument [^yc-combo-form-retired][^yc-no-modification]. The pro-rata right is a separate side letter rather than a blank in the cap-only SAFE. Check the actual document title against that choice before entering the purchase amount.
 
 **Corrected 2026-08-24.** This paragraph previously relied on a Crunchbase News article reporting Carta data and combined its rounded 62%/29%/9% structure split with a separate 1% uncapped statement. The current paragraph cites Carta's direct publication and uses Carta's own 62%/29%/8% categories plus its description of the remainder as a tiny fraction.
 
@@ -33,13 +35,13 @@ One discipline applies to all of them: do not rewrite the document. The SAFE its
 
 ## How does a post-money SAFE convert, and whose ownership does it dilute? {#post-money-mechanics}
 
-**Short answer.** A post-money SAFE fixes the investor's price by reference to the valuation cap, so the investor can see their ownership at signing — but dilution from later SAFEs and the option pool falls on the founders, not on earlier SAFE investors. Governing law is a fill-in-the-blank, usually the company's state of incorporation (typically Delaware), and is a secondary dimension here.
+**Short answer.** A capped post-money SAFE uses its cap and company capitalization to set a conversion price, making the investor's ownership calculable at signing [^yc-safe-price-definition][^yc-post-money-ownership-transparent]. Later SAFEs dilute founders; new money and a new or increased option pool adopted for the priced round dilute both founders and SAFE holders, as [YC's conversion explanation](https://www.ycombinator.com/safe/calculator) describes. Governing law is a fill-in-the-blank, usually the company's state of incorporation (typically Delaware), and is a secondary dimension here.
 
 The word post-money describes when the investor's ownership is measured. The form defines the conversion price by reference to the cap: the Safe Price is "the Post-Money Valuation Cap divided by the Company Capitalization"[^yc-safe-price-definition], and that capitalization is measured to include the other SAFEs and convertibles outstanding. [^yc-safe-price-definition] The practical consequence for an investor is that ownership is largely knowable at signing rather than something the next round reveals.
 
 It helps to know which kind of SAFE you are holding, because the name describes when ownership is measured. YC's original SAFE was standardized on a pre-money basis, which made dilution hard to calculate: working out an investor's percentage meant solving a recursive loop across the other SAFEs and a hypothetical future option pool. YC moved to post-money in 2018 specifically so ownership is knowable up front. As the User Guide puts it, the biggest advantage of the post-money form is that "the amount of ownership sold is immediately transparent and calculable"[^yc-post-money-ownership-transparent] for both the founder and the investor. [^yc-post-money-ownership-transparent] The practical tell is the defined term: a current YC SAFE is the post-money form and uses the Post-Money Valuation Cap; if a document instead refers to a pre-money valuation, it is the legacy form.
 
-The flip side falls on the founders. Because the post-money SAFE locks the investor's percentage against a defined capitalization, additional SAFEs raised later and the new option pool dilute the founders rather than the earlier SAFE holders. A founder who stacks several post-money SAFEs at different caps should model the cumulative founder dilution before signing the next one, because each new instrument that converts is carved out of the founders' stake, not shared back across the prior investors.
+The flip side falls on the founders before the priced round. Because a capped post-money SAFE fixes the investor's pre-round percentage against a defined capitalization, additional SAFEs raised later generally dilute founders rather than earlier SAFE holders. A founder who stacks several post-money SAFEs at different caps should model that cumulative dilution. At the priced round, however, the new money and any new or increased option pool dilute SAFE holders too; the [YC conversion calculator](https://www.ycombinator.com/safe/calculator) models both effects.
 
 A short illustrative example shows how the stacking adds up — these figures are arithmetic, not a source claim. Suppose a founder raises 500,000 dollars from an angel on a 10,000,000 dollar post-money cap, a SAFE the company negotiates on its own terms rather than YC's standard deal; that investor converts to about 5 percent (0.5M divided by 10.0M). A few months later the founder tops up with another 500,000 dollars on a 12,500,000 dollar post-money cap; that investor converts to about 4 percent (0.5M divided by 12.5M). Together the two SAFEs are roughly 9 percent, and both slices come out of the founders' stake rather than out of the first investor's fixed percentage. The more SAFEs a founder stacks, the larger the cumulative carve-out grows, which is why modeling the running total before signing the next SAFE matters. To put your own amounts and caps through this same arithmetic, try our [SAFE dilution calculator](/tools/safe-dilution-calculator).
 
@@ -49,7 +51,7 @@ Governing law is a secondary dimension and is simply a blank to complete. The fo
 
 ## What do the blanks mean — valuation cap, amount, and discount rate? {#filling-the-blanks}
 
-**Short answer.** The valuation cap blank sets the maximum price at which the SAFE converts; the purchase amount is the money actually invested. The most error-prone blank is the discount form's Discount Rate, which is inverted — you enter 100 minus your headline discount (a 20% discount is entered as 80%).
+**Short answer.** In a capped YC post-money SAFE, the valuation cap limits the conversion price through the Safe Price formula [^yc-valuation-cap-blank][^yc-cap-blank-safe-price]. The purchase amount is the money actually invested. The discount form's Discount Rate is inverted: a 20% headline discount is entered as 80% [^yc-discount-rate-blank][^yc-discount-rate-worked].
 
 The cap form is the simplest to complete. Its single headline term is the "Post-Money Valuation Cap"[^yc-valuation-cap-blank], a dollar figure that sets the maximum price at which the SAFE converts; the purchase amount is a separate blank for the money actually wired. [^yc-valuation-cap-blank] For calibration, Carta reports that in 2025, median post-money caps sat "around $10 million for rounds in the $250,000 to $1 million range"[^carta-median-caps] and around $15 million for rounds in the $1 million to $2.5 million range — useful reference points, not targets. [^carta-median-caps]
 
@@ -57,7 +59,7 @@ The discount form has the blank that trips people up. The headline term is the "
 
 ## When does a SAFE convert, and what if there is never a priced round? {#conversion-and-outcomes}
 
-**Short answer.** A SAFE resolves on one of three defined events: an Equity Financing (a priced round), a Liquidity Event (an acquisition or IPO), or a Dissolution Event (a wind-down). The priced round is the normal path — the SAFE automatically converts into preferred stock. Because a SAFE has no maturity date, it does not expire or come due if a priced round never happens; it simply stays outstanding until a trigger occurs. This is how the instrument is designed, which is why an investor should understand the triggers before signing.
+**Short answer.** A YC SAFE has several possible outcomes, including conversion into preferred stock at a qualifying priced round and a cash-out on dissolution [^yc-equity-financing-conversion][^yc-dissolution-cash-out]. It can also resolve on a Liquidity Event. Because a SAFE has no maturity date, it remains outstanding if no priced round or other trigger occurs.
 
 A SAFE resolves on one of three defined events: an Equity Financing, which is a priced round; a Liquidity Event, such as an acquisition or IPO; or a Dissolution Event, which is a wind-down. Knowing the three is most of what an investor needs to understand about how a SAFE ends. The first of them is the normal, happy path — if a priced round happens before the SAFE terminates, on the initial closing of that round "this Safe will automatically convert"[^yc-equity-financing-conversion] into shares of preferred stock. [^yc-equity-financing-conversion]
 
@@ -67,17 +69,17 @@ A Liquidity Event is the other positive exit. If the company is acquired or goes
 
 That leaves the case founders and investors most often ask about: what if there is never a priced round? Because a SAFE has no maturity date, it does not expire or come due — it simply stays outstanding until a trigger occurs. If the company ultimately winds down, the Dissolution Event clause governs: the investor is entitled "to receive a portion of Proceeds equal to the Cash-Out Amount"[^yc-dissolution-cash-out], which is essentially their money back, subject to the liquidation priority — that is, behind the company's creditors. [^yc-dissolution-cash-out] This is an understanding point rather than a warning: it is simply how the instrument is designed, and it is why a SAFE investor should know the triggers before investing.
 
-## What about pro-rata rights and MFN? {#pro-rata-and-mfn}
+## What about pro-rata rights and MFN in the YC SAFE? {#pro-rata-and-mfn}
 
-**Short answer.** The post-money SAFE has no built-in pro-rata right — YC moved it to an optional Pro Rata Side Letter that only works with cap-bearing forms. The valuation-cap SAFE also has no MFN; that is the separate uncapped-MFN form, under which the investor can upgrade to a later, better-termed SAFE.
+**Short answer.** YC provides a priced-round pro-rata purchase right and a later-terms MFN right through separate instruments [^yc-pro-rata-right][^yc-mfn-mechanics]. The pro-rata side letter works only with cap-bearing forms [^yc-pro-rata-cap-only].
 
 Pro-rata rights are no longer inside the SAFE. YC split them into a separate Pro Rata Side Letter, under which the investor gets the right to "purchase its pro rata share of Standard Preferred Stock being sold in the Equity Financing"[^yc-pro-rata-right] — that is, to keep its percentage by buying into the priced round. [^yc-pro-rata-right] A founder deciding whether to grant it should treat it as a deliberate, separate term rather than a default. One mechanical constraint matters: the User Guide states the side letter "can only be used with forms of the safe that have a Post-Money Valuation Cap"[^yc-pro-rata-cap-only], so it does not pair with the uncapped MFN form. [^yc-pro-rata-cap-only]
 
 MFN is also not a feature of the cap form — it is the whole point of the uncapped MFN form. Under that form, if the company later issues a better-termed convertible, the company agrees to "amend and restate this instrument to be identical to the instrument(s) evidencing the Subsequent Convertible Securities"[^yc-mfn-mechanics], letting the early investor upgrade to the later, better terms. [^yc-mfn-mechanics] That is why the uncapped MFN form is mostly used for friendly, very early money that is content to ride later pricing rather than negotiate its own cap.
 
-## What a SAFE is: the securities and QSBS questions {#securities-and-tax}
+## Is a SAFE a security, and how might it affect QSBS treatment? {#securities-and-tax}
 
-**Short answer.** The SAFE is a deliberately simple, founder-friendly way to raise early capital — its whole design is to keep an early round fast and cheap. The one thing to understand before signing is what it is: a security and a contractual right to receive equity later, not a current ownership stake. The YC form is also drafted to reach for qualified small business stock treatment under §1202, though the IRS has issued no guidance confirming a SAFE is stock, and whether the five-year clock starts at purchase or at conversion is unsettled — a question 2025's OBBBA changes made more consequential. This is general information, not tax advice; confirm §1202 treatment with a qualified tax advisor.
+**Short answer.** A SAFE is a security that grants a contractual right to future equity without conveying a current ownership stake [^sec-safe-security][^sec-not-current-equity-stake]. The YC form expresses an intent to qualify as stock under § 1202, but its tax treatment and holding-period start remain unsettled [^yc-qsbs-intent][^pkf-no-irs-guidance][^pkf-holding-period-clock]. This is general information; § 1202 treatment calls for qualified tax advice.
 
 A SAFE is worth understanding before you sign one. The SEC reminds investors that SAFEs "do not represent a current equity stake in the company in which you are investing"[^sec-not-current-equity-stake] — a SAFE is a contractual right to receive equity later, on defined triggers, rather than stock you hold today. [^sec-not-current-equity-stake] That structure is exactly what keeps the instrument lightweight and fast for founders, and it is also what makes the tax question below genuinely open.
 
@@ -87,7 +89,7 @@ The stakes of that open question are concrete: the answer determines when the §
 
 ## Stepping back: is a SAFE the right instrument, or should you use a convertible note? {#safe-vs-convertible-note}
 
-**Short answer.** A SAFE and a convertible note both let a startup raise now and set the price later, but a SAFE is deliberately simpler because it is not debt. A convertible note is a loan: it carries interest and a maturity date that the parties must later extend or renegotiate. A SAFE has neither, which keeps an early round fast and cheap — so for most founders raising early capital, a SAFE is the better default. A note mainly earns its keep when an investor specifically wants debt protections like interest and a fixed maturity date.
+**Short answer.** For many founders raising a quick early round, a SAFE is the better starting point because it avoids a convertible note's interest and maturity date [^yc-safe-no-maturity-no-interest]. A note is debt and can suit an investor who wants those protections.
 
 Both instruments solve the same problem: raise money now, fix the price later. The difference is debt. A convertible note is a loan, so it carries interest and a maturity date, and as that date approaches the parties have to extend it, renegotiate it, or convert it. A SAFE strips those features out. YC's User Guide frames the payoff directly — because a SAFE has no expiration or maturity date, there is "no time or money spent dealing with extending maturity dates, revising interest rates"[^yc-safe-no-maturity-no-interest] or the like. [^yc-safe-no-maturity-no-interest]
 
@@ -97,17 +99,17 @@ For most founders, then, a SAFE is the better starting point than a note, and th
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-24. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for US (Delaware-governed by default) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Which YC SAFE should I use?*, OpenAgreements (last updated June 24, 2026), https://openagreements.org/practice-guides/startup-financing/which-yc-safe-to-use.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-24. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for US (Delaware-governed by default) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *YC SAFE templates: which post-money form should I use?*, OpenAgreements (last updated June 24, 2026), https://openagreements.org/practice-guides/startup-financing/which-yc-safe-to-use.
 
 [^carta-cap-no-discount-standard]: **Carta, State of Pre-Seed: 2025 in review** — "The post-money SAFE with a valuation cap but no discount continues to be the standard pre-seed instrument." *Carta, State of Pre-Seed: 2025 in review (Feb. 19, 2026).* <https://carta.com/data/state-of-pre-seed-2025/>
+
+[^yc-no-modification]: **Y Combinator Post-Money SAFE** — "neither one has modified the form, except to fill in blanks and bracketed terms" *Y Combinator Post-Money SAFE (the form's closing representation).* <https://www.ycombinator.com/documents>
 
 [^carta-safe-term-distribution]: **Carta, SAFE Terms Trends and Tips for Pre-Seed and Seed Founders** — "62% of SAFEs on Carta have a valuation cap and no discount. A further 29% have a valuation cap AND a discount. 8% have just a discount and only a tiny fraction have neither term applied." *Carta, SAFE Terms Trends and Tips for Pre-Seed and Seed Founders (July 2, 2024).* <https://carta.com/data/linkedin-safe-terms-trends-primer-founders/>
 
 [^yc-combo-form-retired]: **Y Combinator, Post-Money Safe User Guide** — "We did not encounter situations where the combo safe was the preferred choice." *Y Combinator, Post-Money Safe User Guide, Version History (v1.1, Aug. 28, 2021).* <https://www.ycombinator.com/documents>
 
-[^yc-no-modification]: **Y Combinator Post-Money SAFE** — "neither one has modified the form, except to fill in blanks and bracketed terms" *Y Combinator Post-Money SAFE (the form's closing representation).* <https://www.ycombinator.com/documents>
-
-[^yc-safe-price-definition]: **Y Combinator Post-Money SAFE (Valuation Cap)** — "‘Safe Price’ means the price per share equal to the Post-Money Valuation Cap divided by the Company Capitalization" *Y Combinator Post-Money SAFE (Valuation Cap), § 2 (Safe Price).* <https://www.ycombinator.com/documents>
+[^yc-safe-price-definition]: **Y Combinator Post-Money SAFE (Valuation Cap)** — "‘Safe Price’ means the price per share equal to the Post-Money Valuation Cap divided by the Company Capitalization." *Y Combinator Post-Money SAFE (Valuation Cap), § 2 (Safe Price).* <https://www.ycombinator.com/documents>
 
 [^yc-post-money-ownership-transparent]: **Y Combinator, Post-Money Safe User Guide** — "the biggest advantage of the post-money safe is that the amount of ownership sold is immediately transparent and calculable for both the founder and the investor" *Y Combinator, Post-Money Safe User Guide.* <https://www.ycombinator.com/documents>
 
@@ -119,11 +121,13 @@ For most founders, then, a SAFE is the better starting point than a note, and th
 
 [^yc-valuation-cap-blank]: **Y Combinator Post-Money SAFE (Valuation Cap)** — "‘Post-Money Valuation Cap’ is $[" *Y Combinator Post-Money SAFE (Valuation Cap), headline term.* <https://www.ycombinator.com/documents>
 
-[^carta-median-caps]: **Carta, State of Pre-Seed: 2025 in review** — "median val caps on post-money SAFEs hovered around $10 million for rounds in the $250,000 to $1 million range and $15 million for rounds in the $1 million to $2.5 million range" *Carta, State of Pre-Seed: 2025 in review (Feb. 19, 2026).* <https://carta.com/data/state-of-pre-seed-2025/>
+[^yc-cap-blank-safe-price]: **Y Combinator Post-Money SAFE (Valuation Cap), Safe Price** — "‘Safe Price’ means the price per share equal to the Post-Money Valuation Cap divided by the Company Capitalization." *Y Combinator Post-Money SAFE (Valuation Cap), § 2 (Safe Price).* <https://www.ycombinator.com/documents>
 
 [^yc-discount-rate-blank]: **Y Combinator Post-Money SAFE (Discount, no Valuation Cap)** — "The ‘Discount Rate’ is [100 minus the discount]%" *Y Combinator Post-Money SAFE (Discount, no Valuation Cap), headline term.* <https://www.ycombinator.com/documents>
 
 [^yc-discount-rate-worked]: **Y Combinator, Post-Money Safe User Guide** — "is equal to 100 minus the discount percent" *Y Combinator, Post-Money Safe User Guide, Appendix I.* <https://www.ycombinator.com/documents>
+
+[^carta-median-caps]: **Carta, State of Pre-Seed: 2025 in review** — "median val caps on post-money SAFEs hovered around $10 million for rounds in the $250,000 to $1 million range and $15 million for rounds in the $1 million to $2.5 million range" *Carta, State of Pre-Seed: 2025 in review (Feb. 19, 2026).* <https://carta.com/data/state-of-pre-seed-2025/>
 
 [^yc-equity-financing-conversion]: **Y Combinator Post-Money SAFE (Valuation Cap)** — "If there is an Equity Financing before the termination of this Safe, on the initial closing of such Equity Financing, this Safe will automatically convert" *Y Combinator Post-Money SAFE (Valuation Cap), § 1(a) (Equity Financing).* <https://www.ycombinator.com/documents>
 
@@ -131,9 +135,11 @@ For most founders, then, a SAFE is the better starting point than a note, and th
 
 [^yc-pro-rata-right]: **Y Combinator Pro Rata Side Letter** — "The Investor shall have the right to purchase its pro rata share of Standard Preferred Stock being sold in the Equity Financing" *Y Combinator Pro Rata Side Letter.* <https://www.ycombinator.com/documents>
 
+[^yc-mfn-mechanics]: **Y Combinator Post-Money SAFE (Uncapped MFN)** — "the Company agrees to amend and restate this instrument to be identical to the instrument(s) evidencing the Subsequent Convertible Securities" *Y Combinator Post-Money SAFE (Uncapped MFN), § 3 (MFN Amendment Provision).* <https://www.ycombinator.com/documents>
+
 [^yc-pro-rata-cap-only]: **Y Combinator, Post-Money Safe User Guide** — "The pro rata side letter can only be used with forms of the safe that have a Post-Money Valuation Cap" *Y Combinator, Post-Money Safe User Guide, Pro Rata Rights.* <https://www.ycombinator.com/documents>
 
-[^yc-mfn-mechanics]: **Y Combinator Post-Money SAFE (Uncapped MFN)** — "the Company agrees to amend and restate this instrument to be identical to the instrument(s) evidencing the Subsequent Convertible Securities" *Y Combinator Post-Money SAFE (Uncapped MFN), § 3 (MFN Amendment Provision).* <https://www.ycombinator.com/documents>
+[^sec-safe-security]: **SEC Office of Investor Education and Advocacy, Investor Bulletin: Be Cautious of SAFEs in Crowdfunding** — "Some issuers have been offering a new type of security as part of some crowdfunding offerings—which they have called the SAFE." *SEC Office of Investor Education and Advocacy, Investor Bulletin: Be Cautious of SAFEs in Crowdfunding.* <https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-52>
 
 [^sec-not-current-equity-stake]: **SEC Office of Investor Education and Advocacy, Investor Bulletin: Be Cautious of SAFEs in Crowdfunding** — "do not represent a current equity stake in the company in which you are investing" *SEC Office of Investor Education and Advocacy, Investor Bulletin: Be Cautious of SAFEs in Crowdfunding.* <https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-52>
 

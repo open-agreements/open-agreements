@@ -2,7 +2,7 @@
 type: Case Excerpt
 title: Banks v. Unisys Corp.
 description: >-
-  Banks v. Unisys Corp., 228 F.3d 1357 (Fed. Cir. 2000). — quoted in 3
+  Banks v. Unisys Corp., 228 F.3d 1357 (Fed. Cir. 2000). — quoted in 4
   document(s).
 citation: 'Banks v. Unisys Corp., 228 F.3d 1357 (Fed. Cir. 2000).'
 resource: >-
@@ -17,6 +17,9 @@ document_references:
       https://openagreements.org/practice-guides/invention-assignment/us/nebraska
   - type: State Law Practice Guide
     resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/oklahoma
+  - type: State Law Practice Guide
+    resource: >-
       https://openagreements.org/practice-guides/invention-assignment/us/puerto-rico
 tags:
   - case-law
@@ -27,7 +30,7 @@ tags:
 
 *Banks v. Unisys Corp., 228 F.3d 1357 (Fed. Cir. 2000).*
 
-Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -35,9 +38,9 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > The general rule is that an individual owns the patent rights to the subject matter of which he is an inventor, even though he conceived it or reduced it to practice in the course of his employment.
 
-- supports: `statutory-carve-out`
+- supports: `default-ownership`, `statutory-carve-out`
 - source_cards: `banks-general-rule`, `banks-inventor-default`
-- cited_by: [Employee Invention Assignment in Michigan](../invention-assignment/us/michigan.md), [Employee Invention Assignment in Nebraska](../invention-assignment/us/nebraska.md)
+- cited_by: [Employee Invention Assignment in Michigan](../invention-assignment/us/michigan.md), [Employee Invention Assignment in Nebraska](../invention-assignment/us/nebraska.md), [Employee Invention Assignment in Oklahoma](../invention-assignment/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/770700/gerald-banks-and-kelly-banks-v-unisys-corporation-and-burroughs/#:~:text=The%20general%20rule%20is%20that,the%20course%20of%20his%20employment.>
 
 ### banks-v-unisys-corp-the-general-rule-is-that-an-235df943 {#banks-v-unisys-corp-the-general-rule-is-that-an-235df943}

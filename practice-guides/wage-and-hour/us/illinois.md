@@ -1,29 +1,20 @@
 ---
 type: State Law Practice Guide
-title: Wage and Hour Law in Illinois
+title: Minimum Wage in Illinois — Wage and Hour Laws
 description: >-
-  A question-by-question guide to Illinois wage and hour law, covering the
-  $15.00 state minimum wage and the higher Chicago ($17.05) and suburban Cook
-  County ($15.40) local floors, the weekly-only overtime rule and its
-  exemptions, the One Day Rest in Seven Act meal-period and day-of-rest mandates
-  plus paid breaks for hotel room attendants, next-payday final pay with
-  vacation cash-out and the duty to pay undisputed wages, semi-monthly paydays
-  and itemized pay stubs, the Wage Payment and Collection Act's three-part
-  employee test, the 40% tip credit and employee ownership of tips, and
-  enforcement through the Illinois Department of Labor or the courts — including
-  treble damages, 5%-a-month late-pay damages, a ten-year outer limit for Wage
-  Payment and Collection Act suits, and the parallel federal Fair Labor
-  Standards Act remedy.
+  Illinois minimum wage is $15 per hour for covered adult workers. This guide
+  explains the state rate, higher Chicago and Cook County rates, tipped wages,
+  overtime, breaks, final pay, and wage enforcement.
 resource: 'https://openagreements.org/practice-guides/wage-and-hour/us/illinois'
-timestamp: '2026-07-19'
+timestamp: '2026-10-02'
 tags:
   - wage-and-hour
   - Illinois
 ---
 
-# Wage and Hour Law in Illinois[^about]
+# Minimum Wage in Illinois — Wage and Hour Laws[^about]
 
-A question-by-question guide to Illinois wage and hour law, covering the $15.00 state minimum wage and the higher Chicago ($17.05) and suburban Cook County ($15.40) local floors, the weekly-only overtime rule and its exemptions, the One Day Rest in Seven Act meal-period and day-of-rest mandates plus paid breaks for hotel room attendants, next-payday final pay with vacation cash-out and the duty to pay undisputed wages, semi-monthly paydays and itemized pay stubs, the Wage Payment and Collection Act's three-part employee test, the 40% tip credit and employee ownership of tips, and enforcement through the Illinois Department of Labor or the courts — including treble damages, 5%-a-month late-pay damages, a ten-year outer limit for Wage Payment and Collection Act suits, and the parallel federal Fair Labor Standards Act remedy.
+Illinois minimum wage is $15 per hour for covered adult workers. This guide explains the state rate, higher Chicago and Cook County rates, tipped wages, overtime, breaks, final pay, and wage enforcement.
 
 Illinois wage and hour law comes mainly from four statutes: the Illinois Minimum Wage Law, the Illinois Wage Payment and Collection Act, the One Day Rest In Seven Act, and the Employee Classification Act. Together they set the hourly wage floor, the overtime rate, meal and rest requirements, how often workers must be paid, and what happens when an employer pays late.
 
@@ -31,9 +22,9 @@ On top of the state rules, Chicago and suburban Cook County set their own, highe
 
 This note explains what those laws say, in plain terms, for both employers and workers. Where a law does not answer a question, the note says so rather than filling the gap. For the cross-state framework, see the [wage and hour practice guide](/practice-guides/wage-and-hour).
 
-## What is the minimum wage? {#minimum-wage}
+## What is the minimum wage in Illinois? {#minimum-wage}
 
-**Short answer.** Illinois requires employers to pay adult workers at least $15 per hour. That rate applies to employees who are 18 or older, in every occupation, on and after January 1, 2025 [^ilcs-105-4a1].
+**Short answer.** Illinois's state minimum wage is $15 per hour for covered employees aged 18 or older, effective January 1, 2025. [^ilcs-105-4a1] For covered workers, paying only the $15 state rate falls below Chicago's $17.05 rate and Cook County's $15.40 non-tipped rate, effective July 1, 2026. [^chicago-ols-2026-rates-mw] [^cook-mwo-2026-rates-mw] The [local minimum wages section](#local-minimum-wages) explains those rates and local coverage.
 Younger workers move up to the same rate once they put in enough hours. A worker under 18 who has worked more than 650 hours for the employer during a calendar year must be paid the same wage as an adult worker [^ilcs-105-4a3].
 The Minimum Wage Law also carves out some very small employers. Its definition of employee does not include a person permitted to work for an employer with fewer than four employees, not counting the employer's parent, spouse, child, or other immediate family [^ilcs-105-3d]. Domestic workers, by contrast, are expressly included as employees [^ilcs-105-3d].
 There is a limited training rate. An employer may pay a subminimum wage to learners during their period of learning, but never less than 70 percent of the adult minimum wage [^ilcs-105-6c]. A person is not a learner in an occupation once the required training is complete, and in no case after six months of training, unless the Director finds that proficiency in that particular occupation cannot be acquired in six months [^ilcs-105-6d].
@@ -43,11 +34,6 @@ The Minimum Wage Law also contains an equal pay rule. An employer may not pay em
 The core rate is stated directly in the statute:
 
 "on and after January 1, 2025, every employer shall pay to each of his or her employees who is 18 years of age or older in every occupation wages of not less than $15 per hour."[^ilcs-105-4a1]
-
-> [!NOTE]
-> **Practice note.**
->
-> The $15 state rate [^ilcs-105-4a1] is only the floor: as of July 1, 2026, Chicago's minimum wage is $17.05 [^chicago-ols-2026-rates-mw] and suburban Cook County's is $15.40 [^cook-mwo-2026-rates-mw], so check the local minimum wages question below before setting pay for work performed there.
 
 ## When is overtime owed? {#overtime}
 
@@ -124,9 +110,9 @@ Chicago and Cook County apply their own tipped-wage rules; those are covered in 
 
 "Gratuities to employees are the property of the employees, and employers shall not keep gratuities."[^ilcs-115-4-1-property]
 
-## Do local minimum wages apply? {#local-minimum-wages}
+## What is the minimum wage in Chicago and Cook County? {#local-minimum-wages}
 
-**Short answer.** Yes. Chicago and suburban Cook County both set minimum wages above the $15 state rate. The figures here come from each government's own dated notice or page — the city's and the county's official summaries of their rules — and they change, so always confirm the current figure before setting pay.
+**Short answer.** Chicago's July 1, 2026 notice and Cook County's July 2026 ordinance page list $17.05 per hour for covered Chicago workers and $15.40 for non-tipped workers covered by the Cook County ordinance. [^chicago-ols-2026-rates] [^cook-mwo-2026-rates] Local coverage and municipal differences are discussed below.
 In Chicago, according to the City of Chicago Office of Labor Standards notice of the laws changing on July 1, 2026, the minimum wage increased from $16.60 to $17.05 per hour, based on a cap of 2.5 percent of the increase of the Consumer Price Index, rounded up to the nearest $0.05 [^chicago-ols-2026]. The notice's rate table, effective July 1, 2026, lists a $17.05 minimum wage for standard employers and $12.96 for tipped workers, with overtime minimums of $25.58 and $21.49 [^chicago-ols-2026-rates]. If the tipped wage plus tips does not equal the minimum wage, the employer must make up the difference [^chicago-ols-2026-makeup]. The tipped minimum wage credit will remain at 24 percent for all employers through June 30, 2028 [^chicago-ols-2026-tipcredit]. Under the same Chicago notice, all domestic workers and youth workers must receive at least the full $17.05 minimum wage [^chicago-ols-2026-domestic]. Chicago publishes updated rates each July 1, so check the current year's notice before relying on a figure.
 Cook County publishes its own rates. According to the Cook County Minimum Wage Ordinance page, updated July 2026, the county minimum wage as of July 1, 2026 is $15.40 per hour for non-tipped employees and $9.25 per hour for tipped employees [^cook-mwo-2026-rates]. The county rate is set by a greatest-of formula: the greatest of the federal minimum wage, the Illinois state minimum wage, or the county's calculation using the Consumer Price Index [^cook-mwo-2026-formula]. Tipped workers have a make-up right here too: if, over any seven-day period, a tipped employee's tips plus tipped wages are less than the full minimum wage, the employer must pay the difference [^cook-mwo-2026-tipped].
 Location decides which rule applies. The county page states that if a municipality has passed its own minimum wage, like the City of Chicago, then the municipality's minimum wage applies to employers located within or doing business in the municipality [^cook-mwo-2026-optout], and the list of municipalities that do not follow the county ordinance changes frequently [^cook-mwo-2026-optlist]. Confirm the rate with the municipality where the work is performed before setting pay.
@@ -150,9 +136,13 @@ Federal law adds a parallel remedy. Under the federal Fair Labor Standards Act, 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-19. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from an Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Illinois*, OpenAgreements (last updated July 19, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/illinois.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-10-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from an Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Minimum Wage in Illinois — Wage and Hour Laws*, OpenAgreements (last updated October 2, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/illinois.
 
 [^ilcs-105-4a1]: **820 ILCS 105/4(a)(1)** — "on and after January 1, 2025, every employer shall pay to each of his or her employees who is 18 years of age or older in every occupation wages of not less than $15 per hour." *820 ILCS 105/4(a)(1)* <https://www.ilga.gov/documents/legislation/ilcs/documents/082001050K4.htm>
+
+[^chicago-ols-2026-rates-mw]: **City of Chicago OLS notice, July 1, 2026** — "July 1, 2026, Effective Date Standard Employer 4 or more employees Tipped Workers 4 or more employees Min Wage $17.05 $12.96 Overtime Min Wage $25.58 $21.49" *City of Chicago, Office of Labor Standards notice, July 1, 2026 (rate table)* <https://www.chicago.gov/content/dam/city/depts/bacp/OSL/july2026onepagerfinal.pdf>
+
+[^cook-mwo-2026-rates-mw]: **Cook County MWO page, July 2026** — "As of July 1, 2026, the minimum wage in Cook County is $15.40 per hour for non-tipped employees and $9.25 per hour for tipped employees." *Cook County Minimum Wage Ordinance page, updated July 2026* <https://www.cookcountyil.gov/service/minimum-wage-ordinance-and-regulations>
 
 [^ilcs-105-4a3]: **820 ILCS 105/4(a)(3)** — "Beginning on January 1, 2020, every employer shall pay to each of his or her employees who is under 18 years of age that has worked more than 650 hours for the employer during any calendar year a wage not less than the wage required for employees who are 18 years of age or older under paragraph (1) of subsection (a) of Section 4 of this Act." *820 ILCS 105/4(a)(3)* <https://www.ilga.gov/documents/legislation/ilcs/documents/082001050K4.htm>
 
@@ -163,10 +153,6 @@ Federal law adds a parallel remedy. Under the federal Fair Labor Standards Act, 
 [^ilcs-105-6d]: **820 ILCS 105/6(d)** — "No person is deemed a learner in any occupation for which he has completed the required training; and in no case may a person be deemed a learner in that occupation after 6 months of such training, except where the Director finds, after investigation, that for the particular occupation a minimum of proficiency cannot be acquired in 6 months." *820 ILCS 105/6(d)* <https://www.ilga.gov/documents/legislation/ilcs/documents/082001050K6.htm>
 
 [^ilcs-105-4b]: **820 ILCS 105/4(b)** — "No employer shall discriminate between employees on the basis of sex or mental or physical disability, except as otherwise provided in this Act by paying wages to employees at a rate less than the rate at which he pays wages to employees for the same or substantially similar work on jobs the performance of which requires equal skill, effort, and responsibility, and which are performed under similar working conditions, except where such payment is made pursuant to (1) a seniority system; (2) a merit system; (3) a system which measures earnings by quantity or quality of production; or (4) a differential based on any other factor other than sex or mental or physical disability, except as otherwise provided in this Act." *820 ILCS 105/4(b)* <https://www.ilga.gov/documents/legislation/ilcs/documents/082001050K4.htm>
-
-[^chicago-ols-2026-rates-mw]: **City of Chicago OLS notice, July 1, 2026** — "July 1, 2026, Effective Date Standard Employer 4 or more employees Tipped Workers 4 or more employees Min Wage $17.05 $12.96 Overtime Min Wage $25.58 $21.49" *City of Chicago, Office of Labor Standards notice, July 1, 2026 (rate table)* <https://www.chicago.gov/content/dam/city/depts/bacp/OSL/july2026onepagerfinal.pdf>
-
-[^cook-mwo-2026-rates-mw]: **Cook County MWO page, July 2026** — "As of July 1, 2026, the minimum wage in Cook County is $15.40 per hour for non-tipped employees and $9.25 per hour for tipped employees." *Cook County Minimum Wage Ordinance page, updated July 2026* <https://www.cookcountyil.gov/service/minimum-wage-ordinance-and-regulations>
 
 [^ilcs-105-4a-ot]: **820 ILCS 105/4a(1)** — "Except as otherwise provided in this Section, no employer shall employ any of his employees for a workweek of more than 40 hours unless such employee receives compensation for his employment in excess of the hours above specified at a rate not less than 1 1/2 times the regular rate at which he is employed." *820 ILCS 105/4a(1)* <https://www.ilga.gov/documents/legislation/ilcs/documents/082001050K4a.htm>
 
@@ -264,17 +250,17 @@ Federal law adds a parallel remedy. Under the federal Fair Labor Standards Act, 
 
 [^ilcs-115-4-1-pooling]: **820 ILCS 115/4.1** — "This Section does not prohibit tip pooling as permitted by law." *820 ILCS 115/4.1(b)* <https://www.ilga.gov/documents/legislation/ilcs/documents/082001150K4.1.htm>
 
-[^chicago-ols-2026]: **City of Chicago OLS notice, July 1, 2026** — "The Chicago minimum wage increased from $16.60 to $17.05 per hour based on a cap of 2.5% of the increase of the Consumer Price Index, then rounded up to the nearest $0.05." *City of Chicago, Office of Labor Standards notice, July 1, 2026* <https://www.chicago.gov/content/dam/city/depts/bacp/OSL/july2026onepagerfinal.pdf>
-
 [^chicago-ols-2026-rates]: **City of Chicago OLS notice, July 1, 2026** — "July 1, 2026, Effective Date Standard Employer 4 or more employees Tipped Workers 4 or more employees Min Wage $17.05 $12.96 Overtime Min Wage $25.58 $21.49" *City of Chicago, Office of Labor Standards notice, July 1, 2026 (rate table)* <https://www.chicago.gov/content/dam/city/depts/bacp/OSL/july2026onepagerfinal.pdf>
+
+[^cook-mwo-2026-rates]: **Cook County MWO page, July 2026** — "As of July 1, 2026, the minimum wage in Cook County is $15.40 per hour for non-tipped employees and $9.25 per hour for tipped employees." *Cook County Minimum Wage Ordinance page, updated July 2026* <https://www.cookcountyil.gov/service/minimum-wage-ordinance-and-regulations>
+
+[^chicago-ols-2026]: **City of Chicago OLS notice, July 1, 2026** — "The Chicago minimum wage increased from $16.60 to $17.05 per hour based on a cap of 2.5% of the increase of the Consumer Price Index, then rounded up to the nearest $0.05." *City of Chicago, Office of Labor Standards notice, July 1, 2026* <https://www.chicago.gov/content/dam/city/depts/bacp/OSL/july2026onepagerfinal.pdf>
 
 [^chicago-ols-2026-makeup]: **City of Chicago OLS notice, July 1, 2026** — "If the tipped wage plus tips does not equal the minimum wage, the Employer must make up the difference." *City of Chicago, Office of Labor Standards notice, July 1, 2026* <https://www.chicago.gov/content/dam/city/depts/bacp/OSL/july2026onepagerfinal.pdf>
 
 [^chicago-ols-2026-tipcredit]: **City of Chicago OLS notice, July 1, 2026** — "The tipped minimum wage credit will remain at 24% for all employers through June 30, 2028." *City of Chicago, Office of Labor Standards notice, July 1, 2026* <https://www.chicago.gov/content/dam/city/depts/bacp/OSL/july2026onepagerfinal.pdf>
 
 [^chicago-ols-2026-domestic]: **City of Chicago OLS notice, July 1, 2026** — "All Domestic Workers and Youth Workers must receive at least the $17.05 minimum wage." *City of Chicago, Office of Labor Standards notice, July 1, 2026* <https://www.chicago.gov/content/dam/city/depts/bacp/OSL/july2026onepagerfinal.pdf>
-
-[^cook-mwo-2026-rates]: **Cook County MWO page, July 2026** — "As of July 1, 2026, the minimum wage in Cook County is $15.40 per hour for non-tipped employees and $9.25 per hour for tipped employees." *Cook County Minimum Wage Ordinance page, updated July 2026* <https://www.cookcountyil.gov/service/minimum-wage-ordinance-and-regulations>
 
 [^cook-mwo-2026-formula]: **Cook County MWO page, July 2026** — "Cook County’s minimum wage is based on the greatest rate among the Federal minimum wage, Illinois State minimum wage, or the County’s calculation using the Consumer Price Index (CPI)." *Cook County Minimum Wage Ordinance page, updated July 2026* <https://www.cookcountyil.gov/service/minimum-wage-ordinance-and-regulations>
 

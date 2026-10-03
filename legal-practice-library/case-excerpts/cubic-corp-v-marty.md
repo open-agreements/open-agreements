@@ -31,14 +31,14 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - cited_by: [Employee Invention Assignment in California](../invention-assignment/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2139488/cubic-corp-v-marty/#:~:text=The%20Legislature%20has%20stated%20an,of%20employment%20or%20continued%20employment.>
 
-### cubic-corp-v-marty-the-legislature-used-the-disjunctive-1f6856a6 {#cubic-corp-v-marty-the-legislature-used-the-disjunctive-1f6856a6}
+### cubic-corp-v-marty-thus-section-2870-permits-enforcement-of-a15d5ff8 {#cubic-corp-v-marty-thus-section-2870-permits-enforcement-of-a15d5ff8}
 
-> The Legislature used the disjunctive “or”—if either of the two conditions (scope of business or work otherwise performed by the employee for the employer) are not met, then section 2870 does cover the invention.
+> Thus, section 2870 permits enforcement of employer assignment agreements for inventions which relate to the “actual” or “demonstrably anticipated” business of the employer or which resulted from work performed by the employee for the employer.
 
 - supports: `statutory-carve-out`
 - source_cards: `cubic-disjunctive`
 - cited_by: [Employee Invention Assignment in California](../invention-assignment/us/california.md)
-- link_to_source: <https://www.courtlistener.com/opinion/2139488/cubic-corp-v-marty/#:~:text=The%20Legislature%20used%20the%20disjunctive,2870%20does%20cover%20the%20invention.>
+- link_to_source: <https://www.courtlistener.com/opinion/2139488/cubic-corp-v-marty/#:~:text=Thus%2C%20section%202870%20permits%20enforcement,the%20employee%20for%20the%20employer.>
 
 ### cubic-corp-v-marty-we-construe-the-statutory-language-to-8e1a9fa8 {#cubic-corp-v-marty-we-construe-the-statutory-language-to-8e1a9fa8}
 

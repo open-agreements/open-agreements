@@ -1,5 +1,31 @@
 # Us Update Log
 
+## 2026-10-02
+* **Update**: content: state all section 2870 grounds, recast the physician caution, and condition the S4641A sale exception (peer review at a18acb1d6, #2820) (2c365e3)
+* **Update**: content: bring main's asset-purchase, California and New York changes into the branch ahead of merging origin/main (#2820) (a98a69b)
+* **Update**: content(ca-ia): tag the merged default-ownership opening as the answer's conclusion claim (#2820) (fb8da9a)
+* **Update**: Restore source cards for named cases: Pressed Steel, Karlin, Vita, Ashland, Dynamex, Mothering Justice (#2993) (#3080) (fc46f34)
+
+## 2026-10-01
+* **Update**: Keep pilot legal guides in neutral consequential voice (06b564a)
+* **Update**: Keep California holdover caution within Whitewater scope (0d6baca)
+* **Update**: Qualify SAFE form edits and cite Stanford holding in place (1aede72)
+* **Update**: Correct California privacy scope and sharpen reviewed legal answers (38085e7)
+* **Update**: Clarify California holdover and YC SAFE choice (4a429f6)
+* **Update**: Improve demand-led guide answers for CIIAA, California privacy, and YC SAFE (902c162)
+* **Update**: Make cited answer openings clear to the content gate (abfc922)
+* **Update**: Make demand pilot answer openings stand alone with citations (ad72e88)
+* **Update**: Tighten California answer support and invention caution (d38cd5e)
+* **Update**: Scope California and SAFE answers to their cited rules (e5c5d77)
+* **Update**: Clarify CCPA policy update and California holdover caution (f51fee4)
+
+## 2026-09-30
+* **Update**: content: bring main's 'Main law' source links into the California and New York guides ahead of merging origin/main (#2820) (4621b37)
+* **Update**: Add the federal whistleblower notice and pay-discussion question to U.S. invention-assignment and non-compete guides (#2948) (6c393c5)
+* **Update**: content: helper round-1 fixes: Stanford express-grant rule; S4641A health-professional and notice provisions; section 202-k caution (#2820) (878c598)
+* **Update**: content(ca-ia): bring main's Dubilier-sourced hired-to-invent and shop-right sentences (#3064) into the branch ahead of merging origin/main (#2820) (fc286d9)
+* **Update**: Named-case cleanup: card or unname 15 pre-existing case mentions (#3064) (fec3e9d)
+
 ## 2026-09-28
 * **Update**: One chip per named case: cards for the nine cases batch B could not source (#2900) (#2947) (0016d13)
 * **Update**: One chip per named case: restore the names #2933 removed, and the Puerto Rico and South Dakota findings (#2900) (#3000) (17357c7)
@@ -7,10 +33,24 @@
 * **Update**: One chip per named case: ten invention-assignment guides, Puerto Rico to Wyoming (#2900 batch D2) (#2933) (5227aa5)
 * **Update**: One chip per case: invention-assignment batch B, 13 of 22 findings (#2900) (#2917) (5449817)
 * **Update**: content(invention-assignment): link Main law to source cards (adbad52)
+* **Update**: content(ca-ia): carve-out answer opens with one conclusion claim (#2804) (ca6f3ff)
 * **Update**: One chip per named case: nine invention-assignment guides, Missouri to Pennsylvania (#2900 batch D1) (#2926) (ff6f9ed)
 
 ## 2026-09-27
+* **Update**: content(ca-ia): state Stanford's default-ownership rule as the court states it (#2804) (8b1ccbb)
 * **Update**: Washington: ESHB 1155 notice deadline and 2027 changes; say Washington State (#2886, #2880) (#2898) (933e73b)
+* **Update**: content(ca-ia): open the default-ownership answer with a cited conclusion claim (#2804) (c5e196f)
+
+## 2026-09-26
+* **Update**: content: open New York and California answers with their conclusion claims (#2804) (2869a11)
+* **Update**: content(ca-ia): correct Cubic excerpt, section 2872 date condition, and Whitewater scope (#2804) (3a22da0)
+* **Update**: content(ca-ia): track section 2870(a)'s timing and R&D language in the carve-out claim and card (#2804) (3d553fb)
+* **Update**: content: second audit round — burdens, conditions and holdings stated as the sources state them (#2804) (41a57a8)
+* **Update**: content: pinned re-review fixes — developments events, S4641A section 7 conditions, Reed Roberts attribution, section 2872 burden (#2804) (4d3b12e)
+* **Update**: content: whole answer sentences inside their conclusion claims; S4641A sale card states pending status and conditions (#2804) (6587522)
+* **Update**: content(ca-ia): keep section 16600's 'except as provided' in the Whitewater conclusion (#2804) (696ca34)
+* **Update**: content: claim-level context round — Reed Roberts, Ticor, Brown & Brown, Delta, S4641A cap; section 2872 burden and Whitewater (#2804) (90c838d)
+* **Update**: content(ca-ia): state only what the section 16600 excerpt shows (#2804) (ad725e4)
 
 ## 2026-09-23
 * **Update**: Consolidate adjacent practice-guide cautions (#2206) (d436c41)

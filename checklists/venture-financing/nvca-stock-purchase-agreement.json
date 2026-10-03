@@ -383,8 +383,8 @@
           },
           {
             "sourceId": "edgar-durata-smc",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Durata Therapeutics, Inc., Certificate of Incorporation § 5A (Special Mandatory Conversion)",
             "citation": "Durata Therapeutics, Inc., Certificate of Incorporation § 5A (filed Mar. 22, 2012) (Series A Original Issue Price $1.00; Series A Special Mandatory Conversion Price $10.00).",
             "url": "https://www.sec.gov/Archives/edgar/data/1544116/000119312512127352/d312438dex31.htm",
@@ -607,8 +607,8 @@
         "sources": [
           {
             "sourceId": "edgar-material-contract-threshold",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 2.7 (Agreements; Action)",
             "citation": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 2.7 (filed Mar. 31, 2015).",
             "url": "https://www.sec.gov/Archives/edgar/data/1390085/000104746915003027/a2223801zex-4_3.htm",
@@ -1598,8 +1598,8 @@
           },
           {
             "sourceId": "edgar-encapsion-amendment",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (Amendments and Waivers)",
             "citation": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (filed Mar. 31, 2015).",
             "url": "https://www.sec.gov/Archives/edgar/data/1390085/000104746915003027/a2223801zex-4_3.htm",
@@ -1611,8 +1611,8 @@
           },
           {
             "sourceId": "edgar-immunome-amendment",
-            "authorityType": "commentary",
-            "tier": "lawyer-judgment-backed",
+            "authorityType": "sec-filing",
+            "tier": "market-benchmark-backed",
             "title": "Immunome, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (Amendments and Waivers)",
             "citation": "Immunome, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (filed Sept. 9, 2020).",
             "url": "https://www.sec.gov/Archives/edgar/data/1472012/000110465920103458/tm2025599d4_ex10-20.htm",

@@ -45,8 +45,8 @@
     "topic": "safes",
     "slug": "yc-post-money-safe-valuation-cap",
     "frontmatter": {
-      "title": "YC Post-Money SAFE (Valuation Cap) Reviewer Checklist",
-      "description": "A fill-in and decision guide for the Y Combinator Post-Money SAFE (valuation cap). Unlike a negotiated form, the YC SAFE is byte-identical across deals and is not meant to be edited, so this checklist covers only the blanks the parties complete — the cap, the purchase amount, the entity and governing-law fields, and the signature and date lines — plus a few which-document decisions, such as confirming the post-money form and whether to add a pro rata side letter.",
+      "title": "YC SAFE Template (Post-Money Valuation Cap) Reviewer Checklist",
+      "description": "Check the unmodified YC post-money valuation-cap SAFE template before signing: confirm the variant, valuation cap and purchase amount, entity and governing-law fields, signatures, and any separate pro rata side letter.",
       "eyebrow": "Reviewer Checklist",
       "coverage": "YC Post-Money SAFE (valuation cap)",
       "lastReviewed": "2026-06-24",
@@ -124,7 +124,7 @@
         "sectionId": "use-the-unmodified-form",
         "itemNumber": "1.2",
         "anchor": "https://openagreements.org/checklists/safes/yc-post-money-safe-valuation-cap#confirm-post-money-not-pre-money",
-        "requirementGuidance": "Confirm this is the post-money SAFE and not the older pre-money safe. The post-money form prices conversion at the Post-Money Valuation Cap divided by the Company Capitalization, which fixes the investor's ownership at signing — its amount of ownership sold is immediately transparent and calculable for both sides, and later SAFEs and the option pool dilute the founders rather than this investor. The pre-money safe computes dilution differently, so a deal that thinks it is using the post-money form but is on the pre-money one will misstate who absorbs future dilution.",
+        "requirementGuidance": "Confirm this is the post-money SAFE and not the older pre-money safe. The cap form prices conversion at the Post-Money Valuation Cap divided by the Company Capitalization, making the investor's pre-round ownership immediately transparent and calculable. Later SAFEs generally dilute founders rather than earlier capped SAFE holders, but new money and a new or increased option pool at the priced round dilute SAFE holders too, as YC's conversion explanation shows. The pre-money safe computes dilution differently, so check the actual form before signing.",
         "variants": [],
         "sources": [
           {
@@ -160,7 +160,7 @@
         "sectionId": "use-the-unmodified-form",
         "itemNumber": "1.3",
         "anchor": "https://openagreements.org/checklists/safes/yc-post-money-safe-valuation-cap#select-cap-variant",
-        "requirementGuidance": "Confirm this is the valuation-cap-only file rather than one of the other versions the User Guide describes — Other versions of the safe are described in Appendix I, namely the cap-and-discount, discount-only, and MFN forms. Each is a separate document with different economics, so match the file in hand to what the parties negotiated; a cap-only file used for a deal that bargained for a discount is the wrong instrument and will short-change one side.",
+        "requirementGuidance": "Confirm this is the valuation-cap-only file rather than the current discount-only or MFN forms. A discount without a cap calls for YC's discount-only form; using the cap-only file would omit the negotiated discount from the conversion terms. YC retired the combined cap-and-discount form in 2021, so a deal with both terms fits no current YC form: the available choices are a single-term YC form or a non-YC instrument, rather than rewriting the cap-only text.",
         "variants": [],
         "sources": [
           {
@@ -173,6 +173,28 @@
             "proposition": "The User Guide describes a SAFE with a Post-Money Valuation Cap and lists the other versions of the safe in Appendix I.",
             "verbatimQuote": "This User Guide describes a safe with a Post-Money Valuation Cap. Other versions of the safe are described in Appendix I.",
             "anchor": "https://openagreements.org/checklists/safes/yc-post-money-safe-valuation-cap#src-safe-variants-appendix"
+          },
+          {
+            "sourceId": "safe-combo-retired",
+            "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Y Combinator, Post-Money Safe User Guide, Version History",
+            "citation": "Y Combinator, Post-Money Safe User Guide, Version History (v1.1, Aug. 28, 2021).",
+            "url": "https://www.ycombinator.com/documents",
+            "proposition": "YC retired its valuation-cap-and-discount SAFE in 2021 after finding that the combined form was not preferred in practice.",
+            "verbatimQuote": "We did not encounter situations where the combo safe was the preferred choice.",
+            "anchor": "https://openagreements.org/checklists/safes/yc-post-money-safe-valuation-cap#src-safe-combo-retired"
+          },
+          {
+            "sourceId": "safe-no-modification",
+            "authorityType": "standard-form",
+            "tier": "market-benchmark-backed",
+            "title": "Y Combinator Post-Money SAFE (Valuation Cap)",
+            "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
+            "url": "https://www.ycombinator.com/documents",
+            "proposition": "The YC SAFE is a standard form the parties agree not to modify except to fill in blanks and bracketed terms.",
+            "verbatimQuote": "This Safe is one of the forms available at http://ycombinator.com/documents and the Company and the Investor agree that neither one has modified the form, except to fill in blanks and bracketed terms.",
+            "anchor": "https://openagreements.org/checklists/safes/yc-post-money-safe-valuation-cap#src-safe-no-modification"
           }
         ]
       },
@@ -185,7 +207,7 @@
         "sectionId": "economic-terms-you-fill-in",
         "itemNumber": "2.1",
         "anchor": "https://openagreements.org/checklists/safes/yc-post-money-safe-valuation-cap#set-valuation-cap",
-        "requirementGuidance": "Check the Post-Money Valuation Cap against the deal, not just that it is filled in. The cap fixes the investor's ownership: that stake is the Purchase Amount divided by the cap, and because the cap is a post-money number, later SAFEs and the option pool dilute the founders rather than this investor — the amount of ownership sold is immediately transparent and calculable. Founders customarily back-solve the cap from the dollars they intend to raise and the share they will sell: raising about $1 million for roughly 15% implies a cap near $6.7 million ($1M / 0.15). A cap set too low gives away more of the company than the founder meant to sell; a cap set too high underpays the investor for the risk.",
+        "requirementGuidance": "Check the Post-Money Valuation Cap against the deal, not just that it is filled in. Purchase Amount divided by the cap is a first-pass ownership estimate before the priced round's new money, assuming conversion at the cap; a lower round price or a new option-pool increase changes the final stake, as YC's conversion calculator shows. Founders customarily back-solve the cap from the dollars they intend to raise and the share they will sell: raising about $1 million for roughly 15% implies a cap near $6.7 million ($1M / 0.15). A cap set too low gives away more of the company than the founder meant to sell; a cap set too high underpays the investor for the risk.",
         "variants": [],
         "sources": [
           {

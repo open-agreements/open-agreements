@@ -859,9 +859,21 @@
         "sectionId": "conflicts-of-interest",
         "itemNumber": "6.4",
         "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#disclose-side-letters-and-preferential-terms",
-        "requirementGuidance": "Confirm the memorandum discloses that the general partner may enter into side letters granting particular investors terms not available to others, and describes the categories of terms involved: fee discounts, enhanced liquidity, capacity rights, and additional portfolio transparency. Enhanced liquidity and additional transparency are the two that disadvantage the other investors in a stress, so a disclosure that lists only fee discounts understates the arrangement. Confirm whether the fund commits to any most-favored-nation election, and if not, say so.",
+        "requirementGuidance": "Confirm the memorandum discloses that the general partner may enter into side letters granting particular investors terms not available to others, and describes the categories of terms involved: fee discounts, enhanced liquidity, capacity rights, and additional portfolio transparency. Enhanced liquidity and additional transparency are the two that disadvantage the other investors in a stress, so a disclosure that lists only fee discounts understates the arrangement. Confirm whether the fund commits to any most-favored-nation election, and if not, say so. Where the memorandum makes qualified-client status an admission condition for every investor, confirm it also says whether the general partner may waive that criterion by side letter, on what conditions, and what happens to the performance allocation if a later change would make charging it to a waived investor unlawful, so that a waiver later granted does not make the eligibility statement untrue, and that the offering-eligibility requirement, accredited-investor status or eligibility under the exemption on which the offering relies, is stated as non-waivable.",
         "variants": [],
-        "sources": []
+        "sources": [
+          {
+            "sourceId": "advisers-act-pooled-vehicle-antifraud-side-letters",
+            "authorityType": "regulation",
+            "tier": "primary-source-backed",
+            "title": "17 CFR 275.206(4)-8: Pooled investment vehicles",
+            "citation": "17 C.F.R. § 275.206(4)-8(a)(1).",
+            "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206(4)-8",
+            "proposition": "Rule 206(4)-8(a)(1) makes it a fraudulent act for any adviser to a pooled investment vehicle, registered or not, to make an untrue statement of material fact to an investor or prospective investor, so an eligibility statement the general partner may later waive must disclose the waiver power.",
+            "verbatimQuote": "It shall constitute a fraudulent, deceptive, or manipulative act, practice, or course of business within the meaning of section 206(4) of the Act (15 U.S.C. 80b-6(4)) for any investment adviser to a pooled investment vehicle to: (1) Make any untrue statement of a material fact or to omit to state a material fact necessary to make the statements made, in the light of the circumstances under which they were made, not misleading, to any investor or prospective investor in the pooled investment vehicle; or",
+            "anchor": "https://openagreements.org/checklists/fund-formation/hedge-fund-private-placement-memorandum#src-advisers-act-pooled-vehicle-antifraud-side-letters"
+          }
+        ]
       },
       {
         "requirementId": "describe-exculpation-and-indemnification-of-the-manager",
