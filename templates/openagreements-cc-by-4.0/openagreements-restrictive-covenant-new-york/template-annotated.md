@@ -209,15 +209,15 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### Physician covenants under the ordinary test
 
-New York gives physicians no industry-specific statutory shield — its only industry-specific statutory non-compete prohibition covers broadcast employees — so a physician covenant is measured under the same reasonableness framework as any other restraint. A narrow radius, a short term, and preserved patient access are what carry a medical covenant, because the injurious-to-the-public prong is where patient-access and continuity-of-care arguments live and can sink an over-broad medical covenant.
+A non-compete that binds an employed physician is measured under the common-law reasonableness standard _BDO Seidman_ describes for employee agreements not to compete. Under that test, a restraint is reasonable only if, among other things, it is not injurious to the public. A physician covenant whose radius or term would cut patients off from their physician invites the argument that it fails that public-injury prong, which the test treats as a separate ground for holding the restraint unreasonable.
 
 ### Every covenant needs a recognized interest behind it
 
-Each covenant in the agreement needs a recognized interest behind it. New York recognizes a short list — trade secrets or confidential customer information, unique or extraordinary services, and client goodwill created and maintained at the employer's expense — and nothing else. General knowledge, skill, and experience and the ordinary, internal operations of the business are not protectable in New York absent a trade secret or breach of trust; a broad confidentiality definition that sweeps them in, without an express exclusion, reaches beyond what the law protects. The non-investment covenant is the exposed one — hardship with no protectable interest behind it is how covenants fail, and a covenant protecting no legitimate interest is unenforceable outright. Two consequences travel with this: a contemporaneous return, deletion, and certification record is the evidence that real trade secrets and confidential customer information were at stake, and an assignee inherits a covenant only as far as the original interest genuinely travels with the deal — an assignment moves the covenant but cannot mint a new interest to support it.
+Each covenant in the agreement needs a recognized interest behind it. New York recognizes a short list — trade secrets or confidential customer information, unique or extraordinary services, and client goodwill created and maintained at the employer's expense — and nothing else. In _Reed, Roberts_, where the knowledge was not a trade secret and there was no conspiracy or breach of trust resulting in commercial piracy, the Court of Appeals saw no reason to restrain the former employee's use of his knowledge of the intricacies of the employer's business operation; a broad confidentiality definition that sweeps them in, without an express exclusion, reaches beyond what the law protects. The non-investment covenant is the exposed one — hardship with no protectable interest behind it is how covenants fail, and a covenant protecting no legitimate interest is unenforceable outright. Two consequences travel with this: a contemporaneous return, deletion, and certification record is the evidence that real trade secrets and confidential customer information were at stake, and an assignee inherits a covenant only as far as the original interest genuinely travels with the deal — an assignment moves the covenant but cannot mint a new interest to support it.
 
 ### Injunctive relief needs more than a recital
 
-The remedies clause's irreparable-harm recital does not itself secure an injunction. In New York, absent trade secrets, injunctive enforcement of a restraint typically depends on the employee's services being genuinely special, unique, or extraordinary — a demanding, case-by-case standard no boilerplate paragraph can manufacture. The recital does no harm, but it cannot stand in for a covenant actually anchored to a trade secret or to services demonstrably unique.
+The remedies clause's irreparable-harm recital does not itself secure an injunction. Absent trade secrets or confidential customer lists, injunctive enforcement of a New York restraint can rest on the employee's services being genuinely special, unique, or extraordinary — a case-by-case inquiry focused on the employee's relationship to the employer's business. The recital does no harm, but it cannot stand in for a covenant actually anchored to a trade secret or to services demonstrably unique.
 
 ### Enforcement posture and the good-faith record
 
@@ -229,11 +229,11 @@ A post-hire covenant holds only on real consideration, recorded in the considera
 
 ### Employee non-solicit sizing
 
-An employee non-solicit sized to Covered Employees rather than drawn at large fits the reasonableness test it still must clear. New York treats employee non-recruitment clauses as inherently more reasonable and less restrictive than non-competes, but they are still analyzed under the same reasonableness test, so the covenant survives on a genuine workforce-stability and goodwill interest held to the Restricted Period.
+An employee non-solicit sized to Covered Employees rather than drawn at large fits the reasonableness test it still must clear. The _OTG Management_ court treated employee non-recruitment clauses as inherently more reasonable and less restrictive than non-competes, while still subjecting them to reasonableness scrutiny. The _OTG_ court enforced the non-recruitment clause because it was reasonable in scope and imposed no meaningful burden on the employee.
 
 ### Customer non-solicitation
 
-A customer non-solicit that reaches customers the employee never met, did not know about, and did no work for is overbroad. A restraint tied to customer relationships the employee actually developed or serviced through work for the employer holds, and a preserved request for partial enforcement under _BDO Seidman_ leaves a fallback if it is trimmed.
+A customer non-solicit that reaches customers the employee never met, did not know about, and did no work for is overbroad. A restraint tied to customer relationships the employee actually developed or serviced through work for the employer avoids the overbreadth _Brown & Brown_ found, and a preserved request for partial enforcement under _BDO Seidman_ leaves a fallback if it is trimmed.
 
 ### Non-dealing demands more than the goodwill doctrine asks
 
@@ -245,15 +245,15 @@ The sale-of-business clause holds on the line New York's implied goodwill covena
 
 ### Governing-law selection posture
 
-An out-of-state choice-of-law clause does not escape New York's limits against a New York-based worker. Governing law set to New York, with venue pointed at the Governing Law state, matches the choices to where the employee actually lives and works — a chosen law that is truly obnoxious to New York policy is disregarded, so a foreign clause cannot be counted on to displace New York's restrictive-covenant rules. The same public-policy screen cuts the other way: a covenant the employee entered under another state's law may not survive New York's, and a no-conflicting-obligations representation surfaces it before it becomes a dispute. And the pending S4641A bill would go further and void choice-of-law and venue clauses used to avoid the statute for workers who reside or work in New York — pending only, not law.
+Choosing another state's law for a New York-based worker may fail to displace New York's limits: where applying the chosen law would violate New York public policy, as the Court of Appeals held of Florida law in _Brown & Brown_, New York law governs. Governing law set to New York, with venue pointed at the Governing Law state, matches the choices to where the employee actually lives and works — a chosen law that is truly obnoxious to New York policy is disregarded, so a foreign clause cannot be counted on to displace New York's restrictive-covenant rules. The same public-policy screen cuts the other way: a covenant the employee entered under another state's law may not survive New York's, and a no-conflicting-obligations representation surfaces it before it becomes a dispute. And the pending S4641A bill would make unenforceable choice-of-law and venue clauses used to avoid the statute for covered workers who, for at least the thirty days before their employment ends, have resided or worked in New York — pending only, not law.
 
 ### Tolling
 
-If the parties intend breach to extend the restriction, the agreement should expressly provide that a breach extends the restriction, define the triggering violation, and tie the extension to the proven period of breach.
+If the parties intend breach to extend the restriction, the agreement should expressly provide that a breach extends the restriction, define the triggering violation, and tie the extension to the period of violation.
 
 ### Broadcast exclusion mechanics
 
-For a broadcast employee, a post-employment non-compete is barred outright. A broadcasting-industry employer that requires a post-employment non-compete from a broadcast employee — as to geographic area, time period, or particular employers or industries — is civilly liable for damages, attorneys' fees, and costs. The bar reaches only post-employment restraints; covenants operating during the term of an employment contract are untouched, so it is the restraint aimed at conduct after the job ends that falls outside the statute.
+The mistake is a post-employment restriction in a broadcast employee's covenant: a bar on working in a geographic area, for a period, or for particular employers or industries after the job ends. Requiring it as a condition of employment exposes a broadcasting industry employer to civil liability for damages, attorneys' fees, and costs. Confining the restraint to the term of the employment contract avoids that exposure.
 
 ### Federal protected-activity carve-outs
 

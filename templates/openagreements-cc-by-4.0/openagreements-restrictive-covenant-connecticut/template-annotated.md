@@ -203,7 +203,7 @@ Date: _______________
 
 ## Drafting notes
 
-Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Connecticut](/practice-guides/non-compete/us/connecticut).
+Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Connecticut (CT) — Agreement Enforceability](/practice-guides/non-compete/us/connecticut).
 
 ### Tethering the non-compete to a protectable interest
 
