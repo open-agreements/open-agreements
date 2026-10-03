@@ -40,10 +40,19 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > A violation of any prong renders the covenant invalid.
 
-- supports: `holdover-clause-limit`
-- source_cards: `bdo-violation`
-- cited_by: [Employee Invention Assignment in New York](../invention-assignment/us/new-york.md)
+- supports: `employee-non-compete-enforceability`, `holdover-clause-limit`
+- source_cards: `bdo-any-prong-invalid`, `bdo-violation`
+- cited_by: [Employee Invention Assignment in New York](../invention-assignment/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=A%20violation%20of%20any%20prong%20renders%20the%20covenant%20invalid.>
+
+### bdo-seidman-v-hirshberg-instead-when-as-here-the-unenforceable-bbc0d4c6 {#bdo-seidman-v-hirshberg-instead-when-as-here-the-unenforceable-bbc0d4c6}
+
+> Instead, when, as here, the unenforceable portion is not an essential part of the agreed exchange, a court should conduct a case specific analysis, focusing on the conduct of the employer in imposing the terms of the agreement (see, Restatement [Second] of Contracts § 184). Under this approach, if the employer demonstrates an absence of overreaching, coercive use of dominant bargaining power, or other anti-competitive misconduct, but has in good faith sought to protect a legitimate business interest, consistent with reasonable standards of fair dealing, partial enforcement may be justified
+
+- supports: `court-narrowing`, `nonsolicitation`
+- source_cards: `bdo-partial-enforcement-standard`, `q5-bdo-partial-enforcement`
+- cited_by: [Non-Competes in New York](../non-compete/us/new-york.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=Instead%2C%20when%2C%20as%20here%2C%20the,partial%20enforcement%20may%20be%20justified>
 
 ### bdo-seidman-v-hirshberg-the-employer-has-a-legitimate-interest-a0b7e1d7 {#bdo-seidman-v-hirshberg-the-employer-has-a-legitimate-interest-a0b7e1d7}
 
@@ -58,8 +67,8 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > The modern, prevailing common-law standard of reasonableness for employee agreements not to compete applies a three-pronged test.
 
-- supports: `employee-non-compete-enforceability`, `new-york-doctrine-gates`, `restrictive-covenants-each-independently-includable`
-- source_cards: `bdo-reasonableness-standard`, `bdo-three-prong-covenants`, `bdo-three-prong-gate`
+- supports: `employee-non-compete-enforceability`, `new-york-doctrine-gates`, `recent-developments`, `restrictive-covenants-each-independently-includable`
+- source_cards: `bdo-developments-common-law`, `bdo-reasonableness-standard`, `bdo-three-prong-covenants`, `bdo-three-prong-gate`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=The%20modern%2C%20prevailing%20common%2Dlaw%20standard,compete%20applies%20a%20three%2Dpronged%20test.>
 
@@ -76,7 +85,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Under this approach, if the employer demonstrates an absence of overreaching, coercive use of dominant bargaining power, or other anti-competitive misconduct, but has in good faith sought to protect a legitimate business interest, consistent with reasonable standards of fair dealing, partial enforcement may be justified
 
-- supports: `court-narrowing`, `new-york-doctrine-gates`, `nonsolicitation`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
-- source_cards: `bdo-conduct-condition`, `bdo-good-faith-narrowing`, `bdo-partial-enforcement-standard`, `bdo-partial-preserved-gate`, `q5-bdo-partial-enforcement`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
+- supports: `new-york-doctrine-gates`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
+- source_cards: `bdo-conduct-condition`, `bdo-good-faith-narrowing`, `bdo-partial-preserved-gate`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New York](../checklists/non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=Under%20this%20approach%2C%20if%20the,partial%20enforcement%20may%20be%20justified>

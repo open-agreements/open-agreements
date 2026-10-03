@@ -187,8 +187,8 @@ Supporting case-law excerpt. Quoted across 57 document(s) in the OpenAgreements 
 > In most circumstances, an inventor must expressly grant his rights in an invention to his employer if the employer is to obtain those rights.
 
 - supports: `default-ownership`
-- source_cards: `ia-stanford-employee`
-- cited_by: [Employee Invention-Assignment Agreements](../invention-assignment/us.md)
+- source_cards: `ia-stanford-employee`, `stanford-express-grant`
+- cited_by: [Employee Invention-Assignment Agreements](../invention-assignment/us.md), [Employee Invention Assignment in California](../invention-assignment/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/218133/board-of-trustees-of-the-leland-stanford-junior-university-v-roche/#:~:text=In%20most%20circumstances%2C%20an%20inventor,is%20to%20obtain%20those%20rights.>
 
 ### bd-of-trustees-of-the-leland-stanford-junior-univ-v-roche-molecular-systems-990cda-since-1790-the-patent-law-has-b895f877 {#bd-of-trustees-of-the-leland-stanford-junior-univ-v-roche-molecular-systems-990cda-since-1790-the-patent-law-has-b895f877}

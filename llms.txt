@@ -16,6 +16,12 @@ Every practice guide cites primary law; templates start from recognized standard
 
 - [U.S. 50-State Non-Compete Survey](https://openagreements.org/surveys/non-compete/us)
 - [U.S. asset-purchase survey](https://openagreements.org/surveys/asset-purchase/us)
+- [U.S. asset-purchase-after-closing survey](https://openagreements.org/surveys/asset-purchase-after-closing/us)
+- [U.S. asset-purchase-closing-and-handover survey](https://openagreements.org/surveys/asset-purchase-closing-and-handover/us)
+- [U.S. asset-purchase-price-and-payment survey](https://openagreements.org/surveys/asset-purchase-price-and-payment/us)
+- [U.S. asset-purchase-signing-to-closing survey](https://openagreements.org/surveys/asset-purchase-signing-to-closing/us)
+- [U.S. asset-purchase-structure-and-parties survey](https://openagreements.org/surveys/asset-purchase-structure-and-parties/us)
+- [U.S. asset-purchase-what-transfers survey](https://openagreements.org/surveys/asset-purchase-what-transfers/us)
 - [U.S. corporate-governance survey](https://openagreements.org/surveys/corporate-governance/us)
 - [U.S. founder-separation survey](https://openagreements.org/surveys/founder-separation/us)
 - [U.S. invention-assignment survey](https://openagreements.org/surveys/invention-assignment/us)

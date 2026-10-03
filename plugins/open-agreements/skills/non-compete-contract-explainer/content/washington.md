@@ -2,10 +2,10 @@
 jurisdiction: "Washington"
 slug: washington
 countryCode: US
-content_packaged_at: "2026-09-30"
-law_checked_through: "2026-06-03"
+content_packaged_at: "2026-10-03"
+law_checked_through: "2026-09-30"
 human_reviewed_at: null
-next_review_due: "2026-11-30"
+next_review_due: "2027-03-29"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/washington
 license: CC BY 4.0
 stale: false
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-09-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-10-03 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Washington[^about]
 
@@ -38,7 +38,7 @@ Washington State enforces employee non-competes today only above high, inflation
 | **Restriction extended during a breach?** | Not addressed by statute |
 | **Maximum length set by law** | 18 months (longer presumed unreasonable) |
 | **Must the employer pay to enforce?** | Yes — if laid off |
-| **Upcoming changes** | Near-total non-compete ban (ESHB 1155) [RCW 49.62.020(1) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026).], effective 2027-06-30 (Are non-competes enforceable?: Banned) — Beginning on June 30, 2027, all noncompetition covenants are void and unenforceable regardless of when the parties entered into the noncompetition covenant. |
+| **Upcoming changes** | Near-total non-compete ban (ESHB 1155) [RCW 49.62.020(1) (effective June 30, 2027) (as amended by Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026). Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(1) (amending RCW 49.62.100). Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 7(2) (amending RCW 49.62.100). Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.], effective 2027-06-30 (Are non-competes enforceable?: Banned; Can a court narrow it?: No; Must the employer pay to enforce?: No; Maximum length set by law: Not applicable — void) — Beginning on June 30, 2027, all noncompetition covenants are void and unenforceable regardless of when the parties entered into the noncompetition covenant. ESHB 1155 takes effect that day, and its amended RCW 49.62.010, 49.62.020, 49.62.080, and 49.62.090 apply to all proceedings commenced on or after that date, regardless of when the cause of action arose. Legal proceedings commenced before June 30, 2027 stay governed by chapter 49.62 RCW as it read before that date. |
 
 ## Are employee non-compete agreements enforceable in Washington? {#employee-non-compete-enforceability}
 
@@ -210,7 +210,21 @@ Signed on March 23, 2026 and effective June 30, 2027, ESHB 1155 (chapter 149, La
 >
 > Without an inventory of every non-compete the employer has entered into, including each Non-Compete Covenant in agreements like this one, and the date each restricted period ends, an employer risks omitting current or former workers from the written notice it must make reasonable efforts to provide by October 1, 2027, stating that their non-compete is void and unenforceable [^eshb1155-notice-duty][^eshb1155-voidall].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Washington*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/washington.
+## What does federal law require a non-compete or confidentiality agreement in Washington to say about whistleblowers and pay? {#federal-notices-and-pay-discussion}
+
+**Short answer.** An employee confidentiality, non-compete, or invention assignment agreement signed or updated now that governs trade secrets or other confidential information must give the Defend Trade Secrets Act whistleblower-immunity notice, and for employees the National Labor Relations Act covers, Section 7 of that Act protects concerted activity, including joining together over pay and working conditions, that a broad confidentiality clause can restrict.[^dtsa-notice-duty][^nlra-section-7-rights][^nlrb-wages-working-conditions]
+The employer may satisfy the notice duty by cross-referencing a qualifying policy document provided to the employee, but an employer that omits the notice may not be awarded exemplary damages or attorney fees under the Defend Trade Secrets Act in an action against an employee who was not given notice.[^dtsa-notice-policy-cross-reference][^dtsa-notice-noncompliance]
+
+The notice describes a federal immunity: an individual cannot be held liable under federal or state trade-secret law for disclosing a trade secret in confidence to a government official or an attorney solely to report or investigate a suspected violation of law, or in a court filing made under seal.[^dtsa-immunity-scope] For an agreement signed or updated now, the duty to give that notice reaches any agreement with an employee that governs trade secrets or other confidential information, whatever else the agreement does.[^dtsa-notice-duty]
+
+Section 7 gives employees the National Labor Relations Act covers a statutory right to engage in concerted activity for mutual aid or protection, including joining together to improve pay and working conditions. For employees the Act covers, the Board's work-rule standard adopted in 2023 makes a rule presumptively unlawful if it has a reasonable tendency to chill employees from exercising their Section 7 rights; an employer can rebut that presumption only by showing a legitimate and substantial business interest it cannot serve with a more narrowly tailored rule.[^nlra-section-7-rights][^nlrb-wages-working-conditions][^stericycle-work-rule-standard] The 2023 standard may change, but the Section 7 right it enforces is statutory. State law may add its own requirements for the same clauses.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Washington*, OpenAgreements (last updated September 30, 2026), https://openagreements.org/practice-guides/non-compete/us/washington.
 
 [^rcw-020-void-conditions]: **RCW 49.62.020** — "Unless the employee's earnings from the party seeking enforcement, when annualized, exceed one hundred thousand dollars per year." *RCW 49.62.020(1)(b).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020>
 
@@ -349,3 +363,17 @@ Signed on March 23, 2026 and effective June 30, 2027, ESHB 1155 (chapter 149, La
 [^eshb1155-forfeiture]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "A ‘noncompetition covenant’ also includes any provision in an agreement that threatens, demands, requires, or otherwise effectuates that an individual return, repay, or forfeit any right, benefit, or compensation, as a consequence of the individual engaging in a lawful profession, trade, or business of any kind." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 3.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^eshb1155-voidall]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "regardless of when the parties entered into the noncompetition covenant." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4(1).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^dtsa-notice-duty]: **Defend Trade Secrets Act — employer notice requirement, 18 U.S.C. § 1833(b)(3)(A)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
+
+[^nlra-section-7-rights]: **NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157** — "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection, and shall also have the right to refrain from any or all of such activities except to the extent that such right may be affected by an agreement requiring membership in a labor organization as a condition of employment as authorized in section 158(a)(3) of this title." *29 U.S.C. § 157 (NLRA § 7).* <https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,section%20158(a)(3)%20of%20this%20title.>
+
+[^nlrb-wages-working-conditions]: **National Labor Relations Board, statement of the agency's mission** — "Established in 1935, the National Labor Relations Board is an independent federal agency that protects employees from unfair labor practices and protects the right of private sector employees to join together, with or without a union, to improve wages, benefits and working conditions." *NLRB Office of Public Affairs, news release of Feb. 21, 2023 (agency mission statement).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
+
+[^dtsa-notice-policy-cross-reference]: **Defend Trade Secrets Act — policy-document alternative, 18 U.S.C. § 1833(b)(3)(B)** — "An employer shall be considered to be in compliance with the notice requirement in subparagraph (A) if the employer provides a cross-reference to a policy document provided to the employee that sets forth the employer's reporting policy for a suspected violation of law." *18 U.S.C. § 1833(b)(3)(B).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20be%20considered,a%20suspected%20violation%20of%20law.>
+
+[^dtsa-notice-noncompliance]: **Defend Trade Secrets Act — consequence of omitting the notice, 18 U.S.C. § 1833(b)(3)(C)** — "If an employer does not comply with the notice requirement in subparagraph (A), the employer may not be awarded exemplary damages or attorney fees under subparagraph (C) or (D) of section 1836(b)(3) in an action against an employee to whom notice was not provided." *18 U.S.C. § 1833(b)(3)(C).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=If%20an%20employer%20does%20not,whom%20notice%20was%20not%20provided.>
+
+[^dtsa-immunity-scope]: **Defend Trade Secrets Act — whistleblower immunity, 18 U.S.C. § 1833(b)(1)** — "An individual shall not be held criminally or civilly liable under any Federal or State trade secret law for the disclosure of a trade secret that— (A) is made— (i) in confidence to a Federal, State, or local government official, either directly or indirectly, or to an attorney; and (ii) solely for the purpose of reporting or investigating a suspected violation of law; or (B) is made in a complaint or other document filed in a lawsuit or other proceeding, if such filing is made under seal." *18 U.S.C. § 1833(b)(1).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20individual%20shall%20not%20be,filing%20is%20made%20under%20seal.>
+
+[^stericycle-work-rule-standard]: **NLRB news release on Stericycle, Inc., 372 NLRB No. 113 (2023) — work-rule standard** — "Under the new standard adopted in Stericycle, the General Counsel must prove that a challenged rule has a reasonable tendency to chill employees from exercising their rights. If the General Counsel does so, then the rule is presumptively unlawful. However, the employer may rebut the presumption by proving that the rule advances a legitimate and substantial business interest and that the employer is unable to advance that interest with a more narrowly tailored rule." *Stericycle, Inc., 372 NLRB No. 113 (2023); NLRB Office of Public Affairs, Board Adopts New Standard for Assessing Lawfulness of Work Rules (Aug. 2, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-adopts-new-standard-for-assessing-lawfulness-of-work-rules>

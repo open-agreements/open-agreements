@@ -1,5 +1,8 @@
 # Invention Assignment Update Log
 
+## 2026-09-30
+* **Update**: Add the federal whistleblower notice and pay-discussion question to U.S. invention-assignment and non-compete guides (#2948) (6c393c5)
+
 ## 2026-09-28
 * **Update**: fix(invention-assignment): cite hired-to-invent and shop right; restate the practice caution (#2798) (b189dfa)
 

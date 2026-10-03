@@ -1,5 +1,19 @@
 # Startup Financing Update Log
 
+## 2026-10-01
+* **Update**: Keep pilot legal guides in neutral consequential voice (06b564a)
+* **Update**: Qualify SAFE form edits and cite Stanford holding in place (1aede72)
+* **Update**: Correct California privacy scope and sharpen reviewed legal answers (38085e7)
+* **Update**: Make privacy and SAFE side-term openings substantive (3dcc344)
+* **Update**: Clarify California holdover and YC SAFE choice (4a429f6)
+* **Update**: Make three answer openings complete and simple (6c1ef87)
+* **Update**: Explain cap-and-discount SAFE choice without implying a YC form exists (791112e)
+* **Update**: Improve demand-led guide answers for CIIAA, California privacy, and YC SAFE (902c162)
+* **Update**: Make cited answer openings clear to the content gate (abfc922)
+* **Update**: Make demand pilot answer openings stand alone with citations (ad72e88)
+* **Update**: Scope California and SAFE answers to their cited rules (e5c5d77)
+* **Update**: Simplify YC side-term answer opening (ec769c8)
+
 ## 2026-09-28
 * **Update**: NVCA: shorter charter voting answer; add the Investors' Rights Agreement as a verified source (#2928) (84448c1)
 * **Update**: content(nvca): open two answers with the substantive rule (#2907) (#2919) (b9ec29f)

@@ -7,7 +7,7 @@ description: >-
 citation: 'Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015).'
 resource: >-
   https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/
-timestamp: '2026-06-11'
+timestamp: '2026-09-30'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'

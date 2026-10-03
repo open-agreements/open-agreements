@@ -4,8 +4,10 @@ title: Employee Invention-Assignment Agreements
 description: >-
   The cross-state framework for employee invention-assignment agreements: which
   inventions a state lets an employer claim, who owns an invention by default,
-  how far a holdover clause can reach, and what federal law requires to transfer
-  patent, copyright, and trademark rights. Links to the 50-state survey.
+  how far a holdover clause can reach, what federal law requires to transfer
+  patent, copyright, and trademark rights, the federal whistleblower notice,
+  and, for employees the National Labor Relations Act covers, the protection for
+  discussing pay and working conditions. Links to the 50-state survey.
 resource: 'https://openagreements.org/practice-guides/invention-assignment/us'
 timestamp: '2026-06-29'
 tags:
@@ -14,7 +16,7 @@ tags:
 
 # Employee Invention-Assignment Agreements[^about]
 
-The cross-state framework for employee invention-assignment agreements: which inventions a state lets an employer claim, who owns an invention by default, how far a holdover clause can reach, and what federal law requires to transfer patent, copyright, and trademark rights. Links to the 50-state survey.
+The cross-state framework for employee invention-assignment agreements: which inventions a state lets an employer claim, who owns an invention by default, how far a holdover clause can reach, what federal law requires to transfer patent, copyright, and trademark rights, the federal whistleblower notice, and, for employees the National Labor Relations Act covers, the protection for discussing pay and working conditions. Links to the 50-state survey.
 
 An invention-assignment agreement is the promise an employer asks a worker to make to assign the rights in inventions the worker creates. How far that promise can reach depends on the law of the governing state, and whether the signed document actually transfers patent, copyright, and trademark rights depends on federal law. This note explains the rules that apply across states and links to the [50-state survey](/surveys/invention-assignment/us) for the jurisdiction-specific detail.
 
@@ -105,6 +107,21 @@ How far a holdover clause can reach is one of the sharpest points of state-to-st
 >
 > Using one assign-everything form across states can leave a California agreement without the written notice of the own-time carve-out that California requires [^ia-2872-notice-practice], or with a *holdover* clause that claims inventions conceived after employment without use of the former employer's confidential information, as the provision *Whitewater* held void did [^ia-whitewater-premises][^ia-whitewater-void]. The [50-state survey](/surveys/invention-assignment/us) records each state's notice rule and holdover limit.
 
+## What does federal law require a confidentiality and invention assignment agreement to say about whistleblowers and pay? {#federal-notices-and-pay-discussion}
+
+**Short answer.** An employee confidentiality, non-compete, or invention assignment agreement signed or updated now that governs trade secrets or other confidential information must give the Defend Trade Secrets Act whistleblower-immunity notice, and for employees the National Labor Relations Act covers, Section 7 of that Act protects concerted activity, including joining together over pay and working conditions, that a broad confidentiality clause can restrict.[^dtsa-notice-duty][^nlra-section-7-rights][^nlrb-wages-working-conditions]
+The employer may satisfy the notice duty by cross-referencing a qualifying policy document provided to the employee, but an employer that omits the notice may not be awarded exemplary damages or attorney fees under the Defend Trade Secrets Act in an action against an employee who was not given notice.[^dtsa-notice-policy-cross-reference][^dtsa-notice-noncompliance]
+
+The notice describes a federal immunity: an individual cannot be held liable under federal or state trade-secret law for disclosing a trade secret in confidence to a government official or an attorney solely to report or investigate a suspected violation of law, or in a court filing made under seal.[^dtsa-immunity-scope] For an agreement signed or updated now, the duty to give that notice reaches any agreement with an employee that governs trade secrets or other confidential information, whatever else the agreement does.[^dtsa-notice-duty]
+
+Section 7 gives employees the National Labor Relations Act covers a statutory right to engage in concerted activity for mutual aid or protection, including joining together to improve pay and working conditions. For employees the Act covers, the Board's work-rule standard adopted in 2023 makes a rule presumptively unlawful if it has a reasonable tendency to chill employees from exercising their Section 7 rights; an employer can rebut that presumption only by showing a legitimate and substantial business interest it cannot serve with a more narrowly tailored rule.[^nlra-section-7-rights][^nlrb-wages-working-conditions][^stericycle-work-rule-standard] The 2023 standard may change, but the Section 7 right it enforces is statutory. State law may add its own requirements for the same clauses.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
+
+
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-29. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + 50-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention-Assignment Agreements*, OpenAgreements (last updated June 29, 2026), https://openagreements.org/practice-guides/invention-assignment/us.
 
@@ -175,3 +192,17 @@ How far a holdover clause can reach is one of the sharpest points of state-to-st
 [^ia-2872-notice-practice]: **Cal. Lab. Code § 2872** — "If an employment agreement entered into after January 1, 1980, contains a provision requiring the employee to assign or offer to assign any of his or her rights in any invention to his or her employer, the employer must also, at the time the agreement is made, provide a written notification to the employee that the agreement does not apply to an invention which qualifies fully under the provisions of Section 2870." *Cal. Lab. Code § 2872.* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=2872>
 
 [^ia-whitewater-premises]: **Whitewater West Industries, Ltd. v. Alleshouse** — "The question for us is how California has resolved the issue— where there is no use of confidential information and the conceptions of the inventions post-date employment." *Whitewater W. Indus., Ltd. v. Alleshouse, 981 F.3d 1045 (Fed. Cir. 2020).* <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=The%20question%20for%20us%20is,of%20the%20inventions%20post%2Ddate%20employment.>
+
+[^dtsa-notice-duty]: **Defend Trade Secrets Act — employer notice requirement, 18 U.S.C. § 1833(b)(3)(A)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
+
+[^nlra-section-7-rights]: **NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157** — "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection, and shall also have the right to refrain from any or all of such activities except to the extent that such right may be affected by an agreement requiring membership in a labor organization as a condition of employment as authorized in section 158(a)(3) of this title." *29 U.S.C. § 157 (NLRA § 7).* <https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,section%20158(a)(3)%20of%20this%20title.>
+
+[^nlrb-wages-working-conditions]: **National Labor Relations Board, statement of the agency's mission** — "Established in 1935, the National Labor Relations Board is an independent federal agency that protects employees from unfair labor practices and protects the right of private sector employees to join together, with or without a union, to improve wages, benefits and working conditions." *NLRB Office of Public Affairs, news release of Feb. 21, 2023 (agency mission statement).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
+
+[^dtsa-notice-policy-cross-reference]: **Defend Trade Secrets Act — policy-document alternative, 18 U.S.C. § 1833(b)(3)(B)** — "An employer shall be considered to be in compliance with the notice requirement in subparagraph (A) if the employer provides a cross-reference to a policy document provided to the employee that sets forth the employer's reporting policy for a suspected violation of law." *18 U.S.C. § 1833(b)(3)(B).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20be%20considered,a%20suspected%20violation%20of%20law.>
+
+[^dtsa-notice-noncompliance]: **Defend Trade Secrets Act — consequence of omitting the notice, 18 U.S.C. § 1833(b)(3)(C)** — "If an employer does not comply with the notice requirement in subparagraph (A), the employer may not be awarded exemplary damages or attorney fees under subparagraph (C) or (D) of section 1836(b)(3) in an action against an employee to whom notice was not provided." *18 U.S.C. § 1833(b)(3)(C).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=If%20an%20employer%20does%20not,whom%20notice%20was%20not%20provided.>
+
+[^dtsa-immunity-scope]: **Defend Trade Secrets Act — whistleblower immunity, 18 U.S.C. § 1833(b)(1)** — "An individual shall not be held criminally or civilly liable under any Federal or State trade secret law for the disclosure of a trade secret that— (A) is made— (i) in confidence to a Federal, State, or local government official, either directly or indirectly, or to an attorney; and (ii) solely for the purpose of reporting or investigating a suspected violation of law; or (B) is made in a complaint or other document filed in a lawsuit or other proceeding, if such filing is made under seal." *18 U.S.C. § 1833(b)(1).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20individual%20shall%20not%20be,filing%20is%20made%20under%20seal.>
+
+[^stericycle-work-rule-standard]: **NLRB news release on Stericycle, Inc., 372 NLRB No. 113 (2023) — work-rule standard** — "Under the new standard adopted in Stericycle, the General Counsel must prove that a challenged rule has a reasonable tendency to chill employees from exercising their rights. If the General Counsel does so, then the rule is presumptively unlawful. However, the employer may rebut the presumption by proving that the rule advances a legitimate and substantial business interest and that the employer is unable to advance that interest with a more narrowly tailored rule." *Stericycle, Inc., 372 NLRB No. 113 (2023); NLRB Office of Public Affairs, Board Adopts New Standard for Assessing Lawfulness of Work Rules (Aug. 2, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-adopts-new-standard-for-assessing-lawfulness-of-work-rules>

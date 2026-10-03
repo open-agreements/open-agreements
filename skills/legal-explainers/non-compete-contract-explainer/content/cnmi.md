@@ -2,7 +2,7 @@
 jurisdiction: "Northern Mariana Islands"
 slug: cnmi
 countryCode: US
-content_packaged_at: "2026-09-30"
+content_packaged_at: "2026-10-03"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-09-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-10-03 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Northern Mariana Islands[^about]
 
@@ -137,6 +137,20 @@ Two widely publicized changes do not reach the CNMI on their own force. The fede
 
 The practical takeaway is stability with a thin margin. Because the framework is judge-made, the most reliable signal of change would be a new CNMI Supreme Court or federal decision deciding one of the open questions, consideration, reformation, or tolling, rather than a bill.
 
+## What does federal law require a non-compete or confidentiality agreement in the Northern Mariana Islands to say about whistleblowers and pay? {#federal-notices-and-pay-discussion}
+
+**Short answer.** An employee confidentiality, non-compete, or invention assignment agreement signed or updated now that governs trade secrets or other confidential information must give the Defend Trade Secrets Act whistleblower-immunity notice, and for employees the National Labor Relations Act covers, Section 7 of that Act protects concerted activity, including joining together over pay and working conditions, that a broad confidentiality clause can restrict.[^dtsa-notice-duty][^nlra-section-7-rights][^nlrb-wages-working-conditions]
+The employer may satisfy the notice duty by cross-referencing a qualifying policy document provided to the employee, but an employer that omits the notice may not be awarded exemplary damages or attorney fees under the Defend Trade Secrets Act in an action against an employee who was not given notice.[^dtsa-notice-policy-cross-reference][^dtsa-notice-noncompliance]
+
+The notice describes a federal immunity: an individual cannot be held liable under federal or state trade-secret law for disclosing a trade secret in confidence to a government official or an attorney solely to report or investigate a suspected violation of law, or in a court filing made under seal.[^dtsa-immunity-scope] For an agreement signed or updated now, the duty to give that notice reaches any agreement with an employee that governs trade secrets or other confidential information, whatever else the agreement does.[^dtsa-notice-duty]
+
+Section 7 gives employees the National Labor Relations Act covers a statutory right to engage in concerted activity for mutual aid or protection, including joining together to improve pay and working conditions. For employees the Act covers, the Board's work-rule standard adopted in 2023 makes a rule presumptively unlawful if it has a reasonable tendency to chill employees from exercising their Section 7 rights; an employer can rebut that presumption only by showing a legitimate and substantial business interest it cannot serve with a more narrowly tailored rule.[^nlra-section-7-rights][^nlrb-wages-working-conditions][^stericycle-work-rule-standard] The 2023 standard may change, but the Section 7 right it enforces is statutory. State law may add its own requirements for the same clauses.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
+
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Northern Mariana Islands. This article synthesizes Northern Mariana Islands primary law and is not legal advice from a Northern Mariana Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the Northern Mariana Islands*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/cnmi.
 
 [^cmc-3401]: **7 CMC § 3401** — "In all proceedings, the rules of the common law, as expressed in the restatements of the law approved by the American Law Institute and, to the extent not so expressed as generally understood and applied in the United States, shall be the rules of decision in the courts of the Commonwealth, in the absence of written law or local customary law to the contrary" *7 CMC § 3401.* <https://cnmilaw.org/pdf/cmc_section/T7/3401.pdf>
@@ -168,3 +182,17 @@ The practical takeaway is stability with a thin margin. Because the framework is
 [^emc-tolling]: **EMC Corp. v. Arturi** — "Being forewarned, EMC could have contracted, as the district judge noted, for tolling the term of the restriction during litigation, or for a period of restriction to commence upon preliminary finding of breach." *EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011).* <https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=Being%20forewarned%2C%20EMC%20could%20have,upon%20preliminary%20finding%20of%20breach.>
 
 [^pang-current]: **Pangelinan v. Pangelinan** — "shall be the rules of decision in the courts of the Commonwealth, in the absence of written law or local customary law to the contrary." *Pangelinan v. Pangelinan, 2024 MP 5.* <https://www.courtlistener.com/opinion/10124676/pangelinan-v-pangelinan/#:~:text=shall%20be%20the%20rules%20of,customary%20law%20to%20the%20contrary.>
+
+[^dtsa-notice-duty]: **Defend Trade Secrets Act — employer notice requirement, 18 U.S.C. § 1833(b)(3)(A)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
+
+[^nlra-section-7-rights]: **NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157** — "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection, and shall also have the right to refrain from any or all of such activities except to the extent that such right may be affected by an agreement requiring membership in a labor organization as a condition of employment as authorized in section 158(a)(3) of this title." *29 U.S.C. § 157 (NLRA § 7).* <https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,section%20158(a)(3)%20of%20this%20title.>
+
+[^nlrb-wages-working-conditions]: **National Labor Relations Board, statement of the agency's mission** — "Established in 1935, the National Labor Relations Board is an independent federal agency that protects employees from unfair labor practices and protects the right of private sector employees to join together, with or without a union, to improve wages, benefits and working conditions." *NLRB Office of Public Affairs, news release of Feb. 21, 2023 (agency mission statement).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
+
+[^dtsa-notice-policy-cross-reference]: **Defend Trade Secrets Act — policy-document alternative, 18 U.S.C. § 1833(b)(3)(B)** — "An employer shall be considered to be in compliance with the notice requirement in subparagraph (A) if the employer provides a cross-reference to a policy document provided to the employee that sets forth the employer's reporting policy for a suspected violation of law." *18 U.S.C. § 1833(b)(3)(B).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20be%20considered,a%20suspected%20violation%20of%20law.>
+
+[^dtsa-notice-noncompliance]: **Defend Trade Secrets Act — consequence of omitting the notice, 18 U.S.C. § 1833(b)(3)(C)** — "If an employer does not comply with the notice requirement in subparagraph (A), the employer may not be awarded exemplary damages or attorney fees under subparagraph (C) or (D) of section 1836(b)(3) in an action against an employee to whom notice was not provided." *18 U.S.C. § 1833(b)(3)(C).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=If%20an%20employer%20does%20not,whom%20notice%20was%20not%20provided.>
+
+[^dtsa-immunity-scope]: **Defend Trade Secrets Act — whistleblower immunity, 18 U.S.C. § 1833(b)(1)** — "An individual shall not be held criminally or civilly liable under any Federal or State trade secret law for the disclosure of a trade secret that— (A) is made— (i) in confidence to a Federal, State, or local government official, either directly or indirectly, or to an attorney; and (ii) solely for the purpose of reporting or investigating a suspected violation of law; or (B) is made in a complaint or other document filed in a lawsuit or other proceeding, if such filing is made under seal." *18 U.S.C. § 1833(b)(1).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20individual%20shall%20not%20be,filing%20is%20made%20under%20seal.>
+
+[^stericycle-work-rule-standard]: **NLRB news release on Stericycle, Inc., 372 NLRB No. 113 (2023) — work-rule standard** — "Under the new standard adopted in Stericycle, the General Counsel must prove that a challenged rule has a reasonable tendency to chill employees from exercising their rights. If the General Counsel does so, then the rule is presumptively unlawful. However, the employer may rebut the presumption by proving that the rule advances a legitimate and substantial business interest and that the employer is unable to advance that interest with a more narrowly tailored rule." *Stericycle, Inc., 372 NLRB No. 113 (2023); NLRB Office of Public Affairs, Board Adopts New Standard for Assessing Lawfulness of Work Rules (Aug. 2, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-adopts-new-standard-for-assessing-lawfulness-of-work-rules>

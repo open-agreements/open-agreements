@@ -6,7 +6,7 @@ description: >-
   4 document(s).
 citation: 'Guth v. Minnesota Mining & Mfg. Co., 72 F.2d 385 (7th Cir. 1934).'
 resource: 'https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/'
-timestamp: '2026-07-07'
+timestamp: '2026-09-28'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/invention-assignment/us'
@@ -73,7 +73,7 @@ Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements l
 
 - supports: `holdover-clause-limit`, `post-employment-obligations`
 - source_cards: `guth-holdover`, `guth-holdover-disclosure`
-- cited_by: [Confidential Information and Invention Assignment Agreement Reviewer Checklist](../checklists/invention-assignment/us.md), [Employee Invention Assignment in Illinois](../invention-assignment/us/illinois.md)
+- cited_by: [CIIAA (Confidential Information and Invention Assignment Agreement) Reviewer Checklist](../checklists/invention-assignment/us.md), [Employee Invention Assignment in Illinois](../invention-assignment/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=those%20provisions%20of%20the%20contract,were%20contrary%20to%20public%20policy.>
 
 ### guth-v-minnesota-mining-mfg-co-upon-the-facts-peculiar-to-this-6b08a69f {#guth-v-minnesota-mining-mfg-co-upon-the-facts-peculiar-to-this-6b08a69f}

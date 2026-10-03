@@ -7,7 +7,7 @@ description: >-
 citation: 'Thoma v. Oxford Performance Materials, Inc., 153 Conn. App. 50 (2014).'
 resource: >-
   https://www.courtlistener.com/opinion/2733143/thoma-v-oxford-performance-materials-inc/
-timestamp: '2026-06-12'
+timestamp: '2026-10-02'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/connecticut'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-consideration`
 - source_cards: `thoma-fact-specific-consideration`
-- cited_by: [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Competes in Connecticut (CT) — Agreement Enforceability](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2733143/thoma-v-oxford-performance-materials-inc/#:~:text=Consequently%2C%20the%20record%20supports%20the,on%20the%20second%20agreement%E2%80%99s%20execution.>
 
 ### thoma-v-oxford-performance-materials-inc-such-a-reasonable-construction-is-not-da982765 {#thoma-v-oxford-performance-materials-inc-such-a-reasonable-construction-is-not-da982765}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `thoma-against-drafter`, `thoma-ambiguous-duration-against-drafter`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut (CT) — Agreement Enforceability](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2733143/thoma-v-oxford-performance-materials-inc/#:~:text=Such%20a%20reasonable%20construction%20is,not%20possible%20in%20this%20case.>

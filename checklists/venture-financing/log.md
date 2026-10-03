@@ -1,5 +1,8 @@
 # Venture Financing Update Log
 
+## 2026-09-30
+* **Update**: Checklist evidence floor: every item backed by evidence from first publication (#3058) (83d9b4f)
+
 ## 2026-09-27
 * **Update**: content(checklists): drop repeated not-legal-advice lines (#2889) (4267578)
 

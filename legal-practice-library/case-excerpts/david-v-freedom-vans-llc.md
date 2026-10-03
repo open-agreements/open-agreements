@@ -4,7 +4,7 @@ title: 'David v. Freedom Vans, LLC'
 description: 'David v. Freedom Vans, LLC, 4 Wn.3d 242 (2025). — quoted in 2 document(s).'
 citation: 'David v. Freedom Vans, LLC, 4 Wn.3d 242 (2025).'
 resource: 'https://www.courtlistener.com/opinion/10319821/springer-v-freedom-vans-llc/'
-timestamp: '2026-06-11'
+timestamp: '2026-09-30'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/washington'

@@ -1,5 +1,21 @@
 # Us Update Log
 
+## 2026-10-02
+* **Update**: Restore source cards for named cases: Pressed Steel, Karlin, Vita, Ashland, Dynamex, Mothering Justice (#2993) (#3080) (fc46f34)
+
+## 2026-10-01
+* **Update**: Correct California privacy scope and sharpen reviewed legal answers (38085e7)
+* **Update**: Make privacy and SAFE side-term openings substantive (3dcc344)
+* **Update**: Make three answer openings complete and simple (6c1ef87)
+* **Update**: Correct CCPA affiliate sharing direction (86b9510)
+* **Update**: Improve demand-led guide answers for CIIAA, California privacy, and YC SAFE (902c162)
+* **Update**: Make cited answer openings clear to the content gate (abfc922)
+* **Update**: Make demand pilot answer openings stand alone with citations (ad72e88)
+* **Update**: Tighten California answer support and invention caution (d38cd5e)
+* **Update**: State CalOPPA site-visitor scope and absence of size threshold (e27a7c2)
+* **Update**: Scope California and SAFE answers to their cited rules (e5c5d77)
+* **Update**: Clarify CCPA policy update and California holdover caution (f51fee4)
+
 ## 2026-09-28
 * **Update**: One chip per named case: Illinois privacy and non-U.S. non-compete guides (#2900 batch A) (#2914) (5aac21b)
 * **Update**: content(privacy): shorten the Ohio privacy guide with signal-plus-next-sentence openers (#2903) (#2925) (6c11e57)

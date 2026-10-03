@@ -13,6 +13,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 ## Documents
 
 * [Corporate Governance](corporate-governance/)
+* [Employment Offer Letter](employment-offer-letter/)
 * [Founder Separation](founder-separation/)
 * [Fund Formation](fund-formation/)
 * [Hiring](hiring/)

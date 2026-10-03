@@ -52,7 +52,7 @@
     "slug": "us",
     "frontmatter": {
       "title": "Privacy Policy Reviewer Checklist",
-      "description": "A clause-by-clause reviewer checklist for privacy policies covering business identification, data disclosures, consumer rights, opt-outs, consent, and maintenance.",
+      "description": "Review a U.S. privacy policy against identity and contact disclosures, data uses, consumer rights, opt-outs, consent, and maintenance; pair it with the applicable state law, including California CCPA/CPRA requirements.",
       "eyebrow": "Reviewer Checklist",
       "coverage": "Jurisdiction-neutral (US)",
       "lastReviewed": "2026-06-17",
@@ -498,9 +498,20 @@
         "sectionId": "sensitive-data-consent",
         "itemNumber": "5.1",
         "anchor": "https://openagreements.org/checklists/privacy-policy/us#obtain-consent-for-sensitive-data",
-        "requirementGuidance": "When a state privacy regime covers the business and it processes sensitive data, it must satisfy the governing state's sensitive-data rule before processing. Opt-in affirmative consent is the rule in most states and the strict baseline a multistate policy should adopt; a few states, such as Iowa, instead require clear notice and an opt-out. Where consent governs, it is captured by an affirmative flow, not implied by a paragraph in the policy.",
+        "requirementGuidance": "The policy and consent flow match the governing state's sensitive-data rule before processing begins. Texas requires affirmative consent for sensitive-data processing; Iowa instead requires clear notice and an opt-out. Where consent governs, the flow captures an affirmative choice rather than treating a paragraph in the policy as consent.",
         "variants": [],
         "sources": [
+          {
+            "sourceId": "tx-tdpsa-sensitive-consent",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Tex. Bus. & Com. Code § 541.101",
+            "citation": "Tex. Bus. & Com. Code § 541.101(b)(4).",
+            "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+            "proposition": "A controller may not process a consumer's sensitive data without consent, and must handle a known child's data in accordance with COPPA.",
+            "verbatimQuote": "process the sensitive data of a consumer without obtaining the consumer's consent, or, in the case of processing the sensitive data of a known child, without processing that data in accordance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.).",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-tx-tdpsa-sensitive-consent"
+          },
           {
             "sourceId": "ia-icdpa-sensitive-optout",
             "authorityType": "primary-law",
@@ -512,17 +523,6 @@
             "verbatimQuote": "A controller shall not process sensitive data collected from a consumer for a nonexempt purpose without the consumer having been presented with clear notice and an opportunity to opt out of such processing, or, in the case of the processing of sensitive data concerning a known child, without processing such data in accordance with the federal Children’s Online Privacy Protection Act, 15 U.S.C. §6501 et seq.",
             "date": "2025-01-01",
             "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-ia-icdpa-sensitive-optout"
-          },
-          {
-            "sourceId": "tx-tdpsa-sensitive-consent",
-            "authorityType": "primary-law",
-            "tier": "primary-source-backed",
-            "title": "Tex. Bus. & Com. Code § 541.101",
-            "citation": "Tex. Bus. & Com. Code § 541.101(b)(4).",
-            "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
-            "proposition": "A controller may not process a consumer's sensitive data without consent, and must handle a known child's data in accordance with COPPA.",
-            "verbatimQuote": "process the sensitive data of a consumer without obtaining the consumer's consent, or, in the case of processing the sensitive data of a known child, without processing that data in accordance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.).",
-            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-tx-tdpsa-sensitive-consent"
           }
         ]
       },
@@ -540,7 +540,7 @@
         "sectionId": "sensitive-data-consent",
         "itemNumber": "5.2",
         "anchor": "https://openagreements.org/checklists/privacy-policy/us#route-known-child-data-through-coppa",
-        "requirementGuidance": "When the business has known child users — a child under 13, as COPPA defines the term — it must handle that child's data in accordance with COPPA, as the comprehensive acts incorporate. This is a federal duty, tied to online collection by covered operators, independent of any state coverage flag, and it is narrower than the separate minor-user duties some states impose for teens.",
+        "requirementGuidance": "A website or online service directed to children, or an operator with actual knowledge that it collects personal information from a child under 13, complies with the federal COPPA statute; that duty applies regardless of state coverage. Where a state privacy law also incorporates COPPA for known-child sensitive data, that condition applies too: Texas and Iowa expressly do so.",
         "variants": [],
         "sources": [
           {
@@ -553,6 +553,18 @@
             "proposition": "A controller may not process a consumer's sensitive data without consent, and must handle a known child's data in accordance with COPPA.",
             "verbatimQuote": "process the sensitive data of a consumer without obtaining the consumer's consent, or, in the case of processing the sensitive data of a known child, without processing that data in accordance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.).",
             "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-tx-tdpsa-sensitive-consent"
+          },
+          {
+            "sourceId": "ia-icdpa-sensitive-optout",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Iowa Code § 715D.4",
+            "citation": "Iowa Code § 715D.4(2).",
+            "url": "https://www.legis.iowa.gov/docs/code/2025/715D.4.pdf",
+            "proposition": "A controller may process sensitive data only after presenting the consumer with clear notice and an opportunity to opt out, and must handle a known child's data in accordance with COPPA — Iowa uses notice-and-opt-out, not opt-in consent.",
+            "verbatimQuote": "A controller shall not process sensitive data collected from a consumer for a nonexempt purpose without the consumer having been presented with clear notice and an opportunity to opt out of such processing, or, in the case of the processing of sensitive data concerning a known child, without processing such data in accordance with the federal Children’s Online Privacy Protection Act, 15 U.S.C. §6501 et seq.",
+            "date": "2025-01-01",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-ia-icdpa-sensitive-optout"
           }
         ]
       },

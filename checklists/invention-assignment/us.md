@@ -1,23 +1,26 @@
 ---
 type: Reviewer Checklist
-title: Confidential Information and Invention Assignment Agreement Reviewer Checklist
+title: >-
+  CIIAA (Confidential Information and Invention Assignment Agreement) Reviewer
+  Checklist
 description: >-
-  A document-type reviewer checklist for a confidentiality and invention
-  assignment agreement, covering present assignment mechanics, lawful carve-outs
-  and notices, confidentiality scope, post-employment cooperation, return
-  obligations, monitoring disclosures, and technology controls.
+  Review a CIIAA for present assignment, prior and own-time invention
+  carve-outs, state notices, confidentiality scope, whistleblower and
+  pay-discussion rights, return obligations, and post-employment cooperation.
 resource: 'https://openagreements.org/checklists/invention-assignment/us'
-timestamp: '2026-07-07'
+timestamp: '2026-09-28'
 tags:
   - invention-assignment
   - checklist
 ---
 
-# Confidential Information and Invention Assignment Agreement Reviewer Checklist[^about]
+# CIIAA (Confidential Information and Invention Assignment Agreement) Reviewer Checklist[^about]
 
-A document-type reviewer checklist for a confidentiality and invention assignment agreement, covering present assignment mechanics, lawful carve-outs and notices, confidentiality scope, post-employment cooperation, return obligations, monitoring disclosures, and technology controls.
+Review a CIIAA for present assignment, prior and own-time invention carve-outs, state notices, confidentiality scope, whistleblower and pay-discussion rights, return obligations, and post-employment cooperation.
 
-Every item below reads a draft confidentiality and invention assignment agreement as a document, not as a hiring workflow. Start with the assignment scope and state carve-out gates: if the agreement overreaches on employee-owned inventions, later confidentiality, cooperation, and return mechanics cannot fix the ownership problem. Use this checklist to confirm the draft is internally bounded, jurisdiction-aware, and tied to the clauses it actually asks the employee to sign; final state-law application remains for counsel.
+This checklist reviews a CIIAA as a document. It can be used with the [OpenAgreements CIIAA](/templates/openagreements-confidentiality-invention-assignment-agreement) or another draft. The review starts with assignment scope and state carve-outs: later confidentiality, cooperation, and return provisions cannot cure an unlawful claim to an employee's invention. The [California invention-assignment guide](/practice-guides/invention-assignment/us/california) illustrates how state law can limit the form; final application depends on the employee's jurisdiction.
+
+For each draft, the review identifies the employee's work jurisdiction and locates the operative assignment clause and prior-inventions schedule before comparing the clause, statutory carve-out, and required notice side by side. A conflict belongs at the exact clause; a generic saving clause does not substitute for a correctly bounded assignment. The remaining review covers confidentiality, protected disclosures, return of property, and cooperation.
 
 ## Assignment mechanics {#assignment-mechanics}
 
@@ -57,6 +60,12 @@ Every item below reads a draft confidentiality and invention assignment agreemen
 
 - [ ] **Trade-secret duration tied to trade-secret status** (Optional) — Where trade secrets are covered, check whether the duty lasts only while the information remains a trade secret. That formulation tracks the legal reason for protection and avoids an untethered indefinite obligation for information that no longer qualifies. [#trade-secret-confidentiality-duration]
 
+## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
+
+- [ ] **Federal trade-secret whistleblower notice** (Required) — The agreement must give the federal whistleblower-immunity notice, or cross-reference a reporting policy the employee actually receives. [^dtsa-immunity-notice][^dtsa-notice-policy-cross-reference] A confidentiality and invention assignment agreement signed today governs the use of confidential information, so the notice duty applies to the draft under review. [^dtsa-immunity-notice] If the draft omits the notice, the employer cannot be awarded the Defend Trade Secrets Act's exemplary damages or attorney fees in an action against an employee who was not given notice. [^dtsa-notice-noncompliance] [#disclose-dtsa-notice]
+
+- [ ] **Pay-discussion carve-out** (Required) — The confidentiality definition and restrictions must leave covered employees free to discuss wages and working conditions. [^nlra-section-7-rights][^stericycle-work-rule-standard] Federal labor law protects private-sector employees' concerted activity for mutual aid or protection, including joining together to improve wages and working conditions. [^nlra-section-7-rights][^nlrb-wages-working-conditions] Under the work-rule standard the Board adopted in 2023, a rule with a reasonable tendency to chill that activity is presumptively unlawful unless the employer shows a legitimate and substantial interest it cannot serve with a narrower rule. [^stericycle-work-rule-standard] The standard may change; the statutory right does not depend on it. An express carve-out for discussions of pay and working conditions makes the definition's reach on that point explicit. [#carve-out-nlra-protected-discussion]
+
 ## Post-employment obligations {#post-employment-obligations}
 
 - [ ] **No unlawful post-employment holdover assignment** (Prohibited) — Confirm the agreement does not require assignment of inventions conceived after employment beyond what the governing jurisdiction permits. The safest baseline is to limit assignment to inventions made during employment and avoid post-employment holdover language unless state law and business need both support it. [^guth-holdover] [#avoid-holdover-assignment-beyond-lawful-limits]
@@ -88,7 +97,7 @@ Every item below reads a draft confidentiality and invention assignment agreemen
 - [ ] **Copyleft and open-source restrictions calibrated** (Optional) — For software roles, check whether the agreement addresses unauthorized introduction of copyleft or other open-source components into company products. The restriction should point to policy and approval workflow rather than ban ordinary developer knowledge or lawful open-source use outright. [#software-copyleft-restriction]
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-07. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for U.S. confidentiality and invention assignment agreement coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Confidential Information and Invention Assignment Agreement Reviewer Checklist*, OpenAgreements (last updated July 7, 2026), https://openagreements.org/checklists/invention-assignment/us.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-28. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for U.S. confidentiality and invention assignment agreement coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *CIIAA (Confidential Information and Invention Assignment Agreement) Reviewer Checklist*, OpenAgreements (last updated September 28, 2026), https://openagreements.org/checklists/invention-assignment/us.
 
 [^stat-140-carveout]: **RCW 49.44.140** — "A provision in an employment agreement which provides that an employee shall assign or offer to assign any of the employee's rights in an invention to the employer does not apply to an invention for which no equipment, supplies, facilities, or trade secret information of the employer was used and which was developed entirely on the employee's own time, unless (a) the invention relates (i) directly to the business of the employer, or (ii) to the employer's actual or demonstrably anticipated research or development, or (b) the invention results from any work performed by the employee for the employer." *RCW 49.44.140(1).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
 
@@ -99,6 +108,18 @@ Every item below reads a draft confidentiality and invention assignment agreemen
 [^stat-140-notice]: **RCW 49.44.140** — "If an employment agreement entered into after September 1, 1979, contains a provision requiring the employee to assign any of the employee's rights in any invention to the employer, the employer must also, at the time the agreement is made, provide a written notification to the employee that the agreement does not apply to an invention for which no equipment, supplies, facility, or trade secret information of the employer was used and which was developed entirely on the employee's own time" *RCW 49.44.140(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
 
 [^stat-150-disclose]: **RCW 49.44.150** — "Even though the employee meets the burden of proving the conditions specified in RCW 49.44.140 , the employee shall, at the time of employment or thereafter, disclose all inventions being developed by the employee, for the purpose of determining employer or employee rights." *RCW 49.44.150.* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.150>
+
+[^dtsa-immunity-notice]: **Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
+
+[^dtsa-notice-policy-cross-reference]: **Defend Trade Secrets Act — policy-document alternative, 18 U.S.C. § 1833(b)(3)(B)** — "An employer shall be considered to be in compliance with the notice requirement in subparagraph (A) if the employer provides a cross-reference to a policy document provided to the employee that sets forth the employer's reporting policy for a suspected violation of law." *18 U.S.C. § 1833(b)(3)(B).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20be%20considered,a%20suspected%20violation%20of%20law.>
+
+[^dtsa-notice-noncompliance]: **Defend Trade Secrets Act — consequence of omitting the notice, 18 U.S.C. § 1833(b)(3)(C)** — "If an employer does not comply with the notice requirement in subparagraph (A), the employer may not be awarded exemplary damages or attorney fees under subparagraph (C) or (D) of section 1836(b)(3) in an action against an employee to whom notice was not provided." *18 U.S.C. § 1833(b)(3)(C).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=If%20an%20employer%20does%20not,whom%20notice%20was%20not%20provided.>
+
+[^nlra-section-7-rights]: **NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157** — "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection, and shall also have the right to refrain from any or all of such activities except to the extent that such right may be affected by an agreement requiring membership in a labor organization as a condition of employment as authorized in section 158(a)(3) of this title." *29 U.S.C. § 157 (NLRA § 7).* <https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,section%20158(a)(3)%20of%20this%20title.>
+
+[^stericycle-work-rule-standard]: **NLRB news release on Stericycle, Inc., 372 NLRB No. 113 (2023) — work-rule standard** — "Under the new standard adopted in Stericycle, the General Counsel must prove that a challenged rule has a reasonable tendency to chill employees from exercising their rights. If the General Counsel does so, then the rule is presumptively unlawful. However, the employer may rebut the presumption by proving that the rule advances a legitimate and substantial business interest and that the employer is unable to advance that interest with a more narrowly tailored rule." *Stericycle, Inc., 372 NLRB No. 113 (2023); NLRB Office of Public Affairs, Board Adopts New Standard for Assessing Lawfulness of Work Rules (Aug. 2, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-adopts-new-standard-for-assessing-lawfulness-of-work-rules>
+
+[^nlrb-wages-working-conditions]: **National Labor Relations Board, statement of the agency's mission** — "Established in 1935, the National Labor Relations Board is an independent federal agency that protects employees from unfair labor practices and protects the right of private sector employees to join together, with or without a union, to improve wages, benefits and working conditions." *NLRB Office of Public Affairs, news release of Feb. 21, 2023 (agency mission statement).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
 
 [^guth-holdover]: **Guth v. Minnesota Mining & Mfg. Co.** — "those provisions of the contract which were limitless in extent of time and in subject matter of invention were contrary to public policy." *Guth v. Minnesota Mining & Mfg. Co., 72 F.2d 385 (7th Cir. 1934).* <https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=those%20provisions%20of%20the%20contract,were%20contrary%20to%20public%20policy.>
 

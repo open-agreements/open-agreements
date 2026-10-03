@@ -1,4 +1,20 @@
 # Fund Formation Update Log
 
 ## 2026-09-30
+* **Update**: Fund formation: qualified-client carve-out reaches every unregistered manager; Rule 506(d) inquiry tied to the reasonable-care exception (013cb98)
+* **Update**: Fund formation: cite MFA's political-exposure passage on the questionnaire's sanctions item (21cdd3c)
+* **Update**: Fund formation: let the GP waive the qualified-client screen by side letter where Rule 205-3 cannot apply (#3052) (293e747)
+* **Update**: Fund formation: the side-letter MAY item in the subscription agreement checklist (38ba344)
+* **Update**: Fund formation: SHOULD items, page introductions and section links in the hedge fund subscription-document checklists (3b35297)
+* **Update**: Fund formation: qualified-client thresholds item applies where the fund charges a performance fee (4eef11f)
+* **Update**: Fund formation: hedge fund subscription agreement and investor questionnaire (#3016) (#3048) (579c095)
+* **Update**: content(fund-formation): point the checklist introductions at the split guide's articles (5a14411)
+* **Update**: Fund formation: MUST items in the hedge fund subscription-document checklists, with the qualified-client carve-out (6521abc)
+* **Update**: Checklist evidence floor: every item backed by evidence from first publication (#3058) (83d9b4f)
 * **Update**: Fund formation: hedge fund LPA and PPM templates, checklists and practice guide (#2402) (8a65c7e)
+* **Update**: Fund formation: qualified-client thresholds item covers every Rule 205-3 route (904d755)
+* **Update**: Fund formation: repoint three checklist items to the PPM guide after the #3061 split (a711f8a)
+* **Update**: content(fund-formation): checklist introductions follow the revised split (e2407cd)
+* **Update**: Fund formation: public-records item checks notice and information limits; IPO item covers Rule 5131's annual representation (e35d308)
+* **Update**: Fund formation: the 3(c)(7) qualified-purchaser item allows for Rule 3c-5's knowledgeable-employee exclusion (ebcc09b)
+* **Update**: Fund formation: Rule 506(d) items state the covered-person standard and frame 20% holders as the diligence step (f3f12fb)

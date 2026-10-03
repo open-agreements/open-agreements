@@ -1,5 +1,14 @@
 # Privacy Policy Update Log
 
+## 2026-10-01
+* **Update**: Correct SAFE dilution review and scope COPPA item (1d20ef1)
+* **Update**: Make three checklists easier to find and apply (72ce862)
+* **Update**: Clarify checklist orientation and federal COPPA coverage (778549b)
+* **Update**: Clarify California online notice-at-collection delivery (8f06287)
+* **Update**: Align privacy checklist wording and SAFE form choice (bc0a2b9)
+* **Update**: Move SAFE checklist guidance into items and clarify consent checks (be94f48)
+* **Update**: Restore federal COPPA scope and cite state consent examples (f14cf20)
+
 ## 2026-08-15
 * **Update**: chore(privacy): remove unrelated checklist changes (da6a864)
 

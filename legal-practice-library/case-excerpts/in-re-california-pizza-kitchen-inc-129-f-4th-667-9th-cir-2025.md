@@ -7,7 +7,7 @@ description: >-
 citation: 'In re California Pizza Kitchen, Inc., 129 F.4th 667 (9th Cir. 2025).'
 resource: >-
   https://www.courtlistener.com/opinion/10338139/in-re-aviva-kirsten-v-california-pizza-kitchen-inc/
-timestamp: '2026-06-03'
+timestamp: '2026-10-01'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/california'
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `data-breach-lawsuits`
 - source_cards: `cpk-9th`
-- cited_by: [California Consumer Privacy Law (CCPA/CPRA)](../privacy/us/california.md)
+- cited_by: [California Consumer Privacy Law (CCPA/CPRA): Data Privacy for Businesses](../privacy/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10338139/in-re-aviva-kirsten-v-california-pizza-kitchen-inc/#:~:text=The%20district%20court%20also%20considered,the%20adequacy%20of%20the%20settlement.>
