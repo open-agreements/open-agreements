@@ -1,5 +1,10 @@
 # Us Update Log
 
+## 2026-10-03
+* **Update**: content(ca-ia): state when the section 2872 notice is due; state the holdover consequence directly (#3416 peer-review round 1) (44ca49b)
+* **Update**: content(ca-ia): name the section 2870 notice omission in the holdover caution (#3416 peer-review round 2) (d361a18)
+* **Update**: content(ca-ia): holdover caution as a trigger-failure-consequence drafting caution on current main (#2805) (e4c27e1)
+
 ## 2026-10-02
 * **Update**: content: state all section 2870 grounds, recast the physician caution, and condition the S4641A sale exception (peer review at a18acb1d6, #2820) (2c365e3)
 * **Update**: content: bring main's asset-purchase, California and New York changes into the branch ahead of merging origin/main (#2820) (a98a69b)

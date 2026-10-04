@@ -1,12 +1,15 @@
 # Us Update Log
 
 ## 2026-10-02
+* **Update**: content: move California to the section 2783 follow-up; recast the AU caution endings (#2993) (0c789a9)
 * **Update**: content: put Illinois minimum-wage demand in rendered SEO metadata (16c2448)
 * **Update**: content: index the observed Illinois wage question verbatim (19d57e6)
 * **Update**: content: address Illinois demand peer-review wording findings (4216cc2)
+* **Update**: content: cite the deciding courts' own reasoning for Pearson and Dynamex (#2993) (7112a59)
 * **Update**: content: answer Illinois minimum-wage visitor searches (a3c949e)
 * **Update**: content: record illinois source verification date (ab3468a)
 * **Update**: content: keep local wage caution focused on payment (dab5670)
+* **Update**: content: clear the named-case residue left after #3080 (#2993) (ea3df65)
 * **Update**: Restore source cards for named cases: Pressed Steel, Karlin, Vita, Ashland, Dynamex, Mothering Justice (#2993) (#3080) (fc46f34)
 
 ## 2026-10-01

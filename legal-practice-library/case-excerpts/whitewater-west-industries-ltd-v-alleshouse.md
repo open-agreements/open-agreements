@@ -50,6 +50,15 @@ Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements l
 - cited_by: [Employee Invention-Assignment Agreements](../invention-assignment/us.md), [Employee Invention Assignment in California](../invention-assignment/us/california.md), [Employee Invention Assignment in Washington](../invention-assignment/us/washington.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=In%20particular%2C%20we%20reverse%20the,is%20void%20under%20California%20law.>
 
+### whitewater-west-industries-ltd-v-alleshouse-it-applies-when-mr-alleshouse-s-b66c4c1a {#whitewater-west-industries-ltd-v-alleshouse-it-applies-when-mr-alleshouse-s-b66c4c1a}
+
+> It applies when Mr. Alleshouse’s post-employment invention is merely “suggested by” his work for Wave Loch.
+
+- supports: `holdover-clause-limit`
+- source_cards: `whitewater-suggested-by`
+- cited_by: [Employee Invention Assignment in California](../invention-assignment/us/california.md)
+- link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=It%20applies%20when%20Mr.%20Alleshouse%E2%80%99s,his%20work%20for%20Wave%20Loch.>
+
 ### whitewater-west-industries-ltd-v-alleshouse-no-trade-secret-or-other-confidential-97f9da0c {#whitewater-west-industries-ltd-v-alleshouse-no-trade-secret-or-other-confidential-97f9da0c}
 
 > No trade-secret or other confidential information need have been used to conceive the invention or reduce it to practice for the assignment provision to apply.
@@ -67,6 +76,15 @@ Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements l
 - source_cards: `whitewater-invalid-16600`
 - cited_by: [Employee Invention Assignment in Guam](../invention-assignment/us/guam.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=Relying%20on%20those%20now%2Dundisputed%20premises%2C,is%20invalid%20under%20%C2%A7%2016600>
+
+### whitewater-west-industries-ltd-v-alleshouse-the-obliga-tion-is-unlimited-in-3ab2f118 {#whitewater-west-industries-ltd-v-alleshouse-the-obliga-tion-is-unlimited-in-3ab2f118}
+
+> The obliga- tion is unlimited in time and geography.
+
+- supports: `holdover-clause-limit`
+- source_cards: `whitewater-unlimited-time-geography`
+- cited_by: [Employee Invention Assignment in California](../invention-assignment/us/california.md)
+- link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=The%20obliga%2D%20tion%20is%20unlimited%20in%20time%20and%20geography.>
 
 ### whitewater-west-industries-ltd-v-alleshouse-the-question-for-us-is-how-fdef4eed {#whitewater-west-industries-ltd-v-alleshouse-the-question-for-us-is-how-fdef4eed}
 

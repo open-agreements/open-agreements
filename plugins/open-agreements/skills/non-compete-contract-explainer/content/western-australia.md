@@ -2,7 +2,7 @@
 jurisdiction: "Western Australia, Australia"
 slug: western-australia
 countryCode: AU
-content_packaged_at: "2026-10-03"
+content_packaged_at: "2026-10-04"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/western-australia · **Snapshot as of:** 2026-10-03 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/western-australia · **Snapshot as of:** 2026-10-04 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Western Australia[^about]
 
@@ -66,7 +66,7 @@ The Supreme Court has shown exactly where the limit bites. In *Emeco Internation
 
 **Short answer.** Yes, within limits, and they are essential drafting in Western Australia precisely because a court cannot read an overbroad clause down. A cascading clause sets out progressively narrower combinations of period, area, and activity, each expressed as a separate, severable covenant, so that if the widest is unreasonable a narrower rung can still be enforced on its own. The Supreme Court has accepted that genuinely separate restraint covenants can be severed from one another at common law [^emeco-separate-covenants].
 
-The doctrinal foundation is the classic statement from *Attwood v Lamont*, which Western Australian courts continue to apply: severance works only where the clause is in truth a bundle of distinct covenants rather than a single covenant [^bendtech-attwood].
+The doctrinal foundation is a classic statement on severance, which Western Australian courts continue to apply: severance works only where the clause is in truth a bundle of distinct covenants rather than a single covenant [^bendtech-attwood].
 
 "The doctrine of severance has not, I think, gone further than to make it permissible in a case where the covenant is not really a single covenant but is in effect a combination of several distinct covenants."[^bendtech-attwood]
 
@@ -112,14 +112,14 @@ For mid-employment restraints — covenants introduced after the employee is alr
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus-breach], so an employer seeking an injunction already starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The Western Australian authorities discussed here do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled Western Australian rule.
+**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus-breach], so an employer seeking an injunction already starts from a position where it must justify the covenant. Beyond that, an employer's own breach can matter. South Australia's Full Court has held that whether a restraint survives the termination of a repudiated contract depends on the proper construction of the contract [^richmond-survival-by-construction]. That decision does not bind Western Australian courts, and no Western Australian decision identified here decides the point.
 
-The reasonableness analysis assumes a clause the employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus-breach]. Where the employer is the party in serious breach, a court may, applying the general common-law principle, treat the employee as released from the covenant; and in any event the equitable remedy an employer needs — chiefly an injunction — is discretionary and sensitive to the employer's own conduct.
+The reasonableness analysis assumes a clause the employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus-breach].
 
 > [!NOTE]
 > **Practice note.**
 >
-> The employer already bears the onus of proving the restraint reasonable before any question of its own breach arises [^lindner-onus-breach]. On top of that, an employer that terminates abruptly — without giving contractual notice or paying in lieu — may risk losing the very non-compete it wants to rely on, because under the general common-law principle a repudiatory breach by the employer can release the employee from the restraint. That repudiation point is not settled by the Western Australian authorities discussed here, so treat it as a risk rather than a certainty: before suing to enforce a covenant, confirm that the termination itself complied with the contract.
+> An employer that terminates abruptly — without giving contractual notice or paying in lieu — may risk losing the very non-compete it wants to rely on, because whether the restraint survives a termination that breaches the contract's notice or payment terms depends on the contract's construction [^richmond-survival-by-construction]. No Western Australian authority discussed here decides the point, so it remains a risk rather than a certainty for an employer whose termination did not comply with those terms.
 
 ## Does a Western Australian non-compete pause or extend if the employee breaches? {#tolling}
 
@@ -216,6 +216,8 @@ Because this is a future legislative matter, employers should treat the timeline
 [^smith-tested-at-contract-gl]: **Smith v Nomad Modular Building Pty Ltd** — "The validity of the restraint must be decided as at the date of the contract: Amoco Australia Pty Ltd v Rocca Bros Motor Engineering Co Pty Ltd [1973] HCA 40 ; (1973) 133 CLR 288 at 318 per Walsh J." *Smith v Nomad Modular Building Pty Ltd [2007] WASCA 169 (McLure JA, citing Amoco v Rocca Bros per Walsh J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2007/169.html>
 
 [^lindner-onus-breach]: **Lindner v Murdock's Garage** — "The onus was on the plaintiff firm to prove circumstances showing that the restriction on the defendant's freedom to work was reasonable." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
+
+[^richmond-survival-by-construction]: **Richmond v Moore Stephens Adelaide Pty Ltd** — "Mr Richmond's contention should be rejected because the question whether the restraint clause survives must depend on the proper construction of the contract." *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
 
 [^smith-tested-at-contract-tolling]: **Smith v Nomad Modular Building Pty Ltd** — "The validity of the restraint must be decided as at the date of the contract: Amoco Australia Pty Ltd v Rocca Bros Motor Engineering Co Pty Ltd [1973] HCA 40 ; (1973) 133 CLR 288 at 318 per Walsh J." *Smith v Nomad Modular Building Pty Ltd [2007] WASCA 169 (McLure JA, citing Amoco v Rocca Bros per Walsh J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2007/169.html>
 

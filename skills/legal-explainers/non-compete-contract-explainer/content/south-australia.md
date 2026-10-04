@@ -2,7 +2,7 @@
 jurisdiction: "South Australia, Australia"
 slug: south-australia
 countryCode: AU
-content_packaged_at: "2026-10-03"
+content_packaged_at: "2026-10-04"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/south-australia · **Snapshot as of:** 2026-10-03 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/south-australia · **Snapshot as of:** 2026-10-04 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in South Australia[^about]
 
@@ -122,18 +122,18 @@ That cuts in both directions for drafters. Paying a former employee to sit out t
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** It depends on the contract — South Australia's Full Court has rejected the idea that an employer's breach automatically kills the restraint. In *Richmond v Moore Stephens Adelaide Pty Ltd* the covenantor argued that, as a rule of law, a repudiating party can never enforce a post-termination restraint; the Full Court held instead that whether the restraint survives termination depends on the proper construction of the contract [^richmond-construction]. The covenantor drew that argued rule from the English decision in *General Billposting Co Ltd v Atkinson* [^richmond-billposting-argument]. An employer in serious breach can still lose the covenant — but by the route of construction and the facts of termination, not by an automatic rule.
+**Short answer.** It depends on the contract — South Australia's Full Court has rejected the idea that an employer's breach automatically kills the restraint. In *Richmond v Moore Stephens Adelaide Pty Ltd* the covenantor argued that, as a rule of law, a repudiating party can never enforce a post-termination restraint; the Full Court held instead that whether the restraint survives termination depends on the proper construction of the contract [^richmond-construction]. The covenantor drew that argued rule from earlier case law [^richmond-billposting-argument]. An employer in serious breach can still lose the covenant — but by the route of construction and the facts of termination, not by an automatic rule.
 
 *Richmond* litigated the question on facts connected to the sale of an accountancy practice and an associated service agreement, not a bare employment relationship. The covenantor contended that the covenantee's defaults — chiefly ceasing to pay interest on the outstanding purchase price — amounted to repudiation that freed him of the restraints. The Full Court applied the orthodox threshold: conduct amounts to repudiation only where a party shows itself unwilling or unable to render substantial performance [^richmond-repudiation-standard], and held on the facts that the threshold was not met, so the covenantor and his company were not entitled to terminate [^richmond-no-termination].
 
 "Mr Richmond's contention should be rejected because the question whether the restraint clause survives must depend on the proper construction of the contract."[^richmond-construction]
 
-Two practical conclusions follow. First, the outcome turns on who validly terminated: the Full Court construed the agreements so that the restraints would not have survived a valid termination by the covenantor for the covenantee's breach or repudiation before the agreed term had run — it was the failure of that termination on the facts that left the restraints standing [^richmond-no-termination]. Second, the *General Billposting* concern still has force through construction and through equity: an injunction is a discretionary remedy, and an enforcing party's own serious misconduct will weigh against it.
+Two practical conclusions follow. First, the outcome turns on who validly terminated: the Full Court construed the agreements so that the restraints would not have survived a valid termination by the covenantor for the covenantee's breach or repudiation before the agreed term had run [^richmond-sale-restraint-not-surviving] [^richmond-service-restraint-not-surviving] — it was the failure of that termination on the facts that left the restraints standing [^richmond-no-termination]. Second, the concern behind that rule still has force through construction.
 
 > [!NOTE]
 > **Practice note.**
 >
-> South Australia's Full Court treats survival of the restraint as a question of construction rather than an automatic rule [^richmond-construction], and on the construction adopted in *Richmond* — a sale-and-services context, not an employment dismissal — the restraints would not have survived a valid termination by the covenantor for the covenantee's breach. By analogy, an employer that terminates abruptly — without giving contractual notice or paying in lieu — risks losing the very non-compete it wants to rely on, with the *General Billposting* principle reinforcing the same caution at common law. Before suing to enforce a covenant, confirm that the termination itself complied with the contract.
+> An employer that terminates abruptly — without giving contractual notice or paying in lieu — risks losing the very non-compete it wants to rely on if, on the contract's construction, the restraint does not survive that termination [^richmond-construction].
 
 ## Does a South Australian non-compete pause or extend if the employee breaches? {#tolling}
 
@@ -224,6 +224,10 @@ Because this is a future legislative matter, employers should treat the timeline
 [^richmond-repudiation-standard]: **Richmond v Moore Stephens Adelaide Pty Ltd** — "Conduct only amounts to repudiation if a party evinces an unwillingness or inability to render substantial performance of the contract." *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
 
 [^richmond-no-termination]: **Richmond v Moore Stephens Adelaide Pty Ltd** — "WKYA and Mr Richmond were not entitled to terminate the Business Sale Agreement or the Service Agreement." *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
+
+[^richmond-sale-restraint-not-surviving]: **Richmond v Moore Stephens Adelaide Pty Ltd** — "On the proper construction of the Business Sale Agreement, clause 14 does not survive termination by the Seller for breach or repudiation before the expiration of 3 years." *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
+
+[^richmond-service-restraint-not-surviving]: **Richmond v Moore Stephens Adelaide Pty Ltd** — "On the proper construction of the Service Agreement, clause 23 does not survive termination by the Principal for breach or repudiation before the expiration of 3 years." *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
 
 [^dmytrenko-tested-at-contract-tolling]: **International Cleaning Services (Australia) Pty Ltd v Dmytrenko** — "The validity of the covenant in an employment contract is to be judged at the date of entry into the contract." *International Cleaning Services (Australia) Pty Ltd v Dmytrenko [2020] SASC 222 (Stanley J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 

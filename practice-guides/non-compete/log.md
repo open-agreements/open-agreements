@@ -1,5 +1,11 @@
 # Non Compete Update Log
 
+## 2026-10-03
+* **Update**: content: cut the uncited common-law release sentence; trim Singapore's employer-breach caution (#2993) (ec62df0)
+
+## 2026-10-02
+* **Update**: content: clear the named-case residue left after #3080 (#2993) (ea3df65)
+
 ## 2026-09-28
 * **Update**: content(non-compete): link Main law to source cards (3e5fa1f)
 * **Update**: One chip per named case: Illinois privacy and non-U.S. non-compete guides (#2900 batch A) (#2914) (5aac21b)
