@@ -19785,6 +19785,167 @@
       ]
     },
     {
+      "name": "openagreements-information-security-policy",
+      "tier": "internal",
+      "display_name": "Information Security and Acceptable Use Policy",
+      "category": "data-compliance",
+      "description": "Editable security rules for a small company's staff: account access, devices, data handling, remote work, reporting and onboarding. An initial policy, not a complete ISO 27001 or SOC 2 documentation set or an assurance of compliance.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://openagreements.org/practice-guides/security-compliance-program/us",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "company_legal_name",
+          "type": "string",
+          "required": true,
+          "section": "Company",
+          "description": "Company legal name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "policy_scope",
+          "type": "string",
+          "required": true,
+          "section": "Company",
+          "description": "Covered services systems and people",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "policy_version",
+          "type": "string",
+          "required": false,
+          "section": "Administration",
+          "description": "Company policy version",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "policy_status",
+          "type": "enum",
+          "required": true,
+          "section": "Administration",
+          "description": "Draft or Approved",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "Draft",
+            "Approved"
+          ]
+        },
+        {
+          "name": "policy_effective_date",
+          "type": "string",
+          "required": false,
+          "section": "Administration",
+          "description": "Effective date or Pending approval",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "policy_owner",
+          "type": "string",
+          "required": true,
+          "section": "Administration",
+          "description": "Policy owner role",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "policy_approver",
+          "type": "string",
+          "required": false,
+          "section": "Administration",
+          "description": "Approving role",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "policy_review_date",
+          "type": "string",
+          "required": false,
+          "section": "Administration",
+          "description": "Next review date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "approved_work_services",
+          "type": "string",
+          "required": false,
+          "section": "Operations",
+          "description": "Approved staff work services",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "access_request_channel",
+          "type": "string",
+          "required": false,
+          "section": "Operations",
+          "description": "Access request channel",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "security_reporting_channel",
+          "type": "string",
+          "required": true,
+          "section": "Operations",
+          "description": "Security reporting channel",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "security_reporting_backup",
+          "type": "string",
+          "required": false,
+          "section": "Operations",
+          "description": "Backup security contact",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "personal_device_rule",
+          "type": "enum",
+          "required": false,
+          "section": "Operations",
+          "description": "Personal device rule",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "Not permitted",
+            "Permitted only with prior written authorization"
+          ]
+        },
+        {
+          "name": "personal_device_access_permitted",
+          "type": "boolean",
+          "required": false,
+          "section": "Derived Gates",
+          "description": "Derived gate computed from personal_device_rule. It includes personal-device permission and departure-removal instructions only when prior written authorization is selected; an unresolved rule leaves the conditional treatment visible.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "related_policy_register",
+          "type": "string",
+          "required": false,
+          "section": "Administration",
+          "description": "Related policy titles versions and locations",
+          "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-privacy-policy",
       "tier": "internal",
       "display_name": "Consumer Privacy Policy",
