@@ -1,0 +1,113 @@
+name: Information Security and Acceptable Use Policy
+category: data-compliance
+description: 'Editable security rules for a small company''s staff: account access, devices, data handling, remote work, reporting and onboarding. An initial policy, not a complete ISO 27001 or SOC 2 documentation set or an assurance of compliance.'
+source_url: https://openagreements.org/practice-guides/security-compliance-program/us
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Company legal name
+    help: Company adopting this policy.
+    section: Company
+  - name: policy_scope
+    type: string
+    description: Covered services systems and people
+    help: Services, systems, locations and personnel covered; identify contractor access covered by the relevant engagement terms.
+    section: Company
+  - name: policy_version
+    type: string
+    description: Company policy version
+    help: Company's policy revision identifier, distinct from the template version.
+    section: Administration
+  - name: policy_status
+    type: enum
+    options:
+      - Draft
+      - Approved
+    description: Draft or Approved
+    help: Use Draft unless an authorized adoption record establishes approval.
+    section: Administration
+  - name: policy_effective_date
+    type: string
+    description: Effective date or Pending approval
+    help: Actual approved effective date; use Pending approval for an unadopted draft.
+    section: Administration
+  - name: policy_owner
+    type: string
+    description: Policy owner role
+    help: Accountable role or team that maintains the policy and coordinates implementation.
+    section: Administration
+  - name: policy_approver
+    type: string
+    description: Approving role
+    help: Role authorized to adopt the policy and approve time-limited exceptions; naming the role does not record approval.
+    section: Administration
+  - name: policy_review_date
+    type: string
+    description: Next review date
+    help: Next review date proposed or confirmed by the owner; no universal review interval is implied.
+    section: Administration
+  - name: approved_work_services
+    type: string
+    description: Approved staff work services
+    help: Approved communication, storage and collaboration services, or an accessible maintained list.
+    section: Operations
+  - name: access_request_channel
+    type: string
+    description: Access request channel
+    help: Working channel through which staff request access or changes and managers report departures.
+    section: Operations
+  - name: security_reporting_channel
+    type: string
+    description: Security reporting channel
+    help: Working channel for urgent security reports, accessible if the main work account is unavailable.
+    section: Operations
+  - name: security_reporting_backup
+    type: string
+    description: Backup security contact
+    help: Alternate contact or channel when the primary reporting channel cannot be used or is compromised.
+    section: Operations
+  - name: personal_device_rule
+    type: enum
+    options:
+      - Not permitted
+      - Permitted only with prior written authorization
+    description: Personal device rule
+    help: Company's chosen rule for personal devices; any authorized device must meet the device safeguards.
+    section: Operations
+  - name: personal_device_access_permitted
+    type: boolean
+    description: Derived gate computed from personal_device_rule. It includes personal-device permission and departure-removal instructions only when prior written authorization is selected; an unresolved rule leaves the conditional treatment visible.
+    derived:
+      from: personal_device_rule
+      map:
+        Not permitted: false
+        Permitted only with prior written authorization: true
+    section: Derived Gates
+  - name: related_policy_register
+    type: string
+    description: Related policy titles versions and locations
+    help: Accessible titles, revisions and locations of additional adopted policies and procedures; use None adopted yet when accurate.
+    section: Administration
+priority_fields:
+  - company_legal_name
+  - policy_scope
+  - policy_status
+  - policy_owner
+  - security_reporting_channel
+artifact_kind: policy
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+signature_roles: []
+mutation_policy: terms
+maturity: experimental
