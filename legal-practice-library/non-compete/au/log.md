@@ -1,5 +1,25 @@
 # Au Update Log
 
+## 2026-10-03
+* **Update**: content: state only the Richmond construction holding the quote supports (#2993) (2202291)
+* **Update**: content: keep the Northern Territory employer-breach caution to the termination risk (#2993) (4c3b8cc)
+* **Update**: content: drop court attributions the quotes do not establish (#2993) (65c1d9b)
+* **Update**: content: label Richmond as non-binding outside South Australia (#2993) (9e484d8)
+* **Update**: content: lead the employer-breach cautions with the termination risk (#2993) (cf95ca3)
+* **Update**: content: cut the uncited common-law release sentence; trim Singapore's employer-breach caution (#2993) (ec62df0)
+
+## 2026-10-02
+* **Update**: content: move California to the section 2783 follow-up; recast the AU caution endings (#2993) (0c789a9)
+* **Update**: content: cut the passages disputed in peer review round 2 on #3151 (#2993) (2ab7a34)
+* **Update**: content: cite Richmond's survival holding; fix the ACT caution chip (#2993) (59e2067)
+* **Update**: content: cite the deciding courts' own reasoning for Pearson and Dynamex (#2993) (7112a59)
+* **Update**: content: cite Richmond's Service Agreement survival holding (#2993) (92ba08d)
+* **Update**: content: give the copied Richmond card a three-segment id (#2993) (aef4098)
+* **Update**: content: cut the disputed SA caution sentence; align the AU cautions with Richmond (#2993) (bbdf745)
+* **Update**: content: cut two uncited sentences from peer review round 7 (#2993) (d8ce3c5)
+* **Update**: content: fix the peer-review findings on #3151 (#2993) (e7e1e5f)
+* **Update**: content: clear the named-case residue left after #3080 (#2993) (ea3df65)
+
 ## 2026-09-28
 * **Update**: content(non-compete): link Main law to source cards (3e5fa1f)
 * **Update**: One chip per named case: Illinois privacy and non-U.S. non-compete guides (#2900 batch A) (#2914) (5aac21b)

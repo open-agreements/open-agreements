@@ -95,14 +95,14 @@ What the Territory cases do illuminate is the mid-employment restraint — a cov
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus], so an employer seeking to enforce already starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint. No identified Northern Territory decision decides that point, so treat it as a general principle a Territory court may apply rather than settled local law.
+**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus], so an employer seeking to enforce already starts from a position where it must justify the covenant. Beyond that, an employer's own breach can matter. South Australia's Full Court has held that whether a restraint survives the termination of a repudiated contract depends on the proper construction of the contract [^richmond-survival-by-construction]. That decision does not bind Northern Territory courts, and no Northern Territory decision identified here decides the point.
 
 The reasonableness analysis assumes a clause the employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus]. The Territory's leading employment case is a pointed reminder that lawful termination does not carry the restraint home either: the Supreme Court held that the employer was justified in summarily dismissing the employee for serious misconduct, yet the employer still lost its restraint claim because the clause itself was unreasonable [^oamps-dismissal-justified]. How the employment ended and whether the clause binds are separate questions, and the employer must win both.
 
 > [!NOTE]
 > **Practice note.**
 >
-> The employer already bears the onus of proving the restraint reasonable before any question of its own breach arises [^lindner-onus]. An employer that terminates abruptly — without giving contractual notice or paying in lieu — may risk losing the very restraint it wants to rely on under the general common-law repudiation principle, which no Northern Territory authority has yet had to apply. And even a termination that is fully justified does not relieve the employer of proving the clause reasonable: in the leading local case the summary dismissal was upheld and the restraint still failed [^oamps-dismissal-justified].
+> An employer that terminates abruptly — without giving contractual notice or paying in lieu — may risk losing the very restraint it wants to rely on if, on the contract's construction, the restraint does not survive a termination that breaches the notice or payment terms [^richmond-survival-by-construction]; no Northern Territory authority has yet had to decide the point.
 
 ## Does a Northern Territory non-compete pause or extend if the employee breaches? {#tolling}
 
@@ -187,6 +187,8 @@ Because this is a future legislative matter, employers should treat the timeline
 [^sandrey-variation-enforceable]: **Mental Illness Fellowship of Australia (NT) Inc v Sandrey** — "If it were necessary for me to make a finding on that issue, I would have found the clause enforceable." *Mental Illness Fellowship of Australia (NT) Inc v Sandrey [2025] NTSC 57 (Kelly J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2025/57.html>
 
 [^lindner-onus]: **Lindner v Murdock's Garage** — "The onus was on the plaintiff firm to prove circumstances showing that the restriction on the defendant's freedom to work was reasonable." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
+
+[^richmond-survival-by-construction]: **Richmond v Moore Stephens Adelaide Pty Ltd** — "Mr Richmond's contention should be rejected because the question whether the restraint clause survives must depend on the proper construction of the contract." *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
 
 [^oamps-dismissal-justified]: **OAMPS Insurance Brokers Limited v Shackcloth** — "I find that the plaintiff was justified in summarily dismissing the defendant from his employment with the plaintiff." *OAMPS Insurance Brokers Limited v Shackcloth [2008] NTSC 29 (Southwood J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 

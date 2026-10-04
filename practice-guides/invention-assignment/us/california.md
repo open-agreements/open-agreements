@@ -90,10 +90,10 @@ Critically, the clause's vice was not that it protected secrets — it was that 
 
 "No trade-secret or other confidential information need have been used to conceive the invention or reduce it to practice for the assignment provision to apply."[^whitewater-notrade]
 
-> [!NOTE]
-> **Practice note.**
+> [!CAUTION]
+> **Drafting note.**
 >
-> An out-of-state assignment clause signed without the section 2872 notice of the own-time carve-out leaves the employer out of compliance with that disclosure duty from signing. Any holdover clause that claims post-employment inventions made without the former employer's trade secrets or confidential information risks being void under section 16600 [^stat-2872-practice][^whitewater-void][^whitewater-notrade].
+> An invention-assignment form drafted for another state can miss two California requirements. An out-of-state form that omits the section 2870 notice, without a separate written notice given when the agreement is made, leaves the employer out of compliance with section 2872 [^stat-2872-practice]. It may also include a trailing-assignment (*holdover*) clause that reaches inventions conceived after employment ends, without limit of time or geography, including inventions merely suggested by the employee's former work and whether or not the employer's trade secrets were used. A clause of that reach risks being void under *Whitewater* [^whitewater-void][^whitewater-unlimited-time-geography][^whitewater-suggested-by][^whitewater-notrade].
 
 ## What does federal law require a confidentiality and invention assignment agreement in California to say about whistleblowers and pay? {#federal-notices-and-pay-discussion}
 
@@ -146,6 +146,10 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 [^whitewater-notrade]: **Whitewater West Industries, Ltd. v. Alleshouse** — "No trade-secret or other confidential information need have been used to conceive the invention or reduce it to practice for the assignment provision to apply." *Whitewater W. Indus., Ltd. v. Alleshouse, 981 F.3d 1045 (Fed. Cir. 2020).* <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=No%20trade%2Dsecret%20or%20other%20confidential,the%20assignment%20provision%20to%20apply.>
 
 [^stat-2872-practice]: **Cal. Lab. Code § 2872** — "If an employment agreement entered into after January 1, 1980, contains a provision requiring the employee to assign or offer to assign any of his or her rights in any invention to his or her employer, the employer must also, at the time the agreement is made, provide a written notification to the employee that the agreement does not apply to an invention which qualifies fully under the provisions of Section 2870." *Cal. Lab. Code § 2872.* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=2872>
+
+[^whitewater-unlimited-time-geography]: **Whitewater West Industries, Ltd. v. Alleshouse** — "The obliga- tion is unlimited in time and geography." *Whitewater W. Indus., Ltd. v. Alleshouse, 981 F.3d 1045 (Fed. Cir. 2020).* <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=The%20obliga%2D%20tion%20is%20unlimited%20in%20time%20and%20geography.>
+
+[^whitewater-suggested-by]: **Whitewater West Industries, Ltd. v. Alleshouse** — "It applies when Mr. Alleshouse’s post-employment invention is merely ‘suggested by’ his work for Wave Loch." *Whitewater W. Indus., Ltd. v. Alleshouse, 981 F.3d 1045 (Fed. Cir. 2020).* <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=It%20applies%20when%20Mr.%20Alleshouse%E2%80%99s,his%20work%20for%20Wave%20Loch.>
 
 [^dtsa-notice-duty]: **Defend Trade Secrets Act — employer notice requirement, 18 U.S.C. § 1833(b)(3)(A)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
 

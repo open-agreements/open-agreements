@@ -3,7 +3,7 @@ type: Case Excerpt
 title: Richmond v Moore Stephens Adelaide Pty Ltd
 description: >-
   Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis
-  CJ and Stanley J agreeing). — quoted in 1 document(s).
+  CJ and Stanley J agreeing). — quoted in 6 document(s).
 citation: >-
   Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis
   CJ and Stanley J agreeing).
@@ -11,7 +11,20 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/14
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory
+  - type: Practice Guide
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/new-south-wales'
+  - type: Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/northern-territory
+  - type: Practice Guide
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/south-australia'
+  - type: Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:
   - case-law
   - non-compete
@@ -21,7 +34,7 @@ tags:
 
 *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 6 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -57,7 +70,25 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 > Mr Richmond's contention should be rejected because the question whether the restraint clause survives must depend on the proper construction of the contract.
 
 - supports: `employer-breach`
-- source_cards: `richmond-construction`
+- source_cards: `richmond-construction`, `richmond-survival-by-construction`
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md), [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md), [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md), [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md), [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
+- link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
+
+### richmond-v-moore-stephens-adelaide-pty-ltd-on-the-proper-construction-of-the-c671e740 {#richmond-v-moore-stephens-adelaide-pty-ltd-on-the-proper-construction-of-the-c671e740}
+
+> On the proper construction of the Business Sale Agreement, clause 14 does not survive termination by the Seller for breach or repudiation before the expiration of 3 years.
+
+- supports: `employer-breach`
+- source_cards: `richmond-sale-restraint-not-surviving`
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
+- link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
+
+### richmond-v-moore-stephens-adelaide-pty-ltd-on-the-proper-construction-of-the-dcb503ef {#richmond-v-moore-stephens-adelaide-pty-ltd-on-the-proper-construction-of-the-dcb503ef}
+
+> On the proper construction of the Service Agreement, clause 23 does not survive termination by the Principal for breach or repudiation before the expiration of 3 years.
+
+- supports: `employer-breach`
+- source_cards: `richmond-service-restraint-not-surviving`
 - cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
 

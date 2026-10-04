@@ -2,7 +2,7 @@
 jurisdiction: "New South Wales, Australia"
 slug: new-south-wales
 countryCode: AU
-content_packaged_at: "2026-10-03"
+content_packaged_at: "2026-10-04"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/new-south-wales · **Snapshot as of:** 2026-10-03 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/new-south-wales · **Snapshot as of:** 2026-10-04 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in New South Wales[^about]
 
@@ -114,18 +114,18 @@ In *Woolworths Ltd v Olson* the restraint was coupled with a contractual restrai
 
 For mid-employment restraints — covenants introduced after the employee is already on foot — the practical concern is consideration and reasonableness assessed at the time the new clause is agreed. New South Wales courts test validity as at the date the restraint is made [^hanna-assessed-at-contract], so a restraint bolted on later is judged on the circumstances then, not on the original hiring.
 
-On garden leave for senior people, *Pearson v HRX Holdings Pty Ltd* [2012] FCAFC 111 illustrates that a generously remunerated, fixed-term garden-leave arrangement for a key executive can be enforced, but it remains subject to the same underlying reasonableness scrutiny rather than being automatically valid.
+For a senior executive, *Pearson v HRX Holdings Pty Ltd* [2012] FCAFC 111 shows how far a paid restraint can reach. The executive's two-year post-employment restraint came with his salary for all but three months of the restraint period [^pearson-hrx-salary-during-restraint]. The Full Federal Court held the restraint, as between the parties, reasonably necessary to protect the employer's customer connections and its interest in the executive's diligent pursuit of business [^pearson-hrx-reasonably-necessary]. It treated the executive's shares and the payment for 21 of the 24 months of the restraint period as confirming that the restraint was part of a reasonable commercial arrangement [^pearson-hrx-payment-reasonable-arrangement].
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint is reasonable in the first place [^lindner-onus-reasonable], so an employer seeking an injunction starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The identified New South Wales authorities here do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled NSW rule.
+**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint is reasonable in the first place [^lindner-onus-reasonable], so an employer seeking an injunction starts from a position where it must justify the covenant. Beyond that, an employer's own breach can matter. South Australia's Full Court has held that whether a restraint survives the termination of a repudiated contract depends on the proper construction of the contract [^richmond-survival-by-construction]. That decision does not bind New South Wales courts, and no New South Wales decision identified here decides the point.
 
-The reasonableness analysis assumes a clause an employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus-reasonable]. Where the employer is the party in serious breach, a court may, applying the general common-law principle, treat the employee as released from the covenant, and in any event the equitable remedies an employer needs — chiefly an injunction — are discretionary and sensitive to the employer's own conduct.
+The reasonableness analysis assumes a clause an employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus-reasonable].
 
 > [!NOTE]
 > **Practice note.**
 >
-> The employer already bears the onus of proving the restraint reasonable before any question of its own breach arises [^lindner-onus-reasonable]. On top of that, an employer that terminates abruptly — without giving contractual notice or paying in lieu — may risk losing the very non-compete it wants to rely on, because under the general common-law principle a repudiatory breach by the employer can release the employee from the restraint. That repudiation point is not settled by the NSW authorities discussed here, so treat it as a risk rather than a certainty: before suing to enforce a covenant, confirm that the termination itself complied with the contract.
+> An employer that terminates abruptly — without giving contractual notice or paying in lieu — may risk losing the very non-compete it wants to rely on, because whether the restraint survives a termination that breaches the contract's notice or payment terms depends on the contract's construction [^richmond-survival-by-construction]. No NSW authority discussed here decides the point, so it remains a risk rather than a certainty for an employer whose termination did not comply with those terms.
 
 ## Does a New South Wales non-compete pause or extend if the employee breaches? {#tolling}
 
@@ -211,7 +211,15 @@ Because this is a future legislative matter, employers should treat the timeline
 
 [^hanna-assessed-at-contract]: **Hanna v OAMPS Insurance Brokers Ltd** — "it was common ground that the reasonableness and validity of the restraint clause should be assessed at the time of entry into the contract" *Hanna v OAMPS Insurance Brokers Ltd [2010] NSWCA 267.* <https://www.caselaw.nsw.gov.au/decision/549ff3313004262463c5979a>
 
+[^pearson-hrx-salary-during-restraint]: **Pearson v HRX Holdings Pty Ltd** — "The terms of the service agreement as finally executed restrain Mr Pearson from accepting employment with, or engaging in a business ‘similar to or competitive with’, HRX for two years after the termination of employment. Importantly, it also provides for his salary to be paid to him by HRX during all but three months of the restraint period." *Pearson v HRX Holdings Pty Ltd [2012] FCAFC 111.* <https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/full/2012/2012fcafc0111>
+
+[^pearson-hrx-reasonably-necessary]: **Pearson v HRX Holdings Pty Ltd** — "In our respectful opinion, in terms of HRX’ interests, both in protecting its customer connections and in ensuring the diligent and faithful pursuit by Mr Pearson of business opportunities for HRX, cl 14.4 is, as between the parties, reasonably necessary to protect those interests." *Pearson v HRX Holdings Pty Ltd [2012] FCAFC 111.* <https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/full/2012/2012fcafc0111>
+
+[^pearson-hrx-payment-reasonable-arrangement]: **Pearson v HRX Holdings Pty Ltd** — "The allocation of shares to Mr Pearson and the provision for payment for 21 of the 24 months of the restraint period confirm that the restraint was an aspect of a reasonable commercial arrangement as between the parties." *Pearson v HRX Holdings Pty Ltd [2012] FCAFC 111.* <https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/full/2012/2012fcafc0111>
+
 [^lindner-onus-reasonable]: **Lindner v Murdock's Garage** — "The onus was on the plaintiff firm to prove circumstances showing that the restriction on the defendant's freedom to work was reasonable." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
+
+[^richmond-survival-by-construction]: **Richmond v Moore Stephens Adelaide Pty Ltd** — "Mr Richmond's contention should be rejected because the question whether the restraint clause survives must depend on the proper construction of the contract." *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
 
 [^lindner-prima-facie-void-tolling]: **Lindner v Murdock's Garage** — "Any contractual restraint of trade is prima facie unlawful and invalid." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

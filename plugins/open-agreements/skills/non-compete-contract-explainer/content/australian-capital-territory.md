@@ -2,7 +2,7 @@
 jurisdiction: "Australian Capital Territory, Australia"
 slug: australian-capital-territory
 countryCode: AU
-content_packaged_at: "2026-10-03"
+content_packaged_at: "2026-10-04"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
 next_review_due: "2026-12-07"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory · **Snapshot as of:** 2026-10-03 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory · **Snapshot as of:** 2026-10-04 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in the Australian Capital Territory[^about]
 
@@ -112,16 +112,16 @@ Garden leave — keeping the employee employed and paid through a notice period 
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus-eb], so an employer seeking to enforce already starts from a position where it must justify the covenant. Beyond that, the long-standing common-law principle associated with *General Billposting Co Ltd v Atkinson* [1909] AC 118 is that an employer who wrongfully dismisses an employee — for example by repudiating the contract through a dismissal without the notice the contract requires — generally cannot afterwards enforce a post-employment restraint against that employee. The identified Territory authorities do not themselves decide that point, so it is best treated as a general principle a court may apply rather than a settled local rule.
+**Short answer.** The restraint may fall away. The employer carries the onus of proving the restraint reasonable in the first place [^lindner-onus-eb], so an employer seeking to enforce already starts from a position where it must justify the covenant. Beyond that, an employer's own breach can matter. South Australia's Full Court has held that whether a restraint survives the termination of a repudiated contract depends on the proper construction of the contract [^richmond-survival-by-construction]. That decision does not bind Australian Capital Territory courts, and no Australian Capital Territory decision identified here decides the point.
 
-The reasonableness analysis assumes a clause the employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus-eb]. Where the employer is the party in serious breach, a court may, applying the general common-law principle, treat the employee as released from the covenant; and in any event the equitable remedies an employer typically needs are discretionary and sensitive to the parties' conduct.
+The reasonableness analysis assumes a clause the employer is entitled to rely on, and the employer bears the onus of establishing that reasonableness [^lindner-onus-eb].
 
 *Steadfast* offers the mirror-image lesson about conduct arguments. The defendants there argued that the employer's own decisions — winding back its operations and making the general manager redundant — undercut its reliance on the restraint and — separately, at the relief stage — reduced their liability. Mossop J rejected the attempt, because the employer's actions were themselves a response to the defendants' own wrongdoing: it was not open to the defendants to rely upon actions of the employer that were a response to their own breaches in order to reduce their liability [^steadfast-own-breach-response]. Causation of the breakdown matters on both sides of an enforcement fight.
 
 > [!NOTE]
 > **Practice note.**
 >
-> The employer already bears the onus of proving the restraint reasonable before any question of its own breach arises [^lindner-onus-eb]. On top of that, an employer that terminates abruptly — without giving contractual notice or paying in lieu — may risk losing the very non-compete it wants to rely on, because under the general common-law principle a repudiatory breach by the employer can release the employee from the restraint. That repudiation point is not settled by the Territory authorities discussed here, so treat it as a risk rather than a certainty: before suing to enforce a covenant, confirm that the termination itself complied with the contract [^steadfast-own-breach-response].
+> An employer that terminates abruptly — without giving contractual notice or paying in lieu — may risk losing the very non-compete it wants to rely on, because whether the restraint survives a termination that breaches the contract's notice or payment terms depends on the contract's construction. No Territory authority discussed here decides the point, so it remains a risk rather than a certainty for an employer whose termination did not comply with those terms [^richmond-survival-by-construction].
 
 ## Does an Australian Capital Territory non-compete pause or extend if the employee breaches? {#tolling}
 
@@ -206,6 +206,8 @@ Because this is a future legislative matter, employers should treat the timeline
 [^steadfast-tested-at-contract-gl]: **Steadfast ICT Security Pty Ltd v Peak** — "The validity of a restraint is to be assessed at the time at which the contract is made." *Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 [^lindner-onus-eb]: **Lindner v Murdock's Garage** — "The onus was on the plaintiff firm to prove circumstances showing that the restriction on the defendant's freedom to work was reasonable." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
+
+[^richmond-survival-by-construction]: **Richmond v Moore Stephens Adelaide Pty Ltd** — "Mr Richmond's contention should be rejected because the question whether the restraint clause survives must depend on the proper construction of the contract." *Richmond v Moore Stephens Adelaide Pty Ltd [2015] SASCFC 147 (Blue J, Kourakis CJ and Stanley J agreeing).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASCFC/2015/147.html>
 
 [^steadfast-own-breach-response]: **Steadfast ICT Security Pty Ltd v Peak** — "In my view, it is not open to the defendants to rely upon actions of Steadfast that were themselves a response to the defendants' own breach of contract in order to reduce their liability for the consequences of those breaches or breaches of their fiduciary duties." *Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 

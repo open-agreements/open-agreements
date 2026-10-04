@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-content_packaged_at: "2026-10-03"
+content_packaged_at: "2026-10-04"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maine · **Snapshot as of:** 2026-10-03 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maine · **Snapshot as of:** 2026-10-04 · License: CC BY 4.0 · © openagreements.org
 
 # Maine Consumer Privacy Law[^about]
 
@@ -56,7 +56,7 @@ The scope is precise and narrow. The law covers *broadband Internet access servi
 
 Three softer edges sit alongside the opt-in core. First, information that is *not* customer personal information runs on opt-out — a provider may use it unless the customer gives written notice withholding permission [^noncpi-optout]. Second, the statute carves out operational uses: a provider may collect, retain, use, disclose, sell and permit access to customer personal information without customer approval [^exceptions] for purposes such as providing the service itself, marketing the provider's own communications-related services, billing and collection, complying with court orders, fraud protection, and emergency-services geolocation. Third, providers owe a freestanding security duty — reasonable measures to protect customer personal information from unauthorized use, disclosure, or access, scaled to the provider's size, activities, and data sensitivity [^security-duty].
 
-How the law is enforced is a genuine open question. Section 9301 prescribes duties but states no penalty, no express enforcement mechanism, and no private right of action, and no Maine enforcement action or merits decision applying it to a provider appears in the public record. Plausible routes — an Unfair Trade Practices Act theory, Public Utilities Commission authority, or an implied action — remain untested. A federal First Amendment challenge by national ISP trade associations (*ACA Connects v. Frey*, D. Me.) would have tested the statute's validity; after the district court denied plaintiffs' motion for judgment on the pleadings, plaintiffs voluntarily dismissed the case on September 2, 2022 before final merits judgment. The statute remains intact and unenjoined, but its constitutionality was never finally adjudicated, and its enforcement machinery has never been exercised.
+How the law is enforced is a genuine open question. Section 9301 prescribes duties but states no penalty, no express enforcement mechanism, and no private right of action, and no Maine enforcement action or merits decision applying it to a provider appears in the public record. Plausible routes — an Unfair Trade Practices Act theory, Public Utilities Commission authority, or an implied action — remain untested.
 
 ## Does Maine require your business to post a privacy policy? {#privacy-policy-required}
 

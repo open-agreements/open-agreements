@@ -95,7 +95,7 @@ In *CLAAS Medical Centre Pte Ltd v Ng Boon Ching*, the Court of Appeal upheld a 
 
 ## What if the employer wrongfully dismissed the employee? {#employer-breach}
 
-**Short answer.** The restraint may fall away. Under the principle in *General Billposting*, an employer who repudiates the contract — for example by dismissing the employee without the required notice — cannot then enforce the post-employment restraint, and the wrongfully dismissed employee is no longer bound by it [^hengxin-repudiation].
+**Short answer.** The restraint may fall away. Under a House of Lords principle that Singapore's High Court has applied, an employer who repudiates the contract — for example by dismissing the employee without the required notice — cannot then enforce the post-employment restraint, and the wrongfully dismissed employee is no longer bound by it [^hengxin-repudiation].
 
 The High Court applied this in *Hengxin Technology Ltd v Jiang Wei*, where an employer that had wrongfully terminated the employee without the required notice — a repudiatory breach — was held not entitled to enforce the restrictive covenant against him. The doctrine ties enforcement of the covenant to the employer's own performance: a party that has torn up the contract cannot selectively hold the other side to one of its clauses.
 
@@ -104,7 +104,7 @@ The High Court applied this in *Hengxin Technology Ltd v Jiang Wei*, where an em
 > [!NOTE]
 > **Practice note.**
 >
-> An employer that terminates abruptly — without giving contractual notice or paying in lieu — risks losing the very non-compete it is relying on. Before suing to enforce a restraint, confirm the termination was itself lawful, because a repudiatory breach by the employer can release the employee from the covenant [^hengxin-repudiation].
+> An employer that terminates abruptly — without giving contractual notice or paying in lieu — risks losing the very non-compete it is relying on, because a repudiatory breach by the employer can release the employee from the covenant [^hengxin-repudiation].
 
 ## Is garden leave treated the same as a non-compete? {#garden-leave}
 
