@@ -1,5 +1,8 @@
 # Asset Purchase What Transfers Update Log
 
+## 2026-10-03
+* **Update**: content(app-business): selling and buying an app business guides (dfd1b94)
+
 ## 2026-10-02
 * **Update**: fix(asset-purchase pillars): declare machine-only explanations under the #2803 contract (#2820) (7b80557)
 

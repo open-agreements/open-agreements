@@ -3,24 +3,30 @@ type: Case Excerpt
 title: 'ABRY Partners V, L.P. v. F & W Acquisition LLC (Del. Ch. 2006)'
 description: >-
   ABRY Partners V, L.P. v. F & W Acquisition LLC, 891 A.2d 1032 (Del. Ch. 2006).
-  — quoted in 1 document(s).
+  — quoted in 3 document(s).
 citation: 'ABRY Partners V, L.P. v. F & W Acquisition LLC, 891 A.2d 1032 (Del. Ch. 2006).'
 resource: >-
   https://www.courtlistener.com/opinion/2167386/abry-partners-v-lp-v-f-w-acquisition-llc/
-timestamp: '2026-09-28'
+timestamp: '2026-10-03'
 document_references:
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/asset-purchase-after-closing/us'
+  - type: Law Topic
+    resource: 'https://openagreements.org/practice-guides/buying-an-app-business/us'
+  - type: Law Topic
+    resource: 'https://openagreements.org/practice-guides/selling-an-app-business/us'
 tags:
   - case-law
   - asset-purchase-after-closing
+  - buying-an-app-business
+  - selling-an-app-business
 ---
 
 # ABRY Partners V, L.P. v. F & W Acquisition LLC (Del. Ch. 2006)
 
 *ABRY Partners V, L.P. v. F & W Acquisition LLC, 891 A.2d 1032 (Del. Ch. 2006).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -28,7 +34,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > For these reasons, when a seller intentionally misrepresents a fact embodied in a contract — that is, when a seller lies — public policy will not permit a contractual provision to limit the remedy of the buyer to a capped damage claim. Rather, the buyer is free to press a claim for rescission or for full compensatory damages.
 
-- supports: `remedy-allocation`
-- source_cards: `abry-fraud-limit`
-- cited_by: [Small-Business Asset Purchase Agreements: After Closing](../asset-purchase-after-closing/us.md)
+- supports: `cleaned-up-code-disclosure`, `disclosure-of-traffic-revenue-drops`, `limit-seller-exposure`, `remedy-allocation`
+- source_cards: `abry-fraud-limit`, `abry-lies-not-capped`, `abry-lies-not-capped-seller-exposure`
+- cited_by: [Small-Business Asset Purchase Agreements: After Closing](../asset-purchase-after-closing/us.md), [Buying an App Business in the United States](../buying-an-app-business/us.md), [Selling an App Business in the United States](../selling-an-app-business/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2167386/abry-partners-v-lp-v-f-w-acquisition-llc/#:~:text=For%20these%20reasons%2C%20when%20a,or%20for%20full%20compensatory%20damages.>
