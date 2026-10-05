@@ -25,6 +25,8 @@ The definition can state whether revenue is gross or net of listed deductions: t
 
 The seller's historical statements may be unaudited, or prepared on the seller's own accounting basis rather than under GAAP, and the financial-statements representation can say which kind of statements the buyer relied on: one filed agreement included an unaudited inventory analysis among the statements covered by its financial-information representation. [^p4-grove-unaudited-listing] The same agreement represented that its financial statements followed the seller's historical accounting policies and practices, consistently applied, and differed from GAAP in a material respect only as set out in a schedule. [^p4-grove-historical-basis]
 
+For an app that earns through the app stores, [checking subscription revenue against the app-store reports](/practice-guides/buying-an-app-business/us#subscription-revenue-app-store-reports) covers the buyer's comparison and [standing behind dashboard figures](/practice-guides/selling-an-app-business/us#dashboard-figures-accuracy) covers the seller's side.
+
 The [acquisition financial-model guide](/practice-guides/transaction-workbooks/building-an-auditable-acquisition-workbook) shows how to carry verified figures into the buyer's model and keep purchase consideration, financing and operating cash separate.
 
 ## Should the buyer pay a deposit when the purchase agreement is signed? {#buyer-deposit}
