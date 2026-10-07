@@ -6,6 +6,7 @@
 * [205 Corp. v. Brandow](205-corp-v-brandow.md) - 205 Corp. v. Brandow, 517 N.W.2d 548 (Iowa 1994). — quoted in 2 document(s).
 * [23 LTD v. Herman](23-ltd-v-herman.md) - 23 LTD v. Herman, 2019 COA 113. — quoted in 3 document(s).
 * [7's Enterprises, Inc. v. Del Rosario](7-s-enterprises-inc-v-del-rosario.md) - 7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006). — quoted in 3 document(s).
+* [80P2L LLC v. U.S. Bank Trust, N.A.](80p2l-llc-v-u-s-bank-trust-n-a.md) - 80P2L LLC v. U.S. Bank Trust, N.A., 2021 NY Slip Op 03275 (1st Dep't May 25, 2021). — quoted in 1 document(s).
 * [A & C Engineering Co. v. Atherholt](a-c-engineering-co-v-atherholt.md) - A & C Engineering Co. v. Atherholt, 355 Mich. 677, 95 N.W.2d 871 (1959). — quoted in 1 document(s).
 * [A.N. Deringer, Inc. v. Strough](a-n-deringer-inc-v-strough.md) - A.N. Deringer, Inc. v. Strough, 103 F.3d 243 (2d Cir. 1996). — quoted in 3 document(s).
 * [ABRY Partners V, L.P. v. F & W Acquisition LLC (Del. Ch. 2006)](abry-partners-v-l-p-v-f-w-acquisition-llc-del-ch-2006.md) - ABRY Partners V, L.P. v. F & W Acquisition LLC, 891 A.2d 1032 (Del. Ch. 2006). — quoted in 3 document(s).
@@ -170,6 +171,7 @@
 * [DeCristofaro v. Security Nat. Bank](decristofaro-v-security-nat-bank.md) - DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983). — quoted in 3 document(s).
 * [Del Castillo v. Richmond](del-castillo-v-richmond.md) - Del Castillo v. Richmond, G.R. No. L-21127, Feb. 9, 1924. — quoted in 1 document(s).
 * [Delaney v. Dickey, 242 A.3d 257 (N.J. 2020)](delaney-v-dickey-242-a-3d-257-n-j-2020.md) - Delaney v. Dickey, 242 A.3d 257 (N.J. 2020). — quoted in 1 document(s).
+* [Delaney v. Dickey, 244 N.J. 466 (2020)](delaney-v-dickey-244-n-j-466-2020.md) - Delaney v. Dickey, 244 N.J. 466, 242 A.3d 257 (2020). — quoted in 1 document(s).
 * [Delta Enterprise Corp. v. Cohen](delta-enterprise-corp-v-cohen.md) - Delta Enter. Corp. v. Cohen, 93 A.D.3d 411, 412 (1st Dep't 2012). — quoted in 1 document(s).
 * [DePuy Orthopaedics, Inc. v. Waxman](depuy-orthopaedics-inc-v-waxman.md) - DePuy Orthopaedics, Inc. v. Waxman, 95 So. 3d 928 (Fla. 1st DCA 2012). — quoted in 1 document(s).
 * [Derge v. D&H United Fueling Solutions, Inc.](derge-v-d-h-united-fueling-solutions-inc.md) - Derge v. D&H United Fueling Sols., Inc., C.A. No. 2025-0087-BWD, slip op. at 12 (Del. Ch. Dec. 8, 2025). — quoted in 2 document(s).
@@ -249,6 +251,7 @@
 * [Friddle v. Raymond](friddle-v-raymond.md) - Friddle v. Raymond, 575 So. 2d 1038 (Ala. 1991). — quoted in 2 document(s).
 * [Frierson v. Sheppard Building Supply Co.](frierson-v-sheppard-building-supply-co.md) - Frierson v. Sheppard Bldg. Supply Co., 247 Miss. 157, 154 So. 2d 151 (Miss. 1963). — quoted in 2 document(s).
 * [Friger Salgueiro v. Mech-Tech College, LLC](friger-salgueiro-v-mech-tech-college-llc.md) - Friger Salgueiro v. Mech-Tech College, LLC, 2026 TSPR 30, 218 DPR ___ (2026). — quoted in 1 document(s).
+* [Galetta v. Galetta](galetta-v-galetta.md) - Galetta v. Galetta, 21 N.Y.3d 186 (2013). — quoted in 1 document(s).
 * [Gann v. Morris](gann-v-morris.md) - Gann v. Morris, 122 Ariz. 517, 596 P.2d 43 (Ct. App. 1979). — quoted in 2 document(s).
 * [Gattuso v. Harte-Hanks Shoppers, Inc., 42 Cal. 4th 554 (2007)](gattuso-v-harte-hanks-shoppers-inc-42-cal-4th-554-2007.md) - Gattuso v. Harte-Hanks Shoppers, Inc., 42 Cal. 4th 554 (2007). — quoted in 2 document(s).
 * [Gaver v. Schneider's O.K. Tire Co.](gaver-v-schneider-s-o-k-tire-co.md) - Gaver v. Schneider's O.K. Tire Co., 289 Neb. 491 (2014). — quoted in 3 document(s).
@@ -275,6 +278,7 @@
 * [H&R Block Eastern Enters., Inc. v. Swenson](h-r-block-eastern-enters-inc-v-swenson.md) - H&R Block Eastern Enters., Inc. v. Swenson, 2008 WI App 3. — quoted in 2 document(s).
 * [Hammons v. Big Sandy Claims Service, Inc.](hammons-v-big-sandy-claims-service-inc.md) - Hammons v. Big Sandy Claims Serv., Inc., 567 S.W.2d 313 (Ky. Ct. App. 1978) (quoting Ceresia v. Mitchell, 242 S.W.2d 359 (Ky. 1951)). — quoted in 2 document(s).
 * [Hanna v OAMPS Insurance Brokers Ltd](hanna-v-oamps-insurance-brokers-ltd.md) - Hanna v OAMPS Insurance Brokers Ltd [2010] NSWCA 267. — quoted in 2 document(s).
+* [Hannaford v. Mann](hannaford-v-mann.md) - Hannaford v. Mann, 134 Conn. App. 265 (2012). — quoted in 1 document(s).
 * [Hartman v. W.H. Odell & Associates, Inc.](hartman-v-w-h-odell-associates-inc.md) - Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994). — quoted in 2 document(s).
 * [Hassler v. Circle C Resources](hassler-v-circle-c-resources.md) - Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169 (Wyo. 2022). — quoted in 4 document(s).
 * [Hasty v. Rent-A-Driver, Inc.](hasty-v-rent-a-driver-inc.md) - Hasty v. Rent-A-Driver, Inc., 671 S.W.2d 471 (Tenn. 1984). — quoted in 3 document(s).
@@ -636,8 +640,7 @@
 * [United Laboratories, Inc. v. Kuykendall](united-laboratories-inc-v-kuykendall.md) - United Laboratories, Inc. v. Kuykendall, 322 N.C. 643 (1988). — quoted in 3 document(s).
 * [United States v. Cytogel Pharma, LLC](united-states-v-cytogel-pharma-llc.md) - United States v. Cytogel Pharma, LLC, No. 16-13987, 2018 WL 4443152 (E.D. La. Sept. 17, 2018). — quoted in 1 document(s).
 * [United States v. Dubilier Condenser Corp.](united-states-v-dubilier-condenser-corp.md) - United States v. Dubilier Condenser Corp., 289 U.S. 178 (1933). — quoted in 53 document(s).
-* [United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb....](united-states-v-heppner-no-25-cr-503-jsr-2026-wl-436479-s-d-n-y-feb.md) - United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb. 17, 2026), discussed in Reuters. — quoted in 1 document(s).
-* [United States v. Heppner (S.D.N.Y.)](united-states-v-heppner-s-d-n-y.md) - United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb. 19, 2026). — quoted in 1 document(s).
+* [United States v. Heppner (S.D.N.Y.)](united-states-v-heppner-s-d-n-y.md) - United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479, ECF No. 27 (S.D.N.Y. Feb. 17, 2026). — quoted in 2 document(s).
 * [United States v. Kovel, 296 F.2d 918 (2d Cir. 1961)](united-states-v-kovel-296-f-2d-918-2d-cir-1961.md) - United States v. Kovel, 296 F.2d 918 (2d Cir. 1961). — quoted in 2 document(s).
 * [United States v. Massachusetts Institute of Technology, 129 F.3d 681 (1st Cir...](united-states-v-massachusetts-institute-of-technology-129-f-3d-681-1st-cir.md) - United States v. Massachusetts Institute of Technology, 129 F.3d 681 (1st Cir. 1997). — quoted in 1 document(s).
 * [Univ. of W. Va. Bd. of Trs. v. VanVoorhies](univ-of-w-va-bd-of-trs-v-vanvoorhies.md) - Univ. of W. Va. Bd. of Trs. v. VanVoorhies, 278 F.3d 1288 (Fed. Cir. 2002). — quoted in 1 document(s).
@@ -668,7 +671,7 @@
 * [Wallis Nominees (Computing) Pty Ltd v Pickett](wallis-nominees-computing-pty-ltd-v-pickett.md) - Wallis Nominees (Computing) Pty Ltd v Pickett [2013] VSCA 24 (Warren CJ and Davies AJA). — quoted in 1 document(s).
 * [Warner and Co. v. Solberg](warner-and-co-v-solberg.md) - Warner and Co. v. Solberg, 2001 ND 156, 634 N.W.2d 65. — quoted in 3 document(s).
 * [Warner v. Gilbarco, Inc. (E.D. Mich.)](warner-v-gilbarco-inc-e-d-mich.md) - Warner v. Gilbarco, Inc., No. 2:24-cv-12333, 2026 WL 373043 (E.D. Mich. Feb. 10, 2026). — quoted in 1 document(s).
-* [Warner v. Gilbarco Inc. et al., Case No. 2:24-cv-12333 (E.D. Mich. Feb. 10, 2...](warner-v-gilbarco-inc-et-al-case-no-2-24-cv-12333-e-d-mich-feb-10-2.md) - Warner v. Gilbarco Inc. et al., Case No. 2:24-cv-12333 (E.D. Mich. Feb. 10, 2026). — quoted in 2 document(s).
+* [Warner v. Gilbarco Inc. et al. (E.D. Mich.)](warner-v-gilbarco-inc-et-al-e-d-mich.md) - Warner v. Gilbarco Inc. et al., Case No. 2:24-cv-12333 (E.D. Mich. Feb. 10, 2026). — quoted in 2 document(s).
 * [Watercolor Salon, LLC v. Hixon](watercolor-salon-llc-v-hixon.md) - Watercolor Salon, LLC v. Hixon, No. 2021-IA-01151-SCT (Miss. 2022). — quoted in 2 document(s).
 * [Waterjet Technology, Inc. v. Flow International Corp.](waterjet-technology-inc-v-flow-international-corp.md) - Waterjet Tech., Inc. v. Flow Int'l Corp., 140 Wn.2d 313 (2000). — quoted in 1 document(s).
 * [Watson v. Fort Worth Bank & Trust, 487 U.S. 977 (1988)](watson-v-fort-worth-bank-trust-487-u-s-977-1988.md) - Watson v. Fort Worth Bank & Trust, 487 U.S. 977 (1988). — quoted in 2 document(s).

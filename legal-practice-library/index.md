@@ -25,6 +25,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Buying An App Business](buying-an-app-business/)
 * [Checklists](checklists/)
 * [Corporate Governance](corporate-governance/)
+* [Deed Execution](deed-execution/)
 * [Employment Offer Letter](employment-offer-letter/)
 * [Expense Reimbursement](expense-reimbursement/)
 * [Founder Separation](founder-separation/)

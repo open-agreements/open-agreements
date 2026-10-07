@@ -25,6 +25,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Asset Purchase What Transfers](asset-purchase-what-transfers/)
 * [Buying An App Business](buying-an-app-business/)
 * [Corporate Governance](corporate-governance/)
+* [Deed Execution](deed-execution/)
 * [Employment Offer Letter](employment-offer-letter/)
 * [Expense Reimbursement](expense-reimbursement/)
 * [Founder Separation](founder-separation/)

@@ -1,5 +1,14 @@
 # Us Update Log
 
+## 2026-10-06
+* **Update**: content(la-ia): scope the bottom line's holdover claim to our review (#3456 llm gate) (001752a)
+* **Update**: content(invention-assignment): full-sentence answer openings for Kentucky, Louisiana, Mississippi and Nebraska (#2980) (00c5234)
+* **Update**: content(ks-ia): carve-out opening keeps 'work performed for the employer' (#3456 peer review round 2) (075d848)
+* **Update**: content(ks-ia): bring the carve-out opening back to 50 words (07890c5)
+* **Update**: content(invention-assignment): full-sentence answer openings for Kansas, Alaska, Arkansas and Iowa (#2980) (5d613ba)
+* **Update**: content(invention-assignment): full-sentence answer openings for New Mexico, Vermont, Washington and the CNMI (#2980) (69b9b19)
+* **Update**: content(invention-assignment): scope the no-statute openings to our review (#3456 peer review round 1) (eb6d0cb)
+
 ## 2026-10-03
 * **Update**: content(ca-ia): state when the section 2872 notice is due; state the holdover consequence directly (#3416 peer-review round 1) (44ca49b)
 * **Update**: content(ca-ia): name the section 2870 notice omission in the holdover caution (#3416 peer-review round 2) (d361a18)

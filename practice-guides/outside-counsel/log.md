@@ -1,5 +1,9 @@
 # Outside Counsel Update Log
 
+## 2026-10-06
+* **Update**: content(switching-counsel): cut Thomson Reuters, Reuters, Bloomberg Law and Crosby citations (#3116) (1883be9)
+* **Update**: content(fee-dispute): cite Delaney v. Dickey from the New Jersey courts (#3116) (e8a4fa8)
+
 ## 2026-06-20
 * **Update**: fix(content): firm-only sourcing triage — counsel-transition topics (cluster 4/5, refs #950) (#959) (673ea82)
 

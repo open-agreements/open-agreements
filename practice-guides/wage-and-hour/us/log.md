@@ -1,5 +1,13 @@
 # Us Update Log
 
+## 2026-10-06
+* **Update**: content(md): address Maryland peer-review round 9 (2562f45)
+* **Update**: fix(md): rename Maryland source-card ids to semantic ids (29e7d7e)
+* **Update**: content(md): address Maryland peer-review round 7 (897dd4b)
+* **Update**: content(md): address Maryland peer-review round 6 minors (8b966f5)
+* **Update**: content(md): address Maryland peer-review round 8 minors (bf7af28)
+* **Update**: content(md): address Maryland peer-review round 5 (batched) (f5547f7)
+
 ## 2026-10-02
 * **Update**: content: move California to the section 2783 follow-up; recast the AU caution endings (#2993) (0c789a9)
 * **Update**: content: put Illinois minimum-wage demand in rendered SEO metadata (16c2448)
@@ -14,11 +22,19 @@
 
 ## 2026-10-01
 * **Update**: Wage and hour: Nevada practice guide (#2962) (543702c)
+* **Update**: content(md): address Maryland peer-review round 4 (59e3baf)
+
+## 2026-09-30
+* **Update**: content(md): address Maryland peer-review round 3 by cutting break exclusivity (e8e0224)
 
 ## 2026-09-28
+* **Update**: content(md): Maryland wage-and-hour practice guide (Parallel Ultra pipeline) (448f56b)
+* **Update**: content(md): address Maryland peer-review round 1 (643dcc0)
 * **Update**: content(surveys): upcoming-law notes restate only their cards' quotes (952e290)
 * **Update**: content(surveys): list Colorado's 2027 farm overtime threshold and Washington's ESHB 1155 as upcoming law (b38d4a7)
+* **Update**: content(md): address Maryland peer-review round 2 (b57c9a8)
 * **Update**: content(surveys): qualify Washington's upcoming note, cite § 2449j, trim Colorado's note (b8ef0ec)
+* **Update**: content(md): answer the overtime and late-pay questions in their first sentences (fa3f229)
 
 ## 2026-09-27
 * **Update**: Washington: ESHB 1155 notice deadline and 2027 changes; say Washington State (#2886, #2880) (#2898) (933e73b)

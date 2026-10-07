@@ -1,5 +1,8 @@
 # Buying An App Business Update Log
 
+## 2026-10-06
+* **Update**: content(app-business): retire the rork-handover anchor alias (7a66e49)
+
 ## 2026-10-04
 * **Update**: content(app-business): fragment locators and mandatory propositions (3e75f46)
 * **Update**: content(app-business): narrow wording to the cited quotes (review of 7a4b72c) (670d9ea)

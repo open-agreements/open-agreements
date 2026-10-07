@@ -1,5 +1,9 @@
 # Legal Due Diligence Update Log
 
+## 2026-10-06
+* **Update**: content(legal-due-diligence): attach opening chips to each conclusion sentence (#3116) (2678b7e)
+* **Update**: content(legal-due-diligence): replace Westlaw-reprint and Thomson Reuters cards (#3116) (504895e)
+
 ## 2026-09-26
 * **Update**: fix: replace public evidence workflow jargon and prevent recurrence (#2741) (5a7454b)
 

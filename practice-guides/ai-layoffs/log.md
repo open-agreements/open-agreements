@@ -1,5 +1,10 @@
 # Ai Layoffs Update Log
 
+## 2026-10-06
+* **Update**: content(retention-bonus): narrow the 409A payment-timing sentence to its quotes (#3116) (33f78bb)
+* **Update**: content(proving-redundancy): cite Klarna's F-1 and TechCrunch instead of Reuters (#3116) (8b25ede)
+* **Update**: content(retention-bonus): cut Lexis Practical Guidance reprint card (#3116) (dbf2463)
+
 ## 2026-09-26
 * **Update**: fix: replace public evidence workflow jargon and prevent recurrence (#2741) (5a7454b)
 
