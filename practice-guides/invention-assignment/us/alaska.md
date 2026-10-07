@@ -25,7 +25,7 @@ Alaska has no employee-invention-assignment statute — the one legislative atte
 
 ## Can an Alaska employer require assignment of every invention? {#statutory-carve-out}
 
-**Short answer.** There is no statutory ceiling. Alaska has no employee-invention-assignment statute — nothing that voids an assignment of a true own-time, own-resource invention — so an assignment clause's reach is bounded only by ordinary contract law, the common-law inventor-owns default, and the federal patent and copyright overlay. The Legislature considered a California-style carve-out once, in 2022 Senate Bill 232, and let it die in committee [^sb232-own-time-carve-out][^stanford-baseline].
+**Short answer.** In our review of Alaska's statutes we found no statute limiting which of an employee's inventions an employer may require the employee to assign. Alaska has no employee-invention-assignment statute voiding an assignment of a true own-time, own-resource invention, so an assignment clause's reach is bounded only by ordinary contract law, the common-law inventor-owns default, and the federal patent and copyright overlay. The Legislature considered a California-style carve-out once, in 2022 Senate Bill 232, and let it die in committee [^sb232-own-time-carve-out][^stanford-baseline].
 
 The statutory silence is verifiable. Article 1 of the employment-practices chapter of the Alaska Statutes runs from AS 23.10.015 through AS 23.10.037 and then moves to wage-payment provisions, with no invention or intellectual-property-assignment section, and the trade-and-commerce title contains no employee-invention chapter either. An Alaska employer therefore starts from contract law, not a § 2870-style statutory ceiling on what an assignment promise may capture.
 
@@ -47,7 +47,7 @@ The practical consequence is that an Alaska employer can, in principle, contract
 
 ## Must an Alaska employer notify the employee? {#employee-notice}
 
-**Short answer.** Not applicable. Because Alaska has no invention-assignment statute, there is no statutory carve-out to notify the employee about and no notice requirement of the kind California imposes under Labor Code § 2872 or Washington imposes under RCW 49.44.140(3). Even the failed 2022 bill contained no employer-notice provision — it paired its carve-out with an unenforceability rule and a forum protection, nothing more [^sb232-no-notice-provision].
+**Short answer.** In our review of Alaska's statutes we found no statute requiring an employer to give an employee notice of an own-time, own-resource invention carve-out. Because Alaska has no invention-assignment statute, there is no statutory carve-out to notify the employee about and no notice requirement of the kind California imposes under Labor Code § 2872 or Washington imposes under RCW 49.44.140(3). Even the failed 2022 bill contained no employer-notice provision — it paired its carve-out with an unenforceability rule and a forum protection, nothing more [^sb232-no-notice-provision].
 
 There is nothing to give notice of. A notice requirement exists in California and Washington precisely to alert the employee to a statutory own-time carve-out that limits the assignment; Alaska has enacted no such carve-out, so there is no statutory line for a notice to mark. This is why the entry is marked not applicable rather than a bare no: the question presupposes a statutory carve-out that Alaska does not have.
 
@@ -59,7 +59,7 @@ For a multistate employer the takeaway is the inverse of the notice states: an A
 
 ## Who owns an invention by default in Alaska? {#default-ownership}
 
-**Short answer.** The inventor, unless hired to invent. Alaska's appellate courts have never decided an employee-invention ownership dispute — our review found no Alaska shop-right, hired-to-invent, or invention-assignment decision at all — so the default comes entirely from the federal baseline: rights in an invention belong to the employee who conceived it, with a narrow exception for the employee hired to invent [^stanford-inventor][^dubilier-hired-to-invent].
+**Short answer.** Absent a written assignment, an Alaska employee most likely owns the patent rights in an invention the employee conceived, unless the employee was hired to invent it [^stanford-inventor][^dubilier-hired-to-invent]. Our review found no Alaska shop-right, hired-to-invent, or invention-assignment decision at all, so the default comes entirely from the federal baseline: rights in an invention belong to the employee who conceived it, with a narrow exception for the employee hired to invent [^stanford-inventor][^dubilier-hired-to-invent].
 
 *Stanford v. Roche* anchors the default. The Supreme Court held that even the Bayh-Dole Act did not displace the long-standing rule that an invention belongs to its inventor, treating that premise as the baseline against which any assignment is measured [^stanford-inventor].
 
@@ -77,7 +77,7 @@ Short of that, where the employee is neither hired to invent nor bound by a writ
 
 ## Are trailing-assignment (holdover) clauses enforceable in Alaska? {#holdover-clause-limit}
 
-**Short answer.** Unsettled. No Alaska decision found in our review addresses a trailing clause reaching inventions conceived after employment ends — indeed, none addresses employee-invention ownership at all — and there is no statutory cap because there is no invention-assignment statute. If an Alaska court treated a holdover clause as a restraint of trade, the likeliest framework is the state's restrictive-covenant line, which strictly construes such restraints but reforms overbroad ones the employer proves were drafted in good faith [^decristofaro-strict-construction][^data-management-reasonable-alteration].
+**Short answer.** In our review we found no Alaska decision or statute addressing whether a trailing-assignment clause reaching inventions conceived after employment ends is enforceable. None of the Alaska decisions we found addresses employee-invention ownership at all, and there is no statutory cap because there is no invention-assignment statute. If an Alaska court treated a holdover clause as a restraint of trade, the likeliest framework is the state's restrictive-covenant line, which strictly construes such restraints but reforms overbroad ones the employer proves were drafted in good faith [^decristofaro-strict-construction][^data-management-reasonable-alteration].
 
 Two gaps define the Alaska picture. First, there is no statute: nothing caps the duration of a post-employment trailing assignment or otherwise limits what such a clause may reach. Second, our review found no Alaska decision applying the restrictive-covenant framework — or any framework — to an invention-holdover clause, so even the threshold question of whether such a clause counts as a restraint of trade in Alaska is open. Everything below is analogy, not settled invention law.
 

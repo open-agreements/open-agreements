@@ -22,7 +22,7 @@ New Mexico has no employee-invention-assignment statute, so an assignment clause
 
 ## Can a New Mexico employer require assignment of every invention? {#statutory-carve-out}
 
-**Short answer.** There is no statutory ceiling. Unlike California or New York, New Mexico has no employee-invention-assignment statute — nothing that voids an assignment of a true own-time, own-resource invention — so an assignment clause's reach is bounded only by ordinary contract law, the common-law inventor-owns default, and the federal patent and copyright overlay. The Federal Circuit, applying New Mexico law, has confirmed that state contract law governs these transfers, and the baseline it operates against is that rights in an invention belong to the inventor [^regents-governs][^stanford-baseline].
+**Short answer.** In our review of New Mexico's statutes we found no statute limiting which of an employee's inventions an employer may require the employee to assign. Unlike California or New York, New Mexico has no employee-invention-assignment statute voiding an assignment of a true own-time, own-resource invention, so an assignment clause's reach is bounded only by ordinary contract law, the common-law inventor-owns default, and the federal patent and copyright overlay. The Federal Circuit, applying New Mexico law, has confirmed that state contract law governs these transfers, and the baseline it operates against is that rights in an invention belong to the inventor [^regents-governs][^stanford-baseline].
 
 Because there is no statute on point, the limits come from general principles rather than a legislative carve-out. A full-text search of the New Mexico Statutes Annotated Chapter 50 (Employment Law) surfaces no invention-, patent-, or intellectual-property-assignment provision, and there is no Article 9A of the kind sometimes assumed — so a New Mexico employer starts from contract law, not a § 2870-style statutory ceiling on what an assignment promise may capture.
 
@@ -38,7 +38,7 @@ The practical consequence is that a New Mexico employer can, in principle, contr
 
 ## Must a New Mexico employer notify the employee? {#employee-notice}
 
-**Short answer.** Not applicable. Because New Mexico has no invention-assignment statute, there is no statutory carve-out to notify the employee about and no notice requirement of the kind California imposes under Labor Code § 2872 or Washington imposes under RCW 49.44.140(3). What New Mexico enforces instead is contractual: disclosure and assignment duties arise from the terms of the agreement itself, and state contract law governs whether those duties bind [^regents-obligation].
+**Short answer.** In our review of New Mexico's statutes we found no statute requiring an employer to give an employee notice of an own-time, own-resource invention carve-out. Because New Mexico has no invention-assignment statute, there is no statutory carve-out to notify the employee about and no notice requirement of the kind California imposes under Labor Code § 2872 or Washington imposes under RCW 49.44.140(3). What New Mexico enforces instead is contractual: disclosure and assignment duties arise from the terms of the agreement itself, and state contract law governs whether those duties bind [^regents-obligation].
 
 There is nothing to give notice of. A notice requirement exists in California and Washington precisely to alert the employee to a statutory own-time carve-out that limits the assignment; New Mexico has enacted no such carve-out, so there is no statutory line for a notice to mark. This is why the entry is marked not applicable rather than a bare no: the question presupposes a statutory carve-out that New Mexico does not have.
 
@@ -50,7 +50,7 @@ For a multistate employer the takeaway is the inverse of the notice states: a Ne
 
 ## Who owns an invention by default in New Mexico? {#default-ownership}
 
-**Short answer.** The inventor, unless hired to invent. Absent a written assignment, the baseline under federal patent law — which governs who holds title to a patentable invention in New Mexico as elsewhere — is that rights belong to the employee who conceived it. The narrow exception is the employee hired to invent, whose resulting invention the employer may claim [^stanford-inventor][^dubilier-hired-to-invent].
+**Short answer.** Absent a written assignment, a New Mexico employee owns the patent rights in an invention the employee conceived, unless the employee was hired to invent it [^stanford-inventor][^dubilier-hired-to-invent]. That baseline comes from federal patent law, which governs who holds title to a patentable invention in New Mexico as elsewhere, and the narrow exception is the employee hired to invent, whose resulting invention the employer may claim [^stanford-inventor][^dubilier-hired-to-invent].
 
 *Stanford v. Roche* anchors the default. The Supreme Court held that even the Bayh-Dole Act did not displace the long-standing rule that an invention belongs to its inventor, treating that premise as the baseline against which any assignment is measured [^stanford-inventor].
 
@@ -68,7 +68,7 @@ Short of that, where the employee is neither hired to invent nor bound by a writ
 
 ## Are trailing-assignment (holdover) clauses enforceable in New Mexico? {#holdover-clause-limit}
 
-**Short answer.** Unsettled. No New Mexico decision found in our review squarely decides whether a trailing clause reaching inventions first conceived after employment ends is enforceable, and there is no statutory temporal cap because there is no invention-assignment statute at all. New Mexico's general rule is that restraints arising from an employment relationship are enforceable only if reasonable, so a New Mexico court would most likely test an aggressive holdover clause under that general reasonableness standard rather than any invention-specific rule [^lovelace-reasonable].
+**Short answer.** A New Mexico court would most likely enforce a trailing-assignment clause reaching inventions conceived after employment ends only if the restrictions it imposes on the former employee are reasonable [^lovelace-reasonable]. No New Mexico decision found in our review squarely decides the question, and there is no statutory temporal cap because there is no invention-assignment statute at all. New Mexico's general rule is that restraints arising from an employment relationship are enforceable only if reasonable, so a New Mexico court would most likely test an aggressive holdover clause under that general reasonableness standard rather than any invention-specific rule [^lovelace-reasonable].
 
 Two gaps define the New Mexico picture. First, there is no statute: nothing caps the duration of a post-employment trailing assignment or otherwise limits what such a clause may reach. Second, our review found no New Mexico decision applying the reasonableness limits specifically to an invention-holdover clause, so the invention-specific application of the rule is genuinely open rather than settled.
 

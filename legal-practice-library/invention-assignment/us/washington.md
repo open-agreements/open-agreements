@@ -21,7 +21,7 @@ In Washington State, RCW 49.44.140 voids any clause forcing an employee to assig
 
 ## Can a Washington employer require assignment of every invention? {#statutory-carve-out}
 
-**Short answer.** No. RCW 49.44.140 carves out a category of inventions that an assignment clause simply cannot reach: anything the employee developed entirely on their own time, without the employer's equipment, supplies, facilities, or trade secret information, that neither relates to the employer's business or anticipated research and development nor results from the employee's work. To the extent a clause purports to capture those own-time inventions, it is against the public policy of the state and void [^stat-140-carveout][^stat-140-void].
+**Short answer.** A Washington employer cannot require assignment of inventions developed entirely on an employee's own time without employer equipment, supplies, facilities or trade secret information, unless they relate directly to the employer's business or to its actual or demonstrably anticipated research or development, or result from work performed for the employer [^stat-140-carveout][^stat-140-condition]. To the extent a clause purports to capture those own-time inventions, it is against the public policy of the state and void [^stat-140-carveout][^stat-140-void].
 
 Subsection (1) frames the carve-out as a limit on what an assignment promise can do. However broadly the contract is written, it does not reach an invention the employee made on their own time and with their own resources unless one of two statutory exceptions applies [^stat-140-carveout].
 
@@ -39,7 +39,7 @@ Subsection (2) closes the obvious workaround. An employer cannot demand the void
 
 ## Must a Washington employer notify the employee? {#employee-notice}
 
-**Short answer.** Yes. RCW 49.44.140(3) requires an employer whose agreement contains an invention-assignment provision to give the employee, at the time the agreement is made, a written notification that the agreement does not apply to a qualifying own-time invention. Washington's leading case glosses this obligation: the notice may appear in the employment agreement itself, subsection (3) is not a vehicle for a facial challenge to an otherwise valid agreement, and if the agreement overreaches the remedy is to strike the offending portions, not void the whole [^stat-140-notice][^waterjet-notice-in-agreement].
+**Short answer.** A Washington employer whose employment agreement requires the employee to assign inventions must give the employee, at the time the agreement is made, written notice that the agreement does not apply to a qualifying own-time invention [^stat-140-notice]. Washington's leading case glosses this obligation: the notice may appear in the employment agreement itself, subsection (3) is not a vehicle for a facial challenge to an otherwise valid agreement, and if the agreement overreaches the remedy is to strike the offending portions, not void the whole [^stat-140-notice][^waterjet-notice-in-agreement].
 
 The notice obligation is contemporaneous, not eventual: the written notification must accompany the agreement when it is made, for any agreement entered into after September 1, 1979. It does not change which inventions are carved out — subsection (1) does that — but it ensures the employee is told the carve-out exists [^stat-140-notice].
 
@@ -63,7 +63,7 @@ The carve-out is not a free pass to keep side projects secret. RCW 49.44.150 add
 
 ## Who owns an invention by default in Washington? {#default-ownership}
 
-**Short answer.** The inventor. Absent a written assignment, the baseline rule under federal patent law — which governs who holds title to a patentable invention in Washington as elsewhere — is that rights belong to the employee who conceived it. The U.S. Supreme Court restated that premise in *Stanford v. Roche*, and although others may acquire an interest, that interest must trace back to the inventor. Washington has not definitively decided whether its common-law overlays give an employer title without a written assignment — *Waterjet* expressly declined to reach that question — so the federal inventor-owns baseline controls [^stanford-inventor][^stanford-traceback].
+**Short answer.** Under the federal patent-law default, rights in a Washington employee's invention belong to the employee who conceived it [^stanford-inventor][^stanford-traceback]. That baseline comes from federal patent law, which governs who holds title to a patentable invention in Washington as elsewhere. The U.S. Supreme Court restated that premise in *Stanford v. Roche*, and although others may acquire an interest, that interest must trace back to the inventor. Washington has not definitively decided whether its common-law overlays give an employer title without a written assignment — *Waterjet* expressly declined to reach that question — so the federal inventor-owns baseline controls [^stanford-inventor][^stanford-traceback].
 
 *Stanford v. Roche* anchors the default. The Court held that the Bayh-Dole Act did not displace the long-standing rule that an invention belongs to its inventor, treating that premise as the baseline against which any assignment must be measured [^stanford-inventor].
 
@@ -81,7 +81,7 @@ With the question left open, a Washington employer cannot safely rely on a hired
 
 ## Are trailing-assignment (holdover) clauses enforceable in Washington? {#holdover-clause-limit}
 
-**Short answer.** Unsettled. This is where Washington diverges from California. There is no published Washington authority deciding whether a clause reaching inventions conceived after employment ends is enforceable, and no Washington statute that expressly caps such a clause. Washington's noncompete statute does not fill the gap, because its definition of a noncompetition covenant excludes covenants about inventions. The most a careful reader can say is that an overreaching clause would likely be trimmed under *Waterjet*'s remedy framing — but the core enforceability question remains open [^waterjet-strike-holdover][^stat-140-void-holdover].
+**Short answer.** In our review we found no published Washington decision deciding whether an employer may enforce a clause assigning inventions conceived after employment ends, and no Washington statute expressly capping such a clause. This is where Washington diverges from California. Washington's noncompete statute does not fill the gap, because its definition of a noncompetition covenant excludes covenants about inventions. The most a careful reader can say is that an overreaching clause would likely be trimmed under *Waterjet*'s remedy framing — but the core enforceability question remains open [^waterjet-strike-holdover][^stat-140-void-holdover].
 
 Start with the statute's silence. RCW 49.44.140 governs what an assignment clause may reach during employment, voiding any provision that purports to capture a qualifying own-time invention. It says nothing, one way or the other, about a clause reaching inventions conceived after the employment relationship ends [^stat-140-void-holdover].
 
@@ -122,9 +122,9 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^stat-140-carveout]: **RCW 49.44.140** — "A provision in an employment agreement which provides that an employee shall assign or offer to assign any of the employee's rights in an invention to the employer does not apply to an invention for which no equipment, supplies, facilities, or trade secret information of the employer was used and which was developed entirely on the employee's own time, unless (a) the invention relates (i) directly to the business of the employer, or (ii) to the employer's actual or demonstrably anticipated research or development, or (b) the invention results from any work performed by the employee for the employer." *RCW 49.44.140(1).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
 
-[^stat-140-void]: **RCW 49.44.140** — "Any provision which purports to apply to such an invention is to that extent against the public policy of this state and is to that extent void and unenforceable." *RCW 49.44.140(1).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
-
 [^stat-140-condition]: **RCW 49.44.140** — "An employer shall not require a provision made void and unenforceable by subsection (1) of this section as a condition of employment or continuing employment." *RCW 49.44.140(2).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
+
+[^stat-140-void]: **RCW 49.44.140** — "Any provision which purports to apply to such an invention is to that extent against the public policy of this state and is to that extent void and unenforceable." *RCW 49.44.140(1).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
 
 [^stat-140-notice]: **RCW 49.44.140** — "If an employment agreement entered into after September 1, 1979, contains a provision requiring the employee to assign any of the employee's rights in any invention to the employer, the employer must also, at the time the agreement is made, provide a written notification to the employee that the agreement does not apply to an invention for which no equipment, supplies, facility, or trade secret information of the employer was used and which was developed entirely on the employee's own time" *RCW 49.44.140(3).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140>
 

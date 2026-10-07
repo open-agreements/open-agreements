@@ -1,5 +1,8 @@
 # Asset Purchase Update Log
 
+## 2026-10-06
+* **Update**: content(asset-purchase): cite Potomac Law for the anti-assignment trigger (#3116) (f6a1e87)
+
 ## 2026-10-03
 * **Update**: content(app-business): selling and buying an app business guides (dfd1b94)
 
