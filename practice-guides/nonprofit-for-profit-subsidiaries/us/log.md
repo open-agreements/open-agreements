@@ -1,0 +1,23 @@
+# Us Update Log
+
+## 2026-10-08
+* **Update**: content(nonprofit-subsidiaries): Q&A-only article bodies and generic wording (standing rule) (087fded)
+* **Update**: content(nonprofit-subsidiaries): drop unsupported frequency comparison (Codex round-11 minor) (14e2a07)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-3 review findings (20ae06a)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-4 review findings (249da34)
+* **Update**: content(nonprofit-subsidiaries): for-profit subsidiaries of 501(c)(3) nonprofits guide (30f78be)
+* **Update**: content(nonprofit-subsidiaries): spell out New York University (Codex round-7 minor) (314c15d)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-9 findings (3fa5265)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-8 findings on the Type II question (410152a)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-10 findings (7995b34)
+* **Update**: content(nonprofit-subsidiaries): drop service-fee authority-gap sentence (Codex round-14 minor) (82ca2b8)
+* **Update**: content(nonprofit-subsidiaries): Codex round-12 fixes and standalone questions (standing rules) (a721b51)
+* **Update**: content(nonprofit-subsidiaries): split-activities opening answers both halves (LLM gate advisory) (bbbd5f0)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-5 review findings (be7b1ee)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-2 review findings (c1a5fc1)
+* **Update**: content(nonprofit-subsidiaries): add Type II supporting organization funder question (d702398)
+* **Update**: content(nonprofit-subsidiaries): avoid 'Wm.' abbreviation in New York separateness opening (content advisory) (d7336a2)
+* **Update**: content(nonprofit-subsidiaries): split into Delaware and New York per-state guides (ed5b65b)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-6 review findings (f13fe2c)
+* **Update**: content(nonprofit-subsidiaries): fold open points into answers; drop settled-and-open section (owner instruction) (f519404)
+* **Update**: content(nonprofit-subsidiaries): apply Codex round-1 review findings (fb8a0a5)

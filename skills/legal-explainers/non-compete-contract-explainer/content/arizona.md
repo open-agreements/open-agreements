@@ -2,7 +2,7 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-content_packaged_at: "2026-10-07"
+content_packaged_at: "2026-10-09"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-10-07 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-10-09 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arizona[^about]
 
@@ -39,7 +39,7 @@ A question-by-question summary of Arizona non-compete law, including the common-
 
 ## Are employee non-compete agreements enforceable in Arizona? {#employee-non-compete-enforceability}
 
-**Short answer.** Sometimes. Arizona has no general statute banning or governing employee non-competes, so the question is decided under common law: a covenant not to compete is enforceable only if it is reasonable. Arizona courts treat these restraints as disfavored[^q1-amex-disfavored] and will refuse to enforce one that sweeps further than the employer's legitimate interest requires [^q1-farber-reasonableness].
+**Short answer.** Arizona courts enforce an employee non-compete only if it is reasonable, and refuse to enforce one that restrains more than the employer's legitimate interest requires [^q1-farber-reasonableness]. Arizona courts treat these restraints as disfavored[^q1-amex-disfavored]. The reasonableness framework comes from *Valley Medical Specialists v. Farber* [^q1-farber-reasonableness].
 
 Unlike California, North Dakota, or Oklahoma, Arizona does not void employee non-competes by statute. The governing framework comes from the Arizona Supreme Court's decision in *Valley Medical Specialists v. Farber* and a line of Court of Appeals cases applying a fact-intensive reasonableness analysis.
 
@@ -277,9 +277,9 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from an Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arizona*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/arizona.
 
-[^q1-amex-disfavored]: **Amex Distributing Co. v. Mascari** — "Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored." *Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).* <https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.>
-
 [^q1-farber-reasonableness]: **Valley Medical Specialists v. Farber** — "A restriction is unreasonable and thus will not be enforced: (1) if the restraint is greater than necessary to protect the employer's legitimate interest; or (2) if that interest is outweighed by the hardship to the employee and the likely injury to the public." *Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).* <https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=A%20restriction%20is%20unreasonable%20and,likely%20injury%20to%20the%20public.>
+
+[^q1-amex-disfavored]: **Amex Distributing Co. v. Mascari** — "Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored." *Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).* <https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.>
 
 [^q2-amex-reasonable]: **Amex Distributing Co. v. Mascari** — "Reasonable restraints-those no broader than the employer's legitimately protectable interests-will be enforced in Arizona." *Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).* <https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Reasonable%20restraints%2Dthose%20no%20broader%20than,interests%2Dwill%20be%20enforced%20in%20Arizona.>
 

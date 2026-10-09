@@ -1,5 +1,17 @@
 # Us Update Log
 
+## 2026-10-08
+* **Update**: content(practice-guides): #3436 NC tolling opening cites what the cards say; Philips holding gets its own sentence (3e5f3aa)
+
+## 2026-10-07
+* **Update**: content(practice-guides): owner decision on #3436 peer-review findings (RI exclusion quote, AZ framework sentence, AZ absence marker) (dbdb5ba)
+
+## 2026-10-06
+* **Update**: content(practice-guides): owner-approved corrections to NC extension and AZ overtime openings (be31a23)
+
+## 2026-10-05
+* **Update**: content(practice-guides): owner-approved full-sentence answer openings (6 answers) (eb18f03)
+
 ## 2026-10-02
 * **Update**: content: state all section 2870 grounds, recast the physician caution, and condition the S4641A sale exception (peer review at a18acb1d6, #2820) (2c365e3)
 * **Update**: content: retain required Connecticut guide title accent (60bdf1c)

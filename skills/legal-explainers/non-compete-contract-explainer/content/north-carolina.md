@@ -2,7 +2,7 @@
 jurisdiction: "North Carolina"
 slug: north-carolina
 countryCode: US
-content_packaged_at: "2026-10-07"
+content_packaged_at: "2026-10-09"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-carolina · **Snapshot as of:** 2026-10-07 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-carolina · **Snapshot as of:** 2026-10-09 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Carolina[^about]
 
@@ -164,7 +164,7 @@ A customer non-solicit also has to stay within the employer's actual customer re
 
 ## Does a North Carolina non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
-**Short answer.** Only if the contract says so. North Carolina has no appellate decision holding that a court will *equitably* extend a restricted period to make up for time the former employee spent violating the covenant, so equitable tolling is unsettled. But federal courts applying North Carolina law have enforced *express* extension-on-breach clauses, stating that such tolling provisions appear to be valid under North Carolina law [^q7-philips-valid][^q7-southtech-tolls].
+**Short answer.** A North Carolina non-compete period can be extended during a breach when the contract expressly provides for it [^q7-philips-valid][^q7-southtech-tolls]. In *Philips Electronics North America Corp. v. Hope*, a federal court applying North Carolina law extended the restricted period by eleven months [^q7-philips-tolled]. We found no North Carolina appellate decision holding that a court will extend the period on its own.
 
 The clearest statement comes from the Middle District of North Carolina, enforcing a clause that paused the protected period while the employee was out of compliance.
 

@@ -36,11 +36,11 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - cited_by: [Employee Invention Assignment in New Hampshire](../invention-assignment/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2338988/vigitron-inc-v-ferguson/#:~:text=A%20precondition%20for%20the%20application,developing%20the%20product%20in%20question.>
 
-### vigitron-inc-v-ferguson-accomplish-a-prescribed-result-or-aid-c54607b5 {#vigitron-inc-v-ferguson-accomplish-a-prescribed-result-or-aid-c54607b5}
+### vigitron-inc-v-ferguson-the-product-of-one-who-is-42e796a0 {#vigitron-inc-v-ferguson-the-product-of-one-who-is-42e796a0}
 
-> accomplish a prescribed result, or aid in the development of products belongs to the employer in the absence of a written contract to assign.
+> The product of one who is hired to invent, *630 accomplish a prescribed result, or aid in the development of products belongs to the employer in the absence of a written contract to assign.
 
 - supports: `default-ownership`
 - source_cards: `vigitron-hired-to-invent`
 - cited_by: [Employee Invention Assignment in New Hampshire](../invention-assignment/us/new-hampshire.md)
-- link_to_source: <https://www.courtlistener.com/opinion/2338988/vigitron-inc-v-ferguson/#:~:text=accomplish%20a%20prescribed%20result%2C%20or,a%20written%20contract%20to%20assign.>
+- link_to_source: <https://www.courtlistener.com/opinion/2338988/vigitron-inc-v-ferguson/#:~:text=The%20product%20of%20one%20who,a%20written%20contract%20to%20assign.>

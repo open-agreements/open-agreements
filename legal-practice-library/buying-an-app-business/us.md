@@ -147,13 +147,13 @@ For a domain transaction, Escrow.com's instructions require the seller to provid
 
 After a GitHub repository transfer, the original owner becomes a collaborator and existing collaborators remain. [^github-original-owner-collaborator] Removing a collaborator does not remove that person's local clones, and GitHub assigns the repository owner responsibility for ensuring former users delete confidential information or intellectual property. [^github-removed-keeps-clones]
 
-## How and when do the business's online accounts migrate around closing? {#migration-timing}
+## Does the business have to migrate to the buyer all at once? {#migration-timing}
 
-**Short answer.** The steps and timing of an account migration depend on each provider's transfer process and on which accounts the agreement requires to move before or after closing, as Vercel's rule that a project's transferor be an owner of the sending team and a member of the receiving team shows. [^p6-vercel-transfer-roles]
+**Short answer.** No, a purchase agreement can let some of the business's assets keep transferring to the buyer after the point the agreement treats as a completed migration. [^migration-migration-timing]
 
-Provider rules can require the receiving account to be ready before a transfer starts; Vercel requires the receiving team to have a valid payment method before a project is transferred, [^p6-vercel-payment-method] and a GitHub repository transfer to another personal account lapses if the new owner does not accept it within one day. [^p6-github-accept-window]
+Later deliveries can be made enforceable obligations of their own; one filed purchase agreement made either party's failure to complete the Migration Process a material breach. [^d3-jeffs-migration-breach] It also tied payment to the handover, releasing 92 percent of the price to the seller after its inspection period expired, with the broker retaining 8 percent as a portion of its commission. [^d3-jeffs-release-after-inspection]
 
-Not every account has to move before closing; a purchase agreement can let some assets keep transferring after a defined migration milestone, as one filed purchase agreement expressly anticipated. [^migration-migration-timing] Later deliveries can be made enforceable obligations of their own; the same agreement made either party's failure to complete the Migration Process a material breach. [^d3-jeffs-migration-breach] It also tied payment to the handover, releasing 92 percent of the price to the seller after its inspection period expired, with the broker retaining 8 percent as a portion of its commission. [^d3-jeffs-release-after-inspection]
+Provider rules can add steps of their own; Vercel requires the person transferring a project to be an owner of the team it leaves and a member of the team it joins. [^p6-vercel-transfer-roles] Provider rules can also require the receiving account to be ready before a transfer starts; Vercel requires the receiving team to have a valid payment method before a project is transferred, [^p6-vercel-payment-method] and a GitHub repository transfer to another personal account lapses if the new owner does not accept it within one day. [^p6-github-accept-window]
 
 Provider-specific prerequisites are covered under [Apple apps](#app-transfer), [website and app projects](#website-migration) and [shared accounts](/practice-guides/selling-an-app-business/us#shared-accounts).
 
@@ -359,17 +359,17 @@ A project can also move through its provider's own transfer route, which carries
 
 [^github-removed-keeps-clones]: **Removing an outside collaborator from an organization repository (GitHub Docs)** — "You are responsible for ensuring that people who have lost access to a repository delete any confidential information or intellectual property. While forks of private repositories are deleted when a collaborator is removed, the person will still retain any local clones of your repository." *Warning; accessed October 3, 2026* <https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/removing-an-outside-collaborator-from-an-organization-repository>
 
-[^p6-vercel-transfer-roles]: **Transferring a project (Vercel)** — "You must be an owner of the team you're transferring from, and a member of the team you're transferring to." *Transferring a project; accessed September 29, 2026* <https://vercel.com/docs/projects/transferring-projects>
-
-[^p6-vercel-payment-method]: **Transferring a project, payment method (Vercel)** — "If the target Vercel team does not have a valid payment method, you must add one before transferring your project to avoid any interruption in service." *Transfer steps; accessed September 29, 2026* <https://vercel.com/docs/projects/transferring-projects>
-
-[^p6-github-accept-window]: **Transferring a repository (GitHub Docs)** — "If the new owner doesn't accept the transfer within one day, the invitation will expire." *Prerequisites for repository transfers; accessed September 29, 2026* <https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository>
-
 [^migration-migration-timing]: **Smart Repair Pro–Beard Revive purchase agreement (2021; filed by Jeffs Brands in 2022)** — "It is possible that some portion of the Assets will continue to be transferred to Buyer after the Completed Migration." *Migration Process, paragraph (b)* <https://www.sec.gov/Archives/edgar/data/1885408/000121390022024068/ff12022ex10-7_jeffsbrands.htm#:~:text=It%20is%20possible%20that%20some,Buyer%20after%20the%20Completed%20Migration.>
 
 [^d3-jeffs-migration-breach]: **Smart Repair Pro–Beard Revive purchase agreement (2021), failure to complete migration** — "(d) Either Party’s failure to complete the Migration Process after execution of this Agreement is a material breach of the Agreement; and, (e) The Parties agree to provide Broker all necessary information upon request to facilitate the Migration Process." *Migration Process, paragraph (d)* <https://www.sec.gov/Archives/edgar/data/1885408/000121390022024068/ff12022ex10-7_jeffsbrands.htm#:~:text=(d)%20Either%20Party%E2%80%99s%20failure%20to,to%20facilitate%20the%20Migration%20Process.>
 
 [^d3-jeffs-release-after-inspection]: **Smart Repair Pro–Beard Revive purchase agreement (2021), release of the purchase price** — "Within a commercially reasonable time after expiration of the Inspection Period, Broker will release ninety-two percent (92%) of the Purchase Price to Seller and Broker will retain the remaining eight percent (8%) as a portion of its Commission." *Release of the Purchase Price, ¶9(a)* <https://www.sec.gov/Archives/edgar/data/1885408/000121390022024068/ff12022ex10-7_jeffsbrands.htm#:~:text=Within%20a%20commercially%20reasonable%20time,a%20portion%20of%20its%20Commission.>
+
+[^p6-vercel-transfer-roles]: **Transferring a project (Vercel)** — "You must be an owner of the team you're transferring from, and a member of the team you're transferring to." *Transferring a project; accessed September 29, 2026* <https://vercel.com/docs/projects/transferring-projects>
+
+[^p6-vercel-payment-method]: **Transferring a project, payment method (Vercel)** — "If the target Vercel team does not have a valid payment method, you must add one before transferring your project to avoid any interruption in service." *Transfer steps; accessed September 29, 2026* <https://vercel.com/docs/projects/transferring-projects>
+
+[^p6-github-accept-window]: **Transferring a repository (GitHub Docs)** — "If the new owner doesn't accept the transfer within one day, the invitation will expire." *Prerequisites for repository transfers; accessed September 29, 2026* <https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository>
 
 [^migration-website-migration]: **Transferring a project (Vercel)** — "Integrations: Those associated with your project must be added again after the transfer is complete." *What is not transferred? Integrations; accessed September 16, 2026* <https://vercel.com/docs/projects/transferring-projects>
 
