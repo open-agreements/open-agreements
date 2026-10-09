@@ -1,12 +1,39 @@
 # Us Update Log
 
+## 2026-10-08
+* **Update**: content(wage-and-hour): Alabama guide — address peer-review round 8 (12227ec)
+* **Update**: content(wage-and-hour): Delaware — round-7 review fixes (31544d2)
+* **Update**: content(wage-and-hour): Delaware — round-5 batched review fixes (459105d)
+* **Update**: content(ut): shorten two openings and correct two summary fields (6144fe2)
+* **Update**: content(wage-and-hour): Delaware — round-6 review fixes (c590096)
+* **Update**: content(wage-and-hour): Alabama guide — address peer-review round 7 (f19254e)
+* **Update**: content(wage-and-hour): Alabama guide — address peer-review round 6 (ff91fd7)
+
+## 2026-10-07
+* **Update**: content(practice-guides): #3436 peer-review fixes (NH Vigitron chip, AZ absence-only opening) (3d4011c)
+* **Update**: content(ut): address Utah peer-review round 6 (565e40d)
+* **Update**: content(wage-and-hour): Alabama guide — address peer-review round 5 (795511e)
+* **Update**: content(ut): address Utah peer-review round 7 (a187ff0)
+* **Update**: content(ut): address Utah peer-review round 5 (d4e1e80)
+* **Update**: content(practice-guides): owner decision on #3436 peer-review findings (RI exclusion quote, AZ framework sentence, AZ absence marker) (dbdb5ba)
+* **Update**: content(wage-and-hour): Alabama guide — address peer-review round 4 (e5a2206)
+
 ## 2026-10-06
+* **Update**: content(ut): address Utah peer-review round 4 (255f4b6)
 * **Update**: content(md): address Maryland peer-review round 9 (2562f45)
 * **Update**: fix(md): rename Maryland source-card ids to semantic ids (29e7d7e)
+* **Update**: content(wage-and-hour): Alabama guide — round 2 fixes, omissions pass, U.S. Code re-verification (6b32a04)
+* **Update**: content(wage-and-hour): Alabama guide — address peer-review round 3 (7ffc430)
 * **Update**: content(md): address Maryland peer-review round 7 (897dd4b)
 * **Update**: content(md): address Maryland peer-review round 6 minors (8b966f5)
+* **Update**: content(ut): Utah omissions pass and govinfo re-verification (b1f55bd)
+* **Update**: content(practice-guides): owner-approved corrections to NC extension and AZ overtime openings (be31a23)
 * **Update**: content(md): address Maryland peer-review round 8 minors (bf7af28)
 * **Update**: content(md): address Maryland peer-review round 5 (batched) (f5547f7)
+
+## 2026-10-05
+* **Update**: content(michigan): meal-rest-breaks answer matches the approved text verbatim (bafc3ba)
+* **Update**: content(practice-guides): owner-approved full-sentence answer openings (6 answers) (eb18f03)
 
 ## 2026-10-02
 * **Update**: content: move California to the section 2783 follow-up; recast the AU caution endings (#2993) (0c789a9)
@@ -23,17 +50,28 @@
 ## 2026-10-01
 * **Update**: Wage and hour: Nevada practice guide (#2962) (543702c)
 * **Update**: content(md): address Maryland peer-review round 4 (59e3baf)
+* **Update**: content(wage-and-hour): Delaware — drop the finalPayTiming summary value (6c99fcb)
+* **Update**: content(ut): address Utah peer-review round 3 (fbe4f3d)
 
 ## 2026-09-30
+* **Update**: content(wage-and-hour): Delaware — round-3 review fixes (owner-approved final round) (2ba08da)
 * **Update**: content(md): address Maryland peer-review round 3 by cutting break exclusivity (e8e0224)
+* **Update**: content(wage-and-hour): Alabama guide — classification test, breaks, tip credit, final-pay field (eb2369f)
 
 ## 2026-09-28
+* **Update**: content(wage-and-hour): Delaware — cover the subsections round-1 review found missing (15516b5)
+* **Update**: content(ut): address Utah peer-review round 1 (1c5eb2c)
+* **Update**: content(ut): address Utah peer-review round 2 (4123839)
 * **Update**: content(md): Maryland wage-and-hour practice guide (Parallel Ultra pipeline) (448f56b)
+* **Update**: content(ut): Utah wage-and-hour practice guide (Parallel Ultra pipeline) (62e4e2a)
 * **Update**: content(md): address Maryland peer-review round 1 (643dcc0)
+* **Update**: content(wage-and-hour): add Delaware wage-and-hour guide (67e942b)
 * **Update**: content(surveys): upcoming-law notes restate only their cards' quotes (952e290)
+* **Update**: content(wage-and-hour): add Alabama wage-and-hour guide (97a42b7)
 * **Update**: content(surveys): list Colorado's 2027 farm overtime threshold and Washington's ESHB 1155 as upcoming law (b38d4a7)
 * **Update**: content(md): address Maryland peer-review round 2 (b57c9a8)
 * **Update**: content(surveys): qualify Washington's upcoming note, cite § 2449j, trim Colorado's note (b8ef0ec)
+* **Update**: content(wage-and-hour): Delaware — round-2 review fixes (construction remedies, exempt person, officer liability) (f2957e1)
 * **Update**: content(md): answer the overtime and late-pay questions in their first sentences (fa3f229)
 
 ## 2026-09-27

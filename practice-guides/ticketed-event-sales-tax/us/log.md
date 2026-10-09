@@ -1,0 +1,22 @@
+# Us Update Log
+
+## 2026-10-08
+* **Update**: content(ticketed-event-sales-tax): state open points inline with the conservative course (0189aae)
+* **Update**: content(ticketed-event-sales-tax): make every NY guide question stand alone (07997e8)
+* **Update**: content(ticketed-event-sales-tax): generalize the NY guide and replace the county rate question (216471f)
+* **Update**: content(ticketed-event-sales-tax): Codex round-5 fixes for the NY guide (3553bdb)
+* **Update**: content(ticketed-event-sales-tax): sixth peer-review fixes for the NY guide (4002663)
+* **Update**: content(ticketed-event-sales-tax): complete three truncated case-law pull quotes (492c802)
+* **Update**: content(ticketed-event-sales-tax): add a pullQuoteLocator so the 533.3 deep link lands on its quote (4f6ec08)
+* **Update**: content(ticketed-event-sales-tax): complete the 20 NYCRR 533.3 annual-filing pull quote (4ff6df1)
+* **Update**: content(ticketed-event-sales-tax): fifth peer-review fixes for the NY guide (5064467)
+* **Update**: content(ticketed-event-sales-tax): second peer-review fixes for the cabaret dinner point and two openings (69122b1)
+* **Update**: content(ticketed-event-sales-tax): add an advisory-opinion question and Codex round-6 fixes (708b729)
+* **Update**: content(ticketed-event-sales-tax): third peer-review fixes for the NY guide (7c0e9cc)
+* **Update**: content(ticketed-event-sales-tax): peer-review fixes for the NY guide (8b20f5c)
+* **Update**: content(ticketed-event-sales-tax): peer-review fixes for the penalty days and the for-profit opening (a8eeea3)
+* **Update**: content(ticketed-event-sales-tax): quote the cabaret-tax imposition as a complete sentence (a92f521)
+* **Update**: content(ticketed-event-sales-tax): second peer-review fixes for the NY guide (befb9dd)
+* **Update**: content(ticketed-event-sales-tax): New York sales tax on ticketed events guide (c6f0e83)
+* **Update**: content(ticketed-event-sales-tax): content-advisory fixes for the NY guide (c8e2ea7)
+* **Update**: content(ticketed-event-sales-tax): fourth peer-review fixes for the NY guide (f2f4abb)

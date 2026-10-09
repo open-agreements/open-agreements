@@ -1,5 +1,17 @@
 # Us Update Log
 
+## 2026-10-08
+* **Update**: content(invention-assignment): full-sentence answer openings for Alabama, Arizona, the District of Columbia and Guam (#2980) (2d2d1a9)
+* **Update**: content(invention-assignment): answer the carve-out question first in the District of Columbia and Pennsylvania (#3484 LLM gate) (514e3cc)
+* **Update**: content(practice-guides): #3436 NH Vigitron card quotes the full hired-to-invent sentence (5256f16)
+* **Update**: content(invention-assignment): full-sentence answer openings for Michigan, Missouri, Montana and New Hampshire (#2980) (527a0a2)
+* **Update**: content(invention-assignment): full-sentence answer openings for Oklahoma, Pennsylvania, Puerto Rico and South Dakota (#2980) (81e5763)
+* **Update**: content(invention-assignment): cut unsupported carve-out tails in Alabama, Missouri and South Dakota (#3484 peer review round 1) (f213a3f)
+
+## 2026-10-07
+* **Update**: content(practice-guides): #3436 peer-review fixes (NH Vigitron chip, AZ absence-only opening) (3d4011c)
+* **Update**: content(practice-guides): owner decision on #3436 peer-review findings (RI exclusion quote, AZ framework sentence, AZ absence marker) (dbdb5ba)
+
 ## 2026-10-06
 * **Update**: content(la-ia): scope the bottom line's holdover claim to our review (#3456 llm gate) (001752a)
 * **Update**: content(invention-assignment): full-sentence answer openings for Kentucky, Louisiana, Mississippi and Nebraska (#2980) (00c5234)
@@ -7,7 +19,11 @@
 * **Update**: content(ks-ia): bring the carve-out opening back to 50 words (07890c5)
 * **Update**: content(invention-assignment): full-sentence answer openings for Kansas, Alaska, Arkansas and Iowa (#2980) (5d613ba)
 * **Update**: content(invention-assignment): full-sentence answer openings for New Mexico, Vermont, Washington and the CNMI (#2980) (69b9b19)
+* **Update**: content(rhode-island): drop uncited trailing sentence from employee-notice answer (c9a8302)
 * **Update**: content(invention-assignment): scope the no-statute openings to our review (#3456 peer review round 1) (eb6d0cb)
+
+## 2026-10-05
+* **Update**: content(practice-guides): owner-approved full-sentence answer openings (6 answers) (eb18f03)
 
 ## 2026-10-03
 * **Update**: content(ca-ia): state when the section 2872 notice is due; state the holdover consequence directly (#3416 peer-review round 1) (44ca49b)

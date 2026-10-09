@@ -57,7 +57,7 @@ The statutory exceptions that follow are narrow and mostly public-sector: they l
 
 ## Are breaks required? {#meal-rest-breaks}
 
-**Short answer.** No — not for adults. Michigan has no statute requiring meal or rest breaks for adult private-sector employees; break policy is left to the employer and to the FLSA rules on which breaks count as paid working time. The only Michigan break mandate is for minors: the youth employment law requires a 30-minute meal and rest interval for a minor who works more than five continuous hours [^q3-mcl-409-112-minors]. For the adult workforce there is no state entitlement to a meal or rest break and no missed-break premium.
+**Short answer.** Michigan requires meal and rest breaks only for minors: a minor may not work more than five continuous hours without a 30-minute meal and rest period [^q3-mcl-409-112-minors]. No Michigan statute requires breaks for adult private-sector employees.
 
 The minor-break rule is the exception that proves the rule — Michigan legislated a break entitlement only for young workers, and stopped there. The mandate is a 30-minute interval once a minor passes five continuous hours of work.
 

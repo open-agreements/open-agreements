@@ -24,7 +24,7 @@ Arizona has no employee-invention-assignment statute — the section sometimes c
 
 ## Can an Arizona employer require assignment of every invention? {#statutory-carve-out}
 
-**Short answer.** There is no statutory ceiling. Arizona has no employee-invention-assignment statute — no California-style own-time carve-out, no employer-ownership provision, and no notice requirement — so an assignment clause's reach is bounded only by ordinary contract law, the common-law inventor-owns default, and the federal patent and copyright overlay. The section most often miscited as an Arizona carve-out, A.R.S. § 44-403, is actually the damages provision of Arizona's trade-secrets act, and the baseline any assignment clause operates against is that rights in an invention belong to the inventor [^az-44-403-damages][^stanford-baseline].
+**Short answer.** In our review of Arizona's statutes we found no statute exempting an employee's own-time, own-resource inventions from an employer's invention-assignment clause. Arizona has no employee-invention-assignment statute — no California-style own-time carve-out, no employer-ownership provision, and no notice requirement — so an assignment clause's reach is bounded only by ordinary contract law, the common-law inventor-owns default, and the federal patent and copyright overlay. The section most often miscited as an Arizona carve-out, A.R.S. § 44-403, is actually the damages provision of Arizona's trade-secrets act, and the baseline any assignment clause operates against is that rights in an invention belong to the inventor [^az-44-403-damages][^stanford-baseline].
 
 Because there is no statute on point, the limits come from general principles rather than a legislative carve-out. Arizona has enacted no § 2870-style own-time carve-out, no employer-ownership default, and no invention-disclosure or notice statute — for employee inventions it is a pure common-law and contract state, and a drafter starts from contract law rather than a statutory ceiling on what an assignment promise may capture.
 
@@ -46,7 +46,7 @@ The practical consequence is that an Arizona employer can, in principle, contrac
 
 ## Must an Arizona employer notify the employee? {#employee-notice}
 
-**Short answer.** Not applicable. Because Arizona has no invention-assignment statute, there is no statutory carve-out to notify the employee about and no notice requirement of the kind California imposes under Labor Code § 2872 or Washington imposes under RCW 49.44.140(3). The only written-notice duty Arizona ever drafted was in 2013 HB 2632, which died without enactment — the section it targeted now holds an unrelated employee-benefits preemption statute [^az-23-204-no-notice].
+**Short answer.** In our review of Arizona's statutes we found no statute requiring an employer to give an employee notice of an own-time, own-resource invention carve-out. Because Arizona has no invention-assignment statute, there is no statutory carve-out to notify the employee about and no notice requirement of the kind California imposes under Labor Code § 2872 or Washington imposes under RCW 49.44.140(3). The only written-notice duty Arizona ever drafted was in 2013 HB 2632, which died without enactment — the section it targeted now holds an unrelated employee-benefits preemption statute [^az-23-204-no-notice].
 
 There is nothing to give notice of. A notice requirement exists in California and Washington precisely to alert the employee to a statutory own-time carve-out that limits the assignment; Arizona has enacted no such carve-out, so there is no statutory line for a notice to mark. This is why the entry is marked not applicable rather than a bare no: the question presupposes a statutory carve-out that Arizona does not have.
 
@@ -58,7 +58,7 @@ For a multistate employer the takeaway is the inverse of the notice states: an A
 
 ## Who owns an invention by default in Arizona? {#default-ownership}
 
-**Short answer.** The inventor, unless hired to invent. Absent a written assignment, the baseline under federal patent law — which governs who holds title to a patentable invention in Arizona as elsewhere — is that rights belong to the employee who conceived it. The narrow exception is the employee hired to invent, whose resulting invention the employer may claim [^stanford-inventor][^dubilier-hired-to-invent].
+**Short answer.** Absent a written assignment, an Arizona employee owns the patent rights in an invention the employee conceived, unless the employee was hired to invent it [^stanford-inventor][^dubilier-hired-to-invent]. That baseline comes from federal patent law, which governs who holds title to a patentable invention in Arizona as elsewhere. The narrow exception is the employee hired to invent, whose resulting invention the employer may claim [^stanford-inventor][^dubilier-hired-to-invent].
 
 *Stanford v. Roche* anchors the default. The Supreme Court held that even the Bayh-Dole Act did not displace the long-standing rule that an invention belongs to its inventor, treating that premise as the baseline against which any assignment is measured [^stanford-inventor].
 
@@ -86,7 +86,7 @@ Read for what it holds, *San Manuel* treats the employee as the owner of the ide
 
 ## Are trailing-assignment (holdover) clauses enforceable in Arizona? {#holdover-clause-limit}
 
-**Short answer.** Unsettled. No Arizona decision found in our review squarely decides whether a trailing clause reaching inventions first conceived after employment ends is enforceable, and there is no statutory temporal cap because there is no invention-assignment statute at all. What Arizona does supply is a well-developed restrictive-covenant reasonableness framework, so a court would most likely test an aggressive holdover clause as a restraint under that framework — but applying it to invention holdovers is a prediction, not a holding [^farber-reasonableness].
+**Short answer.** In our review we found no Arizona decision squarely deciding whether a trailing clause reaching inventions first conceived after employment ends is enforceable. There is no statutory temporal cap because there is no invention-assignment statute at all. What Arizona does supply is a well-developed restrictive-covenant reasonableness framework, so a court would most likely test an aggressive holdover clause as a restraint under that framework — but applying it to invention holdovers is a prediction, not a holding [^farber-reasonableness].
 
 Two gaps define the Arizona picture. First, there is no statute: nothing caps the duration of a post-employment trailing assignment or otherwise limits what such a clause may reach. Second, our review found no Arizona decision applying the restraint framework — or any other framework — specifically to an invention-holdover clause, so even the threshold question of whether such a clause counts as a restraint of trade is open.
 

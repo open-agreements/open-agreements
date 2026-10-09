@@ -5,12 +5,13 @@ description: >-
   Montana has no California-style own-time carve-out and no notice requirement,
   but it is not a blank slate either — an 1895 Field Civil Code provision, MCA
   39-2-102, declares that everything an employee acquires by virtue of
-  employment belongs to the employer, and no Montana court has decided whether
-  that text reaches inventions. The Montana Supreme Court has treated the
-  employment relationship as primarily contractual without automatic employer
-  ownership, so who owns an invention absent a written assignment is genuinely
-  unclear, and a post-employment holdover clause would most likely be tested
-  under Montana's restraint-of-trade reasonableness framework.
+  employment belongs to the employer, and no Montana decision found in our
+  review has decided whether that text reaches inventions. The Montana Supreme
+  Court has treated the employment relationship as primarily contractual without
+  automatic employer ownership, so who owns an invention absent a written
+  assignment is genuinely unclear, and a post-employment holdover clause would
+  most likely be tested under Montana's restraint-of-trade reasonableness
+  framework.
 resource: 'https://openagreements.org/practice-guides/invention-assignment/us/montana'
 timestamp: '2026-07-02'
 tags:
@@ -20,11 +21,11 @@ tags:
 
 # Employee Invention Assignment in Montana[^about]
 
-Montana has no California-style own-time carve-out and no notice requirement, but it is not a blank slate either — an 1895 Field Civil Code provision, MCA 39-2-102, declares that everything an employee acquires by virtue of employment belongs to the employer, and no Montana court has decided whether that text reaches inventions. The Montana Supreme Court has treated the employment relationship as primarily contractual without automatic employer ownership, so who owns an invention absent a written assignment is genuinely unclear, and a post-employment holdover clause would most likely be tested under Montana's restraint-of-trade reasonableness framework.
+Montana has no California-style own-time carve-out and no notice requirement, but it is not a blank slate either — an 1895 Field Civil Code provision, MCA 39-2-102, declares that everything an employee acquires by virtue of employment belongs to the employer, and no Montana decision found in our review has decided whether that text reaches inventions. The Montana Supreme Court has treated the employment relationship as primarily contractual without automatic employer ownership, so who owns an invention absent a written assignment is genuinely unclear, and a post-employment holdover clause would most likely be tested under Montana's restraint-of-trade reasonableness framework.
 
 ## Can a Montana employer require assignment of every invention? {#statutory-carve-out}
 
-**Short answer.** There is no employee-protective ceiling — Montana has no §2870-style statute voiding the assignment of a true own-time, own-resource invention — but Montana is not a pure no-statute state either. MCA § 39-2-102, an 1895 Field Civil Code provision, declares that everything an employee acquires by virtue of employment belongs to the employer, and whether that partial employer-ownership rule reaches inventions is an open question no Montana court has decided [^mt-39-2-102-employer-acquisition][^ruff-not-heretofore-construed].
+**Short answer.** In our review of Montana's statutes we found no statute exempting an employee's own-time, own-resource inventions from an employer's invention-assignment clause. Montana is not a pure no-statute state, however. MCA § 39-2-102, an 1895 Field Civil Code provision, declares that everything an employee acquires by virtue of employment belongs to the employer, and whether that partial employer-ownership rule reaches inventions is an open question no Montana decision found in our review has decided [^mt-39-2-102-employer-acquisition][^ruff-not-heretofore-construed].
 
 Start with what the statute books do and do not contain. Montana has enacted no employee-invention-assignment statute: nothing in the Montana Code Annotated voids an overreaching assignment clause, carves out own-time inventions, or requires any disclosure about the clause's limits. What Title 39 does contain is a much older and much broader provision — § 39-2-102, captioned What belongs to employer — that sweeps in everything an employee acquires by virtue of the employment [^mt-39-2-102-employer-acquisition].
 
@@ -38,7 +39,7 @@ So Montana sits between the two familiar camps. It is not a carve-out state — 
 
 ## Must a Montana employer notify the employee? {#employee-notice}
 
-**Short answer.** Not applicable. Because Montana has no invention-assignment statute, there is no statutory carve-out to notify the employee about and no notice requirement of the kind California imposes under Labor Code § 2872 or Washington imposes under RCW 49.44.140(3). The one Montana statute that touches employee acquisitions, MCA § 39-2-102, vests ownership language in the employer without conditioning anything on notice to, or disclosure by, anyone [^mt-39-2-102-no-notice].
+**Short answer.** In our review of Montana's statutes we found no statute requiring an employer to give an employee notice of an own-time, own-resource invention carve-out. Because Montana has no invention-assignment statute, there is no statutory carve-out to notify the employee about and no notice requirement of the kind California imposes under Labor Code § 2872 or Washington imposes under RCW 49.44.140(3). The one Montana statute that touches employee acquisitions, MCA § 39-2-102, vests ownership language in the employer without conditioning anything on notice to, or disclosure by, anyone [^mt-39-2-102-no-notice].
 
 There is nothing to give notice of. Notice statutes exist to alert the employee to a statutory own-time carve-out that limits the assignment clause; Montana has enacted no such carve-out, so there is no statutory line for a notice to mark. That is why this entry is marked not applicable rather than a bare no — the question presupposes a statutory regime Montana does not have.
 
@@ -50,7 +51,7 @@ For a multistate employer the takeaway is symmetrical: a Montana employer neithe
 
 ## Who owns an invention by default in Montana? {#default-ownership}
 
-**Short answer.** Genuinely unclear — Montana is caught between two defaults that point in opposite directions. The federal baseline is that rights in an invention belong to the inventor unless assigned, subject to the narrow hired-to-invent exception and the employer's shop right. But MCA § 39-2-102's text — everything acquired by virtue of employment belongs to the employer — points the other way, and no Montana court has resolved the tension for an invention [^stanford-inventor-default][^mt-39-2-102-ownership-text][^ruff-recites-employer-acquisition].
+**Short answer.** In our review we found no Montana decision deciding whether MCA § 39-2-102 gives an employer ownership of an employee's patentable invention absent a written assignment. Montana is caught between two defaults that point in opposite directions. The federal baseline is that rights in an invention belong to the inventor unless assigned, subject to the narrow hired-to-invent exception and the employer's shop right. But MCA § 39-2-102's text — everything acquired by virtue of employment belongs to the employer — points the other way, and no Montana decision found in our review has resolved the tension for an invention [^stanford-inventor-default][^mt-39-2-102-ownership-text][^ruff-recites-employer-acquisition].
 
 The federal starting point is settled. *Stanford v. Roche* restates the premise that has governed since the first Patent Act: an invention belongs to the person who conceived it [^stanford-inventor-default].
 
@@ -82,7 +83,7 @@ The drafting consequence is the same one careful employers reach everywhere, onl
 
 ## Are trailing-assignment (holdover) clauses enforceable in Montana? {#holdover-clause-limit}
 
-**Short answer.** Only so far as reasonable, most likely — by analogy, not by holding. Our review found no Montana decision addressing a post-employment invention-assignment tail. What Montana does have is a statutory restraint-of-trade framework: MCA § 28-2-703 voids a contract restraining anyone from exercising a lawful profession, trade, or business except in two narrow statutory situations, and the Montana Supreme Court enforces employment covenants only when reasonable and supported by a legitimate business interest. A court asked to enforce an aggressive holdover clause would most likely test it under that framework [^mt-28-2-703-restraint-void][^access-organics-three-part-test][^wrigg-legitimate-interest].
+**Short answer.** A Montana court would most likely enforce a trailing invention-assignment clause that restrains employment only if it is restricted in time or place, supported by good consideration, and reasonable, affording only fair protection to the employer without interfering with the interests of the public [^access-organics-three-part-test]. That answer is by analogy, not by holding: our review found no Montana decision addressing a post-employment invention-assignment tail. What Montana does have is a statutory restraint-of-trade framework: MCA § 28-2-703 voids a contract restraining anyone from exercising a lawful profession, trade, or business except in two narrow statutory situations, and the Montana Supreme Court enforces employment covenants only when reasonable and supported by a legitimate business interest. A court asked to enforce an aggressive holdover clause would most likely test it under that framework [^mt-28-2-703-restraint-void][^access-organics-three-part-test][^wrigg-legitimate-interest].
 
 The statutory backdrop is categorical. Montana, like a handful of states that inherited the same Field Code text, starts from a void-unless-excepted rule for restraints of trade [^mt-28-2-703-restraint-void].
 
@@ -145,9 +146,9 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^stanford-traceback]: **Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Systems** — "Thus, although others may acquire an interest in an invention, any such interest — as a general rule — must trace back to the inventor." *Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Sys., Inc., 563 U.S. 776 (2011).* <https://www.courtlistener.com/opinion/218133/board-of-trustees-of-the-leland-stanford-junior-university-v-roche/#:~:text=Thus%2C%20although%20others%20may%20acquire,trace%20back%20to%20the%20inventor.>
 
-[^mt-28-2-703-restraint-void]: **Mont. Code Ann. § 28-2-703** — "Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void." *Mont. Code Ann. § 28-2-703.* <https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html>
-
 [^access-organics-three-part-test]: **Access Organics, Inc. v. Hernandez** — "(1) [I]t must be partial or restricted in its operation in respect either to time or place; (2) it must be on some good consideration; and (3) it must be reasonable, that is, it should afford only a fair protection to the interests of the party in whose favor it is made, and must not be so large in its operation as to interfere with the interests of the public." *Access Organics, Inc. v. Hernandez, 2008 MT 4, 341 Mont. 73, 175 P.3d 899.* <https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/#:~:text=(1)%20%5BI%5Dt%20must%20be%20partial,the%20interests%20of%20the%20public.>
+
+[^mt-28-2-703-restraint-void]: **Mont. Code Ann. § 28-2-703** — "Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void." *Mont. Code Ann. § 28-2-703.* <https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html>
 
 [^wrigg-legitimate-interest]: **Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C.** — "We agree that an employer normally lacks a legitimate business interest in a covenant when it chooses to end the employment relationship." *Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C., 2011 MT 290, 362 Mont. 496, 265 P.3d 646.* <https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/#:~:text=We%20agree%20that%20an%20employer,to%20end%20the%20employment%20relationship.>
 
