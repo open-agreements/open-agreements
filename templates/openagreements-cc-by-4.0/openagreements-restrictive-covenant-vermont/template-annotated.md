@@ -201,7 +201,7 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### The reasonableness test each covenant must survive
 
-Vermont has no general non-compete statute and no statutory safe harbor, so every covenant in the agreement stands or falls on the common-law reasonableness test, and a covenant that fails it is unenforceable rather than trimmed to fit. A restraint holds only where it protects a genuine interest — Vermont recognizes customer relationships and employee-specific goodwill, not merely trade secrets, but not an interest in avoiding ordinary competition — and the employer carries the burden of proving the covenant's reasonable necessity. Duration and territory are weighed together against the employer's actual market on the facts, with no safe-harbor number: a five-year, single-county restraint tied to a proven market was upheld, while a covenant whose territory the record leaves indeterminate fails for want of a finding as to what place it covered, so a term or radius copied from another form is measured against a market it was never sized to. A covenant's stated term is taken literally, so a restraint does not revive after its stated duration has run, and a disclosure to a departing employee's next employer built on a covenant that later fails this analysis exposes the employer to a claim of its own.
+Relying on a savings or reformation clause instead of drafting reasonable restrictions leaves an overbroad covenant at risk of nonenforcement. A restraint holds only where it protects a genuine interest — Vermont recognizes customer relationships and employee-specific goodwill, not merely trade secrets, but not an interest in avoiding ordinary competition — and the employer carries the burden of proving the covenant's reasonable necessity. Duration and territory are weighed together against the employer's actual market on the facts, with no safe-harbor number: a five-year, single-county restraint tied to a proven market was upheld, while a covenant whose territory the record leaves indeterminate fails for want of a finding as to what place it covered, so a term or radius copied from another form is measured against a market it was never sized to. A covenant's stated term is taken literally, so a restraint does not revive after its stated duration has run, and a disclosure to a departing employee's next employer built on a covenant that later fails this analysis exposes the employer to a claim of its own.
 
 ### Continued employment
 
@@ -217,15 +217,15 @@ A covenant ancillary to the sale of a business is measured differently from an e
 
 ### Training covenants at a barbering or cosmetology school
 
-A covenant not to compete imposed as a condition of training for licensure at a school of barbering or cosmetology is void outright — the one generally applicable Vermont statute that voids a category of restrictive covenant, and no drafting saves it. The bar turns on the training-for-licensure relationship rather than on a job title, so a restraint the school or an affiliate extracts from a person training for licensure falls outside enforcement whatever the instrument is called.
-
-### Covenants restraining a licensed healthcare professional
-
-A healthcare-professional covenant is neither banned nor exempt in Vermont: it runs the ordinary reasonableness test, with patient access weighed on the public-interest prong and the burden on the employer. A radius or term set without regard to patient access is exposed on that prong, and even a narrow one is not assured of enforcement.
+A school of barbering or cosmetology that writes a covenant not to compete into its training-for-licensure terms gets nothing it can enforce: the statute bars requiring the covenant as a condition of that training, and no drafting saves it. The bar turns on the training-for-licensure relationship rather than on a job title, so a restraint the school or an affiliate extracts from a person training for licensure falls outside enforcement whatever the instrument is called.
 
 ### Restrictions on a lawyer's right to practice
 
 A partnership, shareholders, operating, or employment agreement that restricts a lawyer's right to practice after the relationship ends is barred by the rules of professional conduct, except as to benefits upon retirement, and a restriction on a lawyer's right to practice may not be made part of the settlement of a client controversy. Because the rule polices the substance of the restriction rather than its label, a non-compete, a practice-area carve-up, or a client-facing restraint that operates as a practice restriction all sit inside the bar, so a covenant applied to an attorney is unenforceable on that ground however it is drafted.
+
+### Covenants restraining a licensed health care provider
+
+Narrowing a non-compete radius or term in a Vermont health care provider agreement entered into on or after July 1, 2026 does not save it: the restriction stays void and unenforceable unless it fits the subsection (c) exception for a provider who contracts with a third-party nonclinical business-support company.
 
 ### Trade-secret protection and confidentiality duration
 
