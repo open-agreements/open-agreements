@@ -7,7 +7,7 @@ description: >-
 citation: 'Foti Fuels, Inc. v. Kurrle Corp., 2013 VT 111, 195 Vt. 524, 90 A.3d 885.'
 resource: >-
   https://www.courtlistener.com/opinion/2646010/foti-fuels-inc-and-robert-a-foti-v-kurrle-corporation-payjack-llc-and/
-timestamp: '2026-09-26'
+timestamp: '2026-10-09'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'

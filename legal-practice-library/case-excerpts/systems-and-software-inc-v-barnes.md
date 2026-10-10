@@ -7,7 +7,7 @@ description: >-
 citation: 'Systems & Software, Inc. v. Barnes, 2005 VT 95, 178 Vt. 389, 886 A.2d 762.'
 resource: >-
   https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/
-timestamp: '2026-09-26'
+timestamp: '2026-10-09'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'

@@ -1,5 +1,17 @@
 # Us Update Log
 
+## 2026-10-09
+* **Update**: content(checklists): Vermont checklist keeps § 495q qualifiers and adds the practice-sale conservative course (Codex round 2, #1175) (013f225)
+* **Update**: content(checklists): Vermont non-compete checklist reflects the 21 V.S.A. § 495q health care provider ban (#1175) (2f892ee)
+* **Update**: content(checklists): Vermont checklist § 495q statements carry the Vermont-services scope (Codex round 3, #1175) (74275ea)
+* **Update**: content(checklists): Vermont sale item states subsection (c) as quoted; reviewer instructions in third person (peer review, #1175) (752f04a)
+* **Update**: content(checklists): Vermont provider and gate items give the reviewer an instruction (content advisory, #1175) (7e0515c)
+* **Update**: content(checklists): label Vermont links to the provider item as covering all health care providers (Codex round 5, #1175) (954e0ce)
+* **Update**: content(checklists): Vermont checklist names the § 495q(c) exception and drops "only statute" wording (Codex review, #1175) (d5c8d19)
+* **Update**: content(checklists): Vermont § 495q checklist statements cite same-question cards (peer review, #1175) (e2bb455)
+* **Update**: content(checklists): Vermont checklist intro is navigational; § 495q applicability uses the statute's wording (peer review 2, #1175) (fce4f54)
+* **Update**: content(checklists): Vermont checklist drops an unsupported Act 133 absence claim; declarative register (peer review 3, #1175) (ffab934)
+
 ## 2026-09-28
 * **Update**: Washington: common-law savings clause deleted June 30, 2027; checklist reformation-penalty end date (#2929) (#2931) (452e62f)
 

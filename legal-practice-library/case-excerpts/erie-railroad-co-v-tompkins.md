@@ -4,7 +4,7 @@ title: Erie Railroad Co. v. Tompkins
 description: 'Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938). — quoted in 5 document(s).'
 citation: 'Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938).'
 resource: 'https://www.courtlistener.com/opinion/103012/erie-railroad-v-tompkins/'
-timestamp: '2026-09-26'
+timestamp: '2026-10-09'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/invention-assignment/us/indiana'

@@ -6,7 +6,7 @@ description: >-
   document(s).
 citation: 'Summits 7, Inc. v. Kelly, 2005 VT 97, 178 Vt. 396, 886 A.2d 365.'
 resource: 'https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/'
-timestamp: '2026-09-26'
+timestamp: '2026-10-09'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > [t]he employer has the burden of proving the reasonable necessity of the restrictive covenant.
 
-- supports: `definitions`, `mid-employment-consideration`, `profession-specific`, `reasonableness-test`, `timing-and-execution-acknowledgements`, `vermont-statutory-gates`
+- supports: `definitions`, `health-care-providers`, `mid-employment-consideration`, `reasonableness-test`, `timing-and-execution-acknowledgements`, `vermont-statutory-gates`
 - source_cards: `summits7-burden-defs`, `summits7-burden-gate`, `summits7-burden-timing`, `summits7-employer-burden`, `summits7-employer-burden-drafting`, `summits7-employer-burden-physician`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/#:~:text=%5Bt%5Dhe%20employer%20has%20the%20burden,necessity%20of%20the%20restrictive%20covenant.>
@@ -50,8 +50,8 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Most modem courts agree that a trial court can enforce restrictive covenants to the extent that they are reasonable.
 
-- supports: `court-narrowing`, `severability-and-reformation`
-- source_cards: `summits7-extent-reasonable`
+- supports: `court-narrowing`, `reasonableness-test`, `severability-and-reformation`
+- source_cards: `summits7-extent-reasonable`, `summits7-extent-reasonable-reasonableness`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/#:~:text=Most%20modem%20courts%20agree%20that,extent%20that%20they%20are%20reasonable.>
 

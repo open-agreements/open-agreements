@@ -6,7 +6,7 @@ description: >-
   document(s).
 citation: 'Fine Foods, Inc. v. Dahlin, 147 Vt. 599, 523 A.2d 1228 (1986).'
 resource: 'https://www.courtlistener.com/opinion/1927334/fine-foods-inc-v-dahlin/'
-timestamp: '2026-09-26'
+timestamp: '2026-10-09'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
