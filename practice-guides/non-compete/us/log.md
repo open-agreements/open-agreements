@@ -1,5 +1,22 @@
 # Us Update Log
 
+## 2026-10-09
+* **Update**: content(practice-guides): Vermont § 495q answers keep statutory qualifiers; sale answers point to the provider rule (Codex round 3, #1175) (10892c6)
+* **Update**: content(practice-guides): Vermont reasonableness caution states the narrowing authorities precisely; sale answer opens substantively (peer review 4, #1175) (2c23369)
+* **Update**: content(practice-guides): projected Vermont reasonableness caution names the bars instead of an in-page link (#1175) (2c287e9)
+* **Update**: content(practice-guides): Vermont § 495q opening sentences keep the Vermont-services scope (Codex round 4, #1175) (41b99e1)
+* **Update**: content(practice-guides): Vermont summary and openings carry the § 495q(c) exception; cautions name the drafting mistake (peer review 2, #1175) (49d2735)
+* **Update**: content(practice-guides): Vermont § 495q answers carry the nonclinical-support exception and scoped open points (Codex review, #1175) (593fa0b)
+* **Update**: content(practice-guides): Vermont § 495q statements cite same-question cards; narrowing caution matches the unsettled rule (peer review, #1175) (6f574af)
+* **Update**: content(practice-guides): Vermont sale opening and two § 495q-adjacent sentences cite what their cards support (peer review 5, #1175) (6fa01a7)
+* **Update**: content(practice-guides): projected Vermont reasonableness caution opens with the savings-clause mistake (peer review 3, #1175) (708c772)
+* **Update**: content(practice-guides): Vermont provider definition and lawyer clause cite cards that state them (peer review, #1175) (98d098e)
+* **Update**: content(practice-guides): Vermont openings scoped to what their cards support (peer review 6, #1175) (a0de619)
+* **Update**: content(practice-guides): Vermont provider question cites Act 133 by chip, not a raw link (content advisory, #1175) (adfeee9)
+* **Update**: content(practice-guides): Vermont profession answer states the Five Guys settlement as its card quotes it (peer review 7, #1175) (bc19e35)
+* **Update**: content(practice-guides): Vermont § 495q statements keep the Vermont-services scope and full (c) exception (Codex round 2, #1175) (d6f4ad4)
+* **Update**: content(practice-guides): Vermont non-compete note reflects Act 177's health care provider ban (21 V.S.A. § 495q) (#1175) (db5a71e)
+
 ## 2026-10-08
 * **Update**: content(practice-guides): #3436 NC tolling opening cites what the cards say; Philips holding gets its own sentence (3e5f3aa)
 

@@ -7,7 +7,7 @@ description: >-
 citation: 'Miller v. Flegenheimer, 2016 VT 125, ¶ 21, 203 Vt. 620, 161 A.3d 524.'
 resource: >-
   https://www.courtlistener.com/opinion/4328779/kenneth-w-miller-ii-v-eric-flegenheimer/
-timestamp: '2026-09-26'
+timestamp: '2026-10-09'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'

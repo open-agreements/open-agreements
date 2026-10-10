@@ -46,11 +46,11 @@
     "slug": "vermont",
     "frontmatter": {
       "title": "Non-Compete Agreement Reviewer Checklist — Vermont",
-      "description": "A clause-by-clause reviewer checklist for Vermont employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Andrus reasonableness test and its Restatement (Second) of Contracts § 188 framing, with Vermont's profession-specific covenant bars.",
+      "description": "A clause-by-clause reviewer checklist for Vermont employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Andrus reasonableness test and its Restatement (Second) of Contracts § 188 framing, with Vermont's profession-specific covenant bars, including the 2026 bar on health care provider non-competes.",
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "Vermont",
       "coverage": "Vermont (US)",
-      "lastReviewed": "2026-09-26",
+      "lastReviewed": "2026-10-09",
       "license": "CC BY 4.0",
       "authors": [
         "steven-obiajulu"
@@ -823,7 +823,7 @@
         "sectionId": "restrictive-covenants-each-independently-includable",
         "itemNumber": "7.4",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#permit-non-compete",
-        "requirementGuidance": "If this clause appears, route the review through the Vermont gates at the end of this checklist: courts proceed with caution before enforcing covenants against competitive employment, and the employer will carry the burden at every step. Do not rely on a statutory ban: H.205 was recommitted, and H.583 became Act 133, whose enacted text has no restrictive-covenant provision.",
+        "requirementGuidance": "If this clause appears, route the review through the Vermont gates at the end of this checklist: courts proceed with caution before enforcing covenants against competitive employment, and the employer will carry the burden at every step. Of the 2026 covenant bills, H.205 was recommitted and H.583 became Act 133. If the worker is a health care provider, the agreement concerns the provider's health care services in Vermont, and it was entered into on or after July 1, 2026, the non-compete is void and unenforceable however it is drawn, apart from a restriction that keeps a provider who contracts with a third-party nonclinical business-support company from opening a business in a territory supported by a different nonclinical-services company.",
         "variants": [],
         "sources": [
           {
@@ -859,6 +859,39 @@
             "proposition": "Act 133 records that it enacted H.583, an act relating to clinical decision making that adds 18 V.S.A. chapter 233.",
             "verbatimQuote": "No. 133. An act relating to clinical decision making. (H.583) It is hereby enacted by the General Assembly of the State of Vermont: Sec. 1. 18 V.S.A. chapter 233 is added to read: CHAPTER 233. CLINICAL DECISION MAKING § 9771. DEFINITIONS As used in this chapter: (1) “Health care facility” has the same meaning as in section 9432 of this title.",
             "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-act133-covenants"
+          },
+          {
+            "sourceId": "vt-495q-health-care-void-covenants",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(a)",
+            "citation": "21 V.S.A. § 495q(a)(1), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(a)(1), added by Act 177, makes void and unenforceable a provision in a partnership, employment, or other professional agreement with a health care provider about the provider's health care services in Vermont that restricts the provider from providing health care services in any area for any period after the relationship ends.",
+            "verbatimQuote": "(a) Any provision in a contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a health care provider regarding the health care provider’s provision of health care services in Vermont shall be void and unenforceable if the provision: (1) includes a restriction on the right of the health care provider to provide health care services in any geographical area for any period of time after the termination of such partnership, agreement, or professional relationship;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-health-care-void-covenants"
+          },
+          {
+            "sourceId": "vt-495q-applies-from-july-2026-covenants",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(f)",
+            "citation": "21 V.S.A. § 495q(f), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q applies to contracts and agreements entered into on or after July 1, 2026.",
+            "verbatimQuote": "(f) This section shall apply to contracts and agreements entered into on or after July 1, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-applies-from-july-2026-covenants"
+          },
+          {
+            "sourceId": "vt-495q-nonclinical-support-exception-covenants",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(c)",
+            "citation": "21 V.S.A. § 495q(c), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(c) excludes from subsection (a) restrictions that keep a health care provider who contracts with a third-party nonclinical business-support company from opening a business in a territory supported by a different nonclinical support company.",
+            "verbatimQuote": "(c) The provisions in subsection (a) of this section do not apply to restrictions that limit a health care provider who contracts with a third-party company for nonclinical business support services from opening a business within a specific territory supported by a different third-party company providing nonclinical services.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-nonclinical-support-exception-covenants"
           }
         ]
       },
@@ -897,7 +930,7 @@
         "sectionId": "non-disparagement",
         "itemNumber": "8.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#require-non-disparagement",
-        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state.",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state. In an agreement with a health care provider about the provider's health care services in Vermont entered into on or after July 1, 2026, a clause restricting the provider from disparaging another party or a named third-party beneficiary is void and unenforceable.",
         "variants": [],
         "sources": [
           {
@@ -910,6 +943,39 @@
             "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
             "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
             "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-mclaren-macomb-nondisparagement"
+          },
+          {
+            "sourceId": "vt-495q-health-care-void-nondisparagement",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(a)",
+            "citation": "21 V.S.A. § 495q(a)(1), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(a)(1), added by Act 177, makes void and unenforceable a provision in a partnership, employment, or other professional agreement with a health care provider about the provider's health care services in Vermont that restricts the provider from providing health care services in any area for any period after the relationship ends.",
+            "verbatimQuote": "(a) Any provision in a contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a health care provider regarding the health care provider’s provision of health care services in Vermont shall be void and unenforceable if the provision: (1) includes a restriction on the right of the health care provider to provide health care services in any geographical area for any period of time after the termination of such partnership, agreement, or professional relationship;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-health-care-void-nondisparagement"
+          },
+          {
+            "sourceId": "vt-495q-notice-disparagement-forum-nondisparagement",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(a)",
+            "citation": "21 V.S.A. § 495q(a)(2)-(5), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(a)(2)-(5) also makes void and unenforceable, in a covered health care provider agreement, a provision that limits a separating provider's notice of a change of employment to individuals the provider directly treated, restricts disparaging statements about another party or a named third-party beneficiary, is inconsistent with Vermont law, or requires litigation over Vermont performance to be conducted in another state.",
+            "verbatimQuote": "(2) limits the ability of a separating health care provider to provide notice of the provider’s change of employment to individuals to whom the separating provider provided direct health care services; (3) restricts a health care provider from making disparaging statements about another party to the contract or agreement or about another person specified in the agreement as a third-party beneficiary of the agreement; (4) is inconsistent with Vermont law; or (5) requires litigation arising from the performance of the contract or agreement in Vermont to be conducted in another state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-notice-disparagement-forum-nondisparagement"
+          },
+          {
+            "sourceId": "vt-495q-applies-from-july-2026-nondisparagement",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(f)",
+            "citation": "21 V.S.A. § 495q(f), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q applies to contracts and agreements entered into on or after July 1, 2026.",
+            "verbatimQuote": "(f) This section shall apply to contracts and agreements entered into on or after July 1, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-applies-from-july-2026-nondisparagement"
           }
         ]
       },
@@ -922,9 +988,64 @@
         "sectionId": "physician-specific-notices-and-carve-outs",
         "itemNumber": "9.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#address-physician-specific-rights",
-        "requirementGuidance": "Check that the clause holds physician covenants to the ordinary reasonableness test and does not cite a healthcare ban. Vermont has none: physician covenants run through the same test as everyone else's, and H.583 was enacted as Act 133, whose enacted text has no restrictive-covenant provision.",
+        "requirementGuidance": "The reviewer should confirm when the agreement was entered into and whether it concerns a health care provider's services in Vermont, and flag for deletion any clause of the kinds described next: section 495q applies to contracts and agreements entered into on or after July 1, 2026. In a partnership, employment, or other professional agreement with a health care provider about the provider's health care services in Vermont, entered into on or after July 1, 2026, a post-termination restriction on providing health care services is void and unenforceable, and so is a clause that limits the provider's notice of a change of employment to patients the provider treated directly, restricts disparaging statements about another party or a named third-party beneficiary, is inconsistent with Vermont law, or requires litigation over Vermont performance to be conducted in another state. The one exception covers a restriction that keeps a provider who contracts with a third-party nonclinical business-support company from opening a business in a territory supported by a different nonclinical-services company. The rule reaches anyone licensed, certified, or authorized to provide professional health care service in Vermont, not only physicians. A provider covenant in an agreement entered into before July 1, 2026 remains subject to the ordinary reasonableness test.",
         "variants": [],
         "sources": [
+          {
+            "sourceId": "vt-495q-applies-from-july-2026-health",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(f)",
+            "citation": "21 V.S.A. § 495q(f), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q applies to contracts and agreements entered into on or after July 1, 2026.",
+            "verbatimQuote": "(f) This section shall apply to contracts and agreements entered into on or after July 1, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-applies-from-july-2026-health"
+          },
+          {
+            "sourceId": "vt-495q-health-care-void-health",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(a)",
+            "citation": "21 V.S.A. § 495q(a)(1), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(a)(1), added by Act 177, makes void and unenforceable a provision in a partnership, employment, or other professional agreement with a health care provider about the provider's health care services in Vermont that restricts the provider from providing health care services in any area for any period after the relationship ends.",
+            "verbatimQuote": "(a) Any provision in a contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a health care provider regarding the health care provider’s provision of health care services in Vermont shall be void and unenforceable if the provision: (1) includes a restriction on the right of the health care provider to provide health care services in any geographical area for any period of time after the termination of such partnership, agreement, or professional relationship;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-health-care-void-health"
+          },
+          {
+            "sourceId": "vt-495q-notice-disparagement-forum-health",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(a)",
+            "citation": "21 V.S.A. § 495q(a)(2)-(5), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(a)(2)-(5) also makes void and unenforceable, in a covered health care provider agreement, a provision that limits a separating provider's notice of a change of employment to individuals the provider directly treated, restricts disparaging statements about another party or a named third-party beneficiary, is inconsistent with Vermont law, or requires litigation over Vermont performance to be conducted in another state.",
+            "verbatimQuote": "(2) limits the ability of a separating health care provider to provide notice of the provider’s change of employment to individuals to whom the separating provider provided direct health care services; (3) restricts a health care provider from making disparaging statements about another party to the contract or agreement or about another person specified in the agreement as a third-party beneficiary of the agreement; (4) is inconsistent with Vermont law; or (5) requires litigation arising from the performance of the contract or agreement in Vermont to be conducted in another state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-notice-disparagement-forum-health"
+          },
+          {
+            "sourceId": "vt-495q-nonclinical-support-exception-health",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(c)",
+            "citation": "21 V.S.A. § 495q(c), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(c) excludes from subsection (a) restrictions that keep a health care provider who contracts with a third-party nonclinical business-support company from opening a business in a territory supported by a different nonclinical support company.",
+            "verbatimQuote": "(c) The provisions in subsection (a) of this section do not apply to restrictions that limit a health care provider who contracts with a third-party company for nonclinical business support services from opening a business within a specific territory supported by a different third-party company providing nonclinical services.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-nonclinical-support-exception-health"
+          },
+          {
+            "sourceId": "vt-495q-health-care-provider-definition-health",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(d)",
+            "citation": "21 V.S.A. § 495q(d), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(d) defines a health care provider as a person licensed, certified, or authorized by law to provide professional health care service in Vermont, so the rule is not limited to physicians.",
+            "verbatimQuote": "(d) “Health care provider” means a person licensed, certified, or authorized by law to provide professional health care service in this State to an individual during that individual’s medical care, treatment, or confinement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-health-care-provider-definition-health"
+          },
           {
             "sourceId": "andrus-health-framework",
             "authorityType": "case-law",
@@ -936,17 +1057,6 @@
             "proposition": "Andrus supports the rule that the common-law reasonableness framework (legitimate interest, employee hardship, public interest) governs Vermont restrictive covenants.",
             "verbatimQuote": "enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed.",
             "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-andrus-health-framework"
-          },
-          {
-            "sourceId": "vt-act133-health",
-            "authorityType": "primary-law",
-            "tier": "primary-source-backed",
-            "title": "Act 133 (2026) — An act relating to clinical decision making (H.583)",
-            "citation": "2026, No. 133 (Act 133) (H.583).",
-            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT133/ACT133%20As%20Enacted.pdf",
-            "proposition": "Act 133 records that it enacted H.583, an act relating to clinical decision making that adds 18 V.S.A. chapter 233.",
-            "verbatimQuote": "No. 133. An act relating to clinical decision making. (H.583) It is hereby enacted by the General Assembly of the State of Vermont: Sec. 1. 18 V.S.A. chapter 233 is added to read: CHAPTER 233. CLINICAL DECISION MAKING § 9771. DEFINITIONS As used in this chapter: (1) “Health care facility” has the same meaning as in section 9432 of this title.",
-            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-act133-health"
           }
         ]
       },
@@ -1151,9 +1261,43 @@
         "sectionId": "governing-law-venue-dispute-process",
         "itemNumber": "17.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#specify-governing-law-and-venue",
-        "requirementGuidance": "Confirm the agreement specifies governing law, venue, and a dispute-resolution process. Restrictive-covenant disputes are jurisdiction-sensitive, and a clear selection binds that risk; the identified Vermont sources state no covenant-specific choice-of-law rule, so review the selection under ordinary conflicts principles.",
+        "requirementGuidance": "Confirm the agreement specifies governing law, venue, and a dispute-resolution process. Restrictive-covenant disputes are jurisdiction-sensitive, and a clear selection binds that risk; the identified Vermont sources state no covenant-specific choice-of-law rule, so review the selection under ordinary conflicts principles. One venue rule is specific: in an agreement with a health care provider about the provider's health care services in Vermont entered into on or after July 1, 2026, a clause requiring litigation over Vermont performance to be conducted in another state is void and unenforceable.",
         "variants": [],
-        "sources": []
+        "sources": [
+          {
+            "sourceId": "vt-495q-health-care-void-venue",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(a)",
+            "citation": "21 V.S.A. § 495q(a)(1), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(a)(1), added by Act 177, makes void and unenforceable a provision in a partnership, employment, or other professional agreement with a health care provider about the provider's health care services in Vermont that restricts the provider from providing health care services in any area for any period after the relationship ends.",
+            "verbatimQuote": "(a) Any provision in a contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a health care provider regarding the health care provider’s provision of health care services in Vermont shall be void and unenforceable if the provision: (1) includes a restriction on the right of the health care provider to provide health care services in any geographical area for any period of time after the termination of such partnership, agreement, or professional relationship;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-health-care-void-venue"
+          },
+          {
+            "sourceId": "vt-495q-notice-disparagement-forum-venue",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(a)",
+            "citation": "21 V.S.A. § 495q(a)(2)-(5), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(a)(2)-(5) also makes void and unenforceable, in a covered health care provider agreement, a provision that limits a separating provider's notice of a change of employment to individuals the provider directly treated, restricts disparaging statements about another party or a named third-party beneficiary, is inconsistent with Vermont law, or requires litigation over Vermont performance to be conducted in another state.",
+            "verbatimQuote": "(2) limits the ability of a separating health care provider to provide notice of the provider’s change of employment to individuals to whom the separating provider provided direct health care services; (3) restricts a health care provider from making disparaging statements about another party to the contract or agreement or about another person specified in the agreement as a third-party beneficiary of the agreement; (4) is inconsistent with Vermont law; or (5) requires litigation arising from the performance of the contract or agreement in Vermont to be conducted in another state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-notice-disparagement-forum-venue"
+          },
+          {
+            "sourceId": "vt-495q-applies-from-july-2026-venue",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(f)",
+            "citation": "21 V.S.A. § 495q(f), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q applies to contracts and agreements entered into on or after July 1, 2026.",
+            "verbatimQuote": "(f) This section shall apply to contracts and agreements entered into on or after July 1, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-applies-from-july-2026-venue"
+          }
+        ]
       },
       {
         "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
@@ -1190,7 +1334,7 @@
         "sectionId": "vermont-statutory-gates",
         "itemNumber": "19.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#keep-covenants-reasonable-and-tied-to-a-protectable-interest",
-        "requirementGuidance": "Run every restraint through the questions a Vermont court will ask: is it consistent with public policy, necessary for the employer's protection, and no more restrictive of the worker than that protection requires? The Restatement framing makes the failure modes concrete — a restraint greater than the interest needs, or an employer need outweighed by hardship and public injury, is unreasonable. The interest can be customer relationships or employee-specific goodwill, not only trade secrets, but the employer has to prove its necessity, and the time and place have to be found as facts: enforcement has been reversed where no one established what place the covenant even covered.",
+        "requirementGuidance": "The reviewer should test every restraint that no categorical bar voids (the health care provider bar is in the health care provider item) against the questions a Vermont court will ask: is it consistent with public policy, necessary for the employer's protection, and no more restrictive of the worker than that protection requires? The Restatement framing makes the failure modes concrete — a restraint greater than the interest needs, or an employer need outweighed by hardship and public injury, is unreasonable. The interest can be customer relationships or employee-specific goodwill, not only trade secrets, but the employer has to prove its necessity, and the time and place have to be found as facts: enforcement has been reversed where no one established what place the covenant even covered.",
         "variants": [],
         "sources": [
           {
@@ -1253,7 +1397,7 @@
         "sectionId": "vermont-statutory-gates",
         "itemNumber": "19.2",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#exclude-training-covenants-imposed-by-barbering-or-cosmetology-schools",
-        "requirementGuidance": "If the worker is training for a barbering or cosmetology license, check who demanded the covenant: a school of barbering or cosmetology cannot require a covenant not to compete — with the school or an affiliate — as a condition of training for licensure. It is Vermont's only generally applicable statute voiding a category of restrictive covenant outright, and it turns on the training relationship, not the document's label.",
+        "requirementGuidance": "If the worker is training for a barbering or cosmetology license, check who demanded the covenant: a school of barbering or cosmetology cannot require a covenant not to compete — with the school or an affiliate — as a condition of training for licensure. The bar turns on the training relationship, not the document's label.",
         "variants": [],
         "sources": [
           {
@@ -1314,7 +1458,7 @@
         "sectionId": "vermont-statutory-gates",
         "itemNumber": "19.4",
         "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#tie-sale-of-business-covenants-to-the-transaction-consideration",
-        "requirementGuidance": "When the covenant rides a business sale, review it against the deal rather than the employment default: Vermont enforced a five-year, twenty-five-mile covenant delivered at closing where money was separately allocated to the covenant itself and the restrictions were reasonable as to time and place, and it treats a sale covenant with dedicated consideration as a bargained-for transaction asset in its own right. Confirm the covenant has its own consideration, matches the geography and life of the purchased goodwill, and is closed as an explicit deal term — leaving it open has helped sink an entire transaction.",
+        "requirementGuidance": "When the covenant rides a business sale, review it against the deal rather than the employment default: Vermont enforced a five-year, twenty-five-mile covenant delivered at closing where money was separately allocated to the covenant itself and the restrictions were reasonable as to time and place, and it treats a sale covenant with dedicated consideration as a bargained-for transaction asset in its own right. Confirm the covenant has its own consideration, matches the geography and life of the purchased goodwill, and is closed as an explicit deal term — leaving it open has helped sink an entire transaction. If the seller is a health care provider who will keep providing health care services in Vermont under a partnership, employment, or other professional relationship the deal creates, and the agreement is entered into on or after July 1, 2026, the conservative reading is to treat the covenant as void, because 21 V.S.A. § 495q reaches professional agreements with health care providers and subsection (c) excepts only nonclinical business-support territory restrictions.",
         "variants": [],
         "sources": [
           {
@@ -1352,6 +1496,39 @@
             "proposition": "Miller supports the rule that a non-compete is a distinct, bargained-for term in a Vermont stock sale rather than an automatic incident, and that leaving it open can defeat contract formation.",
             "verbatimQuote": "whether or not the contract includes a form of non compete or non solicitation agreement, the\n\nprice to be paid for the shares (as opposed to the Non-Compete Agreement), and the structure of\n\nthe claw-back provision.",
             "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-miller-gate"
+          },
+          {
+            "sourceId": "vt-495q-health-care-void-sale",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(a)",
+            "citation": "21 V.S.A. § 495q(a)(1), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(a)(1), added by Act 177, makes void and unenforceable a provision in a partnership, employment, or other professional agreement with a health care provider about the provider's health care services in Vermont that restricts the provider from providing health care services in any area for any period after the relationship ends.",
+            "verbatimQuote": "(a) Any provision in a contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a health care provider regarding the health care provider’s provision of health care services in Vermont shall be void and unenforceable if the provision: (1) includes a restriction on the right of the health care provider to provide health care services in any geographical area for any period of time after the termination of such partnership, agreement, or professional relationship;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-health-care-void-sale"
+          },
+          {
+            "sourceId": "vt-495q-applies-from-july-2026-sale",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(f)",
+            "citation": "21 V.S.A. § 495q(f), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q applies to contracts and agreements entered into on or after July 1, 2026.",
+            "verbatimQuote": "(f) This section shall apply to contracts and agreements entered into on or after July 1, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-applies-from-july-2026-sale"
+          },
+          {
+            "sourceId": "vt-495q-nonclinical-support-exception-sale",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Act 177 (2026), Sec. 8e — 21 V.S.A. § 495q(c)",
+            "citation": "21 V.S.A. § 495q(c), as added by 2026, No. 177 (Act 177), Sec. 8e.",
+            "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT177/ACT177%20As%20Enacted.pdf",
+            "proposition": "21 V.S.A. § 495q(c) excludes from subsection (a) restrictions that keep a health care provider who contracts with a third-party nonclinical business-support company from opening a business in a territory supported by a different nonclinical support company.",
+            "verbatimQuote": "(c) The provisions in subsection (a) of this section do not apply to restrictions that limit a health care provider who contracts with a third-party company for nonclinical business support services from opening a business within a specific territory supported by a different third-party company providing nonclinical services.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/vermont#src-vt-495q-nonclinical-support-exception-sale"
           }
         ]
       }

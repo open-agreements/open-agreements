@@ -6,7 +6,7 @@ description: >-
   in 3 document(s).
 citation: 'Roy''s Orthopedic, Inc. v. Lavigne, 142 Vt. 347, 454 A.2d 1242 (1982).'
 resource: 'https://www.courtlistener.com/opinion/2367186/roys-orthopedic-inc-v-lavigne/'
-timestamp: '2026-09-26'
+timestamp: '2026-10-09'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'

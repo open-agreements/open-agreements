@@ -1,7 +1,7 @@
 {
   "topic": "non-compete",
   "content_packaged_at": "2026-10-09",
-  "sourceCommit": "175b1f7a4b303ef6e89d5dd18ca1f128eb47b01a",
+  "sourceCommit": "f211a2cd48fe8db5a5b60b1da4ea108c3d399c37",
   "canonicalBase": "https://openagreements.org/practice-guides/non-compete",
   "license": "CC BY 4.0",
   "jurisdictions": [
@@ -719,9 +719,9 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/vermont",
       "file": "content/vermont.md",
-      "law_checked_through": "2026-09-26",
+      "law_checked_through": "2026-10-09",
       "human_reviewed_at": null,
-      "next_review_due": "2027-03-25",
+      "next_review_due": "2027-04-07",
       "content_packaged_at": "2026-10-09",
       "stale": false
     },
