@@ -40,17 +40,17 @@
     "slug": "nigeria",
     "frontmatter": {
       "title": "Hiring Reviewer Checklist — Nigeria",
-      "description": "Review Nigerian hiring terms, worker coverage, written particulars, delivery, notice and onboarding questions before issuing an offer.",
+      "description": "Review a first Nigerian employee hire for worker coverage, written particulars, leave, minimum wage, PAYE tax, pension, employee data, IP assignment, notice and onboarding questions.",
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "Nigeria",
-      "coverage": "Nigeria — written employment terms and onboarding",
+      "coverage": "Nigeria — first-employee hiring, written terms, payroll and onboarding",
       "lastReviewed": "2026-09-28",
       "license": "CC BY 4.0",
       "authors": [
         "steven-obiajulu"
       ]
     },
-    "requirementCount": 10,
+    "requirementCount": 17,
     "sections": [
       {
         "sectionId": "coverage-and-employer",
@@ -59,6 +59,14 @@
       {
         "sectionId": "written-terms-and-delivery",
         "label": "Written terms and delivery"
+      },
+      {
+        "sectionId": "pay-tax-and-contributions",
+        "label": "Pay, tax and contributions"
+      },
+      {
+        "sectionId": "data-and-ip",
+        "label": "Employee data and IP"
       },
       {
         "sectionId": "onboarding-and-unresolved-work",
@@ -88,6 +96,18 @@
             "proposition": "Worker coverage is limited by the statutory definition and its exclusions.",
             "verbatimQuote": "\"worker\" means any person who has entered into or works under a contract with an employer, whether the contract is for manual labour or clerical work or is expressed or implied or oral or written, and whether it is a contract of service or a contract personally to execute any work or labour, but does not include‐ (a) any person employed otherwise than for the purposes of the employer's business; or (b) persons exercising administrative, executive, technical or professional functions as public officers or otherwise; or (c) members of the employer's family; or (d) representatives, agents and commercial travellers in so far as their work is carried on outside the permanent workplace of the employer's establishment; or (a) any person to whom articles or materials are given out to be made up, cleaned, washed, altered, ornamented, finished, repaired or adapted for sale in his own home or on other premises not under the control or management of the person who gave out the articles or the material; or (b) any person employed in a vessel or aircraft to which the laws regulating merchant shipping or civil aviation apply;",
             "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-worker-coverage"
+          },
+          {
+            "sourceId": "ng-checklist-aelex-statutory-workers",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "AELEX — Redundancy Procedure under Nigerian Labour Law",
+            "citation": "AELEX (collective byline), Redundancy Procedure under Nigerian Labour Law, 20 June 2023, retrieved 8 October 2026.",
+            "url": "https://aelex.com/redundancy-procedure-under-nigerian-labour-law/",
+            "proposition": "AELEX notes that the Labour Act redundancy procedure covers only employees within its statutory worker definition.",
+            "verbatimQuote": "The major issue to note in a redundancy scenario is that reliance on the Act will only cater for employees who fall within the statutory definition of workers as defined in the Labour Act.",
+            "date": "2023-06-20",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-aelex-statutory-workers"
           }
         ]
       },
@@ -100,9 +120,22 @@
         "sectionId": "coverage-and-employer",
         "itemNumber": "1.2",
         "anchor": "https://openagreements.org/checklists/hiring/nigeria#identify-employer-and-engagement",
-        "requirementGuidance": "Record the legal employer, candidate, actual duties, reporting line, work location, start date and fixed-term expiry if relevant. Complete the agreed terms before sending the offer. This is a drafting safeguard, not a statutory coverage determination.",
+        "requirementGuidance": "Record the legal employer, candidate, actual duties, reporting line, work location, State of residence, start date and any relevant fixed-term expiry, and confirm the agreed terms are complete before the offer is sent. This is a drafting safeguard, not a statutory coverage determination.",
         "variants": [],
-        "sources": []
+        "sources": [
+          {
+            "sourceId": "ng-checklist-olaniwun-residence-taxable",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Olaniwun Ajayi — Employment Income Taxation under the Tax Reform Acts",
+            "citation": "Olaniwun Ajayi LP (collective byline), Employment Income Taxation under the Tax Reform Acts: A Compliance Guide for Employees and Employers, 16 July 2025, retrieved 8 October 2026.",
+            "url": "https://www.olaniwunajayi.net/blog/employment-income-taxation-under-the-tax-reform-acts-a-compliance-guide-for-employees-and-employers/",
+            "proposition": "Olaniwun Ajayi explains that employment income is taxable in Nigeria where the employee is resident, which makes the employee's residence a payroll fact to record.",
+            "verbatimQuote": "Employment income is taxable in Nigeria where the employee is resident here.",
+            "date": "2025-07-16",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-olaniwun-residence-taxable"
+          }
+        ]
       },
       {
         "requirementId": "complete-written-particulars",
@@ -217,12 +250,534 @@
             "sourceId": "ng-checklist-notice",
             "authorityType": "primary-law",
             "tier": "primary-source-backed",
-            "title": "Nigeria Labour Act — s. 11(2)–(9)",
-            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 11(2)–(9); official NIPC resource PDF, retrieved 28 September 2026.",
+            "title": "Nigeria Labour Act — s. 11(2)–(3)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 11(2)–(3); official NIPC resource PDF, retrieved 28 September 2026.",
             "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
             "proposition": "The Act specifies service-based notice and writing for notice of one week or more.",
             "verbatimQuote": "(2) The notice to be given for the purposes of subsection (1) of this section shall be‐ (a) one day, where the contract has continued for a period of three months or less; (b) one week, where the contract had continued for more than three months but less than two years; (c) two weeks, where the contract has continued for a period of two years but less than five years; and (d) one month, where the contract had continued for five years or more. (3) Any notice for a period of one week or more shall be in writing.",
             "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-notice"
+          },
+          {
+            "sourceId": "ng-checklist-templars-termination",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Templars — Is Termination of Employment without Reason Still Valid in Nigeria?",
+            "citation": "Adewale Atake SAN, Inam Wilson SAN, Joseph Abukpain and Konyin Osipitan, Templars, Is Termination of Employment without Reason Still Valid in Nigeria?, 20 June 2023, retrieved 8 October 2026.",
+            "url": "https://www.templars-law.com/app/uploads/2023/06/IS-TERMINATION-OF-EMPLOYMENT-WITHOUT-REASON-STILL-VALID-IN-NIGERIA.docx.pdf",
+            "proposition": "Templars read Nigerian law as still allowing termination without cause where the employment contract provides for it.",
+            "verbatimQuote": "Despite the NICN’s altruism and best intentions toward employees, the position of Nigerian law remains that, if the employment contract provides for termination without cause, the employer can terminate for services no longer required and is not obliged to furnish any reasons.",
+            "date": "2023-06-20",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-templars-termination"
+          },
+          {
+            "sourceId": "ng-checklist-notice-day-and-payment-in-lieu",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 11(4)–(6)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 11(4)–(6); official NIPC resource PDF, retrieved 8 October 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 11(4)–(6) excludes the notice day, preserves termination without notice for qualifying conduct, and permits waiver of notice or payment in lieu.",
+            "verbatimQuote": "(4) The periods of notice specified in subsection (2) of this section exclude the day on which notice is given. (5) Nothing in this section affects any right of either party to a contract to treat the contract as terminable without notice by reason of such conduct by the other party as would have enabled him so to treat it before the making of this Act. (6) Nothing in this section shall prevent either party to a contract from waiving his right to notice on any occasion, or from accepting a payment in lieu of notice.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-notice-day-and-payment-in-lieu"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-statutory-leave",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.provide-statutory-leave",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory leave floors for covered workers",
+        "sectionId": "written-terms-and-delivery",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#provide-statutory-leave",
+        "requirementGuidance": "For a covered worker, check that the leave terms give at least six working days' annual holiday with full pay after twelve months' continuous service (twelve working days for a worker under sixteen, including an apprentice), with no pay in lieu while the contract continues, and paid sick leave of up to twelve working days in each calendar year for certified temporary illness, subject to section 16's continuing-contract, readiness-to-work and requested-examination conditions. Check that leave pay and sick pay are calculated on money wages excluding overtime and other allowances, or more, and that a worker leaving after six to under twelve months' continuous service, or at least six months after last qualifying for a holiday, receives the section 18(4) proportion of one week's full pay. Check maternity terms against section 54(1), which is framed around women in the listed undertakings rather than the worker definition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-annual-holiday",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 18",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 18(1)–(3); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 18 gives a covered worker at least six working days' paid holiday after twelve months' continuous service and bars pay in lieu while the contract continues.",
+            "verbatimQuote": "(1) Every worker shall be entitled after twelve months' continuous service to a holiday with full pay of‐ (a) at least six working days; or (b) in the case of a person under the age of sixteen years (including an apprentice), at least twelve working days. (2) The holiday mentioned in subsection (1) of this section may be deferred by agreement between the employer and the worker: Provided that the holiday‐earning period shall not thereby be increased beyond 24 months' continuous service. (3) It shall be unlawful for an employer to pay wages in lieu of the holiday mentioned in subsection (1) of this section to a worker whose contract has not terminated.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-annual-holiday"
+          },
+          {
+            "sourceId": "ng-checklist-sick-leave",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 16",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 16; official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 16 entitles a covered worker to wages for up to twelve working days a year of certified temporary illness.",
+            "verbatimQuote": "Subject to the Workmen's Compensation Act, a worker shall be entitled to be paid wages up to twelve working days in anyone calendar year during absence from work caused by temporary illness certified by a registered medical practitioner: [Cap. W6.] Provided that this section shall not apply unless‐ (a) the contract remains in existence during the period of absence and the worker is ready and willing to perform his part of the contract save for the incapacity produced by the illness; and (b) the worker, if so requested by the employer, consents to be examined by a qualified medical practitioner nominated by the employer.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-sick-leave"
+          },
+          {
+            "sourceId": "ng-checklist-leave-pay-money-wages",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 19",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 19; official NIPC resource PDF, retrieved 13 October 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 19 counts only money wages, excluding overtime and other allowances, in calculating leave pay and sickness benefits.",
+            "verbatimQuote": "In the calculation of leave pay and sickness benefits only that part of his wages which a worker receives in money (excluding overtime and other allowances) shall be taken into account.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-leave-pay-money-wages"
+          },
+          {
+            "sourceId": "ng-checklist-holiday-pay-on-leaving",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 18(4)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 18(4); official NIPC resource PDF, retrieved 13 October 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 18(4) entitles a worker who leaves after six to under twelve months' continuous service, or at least six months after last qualifying for a holiday, to a proportion of one week's full pay for that period.",
+            "verbatimQuote": "(4) A person who ceases to be employed after having completed‐ (a) less than twelve but not less than six months in the continuous employment of an employer; or (b) not less than six months in the continuous employment of an employer since he last qualified for a holiday under subsection (1) of this section, shall be paid with respect to that period of employment an amount bearing the same proportion to full pay for one week at his normal rate as that period bears to twelve months.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-holiday-pay-on-leaving"
+          },
+          {
+            "sourceId": "ng-checklist-maternity-leave",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 54(1)",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 54(1); official NIPC resource PDF, retrieved 28 September 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 54(1) gives a woman in a covered undertaking pre- and post-confinement leave and at least half pay after six months' continuous service.",
+            "verbatimQuote": "(1) In any public or private industrial or commercial undertaking or in any branch thereof, or in any agricultural undertaking or any branch thereof, a woman‐ (a) shall have the right to leave her work if she produces a medical certificate given by a registered medical practitioner stating that her confinement will probably take place within six weeks; (b) shall not be permitted to work during the six weeks following her confinement; (c) if she is absent from her work in pursuance of paragraph (a) or (b) of this subsection and had been continuously employed by her then employer for a period of six months or more immediately prior to her absence, shall be paid not less than fifty per cent of the wages she would have earned if she had not been absent; and (d) shall in any case, if she is nursing her child, be allowed half an hour twice a day during her working hours for that purpose.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-maternity-leave"
+          }
+        ]
+      },
+      {
+        "requirementId": "follow-redundancy-duties",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.follow-redundancy-duties",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Redundancy duties for covered workers",
+        "sectionId": "written-terms-and-delivery",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#follow-redundancy-duties",
+        "requirementGuidance": "If covered workers lose their jobs through an excess of manpower, confirm that the employer informs the trade union or workers' representative of the reasons and extent, applies last in, first out within the particular category of workers affected, subject to relative merit, and uses best endeavours to negotiate redundancy payments for discharged workers not protected by section 20(2) regulations. Record each step and whether any such regulations require compulsory allowances.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-redundancy",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Labour Act — s. 20",
+            "citation": "Labour Act, Cap L1, Laws of the Federation of Nigeria 2004, s. 20; official NIPC resource PDF, retrieved 8 October 2026.",
+            "url": "https://nipc.gov.ng/assets/resources/labour-act/labour-act.pdf",
+            "proposition": "Section 20 requires an employer in a redundancy to inform the union or worker representatives, apply last in, first out subject to merit, and use best endeavours to negotiate redundancy payments, and defines redundancy.",
+            "verbatimQuote": "(1) In the event of redundancy‐ (a) the employer shall inform the trade union or workers' representative concerned of the reasons for and the extent of the anticipated redundancy; (b) the principle of \"last in, first out\" shall be adopted in the discharge of the particular category of workers affected, subject to all factors of relative merit, including skill, ability and reliability; and (c) the employer shall use his best endeavours to negotiate redundancy payments to any discharged workers who are not protected by regulations made under subsection (2) of this section. (2) The Minister may make regulations providing, generally or in particular cases, for the compulsory payment of redundancy allowances on the termination of a worker's employment because of his redundancy. (3) In this section \"redundancy\" means an involuntary and permanent loss of employment caused by an excess of manpower.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-redundancy"
+          }
+        ]
+      },
+      {
+        "requirementId": "check-minimum-wage",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.check-minimum-wage",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "National minimum wage or exemption",
+        "sectionId": "pay-tax-and-contributions",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#check-minimum-wage",
+        "requirementGuidance": "Unless a section 4(1) exemption applies, such as an establishment employing fewer than 25 persons or part-time or commission pay, check that the agreed wage is at least the national minimum wage; an agreement to pay less is void. Record the exemption relied on, or the monthly wage against the ₦70,000 rate that practitioners report the 2024 amendment set; the enacted amendment text was not available from an official host.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-olisa-minimum-wage-rate",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Olisa Agbakoba Legal — New Minimum Wage Amendment Act",
+            "citation": "Seun Akinade and Ifeoma Ezenwa, Olisa Agbakoba Legal, Navigating Labour Compliance in Nigeria: the New Minimum Wage Amendment Act, 20 November 2024, retrieved 8 October 2026.",
+            "url": "https://oal.law/navigating-labour-compliance-in-nigeria-what-every-hr-pofessional-needs-to-know-about-the-new-minimum-wage-amendment-act/",
+            "proposition": "Olisa Agbakoba Legal reports that the 2024 amendment raised the national minimum wage to ₦70,000 a month.",
+            "verbatimQuote": "The Act raises the National Minimum Wage from ₦30,000 to ₦70,000 per month, effective July 2024.",
+            "date": "2024-11-20",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-olisa-minimum-wage-rate"
+          },
+          {
+            "sourceId": "ng-checklist-simmonscooper-exemptions-retained",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "SimmonsCooper Partners — The 2024 Minimum Wage Act",
+            "citation": "SimmonsCooper Partners (collective byline), The 2024 Minimum Wage Act: A Closer Look at What’s New and What’s Not, 31 July 2024, retrieved 8 October 2026.",
+            "url": "https://resource.scp-law.com/2024/07/31/the-2024-minimum-wage-act-a-closer-look-at-whats-new-and-whats-not/",
+            "proposition": "SimmonsCooper Partners report that the 2024 amendment raised the rate, shortened the review period to three years and kept the section 4 exemptions.",
+            "verbatimQuote": "The minimum wage has been raised from N30,000 toN70,000. - Review Period Reduction: The interval for reviewing the minimum wage has been shortened from five to three years, enabling more responsive adjustments to economic conditions. Unchanged Exemptions Despite these beneficial changes, the amendment retains several exemptions specified under Section 4 from the 2019 Act: - Part-Time and Commission-Based Employees: Workers earning on a part-time or commission basis remain exempt from the minimum wage. - Small Establishments: Businesses with fewer than 25 employees are not obligated to pay the statutory minimum wage.",
+            "date": "2024-07-31",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-simmonscooper-exemptions-retained"
+          },
+          {
+            "sourceId": "ng-checklist-minimum-wage-exemptions",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria National Minimum Wage Act 2019 — s. 4(1)",
+            "citation": "National Minimum Wage Act, 2019 (Act No. 8), s. 4(1); Official Gazette No. 62 supplement, archived facsimile, retrieved 8 October 2026. OCR distortions of the printed paragraph labels are preserved.",
+            "url": "https://archive.gazettes.africa/archive/ng/2019/ng-government-gazette-supplement-dated-2019-04-23-no-62.pdf",
+            "proposition": "Section 4(1) disapplies the section 3(1) minimum-wage duty for part-time and commission or piece-rate establishments, establishments employing fewer than 25 persons, seasonal workers, and specified vessel and aircraft employment.",
+            "verbatimQuote": "4.—(1) Section 3 (1) does not apply to— & (a) an establishment in which workers are employed or paid on— (7) part-time basis, and (ji) commission or piece-rate ; (5) an establishment employing less than 25 persons ; (c) workers in seasonal employment like agriculture ; and (d) any person employed ina vessel or aircraft to which the laws regulating merchant shipping or civil aviation apply.",
+            "date": "2019-04-18",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-minimum-wage-exemptions"
+          },
+          {
+            "sourceId": "ng-checklist-minimum-wage-void",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria National Minimum Wage Act 2019 — s. 3(3)",
+            "citation": "National Minimum Wage Act, 2019 (Act No. 8), s. 3(3); Official Gazette No. 62 supplement, archived facsimile, retrieved 8 October 2026.",
+            "url": "https://archive.gazettes.africa/archive/ng/2019/ng-government-gazette-supplement-dated-2019-04-23-no-62.pdf",
+            "proposition": "Section 3(3) makes an agreement to pay less than the national minimum wage void.",
+            "verbatimQuote": "(3) Any agreement for the payment of wages less than the national minimum wage is void.",
+            "date": "2019-04-18",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-minimum-wage-void"
+          }
+        ]
+      },
+      {
+        "requirementId": "deduct-and-remit-paye",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.deduct-and-remit-paye",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "PAYE deduction, remittance and annual return",
+        "sectionId": "pay-tax-and-contributions",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#deduct-and-remit-paye",
+        "requirementGuidance": "Confirm that the employer deducts the employee's income tax from each salary payment, remits it by the 10th day of the following month under the Joint Revenue Board's 2026 guidelines, and in any event before section 107(1)'s penalty and interest attach after the 21st day, to the relevant tax authority, ordinarily the State or Federal Capital Territory authority where the employee resides, and files the annual employer return by 31 January. Record the residence used and any federal exception that applies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-paye-state-authority",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Tax Administration Act 2025 — s. 3(2)",
+            "citation": "Nigeria Tax Administration Act, 2025 (Act No. 5), s. 3(2)(a); Official Gazette No. 117, 26 June 2025, National Assembly copy; retrieved 8 October 2026. Section 3(1)(a)(ii)–(iv) reserves armed forces, police, foreign service and non-resident cases to the Nigeria Revenue Service.",
+            "url": "https://nass.gov.ng/documents/download/11250",
+            "proposition": "Section 3(2) makes the State or Federal Capital Territory tax authority responsible for administering taxes on resident individuals, subject to the Nigeria Revenue Service's exclusive heads in section 3(1)(a)(ii)–(iv).",
+            "verbatimQuote": "(2) The relevant tax authority in a State or the Federal Capital Territory, shall under to the First Schedule to this Act, be responsible for — (a) the administration of taxes for resident individuals in respect of — (i) imposition of tax on income, profits or gains, (ii) ascertainment of profits and income, (iii) ascertainment of assessable profits and income, (iv) ascertainment of total income, (v) ascertainment of chargeable gains, (vi) rates of tax, subject to subsection (1) (a) (ii) - (iv) of this section.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-paye-state-authority"
+          },
+          {
+            "sourceId": "ng-checklist-paye-deduction",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Tax Administration Act 2025 — s. 51(6)–(7)",
+            "citation": "Nigeria Tax Administration Act, 2025 (Act No. 5), s. 51(6)–(7); Official Gazette No. 117, 26 June 2025, National Assembly copy; retrieved 8 October 2026.",
+            "url": "https://nass.gov.ng/documents/download/11250",
+            "proposition": "Section 51(6)–(7) requires an employer to deduct an employee's income tax from emoluments so that the year's deductions equal the tax chargeable.",
+            "verbatimQuote": "(6) Income tax chargeable on an employee whether or not the assessment has been made, shall be deducted from any emolument payable, or from any payment made on account of the emolument, by the employer to the employee. (7) In arriving at the amount of income tax to be deducted from any payment of or on account of the emolument to an employee, the employer shall ensure that the aggregate amount of all the deductions made during a year of assessment shall equal the income tax chargeable on the employee in respect of its emoluments for that year.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-paye-deduction"
+          },
+          {
+            "sourceId": "ng-checklist-jrb-paye-remit-by-tenth-day",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "Joint Revenue Board — Personal Income Tax Guidelines 2026, para. 12.2",
+            "citation": "Joint Revenue Board of Nigeria, Personal Income Tax Guidelines, 2026, para. 12.2, 24 February 2026, retrieved 13 October 2026.",
+            "url": "https://cms-api.jrb.gov.ng/api/news-document-assets/file/2026-pit-guidelines-TJG3n9-T%20(1).pdf",
+            "proposition": "The Joint Revenue Board's 2026 guidelines require PAYE deducted at source to be remitted to the relevant tax authority by the 10th day of the following month.",
+            "verbatimQuote": "12.2. Pay-As-You-Earn amount deducted at source shall be remitted to the relevant tax authority not later than the 10th day of the month following the deduction.",
+            "date": "2026-02-24",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-jrb-paye-remit-by-tenth-day"
+          },
+          {
+            "sourceId": "ng-checklist-paye-remittance",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Tax Administration Act 2025 — s. 107(1)",
+            "citation": "Nigeria Tax Administration Act, 2025 (Act No. 5), s. 107(1); Official Gazette No. 117, 26 June 2025, National Assembly copy; retrieved 8 October 2026. The printed marginal note appears inside the quote as the text layer places it.",
+            "url": "https://nass.gov.ng/documents/download/11250",
+            "proposition": "Section 107(1) makes a person who has not remitted tax deducted at source by the 21st day of the following month liable for the unremitted amount, a penalty and interest.",
+            "verbatimQuote": "107.—(1) A person, that deducts, collects or withholds any tax under this Act, and fails to remit the amount deducted, collected or withheld by the 21st day of the month immediately succeeding the month in which the amount was deducted, collected or withheld, is liable to pay — Failure to remit tax deducted at source or self-account (a) the amount deducted, collected or withheld but not remitted ; (b) an administrative penalty of 10% per annum of the tax deducted, collected or withheld but not remitted ; and (c) interest at the prevailing Central Bank of Nigeria monetary policy rate.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-paye-remittance"
+          },
+          {
+            "sourceId": "ng-checklist-paye-annual-return",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Tax Administration Act 2025 — s. 14(1)–(2)",
+            "citation": "Nigeria Tax Administration Act, 2025 (Act No. 5), s. 14(1)–(2); Official Gazette No. 117, 26 June 2025, National Assembly copy; retrieved 8 October 2026.",
+            "url": "https://nass.gov.ng/documents/download/11250",
+            "proposition": "Section 14 requires an employer's annual return of employees' emoluments and tax deducted by 31 January.",
+            "verbatimQuote": "14.—(1) An employer shall file a return with the relevant tax authority for all emoluments paid to its employees, not later than 31st January of each year in respect of all employees in its employment in the preceding year. (2) The returns shall disclose for each employee gross emoluments, including allowances and benefits in kind, total deductions, net emoluments and tax deducted.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-paye-annual-return"
+          },
+          {
+            "sourceId": "ng-checklist-paye-state-residence",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Tax Act 2025 — Twelfth Schedule, para. 2",
+            "citation": "Nigeria Tax Act, 2025 (Act No. 7), Twelfth Schedule, para. 2; Official Gazette No. 117, 26 June 2025, National Assembly copy; commencement 1 January 2026; retrieved 8 October 2026.",
+            "url": "https://nass.gov.ng/documents/download/11249",
+            "proposition": "An individual in Nigerian employment is deemed resident for the year in the territory of the individual's place or principal place of residence.",
+            "verbatimQuote": "2. An individual who holds a Nigerian employment on 1st January in a year of assessment, or who first becomes liable to income tax in Nigeria for that year by reason of his entering that employment during that year, shall be deemed to be resident for that year in the territory in which he has a place or principal place of residence on that day or, as the case may be, on the day on which he enters upon the full duties of that employment in Nigeria:",
+            "date": "2026-01-01",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-paye-state-residence"
+          }
+        ]
+      },
+      {
+        "requirementId": "enrol-pension-and-group-life",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.enrol-pension-and-group-life",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Pension scheme and group life insurance",
+        "sectionId": "pay-tax-and-contributions",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#enrol-pension-and-group-life",
+        "requirementGuidance": "For a private employer with three or more employees, confirm that each employee within the scheme has a retirement savings account with an administrator of the employee's choice, or that a temporary account is requested after six months. Record whether the hire is a foreigner or on a temporary, contract or tenured appointment, whom the Commission treats as voluntary participants. Confirm that the employer remits contributions within seven working days after paying salaries, using a contractual emoluments base no lower than basic salary plus housing and transport allowances. Under the shared arrangement, confirm that the employer deducts the employee's contribution and remits it with the employer's, at no less than 10% employer and 8% employee of monthly emoluments; if the employer elects under section 4(4)(b) to bear the whole contribution, confirm that it pays at least 20% of monthly emoluments. Confirm that group life insurance of at least three times annual total emolument, which the Commission treats as gross emolument, is in force for each employee under the scheme, that the premium is paid by the date cover begins, and that written renewal negotiations start two months before the cover expires.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-pension-rates-remittance",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Frequently Asked Questions (2023), questions 14–15",
+            "citation": "National Pension Commission, Frequently Asked Questions (2023), questions 14–15, retrieved 8 October 2026. The quote preserves a page number that the text layer places inside it.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2023/09/FREQUENTLY-ASKED-QUESTIONS-2023.pdf",
+            "proposition": "The National Pension Commission states that the employer deducts and remits contributions within seven working days of paying salaries, at a minimum of 18% of monthly emoluments split 10% employer and 8% employee.",
+            "verbatimQuote": "The employer is obliged by law to deduct and remit pension contributions into the employee's RSA not later than 7 working days from the date salaries are paid. 15. What are the rates of contributions under the CPS? 31 The minimum rate of contribution is 18% of the employee's monthly emoluments, where 10% is contributed by the employer and 8% is contributed by the employee.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-pension-rates-remittance"
+          },
+          {
+            "sourceId": "ng-checklist-pension-employer-bears-full-contribution",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Pension Reform Act 2014 — s. 4(4)",
+            "citation": "Pension Reform Act, 2014, s. 4(4); National Pension Commission copy, retrieved 13 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2018/01/PRA_2014.pdf",
+            "proposition": "Section 4(4)(b) lets an employer elect to bear the whole contribution, at not less than 20% of the employee's monthly emoluments.",
+            "verbatimQuote": "(4) Notwithstanding any of the provisions of this Act, an employer may agree - (a) on the payment of additional benefits to the employee upon retirement; or (b) elect to bear the full responsibility of the Scheme provided that in such a case, the employer's contribution shall not be less than 20 percent of the monthly emoluments of the employee.",
+            "date": "2014-07-01",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-pension-employer-bears-full-contribution"
+          },
+          {
+            "sourceId": "ng-checklist-pension-emoluments-base",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Frequently Asked Questions (2023), question 7",
+            "citation": "National Pension Commission, Frequently Asked Questions (2023), question 7, retrieved 8 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2023/09/FREQUENTLY-ASKED-QUESTIONS-2023.pdf",
+            "proposition": "The National Pension Commission states that monthly emoluments are as defined in the employment contract but not less than basic salary plus housing and transport allowances.",
+            "verbatimQuote": "The constituent of monthly emoluments is as may be defined in the employee's contract of employment, but should not be less than the total sum of basic salary, housing and transport allowances.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-pension-emoluments-base"
+          },
+          {
+            "sourceId": "ng-checklist-group-life-scheme",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Revised Guidelines on Group Life Insurance Policy, para. 4.5",
+            "citation": "National Pension Commission, Revised Guidelines on Group Life Insurance Policy (2020), para. 4.5, retrieved 8 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2020/09/Revised-Guideline-on-GLIP-2020.pdf",
+            "proposition": "The National Pension Commission describes group life cover as mandatory for all employees under the Contributory Pension Scheme while they remain in employment.",
+            "verbatimQuote": "4.5 Insurance cover is mandatory for all employees under the CPS as long as they are in employment.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-group-life-scheme"
+          },
+          {
+            "sourceId": "ng-checklist-pension-coverage",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Revised RSA Registration Guidelines, para. 1.2.2",
+            "citation": "National Pension Commission, Revised Guidelines for Retirement Savings Account Registration, para. 1.2.2, retrieved 8 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2024/02/REVISED-RSA-REGISTRATION-GUIDELINES.pdf",
+            "proposition": "The National Pension Commission states that section 2 of the Pension Reform Act 2014 mandates participation by employees of private organizations with three or more employees.",
+            "verbatimQuote": "1.2.2 Section 2 of the PRA 2014 further mandates participation by employees in private sector organizations with three (3) or more employees and self-employed individuals.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-pension-coverage"
+          },
+          {
+            "sourceId": "ng-checklist-pension-foreigners-voluntary",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Frequently Asked Questions (2023), Part 1, question 15",
+            "citation": "National Pension Commission, Frequently Asked Questions (2023), Part 1, question 15, retrieved 13 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2023/09/FREQUENTLY-ASKED-QUESTIONS-2023.pdf",
+            "proposition": "The National Pension Commission states that foreigners working in Nigeria are not mandated to participate in the Contributory Pension Scheme but may participate voluntarily.",
+            "verbatimQuote": "Foreigners working in Nigeria are not mandated by law to participate in the CPS. However, such foreigners may voluntarily participate in the Scheme.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-pension-foreigners-voluntary"
+          },
+          {
+            "sourceId": "ng-checklist-pension-temporary-contract-voluntary",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Frequently Asked Questions (2023), Part 1, question 18",
+            "citation": "National Pension Commission, Frequently Asked Questions (2023), Part 1, question 18, retrieved 13 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2023/09/FREQUENTLY-ASKED-QUESTIONS-2023.pdf",
+            "proposition": "The National Pension Commission states that employees on temporary, contract or tenured appointments may voluntarily join the Contributory Pension Scheme.",
+            "verbatimQuote": "Employees on temporary, contract or tenured appointments may voluntarily join the CPS.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-pension-temporary-contract-voluntary"
+          },
+          {
+            "sourceId": "ng-checklist-pension-rsa-choice",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Revised RSA Registration Guidelines, para. 1.2.4",
+            "citation": "National Pension Commission, Revised Guidelines for Retirement Savings Account Registration, para. 1.2.4, retrieved 8 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2024/02/REVISED-RSA-REGISTRATION-GUIDELINES.pdf",
+            "proposition": "The National Pension Commission states that covered employees open retirement savings accounts in their own names with administrators of their choice.",
+            "verbatimQuote": "1.2.4 The category of individuals referred to in 1.2.1 and 1.2.2 above shall open Retirement Savings Accounts (RSAs), in their names, with PFAs of their choice.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-pension-rsa-choice"
+          },
+          {
+            "sourceId": "ng-checklist-pension-temporary-account",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Revised RSA Registration Guidelines, para. 1.2.5",
+            "citation": "National Pension Commission, Revised Guidelines for Retirement Savings Account Registration, para. 1.2.5, retrieved 8 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2024/02/REVISED-RSA-REGISTRATION-GUIDELINES.pdf",
+            "proposition": "An employer requests a temporary retirement savings account for an employee who has not opened one within six months.",
+            "verbatimQuote": "1.2.5 Where an employee fails to open an RSA within a period of 6 months after assumption of duty, his employer shall, subject to guidelines issued by the Commission, request a PFA to open a temporary RSA for such employee for the remittance of his/her pension contributions, as stipulated in Section 11 (5) of the PRA 2014.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-pension-temporary-account"
+          },
+          {
+            "sourceId": "ng-checklist-group-life",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Revised Guidelines on Group Life Insurance Policy, para. 1.2.1",
+            "citation": "National Pension Commission, Revised Guidelines on Group Life Insurance Policy (2020), para. 1.2.1, retrieved 8 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2020/09/Revised-Guideline-on-GLIP-2020.pdf",
+            "proposition": "The National Pension Commission quotes section 4(5) of the Pension Reform Act 2014 as requiring group life insurance of at least three times each employee's annual total emolument.",
+            "verbatimQuote": "Section 4(5) of the PRA 2014, provides that \"every employer shall maintain a Group Life Insurance Policy in favour of each employee for a minimum of three times the annual total emolument of the employee and premium shall be paid not later than the date of commencement of the cover\".",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-group-life"
+          },
+          {
+            "sourceId": "ng-checklist-group-life-gross-emolument",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Revised Guidelines on Group Life Insurance Policy, para. 4.7",
+            "citation": "National Pension Commission, Revised Guidelines on Group Life Insurance Policy (2020), para. 4.7, retrieved 13 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2020/09/Revised-Guideline-on-GLIP-2020.pdf",
+            "proposition": "The National Pension Commission treats annual total emolument for group life cover as the employee's gross emolument.",
+            "verbatimQuote": "Annual Total Emolument, for the purpose of Group Life Insurance Policy under the PRA 2014, shall be the gross emolument of an employee.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-group-life-gross-emolument"
+          },
+          {
+            "sourceId": "ng-checklist-group-life-renewal",
+            "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
+            "title": "PenCom — Revised Guidelines on Group Life Insurance Policy, para. 5.6",
+            "citation": "National Pension Commission, Revised Guidelines on Group Life Insurance Policy (2020), para. 5.6, retrieved 13 October 2026.",
+            "url": "https://www.pencom.gov.ng/wp-content/uploads/2020/09/Revised-Guideline-on-GLIP-2020.pdf",
+            "proposition": "The National Pension Commission requires the employer to begin written renewal negotiations two months before group life cover expires and to conclude them before it ends.",
+            "verbatimQuote": "The employer shall be required to commence renewal negotiations in writing two (2) months before the expiration of the subsisting insurance cover. The employer shall conclude negotiation for renewal before the last day of the subsisting cover.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-group-life-renewal"
+          }
+        ]
+      },
+      {
+        "requirementId": "give-employee-privacy-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.give-employee-privacy-notice",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee privacy notice before collection",
+        "sectionId": "data-and-ip",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#give-employee-privacy-notice",
+        "requirementGuidance": "Before collecting personal data directly from the candidate or employee, confirm that the employer gives the section 27(1) information: controller identity and contact, lawful basis and purposes, recipients, retention period, data-subject rights, the right to complain to the Commission, and any automated decision-making.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-ndpa-notice",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Data Protection Act 2023 — s. 27(1)",
+            "citation": "Nigeria Data Protection Act, 2023 (Act No. 37), s. 27(1); Official Gazette No. 119, 1 July 2023, copy hosted by the Nigerian Communications Commission, retrieved 8 October 2026.",
+            "url": "https://ncc.gov.ng/media/801/view",
+            "proposition": "Section 27(1) lists the information a data controller gives before collecting personal data directly from the data subject.",
+            "verbatimQuote": "27.—(1) Before a data controller collects personal data directly from a data subject, the data controller shall inform the data subject of the — (a) identity, residence or place of business of, and means of communication with the data controller and its representatives, where necessary ; (b) specific lawful basis of processing under section 25(1) or 30(1) of this Act, and the purposes of the processing for which the personal data are intended ; (c) recipients or categories of recipients of the personal data, if any ; (d) existence of the rights of the data subject under Part VI ; (e) retention period for the personal data ; (f ) right to lodge a complaint with the Commission in accordance with section 46 (1) of this Act ; and (g) existence of automated decision-making, including profiling, the significance and envisaged consequences of such processing for the data subject, and the right to object to and challenge such processing.",
+            "date": "2023-06-12",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-ndpa-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "record-cross-border-transfer-basis",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.record-cross-border-transfer-basis",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Recorded basis for transfers abroad",
+        "sectionId": "data-and-ip",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#record-cross-border-transfer-basis",
+        "requirementGuidance": "If employee data goes to a foreign parent, payroll provider or HR system, identify the section 41(1) basis for the transfer and confirm that the employer records it with the adequacy assessment under section 41(2).",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-ndpa-transfer",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Data Protection Act 2023 — s. 41(1)",
+            "citation": "Nigeria Data Protection Act, 2023 (Act No. 37), s. 41(1); Official Gazette No. 119, 1 July 2023, copy hosted by the Nigerian Communications Commission, retrieved 8 October 2026.",
+            "url": "https://ncc.gov.ng/media/801/view",
+            "proposition": "Section 41(1) permits a transfer of personal data out of Nigeria only on an adequacy mechanism or a section 43 condition.",
+            "verbatimQuote": "41.—(1) A data controller or data processor shall not transfer or permit personal data to be transferred from Nigeria to another country, unless — (a) the recipient of the personal data is subject to a law, binding corporate rules, contractual clauses, code of conduct, or certification mechanism that affords an adequate level of protection with respect to the personal data in accordance with this Act ; or (b) one of the conditions set out in section 43 of this Act applies.",
+            "date": "2023-06-12",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-ndpa-transfer"
+          },
+          {
+            "sourceId": "ng-checklist-ndpa-transfer-record",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Data Protection Act 2023 — s. 41(2)",
+            "citation": "Nigeria Data Protection Act, 2023 (Act No. 37), s. 41(2); Official Gazette No. 119, 1 July 2023, copy hosted by the Nigerian Communications Commission, retrieved 8 October 2026.",
+            "url": "https://ncc.gov.ng/media/801/view",
+            "proposition": "Section 41(2) requires the controller to record the transfer basis and the adequacy of protection.",
+            "verbatimQuote": "(2) A data controller or data processor shall record the basis for transfer of personal data to another country under subsection (1) and the adequacy of protection under section 42 of this Act.",
+            "date": "2023-06-12",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-ndpa-transfer-record"
+          }
+        ]
+      },
+      {
+        "requirementId": "assign-copyright-in-writing",
+        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.assign-copyright-in-writing",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Written copyright assignment",
+        "sectionId": "data-and-ip",
+        "itemNumber": "4.3",
+        "anchor": "https://openagreements.org/checklists/hiring/nigeria#assign-copyright-in-writing",
+        "requirementGuidance": "Where the company is to own copyright in the employee's work, including software, the assignment must be in writing to have effect. Check that the contract or a separate IP agreement assigns copyright to the intended owner, because the Act vests copyright initially in the author unless an agreement provides otherwise.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ng-checklist-copyright-writing",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Copyright Act 2022 — s. 30(3)",
+            "citation": "Copyright Act, 2022 (Act No. 8 of 2023), s. 30(3); Official Gazette No. 56, 27 March 2023, Nigerian Copyright Commission copy, retrieved 8 October 2026.",
+            "url": "https://www.copyright.gov.ng/CopyrightAct/CopyrightAct2023FinalPublication1.pdf",
+            "proposition": "Section 30(3) gives no effect to an assignment of copyright or an exclusive licence unless it is in writing.",
+            "verbatimQuote": "(3) An assignment of copyright or an exclusive licence to do an act, the doing of which is controlled by copyright, shall have no effect unless it is in writing.",
+            "date": "2023-03-17",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-copyright-writing"
+          },
+          {
+            "sourceId": "ng-checklist-copyright-author",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Copyright Act 2022 — s. 28(1)",
+            "citation": "Copyright Act, 2022 (Act No. 8 of 2023), s. 28(1); Official Gazette No. 56, 27 March 2023, Nigerian Copyright Commission copy, retrieved 8 October 2026.",
+            "url": "https://www.copyright.gov.ng/CopyrightAct/CopyrightAct2023FinalPublication1.pdf",
+            "proposition": "Section 28(1) vests copyright initially in the author except as otherwise provided in an agreement.",
+            "verbatimQuote": "28. —(1) Except as otherwise provided in an agreement, copyright conferred by this Act, shall initially vest in the author.",
+            "date": "2023-03-17",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-copyright-author"
+          },
+          {
+            "sourceId": "ng-checklist-copyright-software-literary-work",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Copyright Act 2022 — s. 108, literary work",
+            "citation": "Copyright Act, 2022 (Act No. 8 of 2023), interpretation section, definition of literary work; Official Gazette No. 56, 27 March 2023, Nigerian Copyright Commission copy, retrieved 8 October 2026. The quote preserves the page running header that the text layer places inside the definition.",
+            "url": "https://www.copyright.gov.ng/CopyrightAct/CopyrightAct2023FinalPublication1.pdf",
+            "proposition": "The Act's definition of literary work includes computer programmes.",
+            "verbatimQuote": "―literary work‖ includes, irrespective of literary quality, any of the following works or similar works — (a) novels, stories and poetical works ; Nigerian Copyright Commission Copyright Act, 2022 2023 No. 8 (b) plays, stage directions, audiovisual work scenarios and broadcasting scripts ; (c) choreographic works ; (d) computer programmes; (e) textbooks, treatises, histories, biographies, essays and articles ;",
+            "date": "2023-03-17",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-copyright-software-literary-work"
           }
         ]
       },
@@ -233,9 +788,9 @@
         "sourceFootnotes": [],
         "requirementLabel": "Medical-examination operations",
         "sectionId": "onboarding-and-unresolved-work",
-        "itemNumber": "3.1",
+        "itemNumber": "5.1",
         "anchor": "https://openagreements.org/checklists/hiring/nigeria#resolve-medical-examination",
-        "requirementGuidance": "Before the start date, resolve worker coverage and section 8: registered practitioner, employer expense, any applicable State Authority exemption order and the examination process. Do not assume a statutory category is an automatic exemption. Separately determine medical-data handling requirements; current orders and privacy rules are outside this checklist.",
+        "requirementGuidance": "Before the start date, resolve worker coverage and section 8: registered practitioner, employer expense, any applicable State Authority exemption order and the examination process. Do not assume a statutory category is an automatic exemption. Treat the resulting health information as sensitive personal data and identify a section 30(1) basis for processing it, such as consent or an employment-law obligation, assessed separately from the privacy notice; current exemption orders are outside this checklist.",
         "variants": [],
         "sources": [
           {
@@ -259,6 +814,30 @@
             "proposition": "Section 8(2) permits State Authority exemption orders for the specified categories and qualifications; category membership alone is not an exemption.",
             "verbatimQuote": "(2) The State Authority may by order exempt from the requirement of medical examination workers entering into contracts ror‐ (a) employment in agricultural undertakings not employing more than a limited number of workers (the limit being specified in the order); or (b) employment in the vicinity of the workers' homes‐ (i) in agricultural work; or (ii) in non‐agricultural work which the State Authority is satisfied is not of a dangerous character or likely to be injurious to the health of the workers.",
             "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-medical-exemptions"
+          },
+          {
+            "sourceId": "ng-checklist-ndpa-sensitive-health-data",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Data Protection Act 2023 — s. 65, sensitive personal data",
+            "citation": "Nigeria Data Protection Act, 2023 (Act No. 37), s. 65 (interpretation); Official Gazette No. 119, 1 July 2023, copy hosted by the Nigerian Communications Commission, retrieved 8 October 2026.",
+            "url": "https://ncc.gov.ng/media/801/view",
+            "proposition": "The Act defines sensitive personal data to include health status, and defines social security laws to include the Employees' Compensation and Pension Reform Acts.",
+            "verbatimQuote": "“sensitive personal data” means personal data relating to an individual’s — (a) genetic and biometric data, for the purpose of uniquely identifying a natural person, (b) race or ethnic origin, (c) religious or similar beliefs, such as those reflecting conscience or philosophy, (d) health status, (e) sex life, (f ) political opinions or affiliations, (g) trade union memberships, or (h) other information prescribed by the Commission, as sensitive personal data under section 30 (2), and “social security laws” means “the Employee Compensation Act, Pension Reform Act, National Health Insurance Authority Act, National Housing Fund Act, Nigeria Social Insurance Trust Fund Act, Industrial Trust Fund Act or any other similar law.",
+            "date": "2023-06-12",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-ndpa-sensitive-health-data"
+          },
+          {
+            "sourceId": "ng-checklist-ndpa-sensitive-processing-basis",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria Data Protection Act 2023 — s. 30(1)(a)–(b)",
+            "citation": "Nigeria Data Protection Act, 2023 (Act No. 37), s. 30(1)(a)–(b); Official Gazette No. 119, 1 July 2023, copy hosted by the Nigerian Communications Commission, retrieved 8 October 2026.",
+            "url": "https://ncc.gov.ng/media/801/view",
+            "proposition": "Section 30(1) bars processing sensitive personal data unless a listed basis applies, including consent or employment and social security law obligations.",
+            "verbatimQuote": "30.—(1) Without prejudice to the principles set out in this Act, a data controller or data processor shall not process, or permit a data processor to process on its behalf, sensitive personal data, unless the — (a) data subject has given and not withdrawn consent to the processing for the specific purpose or purposes for which it will be processed ; (b) processing is necessary for the purposes of performing the obligations of the data controller or exercising rights of the data subject under employment or social security laws or any other similar laws ;",
+            "date": "2023-06-12",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-ndpa-sensitive-processing-basis"
           }
         ]
       },
@@ -269,11 +848,47 @@
         "sourceFootnotes": [],
         "requirementLabel": "Post-employment restraint assessment",
         "sectionId": "onboarding-and-unresolved-work",
-        "itemNumber": "3.2",
+        "itemNumber": "5.2",
         "anchor": "https://openagreements.org/checklists/hiring/nigeria#separate-post-employment-restraint",
-        "requirementGuidance": "Include a post-termination non-compete in the base offer for this resource. This is a drafting safeguard, not a statement that all Nigerian restraints are prohibited. If one is proposed separately, document the business interest and employee access, proposed scope and verified authority. FCCPA section 68(1)(e) is not a blanket two-year safe harbor. No La Casera holding or 2026 exposure-draft rule is adopted.",
+        "requirementGuidance": "Include a post-termination non-compete in the base offer for this resource. If one is proposed separately, document the business interest and employee access, proposed scope and verified authority. FCCPA section 68(1)(e) is not a blanket two-year safe harbor. No La Casera holding or 2026 exposure-draft rule is adopted.",
         "variants": [],
-        "sources": []
+        "sources": [
+          {
+            "sourceId": "ng-checklist-olisa-two-year-ceiling",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Olisa Agbakoba Legal — Non-Compete Clauses in Nigeria: Are They Enforceable?",
+            "citation": "Ifeoma Ezenwa and Jesujoba Tosu, Olisa Agbakoba Legal, Non-Compete Clauses in Nigeria: Are They Enforceable?, 13 September 2026, retrieved 8 October 2026.",
+            "url": "https://oal.law/non-compete-clauses-nigeria/",
+            "proposition": "Olisa Agbakoba Legal reads the FCCPA two-year limit as a ceiling that does not by itself validate a shorter restraint.",
+            "verbatimQuote": "The statutory maximum should accordingly be understood as a ceiling, not a safe harbour: it forecloses restraints longer than two years but does not, by itself, validate shorter restraints that are otherwise unreasonable or unsupported by a demonstrable legitimate interest.",
+            "date": "2026-09-13",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-olisa-two-year-ceiling"
+          },
+          {
+            "sourceId": "ng-checklist-aelex-restraint-reasonable",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "AELEX — Training Bonds: How enforceable are they against employees in Nigeria?",
+            "citation": "Abdulmajeed Abolaji, AELEX, Training Bonds – How enforceable are they against employees in Nigeria?, 1 October 2020, retrieved 8 October 2026.",
+            "url": "https://aelex.com/training-bonds-how-enforceable-are-they-against-employees-in-nigeria/",
+            "proposition": "AELEX states the general rule that covenants in restraint of trade are prima facie unenforceable unless reasonable and fair.",
+            "verbatimQuote": "It is the general rule that all covenants in restraint of trade are prima facie unenforceable unless they are reasonable and fair.",
+            "date": "2020-10-01",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-aelex-restraint-reasonable"
+          },
+          {
+            "sourceId": "ng-checklist-fccpa-service-contract-exception",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Nigeria FCCPA 2018 — s. 68(1)–(4)",
+            "citation": "Federal Competition and Consumer Protection Act 2018, s. 68(1)–(4), Official Gazette 2019 No. 1, printed A35–A36 (PDF pp. 37–38); original FCCPC PDF matched retained bytes on 28 September 2026; subsection label and operative text visually checked. Independent body-layout OCR spelling and distorted paragraph labels preserved; complete contiguous operative text, with page/marginal headings excluded during spatial extraction. Scope and interaction with employment restraint doctrine remain unresolved.",
+            "url": "https://fccpc.gov.ng/wp-content/uploads/2022/07/FCCPA-2018.pdf",
+            "proposition": "FCCPA section 68(1)(e) includes specified noncorporate-person service-contract work restrictions within an exception to this Act, with two-year wording; section 68(4) requires Commission privileges or exemptions under subsection (1) to remain consistent with the Act.",
+            "verbatimQuote": "68.-(1) Nothing in this Act prohibits- (a) combinations or activities of employees for the reasonable protection of employees : (b) arrangenients for collective bargaining on behalf of employers and employees for the purpose of fixing minimum terms and conditions of employment: (e) activities of professional associations designed to develop or enforce standards of professional qualifications : (d) a contract or an arrangemen among partners, none of whom is a body corporare. in so far as it contains provisions in relation to the terms of the partnership or the conduct of the partnership business or in relation to competition berween the partnership and a party to the contract, arrangement or understanding while that party is. or after that party ceases to be a partner: (r) a contract of service or a contract for the provision of services in so faras it contains provisions by which a person, not being a body corporate. agrees to accept restrictions as to the work, whether as an employee or otherwise, in which that person may engage during or after the termination of the contract and this period shall not be more than two years; (7) a contract for the sale of a business or shares in the capital of a body corporate carrying on business in so far as it contains a provision that is solely for the protection of the purchases in respect of the goodwill of the body corporate: or (g) any act done to give effect to a provision of a contract or an arrangement referred to in paragraphs (a) to (f) of this subsection. (2) With respect to professional services subject to the regulation of professional bodies, the Commission may issue guidelines for the application of certain provisions of this Act to the supply of services or conduct of business by members of such professional associations: (3) For the purposes of subsection (2), the Commission shall, from time totime, publisha list of professional bodies to whom the subsection applies. (4) Any privilege or exemption granted by the Commission under subsection (i) shall be consistent with the provisions of this Act.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-fccpa-service-contract-exception"
+          }
+        ]
       },
       {
         "requirementId": "assign-other-hiring-workstreams",
@@ -282,24 +897,23 @@
         "sourceFootnotes": [],
         "requirementLabel": "Other hiring workstreams",
         "sectionId": "onboarding-and-unresolved-work",
-        "itemNumber": "3.3",
+        "itemNumber": "5.3",
         "anchor": "https://openagreements.org/checklists/hiring/nigeria#assign-other-hiring-workstreams",
-        "requirementGuidance": "Assign payroll, minimum-wage, pension, immigration, equity, IP ownership, employee-data, collective-agreement and sector reviews for the actual hire. This checklist does not verify those regimes or certify all-law compliance.",
+        "requirementGuidance": "Assign an owner for the employing-entity question where there is no Nigerian company, Employees' Compensation Fund and other payroll levies, immigration for a foreign hire, equity, collective agreements and sector rules.",
         "variants": [],
-        "sources": []
-      },
-      {
-        "requirementId": "retain-source-and-decision-record",
-        "specRequirementId": "REQ-labor-and-employment-law.hiring.nigeria.retain-source-and-decision-record",
-        "requirementLevel": "SHOULD",
-        "sourceFootnotes": [],
-        "requirementLabel": "Source and decision record",
-        "sectionId": "onboarding-and-unresolved-work",
-        "itemNumber": "3.4",
-        "anchor": "https://openagreements.org/checklists/hiring/nigeria#retain-source-and-decision-record",
-        "requirementGuidance": "MUST items state conditional duties from the cited Labour Act provisions; SHOULD and SHOULD NOT items are practical safeguards for this limited resource. Record the result, person responsible and unresolved question for each item. The sources below were directly retrieved on 28 September 2026; no local-lawyer review or comprehensive compliance assessment is claimed. The source-capture dates, hashes and specific limitations appear in the guide's sources and limits. For a proposed service-contract restraint, separately read FCCPA 2018 section 68(1)(e), PDF page 37, printed A35, and verify the relevant restraint authorities. The held source set does not establish general enforceability or a permitted duration. Retain the source versions, verification dates, coverage reasoning, completed terms, delivered policies and remaining questions. Check for operative amendments and applicable State/sector rules before relying on a provision. A completed checklist is not proof of legal clearance.",
-        "variants": [],
-        "sources": []
+        "sources": [
+          {
+            "sourceId": "ng-checklist-udo-udoma-payroll-levies",
+            "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
+            "title": "Udo Udoma & Belo-Osagie — 3 key things to know as a start-up looking to recruit employees",
+            "citation": "Emem Okoko, Udo Udoma & Belo-Osagie (u-law), 3 key things to know as a start-up looking to recruit employees, PDF created February 2021, retrieved 8 October 2026.",
+            "url": "https://uubo.org/wp-content/uploads/2022/08/3-key-things-to-know-as-a-start-up-looking-to-recruit-employees.pdf",
+            "proposition": "Udo Udoma & Belo-Osagie list Industrial Training Fund contributions for employers with five or more employees or ₦50 million turnover among a start-up employer’s payroll obligations.",
+            "verbatimQuote": "Industrial Training Fund (“ITF”) contributions: The ITF is a government agency that provides programmes and services such as vocational and apprentice training, research and consultancy services to stimulate human performance and improve productivity. The law in respect of these contributions provides that every employer who has 5 or more employees, or an annual turnover of N50 million or more, has to make these contributions.",
+            "anchor": "https://openagreements.org/checklists/hiring/nigeria#src-ng-checklist-udo-udoma-payroll-levies"
+          }
+        ]
       }
     ]
   }
