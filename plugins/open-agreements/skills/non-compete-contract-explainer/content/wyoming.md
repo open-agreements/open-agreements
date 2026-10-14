@@ -2,13 +2,13 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-content_packaged_at: "2026-10-09"
+content_packaged_at: "2026-10-14"
 law_checked_through: "2026-04-14"
 human_reviewed_at: null
 next_review_due: "2026-10-11"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wyoming
 license: CC BY 4.0
-stale: false
+stale: true
 ---
 
 > [!IMPORTANT]
@@ -17,7 +17,10 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-10-09 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-10-14 · License: CC BY 4.0 · © openagreements.org
+
+> [!WARNING]
+> This area may have changed since the snapshot date — verify against the live version at https://openagreements.org/practice-guides/non-compete/us/wyoming.
 
 # Non-Competes in Wyoming[^about]
 
