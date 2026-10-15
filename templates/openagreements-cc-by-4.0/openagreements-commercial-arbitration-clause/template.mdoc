@@ -1,0 +1,116 @@
+---
+template_id: openagreements-commercial-arbitration-clause
+name: Commercial Arbitration Clause
+category: dispute-resolution
+description: >-
+  An experimental, provider-neutral arbitration clause for insertion into a negotiated business-to-business
+  commercial agreement, with separate illustrative AAA, JAMS, and People’s Court configurations. Requires
+  transaction-specific legal review, provider and procedure selection, and incorporation into the parties’
+  signed agreement. Not a consumer, employment, or international model.
+source_url: >-
+  https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-cc-by-4.0/openagreements-commercial-arbitration-clause
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Original contribution by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: administrator_name
+    type: string
+    description: >-
+      Select one arbitration administrator by its full name; review its current acceptance policies and fees.
+      No provider is selected by default.
+    section: Administration
+  - name: rules_name
+    type: string
+    description: >-
+      Exact name of the selected administrator’s applicable rules; verify their suitability for the parties
+      and transaction.
+    section: Administration
+  - name: rules_url
+    type: string
+    description: Public URL where both parties can inspect the selected rules before agreeing.
+    section: Administration
+  - name: rules_version
+    type: string
+    description: >-
+      Complete phrase identifying the governing version, such as “those applicable under the Rules’ own
+      amendment provisions”; confirm how pending cases are protected.
+    section: Administration
+  - name: tribunal_composition
+    type: string
+    description: >-
+      Complete sentence or phrase specifying a tribunal supported by the selected rules. Review any human or
+      AI decision-maker election and disclosures.
+    section: Procedure
+  - name: arbitral_seat
+    type: string
+    description: >-
+      Juridical seat, including city, state, and country; distinguish it from a hearing location and check
+      judicial venue and mandatory law.
+    section: Procedure
+  - name: arbitration_language
+    type: string
+    description: Language supported by the chosen provider and agreed by both parties.
+    section: Procedure
+  - name: procedure_terms
+    type: string
+    description: >-
+      Provider-specific agreed procedure, including any required election, AI disclosure, notice, and review
+      terms. Read the README and the entire example; do not substitute only the provider’s name.
+    section: Procedure
+priority_fields:
+  - administrator_name
+  - rules_name
+  - rules_url
+  - rules_version
+  - tribunal_composition
+  - arbitral_seat
+  - arbitration_language
+  - procedure_terms
+artifact_kind: other
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - party_1
+  - party_2
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental
+layout_id: traditional-consent-v1
+style_id: openagreements-default-v1
+document:
+  title: Commercial Arbitration Clause
+  label: Commercial Arbitration Clause
+  version: 0.1.0
+  license: CC BY 4.0
+  presentation: traditional
+  defined_term_highlight_mode: none
+---
+
+# Commercial Arbitration Clause
+
+## Agreement to arbitrate
+
+The parties agree to resolve by binding arbitration disputes between them arising from or relating to this Agreement, including its interpretation, performance, breach, or termination, except to the extent applicable law prevents a claim from being subject to a required arbitration agreement.
+
+The arbitration will be administered by {% field name="administrator_name" /%} under the {% field name="rules_name" /%}, available at {% field name="rules_url" /%} (the “Rules”). The applicable Rules are {% field name="rules_version" /%}. The tribunal will be constituted as follows: {% field name="tribunal_composition" /%}.
+
+## Seat and language
+
+The juridical seat of arbitration is {% field name="arbitral_seat" /%}. Participation from another location does not change that seat. The language of the arbitration is {% field name="arbitration_language" /%}.
+
+## Agreed procedure
+
+{% field name="procedure_terms" /%}
+
+## Award and court relief
+
+An award is binding subject to any review provided by the Rules and applicable law. The parties consent to entry of judgment on the operative award by a court with jurisdiction, subject to any valid agreement on judicial venue, including one incorporated through the Rules. A party may seek provisional judicial relief in aid of arbitration in a court permitted by that venue agreement and applicable law. This clause does not waive a review or challenge available under the Rules or a right that applicable law makes nonwaivable.
+
+## Arbitration law
+
+The Federal Arbitration Act governs this clause and the arbitration to the extent it applies; otherwise, applicable arbitration law governs. This clause does not change the substantive law selected elsewhere in this Agreement.

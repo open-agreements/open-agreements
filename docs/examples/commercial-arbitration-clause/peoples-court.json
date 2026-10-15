@@ -1,0 +1,10 @@
+{
+  "administrator_name": "People’s Court (https://peoplescourt.ai), a service of Epistemic Labs Inc.",
+  "rules_name": "Rules of Procedure & Evidence",
+  "rules_url": "https://peoplescourt.ai/rules",
+  "rules_version": "those in effect when the case is filed, identified by version and content hash and fixed for the case together with its recorded procedure election",
+  "tribunal_composition": "the human Arbitrator appointed under the Rules for the AI-assisted human tier selected below",
+  "arbitral_seat": "Wilmington, Delaware, United States",
+  "arbitration_language": "English",
+  "procedure_terms": "The parties select the AI-assisted human tier: an AI panel supplies drafting assistance, and the appointed human Arbitrator decides the case and signs the Award in the Arbitrator’s own name. Each party must accept the same exact case-opening procedure and fee terms. The parties do not authorize substitution of the AI-only tier without the parties’ agreement. The proceeding ordinarily uses written submissions, without discovery, depositions, compulsory production, or an evidentiary hearing. Jurisdiction and arbitrability are determined under Rule 2.2 and applicable law. The parties consent to electronic notices under the Rules, including email and the Case Page where applicable. They acknowledge that the adjudication technology is proprietary; any legally required disclosure is subject to appropriate protective or confidential treatment. Each party retains the human appeal provided by Article 9, confined to the existing Record under its deferential review standards. This clause contains no appeal waiver and preserves the Rules’ correction, additional-Award, and execution-stay procedures. Judicial proceedings remain subject to Rule 12.3, including its Delaware venue provisions."
+}

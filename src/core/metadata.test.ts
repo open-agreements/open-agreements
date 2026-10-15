@@ -112,6 +112,7 @@ describe('TemplateCapabilityManifestSchema', () => {
       }
     ).paths.filter((entry) => entry.startsWith('templates/'));
     const authoredHere = [
+      'templates/openagreements-cc-by-4.0/openagreements-commercial-arbitration-clause',
       'templates/openagreements-cc0-1.0/openagreements-closing-checklist',
       'templates/openagreements-cc0-1.0/openagreements-working-group-list',
     ];
