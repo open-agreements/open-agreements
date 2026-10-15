@@ -16474,96 +16474,6 @@
       ]
     },
     {
-      "name": "openagreements-commercial-arbitration-clause",
-      "tier": "internal",
-      "display_name": "Commercial Arbitration Clause",
-      "category": "dispute-resolution",
-      "description": "An experimental, provider-neutral arbitration clause for insertion into a negotiated business-to-business commercial agreement, with separate illustrative AAA, JAMS, and People’s Court configurations. Requires transaction-specific legal review, provider and procedure selection, and incorporation into the parties’ signed agreement. Not a consumer, employment, or international model.",
-      "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-cc-by-4.0/openagreements-commercial-arbitration-clause",
-      "source": "OpenAgreements",
-      "attribution_text": "Original contribution by OpenAgreements contributors. Licensed under CC BY 4.0.",
-      "allow_derivatives": true,
-      "distribution": "bundled",
-      "artifact_type": "template",
-      "stability": "experimental",
-      "credits": [],
-      "fields": [
-        {
-          "name": "administrator_name",
-          "type": "string",
-          "required": true,
-          "section": "Administration",
-          "description": "Select one arbitration administrator by its full name; review its current acceptance policies and fees. No provider is selected by default.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "rules_name",
-          "type": "string",
-          "required": true,
-          "section": "Administration",
-          "description": "Exact name of the selected administrator’s applicable rules; verify their suitability for the parties and transaction.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "rules_url",
-          "type": "string",
-          "required": true,
-          "section": "Administration",
-          "description": "Public URL where both parties can inspect the selected rules before agreeing.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "rules_version",
-          "type": "string",
-          "required": true,
-          "section": "Administration",
-          "description": "Complete phrase identifying the governing version, such as “those applicable under the Rules’ own amendment provisions”; confirm how pending cases are protected.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "tribunal_composition",
-          "type": "string",
-          "required": true,
-          "section": "Procedure",
-          "description": "Complete sentence or phrase specifying a tribunal supported by the selected rules. Review any human or AI decision-maker election and disclosures.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "arbitral_seat",
-          "type": "string",
-          "required": true,
-          "section": "Procedure",
-          "description": "Juridical seat, including city, state, and country; distinguish it from a hearing location and check judicial venue and mandatory law.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "arbitration_language",
-          "type": "string",
-          "required": true,
-          "section": "Procedure",
-          "description": "Language supported by the chosen provider and agreed by both parties.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "procedure_terms",
-          "type": "string",
-          "required": true,
-          "section": "Procedure",
-          "description": "Provider-specific agreed procedure, including any required election, AI disclosure, notice, and review terms. Read the README and the entire example; do not substitute only the provider’s name.",
-          "default": null,
-          "default_value_rationale": null
-        }
-      ]
-    },
-    {
       "name": "openagreements-confidentiality-invention-assignment-agreement",
       "tier": "internal",
       "display_name": "Confidential Information and Invention Assignment Agreement (CIIAA)",
@@ -20032,6 +19942,38 @@
           "description": "Related policy titles versions and locations",
           "default": null,
           "default_value_rationale": null
+        }
+      ]
+    },
+    {
+      "name": "openagreements-peoples-court-arbitration-clause",
+      "tier": "internal",
+      "display_name": "People’s Court Model Arbitration Clause",
+      "category": "dispute-resolution",
+      "description": "A commercial arbitration clause adapted from People’s Court’s published sample, naming People’s Court as administrator and expressly electing AI-only arbitration by default. Offers AI-assisted human and selection-at-filing alternatives, retains the Rules’ human appeal, and includes notes on adapting the clause to other providers. Experimental starting point for negotiated B2B agreements and transaction-specific legal review.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://peoplescourt.ai/clause",
+      "source": "peoplescourt.ai",
+      "attribution_text": "Adapted from the People’s Court sample clause. This template is licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "procedure_election",
+          "type": "enum",
+          "required": true,
+          "section": "Procedure",
+          "description": "Select the AI-only tier, the AI-assisted human tier, or selection at filing. The default draft expressly elects AI-only. Review the AI disclosure and retained human appeal; every party must separately accept the same exact case-opening procedure and fee terms. Rendering this draft does not create consent. An unresolved selection must be completed before signing.",
+          "default": "the AI-only tier",
+          "default_value_rationale": "The People’s Court co-founder requested AI-only as the visible default for this model-clause draft on October 15, 2026, consistent with Rule 2.1. The parties must review and agree to the clause and the exact case-opening terms; this template default is not a consent record or an appeal waiver.",
+          "options": [
+            "the AI-only tier",
+            "the AI-assisted human tier",
+            "the tier selected when a case is filed, with AI-only applying unless all parties then choose AI-assisted human"
+          ]
         }
       ]
     },
