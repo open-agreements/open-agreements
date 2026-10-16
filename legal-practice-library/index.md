@@ -16,6 +16,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Ai Policies](ai-policies/)
 * [Ai Vendors](ai-vendors/)
 * [Alcohol At Events](alcohol-at-events/)
+* [Asset Protection Trusts](asset-protection-trusts/)
 * [Asset Purchase](asset-purchase/)
 * [Asset Purchase After Closing](asset-purchase-after-closing/)
 * [Asset Purchase Closing And Handover](asset-purchase-closing-and-handover/)

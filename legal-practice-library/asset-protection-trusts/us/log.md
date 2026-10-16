@@ -1,0 +1,52 @@
+# Us Update Log
+
+## 2026-10-15
+* **Update**: fix(asset-protection-trusts): scope four absence claims to our review (peer review round 4) (093a59f)
+* **Update**: fix(asset-protection-trusts): peer-review round 2 (CT support debts, scoped absence, opening length) (13cf8aa)
+* **Update**: fix(asset-protection-trusts): qualify two openings and move the CT exception up (peer review) (330d30b)
+* **Update**: fix(asset-protection-trusts): state each open point once, with its conservative course (c487d66)
+
+## 2026-10-14
+* **Update**: fix(asset-protection-trusts): remove intro paragraphs for the Q&A-only rule (7c74a67)
+
+## 2026-10-06
+* **Update**: fix(asset-protection-trusts): Rosenfeld quote reproduces the published source's citation spacing (63c220b)
+* **Update**: fix(asset-protection-trusts): deep-link locators for three case cards (f4f01c3)
+
+## 2026-10-05
+* **Update**: fix(asset-protection-trusts): Connecticut deed paragraph states the 2026 currency check (00839cb)
+* **Update**: fix(asset-protection-trusts): Nevada support answer opens with no general support exception and the 166.170(3) routes (0d774fb)
+* **Update**: fix(asset-protection-trusts): New York entirety caution limited to the EPTL 6-2.2(e) joint-tenancy result (1066006)
+* **Update**: fix(asset-protection-trusts): Nevada cautions name the drafting or recordkeeping mistake (10e74f0)
+* **Update**: fix(asset-protection-trusts): New York entirety caution keeps only the qualified consequence (2160fa6)
+* **Update**: fix(asset-protection-trusts): New York Tomeck procedural history and will-gift caution (28b9511)
+* **Update**: fix(asset-protection-trusts): New York separates revocation of own contributions from general powers over a bequest (3211d61)
+* **Update**: fix(asset-protection-trusts): New York will-gift answer adds support-arrears and income limits (3b14552)
+* **Update**: fix(asset-protection-trusts): Connecticut additional municipal conveyance tax and controlling-interest threshold (3e96a56)
+* **Update**: fix(asset-protection-trusts): Connecticut principal distributable to the settlor under In re Brooks (45249b2)
+* **Update**: fix(asset-protection-trusts): Nevada LLC answer separates charging orders from avoidance remedies (4a5bc54)
+* **Update**: fix(asset-protection-trusts): New York general-power analysis rests on EPTL 10-3.2(b) and 10-7.2 (4d24344)
+* **Update**: docs(asset-protection-trusts): trim the New York entirety caution's repeated clause (4f3c3c9)
+* **Update**: fix(asset-protection-trusts): Connecticut land and spouses answers open with self-contained conclusions (52c8a3d)
+* **Update**: fix(asset-protection-trusts): Connecticut Huckaby choice-of-law card and one-sentence divorce caution (619b4c5)
+* **Update**: fix(asset-protection-trusts): New York retirement exclusion scope and the ninety-day additions rule (628927d)
+* **Update**: fix(asset-protection-trusts): New York withdrawal powers under EPTL 10-7.2 and the entirety deed caution (67ecb0d)
+* **Update**: fix(asset-protection-trusts): Nevada first answer lists the NRS 166.040(2) permitted settlor interests (716df94)
+* **Update**: fix(asset-protection-trusts): Connecticut controlling-interest tax and the governing-law caution (79e6847)
+* **Update**: fix(asset-protection-trusts): Connecticut land answer separates choice of law from creditors' remedy (7d1c5df)
+* **Update**: fix(asset-protection-trusts): Connecticut presumption scope, no affidavit claim, spouse-share wording (85ee8ff)
+* **Update**: fix(asset-protection-trusts): Nevada LLC caution shortened to the misstatement and its consequence (8b9a3a6)
+* **Update**: fix(asset-protection-trusts): New York support-arrears limit, entirety survivorship and revocable-trust qualifier (90be32f)
+* **Update**: fix(asset-protection-trusts): Nevada unrecorded-transfer caution follows the later-of deadline (96f6c90)
+* **Update**: fix(asset-protection-trusts): Connecticut qualifying-trust answer names the 45a-487m(c) exception (a76d25f)
+* **Update**: fix(asset-protection-trusts): Connecticut Tyson income scope, Netter divisibility card and governing-law caution (b8d17d4)
+* **Update**: fix(asset-protection-trusts): Connecticut only-route statement qualified by 45a-487q (bddd946)
+* **Update**: fix(asset-protection-trusts): New York trust-income exemption distinguishes retirement payments (be18401)
+* **Update**: content(asset-protection-trusts): Nevada self-settled spendthrift trust guide (c259a82)
+* **Update**: fix(asset-protection-trusts): Connecticut trustee-removal conditions and the 45a-487r bad-faith standard (c303fab)
+* **Update**: content(asset-protection-trusts): New York self-settled trust guide (c388380)
+* **Update**: fix(asset-protection-trusts): Nevada bankruptcy comparison cites NRS 166.170 in the same question (d733dff)
+* **Update**: fix(asset-protection-trusts): Nevada tracing caution names the recordkeeping gap (d7eb574)
+* **Update**: fix(asset-protection-trusts): Nevada married-couples answer opens with a self-contained conclusion (dec72d4)
+* **Update**: fix(asset-protection-trusts): Connecticut LLC answer drops the trustee-is-member assumption (f5f3502)
+* **Update**: content(asset-protection-trusts): Connecticut qualified dispositions and land guide (ff8ebc1)

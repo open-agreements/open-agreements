@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-10-15
+* **Update**: content(privacy): New Jersey's mandatory cure period ended July 1, 2026 (#3543) (2002a46)
+
 ## 2026-10-02
 * **Update**: content: cut the passages disputed in peer review round 2 on #3151 (#2993) (2ab7a34)
 * **Update**: content: cut two uncited sentences from peer review round 7 (#2993) (d8ce3c5)
