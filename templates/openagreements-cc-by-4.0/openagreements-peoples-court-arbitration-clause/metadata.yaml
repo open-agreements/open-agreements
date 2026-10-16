@@ -1,0 +1,45 @@
+name: People’s Court Model Arbitration Clause
+category: dispute-resolution
+description: >-
+  A commercial arbitration clause adapted from People’s Court’s published sample,
+  naming People’s Court as administrator and expressly electing AI-only arbitration
+  by default. Offers AI-assisted human and selection-at-filing alternatives,
+  retains the Rules’ human appeal, and includes notes on adapting the clause to
+  other providers. Experimental starting point for negotiated B2B agreements and
+  transaction-specific legal review.
+source_url: https://peoplescourt.ai/clause
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Adapted from the People’s Court sample clause. This template is licensed under CC BY 4.0.
+fields:
+  - name: procedure_election
+    type: enum
+    description: >-
+      Select the AI-only tier, the AI-assisted human tier, or selection at filing.
+      The default draft expressly elects AI-only. Review the AI disclosure and
+      retained human appeal; every party must separately accept the same exact
+      case-opening procedure and fee terms. Rendering this draft does not create
+      consent. An unresolved selection must be completed before signing.
+    options:
+      - the AI-only tier
+      - the AI-assisted human tier
+      - the tier selected when a case is filed, with AI-only applying unless all parties then choose AI-assisted human
+    default: the AI-only tier
+    default_value_rationale: >-
+      The People’s Court co-founder requested AI-only as the visible default for
+      this model-clause draft on October 15, 2026, consistent with Rule 2.1.
+      The parties must review and agree to the clause and the exact case-opening
+      terms; this template default is not a consent record or an appeal waiver.
+    section: Procedure
+priority_fields:
+  - procedure_election
+artifact_kind: other
+capabilities: [create, review, render]
+party_roles: [party_1, party_2]
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental
