@@ -3,12 +3,12 @@ category: venture-financing
 description: >-
   Standard-form voting agreement for venture capital financings, covering board composition, drag-along rights, and
   stockholder voting obligations.
-source_url: https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx
-source_version: 10-1-2025
+source_url: https://nvca.org/wp-content/uploads/2026/06/Voting-Agreement-Updated-June-2026.docx
+source_version: 6-17-2026
 license_note: >-
   NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
   instructions, not the source document.
-source_sha256: 3496d7ae9343d1b5b7db13239313c6512e7e0d68d13273538c4dbf06416a5f0d
+source_sha256: 8999e0324e1cb420c7af246ea373c1421063a9a8e1cf645d439f31285d8ada78
 optional: false
 distribution: linked
 artifact_type: field-selector
