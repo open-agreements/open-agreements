@@ -1,5 +1,11 @@
 # Us Update Log
 
+## 2026-10-15
+* **Update**: content(non-compete/nevada): mark claims, roles and source edges (structured analysis) (08023d1)
+* **Update**: content(non-compete/ftc-rule-status): mark claims, roles and source edges (structured analysis) (1020941)
+* **Update**: content(non-compete/ohio): mark claims, roles and source edges (structured analysis) (993cee9)
+* **Update**: content(non-compete/south-carolina): mark claims, roles and source edges (structured analysis) (ae90f2c)
+
 ## 2026-10-09
 * **Update**: content(practice-guides): Vermont § 495q answers keep statutory qualifiers; sale answers point to the provider rule (Codex round 3, #1175) (10892c6)
 * **Update**: content(practice-guides): Vermont reasonableness caution states the narrowing authorities precisely; sale answer opens substantively (peer review 4, #1175) (2c23369)

@@ -2,10 +2,10 @@
 jurisdiction: "New Jersey"
 slug: new-jersey
 countryCode: US
-content_packaged_at: "2026-10-14"
-law_checked_through: "2026-06-06"
+content_packaged_at: "2026-10-15"
+law_checked_through: "2026-10-15"
 human_reviewed_at: null
-next_review_due: "2026-12-03"
+next_review_due: "2027-04-13"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/new-jersey
 license: CC BY 4.0
 stale: false
@@ -17,11 +17,11 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-jersey · **Snapshot as of:** 2026-10-14 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-jersey · **Snapshot as of:** 2026-10-15 · License: CC BY 4.0 · © openagreements.org
 
 # New Jersey Consumer Privacy Law (NJDPA)[^about]
 
-The New Jersey Data Privacy Act gives New Jersey consumers rights over their personal data and imposes notice, contracting, and consent duties on controllers above defined thresholds — it is enforced exclusively by the Attorney General as an unlawful practice under the Consumer Fraud Act, with no private right of action and only a temporary right to cure.
+The New Jersey Data Privacy Act gives New Jersey consumers rights over their personal data and imposes notice, contracting, and consent duties on controllers above defined thresholds — it is enforced exclusively by the Attorney General as an unlawful practice under the Consumer Fraud Act, with no private right of action and, since July 1, 2026, no mandatory right to cure.
 
 
 ## At a glance
@@ -29,7 +29,7 @@ The New Jersey Data Privacy Act gives New Jersey consumers rights over their per
 | Question | New Jersey |
 | --- | --- |
 | **Law coverage** | Comprehensive law |
-| **Summary** | If you meet the 100,000-consumer (or 25,000 plus any data-sale revenue) threshold in New Jersey, the NJDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General as an unlawful practice under the Consumer Fraud Act, with no consumer lawsuits and a cure period that sunsets after the law's first 18 months. |
+| **Summary** | If you meet the 100,000-consumer (or 25,000 plus any data-sale revenue) threshold in New Jersey, the NJDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General as an unlawful practice under the Consumer Fraud Act, with no consumer lawsuits and, since July 1, 2026, no mandatory cure period. |
 | **Main law** | N.J.S.A. 56:8-166.5. |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with seven statutorily fixed contents |
 | **Who does it cover?** | Controllers doing business in New Jersey (or targeting residents) that control or process the data of 100,000+ consumers a year (excluding payment-only data), or 25,000+ while deriving any revenue or a discount from selling data — no revenue floor, and no exemption for nonprofits |
@@ -68,9 +68,9 @@ This is the opt-in model: consent must be a clear affirmative act, and the statu
 
 **Short answer.** No. The Office of the Attorney General has sole and exclusive authority to enforce the NJDPA, and the law cannot be the basis for a private right of action [^stat-166-19-enforce]. A violation is treated as an unlawful practice under New Jersey's Consumer Fraud Act, the state's general anti-fraud statute [^stat-166-17-violation].
 
-What makes New Jersey distinctive is the enforcement channel: rather than a freestanding penalty scheme, the NJDPA folds violations into the long-standing Consumer Fraud Act, so the Attorney General brings them with the remedies and penalties that statute already supplies. The right to cure is only temporary. For the law's first 18 months, the Division of Consumer Affairs must send notice and allow 30 days to fix a violation it deems curable before bringing an action [^stat-166-17-cure]; after that window closes the Attorney General can proceed directly. Day-to-day rulemaking sits with the Director of the Division of Consumer Affairs, who is charged with promulgating regulations to carry out the act [^stat-166-18-rules]. The practical posture is to build the notice, consent, and contracting controls up front, because the cure off-ramp will not last.
+What makes New Jersey distinctive is the enforcement channel: rather than a freestanding penalty scheme, the NJDPA folds violations into the long-standing Consumer Fraud Act, so the Attorney General brings them with the remedies and penalties that statute already supplies. The mandatory right to cure has ended. Until the first day of the 18th month after the act took effect, the Division of Consumer Affairs had to send notice and allow 30 days to fix a violation it deemed curable before bringing an enforcement action [^stat-166-17-cure]. The act took effect on the 365th day after its January 16, 2024 approval, which was January 15, 2025 [^stat-166-effective], so that duty ended on July 1, 2026, and the act no longer requires notice and a chance to cure before an enforcement action. Day-to-day rulemaking sits with the Director of the Division of Consumer Affairs, who is charged with promulgating regulations to carry out the act [^stat-166-18-rules]. The practical posture is to build the notice, consent, and contracting controls up front, because the act no longer guarantees a cure off-ramp.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Jersey. This article synthesizes New Jersey primary law and is not legal advice from a New Jersey-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *New Jersey Consumer Privacy Law (NJDPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/new-jersey.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-10-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Jersey. This article synthesizes New Jersey primary law and is not legal advice from a New Jersey-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *New Jersey Consumer Privacy Law (NJDPA)*, OpenAgreements (last updated October 15, 2026), https://openagreements.org/practice-guides/privacy/us/new-jersey.
 
 [^stat-166-5-apply]: **N.J.S.A. 56:8-166.5** — "the provisions of P.L.2023, c.266 (C.56:8-166.4 et seq.) shall only apply to controllers that conduct business in the State or produce products or services that are targeted to residents of the State, and that during a calendar year either: a. control or process the personal data of at least 100,000 consumers, excluding personal data processed solely for the purpose of completing a payment transaction; or b. control or process the personal data of at least 25,000 consumers and the controller derives revenue, or receives a discount on the price of any goods or services, from the sale of personal data." *N.J.S.A. 56:8-166.5.* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
 
@@ -92,6 +92,8 @@ What makes New Jersey distinctive is the enforcement channel: rather than a free
 
 [^stat-166-17-violation]: **N.J.S.A. 56:8-166.17** — "It shall be an unlawful practice and violation of P.L.1960, c.39 (C.56:8-1 et seq.) for a controller to violate the provisions of P.L.2023, c.266 (C.56:8-166.4 et seq.)." *N.J.S.A. 56:8-166.17(a).* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
 
-[^stat-166-17-cure]: **N.J.S.A. 56:8-166.17** — "Until the first day of the 18th month next following the effective date of P.L.2023, c.266 (C.56:8-166.4 et seq.), prior to bringing an enforcement action before an administrative law judge or a court of competent jurisdiction in this State, the Division of Consumer Affairs in the Department of Law and Public Safety shall issue a notice to the controller if a cure is deemed possible." *N.J.S.A. 56:8-166.17(b).* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
+[^stat-166-17-cure]: **N.J.S.A. 56:8-166.17** — "Until the first day of the 18th month next following the effective date of P.L.2023, c.266 (C.56:8-166.4 et seq.), prior to bringing an enforcement action before an administrative law judge or a court of competent jurisdiction in this State, the Division of Consumer Affairs in the Department of Law and Public Safety shall issue a notice to the controller if a cure is deemed possible. If the operator controller fails to cure the alleged violation of P.L.2023, c.266 (C.56:8-166.4 et seq.) within 30 days after receiving notice of alleged noncompliance from the division, such enforcement action may be brought." *N.J.S.A. 56:8-166.17(b).* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
+
+[^stat-166-effective]: **P.L.2023, c.266, § 17** — "This act shall take effect on the 365th day following the date of enactment, except that the Director of the Division of Consumer Affairs may take any anticipatory administrative action in advance as shall be necessary for the implementation of this act. Approved January 16, 2024." *P.L.2023, c.266, § 17.* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
 
 [^stat-166-18-rules]: **N.J.S.A. 56:8-166.18** — "The Director of the Division of Consumer Affairs in the Department of Law and Public Safety shall promulgate rules and regulations, pursuant to the ‘Administrative Procedure Act,’ P.L.1968, c.410 (C.52:14B-1 et seq.), necessary to effectuate the purposes of P.L.2023, c.266 (C.56:8-166.4 et seq.)." *N.J.S.A. 56:8-166.18.* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
