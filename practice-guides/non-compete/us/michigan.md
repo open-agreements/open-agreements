@@ -19,7 +19,7 @@ Michigan enforces employee non-competes only when they are reasonable under MCL 
 
 ## Are employee non-compete agreements enforceable in Michigan? {#employee-non-compete-enforceability}
 
-**Short answer.** Yes, sometimes. Michigan is a reasonableness state, not a general-ban state: MCL 445.774a lets an employer enforce a covenant that protects a reasonable competitive business interest and is reasonable in duration, geographic area, and the type of employment restricted [^mcl-774a-employer-may-obtain][^borgiel-unfair-advantage].
+**Short answer.** Michigan lets an employer enforce an employee non-compete that protects its reasonable competitive business interests and is reasonable in duration, geographic area, and the type of employment or line of business restricted [^mcl-774a-employer-may-obtain]. A reasonable covenant protects against the employee's gaining an unfair competitive advantage but may not bar the employee from using general knowledge or skill [^borgiel-unfair-advantage].
 
 The governing statute is part of the Michigan Antitrust Reform Act. A covenant is valid only if it does more than block ordinary competition — under *St. Clair Medical, P.C. v. Borgiel* it must protect against the employee gaining an *unfair* competitive advantage and may not stop the employee from using general knowledge or skill [^borgiel-unfair-advantage]. For a clause-by-clause pass over a specific agreement against these rules, the [Michigan non-compete reviewer checklist](/checklists/non-compete/us/michigan) walks the full covenant suite item by item with each requirement's force level.
 
@@ -32,7 +32,7 @@ The governing statute is part of the Michigan Antitrust Reform Act. A covenant i
 
 ## What legitimate business interests can support a Michigan non-compete? {#protectable-interests}
 
-**Short answer.** Confidential information, customer relationships, and trade secrets are the core interests that justify a Michigan restraint; general skill and knowledge are not protectable [^follmer-confidential-info][^borgiel-general-skill][^mutsa-trade-secret-definition].
+**Short answer.** An employer's confidential information can support a Michigan non-compete to the extent the covenant reasonably protects it, but an employee's general knowledge or skill cannot [^follmer-confidential-info][^borgiel-general-skill]. Customer relationships and goodwill are also protectable: in *St. Clair Medical, P.C. v. Borgiel*, the Court of Appeals held that a covenant protecting an employer's interest in retaining patients and the goodwill of its practice protected a reasonable competitive business interest [^borgiel-patient-goodwill-interest]. Michigan's trade-secret definition includes a requirement that the information derive independent economic value from not being generally known or readily ascertainable by proper means [^mutsa-trade-secret-definition].
 
 In *Follmer, Rudzewicz & Co., P.C. v. Kosco*, the Michigan Supreme Court held that a covenant is enforceable to the extent it reasonably protects the employer's confidential information, and unenforceable to the extent it reaches further [^follmer-confidential-info]. *Borgiel* draws the same line on the employee side: the covenant cannot bar the use of general knowledge or skill [^borgiel-general-skill].
 
@@ -47,7 +47,7 @@ The Michigan Uniform Trade Secrets Act supplies the trade-secret overlay. A trad
 
 ## How long and how broad can a Michigan non-compete be? {#duration-limits}
 
-**Short answer.** There is no fixed numeric cap. MCL 445.774a requires the duration, geographic area, and type of employment to be reasonable, and whether a covenant clears that bar is a question of law when the facts are undisputed [^mcl-774a-reasonable-scope][^coates-question-of-law].
+**Short answer.** Michigan requires an employee non-compete to be reasonable in its duration, geographic area, and the type of employment or line of business it restricts [^mcl-774a-reasonable-scope]. Whether a covenant clears that bar is a question of law when the relevant facts are undisputed [^coates-question-of-law].
 
 Reasonableness is fact-specific, but the outer bounds are clear: in *Mid Michigan Medical Billing Service, Inc. v. Williams*, the Court of Appeals held that a restriction with unlimited duration and geographic reach on working for any past or current client was unreasonable [^mid-michigan-unlimited]. *Coates v. Bastian Brothers, Inc.* confirms a court decides reasonableness as a matter of law when the underlying facts are not in dispute [^coates-question-of-law].
 
@@ -60,7 +60,7 @@ Reasonableness is fact-specific, but the outer bounds are clear: in *Mid Michiga
 
 ## Is continued employment enough consideration for a Michigan non-compete? {#continued-employment-consideration}
 
-**Short answer.** For a genuine at-will employee, usually yes — but it is not automatic. *QIS, Inc. v. Industrial Quality Control, Inc.* states the rule that mere continuation of at-will employment is sufficient consideration, yet *QIS* itself held the covenant void for lack of consideration because the workers were just-cause employees [^qis-continued-employment][^qis-just-cause].
+**Short answer.** Continued employment is sufficient consideration for a Michigan non-compete signed by an at-will employee [^qis-continued-employment]. For employees who could be fired only for just cause, *QIS, Inc. v. Industrial Quality Control, Inc.* framed the issue as whether refusing to sign the non-compete would be just cause for termination [^qis-just-cause].
 
 The outcome in *QIS* is the cautionary part. The court agreed the agreement was void because the employees could not be dismissed without just cause, so their continued employment did not supply consideration for signing a new restraint [^qis-just-cause]. The at-will rule it recited (drawn from federal authority applying Michigan law) governs only when employment really is at will.
 
@@ -73,7 +73,7 @@ The outcome in *QIS* is the cautionary part. The court agreed the agreement was 
 
 ## Can a Michigan court rewrite or limit an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** Yes. MCL 445.774a expressly lets a court limit a covenant it finds unreasonable and enforce it as limited, so Michigan is a statutory blue-pencil state [^mcl-774a-court-may-limit].
+**Short answer.** A Michigan court may limit an unreasonable non-compete to render it reasonable and then enforce it as limited under MCL 445.774a [^mcl-774a-court-may-limit][^mid-michigan-limited].
 
 This power is real but discretionary, not guaranteed. In *Mid Michigan Medical Billing Service, Inc. v. Williams*, the court confirmed that MCL 445.774a lets a court modify an unreasonable covenant to render it reasonable and enforceable rather than void it outright [^mid-michigan-limited].
 
@@ -86,7 +86,7 @@ This power is real but discretionary, not guaranteed. In *Mid Michigan Medical B
 
 ## Are Michigan business-to-business or sale-of-business non-competes judged differently? {#business-to-business}
 
-**Short answer.** Yes. The Michigan Supreme Court held in *Innovation Ventures, LLC v. Liquid Manufacturing, LLC* that commercial non-competes between businesses are evaluated under the antitrust rule of reason, not the MCL 445.774a employee test [^innovation-rule-of-reason].
+**Short answer.** Michigan judges a commercial non-compete between businesses under the antitrust rule of reason rather than the MCL 445.774a employee test, as the Michigan Supreme Court held in *Innovation Ventures, LLC v. Liquid Manufacturing, LLC* [^innovation-rule-of-reason].
 
 The rule of reason flows from the Michigan Antitrust Reform Act, which makes contracts in restraint of trade in a relevant market unlawful and directs courts to give due deference to federal antitrust interpretations [^mcl-772-restraint][^mcl-784-federal-deference]. That standard is different from the employee test: a true commercial or transaction-ancillary restraint is analyzed for its market context and competitive effect rather than under MCL 445.774a's duration, geography, and type-of-employment framework.
 
@@ -125,7 +125,7 @@ MUTSA has its own timing and fee rules that a non-compete does not. A misappropr
 
 ## Will Michigan enforce a non-compete's choice-of-law or forum-selection clause? {#choice-of-law-forum}
 
-**Short answer.** Often yes. In *Stryker Corp. v. Ridgeway*, the Sixth Circuit held that a non-compete's Michigan forum-selection clause was valid and enforceable under Michigan law [^stryker-michigan-clauses].
+**Short answer.** A Michigan court may enforce a non-compete's Michigan forum-selection clause, as the Sixth Circuit held for the clause in *Stryker Corp. v. Ridgeway* [^stryker-michigan-clauses]. In *Barshaw v. Allegheny Performance Plastics, LLC*, the Court of Appeals held that, absent factors it found not germane to that appeal, a forum-selection clause may be considered separately from the contract's choice-of-law provision, and the Michigan court applies Michigan law to decide its effect [^barshaw-michigan-forum-law].
 
 But the clause type matters. In *Barshaw v. Allegheny Performance Plastics, LLC*, the Court of Appeals held that a Michigan court applies Michigan law to decide the effect of a forum-selection clause, even when the contract chooses another state's law for the merits [^barshaw-michigan-forum-law].
 
@@ -159,7 +159,7 @@ A separate 2025 development affects onboarding paperwork that bundles covenants.
 
 ## How does Michigan treat employee (anti-raiding) non-solicits? {#employee-non-solicitation}
 
-**Short answer.** Michigan analyzes a nonsolicitation covenant — including one barring solicitation or hiring of a former employer's employees — under common-law reasonableness, not the MCL 445.774a non-compete statute.
+**Short answer.** Michigan's non-compete statute, MCL 445.774a, may not govern an employee non-solicitation covenant, because in *Total Quality, Inc. v. Fewless* the Court of Appeals noted that the defendants had cited no authority subjecting nonsolicitation agreements to it [^fewless-not-statute].
 
 In *Total Quality, Inc. v. Fewless*, the nonsolicitation agreement barred a departing employee from soliciting the employer's customers and business relationships and from inducing or hiring its employees. The Court of Appeals held that such a nonsolicitation agreement is not governed by MCL 445.774a — the statute the rest of this guide applies to employee non-competes — because the defendants pointed to no authority subjecting a nonsolicitation agreement to it, leaving the covenant to common-law reasonableness [^fewless-not-statute].
 
@@ -195,6 +195,8 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 [^follmer-confidential-info]: **Follmer, Rudzewicz & Co., P.C. v. Kosco** — "To the extent such an agreement provides reasonable protection for the confidential information of the employer, it does not violate the statute and is enforceable." *Follmer, Rudzewicz & Co., P.C. v. Kosco, 420 Mich. 394 (1984).* <https://www.courtlistener.com/opinion/1708749/follmer-rudzewicz-co-v-kosco/#:~:text=To%20the%20extent%20such%20an,the%20statute%20and%20is%20enforceable.>
 
 [^borgiel-general-skill]: **St. Clair Medical, P.C. v. Borgiel** — "To be reasonable in relation to an employer's competitive business interest, a restrictive covenant must protect against the employee's gaining some unfair advantage in competition with the employer, but not prohibit the employee from using general knowledge or skill." *St. Clair Med., P.C. v. Borgiel, 270 Mich. App. 260 (2006).* <https://www.courtlistener.com/opinion/2026165/st-clair-medical-pc-v-borgiel/#:~:text=To%20be%20reasonable%20in%20relation,using%20general%20knowledge%20or%20skill.>
+
+[^borgiel-patient-goodwill-interest]: **St. Clair Medical, P.C. v. Borgiel** — "We conclude, nevertheless, that the restrictive covenant was protecting plaintiff's competitive business interest in retaining patients, that it provided plaintiff with time to regain goodwill with its patients, and that it prevented defendant from using patient contacts gained during the course of his employment to unfair advantage in competition with plaintiff." *St. Clair Med., P.C. v. Borgiel, 270 Mich. App. 260 (2006).* <https://www.courtlistener.com/opinion/2026165/st-clair-medical-pc-v-borgiel/#:~:text=We%20conclude%2C%20nevertheless%2C%20that%20the,advantage%20in%20competition%20with%20plaintiff.>
 
 [^mutsa-trade-secret-definition]: **MCL § 445.1902** — "‘Trade secret’ means information, including a formula, pattern, compilation, program, device, method, technique, or process, that is both of the following: (i) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use." *MCL § 445.1902(d).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-445-1902>
 

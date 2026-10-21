@@ -20,7 +20,7 @@ A question-by-question summary of Kansas non-compete law, including the Weber re
 
 ## Are employee non-compete agreements enforceable in Kansas? {#employee-non-compete-enforceability}
 
-**Short answer.** Yes, when they are reasonable. Kansas enforces an employee non-compete that is ancillary to a lawful contract, reasonable under the circumstances, and not adverse to the public welfare [^weber-governing-standard].
+**Short answer.** Kansas enforces an employee non-compete that is ancillary to an employment contract if the restraint is reasonable under the circumstances and not adverse to the public welfare [^weber-governing-standard].
 
 Kansas is a reasonableness state, and it is one of the more employer-friendly jurisdictions in the country. The starting point is not a statute but the common law: a covenant is judged by whether the restraint is reasonable and the employer carries the burden of showing it [^weber-governing-standard].
 
@@ -30,7 +30,7 @@ The Kansas Supreme Court framed the governing rule in *Weber v. Tillman*, a phys
 
 ## What reasonableness test do Kansas courts apply to non-competes? {#reasonableness-test}
 
-**Short answer.** A four-factor test. Kansas courts ask whether the covenant protects a legitimate business interest, whether it imposes an undue burden on the employee, whether it injures the public welfare, and whether its time and territory limits are reasonable [^q2-weber-four-factor].
+**Short answer.** Kansas courts test a non-compete's reasonableness by asking whether it protects a legitimate business interest of the employer, whether it creates an undue burden on the employee, whether it injures the public welfare, and whether its time and territorial limits are reasonable [^q2-weber-four-factor].
 
 The four factors come from *Weber* and are restated in later cases.
 
@@ -47,7 +47,7 @@ The public-welfare factor is a real limit, not a formality. In *Caring Hearts*, 
 
 ## Will a Kansas court narrow an overbroad non-compete instead of voiding it? {#court-narrowing}
 
-**Short answer.** Usually it narrows. Kansas courts have long used their equitable power to reduce an overbroad restraint and enforce it as reduced, rather than striking the whole covenant [^eastern-equitable-reduction].
+**Short answer.** A Kansas court may use its equitable power to reduce an overbroad non-compete to what is necessary to protect the employer's interest and enforce it as reduced, as the Kansas Supreme Court approved in *Eastern Distributing Co. v. Flynn* [^eastern-equitable-reduction].
 
 The modern rule has a common-law root. In *Eastern Distributing*, the Kansas Supreme Court affirmed a trial court that cut an excessive territory down to what was reasonably necessary and enforced the covenant to that extent.
 
@@ -64,7 +64,7 @@ The 2025 statutory amendments add a separate, mandatory reformation command, but
 
 ## Does a tolling or extension-during-breach clause extend a Kansas non-compete? {#extended-for-breach}
 
-**Short answer.** Probably not as written. The only Kansas appellate decision on point refused to enforce a clause that tolled the restricted period during breach and during enforcement litigation, treating the resulting open-ended restraint as unreasonable [^doan-tolling-declined].
+**Short answer.** A Kansas court will likely refuse to enforce a clause that extends a non-compete's restricted period indefinitely during breach and enforcement litigation, as the Kansas Court of Appeals did in *Doan Family Corp. v. Arnberger* [^doan-tolling-declined][^doan-tolling-indefinite].
 
 Many templates add a tolling or extension clause so the employer gets the full benefit of the restricted period even if the former employee competes during it. In *Doan*, the agreement did exactly that, and the Kansas Court of Appeals affirmed the district court's refusal to enforce the tolling provision.
 
@@ -83,7 +83,7 @@ No Kansas case approves judicial or equitable extension of a covenant period eit
 
 ## How did the 2025 SB 241 amendments change Kansas restrictive-covenant law? {#sb-241-changes}
 
-**Short answer.** They created statutory safe harbors for non-solicitation and owner covenants, not for traditional non-competes. K.S.A. 50-163, as amended in 2025, conclusively presumes certain solicitation covenants enforceable, but it also excludes covenants not to compete from the Kansas Restraint of Trade Act [^q5-ksa-50-163-reasonable][^q5-ksa-50-163-exclusion].
+**Short answer.** The 2025 amendments to K.S.A. 50-163 conclusively presume certain written non-solicitation covenants enforceable, including an employee's covenant not to solicit material contact customers for up to two years after employment and an owner's covenant not to solicit the entity's employees or owners for up to four years [^sb241-employee-customer-nonsolicit-presumed][^sb241-owner-employee-nonsolicit-presumed]. They also require a court to modify and enforce an overbroad restrictive covenant governed by K.S.A. 50-163 that falls outside subsection (c)'s presumptions of enforceability, granting only the relief reasonably necessary to protect the business interest [^q5-ksa-50-163-reform]. K.S.A. 50-163 also excludes covenants not to compete from the Kansas Restraint of Trade Act [^q5-ksa-50-163-exclusion].
 
 SB 241 (2025 Kan. Sess. Laws ch. 74, effective July 1, 2025) amended K.S.A. 50-163. The amendments matter most for non-solicitation and owner covenants, which now get conclusive presumptions of enforceability inside defined limits. The statute frames the baseline as a reasonableness standard.
 
@@ -98,7 +98,7 @@ For overbroad covenants that the Act does govern, K.S.A. 50-163 now requires ref
 
 ## Are Kansas non-solicitation covenants conclusively presumed enforceable? {#non-solicitation}
 
-**Short answer.** Yes, inside the statutory limits. A written employee customer non-solicit is conclusively presumed enforceable if it is limited to material contact customers and lasts no more than two years [^ksa-50-163-customer-nonsolicit].
+**Short answer.** A written Kansas covenant in which an employee agrees not to solicit the employer's customers to provide competing products or services is conclusively presumed enforceable if it is limited to material contact customers and lasts no more than two years after the employment ends [^ksa-50-163-customer-nonsolicit].
 
 K.S.A. 50-163 sets durational and scope limits that, if met, make the covenant conclusively presumed enforceable and not a restraint of trade. For an employee customer non-solicit, the limits are a two-year cap and a material-contact-customer scope.
 
@@ -117,7 +117,7 @@ The presumption is strong but not absolute. Even for a covenant inside a safe ha
 
 ## What consideration supports a Kansas non-compete? {#consideration}
 
-**Short answer.** Continued employment is enough. Kansas does not treat continued employment of an existing at-will employee as inadequate consideration for a covenant signed after hire [^puritan-bennett-consideration].
+**Short answer.** Continued employment of an existing at-will Kansas employee can be sufficient consideration for a non-compete signed after hire, because the Kansas Court of Appeals held in *Puritan-Bennett Corp. v. Richter* that continued employment should not as a matter of law be disregarded as consideration [^puritan-bennett-consideration].
 
 This matters for covenants rolled out mid-employment. In *Puritan-Bennett*, the Court of Appeals held that an employee's continued employment could support a covenant not to compete and reversed a contrary ruling.
 
@@ -127,7 +127,7 @@ That gives Kansas employers more flexibility than states requiring new, independ
 
 ## Do special rules apply to Kansas physician and healthcare non-competes? {#healthcare}
 
-**Short answer.** No special ban. Kansas evaluates physician covenants under the ordinary reasonableness test, and it recognizes referral sources as a legitimate interest a medical practice may protect [^idbeis-referral-sources].
+**Short answer.** In our review of Kansas statutes we found no statute that bans or specially limits non-competes for physicians or other healthcare providers. Kansas courts have enforced physician covenants, holding in *Idbeis v. Wichita Surgical Specialists* that referral sources are a legitimate interest a medical practice may protect through a restrictive covenant [^idbeis-referral-sources][^healthcare-idbeis-enforced].
 
 Kansas has no statute banning healthcare non-competes. Two Kansas Supreme Court decisions arose in medical practices and enforced the covenants: *Weber* [^healthcare-weber-dermatologists][^healthcare-weber-enforced] and *Idbeis* [^idbeis-referral-sources][^healthcare-idbeis-enforced]. *Idbeis* is the clearest statement that a medical group may protect referral relationships.
 
@@ -142,7 +142,7 @@ A 2026 bill, SB 504, would have banned most post-employment non-competes for phy
 
 ## Are trade-secret and confidentiality protections still available in Kansas? {#trade-secrets}
 
-**Short answer.** Yes. The Kansas Uniform Trade Secrets Act protects trade secrets, and a contractual confidentiality covenant remains available for information that is not a trade secret [^ksa-60-3320-trade-secret][^ksa-60-3326-contract].
+**Short answer.** Kansas employers can still protect trade secrets under the Kansas Uniform Trade Secrets Act, which leaves contractual remedies such as a confidentiality covenant unaffected [^wolfe-kutsa-exclusive][^ksa-60-3326-contract].
 
 The Kansas Uniform Trade Secrets Act, K.S.A. 60-3320 et seq., defines a trade secret in terms of independent economic value and reasonable secrecy efforts.
 
@@ -157,7 +157,7 @@ The Act is the exclusive route for trade-secret recovery. In *Wolfe Electric*, t
 
 ## How are Kansas sale-of-business and owner covenants treated? {#sale-of-business}
 
-**Short answer.** More favorably than employee covenants. Owner and seller non-solicitation covenants get a four-year statutory safe harbor, covering both no-recruit and customer non-solicitation terms, while a sale-related non-compete is still tested under the common-law reasonableness standard [^q10-ksa-50-163-owner][^q10-ksa-50-163-owner-customer].
+**Short answer.** Kansas conclusively presumes enforceable an owner's or seller's written covenant, lasting no more than four years after the owner's business relationship ends, against soliciting the entity's employees or owners to interfere with those relationships or soliciting material contact customers for competing business [^q10-ksa-50-163-owner][^q10-ksa-50-163-owner-customer][^q10-ksa-50-163-owner-def]. The Kansas restraint of trade act does not apply to covenants not to compete, so a traditional sale-related non-compete falls outside these statutory presumptions [^ksa-50-163-act-excludes-noncompetes].
 
 K.S.A. 50-163 treats owners and sellers differently from rank-and-file employees. An owner who agrees not to recruit the entity's employees or owners is conclusively presumed enforceable for up to four years.
 
@@ -199,17 +199,21 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^q3-ksa-50-163-reform]: **K.S.A. 50-163** — "If a covenant that is not presumed to be enforceable pursuant to subsection (c) is determined to be overbroad or otherwise not reasonably necessary to protect a business interest of the business entity seeking enforcement of the covenant, the court shall modify the covenant, enforce the covenant as modified and grant only the relief reasonably necessary to protect such interests." *K.S.A. 50-163(b).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
-[^q3-ksa-50-163-noncompete-exclusion]: **K.S.A. 50-163** — "any franchise agreements or covenants not to compete" *K.S.A. 50-163(e)(6).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
+[^q3-ksa-50-163-noncompete-exclusion]: **K.S.A. 50-163** — "The Kansas restraint of trade act shall not be construed to apply to: (1) Any association that complies with the provisions and application of article 16 of chapter 17 of the Kansas Statutes Annotated, and amendments thereto, the cooperative marketing act; (2) any association, trust, agreement or arrangement that is governed by the provisions and application of 7 U.S.C. § 291 et seq., the Capper-Volstead act; (3) any corporation organized under the electric cooperative act, K.S.A. 17-4601 et seq., and amendments thereto, or which becomes subject to the electric cooperative act in any manner therein provided; or any limited liability company or corporation, or wholly owned subsidiary thereof, providing electric service at wholesale in the state of Kansas that is owned by four or more electric cooperatives that provide retail service in the state of Kansas; or any member-owned corporation formed prior to 2004; (4) any association that is governed by the provisions and application of article 22 of chapter 17 of the Kansas Statutes Annotated, and amendments thereto, the credit union act; (5) any association, trust, agreement or arrangement that is governed by the provisions and application of 7 U.S.C. § 181 et seq., the packers and stockyards act; and (6) any franchise agreements or covenants not to compete." *K.S.A. 50-163(e)(6).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
 [^doan-tolling-declined]: **Doan Family Corp. v. Arnberger** — "The district court did not err, however, when it declined to enforce the noncompete clause's tolling provision." *Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022).* <https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/#:~:text=The%20district%20court%20did%20not,the%20noncompete%20clause's%20tolling%20provision.>
 
 [^doan-tolling-indefinite]: **Doan Family Corp. v. Arnberger** — "While a two-year period is a reasonable restriction under these facts, an indefinite extension of that period is not a reasonable restraint on Arnberger." *Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022).* <https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/#:~:text=While%20a%20two%2Dyear%20period%20is,a%20reasonable%20restraint%20on%20Arnberger.>
 
-[^q5-ksa-50-163-reasonable]: **K.S.A. 50-163** — "An arrangement, contract, agreement, trust, understanding or combination is a reasonable restraint of trade or commerce if such restraint is reasonable in view of all of the facts and circumstances of the particular case and does not contravene public welfare." *K.S.A. 50-163(c)(1).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
+[^sb241-employee-customer-nonsolicit-presumed]: **K.S.A. 50-163** — "A covenant in writing in which an employee agrees not to solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the employer shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant is between an employer and an employee and does not continue for more than two years following the end of the employee's employment with the employer." *K.S.A. 50-163(c)(5).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
-[^q5-ksa-50-163-exclusion]: **K.S.A. 50-163** — "any franchise agreements or covenants not to compete" *K.S.A. 50-163(e)(6).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
+[^sb241-owner-employee-nonsolicit-presumed]: **K.S.A. 50-163** — "A covenant in writing in which an owner agrees to not solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, one or more employees or owners of a business entity for the purpose of interfering with the employment or ownership relationship of such employees or owners shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is between a business entity and an owner of the business entity and the covenant does not continue for more than four years following the end of the owner's business relationship with the business entity." *K.S.A. 50-163(c)(2).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
 [^q5-ksa-50-163-reform]: **K.S.A. 50-163** — "If a covenant that is not presumed to be enforceable pursuant to subsection (c) is determined to be overbroad or otherwise not reasonably necessary to protect a business interest of the business entity seeking enforcement of the covenant, the court shall modify the covenant, enforce the covenant as modified and grant only the relief reasonably necessary to protect such interests." *K.S.A. 50-163(b).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
+
+[^q5-ksa-50-163-exclusion]: **K.S.A. 50-163** — "The Kansas restraint of trade act shall not be construed to apply to: (1) Any association that complies with the provisions and application of article 16 of chapter 17 of the Kansas Statutes Annotated, and amendments thereto, the cooperative marketing act; (2) any association, trust, agreement or arrangement that is governed by the provisions and application of 7 U.S.C. § 291 et seq., the Capper-Volstead act; (3) any corporation organized under the electric cooperative act, K.S.A. 17-4601 et seq., and amendments thereto, or which becomes subject to the electric cooperative act in any manner therein provided; or any limited liability company or corporation, or wholly owned subsidiary thereof, providing electric service at wholesale in the state of Kansas that is owned by four or more electric cooperatives that provide retail service in the state of Kansas; or any member-owned corporation formed prior to 2004; (4) any association that is governed by the provisions and application of article 22 of chapter 17 of the Kansas Statutes Annotated, and amendments thereto, the credit union act; (5) any association, trust, agreement or arrangement that is governed by the provisions and application of 7 U.S.C. § 181 et seq., the packers and stockyards act; and (6) any franchise agreements or covenants not to compete." *K.S.A. 50-163(e)(6).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
+
+[^q5-ksa-50-163-reasonable]: **K.S.A. 50-163** — "An arrangement, contract, agreement, trust, understanding or combination is a reasonable restraint of trade or commerce if such restraint is reasonable in view of all of the facts and circumstances of the particular case and does not contravene public welfare." *K.S.A. 50-163(c)(1).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
 [^ksa-50-163-customer-nonsolicit]: **K.S.A. 50-163** — "A covenant in writing in which an employee agrees not to solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the employer shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant is between an employer and an employee and does not continue for more than two years following the end of the employee's employment with the employer." *K.S.A. 50-163(c)(5).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
@@ -223,23 +227,25 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^idbeis-referral-sources]: **Idbeis v. Wichita Surgical Specialists, P.A.** — "In Kansas, however, the law is clear that referral sources are a legitimate interest which can be protected by a restrictive covenant even in the context of a medical practice." *Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005).* <https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20Kansas%2C%20however%2C%20the%20law,context%20of%20a%20medical%20practice.>
 
+[^healthcare-idbeis-enforced]: **Idbeis v. Wichita Surgical Specialists, P.A.** — "In conclusion, the restrictive covenant in each of the plaintiff s employment contracts is enforceable." *Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005).* <https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20conclusion%2C%20the%20restrictive%20covenant,s%20employment%20contracts%20is%20enforceable.>
+
 [^healthcare-weber-dermatologists]: **Weber v. Tillman** — "Plaintiff employer and defendant employee, both dermatologists, entered into an employment contract which included a covenant not to compete should the employment cease for any reason." *Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).* <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=Plaintiff%20employer%20and%20defendant%20employee%2C,employment%20cease%20for%20any%20reason.>
 
 [^healthcare-weber-enforced]: **Weber v. Tillman** — "We are required to enforce the noncompetition covenant and affirm the trial court’s grant of an injunction." *Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).* <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=We%20are%20required%20to%20enforce,court%E2%80%99s%20grant%20of%20an%20injunction.>
 
-[^healthcare-idbeis-enforced]: **Idbeis v. Wichita Surgical Specialists, P.A.** — "In conclusion, the restrictive covenant in each of the plaintiff s employment contracts is enforceable." *Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005).* <https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20conclusion%2C%20the%20restrictive%20covenant,s%20employment%20contracts%20is%20enforceable.>
-
-[^ksa-60-3320-trade-secret]: **K.S.A. 60-3320** — "‘Trade secret’ means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (i) derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and (ii) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy." *K.S.A. 60-3320(4).* <https://ksrevisor.gov/statutes/chapters/ch60/060_033_0020.html>
+[^wolfe-kutsa-exclusive]: **Wolfe Electric, Inc. v. Duckworth** — "This is error because tort causes of action cannot include a claim to recover for trade secrets; KUTSA is the exclusive remedy." *Wolfe Electric, Inc. v. Duckworth, 293 Kan. 375, 266 P.3d 516 (2011).* <https://www.courtlistener.com/opinion/7970813/wolfe-electric-inc-v-duckworth/#:~:text=This%20is%20error%20because%20tort,KUTSA%20is%20the%20exclusive%20remedy.>
 
 [^ksa-60-3326-contract]: **K.S.A. 60-3326** — "This act does not affect: (1) Contractual remedies, whether or not based upon misappropriation of a trade secret;" *K.S.A. 60-3326(b)(1).* <https://ksrevisor.gov/statutes/chapters/ch60/060_033_0026.html>
 
-[^wolfe-kutsa-exclusive]: **Wolfe Electric, Inc. v. Duckworth** — "This is error because tort causes of action cannot include a claim to recover for trade secrets; KUTSA is the exclusive remedy." *Wolfe Electric, Inc. v. Duckworth, 293 Kan. 375, 266 P.3d 516 (2011).* <https://www.courtlistener.com/opinion/7970813/wolfe-electric-inc-v-duckworth/#:~:text=This%20is%20error%20because%20tort,KUTSA%20is%20the%20exclusive%20remedy.>
+[^ksa-60-3320-trade-secret]: **K.S.A. 60-3320** — "‘Trade secret’ means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (i) derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and (ii) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy." *K.S.A. 60-3320(4).* <https://ksrevisor.gov/statutes/chapters/ch60/060_033_0020.html>
 
 [^q10-ksa-50-163-owner]: **K.S.A. 50-163** — "A covenant in writing in which an owner agrees to not solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, one or more employees or owners of a business entity for the purpose of interfering with the employment or ownership relationship of such employees or owners shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is between a business entity and an owner of the business entity and the covenant does not continue for more than four years following the end of the owner's business relationship with the business entity." *K.S.A. 50-163(c)(2).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
 [^q10-ksa-50-163-owner-customer]: **K.S.A. 50-163** — "A covenant in writing in which an owner agrees to not solicit, induce, persuade, encourage, service, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the business entity shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant does not continue for more than four years following the end of the owner's business relationship with the business entity." *K.S.A. 50-163(c)(3).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
 [^q10-ksa-50-163-owner-def]: **K.S.A. 50-163** — "‘Owner’ means a current or former owner or seller of all or any part of the assets of a business entity or any interest in a business entity, including, but not limited to, a partnership interest, a membership interest in a limited liability company or a series limited liability company or any other equity interest or ownership interest." *K.S.A. 50-163(g)(3).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
+
+[^ksa-50-163-act-excludes-noncompetes]: **K.S.A. 50-163** — "The Kansas restraint of trade act shall not be construed to apply to: (1) Any association that complies with the provisions and application of article 16 of chapter 17 of the Kansas Statutes Annotated, and amendments thereto, the cooperative marketing act; (2) any association, trust, agreement or arrangement that is governed by the provisions and application of 7 U.S.C. § 291 et seq., the Capper-Volstead act; (3) any corporation organized under the electric cooperative act, K.S.A. 17-4601 et seq., and amendments thereto, or which becomes subject to the electric cooperative act in any manner therein provided; or any limited liability company or corporation, or wholly owned subsidiary thereof, providing electric service at wholesale in the state of Kansas that is owned by four or more electric cooperatives that provide retail service in the state of Kansas; or any member-owned corporation formed prior to 2004; (4) any association that is governed by the provisions and application of article 22 of chapter 17 of the Kansas Statutes Annotated, and amendments thereto, the credit union act; (5) any association, trust, agreement or arrangement that is governed by the provisions and application of 7 U.S.C. § 181 et seq., the packers and stockyards act; and (6) any franchise agreements or covenants not to compete." *K.S.A. 50-163(e).* <https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html>
 
 [^dtsa-notice-duty]: **Defend Trade Secrets Act — employer notice requirement, 18 U.S.C. § 1833(b)(3)(A)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
 

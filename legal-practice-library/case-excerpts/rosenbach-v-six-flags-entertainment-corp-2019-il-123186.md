@@ -7,7 +7,7 @@ description: >-
 citation: 'Rosenbach v. Six Flags Entertainment Corp., 2019 IL 123186, ¶ 40.'
 resource: >-
   https://www.courtlistener.com/opinion/4658484/rosenbach-v-six-flags-entertainment-corp/
-timestamp: '2026-06-12'
+timestamp: '2026-10-19'
 document_references:
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/privacy/us'

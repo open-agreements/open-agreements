@@ -2,7 +2,7 @@
 jurisdiction: "California"
 slug: california
 countryCode: US
-content_packaged_at: "2026-10-16"
+content_packaged_at: "2026-10-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/california · **Snapshot as of:** 2026-10-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/california · **Snapshot as of:** 2026-10-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in California[^about]
 
@@ -40,7 +40,7 @@ California voids employee non-compete agreements by statute and treats customer 
 
 ## Are employee non-compete agreements enforceable in California? {#employee-non-compete-enforceability}
 
-**Short answer.** No. California voids employee non-compete agreements by statute. Business and Professions Code section 16600 makes any contract that restrains someone from engaging in a lawful profession, trade, or business void to that extent, and the Legislature has directed courts to read the ban *broadly* — voiding any noncompete in employment *no matter how narrowly tailored* — unless it fits a specific statutory exception [^stat-16600-void][^stat-16600-broadly].
+**Short answer.** California voids employee non-compete agreements, because Business and Professions Code section 16600 voids contracts restraining a lawful profession, trade, or business and must be read broadly to void any noncompete in employment, *no matter how narrowly tailored*, that fits no statutory exception [^stat-16600-void][^stat-16600-broadly].
 
 This makes California the most employee-protective non-compete jurisdiction in the country. Unlike a reasonableness state, California does not weigh a covenant's duration or geography — a clause that restrains a former employee from competing is simply outside the statute and therefore void. The California Supreme Court settled this in *Edwards v. Arthur Andersen LLP*, where it struck a customer non-solicitation covenant and refused to adopt the Ninth Circuit's *narrow-restraint* exception [^edwards-reject-narrow].
 
@@ -59,7 +59,7 @@ What a California employer can protect instead is a narrow set of interests — 
 
 ## Are customer non-solicitation clauses enforceable in California? {#customer-nonsolicitation}
 
-**Short answer.** No, not in the employment context. California treats a clause barring a former employee from soliciting or servicing the employer's customers as a restraint on trade that is void under section 16600 — the same rule that voids a non-compete. *Edwards* itself struck a customer non-solicitation covenant [^q2-edwards-reject-narrow][^fillpoint-void].
+**Short answer.** A customer non-solicitation clause in a California employment agreement is likely void under section 16600, as the Court of Appeal held in *Fillpoint, LLC v. Maas* for a noncompetition and nonsolicitation covenant contained in an employment agreement [^fillpoint-void]. The California Supreme Court in *Edwards* rejected any narrow-restraint exception to section 16600, so a narrower restraint such as a customer non-solicit gets no separate exception [^q2-edwards-reject-narrow].
 
 Because *Edwards* rejected any reasonableness or narrow-restraint analysis in employment, a customer non-solicitation clause does not become enforceable just because it is limited to a handful of accounts or a short period. If it forecloses any part of the former employee's ability to compete for business, it is void [^q2-edwards-reject-narrow].
 
@@ -93,7 +93,7 @@ Federal district courts applying California law have largely followed *AMN* and 
 
 ## What is an employer's exposure for including or enforcing a void non-compete? {#employer-exposure}
 
-**Short answer.** Substantial. Since January 1, 2024, two laws turned California's ban from a defense into an offensive weapon. Senate Bill 699 (section 16600.5) makes *entering into* or *attempting to enforce* a void non-compete a civil violation with a private right of action and mandatory attorney's fees, reaching contracts signed anywhere. Assembly Bill 1076 (section 16600.1) made *including* such a clause unlawful, required employers to notify affected workers by February 14, 2024, and made a violation an act of unfair competition [^stat-16600-5-violation][^stat-16600-1-unlawful].
+**Short answer.** A California employer that enters into or attempts to enforce a void non-compete commits a civil violation under section 16600.5, and including such a clause in an employment contract is unlawful under section 16600.1 [^stat-16600-5-violation][^stat-16600-1-unlawful]. A prevailing employee, former employee, or prospective employee in an action based on a violation is entitled to reasonable attorney's fees and costs [^stat-16600-5-fees], and a violation of section 16600.1 is an act of unfair competition [^stat-16600-1-ucl]. Senate Bill 699 took effect January 1, 2024 [^ag-alert]. Section 16600.1 also required an employer, by February 14, 2024, to notify current employees, and former employees employed after January 1, 2022, whose contracts included a noncompete clause or who were required to enter a noncompete agreement that fits no exception, that the clause or agreement is void [^cal-16600-1-void-clause-notice].
 
 The private right of action is what ended the old practice of leaving an unenforceable *scarecrow* covenant in a contract to deter departures. Entering or enforcing a void clause is now itself the violation [^stat-16600-5-violation].
 
@@ -116,7 +116,7 @@ There is a further trap for employers who present void terms. Labor Code section
 
 ## Can a choice-of-law or forum-selection clause escape California's non-compete ban? {#choice-of-law}
 
-**Short answer.** Usually not for a California employee. Labor Code section 925 lets an employee who primarily resides and works in California void an out-of-state choice-of-law or forum-selection clause imposed as a condition of employment, and section 16600.5 says a void non-compete is unenforceable regardless of where it was signed. But California's extraterritorial reach has limits: federal courts have applied another state's law to enforce a non-compete where that state's interest was greater [^stat-925][^stat-16600-5-anywhere][^draftkings-stand].
+**Short answer.** A California employer generally cannot use a choice-of-law or forum-selection clause to escape California's non-compete ban for a dispute arising in California with an employee who primarily resides and works there, because Labor Code section 925 bars requiring such a clause as a condition of employment [^stat-925]. Section 16600.5 also makes a void non-compete unenforceable regardless of where and when it was signed [^stat-16600-5-anywhere].
 
 Section 925 is the core anti-circumvention rule. A California-based employee can void a clause that forces litigation elsewhere or strips California law, unless the employee was individually represented by counsel in negotiating it [^stat-925].
 
@@ -137,7 +137,7 @@ The limit appears when the dispute lands outside California. In *DraftKings Inc.
 
 ## Are non-competes tied to the sale of a business or ownership interest enforceable in California? {#sale-of-business}
 
-**Short answer.** Yes, within narrow statutory limits. A person who sells the goodwill of a business or disposes of an ownership interest may agree not to compete within the geographic area where the business operated (section 16601), and parallel rules cover partners (section 16602) and LLC members (section 16602.5). Courts read these exceptions strictly and tie them to the goodwill actually transferred [^stat-16601][^stat-16602][^stat-16602-5].
+**Short answer.** Under California's Business and Professions Code section 16601, a person who sells a business's goodwill or all of an ownership interest may agree not to carry on a similar business in the area where the business operated, so long as the buyer carries on a like business there [^stat-16601]. Parallel rules cover partners (section 16602) and LLC members (section 16602.5) [^stat-16602][^stat-16602-5].
 
 The sale-of-business exception exists so a buyer can protect the goodwill it pays for; without it, a seller could reopen next door and take back the customer base just sold. But the covenant must be tied to a genuine sale and limited to the area where the business was carried on [^stat-16601].
 
@@ -156,7 +156,7 @@ For a *partial* sale — where the owner sells some interest but stays involved 
 
 ## Can private equity or hedge funds impose non-competes on California physicians and dentists? {#healthcare-private-equity}
 
-**Short answer.** No — for contracts under the new healthcare law that takes effect January 1, 2026. Senate Bill 351 (Health and Safety Code section 1191) bars a private equity group or hedge fund involved with a physician or dental practice from using a management or asset-sale contract to stop a provider from competing with the practice after leaving, and voids any such clause [^stat-hsc-1191-ban].
+**Short answer.** California's Health and Safety Code section 1191 bars the private-equity and hedge-fund contracts it covers from restricting a physician or dental provider's competition with the practice after leaving, subject to an exception for an otherwise enforceable sale-of-business non-compete [^stat-hsc-1191-ban][^stat-hsc-1191-sale-exception]. A contract covered by section 1191 cannot operate as an employee non-compete [^stat-hsc-1191-sale-exception].
 
 SB 351 targets the contractual structures private equity uses to manage medical and dental practices. A management or asset-sale agreement with a PE- or hedge-fund-controlled entity cannot include a clause barring a provider from competing with the practice after a termination or resignation [^stat-hsc-1191-ban].
 
@@ -171,7 +171,7 @@ The law preserves a genuine sale-of-business non-compete but draws a sharp line:
 
 ## Are stay-or-pay and training-repayment (TRAP) clauses enforceable in California? {#stay-or-pay}
 
-**Short answer.** Increasingly not. For contracts entered into on or after January 1, 2026, Assembly Bill 692 (Business and Professions Code section 16608) makes most terms that impose a debt, penalty, or fee on a worker who leaves unlawful, and treats such a contract as void under section 16600. Labor Code section 926 gives the worker a civil action with statutory damages of $5,000 per worker [^stat-16608-void][^stat-926-damages].
+**Short answer.** For contracts entered into on or after January 1, 2026, a California stay-or-pay or training-repayment contract that section 16608(b) makes unlawful, including one imposing a penalty, fee, or cost on a worker whose employment ends, is void under section 16600 [^stat-16608-void][^stat-16608-penalty]. Labor Code section 926 makes a violator liable for the greater of actual damages or $5,000 per worker [^stat-926-damages].
 
 Section 16608 reaches the *stay-or-pay* structures — replacement-hire fees, training-repayment provisions (TRAPs), quit fees, and similar termination-triggered charges — that impose a penalty, fee, or cost on a worker who leaves and so function as financial deterrents to departure [^stat-16608-penalty].
 
@@ -190,7 +190,7 @@ The remedy is meaningful: a worker or worker representative can recover actual d
 
 ## What can a California employer protect instead of a non-compete? {#trade-secrets}
 
-**Short answer.** Trade secrets and narrowly drawn confidentiality. The California Uniform Trade Secrets Act lets an employer enjoin the actual or threatened misappropriation of a trade secret (Civil Code section 3426.2), and that protection operates whether or not any restrictive covenant exists. But a confidentiality clause written so broadly that it bars the employee from working in their field is treated as a *de facto* non-compete and is void [^stat-cuts-injunction][^brown-de-facto].
+**Short answer.** A California employer can protect its trade secrets instead of relying on a non-compete, because the California Uniform Trade Secrets Act lets a court enjoin actual or threatened misappropriation (Civil Code section 3426.2) [^stat-cuts-injunction]. A confidentiality clause written so broadly that it bars the employee from working in their field can operate as a *de facto* non-compete, as the Court of Appeal found in *Brown v. TGS Management* [^brown-de-facto].
 
 Because the Trade Secrets Act protects the *information* rather than the employment relationship, it is the most durable tool a California employer has for guarding competitively sensitive material [^stat-cuts-injunction].
 
@@ -229,9 +229,9 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^edwards-reject-narrow]: **Edwards v. Arthur Andersen LLP** — "We reject Andersen's contention that we should adopt a narrow-restraint exception to section 16600 and leave it to the Legislature, if it chooses, either to relax the statutory restrictions or adopt additional exceptions to the prohibition-against-restraint rule under section 16600." *Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008).* <https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/#:~:text=We%20reject%20Andersen's%20contention%20that,prohibition%2Dagainst%2Drestraint%20rule%20under%20section%2016600.>
 
-[^q2-edwards-reject-narrow]: **Edwards v. Arthur Andersen LLP** — "We reject Andersen's contention that we should adopt a narrow-restraint exception to section 16600 and leave it to the Legislature, if it chooses, either to relax the statutory restrictions or adopt additional exceptions to the prohibition-against-restraint rule under section 16600." *Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008).* <https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/#:~:text=We%20reject%20Andersen's%20contention%20that,prohibition%2Dagainst%2Drestraint%20rule%20under%20section%2016600.>
-
 [^fillpoint-void]: **Fillpoint, LLC v. Maas** — "In this case, when we read the two noncompetition covenants together, we hold that the noncompetition and nonsolicitation covenant contained in the employment agreement is void and unenforceable under California law." *Fillpoint, LLC v. Maas, 208 Cal. App. 4th 1170 (2012).* <https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/#:~:text=In%20this%20case%2C%20when%20we,and%20unenforceable%20under%20California%20law.>
+
+[^q2-edwards-reject-narrow]: **Edwards v. Arthur Andersen LLP** — "We reject Andersen's contention that we should adopt a narrow-restraint exception to section 16600 and leave it to the Legislature, if it chooses, either to relax the statutory restrictions or adopt additional exceptions to the prohibition-against-restraint rule under section 16600." *Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008).* <https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/#:~:text=We%20reject%20Andersen's%20contention%20that,prohibition%2Dagainst%2Drestraint%20rule%20under%20section%2016600.>
 
 [^amn-void]: **AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.** — "Turning to the instant case, we independently conclude that the nonsolicitation of employee provision in the CNDA is void under section 16600." *AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).* <https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=Turning%20to%20the%20instant%20case%2C,is%20void%20under%20section%2016600.>
 
@@ -251,9 +251,11 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^stat-16600-1-ucl]: **Cal. Bus. & Prof. Code § 16600.1** — "A violation of this section constitutes an act of unfair competition within the meaning of Chapter 5 (commencing with Section 17200)." *Cal. Bus. & Prof. Code § 16600.1(c).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.1>
 
-[^stat-432-5]: **Cal. Lab. Code § 432.5** — "No employer, or agent, manager, superintendent, or officer thereof, shall require any employee or applicant for employment to agree, in writing, to any term or condition which is known by such employer, or agent, manager, superintendent, or officer thereof to be prohibited by law." *Cal. Lab. Code § 432.5.* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=432.5>
-
 [^ag-alert]: **California Attorney General — Consumer Alert on Noncompete Agreements** — "Effective January 1, 2024, Senate Bill (SB) 699 makes it generally illegal for employers to enter into noncompete agreements with California employees." *Cal. Att'y Gen., Consumer Alert: Noncompete Agreements (Oct. 15, 2024).* <https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-reminding-california-workers-their>
+
+[^cal-16600-1-void-clause-notice]: **Cal. Bus. & Prof. Code § 16600.1** — "For current employees, and for former employees who were employed after January 1, 2022, whose contracts include a noncompete clause, or who were required to enter a noncompete agreement, that does not satisfy an exception to this chapter, the employer shall, by February 14, 2024, notify the employee that the noncompete clause or noncompete agreement is void." *Cal. Bus. & Prof. Code § 16600.1(b)(1).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.1>
+
+[^stat-432-5]: **Cal. Lab. Code § 432.5** — "No employer, or agent, manager, superintendent, or officer thereof, shall require any employee or applicant for employment to agree, in writing, to any term or condition which is known by such employer, or agent, manager, superintendent, or officer thereof to be prohibited by law." *Cal. Lab. Code § 432.5.* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=432.5>
 
 [^stat-925]: **Cal. Lab. Code § 925** — "An employer shall not require an employee who primarily resides and works in California, as a condition of employment, to agree to a provision that would do either of the following: (1) Require the employee to adjudicate outside of California a claim arising in California. (2) Deprive the employee of the substantive protection of California law with respect to a controversy arising in California." *Cal. Lab. Code § 925(a).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925>
 
@@ -275,15 +277,15 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^samuelian-reasonableness]: **Samuelian v. Life Generations Healthcare, LLC** — "We agree the reasonableness standard applies to partial sales." *Samuelian v. Life Generations Healthcare, LLC (Cal. Ct. App. 2024).* <https://www.courtlistener.com/opinion/10118817/samuelian-v-life-generations-healthcare-llc/#:~:text=We%20agree%20the%20reasonableness%20standard%20applies%20to%20partial%20sales.>
 
-[^stat-hsc-1191-ban]: **Cal. Health & Safety Code § 1191 (SB 351)** — "shall not include any clause barring any provider in that practice from doing either of the following: (A) Competing with that practice in the event of a termination or resignation of that provider from that practice." *Cal. Health & Safety Code § 1191(d)(1).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191>
+[^stat-hsc-1191-ban]: **Cal. Health & Safety Code § 1191 (SB 351)** — "(1) Any contract involving the management of a physician or dental practice doing business in this state by, or the sale of real estate or other assets owned by a physician or dental practice doing business in this state to, a private equity group or hedge fund, or any entity controlled directly or indirectly, in whole or in part, by a private equity group or hedge fund, shall not include any clause barring any provider in that practice from doing either of the following: (A) Competing with that practice in the event of a termination or resignation of that provider from that practice." *Cal. Health & Safety Code § 1191(d)(1).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191>
 
-[^stat-hsc-1191-sale-exception]: **Cal. Health & Safety Code § 1191 (SB 351)** — "An otherwise enforceable sale of business noncompete agreement. However, a contract described in this subdivision shall not operate as an employee noncompete agreement." *Cal. Health & Safety Code § 1191(d)(3)(A).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191>
+[^stat-hsc-1191-sale-exception]: **Cal. Health & Safety Code § 1191 (SB 351)** — "(3) This subdivision shall not affect the validity of either of the following: (A) An otherwise enforceable sale of business noncompete agreement. However, a contract described in this subdivision shall not operate as an employee noncompete agreement." *Cal. Health & Safety Code § 1191(d)(3)(A).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191>
 
 [^stat-16608-void]: **Cal. Bus. & Prof. Code § 16608 (AB 692)** — "A contract that is unlawful under subdivision (b) is a contract restraining a person from engaging in a lawful profession, trade, or business, and is void under Section 16600 only if the contract was entered into on or after January 1, 2026." *Cal. Bus. & Prof. Code § 16608(c).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16608>
 
-[^stat-926-damages]: **Cal. Lab. Code § 926 (AB 692)** — "Any person found liable for a violation of this section shall be liable for actual damages sustained by the worker or workers on whose behalf the case is brought, or five thousand dollars ($5,000) per worker, whichever is greater, in addition to injunctive relief, and reasonable attorney's fees and costs." *Cal. Lab. Code § 926(c).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=926>
-
 [^stat-16608-penalty]: **Cal. Bus. & Prof. Code § 16608 (AB 692)** — "Imposes any penalty, fee, or cost on a worker if the worker's employment or work relationship with a specific employer terminates." *Cal. Bus. & Prof. Code § 16608(b)(1)(C).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16608>
+
+[^stat-926-damages]: **Cal. Lab. Code § 926 (AB 692)** — "Any person found liable for a violation of this section shall be liable for actual damages sustained by the worker or workers on whose behalf the case is brought, or five thousand dollars ($5,000) per worker, whichever is greater, in addition to injunctive relief, and reasonable attorney's fees and costs." *Cal. Lab. Code § 926(c).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=926>
 
 [^stat-cuts-injunction]: **Cal. Civ. Code § 3426.2** — "Actual or threatened misappropriation may be enjoined." *Cal. Civ. Code § 3426.2(a).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3426.2>
 

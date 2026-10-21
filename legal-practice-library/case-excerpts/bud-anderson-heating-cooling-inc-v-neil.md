@@ -37,6 +37,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/#:~:text=%5BW%5Dhile%20the%20courts%20have%20upheld,years%20were%20unreasonable%20and%20invalid.>
 
+### bud-anderson-heating-cooling-inc-v-neil-neil-s-mootness-argument-hinges-on-the-6c399efd {#bud-anderson-heating-cooling-inc-v-neil-neil-s-mootness-argument-hinges-on-the-6c399efd}
+
+> Neil's mootness argument hinges on the premise that BAHC cannot be awarded a prospective one-year injunction that extends beyond the one-year-from-date-of-termination period specified in the contract. This is a contested point of law on which it would be improper to dismiss BAHC's appeal as moot.
+
+- supports: `extended-for-breach`
+- source_cards: `bud-anderson-contested-extension-point`
+- cited_by: [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
+- link_to_source: <https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/#:~:text=Neil's%20mootness%20argument%20hinges%20on,dismiss%20BAHC's%20appeal%20as%20moot.>
+
 ### bud-anderson-heating-cooling-inc-v-neil-therefore-it-is-not-clear-and-8dee860b {#bud-anderson-heating-cooling-inc-v-neil-therefore-it-is-not-clear-and-8dee860b}
 
 > Therefore, it is not clear and obvious on the record before us that BAHC could not obtain the relief it seeks on appeal, a one-year prospective injunction.

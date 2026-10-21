@@ -46,3 +46,12 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - source_cards: `borgiel-physician-upheld`, `mi-borgiel-physician`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2026165/st-clair-medical-pc-v-borgiel/#:~:text=We%20conclude%20that%20the%20covenant,as%20required%20by%20MCL%20445.774a(1).>
+
+### st-clair-medical-p-c-v-borgiel-we-conclude-nevertheless-that-the-1a22a7ac {#st-clair-medical-p-c-v-borgiel-we-conclude-nevertheless-that-the-1a22a7ac}
+
+> We conclude, nevertheless, that the restrictive covenant was protecting plaintiff's competitive business interest in retaining patients, that it provided plaintiff with time to regain goodwill with its patients, and that it prevented defendant from using patient contacts gained during the course of his employment to unfair advantage in competition with plaintiff.
+
+- supports: `protectable-interests`
+- source_cards: `borgiel-patient-goodwill-interest`
+- cited_by: [Non-Competes in Michigan](../non-compete/us/michigan.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2026165/st-clair-medical-pc-v-borgiel/#:~:text=We%20conclude%2C%20nevertheless%2C%20that%20the,advantage%20in%20competition%20with%20plaintiff.>

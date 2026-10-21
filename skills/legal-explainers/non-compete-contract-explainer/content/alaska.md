@@ -2,7 +2,7 @@
 jurisdiction: "Alaska"
 slug: alaska
 countryCode: US
-content_packaged_at: "2026-10-16"
+content_packaged_at: "2026-10-19"
 law_checked_through: "2026-06-01"
 human_reviewed_at: null
 next_review_due: "2026-11-28"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-10-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-10-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alaska[^about]
 
@@ -38,7 +38,7 @@ Alaska uses a common-law reasonableness test for non-competes, led by Alaska Sup
 
 ## Are employee non-compete agreements enforceable in Alaska? {#employee-non-compete-enforceability}
 
-**Short answer.** Yes, if they are reasonable, but Alaska courts start from a skeptical posture: employee non-competes are strictly construed[^decristofaro-disfavored-strictly-construed].
+**Short answer.** Alaska courts enforce an employee non-compete only if it is reasonable under a multi-factor test, and they strictly construe it [^data-management-reasonableness-factors][^decristofaro-disfavored-strictly-construed].
 
 Alaska has no general statute banning employee non-competes as of June 2026. The working rule comes from Alaska Supreme Court common law. *DeCristofaro* sets the posture [^decristofaro-disfavored-strictly-construed], and *Data Management* supplies the modern enforcement framework for overbroad employment covenants [^data-management-reasonableness-factors].
 
@@ -59,7 +59,7 @@ That makes reasonableness fact-bound. A statewide or long covenant is not automa
 
 ## Will Alaska courts rewrite an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** Often yes, through reasonable alteration, but only if the covenant can be made enforceable and the employer proves it was drafted in good faith [^data-management-reasonable-alteration].
+**Short answer.** An Alaska court will reasonably alter an overbroad non-compete if alteration can make it enforceable, unless the court determines the covenant was not drafted in good faith, and the employer bears the burden of proving good-faith drafting [^data-management-reasonable-alteration].
 
 Alaska does not follow a mechanical blue-pencil rule. *Data Management* rejected word-deletion formalism and adopted a reasonableness-based alteration approach that lets the court tailor a covenant to the facts.
 
@@ -72,7 +72,7 @@ That doctrine is not a drafting license. If the employer willfully overreached, 
 
 ## Must an Alaska non-compete include geographic and time limits? {#duration-limits}
 
-**Short answer.** Not always. A customer-focused activity restraint can survive without stated geography or duration when it is narrowly drawn to protect customer-list interests [^metcalfe-no-time-geography-required].
+**Short answer.** An Alaska non-compete does not always need geographic and time limits, because the Alaska Supreme Court held in *Metcalfe Investments v. Garrison* that the agreement before it was not unenforceable for lacking them [^metcalfe-no-time-geography-required]. That agreement barred the worker from using the employer's client list after departing and from sales to potential buyers who first contacted the employer during her employment [^metcalfe-client-list-restraint-terms].
 
 *Metcalfe* is the key Alaska authority. The alleged oral restraint did not bar the worker from operating a competing real estate business nearby. It targeted potential buyers who first contacted the former employer during employment, so the lack of a traditional territory or term did not defeat enforcement.
 
@@ -112,7 +112,7 @@ Alaska Stat. § 45.50.915 adds damages for actual loss and unjust enrichment, wi
 
 ## Must Alaska non-compete obligations be in writing? {#writing-requirement}
 
-**Short answer.** Not always. *Metcalfe* held that an oral customer-list noncompetition agreement was enforceable despite not being in writing [^metcalfe-oral-not-writing].
+**Short answer.** An Alaska non-compete obligation need not always be in writing, because the Alaska Supreme Court held in *Metcalfe Investments v. Garrison* that the oral agreement before it was enforceable even though it was not in writing [^metcalfe-oral-not-writing]. That agreement barred the worker from using the employer's client list after departing and from sales to potential buyers who first contacted the employer during her employment [^metcalfe-oral-client-list-terms].
 
 That holding is narrow but important. The agreement in *Metcalfe* was a promise to refrain from using customer lists in a new business for an unlimited period, and the court treated that kind of negative promise as outside the statute of frauds.
 
@@ -144,9 +144,9 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from an Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Alaska*, OpenAgreements (last updated June 1, 2026), https://openagreements.org/practice-guides/non-compete/us/alaska.
 
-[^decristofaro-disfavored-strictly-construed]: **DeCristofaro v. Security Nat. Bank** — "They are, therefore, strictly construed." *DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).* <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>
-
 [^data-management-reasonableness-factors]: **Data Management, Inc. v. Greene** — "Among the factors properly to be considered are: ‘[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.’" *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
+
+[^decristofaro-disfavored-strictly-construed]: **DeCristofaro v. Security Nat. Bank** — "They are, therefore, strictly construed." *DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).* <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>
 
 [^data-management-reasonableness-factors-reasonable]: **Data Management, Inc. v. Greene** — "Among the factors properly to be considered are: ‘[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.’" *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
 
@@ -155,6 +155,8 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 [^data-management-overreach-good-faith]: **Data Management, Inc. v. Greene** — "The trial court must determine whether an employer has overreached willfully and, if so, the court should refuse to alter the covenant." *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20trial%20court%20must%20determine,refuse%20to%20alter%20the%20covenant.>
 
 [^metcalfe-no-time-geography-required]: **Metcalfe Investments, Inc. v. Garrison** — "We conclude that the noncompetition agreement is not rendered unenforceable by the lack of a geographical or durational limitation." *Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1361-62 (Alaska 1996).* <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=We%20conclude%20that%20the%20noncompetition,a%20geographical%20or%20durational%20limitation.>
+
+[^metcalfe-client-list-restraint-terms]: **Metcalfe Investments, Inc. v. Garrison** — "This evidence indicated that Garrison had agreed not to make use of Metcalfe Investments’ client list after departing and not to participate in sales to potential buyers who had first made contact with Metcalfe Investments during her employment." *Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356 (Alaska 1996).* <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=This%20evidence%20indicated%20that%20Garrison,Metcalfe%20Investments%20during%20her%20employment.>
 
 [^metcalfe-specialty-bar]: **Metcalfe Investments, Inc. v. Garrison** — "For instance, if a business is so large that a restraint on contacting former clients would amount to a bar prohibiting the employee from practicing his or her specialty, the court will require the restraint to be drafted more narrowly." *Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1362 n.5 (Alaska 1996).* <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=For%20instance%2C%20if%20a%20business,to%20be%20drafted%20more%20narrowly.>
 
@@ -179,6 +181,8 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 [^autsa-displacement-contracts]: **AS 45.50.910 / .915 / .930 (AUTSA)** — "AS 45.50 . 910 - 45.50.945 do not affect (1) contractual or other civil liability or relief that is not based upon misappropriation of a trade secret; or (2) criminal liability for misappropriation of a trade secret." *Alaska Stat. § 45.50.930(b).* <https://www.akleg.gov/pdf/billfiles/SLAs/SLA%201988/CH%20103%20SLA%201988.pdf>
 
 [^metcalfe-oral-not-writing]: **Metcalfe Investments, Inc. v. Garrison** — "The noncompetition agreement in this case is thus enforceable despite the fact that it was not in writing." *Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1362 (Alaska 1996).* <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=The%20noncompetition%20agreement%20in%20this,it%20was%20not%20in%20writing.>
+
+[^metcalfe-oral-client-list-terms]: **Metcalfe Investments, Inc. v. Garrison** — "This evidence indicated that Garrison had agreed not to make use of Metcalfe Investments’ client list after departing and not to participate in sales to potential buyers who had first made contact with Metcalfe Investments during her employment." *Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356 (Alaska 1996).* <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=This%20evidence%20indicated%20that%20Garrison,Metcalfe%20Investments%20during%20her%20employment.>
 
 [^data-management-reasonableness-factors-writing]: **Data Management, Inc. v. Greene** — "Among the factors properly to be considered are: ‘[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.’" *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
 

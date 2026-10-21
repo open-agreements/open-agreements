@@ -1,5 +1,11 @@
 # Us Update Log
 
+## 2026-10-19
+* **Update**: content(checklists): Maine physician item tells the reviewer what to confirm and flag (content advisory, #1150) (1372357)
+* **Update**: content(checklists): Maine session-law cards pin the preface note, not the cover (Codex round 1, #1150) (524484e)
+* **Update**: content(checklists): Maine L.D. 2200 restriction dates from July 29, 2026, on primary sources (freshness, #1150) (5e13ed1)
+* **Update**: content(checklists): keep Epstein Becker Green practice evidence on four Maine items with a quote that states no date (evidence floor, #1150) (b291ed0)
+
 ## 2026-10-09
 * **Update**: content(checklists): Vermont checklist keeps § 495q qualifiers and adds the practice-sale conservative course (Codex round 2, #1175) (013f225)
 * **Update**: content(checklists): Vermont non-compete checklist reflects the 21 V.S.A. § 495q health care provider ban (#1175) (2f892ee)

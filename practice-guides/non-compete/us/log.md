@@ -1,13 +1,24 @@
 # Us Update Log
 
+## 2026-10-19
+* **Update**: content(non-compete): quote California Health and Safety Code 1191(d)'s scope and sale-of-business exception in full (#3492 peer review round 24) (1fe0b44)
+
 ## 2026-10-15
 * **Update**: content(non-compete/nevada): mark claims, roles and source edges (structured analysis) (08023d1)
 * **Update**: content(non-compete/ftc-rule-status): mark claims, roles and source edges (structured analysis) (1020941)
 * **Update**: content(non-compete/ohio): mark claims, roles and source edges (structured analysis) (993cee9)
 * **Update**: content(non-compete/south-carolina): mark claims, roles and source edges (structured analysis) (ae90f2c)
 
+## 2026-10-10
+* **Update**: content(non-compete): state Alabama's training exception and California's 16600.1 notice duty with their statutory limits (#3492 peer review round 23) (1b79455)
+* **Update**: content(non-compete): end Michigan's forum-selection opening at Stryker and state Barshaw as its own holding (#3492 peer review round 21 MINOR) (973b300)
+* **Update**: content(non-compete): restore Massachusetts's statutory requirements and Kansas's 2025 non-solicitation safe harbors on same-question cards (#3492 peer review round 22) (a319164)
+* **Update**: content(non-compete): restore Maryland's Chapter 301 mismatch sentence on a quote of item 3 that discloses the unmarked strikes (#3492 peer review round 20) (b8a6659)
+
 ## 2026-10-09
 * **Update**: content(practice-guides): Vermont § 495q answers keep statutory qualifiers; sale answers point to the provider rule (Codex round 3, #1175) (10892c6)
+* **Update**: content(non-compete): hold Colorado's enforceability and Michigan's tolling answers at main's text until their sources publish (#3492 peer review round 17) (1699923)
+* **Update**: content(non-compete): signal Colorado's good-faith penalty exception in the opening (#3492 peer review round 19) (238188f)
 * **Update**: content(practice-guides): Vermont reasonableness caution states the narrowing authorities precisely; sale answer opens substantively (peer review 4, #1175) (2c23369)
 * **Update**: content(practice-guides): projected Vermont reasonableness caution names the bars instead of an in-page link (#1175) (2c287e9)
 * **Update**: content(practice-guides): Vermont § 495q opening sentences keep the Vermont-services scope (Codex round 4, #1175) (41b99e1)
@@ -22,9 +33,32 @@
 * **Update**: content(practice-guides): Vermont profession answer states the Five Guys settlement as its card quotes it (peer review 7, #1175) (bc19e35)
 * **Update**: content(practice-guides): Vermont § 495q statements keep the Vermont-services scope and full (c) exception (Codex round 2, #1175) (d6f4ad4)
 * **Update**: content(practice-guides): Vermont non-compete note reflects Act 177's health care provider ban (21 V.S.A. § 495q) (#1175) (db5a71e)
+* **Update**: content(non-compete): scope Idaho's physician opening to patient relationships and cut Maryland's unquoted intended-reading sentence (#3492 peer review round 18) (e1b8552)
 
 ## 2026-10-08
+* **Update**: content(non-compete): full-sentence answer openings for Alabama, Alaska, Arkansas and California (#2987) (01f9716)
+* **Update**: content(non-compete): full-sentence answer openings for Kansas, Maryland, Massachusetts and Michigan (#2987) (084f7cf)
+* **Update**: content(non-compete): restore Arkansas's common-law sentence, quote Kansas's full exclusion, narrow Hawaii's Del Rosario clause (#3492 peer review round 13) (1133d5a)
+* **Update**: content(non-compete): narrow the Michigan tolling absence and reconcile Maryland's Chapter 301 tense (#3492 peer review round 8) (16d1830)
+* **Update**: content(non-compete): restore Colorado's 2022 rewrite date, Michigan's goodwill interest, and quote Maryland's (a)(2) run without struck text (#3492 peer review round 14) (24ff7ce)
+* **Update**: content(non-compete): restore Colorado's opening rewrites and keep main's August 10, 2022 applicability clause in the enforceability answer (#3492) (3457f11)
+* **Update**: content(non-compete): narrow five answers to their quotes (#3492 peer review round 5) (3a2b1cc)
+* **Update**: content(non-compete): add primary-law cards for the round-3 peer-review findings in eight guides (#3492) (3ce8977)
 * **Update**: content(practice-guides): #3436 NC tolling opening cites what the cards say; Philips holding gets its own sentence (3e5f3aa)
+* **Update**: content(non-compete): defer Colorado's opening rewrite until HB 22-1317 is published; restore the page to main (#3492 peer review round 16) (4021768)
+* **Update**: content(non-compete): state Colorado's minority-owner cap formula in full and open Idaho's physician answer with its conclusion (#3492 peer review round 17) (69c79f7)
+* **Update**: content(non-compete): drop Maryland's unsupported Chapter 301 caution and state the execution-date section as written (#3492 peer review round 11) (6fe6957)
+* **Update**: content(non-compete): cut Maryland's unsupported Chapter 301 renumbering analysis and state the caution as consequence (#3492 peer review round 10) (8341136)
+* **Update**: content(non-compete): cut four answers back to origin/main wording (#3492 peer review round 6) (8df768c)
+* **Update**: content(non-compete): add snapshot-backed garden-leave and Bud Anderson cards and drop an unfilled signal (#3492 peer review round 9) (8ff61bf)
+* **Update**: content(non-compete): add the LKQ voluntary-termination card and drop the uncited Colorado cutoff (#3492 peer review round 7) (a065237)
+* **Update**: content(non-compete): restore Maryland's Chapter 301 cross-reference caveat on a quoted card (#3492 peer review round 12) (a4c7269)
+* **Update**: content(non-compete): move Colorado's 2022 source-note card into its question and scope Massachusetts's garden-leave extension (#3492 peer review round 15) (a60a49a)
+* **Update**: content(non-compete): restore omitted statutory conditions in five guides (#3492 peer review round 4) (c90409b)
+* **Update**: content(non-compete): restore lost coverage and narrow openings to their quotes in seven guides (#3492 peer review round 2) (caee203)
+* **Update**: content(non-compete): reword the SB 25-083 applicability card citation so the freshness profile parses one authority (#3492) (cb687b8)
+* **Update**: content(non-compete): cut unsupported answer tails in 11 guides (#3492 peer review round 1) (e503ad6)
+* **Update**: content(non-compete): full-sentence answer openings for Colorado, Delaware, Hawaii and Idaho (#2987) (ff0bf22)
 
 ## 2026-10-07
 * **Update**: content(practice-guides): owner decision on #3436 peer-review findings (RI exclusion quote, AZ framework sentence, AZ absence marker) (dbdb5ba)
