@@ -23,7 +23,7 @@ Review every item below the way a Maine court would: the statute declares non-co
 
 - [ ] **Parties identified by name** (Recommended) — Confirm the named employer is the entity that actually employs the worker. Maine puts statutory duties on the employer itself — the pre-offer disclosure, the three-business-day review copy, the prohibition on no-poach arrangements — so a covenant papered with a parent or affiliate that is not the employing entity muddies who owed those duties and whether they were met. [#identify-parties]
 
-- [ ] **Effective date** (Recommended) — Dates carry unusual weight here. The signing date starts the six-months half of Maine's delayed-effectiveness clock, and an entered-into-or-renewed date determines whether the 2026 health-care-practitioner restriction reaches the agreement. An undated covenant leaves both clocks indeterminate. [^me-599a-delayed-cover][^ebg-ld2200-trigger-cover] [#identify-effective-date]
+- [ ] **Effective date** (Recommended) — Dates carry unusual weight here. The signing date starts the six-months half of Maine's delayed-effectiveness clock, and an entered-into-or-renewed date determines whether the 2026 health-care-practitioner restriction reaches the agreement. An undated covenant leaves both clocks indeterminate. [^me-599a-delayed-cover][^me-pl718-s5-cover][^ebg-ld2200-trigger-cover] [#identify-effective-date]
 
 - [ ] **Employee title** (Recommended) — Record the role and any professional license, because Maine's protections run by worker class: employees earning at or below the wage floor cannot be bound at all, non-owner veterinarians are excluded, allopathic and osteopathic physicians sit outside the delayed-effectiveness rule, and health-care practitioners gain a separate restriction in July 2026. The title line is the first signal that one of those classes is in play. [^me-599a-wage-floor-cover] [#identify-employee-title]
 
@@ -101,7 +101,7 @@ Review every item below the way a Maine court would: the statute declares non-co
 
 ## Physician-specific notices and carve-outs {#physician-specific-notices-and-carve-outs}
 
-- [ ] **Physician rights and notices** (Recommended) — The dedicated clause earns its keep in Maine, where the rules run in opposite directions. Agreements with allopathic and osteopathic physicians are carved out of the delayed-effectiveness rule — but a broader health-care-practitioner restriction applies to agreements entered into or renewed on or after July 13, 2026. A clause written from the physician carve-out alone reads as permission the newer restriction has since withdrawn, so it should state both rules. [^me-599a-delayed-phys][^ebg-ld2200-phys] [#address-physician-specific-rights]
+- [ ] **Physician rights and notices** (Recommended) — The dedicated clause earns its keep in Maine, where the rules run in opposite directions. Agreements with allopathic and osteopathic physicians are carved out of the delayed-effectiveness rule — but a broader health-care-practitioner restriction applies to agreements entered into or renewed on or after July 29, 2026. Confirm the clause states both rules, and flag one written from the physician carve-out alone: it reads as permission the newer restriction has since withdrawn. [^me-599a-delayed-phys][^me-pl718-s5-phys][^me-2026-effective-phys][^ebg-ld2200-phys] [#address-physician-specific-rights]
 
 ## No conflicting obligations {#no-conflicting-obligations}
 
@@ -131,7 +131,7 @@ Review every item below the way a Maine court would: the statute declares non-co
 
 ## Assignment and successors {#assignment-and-successors}
 
-- [ ] **Assignment and successors** (Recommended) — Confirm employer-side assignability to successors and that the worker cannot assign. Watch the renewal trap in any transaction: a covenant re-signed or re-papered restarts the six-months-from-signing half of the effectiveness clock, and a renewal on or after July 13, 2026 pulls a health-care practitioner's covenant into the new restriction. [^me-599a-delayed-asgn][^ebg-ld2200-asgn] [#address-assignment-and-successors]
+- [ ] **Assignment and successors** (Recommended) — Confirm employer-side assignability to successors and that the worker cannot assign. Watch the renewal trap in any transaction: a covenant re-signed or re-papered restarts the six-months-from-signing half of the effectiveness clock, and a renewal on or after July 29, 2026 pulls a health-care practitioner's covenant into the new restriction. [^me-599a-delayed-asgn][^me-pl718-s5-asgn][^me-2026-effective-asgn][^ebg-ld2200-asgn] [#address-assignment-and-successors]
 
 ## Governing law, venue, dispute process {#governing-law-venue-dispute-process}
 
@@ -139,7 +139,7 @@ Review every item below the way a Maine court would: the statute declares non-co
 
 ## Entire agreement, amendment, waiver, e-signatures {#entire-agreement-amendment-waiver-e-signatures}
 
-- [ ] **Entire agreement, amendments, e-signatures** (Recommended) — Boilerplate with a Maine trap inside. An amendment that re-papers the covenant restarts the six-months-from-signing effectiveness clock, and a renewal can carry an old covenant into the health-care-practitioner restriction. Review the amendment mechanics so a routine refresh does not silently reset — or trigger — the statutory clocks. [^me-599a-delayed-ea][^ebg-ld2200-ea] [#address-entire-agreement-amendment-waiver-and-e-signatures]
+- [ ] **Entire agreement, amendments, e-signatures** (Recommended) — Boilerplate with a Maine trap inside. An amendment that re-papers the covenant restarts the six-months-from-signing effectiveness clock, and a renewal can carry an old covenant into the health-care-practitioner restriction. Review the amendment mechanics so a routine refresh does not silently reset — or trigger — the statutory clocks. [^me-599a-delayed-ea][^me-pl718-s5-ea][^ebg-ld2200-ea] [#address-entire-agreement-amendment-waiver-and-e-signatures]
 
 ## Maine statutory gates (26 M.R.S. §§ 599-A, 599-B) {#maine-statutory-gates}
 
@@ -155,7 +155,7 @@ The seven items below exist only on this Maine page: they implement the wage-flo
 
 - [ ] **No non-compete for non-owner veterinarians** (Prohibited) — A licensed veterinarian working in a covered veterinary facility cannot be held to a non-compete unless the veterinarian owns an interest in the facility — and the statute reaches backward, instructing courts not to enforce earlier or renewed veterinarian covenants either. There is no compensation-based path around the exclusion, so for a veterinarian the review goes straight to the alternative covenants. [^me-599a-vet-gate] [#exclude-non-competes-for-non-owner-veterinarians]
 
-- [ ] **Health-care practitioner covenants re-checked under the 2026 law** (Prohibited) — Do not evaluate a health-care practitioner's covenant on the pre-amendment rules alone. The restriction signed on April 15, 2026 applies to agreements entered into or renewed on or after July 13, 2026 — and because the published statute page may lag the amendment, confirm the codified text before relying on it. Remember the physician carve-out from the delayed-effectiveness rule is a timing rule, not a healthcare-wide permission. [^ebg-ld2200-signed-gate][^ebg-ld2200-effective-gate] [#review-health-care-practitioner-covenants-under-ld-2200]
+- [ ] **Health-care practitioner covenants re-checked under the 2026 law** (Prohibited) — Do not evaluate a health-care practitioner's covenant on the pre-amendment rules alone. The restriction signed on April 15, 2026 applies to agreements entered into or renewed on or after July 29, 2026 — and because the published statute page may lag the amendment, confirm the codified text before relying on it. Remember the physician carve-out from the delayed-effectiveness rule is a timing rule, not a healthcare-wide permission. [^ebg-ld2200-signed-gate][^me-pl718-s5-gate][^me-2026-effective-gate] [#review-health-care-practitioner-covenants-under-ld-2200]
 
 - [ ] **No employer-to-employer no-poach terms** (Prohibited) — Sweep the surrounding commercial papers, not just the employee agreement: Maine prohibits restrictive employment agreements between employers — reaching franchise, contractor, and subcontractor arrangements — and bars entering into them, enforcing them, or threatening to enforce them. A violation is a civil violation carrying a fine of at least $5,000, with the Department of Labor responsible for enforcement, so no-poach language hiding in a staffing or vendor layer is a finding, not a footnote. [^me-599b-ban-gate][^me-599b-penalty-gate] [#exclude-employer-to-employer-no-poach-terms]
 
@@ -165,7 +165,9 @@ The seven items below exist only on this Maine page: they implement the wage-flo
 
 [^me-599a-delayed-cover]: **26 M.R.S. § 599-A — Noncompete agreements** — "Except for a noncompete agreement between an employer and an allopathic physician or an osteopathic physician licensed under Title 32, chapter 48 or chapter 36, respectively, the terms of a noncompete agreement do not take effect until after one year of the employee's employment with the employer or a period of 6 months from the date the agreement was signed, whichever is later." *26 M.R.S. § 599-A(5).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
-[^ebg-ld2200-trigger-cover]: **Maine Restricts Noncompetes for Health Care Practitioners** — "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the ‘Effective Date’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
+[^me-pl718-s5-cover]: **P.L. 2025, ch. 718 (L.D. 2200)** — "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act." *P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^ebg-ld2200-trigger-cover]: **Maine Restricts Noncompetes for Health Care Practitioners** — "As of the Effective Date, the Amendments will prohibit noncompetes with health care practitioners employed by an entity in which the health care practitioner does not have an ownership interest." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
 
 [^me-599a-wage-floor-cover]: **26 M.R.S. § 599-A — Noncompete agreements** — "The employee is earning wages at or below 400% of the federal poverty level; or" *26 M.R.S. § 599-A(3)(A).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
@@ -209,7 +211,11 @@ The seven items below exist only on this Maine page: they implement the wage-flo
 
 [^me-599a-delayed-phys]: **26 M.R.S. § 599-A — Noncompete agreements** — "Except for a noncompete agreement between an employer and an allopathic physician or an osteopathic physician licensed under Title 32, chapter 48 or chapter 36, respectively, the terms of a noncompete agreement do not take effect until after one year of the employee's employment with the employer or a period of 6 months from the date the agreement was signed, whichever is later." *26 M.R.S. § 599-A(5).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
-[^ebg-ld2200-phys]: **Maine Restricts Noncompetes for Health Care Practitioners** — "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the ‘Effective Date’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
+[^me-pl718-s5-phys]: **P.L. 2025, ch. 718 (L.D. 2200)** — "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act." *P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^me-2026-effective-phys]: **Maine Laws, 132nd Legislature, Second Regular Session** — "The general effective date of the nonemergency laws passed at the Second Regular Session of the 132nd Legislature is July 29, 2026." *Laws of Maine, 132nd Legislature, Second Regular Session, preface, note 8; P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/doc/12627>
+
+[^ebg-ld2200-phys]: **Maine Restricts Noncompetes for Health Care Practitioners** — "As of the Effective Date, the Amendments will prohibit noncompetes with health care practitioners employed by an entity in which the health care practitioner does not have an ownership interest." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
 
 [^me-599b-ban-notice]: **26 M.R.S. § 599-B — Restrictive employment agreements** — "An employer may not:" *26 M.R.S. § 599-B(2).* <https://legislature.maine.gov/statutes/26/title26sec599-B.html>
 
@@ -227,11 +233,17 @@ The seven items below exist only on this Maine page: they implement the wage-flo
 
 [^me-599a-delayed-asgn]: **26 M.R.S. § 599-A — Noncompete agreements** — "Except for a noncompete agreement between an employer and an allopathic physician or an osteopathic physician licensed under Title 32, chapter 48 or chapter 36, respectively, the terms of a noncompete agreement do not take effect until after one year of the employee's employment with the employer or a period of 6 months from the date the agreement was signed, whichever is later." *26 M.R.S. § 599-A(5).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
-[^ebg-ld2200-asgn]: **Maine Restricts Noncompetes for Health Care Practitioners** — "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the ‘Effective Date’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
+[^me-pl718-s5-asgn]: **P.L. 2025, ch. 718 (L.D. 2200)** — "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act." *P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^me-2026-effective-asgn]: **Maine Laws, 132nd Legislature, Second Regular Session** — "The general effective date of the nonemergency laws passed at the Second Regular Session of the 132nd Legislature is July 29, 2026." *Laws of Maine, 132nd Legislature, Second Regular Session, preface, note 8; P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/doc/12627>
+
+[^ebg-ld2200-asgn]: **Maine Restricts Noncompetes for Health Care Practitioners** — "As of the Effective Date, the Amendments will prohibit noncompetes with health care practitioners employed by an entity in which the health care practitioner does not have an ownership interest." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
 
 [^me-599a-delayed-ea]: **26 M.R.S. § 599-A — Noncompete agreements** — "Except for a noncompete agreement between an employer and an allopathic physician or an osteopathic physician licensed under Title 32, chapter 48 or chapter 36, respectively, the terms of a noncompete agreement do not take effect until after one year of the employee's employment with the employer or a period of 6 months from the date the agreement was signed, whichever is later." *26 M.R.S. § 599-A(5).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
-[^ebg-ld2200-ea]: **Maine Restricts Noncompetes for Health Care Practitioners** — "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the ‘Effective Date’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
+[^me-pl718-s5-ea]: **P.L. 2025, ch. 718 (L.D. 2200)** — "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act." *P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^ebg-ld2200-ea]: **Maine Restricts Noncompetes for Health Care Practitioners** — "As of the Effective Date, the Amendments will prohibit noncompetes with health care practitioners employed by an entity in which the health care practitioner does not have an ownership interest." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
 
 [^me-599a-wage-floor-gate]: **26 M.R.S. § 599-A — Noncompete agreements** — "The employee is earning wages at or below 400% of the federal poverty level; or" *26 M.R.S. § 599-A(3)(A).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 
@@ -251,7 +263,9 @@ The seven items below exist only on this Maine page: they implement the wage-flo
 
 [^ebg-ld2200-signed-gate]: **Maine Restricts Noncompetes for Health Care Practitioners** — "On April 15, 2026, Governor Janet T. Mills signed into law ‘An Act Relating to Noncompete Agreements Between Employers and Health Care Practitioners,’ L.D. 2200 (the ‘Amendments’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
 
-[^ebg-ld2200-effective-gate]: **Maine Restricts Noncompetes for Health Care Practitioners** — "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the ‘Effective Date’)." *Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).* <https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners>
+[^me-pl718-s5-gate]: **P.L. 2025, ch. 718 (L.D. 2200)** — "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act." *P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132>
+
+[^me-2026-effective-gate]: **Maine Laws, 132nd Legislature, Second Regular Session** — "The general effective date of the nonemergency laws passed at the Second Regular Session of the 132nd Legislature is July 29, 2026." *Laws of Maine, 132nd Legislature, Second Regular Session, preface, note 8; P.L. 2025, ch. 718, § 5.* <https://legislature.maine.gov/doc/12627>
 
 [^me-599b-ban-gate]: **26 M.R.S. § 599-B — Restrictive employment agreements** — "An employer may not:" *26 M.R.S. § 599-B(2).* <https://legislature.maine.gov/statutes/26/title26sec599-B.html>
 

@@ -18,7 +18,7 @@ Delaware enforces reasonable non-competes under Court of Chancery and Supreme Co
 
 ## Are employee non-compete agreements enforceable in Delaware? {#employee-non-compete-enforceability}
 
-**Short answer.** Yes, if the covenant is reasonable, protects a legitimate economic interest, and survives the equities. Delaware courts do not mechanically enforce non-competes [^fp-uc-reasonableness-test].
+**Short answer.** Delaware courts enforce an employee non-compete only if it is reasonable in geographic scope and duration, advances a legitimate economic interest of the party seeking enforcement, and survives a balancing of the equities [^fp-uc-reasonableness-test]. Delaware courts do not enforce non-competes mechanically, and they evaluate each covenant's dimensions holistically and in context [^sunder-chancery-holistic-review].
 
 Delaware has no general wage-threshold, notice, or garden-leave statute for ordinary employee non-competes. The baseline rule is common law. The covenant must meet contract-law requirements, fit the protected business interest, and avoid imposing unusual hardship or an unreasonable restraint on trade [^fp-uc-reasonableness-test][^sunder-chancery-holistic-review].
 
@@ -31,7 +31,7 @@ The practical posture is pro-enforcement only for disciplined drafting. A Delawa
 
 ## What makes a Delaware non-compete reasonable? {#reasonableness-test}
 
-**Short answer.** Delaware looks at the covenant's time, geography, activity scope, protected interest, consideration, and equitable effect together. A covenant should be no broader than the business interest it protects [^payscale-legitimate-interests].
+**Short answer.** A Delaware non-compete is reasonable only if its terms are tied to a legitimate interest Delaware law recognizes, such as protecting employer goodwill, key customer relationships, or confidential information from misuse [^payscale-legitimate-interests][^payscale-specific-interests-pleaded].
 
 Recognized interests include employer goodwill and confidential information. In *Payscale*, the Delaware Supreme Court held at the pleading stage that an eighteen-month nationwide restriction could proceed where Payscale pleaded a nationwide business, high-value customer relationships, and confidential compensation-data strategy [^payscale-legitimate-interests][^payscale-specific-interests-pleaded].
 
@@ -39,7 +39,7 @@ That is not a safe harbor for nationwide clauses. It is a procedural and factual
 
 ## Will a Delaware court narrow or blue-pencil an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** Usually not as a litigation strategy. Delaware courts retain equitable discretion, but recent Chancery and Supreme Court decisions warn that overbroad covenants may fall rather than be rewritten [^sunder-supreme-blue-pencil-discretion].
+**Short answer.** Delaware courts have discretion to blue-pencil an overbroad non-compete but may decline to rewrite one, particularly to rescue a sophisticated employer from its own overreach [^sunder-supreme-blue-pencil-discretion][^intertek-no-rescue]. The Court of Chancery has also relied on the inequities inherent in blue-penciling a non-compete to refuse to enforce only the portions supported by the employer's legitimate interests [^kodiak-blue-pencil-inequity].
 
 The modern no-blue-pencil spine comes from *Kodiak* [^kodiak-blue-pencil-inequity], *Intertek* [^intertek-no-rescue], and *Sunder* [^sunder-supreme-blue-pencil-discretion]. The reason is incentive-based: if courts routinely trim overbroad restrictions, employers can draft broadly, chill workers, and still get a lawful restraint if challenged [^kodiak-blue-pencil-inequity][^intertek-no-rescue][^sunder-supreme-perverse-incentives]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Delaware non-compete reviewer checklist](/checklists/non-compete/us/delaware) walks the full covenant suite item by item with each requirement's force level.
 
@@ -76,7 +76,7 @@ The Delaware Supreme Court treated the personnel restriction as a true employee 
 
 ## Are equity-forfeiture or forfeiture-for-competition provisions enforceable in Delaware? {#forfeiture-for-competition}
 
-**Short answer.** Yes — and not only in the limited-partnership setting. Delaware treats a forfeiture-for-competition provision as a condition on a deferred benefit rather than an injunction-backed restraint, and reviews it under the employee-choice doctrine instead of the ordinary reasonableness test [^ainslie-condition-precedent].
+**Short answer.** When an employee voluntarily leaves employment, Delaware courts treat a forfeiture-for-competition provision as a condition on receiving a deferred benefit rather than a restraint of trade reviewed for reasonableness, and that rule is not limited to limited partnerships [^lkq-voluntary-termination-condition][^ainslie-summary-rule][^ainslie-condition-precedent][^lkq-not-limited-to-lp]. Under this employee-choice approach, the provision does not restrict the former employee's ability to work and does not support injunctive relief [^ainslie-employee-choice-distinction].
 
 The distinction matters. A true non-compete restrains work and is reviewed for reasonableness. A forfeiture-for-competition provision can let the former partner compete while losing a contingent benefit. In that setting, the Delaware Supreme Court held that public policy favored enforcing the limited partnership agreement against sophisticated parties [^ainslie-employee-choice-distinction][^ainslie-summary-rule].
 
@@ -99,7 +99,7 @@ Consideration is not the whole analysis. A covenant supported by employment, pro
 
 ## Are physician non-competes allowed in Delaware? {#physician-noncompetes}
 
-**Short answer.** No, not if the covenant restricts a physician's right to practice medicine by place or time after termination. Delaware Code § 2707 makes that type of physician non-compete void [^delaware-physician-void].
+**Short answer.** Delaware voids a non-compete between physicians that restricts a physician's right to practice medicine in a particular locale or for a defined period after the agreement ends [^delaware-physician-void].
 
 The statute is targeted. It applies to physician covenants in employment, partnership, or corporate agreements, and it leaves other agreement provisions enforceable. It also permits damages provisions if the amount is reasonably related to injury from termination, including damages related to competition [^delaware-physician-damages].
 
@@ -110,7 +110,7 @@ The statute is targeted. It applies to physician covenants in employment, partne
 
 ## Can a contract choose Delaware law to govern a non-compete? {#delaware-choice-of-law}
 
-**Short answer.** Often yes for qualifying contracts, but not absolutely. Section 2708 supports Delaware choice-of-law clauses, while Delaware conflict-of-law decisions can still defer to another state's fundamental non-compete policy [^delaware-choice-law-statute][^ascension-public-policy-limit].
+**Short answer.** Under 6 Del. C. § 2708, a qualifying Delaware choice-of-law clause in a contract involving $100,000 or more is conclusively presumed to have a significant, material and reasonable relationship with Delaware, but Delaware's freedom of contract will not always trump another state's fundamental public policy [^delaware-choice-law-statute][^delaware-choice-law-threshold][^ascension-public-policy-limit][^fp-uc-choice-law-limit].
 
 Section 2708 creates a strong Delaware-law anchor when the written contract selects Delaware law and the parties are subject to Delaware jurisdiction and service. The statute excludes contracts involving less than $100,000 [^delaware-choice-law-threshold].
 
@@ -123,7 +123,7 @@ But *Ascension* refused to let Delaware's contractarian policy automatically ove
 
 ## How do trade-secret and confidentiality protections fit in? {#trade-secrets-confidentiality}
 
-**Short answer.** DUTSA gives Delaware employers targeted trade-secret remedies that can substitute for, or sit beside, a narrower covenant package. It protects information that has independent economic value from secrecy and is subject to reasonable secrecy efforts [^dutsa-trade-secret-definition].
+**Short answer.** The Delaware Uniform Trade Secrets Act lets an employer enjoin actual or threatened misappropriation of its trade secrets [^dutsa-injunctive-relief]. A trade secret is information that derives independent economic value from not being generally known to, and not being readily ascertainable by proper means by, others who can obtain economic value from its disclosure or use, and that is the subject of reasonable efforts to maintain its secrecy [^dutsa-trade-secret-definition].
 
 DUTSA authorizes injunctions for actual or threatened misappropriation, damages for actual loss and unjust enrichment, exemplary damages for wilful and malicious misappropriation, and fee shifting in specified bad-faith or wilful-and-malicious cases [^dutsa-injunctive-relief][^dutsa-damages][^dutsa-fees].
 
@@ -136,7 +136,7 @@ It also preserves contract remedies, whether or not based on trade-secret misapp
 
 ## Are there other Delaware statutory non-compete limits? {#home-inspector-trainees}
 
-**Short answer.** Yes. Delaware separately protects home inspector trainees: a trainee cannot be required to sign a non-compete with a supervising licensed home inspector as a condition of satisfying trainee requirements [^home-inspector-trainee-ban].
+**Short answer.** Delaware prohibits requiring a registered home inspector trainee to sign a non-compete with a supervising licensed home inspector as a condition of satisfying the trainee requirements [^home-inspector-trainee-ban].
 
 This is a narrow licensing rule, not a general employee non-compete statute. It should be included in profession-specific reviews, especially for inspection businesses and trainee-supervision arrangements.
 
@@ -180,9 +180,9 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^sunder-supreme-blue-pencil-discretion]: **Sunder Energy, LLC v. Jackson** — "This is not to say that Delaware courts should never blue pencil an agreement that is overbroad in some respects. But the relief Appellant sought was a wholesale reformation of the parties’ agreement." *Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024).* <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=This%20is%20not%20to%20say,reformation%20of%20the%20parties%E2%80%99%20agreement.>
 
-[^kodiak-blue-pencil-inequity]: **Kodiak Building Partners, LLC v. Adams** — "The inequities inherent in blue-penciling a noncompete also counsel against enforcing only those portions of the RCA that are supported by Kodiak’s legitimate business interests, even as Adams appears to have violated those portions." *Kodiak Bldg. Partners, LLC v. Adams, 2022 WL 5240507, at *13 n.108 (Del. Ch. Oct. 6, 2022).* <https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/#:~:text=The%20inequities%20inherent%20in%20blue%2Dpenciling,to%20have%20violated%20those%20portions.>
-
 [^intertek-no-rescue]: **Intertek Testing Services NA, Inc. v. Eastman** — "In my view, revising the non-compete to save Intertek—a sophisticated party—from its overreach would be inequitable." *Intertek Testing Servs. NA, Inc. v. Eastman, 2023 WL 2544236, at *5 (Del. Ch. Mar. 16, 2023).* <https://www.courtlistener.com/opinion/9384707/intertek-testing-services-na-inc-v-jeff-eastman/#:~:text=In%20my%20view%2C%20revising%20the,its%20overreach%20would%20be%20inequitable.>
+
+[^kodiak-blue-pencil-inequity]: **Kodiak Building Partners, LLC v. Adams** — "The inequities inherent in blue-penciling a noncompete also counsel against enforcing only those portions of the RCA that are supported by Kodiak’s legitimate business interests, even as Adams appears to have violated those portions." *Kodiak Bldg. Partners, LLC v. Adams, 2022 WL 5240507, at *13 n.108 (Del. Ch. Oct. 6, 2022).* <https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/#:~:text=The%20inequities%20inherent%20in%20blue%2Dpenciling,to%20have%20violated%20those%20portions.>
 
 [^sunder-supreme-perverse-incentives]: **Sunder Energy, LLC v. Jackson** — "This argument, however, turns the analysis on its head and creates perverse incentives for employers drafting restrictive covenants. If employers know that even the most unreasonable covenants will be enforced if an employee’s conduct is sufficiently flagrant, employers will be less incentivized to craft reasonable restrictions from the outset." *Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024).* <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=This%20argument%2C%20however%2C%20turns%20the,reasonable%20restrictions%20from%20the%20outset.>
 
@@ -208,13 +208,15 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^de-ns-sunder-refuse]: **Sunder Energy, LLC v. Jackson** — "The Court of Chancery was well within its discretion to apply that precedent and refuse to blue pencil the covenants." *Sunder Energy, LLC v. Jackson, 332 A.3d 472, 492 (Del. 2024).* <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=The%20Court%20of%20Chancery%20was,to%20blue%20pencil%20the%20covenants.>
 
-[^ainslie-condition-precedent]: **Cantor Fitzgerald, L.P. v. Ainslie** — "It found, instead, that the Competitive Activity Condition was a condition precedent to Cantor Fitzgerald’s duty to pay the Conditioned Amounts. We agree with that conclusion, and the Plaintiffs do not contest it on appeal." *Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 690 (Del. 2024).* <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=It%20found%2C%20instead%2C%20that%20the,not%20contest%20it%20on%20appeal.>
-
-[^ainslie-employee-choice-distinction]: **Cantor Fitzgerald, L.P. v. Ainslie** — "Thus, the Competitive Activity Condition does not restrict competition or a former partner’s ability to work; nor does competition support injunctive relief." *Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 694 (Del. 2024).* <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=Thus%2C%20the%20Competitive%20Activity%20Condition,does%20competition%20support%20injunctive%20relief.>
+[^lkq-voluntary-termination-condition]: **LKQ Corp. v. Rutledge** — "Under the employee choice doctrine, ‘courts do not review forfeiture-for-competition provisions for reasonableness so long as the employee voluntarily terminated her employment.’" *LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024).* <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=Under%20the%20employee%20choice%20doctrine%2C,employee%20voluntarily%20terminated%20her%20employment.%E2%80%9D>
 
 [^ainslie-summary-rule]: **Cantor Fitzgerald, L.P. v. Ainslie** — "To sum up, we disagree with the Court of Chancery’s conclusion that forfeiture-for-competition provisions like the one at issue here are restraints of trade subject to review for reasonableness." *Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 700 (Del. 2024).* <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=To%20sum%20up%2C%20we%20disagree,subject%20to%20review%20for%20reasonableness.>
 
+[^ainslie-condition-precedent]: **Cantor Fitzgerald, L.P. v. Ainslie** — "It found, instead, that the Competitive Activity Condition was a condition precedent to Cantor Fitzgerald’s duty to pay the Conditioned Amounts. We agree with that conclusion, and the Plaintiffs do not contest it on appeal." *Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 690 (Del. 2024).* <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=It%20found%2C%20instead%2C%20that%20the,not%20contest%20it%20on%20appeal.>
+
 [^lkq-not-limited-to-lp]: **LKQ Corp. v. Rutledge** — "Cantor Fitzgerald is not restricted to the limited partnership context." *LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024).* <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=Cantor%20Fitzgerald%20is%20not%20restricted,to%20the%20limited%20partnership%20context.>
+
+[^ainslie-employee-choice-distinction]: **Cantor Fitzgerald, L.P. v. Ainslie** — "Thus, the Competitive Activity Condition does not restrict competition or a former partner’s ability to work; nor does competition support injunctive relief." *Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 694 (Del. 2024).* <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=Thus%2C%20the%20Competitive%20Activity%20Condition,does%20competition%20support%20injunctive%20relief.>
 
 [^lkq-rsu-agreements]: **LKQ Corp. v. Rutledge** — "The United States Court of Appeals for the Seventh Circuit is considering an appeal raising a similar forfeiture-for- competition dispute under Delaware law but arising from a company’s restricted stock unit agreements." *LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024).* <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=The%20United%20States%20Court%20of%20Appeals%20for%20the%20Seventh%20Circuit%20is,company%E2%80%99s%20restricted%20stock%20unit%20agreements.>
 
@@ -234,15 +236,15 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^delaware-choice-law-statute]: **6 Del. C. § 2708** — "The foregoing shall conclusively be presumed to be a significant, material and reasonable relationship with this State and shall be enforced whether or not there are other relationships with this State." *6 Del. C. § 2708(a).* <https://delcode.delaware.gov/title6/c027/sc01/index.html>
 
-[^ascension-public-policy-limit]: **Ascension Insurance Holdings, LLC v. Underwood** — "I cannot agree with the Plaintiff, however, that the teaching of DGWL is that Delaware’s broad interest in freedom of contract will always, or even routinely, trump the default state’s public policy." *Ascension Ins. Holdings, LLC v. Underwood, 2015 WL 356002, at *5 (Del. Ch. Jan. 28, 2015).* <https://www.courtlistener.com/opinion/2774269/ascension-insurance-holdings-llc-v-roberts-f-under/#:~:text=I%20cannot%20agree%20with%20the,the%20default%20state%E2%80%99s%20public%20policy.>
-
 [^delaware-choice-law-threshold]: **6 Del. C. § 2708** — "This section shall not apply to any contract, agreement or other undertaking: (1) To the extent provided to the contrary in § 1-301(c) of this title; or (2) Involving less than $100,000." *6 Del. C. § 2708(c).* <https://delcode.delaware.gov/title6/c027/sc01/index.html>
+
+[^ascension-public-policy-limit]: **Ascension Insurance Holdings, LLC v. Underwood** — "I cannot agree with the Plaintiff, however, that the teaching of DGWL is that Delaware’s broad interest in freedom of contract will always, or even routinely, trump the default state’s public policy." *Ascension Ins. Holdings, LLC v. Underwood, 2015 WL 356002, at *5 (Del. Ch. Jan. 28, 2015).* <https://www.courtlistener.com/opinion/2774269/ascension-insurance-holdings-llc-v-roberts-f-under/#:~:text=I%20cannot%20agree%20with%20the,the%20default%20state%E2%80%99s%20public%20policy.>
 
 [^fp-uc-choice-law-limit]: **FP UC Holdings, LLC v. Hamilton** — "If these narrow ‘questions are answered in the affirmative, [Alabama] law will apply notwithstanding the choice-of-law provision.’" *FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *10 (Del. Ch. Mar. 27, 2020).* <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=If%20these%20narrow%20%E2%80%9Cquestions%20are,apply%20notwithstanding%20the%20choice%2Dof%2Dlaw%20provision.%E2%80%9D>
 
-[^dutsa-trade-secret-definition]: **6 Del. C. § 2001** — "‘Trade secret’ shall mean information, including a formula, pattern, compilation, program, device, method, technique or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy." *6 Del. C. § 2001(4).* <https://delcode.delaware.gov/title6/c020/index.html>
-
 [^dutsa-injunctive-relief]: **6 Del. C. § 2002** — "(a) Actual or threatened misappropriation may be enjoined." *6 Del. C. § 2002(a).* <https://delcode.delaware.gov/title6/c020/index.html>
+
+[^dutsa-trade-secret-definition]: **6 Del. C. § 2001** — "‘Trade secret’ shall mean information, including a formula, pattern, compilation, program, device, method, technique or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy." *6 Del. C. § 2001(4).* <https://delcode.delaware.gov/title6/c020/index.html>
 
 [^dutsa-damages]: **6 Del. C. § 2003** — "Damages can include both the actual loss caused by misappropriation and the unjust enrichment caused by misappropriation that is not taken into account in computing actual loss." *6 Del. C. § 2003(a).* <https://delcode.delaware.gov/title6/c020/index.html>
 

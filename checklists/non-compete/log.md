@@ -1,5 +1,9 @@
 # Non Compete Update Log
 
+## 2026-10-19
+* **Update**: content(checklists): US non-compete checklist notes Washington's June 30, 2027 ban under ESHB 1155 (freshness, #1578) (5ff7af0)
+* **Update**: content(checklists): Washington variation keys the ESHB 1155 transition to when the proceeding was commenced (Codex round 1, #1578) (6a46b2e)
+
 ## 2026-09-01
 * **Update**: content(ciiaa): survive restrictive covenants; scope Confidential Information to Company (#2308) (7d848af)
 

@@ -2,7 +2,7 @@
 jurisdiction: "Arkansas"
 slug: arkansas
 countryCode: US
-content_packaged_at: "2026-10-16"
+content_packaged_at: "2026-10-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-10-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-10-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arkansas[^about]
 
@@ -39,7 +39,7 @@ Arkansas non-compete law under Ark. Code Ann. § 4-75-101, enacted by Act 921 of
 
 ## Are employee non-compete agreements enforceable in Arkansas? {#employee-non-compete-enforceability}
 
-**Short answer.** Yes, if the covenant is ancillary to employment, protects a statutory business interest, and is no broader in time and scope than necessary to defend that interest [^q1-aca-enforceable].
+**Short answer.** For an employee within the statute's coverage, Ark. Code Ann. § 4-75-101 makes an Arkansas non-compete enforceable if it is ancillary to employment, the employer has a protectable business interest, and the covenant is no broader in time and scope than necessary to defend that interest [^q1-aca-enforceable].
 
 For agreements governed by the current statute, Arkansas is a permissible, enforce-if-reasonable state rather than a ban state. Ark. Code Ann. § 4-75-101 lists protectable interests, supplies a two-year duration presumption, allows no defined geographic restriction in some cases, and requires reformation of overbroad covenants [^q1-aca-enforceable][^q1-aca-protectable][^q1-aca-reformation]. For a clause-by-clause pass over a specific agreement against these rules, the [Arkansas non-compete reviewer checklist](/checklists/non-compete/us/arkansas) walks the full covenant suite item by item with each requirement's force level.
 
@@ -52,7 +52,7 @@ The effective-date line matters. *Box* treated Act 921 as effective July 22, 201
 
 ## What makes an Arkansas non-compete reasonable or enforceable? {#reasonableness-test}
 
-**Short answer.** The covenant must be tied to a protectable business interest and limited in time and scope no more than necessary to defend that interest [^q2-aca-enforceable].
+**Short answer.** Under Ark. Code Ann. § 4-75-101, an Arkansas employment non-compete must protect a protectable business interest of the employer and be limited in time and scope no more than necessary to defend that interest [^q2-aca-enforceable][^q2-aca-protectable].
 
 The statute supplies the protectable-interest categories. They include trade secrets, intellectual property, customer lists, customer goodwill, business practices, methods, margins, costs, confidential business information, employee training and education, and other valuable employer data reasonably safeguarded from competitors [^q2-aca-protectable].
 
@@ -65,7 +65,7 @@ Reasonableness is still contextual. The statute tells courts to consider the nat
 
 ## Does an Arkansas non-compete need a geographic limit? {#geographic-limit}
 
-**Short answer.** Not always. The current statute says the lack of a specific or defined geographic restriction does not make a covenant overbroad if the restraint is otherwise reasonable as to time and scope [^q3-aca-no-geography].
+**Short answer.** An Arkansas employment non-compete does not need a specific geographic limit, because Ark. Code Ann. § 4-75-101(c) provides that lacking one does not make the covenant overbroad if it is limited in time and scope no more than necessary to defend the employer's protectable business interest [^q3-aca-no-geography].
 
 "The lack of a specific or defined geographic descriptive restriction in a covenant not to compete agreement does not make the covenant not to compete agreement overly broad under subdivision (a)(2) of this section if the covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer."[^q3-aca-no-geography]
 
@@ -88,7 +88,7 @@ The presumption is not a safe harbor for every two-year clause. The statute ties
 
 ## Will an Arkansas court reform an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** Yes, for a covered employment non-compete under § 4-75-101. If the restrictions are unreasonable, the court must reform the covenant as needed and enforce it under the reformed terms [^q5-aca-reformation].
+**Short answer.** An Arkansas court must reform an overbroad employment non-compete covered by Ark. Code Ann. § 4-75-101 to reasonable limits and then enforce it under the reformed terms [^q5-aca-reformation][^q5-aca-reformation-enforce].
 
 "The court shall enforce the covenant not to compete agreement under the reformed terms and conditions."[^q5-aca-reformation-enforce]
 
@@ -103,7 +103,7 @@ The temporal framing is important. *Bendinger* remains useful for the old all-or
 
 ## Is continued employment enough consideration for an Arkansas non-compete? {#consideration}
 
-**Short answer.** Yes. The statute says continued employment is sufficient consideration for a covenant not to compete [^q6-aca-consideration].
+**Short answer.** Continued employment is enough consideration for an Arkansas non-compete, because Ark. Code Ann. § 4-75-101(g) states that an employee's continued employment is sufficient consideration for a covenant not to compete [^q6-aca-consideration].
 
 "An employee's continued employment is sufficient consideration for a covenant not to compete agreement."[^q6-aca-consideration]
 
@@ -126,7 +126,7 @@ Older physician cases should be framed as pre-2025 public-policy and common-law 
 
 ## Does an Arkansas non-compete period toll or extend during breach or litigation? {#extended-for-breach}
 
-**Short answer.** Sometimes by equitable injunction, but drafted contractual tolling clauses remain an open question. *Bud Anderson* treated a prospective injunction beyond the nominal one-year period as legally possible, while § 4-75-101 does not expressly validate tolling-on-breach clauses [^q8-bud-prospective][^q8-aca-remedies].
+**Short answer.** An Arkansas court may be able to enforce a non-compete through a one-year prospective injunction running past the contract's restricted period, because the Arkansas Court of Appeals in *Bud Anderson Heating & Cooling v. Neil* treated that remedy as a contested point and declined to rule it out [^bud-anderson-contested-extension-point][^q8-bud-prospective]. Ark. Code Ann. § 4-75-101 authorizes damages and appropriate injunctive relief but does not expressly validate a contractual tolling-on-breach clause, so such a clause remains an open question [^q8-aca-remedies].
 
 The practical lesson is that Arkansas courts may keep a non-compete injunction dispute alive even after the stated period expires. *Bud Anderson* rejected a mootness dismissal where the employer sought an injunction running one year from the order and the record did not show that relief was impossible [^q8-bud-prospective].
 
@@ -139,7 +139,7 @@ That is different from saying every contract clause that automatically extends t
 
 ## What remedies are available for breach of an Arkansas non-compete? {#injunction-remedies}
 
-**Short answer.** A court may award damages, appropriate injunctive relief, or both, and immediate harm from breach is statutorily treated as irreparable for preliminary-injunction purposes [^q9-aca-remedies][^q9-aca-irreparable].
+**Short answer.** For breach of an Arkansas non-compete, a court may award the employer damages, appropriate injunctive relief, or both, and Ark. Code Ann. § 4-75-101(e) treats the immediate harm from breach as irreparable for preliminary-injunction purposes [^q9-aca-remedies][^q9-aca-irreparable].
 
 "The immediate harm associated with the breach of a covenant not to compete agreement shall be considered irreparable to establish the appropriateness of a preliminary injunction."[^q9-aca-irreparable]
 
@@ -149,7 +149,7 @@ The statutory irreparable-harm rule does not eliminate every injunction defense.
 
 ## How does Arkansas treat non-solicitation, confidentiality, and trade-secret agreements? {#related-covenants}
 
-**Short answer.** Section 4-75-101 does not apply to employee agreements that do not concern competition or competitive work, including employee non-solicits, confidentiality agreements, and nondisclosure agreements; existing common-law standards remain in effect for those agreements [^q10-aca-related-covenants].
+**Short answer.** Arkansas's non-compete statute, Ark. Code Ann. § 4-75-101, does not apply to employee agreements that do not concern competition or competitive work, including employee non-solicits, confidentiality agreements, and nondisclosure agreements [^q10-aca-related-covenants]. Existing common-law standards governing those agreements remain in effect [^q10-aca-related-covenants]. The statute also does not impair a party's protections and rights under the Arkansas Trade Secrets Act [^q10-aca-atsa].
 
 The statute also preserves Arkansas Trade Secrets Act protections and rights. That means a trade-secret claim may be analyzed separately from a non-compete claim, and the statute should not be read to impair, limit, or change ATSA protections [^q10-aca-atsa].
 
@@ -162,7 +162,7 @@ Pre-Act cases show the difference in practice. *Bendinger* rejected the non-comp
 
 ## Are sale-of-business non-competes judged differently in Arkansas? {#sale-of-business}
 
-**Short answer.** Yes. A covenant a seller gives when selling a business is judged under common-law reasonableness, and the Arkansas Supreme Court applies less scrutiny to it than to an employment covenant — the covenant statute reaches employment covenants, not the sale of a business.
+**Short answer.** Arkansas courts scrutinize a non-compete given in the sale of a business less strictly than an employment non-compete, because the Arkansas Supreme Court holds that employment covenants are subject to stricter scrutiny than covenants connected with a sale of a business [^bendinger-sale-distinction].
 
 Arkansas's covenant statute, Act 921 of 2015, governs employment covenants and excludes covenants ancillary to the sale or purchase of a business, leaving seller covenants to the common law. There, the Supreme Court draws an explicit line between the two settings: an employment covenant is scrutinized more strictly than one tied to a business sale [^bendinger-sale-distinction].
 
@@ -241,6 +241,8 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^q7-mercy-affirm]: **Mercy Health Sys. of Nw. Ark., Inc. v. Bicak** — "The circuit court did not err in granting partial summary judgment to Dr. Bicak on the eovenant-not-to-compete claim because Mercy did not counter the evidence demonstrating that it had no interest sufficient to warrant its enforcement; that it was designed only to eliminate competition; and that it would unreasonably interfere with the public’s right of access to the physicians of their choice and Dr. Bicak’s ability to earn a living." *Mercy Health Sys. of Nw. Ark., Inc. v. Bicak, 2011 Ark. App. 341, 383 S.W.3d 869.* <https://www.courtlistener.com/opinion/5283436/mercy-health-system-of-northwest-arkansas-inc-v-bicak/#:~:text=The%20circuit%20court%20did%20not,ability%20to%20earn%20a%20living.>
 
+[^bud-anderson-contested-extension-point]: **Bud Anderson Heating & Cooling, Inc. v. Neil** — "Neil's mootness argument hinges on the premise that BAHC cannot be awarded a prospective one-year injunction that extends beyond the one-year-from-date-of-termination period specified in the contract. This is a contested point of law on which it would be improper to dismiss BAHC's appeal as moot." *Bud Anderson Heating & Cooling, Inc. v. Neil, 2018 Ark. App. 183, 545 S.W.3d 819.* <https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/#:~:text=Neil's%20mootness%20argument%20hinges%20on,dismiss%20BAHC's%20appeal%20as%20moot.>
+
 [^q8-bud-prospective]: **Bud Anderson Heating & Cooling, Inc. v. Neil** — "Therefore, it is not clear and obvious on the record before us that BAHC could not obtain the relief it seeks on appeal, a one-year prospective injunction." *Bud Anderson Heating & Cooling, Inc. v. Neil, 2018 Ark. App. 183, 545 S.W.3d 819.* <https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/#:~:text=Therefore%2C%20it%20is%20not%20clear,appeal%2C%20a%20one%2Dyear%20prospective%20injunction.>
 
 [^q8-aca-remedies]: **Ark. Code Ann. § 4-75-101** — "In a private court action, a court may award the employer damages for a breach of a covenant not to compete agreement, appropriate injunctive relief, or both, if appropriate." *Ark. Code Ann. § 4-75-101(e).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
@@ -257,7 +259,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^q9-aca-savings]: **Ark. Code Ann. § 4-75-101** — "This subsection does not limit: (A) Any other defense available to a party against a claim for preliminary injunctive relief; or (B) An employer's right to monetary damages for breach of a covenant not to compete agreement." *Ark. Code Ann. § 4-75-101(e).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 
-[^q10-aca-related-covenants]: **Ark. Code Ann. § 4-75-101** — "This section shall not apply to other types of agreements between employers and employees that do not concern competition or competitive work, including: (A) Agreements not to solicit, recruit, or hire employees; (B) Confidentiality agreements; (C) Nondisclosure agreements; and (D) The terms and conditions of an employment or employment agreement." *Ark. Code Ann. § 4-75-101(i).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
+[^q10-aca-related-covenants]: **Ark. Code Ann. § 4-75-101** — "This section shall not apply to other types of agreements between employers and employees that do not concern competition or competitive work, including: (A) Agreements not to solicit, recruit, or hire employees; (B) Confidentiality agreements; (C) Nondisclosure agreements; and (D) The terms and conditions of an employment or employment agreement. (2) Existing common law standards governing these types of agreements shall remain in effect." *Ark. Code Ann. § 4-75-101(i).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 
 [^q10-aca-atsa]: **Ark. Code Ann. § 4-75-101** — "Except as provided under subsection (k) of this section, this section shall not: (1) Be read to impair, limit, or change a party's protections and rights under the Arkansas Trade Secrets Act, § 4-75-601 et seq.; or (2) Apply to a person holding a professional license under Arkansas Code Title 17, Subtitle 3." *Ark. Code Ann. § 4-75-101(j).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 

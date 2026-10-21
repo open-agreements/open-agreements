@@ -173,14 +173,25 @@
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-599a-delayed-cover"
           },
           {
+            "sourceId": "me-pl718-s5-cover",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "P.L. 2025, ch. 718 (L.D. 2200)",
+            "citation": "P.L. 2025, ch. 718, § 5.",
+            "url": "https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132",
+            "proposition": "Section 5 applies Maine's health-care-practitioner restriction to non-competes entered into or renewed on or after the act's effective date.",
+            "verbatimQuote": "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-pl718-s5-cover"
+          },
+          {
             "sourceId": "ebg-ld2200-trigger-cover",
             "authorityType": "law-firm-commentary",
             "tier": "lawyer-judgment-backed",
             "title": "Maine Restricts Noncompetes for Health Care Practitioners",
             "citation": "Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).",
             "url": "https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners",
-            "proposition": "Epstein Becker Green supports the entered-into-or-renewed trigger and the July 13, 2026 effective date of Maine's health-care-practitioner restriction.",
-            "verbatimQuote": "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the “Effective Date”).",
+            "proposition": "Epstein Becker Green, advising employers, reads L.D. 2200 to prohibit, from its effective date, non-competes with health care practitioners who have no ownership interest in the employing entity — the restriction the agreement's date can bring into play.",
+            "verbatimQuote": "As of the Effective Date, the Amendments will prohibit noncompetes with health care practitioners employed by an entity in which the health care practitioner does not have an ownership interest.",
             "date": "2026-04-20",
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-ebg-ld2200-trigger-cover"
           }
@@ -923,7 +934,7 @@
         "sectionId": "physician-specific-notices-and-carve-outs",
         "itemNumber": "9.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/maine#address-physician-specific-rights",
-        "requirementGuidance": "The dedicated clause earns its keep in Maine, where the rules run in opposite directions. Agreements with allopathic and osteopathic physicians are carved out of the delayed-effectiveness rule — but a broader health-care-practitioner restriction applies to agreements entered into or renewed on or after July 13, 2026. A clause written from the physician carve-out alone reads as permission the newer restriction has since withdrawn, so it should state both rules.",
+        "requirementGuidance": "The dedicated clause earns its keep in Maine, where the rules run in opposite directions. Agreements with allopathic and osteopathic physicians are carved out of the delayed-effectiveness rule — but a broader health-care-practitioner restriction applies to agreements entered into or renewed on or after July 29, 2026. Confirm the clause states both rules, and flag one written from the physician carve-out alone: it reads as permission the newer restriction has since withdrawn.",
         "variants": [],
         "sources": [
           {
@@ -938,14 +949,36 @@
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-599a-delayed-phys"
           },
           {
+            "sourceId": "me-pl718-s5-phys",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "P.L. 2025, ch. 718 (L.D. 2200)",
+            "citation": "P.L. 2025, ch. 718, § 5.",
+            "url": "https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132",
+            "proposition": "Section 5 applies Maine's health-care-practitioner restriction to non-competes entered into or renewed on or after the act's effective date.",
+            "verbatimQuote": "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-pl718-s5-phys"
+          },
+          {
+            "sourceId": "me-2026-effective-phys",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Maine Laws, 132nd Legislature, Second Regular Session",
+            "citation": "Laws of Maine, 132nd Legislature, Second Regular Session, preface, note 8; P.L. 2025, ch. 718, § 5.",
+            "url": "https://legislature.maine.gov/doc/12627",
+            "proposition": "The official session-law volume gives July 29, 2026 as the general effective date of the second regular session's nonemergency acts, including chapter 718.",
+            "verbatimQuote": "The general effective date of the nonemergency laws passed at the Second Regular Session of the 132nd Legislature is July 29, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-2026-effective-phys"
+          },
+          {
             "sourceId": "ebg-ld2200-phys",
             "authorityType": "law-firm-commentary",
             "tier": "lawyer-judgment-backed",
             "title": "Maine Restricts Noncompetes for Health Care Practitioners",
             "citation": "Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).",
             "url": "https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners",
-            "proposition": "Epstein Becker Green supports the application of Maine's health-care-practitioner restriction to agreements entered into or renewed on or after July 13, 2026.",
-            "verbatimQuote": "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the “Effective Date”).",
+            "proposition": "Epstein Becker Green, advising employers, reads L.D. 2200 to prohibit, from its effective date, non-competes with health care practitioners who have no ownership interest in the employing entity, a restriction broader than the physician carve-out.",
+            "verbatimQuote": "As of the Effective Date, the Amendments will prohibit noncompetes with health care practitioners employed by an entity in which the health care practitioner does not have an ownership interest.",
             "date": "2026-04-20",
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-ebg-ld2200-phys"
           }
@@ -1140,7 +1173,7 @@
         "sectionId": "assignment-and-successors",
         "itemNumber": "16.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/maine#address-assignment-and-successors",
-        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Watch the renewal trap in any transaction: a covenant re-signed or re-papered restarts the six-months-from-signing half of the effectiveness clock, and a renewal on or after July 13, 2026 pulls a health-care practitioner's covenant into the new restriction.",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Watch the renewal trap in any transaction: a covenant re-signed or re-papered restarts the six-months-from-signing half of the effectiveness clock, and a renewal on or after July 29, 2026 pulls a health-care practitioner's covenant into the new restriction.",
         "variants": [],
         "sources": [
           {
@@ -1155,14 +1188,36 @@
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-599a-delayed-asgn"
           },
           {
+            "sourceId": "me-pl718-s5-asgn",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "P.L. 2025, ch. 718 (L.D. 2200)",
+            "citation": "P.L. 2025, ch. 718, § 5.",
+            "url": "https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132",
+            "proposition": "Section 5 makes the renewal date a trigger: a covenant renewed on or after the act's effective date falls under the health-care-practitioner restriction.",
+            "verbatimQuote": "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-pl718-s5-asgn"
+          },
+          {
+            "sourceId": "me-2026-effective-asgn",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Maine Laws, 132nd Legislature, Second Regular Session",
+            "citation": "Laws of Maine, 132nd Legislature, Second Regular Session, preface, note 8; P.L. 2025, ch. 718, § 5.",
+            "url": "https://legislature.maine.gov/doc/12627",
+            "proposition": "The official session-law volume gives July 29, 2026 as the general effective date of the second regular session's nonemergency acts, including chapter 718.",
+            "verbatimQuote": "The general effective date of the nonemergency laws passed at the Second Regular Session of the 132nd Legislature is July 29, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-2026-effective-asgn"
+          },
+          {
             "sourceId": "ebg-ld2200-asgn",
             "authorityType": "law-firm-commentary",
             "tier": "lawyer-judgment-backed",
             "title": "Maine Restricts Noncompetes for Health Care Practitioners",
             "citation": "Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).",
             "url": "https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners",
-            "proposition": "Epstein Becker Green supports the renewal trigger: agreements renewed on or after July 13, 2026 fall under the health-care-practitioner restriction.",
-            "verbatimQuote": "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the “Effective Date”).",
+            "proposition": "Epstein Becker Green, advising employers, reads L.D. 2200 to prohibit, from its effective date, non-competes with health care practitioners who have no ownership interest in the employing entity — the restriction a renewal can pull a covenant into.",
+            "verbatimQuote": "As of the Effective Date, the Amendments will prohibit noncompetes with health care practitioners employed by an entity in which the health care practitioner does not have an ownership interest.",
             "date": "2026-04-20",
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-ebg-ld2200-asgn"
           }
@@ -1205,14 +1260,25 @@
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-599a-delayed-ea"
           },
           {
+            "sourceId": "me-pl718-s5-ea",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "P.L. 2025, ch. 718 (L.D. 2200)",
+            "citation": "P.L. 2025, ch. 718, § 5.",
+            "url": "https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132",
+            "proposition": "Section 5 makes the renewal date a trigger that can pull an amended covenant into the health-care-practitioner restriction.",
+            "verbatimQuote": "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-pl718-s5-ea"
+          },
+          {
             "sourceId": "ebg-ld2200-ea",
             "authorityType": "law-firm-commentary",
             "tier": "lawyer-judgment-backed",
             "title": "Maine Restricts Noncompetes for Health Care Practitioners",
             "citation": "Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).",
             "url": "https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners",
-            "proposition": "Epstein Becker Green supports the entered-into-or-renewed trigger that can pull an amended covenant into the health-care-practitioner restriction.",
-            "verbatimQuote": "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the “Effective Date”).",
+            "proposition": "Epstein Becker Green, advising employers, reads L.D. 2200 to prohibit, from its effective date, non-competes with health care practitioners who have no ownership interest in the employing entity — the restriction an amendment that renews a covenant can trigger.",
+            "verbatimQuote": "As of the Effective Date, the Amendments will prohibit noncompetes with health care practitioners employed by an entity in which the health care practitioner does not have an ownership interest.",
             "date": "2026-04-20",
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-ebg-ld2200-ea"
           }
@@ -1390,7 +1456,7 @@
         "sectionId": "maine-statutory-gates",
         "itemNumber": "19.6",
         "anchor": "https://openagreements.org/checklists/non-compete/us/maine#review-health-care-practitioner-covenants-under-ld-2200",
-        "requirementGuidance": "Do not evaluate a health-care practitioner's covenant on the pre-amendment rules alone. The restriction signed on April 15, 2026 applies to agreements entered into or renewed on or after July 13, 2026 — and because the published statute page may lag the amendment, confirm the codified text before relying on it. Remember the physician carve-out from the delayed-effectiveness rule is a timing rule, not a healthcare-wide permission.",
+        "requirementGuidance": "Do not evaluate a health-care practitioner's covenant on the pre-amendment rules alone. The restriction signed on April 15, 2026 applies to agreements entered into or renewed on or after July 29, 2026 — and because the published statute page may lag the amendment, confirm the codified text before relying on it. Remember the physician carve-out from the delayed-effectiveness rule is a timing rule, not a healthcare-wide permission.",
         "variants": [],
         "sources": [
           {
@@ -1406,16 +1472,26 @@
             "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-ebg-ld2200-signed-gate"
           },
           {
-            "sourceId": "ebg-ld2200-effective-gate",
-            "authorityType": "law-firm-commentary",
-            "tier": "lawyer-judgment-backed",
-            "title": "Maine Restricts Noncompetes for Health Care Practitioners",
-            "citation": "Epstein Becker Green, Maine Restricts Noncompetes for Health Care Practitioners (2026).",
-            "url": "https://www.tradesecretsandemployeemobility.com/maine-restricts-noncompetes-for-health-care-practitioners",
-            "proposition": "Epstein Becker Green supports the July 13, 2026 effective date and the entered-into-or-renewed application trigger.",
-            "verbatimQuote": "The Amendments apply to all noncompete agreements entered into, or renewed on or after, the Amendments’ effective date of July 13, 2026 (the “Effective Date”).",
-            "date": "2026-04-20",
-            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-ebg-ld2200-effective-gate"
+            "sourceId": "me-pl718-s5-gate",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "P.L. 2025, ch. 718 (L.D. 2200)",
+            "citation": "P.L. 2025, ch. 718, § 5.",
+            "url": "https://legislature.maine.gov/bills/getPDF.asp?item=7&paper=HP1479&snum=132",
+            "proposition": "Section 5 applies the restriction to non-competes entered into or renewed on or after the act's effective date.",
+            "verbatimQuote": "This Act applies to all noncompete agreements entered into or renewed on or after the effective date of this Act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-pl718-s5-gate"
+          },
+          {
+            "sourceId": "me-2026-effective-gate",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "Maine Laws, 132nd Legislature, Second Regular Session",
+            "citation": "Laws of Maine, 132nd Legislature, Second Regular Session, preface, note 8; P.L. 2025, ch. 718, § 5.",
+            "url": "https://legislature.maine.gov/doc/12627",
+            "proposition": "The official session-law volume gives July 29, 2026 as the general effective date of the second regular session's nonemergency acts, including chapter 718.",
+            "verbatimQuote": "The general effective date of the nonemergency laws passed at the Second Regular Session of the 132nd Legislature is July 29, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maine#src-me-2026-effective-gate"
           }
         ]
       },

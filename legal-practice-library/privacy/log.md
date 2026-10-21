@@ -1,5 +1,13 @@
 # Privacy Update Log
 
+## 2026-10-19
+* **Update**: fix(privacy/pillar): drop the uncited coverage-test generalization from the who-must-post answer (12aeb51)
+* **Update**: fix(privacy/pillar): make the who-must-post opener name the businesses it covers (1967299)
+* **Update**: fix(privacy/pillar): Colorado's biometric-data coverage route (freshness #3231) (5a11074)
+* **Update**: fix(privacy/pillar): cite the who-must-post opener to the Texas and Colorado notice duties (978914f)
+* **Update**: fix(privacy/pillar): keep the statute's 'controls or processes' biometric trigger (aae8c96)
+* **Update**: fix(privacy/pillar): drop the intro paragraph so the article body is Q&A only (e0d35ff)
+
 ## 2026-08-15
 * **Update**: fix(colorado): scope and verify legal sources (7e4c894)
 

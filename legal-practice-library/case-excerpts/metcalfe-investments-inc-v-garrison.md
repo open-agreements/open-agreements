@@ -74,6 +74,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=The%20only%20thing%20she%20was,procured%20at%20its%20own%20expense.>
 
+### metcalfe-investments-inc-v-garrison-this-evidence-indicated-that-garrison-b1991db0 {#metcalfe-investments-inc-v-garrison-this-evidence-indicated-that-garrison-b1991db0}
+
+> This evidence indicated that Garrison had agreed not to make use of Metcalfe Investments’ client list after departing and not to participate in sales to potential buyers who had first made contact with Metcalfe Investments during her employment.
+
+- supports: `duration-limits`, `writing-requirement`
+- source_cards: `metcalfe-client-list-restraint-terms`, `metcalfe-oral-client-list-terms`
+- cited_by: [Non-Competes in Alaska](../non-compete/us/alaska.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=This%20evidence%20indicated%20that%20Garrison,Metcalfe%20Investments%20during%20her%20employment.>
+
 ### metcalfe-investments-inc-v-garrison-we-conclude-that-the-noncompetition-ddf18d1e {#metcalfe-investments-inc-v-garrison-we-conclude-that-the-noncompetition-ddf18d1e}
 
 > We conclude that the noncompetition agreement is not rendered unenforceable by the lack of a geographical or durational limitation.

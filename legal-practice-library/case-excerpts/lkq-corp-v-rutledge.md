@@ -43,3 +43,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `lkq-recent-rsu`, `lkq-rsu-agreements`
 - cited_by: [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=The%20United%20States%20Court%20of%20Appeals%20for%20the%20Seventh%20Circuit%20is,company%E2%80%99s%20restricted%20stock%20unit%20agreements.>
+
+### lkq-corp-v-rutledge-under-the-employee-choice-doctrine-ed479631 {#lkq-corp-v-rutledge-under-the-employee-choice-doctrine-ed479631}
+
+> Under the employee choice doctrine, “courts do not review forfeiture-for-competition provisions for reasonableness so long as the employee voluntarily terminated her employment.”
+
+- supports: `forfeiture-for-competition`
+- source_cards: `lkq-voluntary-termination-condition`
+- cited_by: [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- link_to_source: <https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=Under%20the%20employee%20choice%20doctrine%2C,employee%20voluntarily%20terminated%20her%20employment.%E2%80%9D>

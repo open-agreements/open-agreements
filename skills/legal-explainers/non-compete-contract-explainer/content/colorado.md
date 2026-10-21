@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-content_packaged_at: "2026-10-16"
+content_packaged_at: "2026-10-19"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-10-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-10-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Colorado[^about]
 
@@ -57,7 +57,7 @@ A covenant that fits a statutory exception is not automatically enforceable. It 
 
 ## When can a Colorado employer use a non-compete or customer non-solicit agreement? {#highly-compensated-threshold}
 
-**Short answer.** Only for a highly compensated worker, to protect trade secrets. A non-compete is permitted only against a worker whose annualized cash compensation meets the highly compensated worker threshold — $130,014 in 2026 — and a customer non-solicit needs at least 60% of that threshold, $78,008.40 in 2026 [^crs-hcw-threshold][^crs-customer-nonsolicit-threshold][^paycalc-hcw-threshold][^ebg-2026-thresholds].
+**Short answer.** Colorado allows a non-compete with a worker who earns at least the highly compensated worker threshold, or a customer non-solicit with one who earns at least 60 percent of it, when the covenant is no broader than reasonably necessary to protect trade secrets, subject to two further limits [^crs-hcw-threshold][^crs-customer-nonsolicit-threshold]. The worker must meet the threshold both when the covenant is entered into and when it is enforced, and the exception never covers a covenant restricting the practice of medicine, advanced practice registered nursing, or dentistry [^crs-hcw-threshold][^crs-customer-nonsolicit-threshold][^threshold-health-care-exclusion]. In 2026 those thresholds are $130,014 and $78,008.40 in annualized cash compensation [^paycalc-hcw-threshold][^ebg-2026-thresholds].
 
 The worker must meet the threshold both when the covenant is signed and when it is enforced, and the covenant must protect trade secrets and be no broader than reasonably necessary [^crs-hcw-threshold]. The controlling figure is the greater of the August 10, 2022 amount or the amount in effect when the covenant is executed, so a covenant is tested against its execution-year threshold, not necessarily the current year [^crs-threshold-execution-year]. The threshold is reset annually by the Colorado Department of Labor and Employment's PAY CALC Order, which sets the 2026 highly compensated employee figure at $130,014 [^paycalc-hcw-threshold]. The customer-non-solicit threshold is then derived as 60% of that figure [^crs-customer-nonsolicit-threshold][^ebg-2026-thresholds].
 
@@ -72,7 +72,7 @@ These thresholds do not help with health-care providers. Senate Bill 25-083 adde
 
 ## What notice must a Colorado employer give before a non-compete? {#notice-requirements}
 
-**Short answer.** A separate, signed written notice, on a strict timeline. Even a covenant that fits an exception is void unless the employer gives the worker a separate written notice — before a prospective worker accepts the job, or at least fourteen days before the covenant or new consideration takes effect for a current worker [^crs-notice-timing][^crs-notice-separate-document].
+**Short answer.** A Colorado employer must give a worker notice of a non-compete in a separate document signed by the worker, and a current worker must receive it at least fourteen days before the earlier of the covenant's effective date or the effective date of the consideration for it [^crs-notice-separate-document][^crs-notice-timing]. An otherwise permissible covenant is void unless a prospective worker receives notice of it and its terms before accepting the employer's offer of employment [^crs-notice-void-unless-provided].
 
 The notice must accompany a complete copy of the agreement, identify the agreement by name, warn that it contains a covenant not to compete that could restrict the worker's options for subsequent employment, and direct the worker to the specific sections or paragraphs containing every covered covenant. It must also be a standalone document, written in clear and conspicuous terms in the performance-communication language, and signed by the worker [^crs-notice-content][^crs-notice-separate-document].
 
@@ -83,7 +83,7 @@ The notice must accompany a complete copy of the agreement, identify the agreeme
 
 ## Are non-competes enforceable against Colorado physicians and other health-care providers? {#health-care-providers}
 
-**Short answer.** Not where the covenant restricts the practice of medicine, advanced practice registered nursing, or dentistry, for agreements entered into or renewed on or after August 6, 2025. Senate Bill 25-083 closed the compensation exceptions for those three practices, so a covenant restricting them is void however much the worker earns [^sb25083-health-care-carveout][^sb25083-health-care-provider-definition].
+**Short answer.** For covenants entered into or renewed on or after August 6, 2025, Colorado's highly compensated worker exception does not reach a non-compete restricting the practice of medicine, advanced practice registered nursing, or dentistry, so a high salary cannot make such a covenant enforceable [^sb25083-health-care-carveout][^crs-sb25083-applicability-cutoff]. The statute separately defines a health-care provider to include a certified midwife [^sb25083-health-care-provider-definition].
 
 The highly compensated worker exception no longer rescues a covenant that restricts the practice of medicine, advanced practice registered nursing, or dentistry, so a covenant reaching one of those practices fails even where the worker earns well above the wage threshold [^sb25083-health-care-carveout].
 
@@ -98,7 +98,7 @@ Colorado previously allowed physician agreements to require liquidated damages t
 
 ## Are sale-of-business non-competes enforceable in Colorado, including for minority owners? {#sale-of-business}
 
-**Short answer.** Yes for an owner, with a cap for minority owners. Subsection (2) does not prohibit a covenant not to compete related to the purchase and sale of a business, an ownership share in it, or substantially all of its assets, but only where the covenant restricts competition by an owner of an interest in the business — and for an owner who holds a minority share received as equity compensation, SB 25-083 caps the non-compete's duration by a formula [^crs-sale-of-business][^sb25083-minority-owner-formula].
+**Short answer.** Colorado permits a non-compete tied to the sale of a business, an ownership share, or substantially all of its assets that restricts an owner of an interest in the business, subject to a duration cap for some minority owners [^sb25083-owner-sale-covenant-permitted]. For a minority owner who received the ownership share as equity compensation or otherwise in connection with services, the covenant's maximum duration in years is the total consideration the owner received from the sale divided by the owner's average annualized cash compensation from the business, including income on the ownership interest, over the preceding two years or the owner's period of affiliation, whichever is shorter [^crs-sale-of-business][^sb25083-minority-owner-formula].
 
 The cap applies to a minority owner who received the ownership share as equity compensation or otherwise in connection with services rendered. For such an owner, the maximum duration in years equals the total consideration the owner received from the sale divided by the owner's average annualized cash compensation from the business over the preceding two years (or the owner's tenure, if shorter) [^sb25083-minority-owner-formula]. So a qualifying minority owner who received $50,000 from the sale and averaged $100,000 in annual compensation could be bound for at most half a year.
 
@@ -109,7 +109,7 @@ The cap applies to a minority owner who received the ownership share as equity c
 
 ## Can a Colorado employer recover training costs through a repayment agreement (TRAP)? {#training-repayment}
 
-**Short answer.** Only within strict limits. A training-repayment provision is permitted only when the training is distinct from normal on-the-job training and meets the attorney general's rules on transferability of the training or credential, and the recoverable amount is capped at reasonable costs that decrease over two years [^crs-traps].
+**Short answer.** A Colorado employer may recover training costs through a repayment provision only when the training is distinct from normal on-the-job training and meets the attorney general's transferability rules, and only up to reasonable costs that decrease over the two years after the training [^crs-traps].
 
 If the employer overreaches, the attorney general can recover three times the amount of any recovery or attempted recovery on an unlawful training-repayment provision [^crs-traps-treble].
 
@@ -120,7 +120,7 @@ If the employer overreaches, the attorney general can recover three times the am
 
 ## Are confidentiality and nondisclosure covenants still allowed in Colorado? {#confidentiality-covenants}
 
-**Short answer.** Yes. A reasonable confidentiality provision relevant to the employer's business is expressly permitted and is not treated as a void non-compete [^crs-confidentiality].
+**Short answer.** Colorado's non-compete statute expressly permits a reasonable confidentiality provision relevant to the employer's business, so long as it does not bar disclosure of general training, knowledge, skill, or experience, publicly ascertainable information, or legally protected disclosures [^crs-confidentiality].
 
 The carve-out has limits built in: a confidentiality provision cannot bar the worker from disclosing information that arises from the worker's general training, knowledge, skill, or experience, information readily ascertainable to the public, or information the worker has a right to disclose as legally protected conduct [^crs-confidentiality].
 
@@ -131,7 +131,7 @@ The carve-out has limits built in: a confidentiality provision cannot bar the wo
 
 ## What are the penalties for presenting or enforcing a void Colorado non-compete? {#penalties}
 
-**Short answer.** Significant. An employer that enters into, presents, or tries to enforce a void covenant is liable for actual damages plus a penalty of $5,000 per worker or prospective worker harmed, and faces enforcement by both private plaintiffs and the attorney general [^crs-prohibited-conduct][^crs-penalty].
+**Short answer.** A Colorado employer that enters into, presents, or attempts to enforce a void non-compete is liable for actual damages plus a penalty of $5,000 per worker or prospective worker harmed, subject to the statute's good-faith exception [^crs-prohibited-conduct][^crs-penalty]. If the employer shows it acted in good faith with reasonable grounds for believing it was not violating the statute, a court may award no penalty or a reduced one [^crs-good-faith-penalty-discretion].
 
 A harmed worker can recover actual damages, reasonable costs, and attorney fees, and the attorney general can seek injunctive relief and penalties [^crs-penalty]. Separately, using force, threats, or intimidation to keep a person from a lawful occupation is a class 2 misdemeanor [^crs-misdemeanor].
 
@@ -142,19 +142,19 @@ A harmed worker can recover actual damages, reasonable costs, and attorney fees,
 
 ## Can another state's law or court govern a Colorado worker's non-compete? {#choice-of-law}
 
-**Short answer.** No, for a Colorado-based worker. If the worker primarily resided and worked in Colorado at termination, Colorado law governs the covenant's enforceability and the worker cannot be required to litigate enforceability outside Colorado, regardless of any contrary contract clause [^crs-choice-of-law][^crs-venue].
+**Short answer.** Colorado law governs the enforceability of a non-compete for a worker who primarily resided and worked in Colorado at termination, and that worker cannot be required to litigate enforceability outside Colorado, whatever the contract says [^crs-choice-of-law][^crs-venue].
 
 This forecloses the common strategy of using a Delaware or New York choice-of-law clause and an out-of-state forum to escape Colorado's limits for a Colorado employee [^crs-choice-of-law].
 
 ## Is continued at-will employment enough consideration for a Colorado non-compete? {#continued-employment-consideration}
 
-**Short answer.** Yes. Under *Lucht's Concrete Pumping, Inc. v. Horner*, an employer that forbears from terminating an existing at-will employee gives adequate consideration for a non-compete signed after employment begins [^luchts-continued-employment].
+**Short answer.** Continued at-will employment is adequate consideration for a Colorado non-compete signed after employment begins, because the Colorado Supreme Court held in *Lucht's Concrete Pumping, Inc. v. Horner* that an employer's forbearance from terminating an existing at-will employee is adequate consideration [^luchts-continued-employment].
 
 That common-law rule survives the statute, but it now operates alongside the procedural rules: for a current worker, the employer still must give the separate fourteen-day notice before the covenant or its consideration takes effect [^luchts-continued-employment][^crs-consideration-notice].
 
 ## Will a Colorado court blue-pencil or narrow an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** Do not count on it. Colorado courts have discretion to blue-pencil an overbroad covenant but are not required to, and parties cannot contractually force a court to rewrite one [^twentythree-ltd-discretion][^twentythree-ltd-no-contractual-compulsion].
+**Short answer.** A Colorado court has discretion to blue-pencil an overbroad non-compete but is not required to, and contracting parties cannot obligate a court to do so [^twentythree-ltd-discretion][^twentythree-ltd-no-contractual-compulsion].
 
 In *23 LTD v. Herman*, the court explained that it is not a court's function to rewrite a contract to enable enforcement of terms that violate Colorado public policy, and a severability clause cannot compel the court to do so [^twentythree-ltd-no-rewrite][^twentythree-ltd-no-contractual-compulsion]. The risk is compounded by the penalty regime: because merely presenting a void covenant is unlawful, an employer cannot safely assume a court will trim an overbroad covenant into a lawful one [^crs-present-void-narrowing]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Colorado non-compete reviewer checklist](/checklists/non-compete/us/colorado) walks the full covenant suite item by item with each requirement's force level.
 
@@ -165,7 +165,7 @@ In *23 LTD v. Herman*, the court explained that it is not a court's function to 
 
 ## Are employee non-solicitation (no-hire) clauses enforceable in Colorado? {#employee-nonsolicitation}
 
-**Short answer.** Unsettled, but better supported than customer non-solicits. The statute pegs customer non-solicits to the 60% threshold but is silent on agreements not to solicit a former employer's employees, and *Phoenix Capital, Inc. v. Dowell* treated an employee non-solicit as a lesser restraint that can survive even when the non-compete is invalid [^phoenix-employee-nonsolicit][^phoenix-livelihood-distinction].
+**Short answer.** A Colorado clause barring a former employee from actively soliciting the employer's employees is most likely enforceable, because in *Phoenix Capital, Inc. v. Dowell* the Colorado Court of Appeals enforced one despite the invalidity of the accompanying non-compete [^phoenix-employee-nonsolicit][^phoenix-livelihood-distinction]. The question remains unsettled because the statute ties customer non-solicits to the 60 percent threshold but does not separately address employee non-solicits [^crs-customer-nonsolicit-silence].
 
 *Phoenix* reasoned that, unlike a customer non-solicit, an agreement not to solicit a former employer's employees does not impair the worker's own ability to make a living, so it can be enforceable despite an invalid non-compete [^phoenix-livelihood-distinction][^phoenix-conclusion-distinction].
 
@@ -176,7 +176,7 @@ In *23 LTD v. Herman*, the court explained that it is not a court's function to 
 
 ## Does a Colorado non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
-**Short answer.** This is an open Colorado question, and the statute's structure cuts against automatic extension. No Colorado statute or appellate decision endorses automatically tolling or extending the restricted period during a breach or while litigation is pending [^phoenix-no-extension][^crs-enforced-time].
+**Short answer.** In our review we found no Colorado statute or appellate decision approving the automatic tolling or extension of a non-compete's restricted period during a breach or while litigation is pending. The Colorado Court of Appeals in *Phoenix Capital, Inc. v. Dowell* upheld a trial court's refusal to extend an injunction beyond the agreement's one-year term, and the statute requires the worker to meet the compensation threshold when the covenant is enforced [^phoenix-no-extension][^crs-enforced-time].
 
 The best Colorado authority points toward caution. In *Phoenix Capital, Inc. v. Dowell*, the court found no error in refusing to extend a preliminary injunction beyond the one-year term the parties had specified [^phoenix-no-extension]. And the statute requires the worker to meet the compensation threshold both when the covenant is entered into and when it is enforced, so a covenant whose enforcement is pushed later must still satisfy the statute at that later time [^crs-enforced-time].
 
@@ -227,25 +227,31 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^crs-customer-nonsolicit-threshold]: **C.R.S. § 8-2-113** — "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to solicit customers governing an individual who, at the time the covenant is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than sixty percent of the threshold amount for highly compensated workers, if the nonsolicitation covenant is no broader than reasonably necessary to protect the employer's legitimate interest in protecting trade secrets." *C.R.S. § 8-2-113(2)(d).* <https://olls.info/crs/crs2025-title-08.pdf>
 
+[^threshold-health-care-exclusion]: **S.B. 25-083 (Limitations on Restrictive Employment Agreements)** — "EXCEPT FOR A COVENANT NOT TO COMPETE THAT RESTRICTS THE PRACTICE OF MEDICINE, THE PRACTICE OF ADVANCED PRACTICE REGISTERED NURSING, OR THE PRACTICE OF DENTISTRY IN THIS STATE, this subsection (2) does not apply to a covenant not to solicit customers" *S.B. 25-083, 75th Gen. Assemb., Reg. Sess. (Colo. 2025) (amending C.R.S. § 8-2-113(2)(d)).* <https://leg.colorado.gov/bills/sb25-083>
+
 [^paycalc-hcw-threshold]: **Temporary 2026 PAY CALC Order, 7 CCR 1103-14** — "Highly compensated employees (R. 2.2.11) $130,014 annually, and the EAP salary (row E) weekly" *Temporary 2026 PAY CALC Order, 7 CCR 1103-14, Rule 1.2.1(G) (effective January 2026).* <https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12310&fileName=7+CCR+1103-14>
 
 [^ebg-2026-thresholds]: **Raising the Cost of Noncompetes: 2026 State Noncompete Salary Threshold Changes** — "Effective January 1, 2026, the threshold amount for highly compensated workers is $130,014. Furthermore, an employer cannot subject an employee to a non-solicitation provision where an employee earns less than 60% of the threshold amount for highly compensated workers. Colorado’s 2026 non-solicitation salary threshold is $78,008.40." *Epstein Becker Green, Raising the Cost of Noncompetes: 2026 State Noncompete Salary Threshold Changes (Dec. 10, 2025).* <https://www.tradesecretsandemployeemobility.com/raising-the-cost-of-noncompetes-2026-state-noncompete-salary-threshold-changes>
 
 [^crs-threshold-execution-year]: **C.R.S. § 8-2-113** — "‘Threshold amount for highly compensated workers’ means the greater of the threshold amount for highly compensated workers as determined by the division of labor standards and statistics in the department of labor and employment: (A) As of August 10, 2022; or (B) At the time the covenant not to compete is executed by the parties." *C.R.S. § 8-2-113(2)(c)(II).* <https://olls.info/crs/crs2025-title-08.pdf>
 
-[^threshold-health-care-exclusion]: **S.B. 25-083 (Limitations on Restrictive Employment Agreements)** — "EXCEPT FOR A COVENANT NOT TO COMPETE THAT RESTRICTS THE PRACTICE OF MEDICINE, THE PRACTICE OF ADVANCED PRACTICE REGISTERED NURSING, OR THE PRACTICE OF DENTISTRY IN THIS STATE, this subsection (2) does not apply to a covenant not to solicit customers" *S.B. 25-083, 75th Gen. Assemb., Reg. Sess. (Colo. 2025) (amending C.R.S. § 8-2-113(2)(d)).* <https://leg.colorado.gov/bills/sb25-083>
+[^crs-notice-separate-document]: **C.R.S. § 8-2-113** — "An employer shall provide the notice required in subsection (4)(a) of this section in a separate document from any other covenants between the worker and employer and in clear and conspicuous terms in the language in which the worker and employer communicate about the worker's performance. The notice must be signed by the worker." *C.R.S. § 8-2-113(4)(b).* <https://olls.info/crs/crs2025-title-08.pdf>
 
 [^crs-notice-timing]: **C.R.S. § 8-2-113** — "A current worker at least fourteen days before the earlier of: (A) The effective date of the covenant; or (B) The effective date of any additional compensation or change in the terms or conditions of employment that provides consideration for the covenant." *C.R.S. § 8-2-113(4)(a)(II).* <https://olls.info/crs/crs2025-title-08.pdf>
 
-[^crs-notice-separate-document]: **C.R.S. § 8-2-113** — "An employer shall provide the notice required in subsection (4)(a) of this section in a separate document from any other covenants between the worker and employer and in clear and conspicuous terms in the language in which the worker and employer communicate about the worker's performance. The notice must be signed by the worker." *C.R.S. § 8-2-113(4)(b).* <https://olls.info/crs/crs2025-title-08.pdf>
+[^crs-notice-void-unless-provided]: **C.R.S. § 8-2-113** — "Any covenant not to compete that is otherwise permissible under subsection (2) or (3) of this section is void unless notice of the covenant not to compete and the terms of the covenant not to compete are provided to: (I) A prospective worker before the worker accepts the employer's offer of employment; or (II) A current worker at least fourteen days before the earlier of: (A) The effective date of the covenant; or (B) The effective date of any additional compensation or change in the terms or conditions of employment that provides consideration for the covenant." *C.R.S. § 8-2-113(4)(a).* <https://olls.info/crs/crs2025-title-08.pdf>
 
 [^crs-notice-content]: **C.R.S. § 8-2-113** — "An employer satisfies the notice requirement of this subsection (4) when the notice: (I) Is provided with a copy of the agreement containing the covenant not to compete; (II) Identifies the agreement by name and states that the agreement contains a covenant not to compete that could restrict the workers' options for subsequent employment following their separation from the employer; and (III) Directs the worker to the specific sections or paragraphs of the agreement that contain the covenant not to compete." *C.R.S. § 8-2-113(4)(d).* <https://olls.info/crs/crs2025-title-08.pdf>
 
 [^sb25083-health-care-carveout]: **S.B. 25-083 (Limitations on Restrictive Employment Agreements)** — "EXCEPT FOR A COVENANT NOT TO COMPETE THAT RESTRICTS THE PRACTICE OF MEDICINE, THE PRACTICE OF ADVANCED PRACTICE REGISTERED NURSING, OR THE PRACTICE OF DENTISTRY IN THIS STATE, this subsection (2) does not apply to a covenant not to compete" *S.B. 25-083, 75th Gen. Assemb., Reg. Sess. (Colo. 2025) (amending C.R.S. § 8-2-113(2)(b)).* <https://leg.colorado.gov/bills/sb25-083>
 
+[^crs-sb25083-applicability-cutoff]: **C.R.S. § 8-2-113** — "Section 2(2) of chapter 366 (SB 25-083), Session Laws of Colorado 2025, provides that the act changing this section applies to covenants not to compete entered into or renewed on or after August 6, 2025." *C.R.S. § 8-2-113 (editor's note on the applicability of S.B. 25-083).* <https://olls.info/crs/crs2025-title-08.pdf>
+
 [^sb25083-health-care-provider-definition]: **S.B. 25-083 (Limitations on Restrictive Employment Agreements)** — "‘HEALTH-CARE PROVIDER’ MEANS AN INDIVIDUAL LICENSED TO ENGAGE IN THE PRACTICE OF MEDICINE, REGISTERED TO ENGAGE IN THE PRACTICE OF ADVANCED PRACTICE REGISTERED NURSING, LICENSED TO PRACTICE AS A CERTIFIED MIDWIFE, OR LICENSED TO ENGAGE IN THE PRACTICE OF DENTISTRY." *S.B. 25-083, 75th Gen. Assemb., Reg. Sess. (Colo. 2025) (adding C.R.S. § 8-2-113(2)(c)(I.3)).* <https://leg.colorado.gov/bills/sb25-083>
 
 [^sb25083-patient-communication]: **S.B. 25-083 (Limitations on Restrictive Employment Agreements)** — "(a) THE HEALTH-CARE PROVIDER'S CONTINUING PRACTICE OF MEDICINE; (b) THE HEALTH-CARE PROVIDER'S NEW PROFESSIONAL CONTACT INFORMATION; OR (c) THE PATIENT'S RIGHT TO CHOOSE A HEALTH-CARE PROVIDER." *S.B. 25-083, 75th Gen. Assemb., Reg. Sess. (Colo. 2025) (adding C.R.S. § 8-2-113(5.5)).* <https://leg.colorado.gov/bills/sb25-083>
+
+[^sb25083-owner-sale-covenant-permitted]: **S.B. 25-083 (Limitations on Restrictive Employment Agreements)** — "(3) The following covenants are not prohibited by subsection (2) of this section: (b) A reasonable confidentiality provision OR TRADE SECRET PROVISION relevant to the employer's business that does not prohibit disclosure of information that arises from the worker's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that a worker otherwise has a right to disclose as legally protected conduct; (c) A covenant for the purchase and sale of a business or the assets of a business; or NOT TO COMPETE RELATED TO THE PURCHASE AND SALE OF A BUSINESS, A DIRECT OR INDIRECT OWNERSHIP SHARE IN A BUSINESS, OR ALL OR SUBSTANTIALLY ALL OF THE ASSETS OF A BUSINESS THAT RESTRICTS COMPETITION BY AN OWNER OF AN INTEREST IN THE BUSINESS." *S.B. 25-083, 75th Gen. Assemb., Reg. Sess. (Colo. 2025) (amending C.R.S. § 8-2-113(3)(c)).* <https://leg.colorado.gov/bills/sb25-083>
 
 [^crs-sale-of-business]: **C.R.S. § 8-2-113** — "For an individual who owns a minority ownership share of the business and who received their ownership share in the business as equity compensation or otherwise in connection with services rendered, the duration in years of a covenant not to compete described in this subsection (3)(c) must not exceed a number calculated by the total consideration received by the individual from the sale divided by the average annualized cash compensation received by the individual from the business, including income received on account of their ownership interest during the preceding two years or during the period of time that the individual was affiliated with the business, whichever period of time is shorter." *C.R.S. § 8-2-113(3)(c).* <https://olls.info/crs/crs2025-title-08.pdf>
 
@@ -260,6 +266,8 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 [^crs-prohibited-conduct]: **C.R.S. § 8-2-113** — "An employer shall not enter into, present to a worker or prospective worker as a term of employment, or attempt to enforce any covenant that is void under this section." *C.R.S. § 8-2-113(8)(a).* <https://olls.info/crs/crs2025-title-08.pdf>
 
 [^crs-penalty]: **C.R.S. § 8-2-113** — "An employer that violates subsection (8)(a) of this section is liable for actual damages and a penalty of five thousand dollars per worker or prospective worker harmed by the conduct." *C.R.S. § 8-2-113(8)(b).* <https://olls.info/crs/crs2025-title-08.pdf>
+
+[^crs-good-faith-penalty-discretion]: **C.R.S. § 8-2-113** — "In any action brought under this subsection (8), if the employer shows that the act or omission giving rise to such action was in good faith and that the employer had reasonable grounds for believing that the employer's act or omission was not a violation of this section, the court may, in its sound discretion, award the worker or workers no penalty or award a penalty of any amount not to exceed the amount specified in subsection (8)(b) of this section." *C.R.S. § 8-2-113(8)(c).* <https://olls.info/crs/crs2025-title-08.pdf>
 
 [^crs-misdemeanor]: **C.R.S. § 8-2-113** — "It is unlawful to use force, threats, or other means of intimidation to prevent any person from engaging in any lawful occupation at any place the person sees fit." *C.R.S. § 8-2-113(1.5)(a).* <https://olls.info/crs/crs2025-title-08.pdf>
 
@@ -283,9 +291,9 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^phoenix-livelihood-distinction]: **Phoenix Capital, Inc. v. Dowell** — "In contrast, an agreement not to solicit employees would not impair the former employee's ability to make a living." *Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007).* <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=In%20contrast%2C%20an%20agreement%20not,ability%20to%20make%20a%20living.>
 
-[^phoenix-conclusion-distinction]: **Phoenix Capital, Inc. v. Dowell** — "We conclude that, although the invalidity of the noncompetition provision did not render invalid Dowell's agreement not to solicit Phoenix's employees, it rendered invalid Dowell's agreement not to solicit Phoenix's customers." *Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007).* <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=We%20conclude%20that%2C%20although%20the,not%20to%20solicit%20Phoenix's%20customers.>
-
 [^crs-customer-nonsolicit-silence]: **C.R.S. § 8-2-113** — "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to solicit customers governing an individual who, at the time the covenant is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than sixty percent of the threshold amount for highly compensated workers, if the nonsolicitation covenant is no broader than reasonably necessary to protect the employer's legitimate interest in protecting trade secrets." *C.R.S. § 8-2-113(2)(d).* <https://olls.info/crs/crs2025-title-08.pdf>
+
+[^phoenix-conclusion-distinction]: **Phoenix Capital, Inc. v. Dowell** — "We conclude that, although the invalidity of the noncompetition provision did not render invalid Dowell's agreement not to solicit Phoenix's employees, it rendered invalid Dowell's agreement not to solicit Phoenix's customers." *Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007).* <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=We%20conclude%20that%2C%20although%20the,not%20to%20solicit%20Phoenix's%20customers.>
 
 [^phoenix-no-extension]: **Phoenix Capital, Inc. v. Dowell** — "Consequently, we discern no error in the trial court's refusing to extend the terms of the preliminary injunction beyond the one-year term specified in the parties' agreement." *Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007).* <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=Consequently%2C%20we%20discern%20no%20error,specified%20in%20the%20parties'%20agreement.>
 

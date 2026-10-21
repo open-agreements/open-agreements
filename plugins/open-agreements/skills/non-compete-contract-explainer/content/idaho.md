@@ -2,7 +2,7 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-content_packaged_at: "2026-10-16"
+content_packaged_at: "2026-10-19"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-10-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-10-19 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Idaho[^about]
 
@@ -39,7 +39,7 @@ A question-by-question summary of Idaho non-compete law under Idaho Code title 4
 
 ## Are employee non-compete agreements enforceable in Idaho? {#employee-non-compete-enforceability}
 
-**Short answer.** Yes, but only for key employees or key independent contractors and only if the covenant is reasonable. Idaho Code § 44-2701 makes a qualifying covenant enforceable if reasonable[^idaho-44-2701-key-employee-enforceable] as to duration, geography, work scope, and business need.
+**Short answer.** Idaho Code § 44-2701 makes a written non-compete with a key employee or key independent contractor enforceable if it is reasonable as to duration, geographic area and line of business and imposes no greater restraint than reasonably necessary to protect the employer's legitimate business interests [^idaho-44-2701-key-employee-enforceable].
 
 Idaho is a statute-first jurisdiction for employment non-competes. The chapter 44-27 framework is employer-friendly, but it is not open-ended: the worker must be key, the restraint must protect legitimate business interests, and it cannot impose more restraint than reasonably necessary [^idaho-44-2701-key-employee-enforceable]. For a clause-by-clause pass over a specific agreement against these rules, the [Idaho non-compete reviewer checklist](/checklists/non-compete/us/idaho) walks the full covenant suite item by item with each requirement's force level.
 
@@ -80,7 +80,7 @@ That broad definition does not eliminate tailoring. Idaho Code § 44-2701 still 
 
 ## How long can an Idaho non-compete last, and what consideration is required? {#duration-limits}
 
-**Short answer.** Eighteen months or less is the statutory safe-harbor term. Idaho Code § 44-2704 presumes an eighteen-month-or-shorter postemployment term reasonable, and a restriction longer than eighteen months requires consideration beyond employment or continued employment [^idaho-44-2704-duration-presumption][^idaho-44-2704-duration-consideration].
+**Short answer.** An Idaho non-compete binding a key employee or key independent contractor is rebuttably presumed reasonable in duration if its postemployment term is eighteen months or less, and a longer direct-competition restriction requires consideration beyond employment or continued employment [^idaho-44-2704-duration-presumption][^idaho-44-2704-duration-consideration].
 
 The statute is unusually specific about consideration. It says a direct-competition restriction cannot exceed eighteen months unless the employer gives additional consideration beyond employment or continued employment [^idaho-44-2704-duration-consideration].
 
@@ -93,7 +93,7 @@ That means continued at-will employment can support an eighteen-month-or-shorter
 
 ## What geographic and line-of-business limits apply to Idaho non-competes? {#geography-work-scope}
 
-**Short answer.** Idaho presumes geography reasonable when it is limited to areas where the worker provided services or had significant presence or influence. It also presumes work scope reasonable when limited to the type of employment or line of business the worker actually conducted for the employer [^idaho-44-2704-geographic-presumption][^idaho-44-2704-line-of-business-presumption].
+**Short answer.** Idaho rebuttably presumes a key worker's non-compete reasonable in geography if it is limited to areas where the worker provided services or had a significant presence or influence, and in line of business if it is limited to the worker's line of business for the employer [^idaho-44-2704-geographic-presumption][^idaho-44-2704-line-of-business-presumption].
 
 The geographic rule is tied to the worker's footprint, not simply to everywhere the employer does business [^idaho-44-2704-geographic-presumption]. The line-of-business rule is tied to the worker's actual work, not every possible role in the employer's industry [^idaho-44-2704-line-of-business-presumption].
 
@@ -106,7 +106,7 @@ Those presumptions matter in practice because a court may still ask whether the 
 
 ## Will an Idaho court modify an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** Usually yes, because Idaho's statute uses mandatory modification language. Idaho Code § 44-2703 says a court shall limit or modify[^idaho-44-2703-mandatory-modification] an unreasonable covenant and enforce it as limited or modified.
+**Short answer.** An Idaho court that finds a non-compete unreasonable must limit or modify it to make it reasonable and then enforce it as limited or modified, under Idaho Code § 44-2703 [^idaho-44-2703-mandatory-modification]. In *Blaskiewicz v. Spine Institute of Idaho*, the Idaho Supreme Court held that a trial court had the power to limit or modify an overbroad non-compete through blue-penciling [^blaskiewicz-blue-pencil-statute].
 
 That blue-pencil rule is strong, but it is not a license to omit essential terms. Idaho courts have long treated employment restraints as strictly construed against the employer, and *Intermountain Eye* cautioned that a court may blue-pencil only if it can be done simply and accurately [^intermountain-simple-blue-pencil].
 
@@ -119,7 +119,7 @@ That blue-pencil rule is strong, but it is not a license to omit essential terms
 
 ## Are customer non-solicitation clauses enforceable in Idaho, and what counts as solicitation? {#customer-nonsolicits}
 
-**Short answer.** Yes, customer non-solicitation clauses can be enforced, but solicitation requires affirmative conduct. In 2025, *Insure Idaho v. Horn* held that solicitation requires an overt act seeking business, and that mere acceptance of business is not solicitation [^horn-overt-act].
+**Short answer.** Under *Insure Idaho, LLC v. Horn*, solicitation under an Idaho customer non-solicitation clause requires an overt act initiated by the restricted party seeking business and excludes the mere acceptance of business [^horn-overt-act][^horn-no-mere-acceptance].
 
 This is Idaho's headline recent development for customer restrictions. *Horn* distinguishes active solicitation from accepting a customer who independently reaches out. The court said the restricted party must take affirmative action that entreats, implores, pleads, or petitions for the business at issue [^horn-affirmative-action].
 
@@ -132,7 +132,7 @@ That makes no-service or non-dealing clauses a drafting risk. A clause that bars
 
 ## Are non-competes for Idaho healthcare providers enforceable? {#healthcare-providers}
 
-**Short answer.** Yes, Idaho does not categorically ban physician or healthcare-provider non-competes. But courts weigh the employer's interests against patient access, continuity of care, and the public interest in the physician-patient relationship [^intermountain-patient-choice].
+**Short answer.** An Idaho physician employer's interest in the patients it supplied to the physician is limited by those patients' interests in continuity of care and access to the provider of their choice, and a court may refuse to enforce a physician non-compete by an injunction that would seriously impair public welfare [^intermountain-patient-choice][^dick-public-welfare].
 
 *Intermountain Eye* rejected an outright ban but treated physician covenants as different from ordinary commercial restraints. The court held that the employer's interest in patients is limited by patient continuity and choice [^intermountain-patient-choice].
 
@@ -145,7 +145,7 @@ That makes no-service or non-dealing clauses a drafting risk. A clause that bars
 
 ## Does an Idaho non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
-**Short answer.** Idaho law is unsettled. No Idaho statute or Idaho appellate decision in the identified source corpus squarely addresses whether a non-compete term tolls during breach or litigation, so the safer answer is that the issue remains open.
+**Short answer.** In our review we found no Idaho statute or appellate decision deciding whether a non-compete's term tolls or extends during a breach or during litigation. A tolling clause that pushes the restriction past eighteen months may fall outside the statutory presumption that a term of eighteen months or less is reasonable, and a court that finds a covenant unreasonable must limit or modify it [^idaho-44-2704-tolling-tension][^idaho-44-2703-tolling-modification].
 
 The statutory tension is real. Section 44-2704 presumes terms of eighteen months or less reasonable and requires additional consideration for a direct-competition restriction that exceeds eighteen months [^idaho-44-2704-tolling-tension]. Section 44-2703 tells courts to modify unreasonable covenants and enforce them as modified [^idaho-44-2703-tolling-modification].
 
@@ -158,7 +158,7 @@ That leaves an unresolved question: if a tolling or extension-on-breach clause p
 
 ## Will Idaho enforce an out-of-state choice-of-law or forum-selection clause? {#choice-of-law-forum}
 
-**Short answer.** Often no for clauses that keep an Idaho party from enforcing contract rights in Idaho tribunals or require out-of-state arbitration. Idaho Code § 29-110 voids those restrictions as Idaho public policy, and *Off-Spec Solutions* applied that policy to require Idaho arbitration [^idaho-29-110-public-policy].
+**Short answer.** Idaho courts will not enforce an out-of-state forum-selection clause that restricts a party from enforcing its contract rights in Idaho tribunals, because Idaho Code § 29-110 voids such a restriction as against Idaho public policy [^idaho-29-110-public-policy]. In *Off-Spec Solutions v. Transportation Investors*, the Idaho Supreme Court held that § 29-110(1) is a strong public policy sufficient to invalidate forum-selection clauses [^off-spec-strong-policy]. Whether an Idaho court honors a separate out-of-state choice-of-law clause is a distinct conflicts question that § 29-110 does not itself answer.
 
 Section 29-110 is not a non-compete statute, but it matters in Idaho restrictive-covenant disputes because employers sometimes pair a non-compete with another state's law or forum. The statute protects access to Idaho tribunals and says out-of-state arbitration is not protected by the arbitration carveout [^idaho-29-110-public-policy].
 
@@ -171,7 +171,7 @@ Section 29-110 is not a non-compete statute, but it matters in Idaho restrictive
 
 ## Are sale-of-business non-competes treated differently in Idaho? {#sale-of-business}
 
-**Short answer.** Yes. Idaho gives more deference to non-competes ancillary to the sale of a business than to ordinary employment non-competes, because the buyer is usually purchasing goodwill and is entitled to reasonable protection from seller competition [^bybee-sale-goodwill].
+**Short answer.** Idaho courts assess the reasonableness of a non-compete ancillary to the sale of a business in light of the buyer's purchase of the business's goodwill, which entitles the buyer to reasonable protection from the seller's competition [^bybee-sale-goodwill].
 
 *Bybee v. Isaac* involved a crop-dusting business sale. The Idaho Supreme Court emphasized that employment non-competes are disfavored, but sale-of-business covenants are not construed as strictly because they protect purchased goodwill [^bybee-sale-goodwill].
 
@@ -184,7 +184,7 @@ Sale covenants still must be reasonable in time, scope, and territory. In *Bybee
 
 ## What trade-secret protection remains if an Idaho non-compete fails? {#trade-secrets}
 
-**Short answer.** Trade-secret protection remains available independently. Idaho Code § 44-2704 says chapter 44-27 does not limit protection for trade secrets or proprietary and confidential information, and the Idaho Trade Secrets Act authorizes injunctions for actual or threatened misappropriation [^idaho-44-2704-trade-secret-preserved][^idaho-48-802-injunction].
+**Short answer.** An Idaho employer whose non-compete fails can still protect its trade secrets and confidential information, because Idaho Code § 44-2704 preserves that protection and the Idaho Trade Secrets Act allows actual or threatened misappropriation to be enjoined [^idaho-44-2704-trade-secret-preserved][^idaho-48-802-injunction].
 
 The Idaho Trade Secrets Act defines trade secrets by economic value from secrecy and reasonable efforts to maintain secrecy. That can protect confidential formulas, compilations, programs, methods, techniques, processes, and similar information even when a non-compete is unavailable or narrowed [^idaho-48-801-trade-secret-definition].
 
@@ -239,15 +239,15 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^idaho-44-2703-mandatory-modification]: **Idaho Code § 44-2703** — "To the extent any such agreement or covenant is found to be unreasonable in any respect, a court shall limit or modify the agreement or covenant as it shall determine necessary to reflect the intent of the parties and render it reasonable in light of the circumstances in which it was made and specifically enforce the agreement or covenant as limited or modified." *Idaho Code § 44-2703.* <https://legislature.idaho.gov/statutesrules/idstat/Title44/T44CH27/SECT44-2703/>
 
-[^intermountain-simple-blue-pencil]: **Intermountain Eye & Laser Centers, P.L.L.C. v. Miller** — "While the court may blue-pencil, if it can be done simply and accurately, the court will not do a substantial rewrite of the contract." *Intermountain Eye & Laser Ctrs., P.L.L.C. v. Miller, 142 Idaho 218, 127 P.3d 121 (2005).* <https://www.courtlistener.com/opinion/2510251/intermountain-eye-laser-centers-pllc-v-miller/#:~:text=While%20the%20court%20may%20blue%2Dpencil%2C,substantial%20rewrite%20of%20the%20contract.>
-
 [^blaskiewicz-blue-pencil-statute]: **Blaskiewicz v. Spine Institute of Idaho, P.A.** — "However, even if the provision is too broad, the district court had within its power the ability to limit or modify the non-compete provision through blue-penciling." *Blaskiewicz v. Spine Inst. of Idaho, P.A., 171 Idaho 70, 518 P.3d 386 (2022).* <https://www.courtlistener.com/opinion/8436739/blaskiewicz-v-spine-institute-of-idaho/#:~:text=However%2C%20even%20if%20the%20provision,the%20non%2Dcompete%20provision%20through%20blue%2Dpenciling.>
+
+[^intermountain-simple-blue-pencil]: **Intermountain Eye & Laser Centers, P.L.L.C. v. Miller** — "While the court may blue-pencil, if it can be done simply and accurately, the court will not do a substantial rewrite of the contract." *Intermountain Eye & Laser Ctrs., P.L.L.C. v. Miller, 142 Idaho 218, 127 P.3d 121 (2005).* <https://www.courtlistener.com/opinion/2510251/intermountain-eye-laser-centers-pllc-v-miller/#:~:text=While%20the%20court%20may%20blue%2Dpencil%2C,substantial%20rewrite%20of%20the%20contract.>
 
 [^horn-overt-act]: **Insure Idaho, LLC v. Horn** — "We hold that the plain meaning of solicitation requires some overt act initiated by one party, seeking something in return from a second party." *Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).* <https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/#:~:text=We%20hold%20that%20the%20plain,return%20from%20a%20second%20party.>
 
-[^horn-affirmative-action]: **Insure Idaho, LLC v. Horn** — "Although ‘the difference between accepting and receiving business, on the one hand, and indirectly soliciting on the other, may be more metaphysical than real,’ Alexander & Alexander, Inc. v. Danahy, 488 N.E.2d 22, 30 (Mass. App. Ct. 1986), one thing is certain: the restricted party needs to take affirmative action that entreats, implores, pleads, or petitions for the business at issue." *Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).* <https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/#:~:text=Although%20%E2%80%9Cthe%20difference%20between%20accepting,for%20the%20business%20at%20issue.>
-
 [^horn-no-mere-acceptance]: **Insure Idaho, LLC v. Horn** — "To be clear, the mere acceptance of business, without more, does not fall within the plain meaning of solicitation; nor can a court infer solicitation from the simple communication between parties alone." *Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).* <https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/#:~:text=To%20be%20clear%2C%20the%20mere,simple%20communication%20between%20parties%20alone.>
+
+[^horn-affirmative-action]: **Insure Idaho, LLC v. Horn** — "Although ‘the difference between accepting and receiving business, on the one hand, and indirectly soliciting on the other, may be more metaphysical than real,’ Alexander & Alexander, Inc. v. Danahy, 488 N.E.2d 22, 30 (Mass. App. Ct. 1986), one thing is certain: the restricted party needs to take affirmative action that entreats, implores, pleads, or petitions for the business at issue." *Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).* <https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/#:~:text=Although%20%E2%80%9Cthe%20difference%20between%20accepting,for%20the%20business%20at%20issue.>
 
 [^intermountain-patient-choice]: **Intermountain Eye & Laser Centers, P.L.L.C. v. Miller** — "The extent of Intermountain Eye’s interest in those patients Dr. Miller inherited when he joined the firm and those patients it provided him thereafter is limited by those patients’ interests in continuity of care and access to the health care provider of their choice." *Intermountain Eye & Laser Ctrs., P.L.L.C. v. Miller, 142 Idaho 218, 127 P.3d 121 (2005).* <https://www.courtlistener.com/opinion/2510251/intermountain-eye-laser-centers-pllc-v-miller/#:~:text=The%20extent%20of%20Intermountain%20Eye%E2%80%99s%20interest%20in%20those,care%20provider%20of%20their%20choice.>
 

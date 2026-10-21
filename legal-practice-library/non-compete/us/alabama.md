@@ -21,7 +21,7 @@ A question-by-question summary of Alabama non-compete law under the 2016 Restric
 
 ## Are employee non-compete agreements enforceable in Alabama? {#employee-non-compete-enforceability}
 
-**Short answer.** Yes, but only inside a narrow statutory safe harbor. Alabama starts from the rule that every contract restraining a lawful profession, trade, or business is void, and then allows an employee non-compete as one of six listed exceptions; a covenant of two years or less is presumed reasonable [^ala-8-1-190-void][^ala-8-1-190-employee].
+**Short answer.** Alabama enforces an employee non-compete only when it fits an exception listed in Ala. Code § 8-1-190, because that section voids every other contract restraining a lawful profession, trade, or business [^ala-8-1-190-void]. Under the employee exception, a restraint of two years or less is presumed reasonable [^ala-8-1-190-employee].
 
 Alabama is not a reasonableness state in the usual sense. Restrictive covenants are now governed by the Alabama Restrictive Covenant Act, Ala. Code § 8-1-190 et seq. (enacted as Act 2015-465, effective in 2016), which replaced the older, common-law-driven § 8-1-1. The Act governs covenants entered on or after its effective date; agreements predating it remain governed by the former § 8-1-1, which is why several leading Alabama cases construe that predecessor statute. The Act begins with a presumption of voidness.
 
@@ -36,7 +36,7 @@ An employee non-compete escapes that rule only if it fits the employee exception
 
 ## Which restrictive covenants does the Alabama Restrictive Covenant Act allow? {#allowed-covenants}
 
-**Short answer.** Six categories, each with its own limits. The Act lists employee no-hire covenants for uniquely essential employees, exclusive-dealing agreements, sale-of-business covenants, employee non-competes, current-customer non-solicitation covenants, and dissolution covenants, with presumptively reasonable durations of one year for sales, two years for employee non-competes, and eighteen months for current-customer non-solicits [^ala-8-1-190-sale][^ala-8-1-190-nonsolicit].
+**Short answer.** The Alabama Restrictive Covenant Act's list of allowed restrictive covenants in Ala. Code § 8-1-190(b) includes a no-hire covenant for uniquely essential employees and a seller's covenant not to compete with the buyer of a business's goodwill [^ala-8-1-190-no-hire][^ala-8-1-190-sale-goodwill]. Section 8-1-190(b) also allows exclusive-dealing agreements, employee non-competes, current-customer non-solicitation covenants, and covenants among partners, owners, or members on a dissolution [^ala-exclusive-dealing-category][^ala-employee-noncompete-category][^ala-current-customer-nonsolicit-category][^ala-dissolution-covenant-category]. A sale-of-business restraint of one year or less is presumed reasonable, as is a non-solicitation restraint of eighteen months or for as long as post-separation consideration is paid, whichever is greater [^ala-8-1-190-sale][^ala-8-1-190-nonsolicit].
 
 The exceptions are listed in § 8-1-190(b). They are the entire universe of allowed restraints; anything that does not fit one of the six is void. The employee-facing categories carry the most-cited duration presumptions.
 
@@ -53,7 +53,7 @@ The employee no-hire category is unusually narrow. A covenant restricting the hi
 
 ## What is a protectable interest under Alabama law? {#protectable-interest}
 
-**Short answer.** A statutorily listed interest, not ordinary competition. Section 8-1-191 lists trade secrets, confidential information, specific customer relationships and goodwill, and specialized training as protectable interests, and it states that job skills alone are not [^ala-8-1-191-customers][^ala-8-1-191-jobskills].
+**Short answer.** Under Ala. Code § 8-1-191, a protectable interest is one of the interests the statute lists, such as commercial relationships with specific prospective or existing customers, and job skills by themselves are not a protectable interest [^ala-8-1-191-customers][^ala-8-1-191-jobskills]. The statute's list also includes specialized and unique training involving substantial business expenditure directed to the particular worker, provided the training is specifically set forth in writing as the consideration for the restraint [^ala-8-1-191-training].
 
 Fitting a statutory exception is not enough; the party enforcing the covenant must also show it protects a protectable interest defined in § 8-1-191. The list includes trade secrets, which are defined by cross-reference to the Alabama Trade Secrets Act at Ala. Code § 8-27-2, along with confidential information, goodwill, and commercial relationships with specific customers, including prospective ones [^ala-8-1-191-customers].
 
@@ -70,7 +70,7 @@ Specialized training counts, but only if the employer takes a specific drafting 
 
 ## Must an Alabama non-compete be signed by all parties, including the employer? {#signature-requirement}
 
-**Short answer.** Yes. Section 8-1-192 requires the covenant to be in writing, signed by all parties, and supported by adequate consideration, and the Alabama Supreme Court held in Amanda Howard Real Estate v. Lee that an employer's failure to sign the document containing the covenant makes it void [^ala-8-1-192][^howard-affirm].
+**Short answer.** An Alabama non-compete must be signed by all parties, including the employer, because Ala. Code § 8-1-192 makes a covenant valid only if it is in writing, signed by all parties, and supported by adequate consideration [^ala-8-1-192]. In *Amanda Howard Real Estate v. Lee*, the Alabama Supreme Court affirmed a judgment against an employer that could not establish it had satisfied that signatures requirement [^howard-affirm].
 
 Section 8-1-192 sets three formation requirements for any covenant under the Act.
 
@@ -89,7 +89,7 @@ The Court rejected the employer's arguments that mutual assent shown by conduct,
 
 ## When does an Alabama non-compete have to be signed relative to employment? {#timing-of-signing}
 
-**Short answer.** The safer answer is that it must. Under the predecessor statute, the Alabama Supreme Court held in Pitney Bowes v. Berney Office Solutions that a covenant signed before the employer-employee relationship began was void; the current Act's employee exceptions are written the same relationship-first way, though no decision under the 2016 Act has yet addressed the point [^pitney-timing].
+**Short answer.** Under Alabama's predecessor statute, a non-compete signed before employment began was void and stayed void once employment started, as the Alabama Supreme Court held in *Pitney Bowes v. Berney Office Solutions* [^pitney-timing]. In our review we found no decision under the 2016 Act addressing the point.
 
 This is a timing trap that predates the 2016 Act but remains a live drafting risk. In *Pitney Bowes, Inc. v. Berney Office Solutions*, an employee signed a non-compete before the acquiring company became his employer, and the company tried to enforce it after the acquisition closed about a month later. The Court refused.
 
@@ -104,7 +104,7 @@ This is a timing trap that predates the 2016 Act but remains a live drafting ris
 
 ## Will an Alabama court narrow an overbroad non-compete instead of voiding it? {#court-narrowing}
 
-**Short answer.** Sometimes. Section 8-1-193 lets a court reform a covenant that is overly broad in duration, but it also tells the court to void the restraint entirely if it does not fit one of the six statutory exceptions in the first place [^ala-8-1-193-reform][^ala-8-1-193-void].
+**Short answer.** An Alabama court may reform a covenant that is overly broad or unreasonable in its duration, but it may void a restraint entirely if the restraint does not fit one of the exceptions in Ala. Code § 8-1-190(b) [^ala-8-1-193-reform][^ala-8-1-193-void].
 
 Alabama gives courts a limited blue-pencil power. If the problem is an unreasonable duration, a court can trim the covenant and enforce the rest.
 
@@ -119,7 +119,7 @@ But reformation has a hard limit. A court can fix an overbroad term inside a val
 
 ## Does Alabama exempt professionals from non-compete agreements? {#professional-exemption}
 
-**Short answer.** Yes, within limits. Section 8-1-196 preserves Alabama's common-law professional exemption, under which a non-compete cannot bar a member of a recognized profession from practicing that profession; Alabama courts have applied it to veterinarians and physical therapists. The exemption protects the practice of the profession, not unrelated business conduct [^ala-8-1-196][^benchmark-scope].
+**Short answer.** Alabama law exempts a member of a recognized profession from a non-compete that bars the practice of that profession, an exemption that Ala. Code § 8-1-196 preserves under the 2016 Act [^ala-8-1-196][^benchmark-pt]. Courts have applied the exemption to physical therapists, and it protects only the practice of the profession, not unrelated business conduct [^benchmark-scope].
 
 The 2016 Act did not disturb the long-standing rule that professionals are off-limits for non-competes. Section 8-1-196 expressly keeps that exemption in place.
 
@@ -144,7 +144,7 @@ So a professional cannot be barred from practicing, but conduct outside that pra
 
 ## Does a tolling or extension-during-breach clause extend an Alabama non-compete? {#extended-for-breach}
 
-**Short answer.** Alabama law does not answer this directly. No Alabama appellate decision under the 2016 Act addresses a clause that pauses or extends the restricted period during breach or litigation, and a tolling clause that pushes the effective restraint past the presumptively reasonable window is exposed to reformation as an unreasonable duration [^q8-ala-8-1-190-2yr][^q8-ala-8-1-193-reform].
+**Short answer.** In our review we found no Alabama decision under the 2016 Act deciding whether a clause that pauses or extends a non-compete's restricted period during breach or litigation is enforceable. A tolling clause that pushes the effective restraint past the two-year presumptively reasonable window is exposed to reformation as an unreasonable duration [^q8-ala-8-1-190-2yr][^q8-ala-8-1-193-reform].
 
 Many non-compete forms add a tolling or extension clause so the employer gets the full restricted period even if the former employee competes during it. Alabama has no statute or controlling case on whether such a clause is enforceable, so this is an open question that calls for caution rather than confidence.
 
@@ -161,7 +161,7 @@ A tolling clause that adds the period of breach plus the time spent in litigatio
 
 ## Who has the burden of proof, and what remedies are available in Alabama? {#burden-remedies}
 
-**Short answer.** The party enforcing the covenant bears the burden on every element, while the party resisting must prove undue hardship if it raises that defense; remedies include injunctive relief, damages, and contractual attorneys' fees [^ala-8-1-194][^ala-8-1-195-fees].
+**Short answer.** The party seeking to enforce an Alabama non-compete bears the burden of proof on every element under Ala. Code § 8-1-194, and § 8-1-195 makes contract remedies available, including attorneys' fees or costs where the contract provides for them [^ala-8-1-194][^ala-8-1-195-fees]. The party resisting enforcement bears the burden of proving undue hardship if it raises that defense [^ala-undue-hardship-burden].
 
 The Act allocates the burden of proof against the covenant. The employer must establish each element of enforceability.
 
@@ -171,7 +171,7 @@ The employee or other restrained party carries the burden only on undue hardship
 
 ## Can an out-of-state choice-of-law clause bypass Alabama non-compete law? {#choice-of-law}
 
-**Short answer.** Usually not. Section 8-1-197 declares the Act to be fundamental public policy and directs Alabama courts to apply it instead of a foreign law whose application would violate that policy [^ala-8-1-197-govern].
+**Short answer.** An out-of-state choice-of-law clause cannot bypass Alabama's Restrictive Covenant Act when the chosen law would violate a fundamental public policy the Act expresses, because Ala. Code § 8-1-197 directs that the Act then governs instead [^ala-8-1-197-policy][^ala-8-1-197-govern].
 
 Multi-state employers often designate a more permissive state's law to escape Alabama's professional exemption or its other limits. The Act anticipates that move. It first declares its own status.
 
@@ -210,13 +210,21 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^ala-8-1-190-employee]: **Ala. Code § 8-1-190** — "Restraints of two years or less are presumed to be reasonable." *Ala. Code § 8-1-190(b)(4).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 
-[^ala-8-1-190-sale]: **Ala. Code § 8-1-190** — "Restraints of one year or less are presumed to be reasonable." *Ala. Code § 8-1-190(b)(3).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
-
-[^ala-8-1-190-nonsolicit]: **Ala. Code § 8-1-190** — "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable." *Ala. Code § 8-1-190(b)(5).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
+[^ala-8-1-190-no-hire]: **Ala. Code § 8-1-190** — "A contract between two or more persons or businesses or a person and a business limiting their ability to hire or employ the agent, servant, or employees of a party to the contract where the agent, servant, or employee holds a position uniquely essential to the management, organization, or service of the business." *Ala. Code § 8-1-190(b)(1).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 
 [^ala-8-1-190-sale-goodwill]: **Ala. Code § 8-1-190** — "One who sells the good will of a business may agree with the buyer to refrain from carrying on or engaging in a similar business and from soliciting customers of such business within a specified geographic area so long as the buyer, or any entity deriving title to the good will from that business, carries on a like business therein, subject to reasonable time and place restraints." *Ala. Code § 8-1-190(b)(3).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 
-[^ala-8-1-190-no-hire]: **Ala. Code § 8-1-190** — "A contract between two or more persons or businesses or a person and a business limiting their ability to hire or employ the agent, servant, or employees of a party to the contract where the agent, servant, or employee holds a position uniquely essential to the management, organization, or service of the business." *Ala. Code § 8-1-190(b)(1).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
+[^ala-exclusive-dealing-category]: **Ala. Code § 8-1-190** — "An agreement between two or more persons or businesses or a person and a business to limit commercial dealings to each other." *Ala. Code § 8-1-190(b)(2).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
+
+[^ala-employee-noncompete-category]: **Ala. Code § 8-1-190** — "An agent, servant, or employee of a commercial entity may agree with such entity to refrain from carrying on or engaging in a similar business within a specified geographic area so long as the commercial entity carries on a like business therein, subject to reasonable restraints of time and place." *Ala. Code § 8-1-190(b)(4).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
+
+[^ala-current-customer-nonsolicit-category]: **Ala. Code § 8-1-190** — "An agent, servant, or employee of a commercial entity may agree with such entity to refrain from soliciting current customers, so long as the commercial entity carries on a like business, subject to reasonable time restraints." *Ala. Code § 8-1-190(b)(5).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
+
+[^ala-dissolution-covenant-category]: **Ala. Code § 8-1-190** — "Upon or in anticipation of a dissolution of a commercial entity, partners, owners, or members, or any combination thereof, may agree that none of them will carry on a similar commercial activity in the geographic area where the commercial activity has been transacted." *Ala. Code § 8-1-190(b)(6).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
+
+[^ala-8-1-190-sale]: **Ala. Code § 8-1-190** — "Restraints of one year or less are presumed to be reasonable." *Ala. Code § 8-1-190(b)(3).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
+
+[^ala-8-1-190-nonsolicit]: **Ala. Code § 8-1-190** — "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable." *Ala. Code § 8-1-190(b)(5).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 
 [^ala-8-1-191-customers]: **Ala. Code § 8-1-191** — "Commercial relationships or contacts with specific prospective or existing customers, patients, vendors, or clients." *Ala. Code § 8-1-191(a)(3).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-191>
 
@@ -240,13 +248,13 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^ala-8-1-196]: **Ala. Code § 8-1-196** — "Nothing in this article shall be construed to eliminate any professional exemption recognized by Alabama law." *Ala. Code § 8-1-196.* <https://alison.legislature.state.al.us/code-of-alabama/8-1-196>
 
+[^benchmark-pt]: **Benchmark Medical Holdings, Inc. v. Barnes** — "Because a physical therapist as a professional cannot fall within either of these statutory exceptions, the general rule that non-compete agreements are invalid applies; therefore, physical therapists are not subject to non-competition agreements." *Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004).* <https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/#:~:text=Because%20a%20physical%20therapist%20as,not%20subject%20to%20non%2Dcompetition%20agreements.>
+
 [^benchmark-scope]: **Benchmark Medical Holdings, Inc. v. Barnes** — "A doctor is, instead, protected only in his practice of medicine, for the purpose of the protection is the interest of the public in being able to receive the doctor's professional services." *Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004).* <https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/#:~:text=A%20doctor%20is%2C%20instead%2C%20protected,receive%20the%20doctor's%20professional%20services.>
 
 [^friddle-factors]: **Friddle v. Raymond** — "this Court stated several relevant factors to be considered in resolving the issue as to what constitutes a profession: professional training, skill, and experience required to perform certain services; delicate nature of the services offered; and the ability and need to make instantaneous decisions." *Friddle v. Raymond, 575 So. 2d 1038 (Ala. 1991).* <https://www.courtlistener.com/opinion/1839261/friddle-v-raymond/#:~:text=this%20Court%20stated%20several%20relevant,need%20to%20make%20instantaneous%20decisions.>
 
 [^friddle-cannot-fall]: **Friddle v. Raymond** — "this Court has stated on numerous occasions that a ‘professional’ cannot fall within these statutory exceptions." *Friddle v. Raymond, 575 So. 2d 1038 (Ala. 1991).* <https://www.courtlistener.com/opinion/1839261/friddle-v-raymond/#:~:text=this%20Court%20has%20stated%20on,fall%20within%20these%20statutory%20exceptions.>
-
-[^benchmark-pt]: **Benchmark Medical Holdings, Inc. v. Barnes** — "Because a physical therapist as a professional cannot fall within either of these statutory exceptions, the general rule that non-compete agreements are invalid applies; therefore, physical therapists are not subject to non-competition agreements." *Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004).* <https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/#:~:text=Because%20a%20physical%20therapist%20as,not%20subject%20to%20non%2Dcompetition%20agreements.>
 
 [^q8-ala-8-1-190-2yr]: **Ala. Code § 8-1-190** — "Restraints of two years or less are presumed to be reasonable." *Ala. Code § 8-1-190(b)(4).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 
@@ -256,11 +264,13 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 [^ala-8-1-195-fees]: **Ala. Code § 8-1-195** — "Any remedies available in contract law, including attorneys’ fees or costs, if provided for in the contract or otherwise provided for by law." *Ala. Code § 8-1-195(a)(3).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-195>
 
+[^ala-undue-hardship-burden]: **Ala. Code § 8-1-194** — "The party resisting enforcement of the covenant has the burden of proving the existence of undue hardship, if raised as a defense." *Ala. Code § 8-1-194.* <https://alison.legislature.state.al.us/code-of-alabama/8-1-194>
+
 [^ala-8-1-195-defenses]: **Ala. Code § 8-1-195** — "Nothing in this article shall limit the availability of any defense otherwise available in law or equity." *Ala. Code § 8-1-195(b).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-195>
 
-[^ala-8-1-197-govern]: **Ala. Code § 8-1-197** — "Therefore, this article shall govern and shall be applied instead of any foreign laws that might otherwise be applicable in those instances when the application of those foreign laws would violate a fundamental public policy expressed in this article." *Ala. Code § 8-1-197.* <https://alison.legislature.state.al.us/code-of-alabama/8-1-197>
-
 [^ala-8-1-197-policy]: **Ala. Code § 8-1-197** — "It is hereby declared that this article expresses fundamental public policies of the State of Alabama." *Ala. Code § 8-1-197.* <https://alison.legislature.state.al.us/code-of-alabama/8-1-197>
+
+[^ala-8-1-197-govern]: **Ala. Code § 8-1-197** — "Therefore, this article shall govern and shall be applied instead of any foreign laws that might otherwise be applicable in those instances when the application of those foreign laws would violate a fundamental public policy expressed in this article." *Ala. Code § 8-1-197.* <https://alison.legislature.state.al.us/code-of-alabama/8-1-197>
 
 [^dtsa-notice-duty]: **Defend Trade Secrets Act — employer notice requirement, 18 U.S.C. § 1833(b)(3)(A)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
 
