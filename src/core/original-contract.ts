@@ -25,7 +25,7 @@ const MAX_STRING = 10_000;
 const MAX_ARRAY = 1_000;
 const SAFE_SOURCE_FILES = new Set([
   'metadata.yaml', 'template.mdoc', 'template.fill.docx', 'template.docx',
-  'template.md', 'template-annotated.md', 'README.md',
+  'template.md', 'template-annotated.md', 'README.md', 'CHANGES.md',
 ]);
 
 type CanonicalField = FieldDefinition & { ai_only?: boolean };

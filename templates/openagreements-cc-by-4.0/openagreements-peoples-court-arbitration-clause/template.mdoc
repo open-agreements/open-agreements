@@ -1,0 +1,90 @@
+---
+template_id: openagreements-peoples-court-arbitration-clause
+name: People’s Court Model Arbitration Clause
+category: dispute-resolution
+description: >-
+  A commercial arbitration clause adapted from People’s Court’s published sample, naming People’s Court as
+  administrator and expressly electing AI-only arbitration by default. Offers AI-assisted human and
+  selection-at-filing alternatives, retains the Rules’ human appeal, and includes notes on adapting the clause
+  to other providers. Experimental starting point for negotiated B2B agreements and transaction-specific legal
+  review.
+source_url: https://peoplescourt.ai/clause
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Adapted from the People’s Court sample clause. This template is licensed under CC BY 4.0.
+fields:
+  - name: procedure_election
+    type: enum
+    description: >-
+      Select the AI-only tier, the AI-assisted human tier, or selection at filing. The default draft expressly
+      elects AI-only. Review the AI disclosure and retained human appeal; every party must separately accept
+      the same exact case-opening procedure and fee terms. Rendering this draft does not create consent. An
+      unresolved selection must be completed before signing.
+    options:
+      - the AI-only tier
+      - the AI-assisted human tier
+      - >-
+        the tier selected when a case is filed, with AI-only applying unless all parties then choose
+        AI-assisted human
+    default: the AI-only tier
+    default_value_rationale: >-
+      The People’s Court co-founder requested AI-only as the visible default for this model-clause draft on
+      October 15, 2026, consistent with Rule 2.1. The parties must review and agree to the clause and the
+      exact case-opening terms; this template default is not a consent record or an appeal waiver.
+    section: Procedure
+priority_fields:
+  - procedure_election
+artifact_kind: other
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - party_1
+  - party_2
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental
+layout_id: traditional-consent-v1
+style_id: openagreements-default-v1
+document:
+  title: People’s Court Model Arbitration Clause
+  label: People’s Court Model Arbitration Clause
+  version: 0.1.0
+  license: CC BY 4.0
+  presentation: traditional
+  defined_term_highlight_mode: none
+---
+
+# People’s Court Model Arbitration Clause
+
+## Binding arbitration administered by People’s Court
+
+Any dispute, controversy, or claim arising out of or relating to this agreement, or the breach thereof, shall be resolved by binding arbitration administered by People’s Court (https://peoplescourt.ai), a service of Epistemic Labs Inc., under its Rules of Procedure & Evidence in effect when the case is filed. The juridical seat is Wilmington, Delaware, regardless of any party’s residence or the physical or virtual location of the proceedings. The arbitration agreement and arbitration are governed by the Federal Arbitration Act, 9 U.S.C. §§ 1 et seq.
+
+## Tribunal authority
+
+The parties delegate to the People’s Court Tribunal authority to decide the formation, validity, enforceability, scope, and arbitrability of this arbitration agreement. This arbitration agreement is separable from the remainder of this agreement.
+
+## Express agreement to the selected procedure
+
+The parties expressly agree to {% field name="procedure_election" /%}.
+
+In the AI-only tier, an AI Tribunal decides and serves the first-instance Award without human merits review before service, except that a human Arbitrator may decide a question the AI Tribunal cannot. In the AI-assisted human tier, an AI panel assists with a draft; the assigned human Arbitrator decides, may revise or reject the draft, and issues the Award in the Arbitrator’s own name.
+
+Any human appeal is limited, proceeds on the existing Record, and follows the deferential standards in the Rules. Every party must confirm the tier by accepting the same exact case-opening procedure and fee terms. This clause contains no waiver of the internal human appeal.
+
+## Proprietary adjudication technology
+
+The parties acknowledge that People’s Court uses proprietary AI adjudication technology that is not subject to disclosure except as required by applicable law. If disclosure is required, the parties consent to appropriate protective or confidential treatment.
+
+## Award and judicial proceedings
+
+Subject to any timely correction, additional-Award request, permitted internal appeal, and nonwaivable judicial rights, the operative Award is final and binding, and judgment may be entered on it in any court having jurisdiction. Judicial proceedings remain subject to the valid venue agreement incorporated through Rule 12.3.
+
+## Commencement and electronic notice
+
+A party may initiate an arbitration at https://peoplescourt.ai/intake. The parties consent to electronic notice in accordance with the Rules, including by email and through the People’s Court Case Page where applicable. The Rules are available at https://peoplescourt.ai/rules. Filing support is available at contact@peoplescourt.ai.
