@@ -1,7 +1,9 @@
 # Us Update Log
 
 ## 2026-10-19
+* **Update**: content(legal-due-diligence): end the Semenetz general-rule quote before the reporter citation (unblocks #3538) (4a90e7a)
 * **Update**: content(legal-due-diligence): move the successor-liability scope note after the rule and exceptions (LLM gate) (93f76f5)
+* **Update**: content(legal-due-diligence): quote Semenetz's Schumacher passage, which survives the new CourtListener text (LLM gate) (bde34d5)
 
 ## 2026-10-09
 * **Update**: content(legal-due-diligence): cite Stewart v. Telex for California's bankruptcy-sale limit on the product line exception (7ab4c95)
