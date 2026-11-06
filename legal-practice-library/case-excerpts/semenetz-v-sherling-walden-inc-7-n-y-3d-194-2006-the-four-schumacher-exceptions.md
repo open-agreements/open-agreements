@@ -30,13 +30,22 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### semenetz-v-sherling-walden-inc-7-n-y-3d-194-2006-the-four-schumacher-exceptions-while-in-general-a-corporation-which-7d73b9ef {#semenetz-v-sherling-walden-inc-7-n-y-3d-194-2006-the-four-schumacher-exceptions-while-in-general-a-corporation-which-7d73b9ef}
+
+> “while, in general, a corporation which acquires the assets of another is not liable for the torts of the predecessor corporation, there [are] exceptions to the rule.” These exceptions arise where a successor corporation “expressly or impliedly assume[s] [its] predecessor’s tort liability”; or “there [is] a consolidation or merger of seller and purchaser”; or “the purchasing corporation [is] a mere continuation of the selling corporation”; or “the transaction is entered into fraudulently to escape such obligations”
+
+- supports: `liabilities-follow-an-asset-buyer`
+- source_cards: `semenetz-ny-four-exceptions-torts`
+- cited_by: [Entity Existence, Authority, Ownership, and Successor Liability in Acquisition Due Diligence](../legal-due-diligence/us/existence-authority-ownership-and-successor-liability.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2192271/semenetz-v-sherling-walden-inc/#:~:text=%E2%80%9Cwhile%2C%20in%20general%2C%20a%20corporation,fraudulently%20to%20escape%20such%20obligations%E2%80%9D>
+
 ### semenetz-v-sherling-walden-inc-7-n-y-3d-194-2006-the-four-schumacher-exceptions-a-corporation-that-purchases-another-3591fa3d {#semenetz-v-sherling-walden-inc-7-n-y-3d-194-2006-the-four-schumacher-exceptions-a-corporation-that-purchases-another-3591fa3d}
 
 > A corporation that purchases another corporation’s assets is not liable for the seller’s torts, subject to four exceptions outlined in Schumacher v Richards Shear Co. (59 NY2d 239 [1983]).
 
-- supports: `liabilities-follow-an-asset-buyer`, `successor-liability`
-- source_cards: `p2-semenetz-four-exceptions`, `semenetz-ny-four-exceptions-torts`
-- cited_by: [Small-Business Asset Purchase Agreements: Structure and Parties](../asset-purchase-structure-and-parties/us.md), [Entity Existence, Authority, Ownership, and Successor Liability in Acquisition Due Diligence](../legal-due-diligence/us/existence-authority-ownership-and-successor-liability.md)
+- supports: `successor-liability`
+- source_cards: `p2-semenetz-four-exceptions`
+- cited_by: [Small-Business Asset Purchase Agreements: Structure and Parties](../asset-purchase-structure-and-parties/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2192271/semenetz-v-sherling-walden-inc/#:~:text=A%20corporation%20that%20purchases%20another,Co.%20(59%20NY2d%20239%20%5B1983%5D).>
 
 ### semenetz-v-sherling-walden-inc-7-n-y-3d-194-2006-the-four-schumacher-exceptions-for-the-reasons-that-follow-we-7b5d17f2 {#semenetz-v-sherling-walden-inc-7-n-y-3d-194-2006-the-four-schumacher-exceptions-for-the-reasons-that-follow-we-7b5d17f2}
