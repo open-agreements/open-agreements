@@ -1,5 +1,10 @@
 # Ai Layoffs Update Log
 
+## 2026-10-19
+* **Update**: Tie Colorado SB26-189 cards to their quotes and keep the human-review limit (1db2885)
+* **Update**: Give each Colorado statement same-question support and trim unsupported SB24-205 history (3c97385)
+* **Update**: Describe Colorado AI Act as repealed and reenacted by SB26-189 on AI-at-work pages (6cb14b9)
+
 ## 2026-10-06
 * **Update**: content(retention-bonus): narrow the 409A payment-timing sentence to its quotes (#3116) (33f78bb)
 * **Update**: content(proving-redundancy): cite Klarna's F-1 and TechCrunch instead of Reuters (#3116) (8b25ede)

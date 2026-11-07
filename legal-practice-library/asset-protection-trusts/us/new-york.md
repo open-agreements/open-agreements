@@ -99,7 +99,7 @@ Two complications remain. The survivor's own contributions to the same trust sta
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-10-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *New York Asset Protection Trusts: The Self-Settled Trust Rule, Out-of-State Trusts and Spouses*, OpenAgreements (last updated October 5, 2026), https://openagreements.org/practice-guides/asset-protection-trusts/us/new-york.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-10-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *New York Asset Protection Trusts: The Self-Settled Trust Rule, Out-of-State Trusts and Spouses*, OpenAgreements (last updated October 5, 2026), https://openagreements.org/practice-guides/asset-protection-trusts/us/new-york.
 
 [^eptl-7-3-1-self-settled-void]: **N.Y. Estates, Powers and Trusts Law § 7-3.1** — "(a) A disposition in trust for the use of the creator is void as against the existing or subsequent creditors of the creator." *N.Y. Est. Powers & Trusts Law § 7-3.1(a).* <https://www.nysenate.gov/legislation/laws/EPT/7-3.1>
 

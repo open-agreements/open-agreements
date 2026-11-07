@@ -2,7 +2,7 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Idaho[^about]
 
@@ -209,7 +209,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from an Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Idaho*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/idaho.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from an Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Idaho*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/idaho.
 
 [^idaho-44-2701-key-employee-enforceable]: **Idaho Code § 44-2701** — "A key employee or key independent contractor may enter into a written agreement or covenant that protects the employer’s legitimate business interests and prohibits the key employee or key independent contractor from engaging in employment or a line of business that is in direct competition with the employer’s business after termination of employment, and the same shall be enforceable, if the agreement or covenant is reasonable as to its duration, geographical area, type of employment or line of business, and does not impose a greater restraint than is reasonably necessary to protect the employer’s legitimate business interests." *Idaho Code § 44-2701.* <https://legislature.idaho.gov/statutesrules/idstat/Title44/T44CH27/SECT44-2701/>
 

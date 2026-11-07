@@ -2,7 +2,7 @@
 jurisdiction: "Utah"
 slug: utah
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Utah[^about]
 
@@ -193,7 +193,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Utah*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/utah.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Utah*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/utah.
 
 [^upera-one-year]: **Utah Code § 34-51-201** — "an employer and an employee may not enter into a non-compete agreement for a period of more than one year from the day on which the employee is no longer employed by the employer." *Utah Code Ann. § 34-51-201(1)(a).* <https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html>
 

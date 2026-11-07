@@ -2,7 +2,7 @@
 jurisdiction: "Washington"
 slug: washington
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-09-30"
 human_reviewed_at: null
 next_review_due: "2027-03-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Washington[^about]
 
@@ -224,7 +224,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Washington*, OpenAgreements (last updated September 30, 2026), https://openagreements.org/practice-guides/non-compete/us/washington.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-09-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Washington*, OpenAgreements (last updated September 30, 2026), https://openagreements.org/practice-guides/non-compete/us/washington.
 
 [^rcw-020-void-conditions]: **RCW 49.62.020** — "Unless the employee's earnings from the party seeking enforcement, when annualized, exceed one hundred thousand dollars per year." *RCW 49.62.020(1)(b).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020>
 

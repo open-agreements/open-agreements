@@ -2,7 +2,7 @@
 jurisdiction: "Connecticut"
 slug: connecticut
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-10-02"
 human_reviewed_at: null
 next_review_due: "2027-03-31"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Connecticut (CT) — Agreement Enforceability[^about]
 
@@ -185,7 +185,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-10-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Connecticut (CT) — Agreement Enforceability*, OpenAgreements (last updated October 2, 2026), https://openagreements.org/practice-guides/non-compete/us/connecticut.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-10-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Connecticut (CT) — Agreement Enforceability*, OpenAgreements (last updated October 2, 2026), https://openagreements.org/practice-guides/non-compete/us/connecticut.
 
 [^scott-employee-noncompete-reasonableness]: **Scott v. General Iron & Welding Co.** — "In order to be valid and binding, a covenant which restricts the activities of an employee following the termination of his employment must be partial and restricted in its operation ‘in respect either to time or place, . . . and must be reasonable — that is, it should afford only a fair protection to the interest of the party in whose favor it is made and must not be so large in its operation as to interfere with the interests of the public." *Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).* <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.>
 

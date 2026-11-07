@@ -2,7 +2,7 @@
 jurisdiction: "Northern Mariana Islands"
 slug: cnmi
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Northern Mariana Islands[^about]
 
@@ -151,7 +151,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Northern Mariana Islands. This article synthesizes Northern Mariana Islands primary law and is not legal advice from a Northern Mariana Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the Northern Mariana Islands*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/cnmi.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Northern Mariana Islands. This article synthesizes Northern Mariana Islands primary law and is not legal advice from a Northern Mariana Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the Northern Mariana Islands*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/cnmi.
 
 [^cmc-3401]: **7 CMC § 3401** — "In all proceedings, the rules of the common law, as expressed in the restatements of the law approved by the American Law Institute and, to the extent not so expressed as generally understood and applied in the United States, shall be the rules of decision in the courts of the Commonwealth, in the absence of written law or local customary law to the contrary" *7 CMC § 3401.* <https://cnmilaw.org/pdf/cmc_section/T7/3401.pdf>
 

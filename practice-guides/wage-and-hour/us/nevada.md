@@ -107,7 +107,7 @@ Nevada statute separately makes it unlawful for an employer to take any part of 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Nevada*, OpenAgreements (last updated September 27, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/nevada.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-09-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Nevada*, OpenAgreements (last updated September 27, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/nevada.
 
 [^nv-const-15-16-1]: **Nev. Const. art. 15, § 16** — "Except as otherwise provided in this section, beginning July 1, 2024, each employer shall pay a wage to each employee of not less than twelve dollars ($12) per hour worked." *Nev. Const. art. 15, § 16(1)* <https://www.leg.state.nv.us/Const/NvConst.html>
 

@@ -1,5 +1,10 @@
 # Us Update Log
 
+## 2026-11-06
+* **Update**: content: 'last update' instead of 'last review' on unreviewed pages (33ba60d)
+* **Update**: content(privacy/FL): date the HB 3 appeal status instead of 'last update' (7492f6a)
+* **Update**: content(privacy/FL): leave the HB 3 status note as it is on main (9419716)
+
 ## 2026-10-15
 * **Update**: content(privacy): New Jersey's mandatory cure period ended July 1, 2026 (#3543) (2002a46)
 

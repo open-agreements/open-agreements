@@ -2,7 +2,7 @@
 jurisdiction: "New Jersey"
 slug: new-jersey
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-10-15"
 human_reviewed_at: null
 next_review_due: "2027-04-13"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-jersey · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-jersey · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # New Jersey Consumer Privacy Law (NJDPA)[^about]
 
@@ -70,7 +70,7 @@ This is the opt-in model: consent must be a clear affirmative act, and the statu
 
 What makes New Jersey distinctive is the enforcement channel: rather than a freestanding penalty scheme, the NJDPA folds violations into the long-standing Consumer Fraud Act, so the Attorney General brings them with the remedies and penalties that statute already supplies. The mandatory right to cure has ended. Until the first day of the 18th month after the act took effect, the Division of Consumer Affairs had to send notice and allow 30 days to fix a violation it deemed curable before bringing an enforcement action [^stat-166-17-cure]. The act took effect on the 365th day after its January 16, 2024 approval, which was January 15, 2025 [^stat-166-effective], so that duty ended on July 1, 2026, and the act no longer requires notice and a chance to cure before an enforcement action. Day-to-day rulemaking sits with the Director of the Division of Consumer Affairs, who is charged with promulgating regulations to carry out the act [^stat-166-18-rules]. The practical posture is to build the notice, consent, and contracting controls up front, because the act no longer guarantees a cure off-ramp.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-10-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Jersey. This article synthesizes New Jersey primary law and is not legal advice from a New Jersey-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *New Jersey Consumer Privacy Law (NJDPA)*, OpenAgreements (last updated October 15, 2026), https://openagreements.org/practice-guides/privacy/us/new-jersey.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-10-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Jersey. This article synthesizes New Jersey primary law and is not legal advice from a New Jersey-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *New Jersey Consumer Privacy Law (NJDPA)*, OpenAgreements (last updated October 15, 2026), https://openagreements.org/practice-guides/privacy/us/new-jersey.
 
 [^stat-166-5-apply]: **N.J.S.A. 56:8-166.5** — "the provisions of P.L.2023, c.266 (C.56:8-166.4 et seq.) shall only apply to controllers that conduct business in the State or produce products or services that are targeted to residents of the State, and that during a calendar year either: a. control or process the personal data of at least 100,000 consumers, excluding personal data processed solely for the purpose of completing a payment transaction; or b. control or process the personal data of at least 25,000 consumers and the controller derives revenue, or receives a discount on the price of any goods or services, from the sale of personal data." *N.J.S.A. 56:8-166.5.* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
 

@@ -1,5 +1,9 @@
 # Asset Purchase Update Log
 
+## 2026-11-06
+* **Update**: content: record Steven Obiajulu's review of the 12 AI-draft pages (5190c83)
+* **Update**: content(asset-purchase): link the template and checklists from the guides (#2319) (6a5a4fb)
+
 ## 2026-10-06
 * **Update**: content(asset-purchase): cite Potomac Law for the anti-assignment trigger (#3116) (f6a1e87)
 

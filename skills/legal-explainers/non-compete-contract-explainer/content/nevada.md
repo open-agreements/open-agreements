@@ -2,7 +2,7 @@
 jurisdiction: "Nevada"
 slug: nevada
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nevada · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nevada · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nevada[^about]
 
@@ -241,7 +241,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Nevada*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/nevada.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Nevada*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/nevada.
 
 [^q1-nrs-613-195-enforceability]: **NRS 613.195** — "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant." *NRS 613.195(1).* <https://www.leg.state.nv.us/nrs/NRS-613.html>
 

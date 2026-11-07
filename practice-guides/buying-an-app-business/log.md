@@ -1,5 +1,8 @@
 # Buying An App Business Update Log
 
+## 2026-11-06
+* **Update**: content: record Steven Obiajulu's review of the 12 AI-draft pages (5190c83)
+
 ## 2026-10-08
 * **Update**: content(app-guides): drop "migration milestone" wording that reads as milestone payments (fb309bb)
 
