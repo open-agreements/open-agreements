@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-07-01"
 human_reviewed_at: null
 next_review_due: "2026-12-28"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Dakota[^about]
 
@@ -196,7 +196,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in South Dakota*, OpenAgreements (last updated July 1, 2026), https://openagreements.org/practice-guides/non-compete/us/south-dakota.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-07-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in South Dakota*, OpenAgreements (last updated July 1, 2026), https://openagreements.org/practice-guides/non-compete/us/south-dakota.
 
 [^sdcl-53-9-8-void-baseline]: **S.D. Codified Laws § 53-9-8** — "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive." *S.D. Codified Laws § 53-9-8.* <https://sdlegislature.gov/Statutes/53-9-8>
 

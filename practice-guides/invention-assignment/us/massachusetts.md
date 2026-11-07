@@ -102,7 +102,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Massachusetts*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/invention-assignment/us/massachusetts.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-30. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Massachusetts*, OpenAgreements (last updated June 30, 2026), https://openagreements.org/practice-guides/invention-assignment/us/massachusetts.
 
 [^ma-24l-exclusion]: **Mass. G.L. c. 149, § 24L** — "(vi) nondisclosure or confidentiality agreements; (vii) invention assignment agreements; (viii) garden leave clauses" *Mass. G.L. c. 149, § 24L(a).* <https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section24L>
 

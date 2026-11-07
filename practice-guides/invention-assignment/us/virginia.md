@@ -158,7 +158,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Virginia*, OpenAgreements (last updated July 2, 2026), https://openagreements.org/practice-guides/invention-assignment/us/virginia.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-07-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Virginia*, OpenAgreements (last updated July 2, 2026), https://openagreements.org/practice-guides/invention-assignment/us/virginia.
 
 [^va-noncompete-ban-carveout]: **Va. Code § 40.1-28.7:8** — "No employer shall enter into, enforce, or threaten to enforce a covenant not to compete with any low-wage employee or health care professional." *Va. Code § 40.1-28.7:8(B).* <https://law.lis.virginia.gov/vacode/40.1-28.7:8/>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-04-14"
 human_reviewed_at: null
 next_review_due: "2026-10-11"
@@ -17,7 +17,7 @@ stale: true
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 > [!WARNING]
 > This area may have changed since the snapshot date — verify against the live version at https://openagreements.org/practice-guides/non-compete/us/wyoming.
@@ -209,7 +209,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-14. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wyoming*, OpenAgreements (last updated April 14, 2026), https://openagreements.org/practice-guides/non-compete/us/wyoming.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-04-14. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wyoming*, OpenAgreements (last updated April 14, 2026), https://openagreements.org/practice-guides/non-compete/us/wyoming.
 
 [^wyo-1-23-voids-labor-noncompetes]: **Wyo. Stat. § 1-23-108(a)** — "(a) Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void. This subsection shall not apply to: (i) Any covenant not to compete contained in a contract for the purchase and sale of a business or the assets of a business; (ii) Any covenant not to compete to the extent the covenant provides for the protection of trade secrets as defined by W.S. 6-3-501(a)(xi); (iii) Any contractual provision providing for the recovery of all or a portion of the expense of relocating, educating and training an employee as follows: (A) Recovery of not more than one hundred percent (100%) of the expense for an employee who has served an employer for a period of less than two (2) years;" *Wyo. Stat. § 1-23-108(a) (2025) (SF 107, Enrolled Act No. 87).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 

@@ -2,7 +2,7 @@
 jurisdiction: "U.S. Virgin Islands"
 slug: virgin-islands
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-07"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virgin-islands · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virgin-islands · **Snapshot as of:** 2026-11-07 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the U.S. Virgin Islands[^about]
 
@@ -154,7 +154,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not U.S. Virgin Islands. This article synthesizes U.S. Virgin Islands primary law and is not legal advice from a U.S. Virgin Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the U.S. Virgin Islands*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/virgin-islands.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not U.S. Virgin Islands. This article synthesizes U.S. Virgin Islands primary law and is not legal advice from a U.S. Virgin Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the U.S. Virgin Islands*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/virgin-islands.
 
 [^arvidson-enforceable]: **Arvidson v. Buchar** — "Accordingly, the Arvidsons have met their summary judgment burden, and the Court finds the covenant to not compete invalid and unenforceable as a matter of law" *Arvidson v. Buchar, 2019 VI SUPER 122 (Super. Ct. V.I. Sept. 10, 2019).* <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
