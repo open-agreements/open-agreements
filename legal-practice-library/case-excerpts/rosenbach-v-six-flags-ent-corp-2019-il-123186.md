@@ -5,7 +5,7 @@ description: 'Rosenbach v. Six Flags Ent. Corp., 2019 IL 123186. — quoted in 1
 citation: 'Rosenbach v. Six Flags Ent. Corp., 2019 IL 123186.'
 resource: >-
   https://www.illinoiscourts.gov/Resources/f71510f1-fb2a-43d8-ba14-292c8009dfd9/123186.pdf
-timestamp: '2026-04-20'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: >-

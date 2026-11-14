@@ -2,7 +2,7 @@
 jurisdiction: "Ohio"
 slug: ohio
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-10"
 law_checked_through: "2026-09-27"
 human_reviewed_at: null
 next_review_due: "2027-03-26"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/ohio · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/ohio · **Snapshot as of:** 2026-11-10 · License: CC BY 4.0 · © openagreements.org
 
 # Ohio Consumer Privacy Law[^about]
 
@@ -143,7 +143,7 @@ A violator must also pay the Attorney General's costs of investigating and suing
 
 The Act also covers only a consumer transaction: a sale or other transfer of goods, a service, a franchise, or an intangible to an individual for mainly personal, family, or household purposes, or a solicitation to supply any of these [^q6-consumer-transaction]. We found no Ohio appellate decision that settles whether a free, ad-supported online service fits that definition.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-09-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from an Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Ohio Consumer Privacy Law*, OpenAgreements (last updated September 27, 2026), https://openagreements.org/practice-guides/privacy/us/ohio.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-09-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from an Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Ohio Consumer Privacy Law*, OpenAgreements (last updated September 27, 2026), https://openagreements.org/practice-guides/privacy/us/ohio.
 
 [^q1-breach-duty]: **Ohio Rev. Code § 1349.19** — "Any person that owns or licenses computerized data that includes personal information shall disclose any breach of the security of the system, following its discovery or notification of the breach of the security of the system, to any resident of this state whose personal information was, or reasonably is believed to have been, accessed and acquired by an unauthorized person if the access and acquisition by the unauthorized person causes or reasonably is believed will cause a material risk of identity theft or other fraud to the resident." *Ohio Rev. Code § 1349.19(B)(1).* <https://codes.ohio.gov/ohio-revised-code/section-1349.19>
 

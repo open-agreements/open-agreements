@@ -2,10 +2,10 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-content_packaged_at: "2026-11-05"
-law_checked_through: "2026-06-02"
+content_packaged_at: "2026-11-10"
+law_checked_through: "2026-10-15"
 human_reviewed_at: null
-next_review_due: "2026-11-29"
+next_review_due: "2027-04-13"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/nebraska
 license: CC BY 4.0
 stale: false
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-11-10 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nebraska[^about]
 
@@ -31,11 +31,12 @@ Nebraska enforces only narrowly tailored, customer-specific covenants under a co
 | **Are non-competes enforceable?** | Allowed if reasonable |
 | **Bottom line** | Nebraska enforces only narrowly tailored covenants limited to customers the employee personally served, refuses to rewrite overbroad ones, and has no general statutory ban as of 2026. |
 | **Main law or case** | Common law governs employee non-competes; Securities Acceptance Corp. v. Brown, 171 Neb. 406, 417, 106 N.W.2d 456 (1960). Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987). |
-| **Main exceptions** | Franchise non-competes reformable by statute (§ 87-404); sale-of-business more favorable; successor enforcement by merger |
+| **Main exceptions** | Franchise non-competes reformable by statute (§ 87-404); sale-of-business more favorable; successor enforcement by merger; health care staffing agency non-competes void from July 1, 2027 (LB921) |
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Unclear |
 | **Restriction extended during a breach?** | Silent |
 | **Maximum length set by law** | No statutory limit |
+| **Upcoming changes** | Health care staffing agency non-compete ban (LB921) [LB921, 109th Leg., 2d Sess. § 11(1) (Neb. 2026). LB921, 109th Leg., 2d Sess. § 11(2) (Neb. 2026). LB921, 109th Leg., 2d Sess. § 25 (Neb. 2026).], effective 2027-07-01 — Beginning July 1, 2027, a health care staffing agency may not include in any contract with a worker or a health care entity a noncompete clause restricting in any manner the employment opportunities of a worker, and any contract clause that violates that rule is void. Other employee non-competes stay under Nebraska's common-law reasonableness test. |
 
 ## Are employee non-compete agreements enforceable in Nebraska? {#employee-non-compete-enforceability}
 
@@ -44,6 +45,8 @@ Nebraska enforces only narrowly tailored, customer-specific covenants under a co
 The practical rule is stricter than a generic reasonableness label suggests. Nebraska allows protection against unfair competition, such as siphoning customer goodwill, but not ordinary competition from a former employee. Broad bans on working in the same business, serving all company customers, or using general skills are high-risk.
 
 Nebraska also has statutory restraint-of-trade language in the background. The civil antitrust statute says contracts in restraint of trade or commerce are unlawful, and the older criminal statute declares covered restraints illegal [^q1-restraint-civil][^q1-restraint-criminal].
+
+One sector-specific statutory ban is enacted but not yet in force. Beginning July 1, 2027, LB921 (2026), the Health Care Staffing Agency Registration Act, will bar a health care staffing agency from including in any contract with a worker or a health care entity a noncompete clause that restricts in any manner the worker's employment opportunities [^ne-lb921-staffing-noncompete-ban][^ne-lb921-staffing-operative-date]. LB921 defines a health care staffing agency as a business that provides temporary workers to provide direct services in a separate, third-party health care entity [^ne-lb921-staffing-agency-definition]. The definition expressly includes a health care technology platform, which LB921 defines as a business that operates an internet or software-application marketplace through which workers choose when to bid on or select open shifts posted by health care entities, and through which those entities set rates with the platform [^ne-lb921-technology-platform-definition]. Any contract clause that violates the ban will be void [^ne-lb921-staffing-clause-void].
 
 ## What is Nebraska's reasonableness test for non-competes? {#reasonableness-test}
 
@@ -190,13 +193,23 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nebraska. This article synthesizes Nebraska primary law and is not legal advice from a Nebraska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Nebraska*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/nebraska.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-10-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nebraska. This article synthesizes Nebraska primary law and is not legal advice from a Nebraska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Nebraska*, OpenAgreements (last updated October 15, 2026), https://openagreements.org/practice-guides/non-compete/us/nebraska.
 
 [^q1-brown-three-part-test]: **Securities Acceptance Corp. v. Brown** — "There are three general requirements relating to partial restraints of trade: First, is the restriction reasonable in the sense that it is not injurious to the public; second, is the restriction reasonable in the sense that it is no greater than is reasonably necessary to protect the employer in some legitimate interest; and, third, is the restriction reasonable in the sense that it is not unduly harsh and oppressive on the employee." *Securities Acceptance Corp. v. Brown, 171 Neb. 406, 417, 106 N.W.2d 456 (1960).* <https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=There%20are%20three%20general%20requirements,and%20oppressive%20on%20the%20employee.>
 
 [^q1-restraint-civil]: **Neb. Rev. Stat. § 59-1603** — "Any contract, combination, in the form of trust or otherwise, or conspiracy in restraint of trade or commerce shall be unlawful." *Neb. Rev. Stat. § 59-1603.* <https://nebraskalegislature.gov/laws/statutes.php?statute=59-1603>
 
 [^q1-restraint-criminal]: **Neb. Rev. Stat. § 59-801** — "Every contract, combination in the form of trust or otherwise, or conspiracy in restraint of trade or commerce, within this state, is hereby declared to be illegal." *Neb. Rev. Stat. § 59-801.* <https://nebraskalegislature.gov/laws/statutes.php?statute=59-801>
+
+[^ne-lb921-staffing-noncompete-ban]: **LB921 (2026), Health Care Staffing Agency Registration Act** — "A health care staffing agency shall not: (a) Include in any contract with a worker or a health care entity a noncompete clause restricting in any manner the employment opportunities of a worker; or (b) In any contract with a worker or a health care entity, require payment of liquidated damages, employment fees, or other compensation if the worker is subsequently hired as a permanent employee of the health care entity, except that this subdivision (b) shall not apply to (i) payments made solely by a health care entity pursuant to a contract with a health care staffing agency which provides that the payment amount will be reduced pro rata for each hour of service the worker performs for the entity while on the payroll of such agency and that such amount will be reduced to zero upon completion of no more than seven hundred twenty hours of service for the entity or (ii) payments made by a foreign worker whom the staffing agency assisted in obtaining authorization to work in the United States and the worker was assigned to a single health care entity for an initial term of not less than twenty-four months." *LB921, 109th Leg., 2d Sess. § 11(1) (Neb. 2026).* <https://nebraskalegislature.gov/FloorDocs/109/PDF/Slip/LB921.pdf>
+
+[^ne-lb921-staffing-operative-date]: **LB921 (2026), Health Care Staffing Agency Registration Act** — "Sections 7, 8, 9, 10, 11, 12, 13, 14, and 15 of this act become operative on July 1, 2027." *LB921, 109th Leg., 2d Sess. § 25 (Neb. 2026).* <https://nebraskalegislature.gov/FloorDocs/109/PDF/Slip/LB921.pdf>
+
+[^ne-lb921-staffing-agency-definition]: **LB921 (2026), Health Care Staffing Agency Registration Act** — "Health care staffing agency means an individual, a trust, a partnership, a corporation, a limited liability partnership, a limited liability company, or any other business entity that provides one or more temporary workers to provide direct services in a separate, third-party health care entity." *LB921, 109th Leg., 2d Sess. § 8(7) (Neb. 2026).* <https://nebraskalegislature.gov/FloorDocs/109/PDF/Slip/LB921.pdf>
+
+[^ne-lb921-technology-platform-definition]: **LB921 (2026), Health Care Staffing Agency Registration Act** — "Health care staffing agency includes a health care technology platform; (8) Health care technology platform means an individual, a trust, a partnership, a corporation, a limited liability partnership, a limited liability company, or any other business entity that developed and operates, offers, or maintains a system or technology that provides a marketplace, by means of the Internet or a software application, which allows (a) a worker, in the sole discretion of such worker, to choose when and how often to utilize the platform to bid on or select an open shift posted by a health care entity and (b) a health care entity to set rates with the platform that can only be changed by a contractual amendment between the parties" *LB921, 109th Leg., 2d Sess. § 8(7)–(8) (Neb. 2026).* <https://nebraskalegislature.gov/FloorDocs/109/PDF/Slip/LB921.pdf>
+
+[^ne-lb921-staffing-clause-void]: **LB921 (2026), Health Care Staffing Agency Registration Act** — "Any clause of a contract that violates this section is void." *LB921, 109th Leg., 2d Sess. § 11(2) (Neb. 2026).* <https://nebraskalegislature.gov/FloorDocs/109/PDF/Slip/LB921.pdf>
 
 [^q2-aon-reasonableness-test]: **Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.** — "In determining whether a covenant not to compete is valid, a court considers whether the restriction is (1) reasonable in the sense that it is not injurious to the public, (2) not greater than is reasonably necessary to protect the employer in some legitimate interest, and (3) not unduly harsh and oppressive on the employee." *Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).* <https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=In%20determining%20whether%20a%20covenant,and%20oppressive%20on%20the%20employee.>
 

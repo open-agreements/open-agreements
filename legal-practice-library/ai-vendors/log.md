@@ -1,5 +1,13 @@
 # Ai Vendors Update Log
 
+## 2026-10-15
+* **Update**: fix(zdr-providers): drop stale Gemini sanitized-log claim (freshness #3543) (1dc76c7)
+* **Update**: fix(zdr-providers): address peer review round 2 (freshness #3543) (35f329b)
+* **Update**: fix(zdr-providers): contiguous quotes and semantic card ids (freshness #3543) (77ce901)
+* **Update**: fix(zdr-providers): cite the xAI Enterprise Terms step on the economics sentence (freshness #3543) (cfdb198)
+* **Update**: fix(zdr-providers): update xAI, Google, Bedrock and Anthropic ZDR terms (freshness #3543) (fa4cf89)
+* **Update**: fix(zdr-providers): address peer review round 1 (freshness #3543) (fb3abd6)
+
 ## 2026-10-07
 * **Update**: content(external-ai-vendor-privilege): state Warner's holding from the order (#3116) (00a8783)
 * **Update**: content(hallucination-indemnification): state Moffatt's holding as its cards do (#3116) (20690c3)

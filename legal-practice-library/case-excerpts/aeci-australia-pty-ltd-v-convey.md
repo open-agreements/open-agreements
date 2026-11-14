@@ -8,7 +8,7 @@ citation: >-
   AECI Australia Pty Ltd v Convey [2020] QSC 207 (Bradley J), quoting Just Group
   Ltd v Peck (2016) 344 ALR 162.
 resource: 'https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf'
-timestamp: '2026-06-10'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'

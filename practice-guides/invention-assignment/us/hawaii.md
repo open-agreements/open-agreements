@@ -116,7 +116,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Hawaii*, OpenAgreements (last updated July 3, 2026), https://openagreements.org/practice-guides/invention-assignment/us/hawaii.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-07-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Hawaii*, OpenAgreements (last updated July 3, 2026), https://openagreements.org/practice-guides/invention-assignment/us/hawaii.
 
 [^hb2911-own-time-carve-out]: **H.B. 2911, 24th Leg. (Haw. 2008)** — "developed entirely on the employee's own time without using the employer's equipment, supplies, facilities, or trade secret information" *H.B. 2911, 24th Leg., Reg. Sess. (Haw. 2008) (not enacted).* <https://data.capitol.hawaii.gov/sessions/session2008/bills/HB2911_.htm>
 

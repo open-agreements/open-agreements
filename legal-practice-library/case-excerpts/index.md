@@ -173,6 +173,7 @@
 * [Cothron v. White Castle System, Inc., 2023 IL 128004](cothron-v-white-castle-system-inc-2023-il-128004.md) - Cothron v. White Castle System, Inc., 2023 IL 128004, ¶ 43. — quoted in 1 document(s).
 * [County of Erie v. Gateway-Longview, Inc.](county-of-erie-v-gateway-longview-inc.md) - County of Erie v. Gateway-Longview, Inc., 193 A.D.3d 1336 (4th Dep't 2021). — quoted in 1 document(s).
 * [County of Schenectady v. Travelers Insurance Co.](county-of-schenectady-v-travelers-insurance-co.md) - County of Schenectady v. Travelers Insurance Co., 48 A.D.2d 299 (3d Dep't 1975). — quoted in 1 document(s).
+* [*Craig v. FedEx Ground Package System, Inc.*](craig-v-fedex-ground-package-system-inc.md) - *Craig v. FedEx Ground Package System, Inc.*, 300 Kan. 788, 335 P.3d 66 (2014). — quoted in 1 document(s).
 * [Cranston Print Works Co. v. Pothier](cranston-print-works-co-v-pothier.md) - Cranston Print Works Co. v. Pothier, 848 A.2d 213 (R.I. 2004). — quoted in 3 document(s).
 * [Cream v Bushcolt Pty Ltd](cream-v-bushcolt-pty-ltd.md) - Cream v Bushcolt Pty Ltd [2004] WASCA 82 (Malcolm CJ; Miller and McKechnie JJ agreeing). — quoted in 1 document(s).
 * [Crosse v. BCBSD, Inc. (Del. 2003)](crosse-v-bcbsd-inc-del-2003.md) - Crosse v. BCBSD, Inc., 836 A.2d 492, 497 (Del. 2003). — quoted in 1 document(s).
@@ -332,6 +333,7 @@
 * [Hess v. Gebhard & Co., Inc.](hess-v-gebhard-co-inc.md) - Hess v. Gebhard & Co., Inc., 570 Pa. 148, 808 A.2d 912 (Pa. 2002). — quoted in 4 document(s).
 * [Hewett v. Samsonite Corp.](hewett-v-samsonite-corp.md) - Hewett v. Samsonite Corp., 32 Colo. App. 150, 507 P.2d 1119 (1973). — quoted in 1 document(s).
 * [Heyde Cos. v. Dove Healthcare, LLC](heyde-cos-v-dove-healthcare-llc.md) - Heyde Cos. v. Dove Healthcare, LLC, 2002 WI 131, 258 Wis. 2d 28, 654 N.W.2d 830. — quoted in 1 document(s).
+* [Hickman v. Southern Pacific Transport Co.](hickman-v-southern-pacific-transport-co.md) - Hickman v. Southern Pacific Transport Co., 262 La. 102, 262 So. 2d 385 (1972) — quoted in 1 document(s).
 * [Hickman v. Taylor, 329 U.S. 495 (1947)](hickman-v-taylor-329-u-s-495-1947.md) - Hickman v. Taylor, 329 U.S. 495 (1947). — quoted in 1 document(s).
 * [Hilb, Rogal & Hamilton Co. of Arizona v. McKinney](hilb-rogal-hamilton-co-of-arizona-v-mckinney.md) - Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997). — quoted in 2 document(s).
 * [Hillam v. Hillam](hillam-v-hillam.md) - Hillam v. Hillam, 2024 UT App 102, n.6, 554 P.3d 1137. — quoted in 1 document(s).
@@ -388,6 +390,7 @@
 * [Kalb, Voorhis & Co. v. American Financial Corp. (2d Cir. 1993)](kalb-voorhis-co-v-american-financial-corp-2d-cir-1993.md) - Kalb, Voorhis & Co. v. American Fin. Corp., 8 F.3d 130, 132 (2d Cir. 1993). — quoted in 2 document(s).
 * [Kallok v. Medtronic, Inc.](kallok-v-medtronic-inc.md) - Kallok v. Medtronic, Inc., 573 N.W.2d 356 (Minn. 1998). — quoted in 2 document(s).
 * [Karlin v. Weinberg](karlin-v-weinberg.md) - Karlin v. Weinberg, 77 N.J. 408, 390 A.2d 1161 (1978). — quoted in 1 document(s).
+* [*Karnes v. Happy Trails RV Park, LLC*](karnes-v-happy-trails-rv-park-llc.md) - *Karnes v. Happy Trails RV Park, LLC*, 361 F. Supp. 3d 921 (W.D. Mo. 2019). — quoted in 1 document(s).
 * [Karp v. Federated Department Stores, Inc.](karp-v-federated-department-stores-inc.md) - Karp v. Federated Dep't Stores, Inc., 301 A.D.2d 574 (2d Dep't 2003). — quoted in 1 document(s).
 * [Kegel v. Tillotson](kegel-v-tillotson.md) - Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009). — quoted in 2 document(s).
 * [Keller v. Clark Equipment Co.](keller-v-clark-equipment-co.md) - Keller v. Clark Equipment Co., 715 F.2d 1280 (8th Cir. 1983), cert. denied, 464 U.S. 1044 (1984). — quoted in 1 document(s).
@@ -396,6 +399,7 @@
 * [Kinkade v. New York Shipbuilding Corp.](kinkade-v-new-york-shipbuilding-corp.md) - Kinkade v. New York Shipbuilding Corp., 21 N.J. 362 (1956). — quoted in 1 document(s).
 * [Kinney v. G.W. Lisk Co.](kinney-v-g-w-lisk-co.md) - Kinney v. G.W. Lisk Co., 76 N.Y.2d 215 (1990). — quoted in 1 document(s).
 * [Klabacka v. Nelson](klabacka-v-nelson.md) - Klabacka v. Nelson, 133 Nev. 164, 172, 394 P.3d 940 (2017). — quoted in 1 document(s).
+* [Knight v. Tucker](knight-v-tucker.md) - Knight v. Tucker, 50,993 (La. App. 2 Cir. 11/16/16), 210 So. 3d 407 — quoted in 1 document(s).
 * [Kodiak Building Partners, LLC v. Adams (Del. Ch. 2022), sale-of-business standard](kodiak-building-partners-llc-v-adams-del-ch-2022-sale-of-business-standard.md) - Kodiak Building Partners, LLC v. Adams, C.A. No. 2022-0311-MTZ (Del. Ch. Oct. 6, 2022). — quoted in 1 document(s).
 * [Kodiak Building Partners, LLC v. Adams](kodiak-building-partners-llc-v-adams.md) - Kodiak Bldg. Partners, LLC v. Adams, 2022 WL 5240507, at *13 n.108 (Del. Ch. Oct. 6, 2022). — quoted in 2 document(s).
 * [Kross Acquisition Co. v. Groundworks Ohio, LLC](kross-acquisition-co-v-groundworks-ohio-llc.md) - Kross Acquisition Co. v. Groundworks Ohio, LLC, 2024-Ohio-592, 236 N.E.3d 453 (1st Dist.). — quoted in 2 document(s).
@@ -691,6 +695,7 @@
 * [Standard Register Co. v. Kerrigan](standard-register-co-v-kerrigan.md) - Standard Register Co. v. Kerrigan, 238 S.C. 54, 119 S.E.2d 533 (1961). — quoted in 2 document(s).
 * [Star Direct, Inc. v. Dal Pra](star-direct-inc-v-dal-pra.md) - Star Direct, Inc. v. Dal Pra, 2009 WI 76, 319 Wis. 2d 274, 767 N.W.2d 898. — quoted in 2 document(s).
 * [State Bd. of Education of Fla. v. Bourne](state-bd-of-education-of-fla-v-bourne.md) - State Bd. of Education of Fla. v. Bourne, 150 Fla. 323, 7 So. 2d 838 (Fla. 1942). — quoted in 1 document(s).
+* [*State ex rel. Department of Labor & Industrial Services v. Hill*](state-ex-rel-department-of-labor-industrial-services-v-hill.md) - *State ex rel. Dep't of Labor & Indus. Servs. v. Hill*, 118 Idaho 278, 796 P.2d 155 (Ct. App. 1990). — quoted in 1 document(s).
 * [State ex rel. Industrial Commission v. Sky Down Skydiving, LLC](state-ex-rel-industrial-commission-v-sky-down-skydiving-llc.md) - Indus. Comm'n v. Sky Down Skydiving, LLC, 166 Idaho 564, 462 P.3d 92 (2020). — quoted in 2 document(s).
 * [State ex rel. Raoul v. Elite Staffing, Inc.](state-ex-rel-raoul-v-elite-staffing-inc.md) - State ex rel. Raoul v. Elite Staffing, Inc., 2024 IL 128763. — quoted in 1 document(s).
 * [State of New York v Cetero](state-of-new-york-v-cetero.md) - State of New York v Cetero, 233 AD2d 580, 582 (3d Dept 1996). — quoted in 1 document(s).

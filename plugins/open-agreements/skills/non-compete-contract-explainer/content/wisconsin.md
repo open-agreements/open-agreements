@@ -2,7 +2,7 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-10"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-11-10 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wisconsin[^about]
 
@@ -263,7 +263,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wisconsin. This article synthesizes Wisconsin primary law and is not legal advice from a Wisconsin-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wisconsin*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/wisconsin.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wisconsin. This article synthesizes Wisconsin primary law and is not legal advice from a Wisconsin-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wisconsin*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/wisconsin.
 
 [^q1-103465-core]: **Wis. Stat. § 103.465** — "A covenant by an assistant, servant or agent not to compete with his or her employer or principal during the term of the employment or agency, or after the termination of that employment or agency, within a specified territory and during a specified time is lawful and enforceable only if the restrictions imposed are reasonably necessary for the protection of the employer or principal." *Wis. Stat. § 103.465.* <https://docs.legis.wisconsin.gov/statutes/statutes/103/465>
 

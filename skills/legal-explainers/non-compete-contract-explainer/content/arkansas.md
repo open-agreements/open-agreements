@@ -2,7 +2,7 @@
 jurisdiction: "Arkansas"
 slug: arkansas
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-10"
 law_checked_through: "2026-06-02"
 human_reviewed_at: null
 next_review_due: "2026-11-29"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-11-10 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arkansas[^about]
 
@@ -187,7 +187,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from an Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arkansas*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/arkansas.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from an Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arkansas*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/arkansas.
 
 [^q1-aca-enforceable]: **Ark. Code Ann. § 4-75-101** — "A covenant not to compete agreement is enforceable if the agreement is ancillary to an employment relationship or part of an otherwise enforceable employment agreement or contract to the extent that: (1) The employer has a protectable business interest; and (2) The covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer." *Ark. Code Ann. § 4-75-101(a).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 

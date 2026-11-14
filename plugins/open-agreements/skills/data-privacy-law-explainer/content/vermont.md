@@ -2,7 +2,7 @@
 jurisdiction: "Vermont"
 slug: vermont
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-10"
 law_checked_through: "2026-06-12"
 human_reviewed_at: null
 next_review_due: "2026-12-09"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/vermont · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/vermont · **Snapshot as of:** 2026-11-10 · License: CC BY 4.0 · © openagreements.org
 
 # Vermont Consumer Privacy Law[^about]
 
@@ -110,7 +110,7 @@ Three escape valves and one hard stop. A breach need not be reported to consumer
 
 How those two design choices interact is the open question. Because the privacy statutes make violations per se unfair and deceptive acts, a consumer plaintiff will argue that a data broker's security failure or a deceptive privacy practice slots into the § 2461(b) action; the textual hurdles are the provision's framing around consumers who *contract* in reliance on a prohibited practice or *sustain damages* from one — a fit that is natural for a deceptive privacy policy a customer relied on, and harder for a registry violation by a data broker the consumer never dealt with. No Vermont appellate decision appears to have resolved how far § 2461(b) reaches into the privacy statutes, so the practical planning assumption is Attorney General enforcement as the primary exposure with § 2461(b) suits as live secondary risk wherever a consumer transaction and a misrepresentation can be pleaded. The Act also gives the State teeth beyond injunctions: violating the terms of a Consumer Protection Act injunction costs up to $10,000 per violation [^q9-injunction-penalty], and the Attorney General's toolkit includes civil investigations, assurances of discontinuance, and civil actions.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Vermont Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/vermont.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Vermont Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/vermont.
 
 [^q1-breach-act-title]: **9 V.S.A. § 2435** — "This section shall be known as the Security Breach Notice Act." *9 V.S.A. § 2435(a).* <https://legislature.vermont.gov/statutes/fullchapter/09/062>
 

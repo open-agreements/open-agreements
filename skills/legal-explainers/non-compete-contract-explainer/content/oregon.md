@@ -2,7 +2,7 @@
 jurisdiction: "Oregon"
 slug: oregon
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-10"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oregon · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oregon · **Snapshot as of:** 2026-11-10 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Oregon[^about]
 
@@ -310,7 +310,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from an Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oregon*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oregon.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from an Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oregon*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oregon.
 
 [^q1-ors-653-295-void-unless]: **ORS 653.295** — "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee’s employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer; (b) The employee is a person described in ORS 653.020 (3); (c) The employer has a protectable interest as described in subsection (2) of this section; (d) Within 30 days after the date of the termination of the employee’s employment, the employer provides a signed, written copy of the terms of the noncompetition agreement to the employee; and (e) The total amount of the employee’s annual gross salary and commissions, calculated on an annual basis, at the time of the employee’s termination exceeds $100,533, adjusted annually for inflation pursuant to the Consumer Price Index for All Urban Consumers, West Region (All Items), as published by the Bureau of Labor Statistics of the United States Department of Labor immediately preceding the calendar year of the employee’s termination. This paragraph does not apply to an employee described in subsection (2)(c) of this section." *ORS 653.295(1).* <https://www.oregonlegislature.gov/bills_laws/ors/ors653.html>
 

@@ -4,7 +4,7 @@ title: Woolworths Ltd v Olson
 description: 'Woolworths Ltd v Olson [2004] NSWCA 372. — quoted in 2 document(s).'
 citation: 'Woolworths Ltd v Olson [2004] NSWCA 372.'
 resource: 'https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d'
-timestamp: '2026-06-16'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'

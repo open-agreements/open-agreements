@@ -6,7 +6,7 @@ description: >-
   document(s).
 citation: 'Watson v. Fort Worth Bank & Trust, 487 U.S. 977 (1988).'
 resource: 'https://www.courtlistener.com/opinion/112145/watson-v-fort-worth-bank-trust'
-timestamp: '2026-04-20'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: >-

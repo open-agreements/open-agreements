@@ -88,7 +88,7 @@ The coverage decision, the live policy, and the delivery of each point-of-collec
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-17. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Jurisdiction-neutral (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Privacy Policy Reviewer Checklist*, OpenAgreements (last updated June 17, 2026), https://openagreements.org/checklists/privacy-policy/us.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-17. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Jurisdiction-neutral (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Privacy Policy Reviewer Checklist*, OpenAgreements (last updated June 17, 2026), https://openagreements.org/checklists/privacy-policy/us.
 
 [^nj-notice-contact]: **N.J.S.A. 56:8-166.6** — "(7) an active electronic mail address or other online mechanism that the consumer may use to contact the controller." *N.J.S.A. 56:8-166.6(a)(7).* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
 

@@ -1,5 +1,9 @@
 # Us Update Log
 
+## 2026-11-10
+* **Update**: Nebraska LB921: definition includes health care technology platforms (dd64c97)
+* **Update**: Nebraska LB921: fix sentence split around definition chip (f12df14)
+
 ## 2026-10-19
 * **Update**: content(non-compete): quote California Health and Safety Code 1191(d)'s scope and sale-of-business exception in full (#3492 peer review round 24) (1fe0b44)
 
@@ -8,6 +12,7 @@
 * **Update**: content(non-compete/ftc-rule-status): mark claims, roles and source edges (structured analysis) (1020941)
 * **Update**: content(non-compete/ohio): mark claims, roles and source edges (structured analysis) (993cee9)
 * **Update**: content(non-compete/south-carolina): mark claims, roles and source edges (structured analysis) (ae90f2c)
+* **Update**: content(non-compete/nebraska): flag LB921's July 1, 2027 health care staffing agency non-compete ban (b7fc1ff)
 
 ## 2026-10-10
 * **Update**: content(non-compete): state Alabama's training exception and California's 16600.1 notice duty with their statutory limits (#3492 peer review round 23) (1b79455)

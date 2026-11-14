@@ -4,7 +4,7 @@ title: 'Griggs v. Duke Power Co., 401 U.S. 424 (1971)'
 description: 'Griggs v. Duke Power Co., 401 U.S. 424 (1971). — quoted in 2 document(s).'
 citation: 'Griggs v. Duke Power Co., 401 U.S. 424 (1971).'
 resource: 'https://www.courtlistener.com/opinion/108284/griggs-v-duke-power-co'
-timestamp: '2026-04-20'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: >-
