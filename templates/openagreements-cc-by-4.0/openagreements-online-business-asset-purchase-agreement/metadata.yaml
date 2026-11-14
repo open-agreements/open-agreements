@@ -1,0 +1,299 @@
+name: Online Business Asset Purchase Agreement
+category: business-acquisition
+description: Purchaser-oriented asset purchase agreement for an online or software business, with explicit schedules and negotiable elections. The company that owns the assets sells them, its individual owner signs for the obligations allocated to the owner, and Closing follows signing once the stated conditions are satisfied or waived. Every schedule and election must be completed for the transaction before signing.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-online-business-asset-purchase-agreement
+version: 0.4.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Original drafting by OpenAgreements contributors; no comparator source text is reproduced. Licensed under CC BY 4.0.
+fields:
+  - name: buyer_name
+    type: string
+    description: Full legal name of purchaser
+    section: Transaction
+  - name: buyer_description
+    type: string
+    description: Entity type and jurisdiction, or individual
+    section: Transaction
+  - name: seller_name
+    type: string
+    description: Full legal name of individual owner
+    section: Transaction
+  - name: company_description
+    type: string
+    description: Entity type and jurisdiction
+    section: Transaction
+  - name: business_description
+    type: string
+    description: Acquired operation and products
+    section: Transaction
+  - name: allocation_terms
+    type: string
+    description: 'Agreed allocation of receipts and performance obligations: the relevant periods, dates/times/time zones and any straddle-period rule, and the allocation that applies to each Schedule C item. This does not set Closing, transfer title or satisfy operational acceptance; tax and price-adjustment measurement rules are stated separately. No inferred effective time.'
+    section: Transaction
+  - name: purchase_price_amount
+    type: string
+    description: Amount and currency
+    section: Transaction
+  - name: payment_instructions
+    type: string
+    description: Recipient, method and payment timing
+    section: Transaction
+  - name: governing_law
+    type: string
+    description: Governing jurisdiction
+    section: Transaction
+  - name: dispute_process
+    type: string
+    description: Forum, procedure and interim relief
+    section: Transaction
+  - name: buyer_notice_address
+    type: string
+    description: Address, email and notice recipient
+    section: Transaction
+  - name: seller_notice_address
+    type: string
+    description: Address, email and notice recipient
+    section: Transaction
+  - name: notice_effectiveness
+    type: string
+    description: Agreed delivery and receipt rules, including electronic failure and nonbusiness days.
+    section: Transaction
+  - name: tax_allocation
+    type: string
+    description: Transfer-tax responsibility, reporting allocation process, timing and dispute process; each depends on jurisdiction-specific review.
+    section: Transaction
+  - name: schedule_assets
+    type: string
+    description: 'Schedule A: item ID, asset description, owner, acquired right, version/identifier, location and transfer instrument. Schedule A covers only owned rights or identified transferable licenses.'
+    section: Schedules
+  - name: schedule_exclusions
+    type: string
+    description: 'Schedule B: excluded assets, personal/shared accounts, retained code/content/data and dependencies; specify none affirmatively if none.'
+    section: Schedules
+  - name: schedule_liabilities
+    type: string
+    description: 'Schedule C: each assumed liability, relevant contract/order/cohort, amount or method, cutoff and exclusions; prepayments, refunds, chargebacks, credits, taxes and costs are allocated separately. If there are none, the schedule says so affirmatively.'
+    section: Schedules
+  - name: schedule_transfers
+    type: string
+    description: 'Schedule D: each domain/account/contract/license, provider/registrant, applicable transfer restrictions, required consents, permitted method, responsible party, deadline and missing-consent election. Linked billing and recovery dependencies are listed without secrets.'
+    section: Schedules
+  - name: schedule_deliverables
+    type: string
+    description: 'Schedule E: each closing instrument and technical deliverable, classification as closing-condition, escrow-release-condition or post-closing-obligation, responsible party, due date, affirmative test, reviewer, evidence, defect notice, cure, retest and failure consequence. Distinguish source code from deployed build and submitted from approved versions.'
+    section: Schedules
+  - name: schedule_disclosures
+    type: string
+    description: 'Schedule F: dated disclosures keyed to the affected representation, exceptions, known claims, incidents and incomplete ownership or consent evidence; specify none affirmatively where appropriate.'
+    section: Schedules
+  - name: schedule_revenue
+    type: string
+    description: 'Schedule G: historical measurement periods, gross/net/recurring definitions, currency, refunds, fees, taxes, nonrecurring items, source exports and reconciliation differences; identify agreed figures and exceptions.'
+    section: Schedules
+  - name: schedule_priority
+    type: string
+    description: 'Schedule H: each related instrument by parties/date/version, incorporated or continuing provisions, express conflict priority and any amendment; include broker and escrow obligations if relevant.'
+    section: Schedules
+  - name: schedule_data
+    type: string
+    description: 'Schedule I: transferred data categories, purposes, permissions/notices, retention limits, lawful migration route, safeguards, incident handling and seller retained-copy basis and deletion dates.'
+    section: Schedules
+  - name: schedule_transition
+    type: string
+    description: 'Schedule J: services, responsible personnel, hours, response windows, start/end, costs, access limits, documentation, escalation and exit.'
+    section: Schedules
+  - name: schedule_remedies
+    type: string
+    description: 'Schedule K: liability survival by claim category, caps and exceptions, thresholds, recovery limits, exclusivity, fraud treatment and setoff election; state expressly whether each limitation applies or does not apply.'
+    section: Schedules
+  - name: schedule_adjustment
+    type: string
+    description: 'Adjustment terms: baseline and closing measurement, accounting rules/hierarchy, statements, access, objections, independent determination and payment dates.'
+    section: Schedules
+  - name: schedule_earnout
+    type: string
+    description: 'Earnout terms: metric, accounting rules, periods, cap if agreed, operating obligations, reporting/access, objections, independent determination, payment and acceleration/effect of resale or discontinuation.'
+    section: Schedules
+  - name: schedule_escrow
+    type: string
+    description: 'Escrow/holdback terms: agent or holder, funding amount/timing, release tests/dates, objections, disputed reserve, partial release, fees, interest and controlling signed instructions.'
+    section: Schedules
+  - name: schedule_indemnity
+    type: string
+    description: 'Indemnity allocation: indemnifying parties, covered claims/losses, retained/assumed liability allocation, beneficiaries and interaction with Schedule K.'
+    section: Schedules
+  - name: schedule_claims
+    type: string
+    description: 'Claims process: notice, required detail, response time, defense control and conflicts, counsel/costs, cooperation, settlement consent, direct claims and payment.'
+    section: Schedules
+  - name: buyer_signer
+    type: string
+    description: Name of buyer signatory, or buyer personally.
+    section: Transaction
+  - name: buyer_signer_capacity
+    type: string
+    description: Actual authority/title, or individual signing personally.
+    section: Transaction
+  - name: domains_included
+    type: boolean
+    description: Included domain rights require registrar procedures.
+    section: Transaction
+  - name: code_included
+    type: boolean
+    description: Included software/source delivery requires reproducibility and deployed-version checks.
+    section: Transaction
+  - name: accounts_included
+    type: boolean
+    description: Material third-party platform accounts or contracts are involved.
+    section: Transaction
+  - name: personal_data_included
+    type: boolean
+    description: Personal data is included in the purchased assets.
+    section: Transaction
+  - name: subscriptions_included
+    type: boolean
+    description: Customer subscription continuity and prepaid performance are involved.
+    section: Transaction
+  - name: include_adjustment
+    type: boolean
+    description: Affirmative election of a price adjustment; no economic default.
+    section: Transaction
+  - name: include_earnout
+    type: boolean
+    description: Affirmative election of an earnout; no economic default.
+    section: Transaction
+  - name: include_escrow
+    type: boolean
+    description: Affirmative election of escrow or holdback; no economic default.
+    section: Transaction
+  - name: include_transition
+    type: boolean
+    description: Affirmative election of transition services.
+    section: Transaction
+  - name: include_indemnity
+    type: boolean
+    description: Affirmative election of contractual indemnification.
+    section: Transaction
+  - name: transaction_structure
+    type: string
+    description: Asset purchase only
+    section: Key Terms
+  - name: remedies_summary
+    type: string
+    description: Survival, caps, thresholds and remedy elections (Schedule K)
+    section: Key Terms
+  - name: adjustment_summary
+    type: string
+    description: Measure, calculation date and payment timing (Schedule L)
+    section: Key Terms
+  - name: earnout_summary
+    type: string
+    description: Metric, period, cap and payment timing (Schedule M)
+    section: Key Terms
+  - name: escrow_summary
+    type: string
+    description: Amount, purpose, holder and release terms (Schedule N)
+    section: Key Terms
+  - name: transition_summary
+    type: string
+    description: Services, duration and fees (Schedule J)
+    section: Key Terms
+  - name: indemnity_summary
+    type: string
+    description: Covered parties, claims and limits (Schedules O and P)
+    section: Key Terms
+  - name: company_name
+    type: string
+    description: Full legal name of asset-owning company
+    section: Transaction
+  - name: company_notice_address
+    type: string
+    description: Address, email and notice recipient
+    section: Transaction
+  - name: company_signer
+    type: string
+    description: Full legal name of Company signatory.
+    section: Transaction
+  - name: company_signer_capacity
+    type: string
+    description: Company signatory title.
+    section: Transaction
+  - name: payment_verification_phone
+    type: string
+    description: Agreed verification telephone number
+    section: Transaction
+  - name: personal_data_summary
+    type: string
+    description: Personal data categories (Schedule I)
+    section: Transaction
+  - name: seller_liability_terms
+    type: string
+    description: Express allocation of Seller personal liability, including any joint liability, caps and exceptions. No assumption that Seller guarantees Company obligations.
+    section: Transaction
+  - name: agreement_date
+    type: string
+    description: Date this Agreement becomes binding
+    section: Key Terms
+  - name: scheduled_closing_date
+    type: string
+    description: Scheduled date and time for Closing, including time zone
+    section: Key Terms
+  - name: outside_date
+    type: string
+    description: Outside date and time, including time zone
+    section: Key Terms
+  - name: closing_method
+    type: string
+    description: Remote or physical Closing method and exchange coordinator
+    section: Transaction
+  - name: interim_covenants
+    type: string
+    description: Agreed ordinary-course, preservation, access, consent, notice and prohibited-change terms before Closing
+    section: Transaction
+  - name: termination_terms
+    type: string
+    description: Termination rights, deadlines, survival, access revocation, return or destruction, costs and deposited-fund treatment
+    section: Transaction
+  - name: include_buyer_financing_condition
+    type: boolean
+    description: Affirmative election of a buyer financing Closing condition; false is the buyer-form default
+    section: Transaction
+  - name: buyer_financing_condition
+    type: string
+    description: If elected, exact financing condition, evidence, deadline and failure consequence
+    section: Transaction
+  - name: include_seller_qualifiers
+    type: boolean
+    description: Affirmative election of scoped knowledge or materiality qualifiers
+    section: Transaction
+  - name: seller_qualifier_terms
+    type: string
+    description: Covered representations, knowledge holder, inquiry standard, materiality standard and exclusions
+    section: Transaction
+  - name: include_seller_representative
+    type: boolean
+    description: Affirmative election to appoint a seller representative
+    section: Transaction
+  - name: seller_representative_terms
+    type: string
+    description: Representative identity, authority, reliance, replacement and notice mechanics
+    section: Transaction
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - buyer
+  - company
+  - seller
+signature_roles:
+  - buyer
+  - company
+  - seller
+mutation_policy: terms
+maturity: experimental

@@ -2,7 +2,7 @@ name: Consumer Privacy Policy
 category: data-compliance
 description: Configurable national consumer privacy-policy template that assembles the union of U.S. state privacy-disclosure duties, gated by a business's coverage and data-practice facts.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-privacy-policy
-version: '0.1'
+version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
