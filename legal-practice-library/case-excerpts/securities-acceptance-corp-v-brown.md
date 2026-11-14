@@ -9,7 +9,7 @@ citation: >-
   (1960).
 resource: >-
   https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/
-timestamp: '2026-06-12'
+timestamp: '2026-10-15'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'

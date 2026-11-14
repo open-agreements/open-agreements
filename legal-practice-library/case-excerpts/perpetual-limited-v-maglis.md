@@ -6,7 +6,7 @@ description: >-
   document(s).
 citation: 'Perpetual Limited v Maglis [2025] QSC 71 (Bowskill CJ).'
 resource: 'https://archive.sclqld.org.au/qjudgment/2025/QSC25-071.pdf'
-timestamp: '2026-06-10'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'

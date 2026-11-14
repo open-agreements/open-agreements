@@ -1,5 +1,8 @@
 # Selling An App Business Update Log
 
+## 2026-11-06
+* **Update**: content: record Steven Obiajulu's review of the 12 AI-draft pages (5190c83)
+
 ## 2026-10-04
 * **Update**: content(app-business): fragment locators and mandatory propositions (3e75f46)
 * **Update**: content(app-business): shared-keys answer leads with the agreement exclusion (5d352be)

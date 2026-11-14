@@ -1,5 +1,9 @@
 # Us Update Log
 
+## 2026-11-10
+* **Update**: Add practice guide on sharing fund performance compensation (3adf0da)
+* **Update**: Fund performance guide: add pullQuoteLocator overrides to 11 misland source cards (e635b1f)
+
 ## 2026-09-30
 * **Update**: Fund formation: the guide's admission answer is about admission after formation (225bc8c)
 * **Update**: Fund formation: let the GP waive the qualified-client screen by side letter where Rule 205-3 cannot apply (#3052) (293e747)

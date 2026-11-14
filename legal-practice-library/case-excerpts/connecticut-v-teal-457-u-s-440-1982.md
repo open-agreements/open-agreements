@@ -4,7 +4,7 @@ title: 'Connecticut v. Teal, 457 U.S. 440 (1982)'
 description: 'Connecticut v. Teal, 457 U.S. 440 (1982). — quoted in 2 document(s).'
 citation: 'Connecticut v. Teal, 457 U.S. 440 (1982).'
 resource: 'https://www.courtlistener.com/opinion/110751/connecticut-v-teal'
-timestamp: '2026-04-20'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: >-

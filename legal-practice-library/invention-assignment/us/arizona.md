@@ -129,7 +129,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from an Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Arizona*, OpenAgreements (last updated July 3, 2026), https://openagreements.org/practice-guides/invention-assignment/us/arizona.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-07-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from an Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Arizona*, OpenAgreements (last updated July 3, 2026), https://openagreements.org/practice-guides/invention-assignment/us/arizona.
 
 [^az-44-403-damages]: **Ariz. Rev. Stat. § 44-403** — "If willful and malicious misappropriation exists, the court may award exemplary damages in an amount not exceeding twice any award made under subsection A." *Ariz. Rev. Stat. § 44-403 (Arizona Uniform Trade Secrets Act).* <https://www.azleg.gov/ars/44/00403.htm>
 

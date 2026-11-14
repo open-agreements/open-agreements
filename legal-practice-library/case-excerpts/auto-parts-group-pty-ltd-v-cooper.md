@@ -8,7 +8,7 @@ citation: >-
   Auto Parts Group Pty Ltd v Cooper [2015] QSC 155, quoting Vision Eye Institute
   Ltd v Kitchen [2014] QSC 260.
 resource: 'https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf'
-timestamp: '2026-06-10'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'

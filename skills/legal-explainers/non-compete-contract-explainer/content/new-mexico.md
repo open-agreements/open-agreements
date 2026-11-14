@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-content_packaged_at: "2026-11-05"
+content_packaged_at: "2026-11-10"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-11-10 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Mexico[^about]
 
@@ -183,7 +183,7 @@ Section 7 gives employees the National Labor Relations Act covers a statutory ri
 >
 > A form carried over without the immunity notice, or a cross-reference to a reporting policy the employee never received, leaves the confidentiality clause without a valid notice, so the Act's exemplary damages and attorney fees are unavailable against that employee.[^dtsa-notice-noncompliance][^dtsa-notice-policy-cross-reference] A Confidential Information definition that sweeps in pay and working conditions with no carve-out exposes the employer to an unfair-labor-practice finding for employees the Act covers.[^stericycle-work-rule-standard]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in New Mexico*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/new-mexico.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in New Mexico*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/new-mexico.
 
 [^lovelace-reasonableness-test]: **Lovelace Clinic v. Murphy** — "All of the physician and surgeon cases either expressly hold or clearly indicate that the rights and duties created by the contract of employment or association are enforceable, if the restrictions thus imposed on the employee or the associate are reasonable." *Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).* <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=All%20of%20the%20physician%20and,or%20the%20associate%20are%20reasonable.>
 

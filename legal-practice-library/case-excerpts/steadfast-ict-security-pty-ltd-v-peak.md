@@ -9,7 +9,7 @@ citation: >-
   Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J), citing
   Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348; 225 IR 423.
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html'
-timestamp: '2026-06-16'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
@@ -69,8 +69,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In assessing the reasonableness of the restraint, regard must be had to the combined effect of its duration and area of operation.
 
-- supports: `reasonableness-factors`
-- source_cards: `steadfast-combined-effect`
+- supports: `federal-reform`, `reasonableness-factors`
+- source_cards: `steadfast-combined-effect`, `steadfast-reasonableness-reform`
 - cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
@@ -78,8 +78,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In my view the 24-month restraint period is reasonable having regard to the limited restraint area, the role of Mr Peak in relation to clients to the extent to which it is disclosed by the evidence, and the limitation within the restraint to client or customers of the company with whom he has had direct dealings in the 12 months prior to the termination of his employment.
 
-- supports: `cascading-clauses`, `enforceability`, `legitimate-interest`, `reasonableness-factors`
-- source_cards: `steadfast-24-month-upheld`, `steadfast-cascade-top-rung`, `steadfast-direct-dealings`, `steadfast-two-year-upheld`
+- supports: `cascading-clauses`, `enforceability`, `federal-reform`, `legitimate-interest`, `reasonableness-factors`
+- source_cards: `steadfast-24-month-upheld`, `steadfast-cascade-top-rung`, `steadfast-direct-dealings`, `steadfast-two-year-upheld`, `steadfast-upheld-reform`
 - cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
@@ -177,7 +177,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The validity of a restraint is to be assessed at the time at which the contract is made.
 
-- supports: `federal-reform`, `garden-leave`, `reasonableness-factors`, `tolling`
-- source_cards: `steadfast-still-governs`, `steadfast-tested-at-contract`, `steadfast-tested-at-contract-gl`, `steadfast-tested-at-contract-tolling`
+- supports: `garden-leave`, `reasonableness-factors`, `tolling`
+- source_cards: `steadfast-tested-at-contract`, `steadfast-tested-at-contract-gl`, `steadfast-tested-at-contract-tolling`
 - cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>

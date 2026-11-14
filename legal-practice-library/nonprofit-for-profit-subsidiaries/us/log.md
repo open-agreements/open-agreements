@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-11-06
+* **Update**: content: record Steven Obiajulu's review of the 12 AI-draft pages (5190c83)
+
 ## 2026-10-08
 * **Update**: content(nonprofit-subsidiaries): Q&A-only article bodies and generic wording (standing rule) (087fded)
 * **Update**: content(nonprofit-subsidiaries): drop unsupported frequency comparison (Codex round-11 minor) (14e2a07)

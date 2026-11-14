@@ -1,5 +1,16 @@
 # Au Update Log
 
+## 2026-11-10
+* **Update**: AU non-compete: fair work instruments ban and public-sector exceptions (7f8ffab)
+* **Update**: AU non-compete: cite paras 2.67-2.68 for public-sector rule; disambiguate above-threshold sentence (8d009b6)
+
+## 2026-10-15
+* **Update**: fix(non-compete/au): casuals in the summary, full national-system quote, standalone openings, consequence cautions (peer review round 2) (3b58fee)
+* **Update**: fix(non-compete/au): ACT federal-reform citations support the claims they carry (peer review round 4) (3b85465)
+* **Update**: fix(non-compete/au): federal-reform cautions name the mistake and consequence only (peer review round 3 minors) (a3ece5e)
+* **Update**: fix(non-compete/au): scope the draft ban to national-system employees on annualised full-time-equivalent earnings (peer review round 1) (cd35c98)
+* **Update**: content(non-compete/au): ACT, NSW and Queensland — federal ban is now an exposure draft at the $190,100 threshold (d15dfff)
+
 ## 2026-10-03
 * **Update**: content: state only the Richmond construction holding the quote supports (#2993) (2202291)
 * **Update**: content: keep the Northern Territory employer-breach caution to the termination risk (#2993) (4c3b8cc)
