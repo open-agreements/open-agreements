@@ -19946,6 +19946,636 @@
       ]
     },
     {
+      "name": "openagreements-online-business-asset-purchase-agreement",
+      "tier": "internal",
+      "display_name": "Online Business Asset Purchase Agreement",
+      "category": "business-acquisition",
+      "description": "Purchaser-oriented asset purchase agreement for an online or software business, with explicit schedules and negotiable elections. The company that owns the assets sells them, its individual owner signs for the obligations allocated to the owner, and Closing follows signing once the stated conditions are satisfied or waived. Every schedule and election must be completed for the transaction before signing.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-online-business-asset-purchase-agreement",
+      "source": "OpenAgreements",
+      "attribution_text": "Original drafting by OpenAgreements contributors; no comparator source text is reproduced. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "buyer_name",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Full legal name of purchaser",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "buyer_description",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Entity type and jurisdiction, or individual",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "seller_name",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Full legal name of individual owner",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_description",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Entity type and jurisdiction",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "business_description",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Acquired operation and products",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "allocation_terms",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Agreed allocation of receipts and performance obligations: the relevant periods, dates/times/time zones and any straddle-period rule, and the allocation that applies to each Schedule C item. This does not set Closing, transfer title or satisfy operational acceptance; tax and price-adjustment measurement rules are stated separately. No inferred effective time.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "purchase_price_amount",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Amount and currency",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "payment_instructions",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Recipient, method and payment timing",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Governing jurisdiction",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "dispute_process",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Forum, procedure and interim relief",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "buyer_notice_address",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Address, email and notice recipient",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "seller_notice_address",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Address, email and notice recipient",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "notice_effectiveness",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Agreed delivery and receipt rules, including electronic failure and nonbusiness days.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "tax_allocation",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Transfer-tax responsibility, reporting allocation process, timing and dispute process; each depends on jurisdiction-specific review.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_assets",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule A: item ID, asset description, owner, acquired right, version/identifier, location and transfer instrument. Schedule A covers only owned rights or identified transferable licenses.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_exclusions",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule B: excluded assets, personal/shared accounts, retained code/content/data and dependencies; specify none affirmatively if none.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_liabilities",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule C: each assumed liability, relevant contract/order/cohort, amount or method, cutoff and exclusions; prepayments, refunds, chargebacks, credits, taxes and costs are allocated separately. If there are none, the schedule says so affirmatively.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_transfers",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule D: each domain/account/contract/license, provider/registrant, applicable transfer restrictions, required consents, permitted method, responsible party, deadline and missing-consent election. Linked billing and recovery dependencies are listed without secrets.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_deliverables",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule E: each closing instrument and technical deliverable, classification as closing-condition, escrow-release-condition or post-closing-obligation, responsible party, due date, affirmative test, reviewer, evidence, defect notice, cure, retest and failure consequence. Distinguish source code from deployed build and submitted from approved versions.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_disclosures",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule F: dated disclosures keyed to the affected representation, exceptions, known claims, incidents and incomplete ownership or consent evidence; specify none affirmatively where appropriate.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_revenue",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule G: historical measurement periods, gross/net/recurring definitions, currency, refunds, fees, taxes, nonrecurring items, source exports and reconciliation differences; identify agreed figures and exceptions.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_priority",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule H: each related instrument by parties/date/version, incorporated or continuing provisions, express conflict priority and any amendment; include broker and escrow obligations if relevant.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_data",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule I: transferred data categories, purposes, permissions/notices, retention limits, lawful migration route, safeguards, incident handling and seller retained-copy basis and deletion dates.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_transition",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule J: services, responsible personnel, hours, response windows, start/end, costs, access limits, documentation, escalation and exit.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_remedies",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Schedule K: liability survival by claim category, caps and exceptions, thresholds, recovery limits, exclusivity, fraud treatment and setoff election; state expressly whether each limitation applies or does not apply.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_adjustment",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Adjustment terms: baseline and closing measurement, accounting rules/hierarchy, statements, access, objections, independent determination and payment dates.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_earnout",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Earnout terms: metric, accounting rules, periods, cap if agreed, operating obligations, reporting/access, objections, independent determination, payment and acceleration/effect of resale or discontinuation.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_escrow",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Escrow/holdback terms: agent or holder, funding amount/timing, release tests/dates, objections, disputed reserve, partial release, fees, interest and controlling signed instructions.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_indemnity",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Indemnity allocation: indemnifying parties, covered claims/losses, retained/assumed liability allocation, beneficiaries and interaction with Schedule K.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_claims",
+          "type": "string",
+          "required": false,
+          "section": "Schedules",
+          "description": "Claims process: notice, required detail, response time, defense control and conflicts, counsel/costs, cooperation, settlement consent, direct claims and payment.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "buyer_signer",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Name of buyer signatory, or buyer personally.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "buyer_signer_capacity",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Actual authority/title, or individual signing personally.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "domains_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Included domain rights require registrar procedures.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "code_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Included software/source delivery requires reproducibility and deployed-version checks.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "accounts_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Material third-party platform accounts or contracts are involved.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "personal_data_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Personal data is included in the purchased assets.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "subscriptions_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Customer subscription continuity and prepaid performance are involved.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_adjustment",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Affirmative election of a price adjustment; no economic default.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_earnout",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Affirmative election of an earnout; no economic default.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_escrow",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Affirmative election of escrow or holdback; no economic default.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_transition",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Affirmative election of transition services.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_indemnity",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Affirmative election of contractual indemnification.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "transaction_structure",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Asset purchase only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "remedies_summary",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Survival, caps, thresholds and remedy elections (Schedule K)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "adjustment_summary",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Measure, calculation date and payment timing (Schedule L)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "earnout_summary",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Metric, period, cap and payment timing (Schedule M)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "escrow_summary",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Amount, purpose, holder and release terms (Schedule N)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "transition_summary",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Services, duration and fees (Schedule J)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnity_summary",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Covered parties, claims and limits (Schedules O and P)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Full legal name of asset-owning company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_address",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Address, email and notice recipient",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signer",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Full legal name of Company signatory.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signer_capacity",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Company signatory title.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "payment_verification_phone",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Agreed verification telephone number",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "personal_data_summary",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Personal data categories (Schedule I)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "seller_liability_terms",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Express allocation of Seller personal liability, including any joint liability, caps and exceptions. No assumption that Seller guarantees Company obligations.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "agreement_date",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Date this Agreement becomes binding",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "scheduled_closing_date",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Scheduled date and time for Closing, including time zone",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "outside_date",
+          "type": "string",
+          "required": false,
+          "section": "Key Terms",
+          "description": "Outside date and time, including time zone",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "closing_method",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Remote or physical Closing method and exchange coordinator",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "interim_covenants",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Agreed ordinary-course, preservation, access, consent, notice and prohibited-change terms before Closing",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "termination_terms",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Termination rights, deadlines, survival, access revocation, return or destruction, costs and deposited-fund treatment",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_buyer_financing_condition",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Affirmative election of a buyer financing Closing condition; false is the buyer-form default",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "buyer_financing_condition",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "If elected, exact financing condition, evidence, deadline and failure consequence",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_seller_qualifiers",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Affirmative election of scoped knowledge or materiality qualifiers",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "seller_qualifier_terms",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Covered representations, knowledge holder, inquiry standard, materiality standard and exclusions",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_seller_representative",
+          "type": "boolean",
+          "required": false,
+          "section": "Transaction",
+          "description": "Affirmative election to appoint a seller representative",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "seller_representative_terms",
+          "type": "string",
+          "required": false,
+          "section": "Transaction",
+          "description": "Representative identity, authority, reliance, replacement and notice mechanics",
+          "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-privacy-policy",
       "tier": "internal",
       "display_name": "Consumer Privacy Policy",
