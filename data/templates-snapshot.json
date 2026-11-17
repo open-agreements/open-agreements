@@ -19950,7 +19950,7 @@
       "tier": "internal",
       "display_name": "People’s Court Model Arbitration Clause",
       "category": "dispute-resolution",
-      "description": "A commercial arbitration clause adapted from People’s Court’s published sample, naming People’s Court as administrator and expressly electing AI-only arbitration by default. Offers AI-assisted human and selection-at-filing alternatives, retains the Rules’ human appeal, and includes notes on adapting the clause to other providers. Experimental starting point for negotiated B2B agreements and transaction-specific legal review.",
+      "description": "A provider-contributed commercial arbitration clause from People’s Court co-founder Shunhe Wang, adapted from People’s Court’s published sample, naming People’s Court as administrator and expressly electing AI-only arbitration by default. Offers AI-assisted human and selection-at-filing alternatives, retains the Rules’ human appeal, and includes notes on adapting the clause to other providers. Experimental starting point for negotiated B2B agreements and transaction-specific legal review.",
       "license": "CC-BY-4.0",
       "source_url": "https://peoplescourt.ai/clause",
       "source": "peoplescourt.ai",

@@ -30,7 +30,7 @@ The default is AI-only at the express request of the contributing People’s Cou
 For AI-assisted human, an AI panel assists with a draft, and the appointed human Arbitrator decides, may revise or reject the draft, and issues the Award in that Arbitrator’s own name.
 For selection at filing, AI-only applies unless every party then chooses AI-assisted human.
 Every election remains subject to the exact case-opening assent required by the Rules; an internal appeal waiver would require separate, express acceptance and is not included here.
-An explicit blank or unresolved field leaves an incomplete election in the draft and must be completed before signing; it is not a substitute for agreement to AI arbitration.
+An explicit blank on the standard fill path exits successfully and produces “The parties expressly agree to.” with an unfilled-priority-field notice; the declarative path rejects it. Do not sign that incomplete draft or assume a blank avoids the Rules’ AI-only default.
 
 ## Relationship to the published sample
 
@@ -41,7 +41,7 @@ The source of the People’s Court wording is the [published model clause](https
 | --- | --- |
 | People’s Court, Epistemic Labs Inc., Rules at filing, Wilmington seat, and FAA | Retained in the operative text. |
 | Delegation to the Tribunal and separability | Retained. |
-| Bracketed AI-only / AI-assisted human / selection-at-filing choice | Replaced with one fillable enum and an express election; AI-only is the visible default. Both tiers’ decision-maker roles are explained. |
+| Bracketed AI-only / AI-assisted human / selection-at-filing choice | Replaced with one fillable enum and an express election; AI-only is the visible default. Both tiers’ decision-maker roles, Rule 2.1’s case-opening confirmation, and the absence of an appeal waiver are made explicit. |
 | Proprietary adjudication technology | Retained, including the applicable-law and protective-treatment qualifications. |
 | Operative Award and judgment | Qualified expressly by the correction, additional-Award, appeal, and nonwaivable judicial rights already preserved by Rule 9.5; judicial venue follows Rule 12.3. |
 | Escrow or payment-mechanism authorization | Separated into the optional module below. It is not part of the default clause. |
@@ -49,7 +49,7 @@ The source of the People’s Court wording is the [published model clause](https
 
 The exact Rules text and procedure accepted for a filed case govern that case; amendments do not alter pending cases (Rules 1.3 and 13.2).
 The AI-only Tribunal may be one AI arbiter or an AI panel depending on the Rules’ amount and relief criteria; this template does not hardcode three panelists for every case (Rule 2.1).
-The process ordinarily uses written submissions without discovery, depositions, compulsory production, or an evidentiary hearing (Rules 4.11 and 5.8).
+The process ordinarily uses written submissions without an evidentiary hearing (Rule 4.11). It does not provide discovery, depositions, or compulsory production (Rule 5.8).
 The human appeal proceeds on the existing Record under Rule 9.3’s deferential standards, rather than a new hearing on the merits.
 The Rules preserve correction, additional-Award, and applicable execution-stay procedures (Articles 8-9).
 Review the [Rules of Procedure & Evidence](https://peoplescourt.ai/rules) and [Terms](https://peoplescourt.ai/legal/terms) before using the clause.
@@ -79,6 +79,21 @@ The Rules’ treatment of private filings and possible Award publication should 
 
 **Contributor affiliation:** Shunhe Wang, who proposed this contribution, is a co-founder of People’s Court.
 This is a disclosed contribution of that provider’s model clause for review by OpenAgreements; inclusion would not establish endorsement by OpenAgreements or another named organization.
+
+## Review the enforcement and provider terms
+
+**AI-only enforcement risk:** Do not assume that agreement to an AI decider makes its Award judicially enforceable. This template does not establish whether a court would treat a decision without human merits decision-making as an arbitral award under the FAA or applicable state law. Review the appointment, confirmation, and vacatur provisions in [9 U.S.C. §§ 5, 9–11](https://uscode.house.gov/view.xhtml?path=/prelim@title9/chapter1&edition=prelim) for the transaction. AI-assisted human arbitration provides a human first-instance decision; the limited internal human appeal is not the same safeguard. The AI-only default is retained to identify the contributed provider model, rather than as an OpenAgreements recommendation of its enforcement posture.
+
+The source clause delegates formation questions, but that wording does not eliminate judicial review of whether an agreement was formed. See [Ahlstrom v. DHI Mortgage Co., 21 F.4th 631, 635 (9th Cir. 2021)](https://cdn.ca9.uscourts.gov/datastore/opinions/2021/12/29/20-15114.pdf). Courts also decide which agreement governs when arbitration and court-forum agreements conflict: [Coinbase, Inc. v. Suski, 602 U.S. 143 (2024)](https://www.supremecourt.gov/opinions/23pdf/23-3_879d.pdf). Establish party identity, authority, and actual assent independently.
+
+Rule 2.1 requires confirmation through case-opening terms even where the contract selects a tier. The added confirmation sentence restates that provider requirement; it does not resolve how the provider would handle a respondent who refuses those terms. Before relying on a preselected human tier, confirm with the provider how it handles nonparticipation and whether the selected tier can proceed. Do not assume refusal changes the election or permits an AI-only substitution. Consider an express alternative forum if the agreed procedure cannot proceed.
+
+The following summarizes the provider materials checked on November 17, 2026; review the actual version and fees applicable at filing:
+
+- **Judicial venue:** Rule 12.3 specifies exclusive Delaware Court of Chancery venue, with another Delaware state or federal court as fallback if Chancery lacks subject-matter jurisdiction, and consent to personal jurisdiction and venue, unless the parties validly agree otherwise. Decide expressly whether a parent agreement’s forum clause should displace that rule. The operative clause’s reference to a “valid venue agreement” applies only to an agreement that is legally valid; it does not guarantee validity or court jurisdiction.
+- **Publication:** [Terms § 9](https://peoplescourt.ai/legal/terms) authorizes publication of a public version of a final Award as permitted by the Rules; case filings are not public by default. Assess this against transaction confidentiality obligations.
+- **Provider liability and disputes:** Terms § 13 contains a release for covered good-faith conduct and a covenant concerning claims based on disagreement with an Award. Sections 16.2–16.3 address Miami-Dade, Florida venue and class and jury waivers for provider disputes, distinct from judicial proceedings concerning the parties’ arbitration. Review the qualifications and enforceability of those provisions.
+- **Fees:** Rule 11.1 lists AI-only fees of 5.67% of the amount in dispute, AI-assisted human fees of $310 plus 5.67%, and appeal fees of 15.67% with a $520 minimum. These percentages have no stated maximum; retaining an appeal right does not mean it will be affordable. Confirm current fees and any waiver arrangements before selecting the provider.
 
 ## Generate and fill
 
