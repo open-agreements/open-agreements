@@ -8,6 +8,33 @@ name: CI
     branches: [main]
 
 jobs:
+  allure-project-access:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_TESTS_OPENAGREEMENTS }}
+    steps:
+      - name: Check report deployment project access (read only)
+        shell: bash
+        run: |
+          node --input-type=module <<'JS'
+          const {VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID} = process.env;
+          if (!VERCEL_TOKEN || !VERCEL_ORG_ID || !VERCEL_PROJECT_ID) process.exit(0);
+          for (const [label, route] of [
+            ['configured project and team', `/v9/projects/${encodeURIComponent(VERCEL_PROJECT_ID)}?teamId=${encodeURIComponent(VERCEL_ORG_ID)}`],
+            ['project by name in UseJunior', '/v9/projects/tests-openagreements?slug=use-junior'],
+          ]) {
+            const res = await fetch(`https://api.vercel.com${route}`, {headers: {Authorization: `Bearer ${VERCEL_TOKEN}`}});
+            console.log(`${label}: HTTP ${res.status}`);
+            if (res.ok) {
+              const project = await res.json();
+              console.log(`Expected project: ${project.name === 'tests-openagreements'}; configured ID matches: ${project.id === VERCEL_PROJECT_ID}; configured team matches: ${project.accountId === VERCEL_ORG_ID}`);
+            }
+          }
+          JS
+
   semgrep:
     permissions:
       actions: read
