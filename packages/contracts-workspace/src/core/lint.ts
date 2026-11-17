@@ -1,7 +1,7 @@
 import { CONTRACTS_GUIDE_FILE, CATALOG_FILE, INDEX_FILE, LIFECYCLE_DIRS } from './constants.js';
 import { loadConventions } from './convention-config.js';
 import { createProvider } from './filesystem-provider.js';
-import { collectWorkspaceDocuments, hasExecutedMarker, hasPartiallyExecutedMarker } from './indexer.js';
+import { collectWorkspaceDocuments } from './indexer.js';
 import type { WorkspaceProvider } from './provider.js';
 import type { ConventionConfig, LintFinding, LintReport } from './types.js';
 
@@ -40,7 +40,7 @@ export function lintWorkspace(rootDir: string, provider?: WorkspaceProvider): Li
     }
 
     // Use convention-configured marker pattern
-    const fileHasMarker = hasExecutedMarker(document.file_name, markerPattern);
+    const fileHasMarker = document.executed;
     const fileHasPartialMarker = document.partially_executed;
 
     if (document.lifecycle === 'executed' && !fileHasMarker && !fileHasPartialMarker) {

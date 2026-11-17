@@ -10,13 +10,13 @@ export function hasPartiallyExecutedMarker(fileName: string, pattern = PARTIALLY
   return withoutExtension.toLowerCase().endsWith(pattern.toLowerCase());
 }
 
-export function hasExecutedMarker(fileName: string, pattern = EXECUTED_SUFFIX): boolean {
+export function hasExecutedMarker(fileName: string, pattern = EXECUTED_SUFFIX, partialPattern = PARTIALLY_EXECUTED_SUFFIX): boolean {
   const withoutExtension = fileName.replace(/\.[^.]*$/u, '');
   // Check partially_executed first since '_partially_executed' ends with '_executed'
-  if (hasPartiallyExecutedMarker(fileName)) {
+  if (hasPartiallyExecutedMarker(fileName, partialPattern)) {
     return false;
   }
-  return withoutExtension.toLowerCase().endsWith(pattern);
+  return withoutExtension.toLowerCase().endsWith(pattern.toLowerCase());
 }
 
 export function collectWorkspaceDocuments(rootDir: string, provider?: WorkspaceProvider): DocumentRecord[] {
@@ -45,7 +45,7 @@ export function collectWorkspaceDocuments(rootDir: string, provider?: WorkspaceP
         : undefined;
       const partialMarkerPattern = conventions.executed_marker.partially_executed_marker?.pattern ?? PARTIALLY_EXECUTED_SUFFIX;
       const partiallyExecuted = hasPartiallyExecutedMarker(fileName, partialMarkerPattern);
-      const executed = partiallyExecuted ? false : hasExecutedMarker(fileName);
+      const executed = partiallyExecuted ? false : hasExecutedMarker(fileName, conventions.executed_marker.pattern, partialMarkerPattern);
       const status = executed ? 'executed' : partiallyExecuted ? 'partially_executed' : 'pending';
 
       records.push({
