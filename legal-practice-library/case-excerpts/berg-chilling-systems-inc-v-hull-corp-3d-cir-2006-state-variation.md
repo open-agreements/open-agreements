@@ -7,7 +7,7 @@ description: >-
 citation: 'Berg Chilling Sys., Inc. v. Hull Corp., 435 F.3d 455 (3d Cir. 2006).'
 resource: >-
   https://www.courtlistener.com/opinion/793037/berg-chilling-systems-inc-v-hull-corporation-sp-industries-inc/
-timestamp: '2026-09-28'
+timestamp: '2026-11-14'
 document_references:
   - type: Law Topic
     resource: >-

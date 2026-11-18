@@ -1,10 +1,15 @@
 ---
 type: Case Excerpt
 title: 'Smith v. Globe Life Insurance Co., 460 Mich. 446 (1999)'
-description: 'Smith v. Globe Life Ins. Co., 460 Mich. 446 (1999). — quoted in 1 document(s).'
-citation: 'Smith v. Globe Life Ins. Co., 460 Mich. 446 (1999).'
+description: >-
+  Smith v. Globe Life Ins. Co., 460 Mich. 446 (1999), overruled by Attorney
+  General v. Eli Lilly & Co., No. 165961 (Mich. July 31, 2026). — quoted in 1
+  document(s).
+citation: >-
+  Smith v. Globe Life Ins. Co., 460 Mich. 446 (1999), overruled by Attorney
+  General v. Eli Lilly & Co., No. 165961 (Mich. July 31, 2026).
 resource: 'https://www.courtlistener.com/opinion/1693300/smith-v-globe-life-insurance/'
-timestamp: '2026-06-11'
+timestamp: '2026-10-19'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
@@ -15,7 +20,7 @@ tags:
 
 # Smith v. Globe Life Insurance Co., 460 Mich. 446 (1999)
 
-*Smith v. Globe Life Ins. Co., 460 Mich. 446 (1999).*
+*Smith v. Globe Life Ins. Co., 460 Mich. 446 (1999), overruled by Attorney General v. Eli Lilly & Co., No. 165961 (Mich. July 31, 2026).*
 
 Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
 

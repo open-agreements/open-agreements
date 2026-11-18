@@ -6,7 +6,7 @@ description: >-
   quoted in 1 document(s).
 citation: 'Pratt v. KSE Sportsman Media, Inc., 586 F. Supp. 3d 666 (E.D. Mich. 2022).'
 resource: 'https://caselaw.findlaw.com/court/us-dis-crt-e-d-mic-nor-div/2162951.html'
-timestamp: '2026-06-11'
+timestamp: '2026-10-19'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'

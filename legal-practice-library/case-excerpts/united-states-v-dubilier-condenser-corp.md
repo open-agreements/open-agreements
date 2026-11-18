@@ -7,7 +7,7 @@ description: >-
 citation: 'United States v. Dubilier Condenser Corp., 289 U.S. 178 (1933).'
 resource: >-
   https://www.courtlistener.com/opinion/1087847/united-states-v-dubilier-condenser-corp/
-timestamp: '2026-07-03'
+timestamp: '2026-11-14'
 document_references:
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/invention-assignment/us'
