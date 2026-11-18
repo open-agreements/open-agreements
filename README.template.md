@@ -98,6 +98,12 @@ Choose an execution mode that matches your document-sensitivity and internal
 policy requirements. See the [trust-boundary status](https://github.com/open-agreements/open-agreements/blob/main/docs/trust-checklist.md)
 and [security policy](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md).
 
+## Built With OpenAgreements
+
+- [Safe Clause](https://safeclause.deltaxy.ai) — AI-powered contract platform for startups. [#1 on vibecode.law, March 2026](https://vibecode.law/showcase/safe-clause-317416).
+
+*Building on OpenAgreements? Open a PR to add your project.*
+
 ## License
 
 Project code is licensed under [Apache License 2.0](LICENSE). Content retains its
