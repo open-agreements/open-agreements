@@ -6,7 +6,7 @@ description: >-
   quoted in 3 document(s).
 citation: 'Access Organics, Inc. v. Hernandez, 2008 MT 4, 341 Mont. 73, 175 P.3d 899.'
 resource: 'https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/'
-timestamp: '2026-07-02'
+timestamp: '2026-11-14'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/montana'
@@ -55,11 +55,11 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/#:~:text=Non%2Dcompete%20agreements%20entered%20into%20by,be%20supported%20by%20independent%20consideration.>
 
-### access-organics-inc-v-hernandez-since-montana-s-public-policy-strongly-5e1716e7 {#access-organics-inc-v-hernandez-since-montana-s-public-policy-strongly-5e1716e7}
+### access-organics-inc-v-hernandez-since-montana-s-public-policy-strongly-66710417 {#access-organics-inc-v-hernandez-since-montana-s-public-policy-strongly-66710417}
 
-> Since Montana’s public policy strongly disfavors agreements in restraint of trade, as discussed above, we construe non-compete agreements strictly
+> Since Montana’s public policy strongly disfavors agreements in restraint of trade, as discussed above, we construe non-compete agreements strictly: Contracts not to compete are by their nature in restraint of trade and are not favorably regarded by the courts.
 
 - supports: `holdover-clause-limit`
 - source_cards: `access-organics-strict-construction`
 - cited_by: [Employee Invention Assignment in Montana](../invention-assignment/us/montana.md)
-- link_to_source: <https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/#:~:text=Since%20Montana%E2%80%99s%20public%20policy%20strongly,we%20construe%20non%2Dcompete%20agreements%20strictly>
+- link_to_source: <https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/#:~:text=Since%20Montana%E2%80%99s%20public%20policy%20strongly,favorably%20regarded%20by%20the%20courts.>

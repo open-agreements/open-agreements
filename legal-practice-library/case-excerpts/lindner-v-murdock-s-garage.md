@@ -6,7 +6,7 @@ description: >-
   quoted in 9 document(s).
 citation: 'Lindner v Murdock''s Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J).'
 resource: 'https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf'
-timestamp: '2026-06-16'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
@@ -91,8 +91,8 @@ Supporting case-law excerpt. Quoted across 9 document(s) in the OpenAgreements l
 
 > The onus was on the plaintiff firm to prove circumstances showing that the restriction on the defendant's freedom to work was reasonable.
 
-- supports: `employer-breach`, `enforceability`, `reasonableness-factors`
-- source_cards: `lindner-onus`, `lindner-onus-breach`, `lindner-onus-eb`, `lindner-onus-reasonable`, `lindner-onus-scope`
+- supports: `employer-breach`, `enforceability`, `federal-reform`, `reasonableness-factors`
+- source_cards: `lindner-onus`, `lindner-onus-breach`, `lindner-onus-eb`, `lindner-onus-reasonable`, `lindner-onus-reform`, `lindner-onus-scope`
 - cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md), [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md), [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md), [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md), [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md), [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md), [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

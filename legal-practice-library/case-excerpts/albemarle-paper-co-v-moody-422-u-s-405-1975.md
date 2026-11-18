@@ -4,7 +4,7 @@ title: 'Albemarle Paper Co. v. Moody, 422 U.S. 405 (1975)'
 description: 'Albemarle Paper Co. v. Moody, 422 U.S. 405 (1975). — quoted in 2 document(s).'
 citation: 'Albemarle Paper Co. v. Moody, 422 U.S. 405 (1975).'
 resource: 'https://www.courtlistener.com/opinion/109299/albemarle-paper-co-v-moody'
-timestamp: '2026-04-20'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: >-

@@ -1,7 +1,33 @@
 # Us Update Log
 
+## 2026-11-14
+* **Update**: fix(privacy/connecticut): cite the amended opt-out-signal provision, § 42-520(c)(1)(A)(ii) (9d6aaca)
+* **Update**: fix(privacy/connecticut): drop the 'Yes.' fragment opener in the universal-opt-out answer (peer review) (eb96857)
+* **Update**: fix(privacy/connecticut): peer review round 4 (FCRA exemption scope; opt-out signal described from the statute, not GPC) (ef6566c)
+
+## 2026-11-06
+* **Update**: content: 'last update' instead of 'last review' on unreviewed pages (33ba60d)
+* **Update**: content(privacy/FL): date the HB 3 appeal status instead of 'last update' (7492f6a)
+* **Update**: content(privacy/FL): leave the HB 3 status note as it is on main (9419716)
+
+## 2026-10-19
+* **Update**: fix(privacy/michigan): advisory fixes (consumer-lawsuit opener, Smith card proposition) (5b430f2)
+* **Update**: fix(privacy/michigan): Attorney General v. Eli Lilly overruled Smith v. Globe Life (freshness #3304) (6fde6a2)
+
 ## 2026-10-15
+* **Update**: fix(privacy/de): scope the payment-only exclusion to the 10,000-consumer threshold (peer review round 3) (02eda1f)
+* **Update**: fix(privacy/connecticut): keep the applicability opener within 50 words (080b57e)
 * **Update**: content(privacy): New Jersey's mandatory cure period ended July 1, 2026 (#3543) (2002a46)
+* **Update**: fix(privacy/connecticut): peer review round 1 (exemption support, opener scope, rights and notice precision) (28bd3ab)
+* **Update**: content(privacy): add upcoming NH child-data sale ban and KY smart-TV viewing-data consent (#3543) (349775d)
+* **Update**: content(privacy/de): add the January 1, 2027 DPDPA amendments (85 Del. Laws c. 463) (4483d85)
+* **Update**: fix(privacy/de): cite the exclusions and qualify the thresholds (peer review round 1) (4e4aa3c)
+* **Update**: fix(privacy/connecticut): peer review round 3 (scope each applicability qualification to its own test) (7da4954)
+* **Update**: fix(privacy/connecticut): apply P.A. 25-113 amendments in force July 1, 2026 (b29b73a)
+* **Update**: content(privacy/ky): scope the ACR consent duty to the statutory definition (peer review round 1) (c75b8d6)
+* **Update**: content(privacy/nh): cite the I(e-1) sale ban to the enacted chapter law (c95e9a1)
+* **Update**: fix(privacy/connecticut): peer review round 2 (payment-only exclusion in opener and summary, COPPA knowledge condition) (d84c425)
+* **Update**: fix(privacy/de): keep the higher-education carve-back; split the applicability opening (peer review round 2) (dadf5a1)
 
 ## 2026-10-02
 * **Update**: content: cut the passages disputed in peer review round 2 on #3151 (#2993) (2ab7a34)

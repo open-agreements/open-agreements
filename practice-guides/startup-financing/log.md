@@ -1,5 +1,9 @@
 # Startup Financing Update Log
 
+## 2026-11-06
+* **Update**: content: record Steven Obiajulu's review of the 12 AI-draft pages (5190c83)
+* **Update**: copy(footer): drop the "research preview" label (a3c1988)
+
 ## 2026-10-01
 * **Update**: Keep pilot legal guides in neutral consequential voice (06b564a)
 * **Update**: Qualify SAFE form edits and cite Stanford holding in place (1aede72)

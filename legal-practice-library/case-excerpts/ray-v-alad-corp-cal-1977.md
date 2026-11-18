@@ -4,7 +4,7 @@ title: Ray v. Alad Corp. (Cal. 1977)
 description: 'Ray v. Alad Corp., 19 Cal. 3d 22 (1977). — quoted in 2 document(s).'
 citation: 'Ray v. Alad Corp., 19 Cal. 3d 22 (1977).'
 resource: 'https://www.courtlistener.com/opinion/1221982/ray-v-alad-corp/'
-timestamp: '2026-09-28'
+timestamp: '2026-11-14'
 document_references:
   - type: Law Topic
     resource: >-

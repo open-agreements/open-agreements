@@ -8,7 +8,7 @@ citation: >-
   Sisk v. Scripps Media, Inc., No. 8:24CV86, 2024 WL 1175140 (D. Neb. Mar. 18,
   2024).
 resource: 'https://www.govinfo.gov/app/details/USCOURTS-ned-8_24-cv-00086'
-timestamp: '2026-06-12'
+timestamp: '2026-10-15'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'

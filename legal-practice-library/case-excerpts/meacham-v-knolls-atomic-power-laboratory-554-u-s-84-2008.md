@@ -7,7 +7,7 @@ description: >-
 citation: 'Meacham v. Knolls Atomic Power Laboratory, 554 U.S. 84 (2008).'
 resource: >-
   https://www.courtlistener.com/opinion/145789/meacham-v-knolls-atomic-power-laboratory
-timestamp: '2026-04-20'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: >-

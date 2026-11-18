@@ -115,7 +115,7 @@ Under Alabama law, the rules on this point are:
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-10-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from an Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Alabama*, OpenAgreements (last updated October 6, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/alabama.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-10-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from an Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Alabama*, OpenAgreements (last updated October 6, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/alabama.
 
 [^aldol-guidance-mw]: **Alabama Department of Labor, Wage and Hour Info** — "Alabama does not have any state laws governing wage and hour issues." *Alabama Department of Labor, Wage and Hour Info* <https://labor.alabama.gov/Wage_and_Hour_Info.pdf>
 

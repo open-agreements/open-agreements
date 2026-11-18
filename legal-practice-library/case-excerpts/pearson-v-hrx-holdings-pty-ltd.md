@@ -5,7 +5,7 @@ description: 'Pearson v HRX Holdings Pty Ltd [2012] FCAFC 111. — quoted in 1 d
 citation: 'Pearson v HRX Holdings Pty Ltd [2012] FCAFC 111.'
 resource: >-
   https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/full/2012/2012fcafc0111
-timestamp: '2026-06-10'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/new-south-wales'

@@ -9,7 +9,7 @@ citation: >-
   496, 265 P.3d 646.
 resource: >-
   https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/
-timestamp: '2026-07-02'
+timestamp: '2026-11-14'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/montana'
