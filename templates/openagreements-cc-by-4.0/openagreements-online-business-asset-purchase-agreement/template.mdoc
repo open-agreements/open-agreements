@@ -1,0 +1,914 @@
+---
+template_id: openagreements-online-business-asset-purchase-agreement
+name: Online Business Asset Purchase Agreement
+category: business-acquisition
+description: >-
+  Purchaser-oriented asset purchase agreement for an online or software business, with explicit
+  schedules and negotiable elections. The company that owns the assets sells them, its individual
+  owner signs for the obligations allocated to the owner, and Closing follows signing once the
+  stated conditions are satisfied or waived. Every schedule and election must be completed for the
+  transaction before signing.
+source_url: >-
+  https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-online-business-asset-purchase-agreement
+version: 0.4.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Original drafting by OpenAgreements contributors; no comparator source text is reproduced.
+  Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Online Business Asset Purchase Agreement
+  label: OpenAgreements Online Business Asset Purchase Agreement
+  version: 0.4.0
+  license: Free to use under CC BY 4.0
+  defined_term_highlight_mode: none
+sections:
+  cover_terms:
+    section_label: Key Terms
+    heading_title: Key Terms
+  standard_terms:
+    section_label: Terms and Schedules
+    heading_title: Terms and Schedules
+  signature:
+    section_label: Signatures
+    heading_title: Signatures
+fields:
+  - name: buyer_name
+    type: string
+    description: Full legal name of purchaser
+    section: Transaction
+  - name: buyer_description
+    type: string
+    description: Entity type and jurisdiction, or individual
+    section: Transaction
+  - name: seller_name
+    type: string
+    description: Full legal name of individual owner
+    section: Transaction
+  - name: company_description
+    type: string
+    description: Entity type and jurisdiction
+    section: Transaction
+  - name: business_description
+    type: string
+    description: Acquired operation and products
+    section: Transaction
+  - name: allocation_terms
+    type: string
+    description: >-
+      Agreed allocation of receipts and performance obligations: the relevant periods,
+      dates/times/time zones and any straddle-period rule, and the allocation that applies to each
+      Schedule C item. This does not set Closing, transfer title or satisfy operational acceptance;
+      tax and price-adjustment measurement rules are stated separately. No inferred effective time.
+    section: Transaction
+  - name: purchase_price_amount
+    type: string
+    description: Amount and currency
+    section: Transaction
+  - name: payment_instructions
+    type: string
+    description: Recipient, method and payment timing
+    section: Transaction
+  - name: governing_law
+    type: string
+    description: Governing jurisdiction
+    section: Transaction
+  - name: dispute_process
+    type: string
+    description: Forum, procedure and interim relief
+    section: Transaction
+  - name: buyer_notice_address
+    type: string
+    description: Address, email and notice recipient
+    section: Transaction
+  - name: seller_notice_address
+    type: string
+    description: Address, email and notice recipient
+    section: Transaction
+  - name: notice_effectiveness
+    type: string
+    description: Agreed delivery and receipt rules, including electronic failure and nonbusiness days.
+    section: Transaction
+  - name: tax_allocation
+    type: string
+    description: >-
+      Transfer-tax responsibility, reporting allocation process, timing and dispute process; each
+      depends on jurisdiction-specific review.
+    section: Transaction
+  - name: schedule_assets
+    type: string
+    description: >-
+      Schedule A: item ID, asset description, owner, acquired right, version/identifier, location
+      and transfer instrument. Schedule A covers only owned rights or identified transferable
+      licenses.
+    section: Schedules
+  - name: schedule_exclusions
+    type: string
+    description: >-
+      Schedule B: excluded assets, personal/shared accounts, retained code/content/data and
+      dependencies; specify none affirmatively if none.
+    section: Schedules
+  - name: schedule_liabilities
+    type: string
+    description: >-
+      Schedule C: each assumed liability, relevant contract/order/cohort, amount or method, cutoff
+      and exclusions; prepayments, refunds, chargebacks, credits, taxes and costs are allocated
+      separately. If there are none, the schedule says so affirmatively.
+    section: Schedules
+  - name: schedule_transfers
+    type: string
+    description: >-
+      Schedule D: each domain/account/contract/license, provider/registrant, applicable transfer
+      restrictions, required consents, permitted method, responsible party, deadline and
+      missing-consent election. Linked billing and recovery dependencies are listed without
+      secrets.
+    section: Schedules
+  - name: schedule_deliverables
+    type: string
+    description: >-
+      Schedule E: each closing instrument and technical deliverable, classification as
+      closing-condition, escrow-release-condition or post-closing-obligation, responsible party, due
+      date, affirmative test, reviewer, evidence, defect notice, cure, retest and failure
+      consequence. Distinguish source code from deployed build and submitted from approved versions.
+    section: Schedules
+  - name: schedule_disclosures
+    type: string
+    description: >-
+      Schedule F: dated disclosures keyed to the affected representation, exceptions, known claims,
+      incidents and incomplete ownership or consent evidence; specify none affirmatively where
+      appropriate.
+    section: Schedules
+  - name: schedule_revenue
+    type: string
+    description: >-
+      Schedule G: historical measurement periods, gross/net/recurring definitions, currency,
+      refunds, fees, taxes, nonrecurring items, source exports and reconciliation differences;
+      identify agreed figures and exceptions.
+    section: Schedules
+  - name: schedule_priority
+    type: string
+    description: >-
+      Schedule H: each related instrument by parties/date/version, incorporated or continuing
+      provisions, express conflict priority and any amendment; include broker and escrow obligations
+      if relevant.
+    section: Schedules
+  - name: schedule_data
+    type: string
+    description: >-
+      Schedule I: transferred data categories, purposes, permissions/notices, retention limits,
+      lawful migration route, safeguards, incident handling and seller retained-copy basis and
+      deletion dates.
+    section: Schedules
+  - name: schedule_transition
+    type: string
+    description: >-
+      Schedule J: services, responsible personnel, hours, response windows, start/end, costs, access
+      limits, documentation, escalation and exit.
+    section: Schedules
+  - name: schedule_remedies
+    type: string
+    description: >-
+      Schedule K: liability survival by claim category, caps and exceptions, thresholds, recovery
+      limits, exclusivity, fraud treatment and setoff election; state expressly whether each
+      limitation applies or does not apply.
+    section: Schedules
+  - name: schedule_adjustment
+    type: string
+    description: >-
+      Adjustment terms: baseline and closing measurement, accounting rules/hierarchy, statements,
+      access, objections, independent determination and payment dates.
+    section: Schedules
+  - name: schedule_earnout
+    type: string
+    description: >-
+      Earnout terms: metric, accounting rules, periods, cap if agreed, operating obligations,
+      reporting/access, objections, independent determination, payment and acceleration/effect of
+      resale or discontinuation.
+    section: Schedules
+  - name: schedule_escrow
+    type: string
+    description: >-
+      Escrow/holdback terms: agent or holder, funding amount/timing, release tests/dates,
+      objections, disputed reserve, partial release, fees, interest and controlling signed
+      instructions.
+    section: Schedules
+  - name: schedule_indemnity
+    type: string
+    description: >-
+      Indemnity allocation: indemnifying parties, covered claims/losses, retained/assumed liability
+      allocation, beneficiaries and interaction with Schedule K.
+    section: Schedules
+  - name: schedule_claims
+    type: string
+    description: >-
+      Claims process: notice, required detail, response time, defense control and conflicts,
+      counsel/costs, cooperation, settlement consent, direct claims and payment.
+    section: Schedules
+  - name: buyer_signer
+    type: string
+    description: Name of buyer signatory, or buyer personally.
+    section: Transaction
+  - name: buyer_signer_capacity
+    type: string
+    description: Actual authority/title, or individual signing personally.
+    section: Transaction
+  - name: domains_included
+    type: boolean
+    description: Included domain rights require registrar procedures.
+    section: Transaction
+  - name: code_included
+    type: boolean
+    description: Included software/source delivery requires reproducibility and deployed-version checks.
+    section: Transaction
+  - name: accounts_included
+    type: boolean
+    description: Material third-party platform accounts or contracts are involved.
+    section: Transaction
+  - name: personal_data_included
+    type: boolean
+    description: Personal data is included in the purchased assets.
+    section: Transaction
+  - name: subscriptions_included
+    type: boolean
+    description: Customer subscription continuity and prepaid performance are involved.
+    section: Transaction
+  - name: include_adjustment
+    type: boolean
+    description: Affirmative election of a price adjustment; no economic default.
+    section: Transaction
+  - name: include_earnout
+    type: boolean
+    description: Affirmative election of an earnout; no economic default.
+    section: Transaction
+  - name: include_escrow
+    type: boolean
+    description: Affirmative election of escrow or holdback; no economic default.
+    section: Transaction
+  - name: include_transition
+    type: boolean
+    description: Affirmative election of transition services.
+    section: Transaction
+  - name: include_indemnity
+    type: boolean
+    description: Affirmative election of contractual indemnification.
+    section: Transaction
+  - name: transaction_structure
+    type: string
+    description: Asset purchase only
+    section: Key Terms
+  - name: remedies_summary
+    type: string
+    description: Survival, caps, thresholds and remedy elections (Schedule K)
+    section: Key Terms
+  - name: adjustment_summary
+    type: string
+    description: Measure, calculation date and payment timing (Schedule L)
+    section: Key Terms
+  - name: earnout_summary
+    type: string
+    description: Metric, period, cap and payment timing (Schedule M)
+    section: Key Terms
+  - name: escrow_summary
+    type: string
+    description: Amount, purpose, holder and release terms (Schedule N)
+    section: Key Terms
+  - name: transition_summary
+    type: string
+    description: Services, duration and fees (Schedule J)
+    section: Key Terms
+  - name: indemnity_summary
+    type: string
+    description: Covered parties, claims and limits (Schedules O and P)
+    section: Key Terms
+  - name: company_name
+    type: string
+    description: Full legal name of asset-owning company
+    section: Transaction
+  - name: company_notice_address
+    type: string
+    description: Address, email and notice recipient
+    section: Transaction
+  - name: company_signer
+    type: string
+    description: Full legal name of Company signatory.
+    section: Transaction
+  - name: company_signer_capacity
+    type: string
+    description: Company signatory title.
+    section: Transaction
+  - name: payment_verification_phone
+    type: string
+    description: Agreed verification telephone number
+    section: Transaction
+  - name: personal_data_summary
+    type: string
+    description: Personal data categories (Schedule I)
+    section: Transaction
+  - name: seller_liability_terms
+    type: string
+    description: >-
+      Express allocation of Seller personal liability, including any joint liability, caps and
+      exceptions. No assumption that Seller guarantees Company obligations.
+    section: Transaction
+  - name: agreement_date
+    type: string
+    description: Date this Agreement becomes binding
+    section: Key Terms
+  - name: scheduled_closing_date
+    type: string
+    description: Scheduled date and time for Closing, including time zone
+    section: Key Terms
+  - name: outside_date
+    type: string
+    description: Outside date and time, including time zone
+    section: Key Terms
+  - name: closing_method
+    type: string
+    description: Remote or physical Closing method and exchange coordinator
+    section: Transaction
+  - name: interim_covenants
+    type: string
+    description: >-
+      Agreed ordinary-course, preservation, access, consent, notice and prohibited-change terms
+      before Closing
+    section: Transaction
+  - name: termination_terms
+    type: string
+    description: >-
+      Termination rights, deadlines, survival, access revocation, return or destruction, costs and
+      deposited-fund treatment
+    section: Transaction
+  - name: include_buyer_financing_condition
+    type: boolean
+    description: Affirmative election of a buyer financing Closing condition; false is the buyer-form default
+    section: Transaction
+  - name: buyer_financing_condition
+    type: string
+    description: If elected, exact financing condition, evidence, deadline and failure consequence
+    section: Transaction
+  - name: include_seller_qualifiers
+    type: boolean
+    description: Affirmative election of scoped knowledge or materiality qualifiers
+    section: Transaction
+  - name: seller_qualifier_terms
+    type: string
+    description: >-
+      Covered representations, knowledge holder, inquiry standard, materiality standard and
+      exclusions
+    section: Transaction
+  - name: include_seller_representative
+    type: boolean
+    description: Affirmative election to appoint a seller representative
+    section: Transaction
+  - name: seller_representative_terms
+    type: string
+    description: Representative identity, authority, reliance, replacement and notice mechanics
+    section: Transaction
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - buyer
+  - company
+  - seller
+signature_roles:
+  - buyer
+  - company
+  - seller
+mutation_policy: terms
+maturity: experimental
+---
+
+# Online Business Asset Purchase Agreement
+
+{% agreement-section type="cover_terms" %}
+## Key Terms
+
+Capitalized Key Terms have the meanings below. Company sells assets. Seller is its individual owner. This Agreement becomes binding on the Agreement Date and Closing occurs later only when the stated conditions are satisfied or waived. Purchased Assets, Excluded Assets and Assumed Liabilities are defined under Definitions. The schedule index follows.
+
+{% cover-terms %}
+{% cover-term kind="row" label="Agreement Date" field="agreement_date" /%}
+{% cover-term kind="row" label="Scheduled Closing" field="scheduled_closing_date" /%}
+{% cover-term kind="row" label="Outside Date" field="outside_date" /%}
+{% cover-term kind="group" label="Buyer" /%}
+{% cover-term kind="subrow" label="Full Legal Name" field="buyer_name" /%}
+{% cover-term kind="subrow" label="Entity or Individual" field="buyer_description" /%}
+{% cover-term kind="subrow" label="Notice Address" field="buyer_notice_address" /%}
+{% cover-term kind="group" label="Company" /%}
+{% cover-term kind="subrow" label="Full Legal Name" field="company_name" /%}
+{% cover-term kind="subrow" label="Entity" field="company_description" /%}
+{% cover-term kind="subrow" label="Notice Address" field="company_notice_address" /%}
+{% cover-term kind="group" label="Seller" /%}
+{% cover-term kind="subrow" label="Full Legal Name" field="seller_name" /%}
+{% cover-term kind="subrow" label="Notice Address" field="seller_notice_address" /%}
+{% cover-term kind="row" label="Business" field="business_description" /%}
+{% cover-term kind="row" label="Transaction Structure" field="transaction_structure" /%}
+{% cover-term kind="group" label="Purchase Price" /%}
+{% cover-term kind="subrow" label="Purchase Price" field="purchase_price_amount" /%}
+{% cover-term kind="subrow" label="Payment Terms" field="payment_instructions" /%}
+{% cover-term kind="subrow" label="Verification Telephone" field="payment_verification_phone" /%}
+{% cover-term kind="subrow" label="Price Adjustment" field="adjustment_summary" include-when="include_adjustment" /%}
+{% cover-term kind="subrow" label="Earnout" field="earnout_summary" include-when="include_earnout" /%}
+{% cover-term kind="subrow" label="Purchase Price Escrow or Holdback" field="escrow_summary" include-when="include_escrow" /%}
+{% cover-term kind="row" label="Personal Data" field="personal_data_summary" include-when="personal_data_included" /%}
+{% cover-term kind="row" label="Transition Services" field="transition_summary" include-when="include_transition" /%}
+{% cover-term kind="row" label="Indemnification" field="indemnity_summary" include-when="include_indemnity" /%}
+{% cover-term kind="row" label="Liability Limits and Remedies" field="remedies_summary" /%}
+{% cover-term kind="row" label="Governing Law" field="governing_law" /%}
+{% cover-term kind="row" label="Dispute Resolution" field="dispute_process" /%}
+{% /cover-terms %}
+
+{% /agreement-section %}
+
+{% agreement-section type="standard_terms" %}
+## Terms and Schedules
+
+### Schedule Index
+
+Schedule A (Purchased Assets)
+
+Schedule B (Excluded Assets)
+
+Schedule C (Assumed Liabilities and Allocations)
+
+Schedule D (Transfers and Consents)
+
+Schedule E (Closing Deliverables and Acceptance)
+
+Schedule F (Disclosure Exceptions)
+
+Schedule G (Financial Information)
+
+Schedule H (Related Agreements)
+
+Schedule I (Data Transfer and Retention) (if elected or applicable)
+
+Schedule J (Transition Services) (if elected or applicable)
+
+Schedule K (Liability Limits and Remedies)
+
+Schedule L (Purchase Price Adjustment) (if elected or applicable)
+
+Schedule M (Earnout) (if elected or applicable)
+
+Schedule N (Purchase Price Escrow and Holdback) (if elected or applicable)
+
+Schedule O (Indemnification) (if elected or applicable)
+
+Schedule P (Claims Procedure) (if elected or applicable)
+
+
+{% clause id="definitions" type="definitions" %}
+### Definitions
+
+Purchased Assets means only the rights identified in Schedule A (Purchased Assets). Excluded Assets means the assets retained under Schedule B (Excluded Assets). Assumed Liabilities means only the obligations expressly assumed under Schedule C (Assumed Liabilities and Allocations). Agreement Date means the date stated in Key Terms. Closing means consummation of the purchase and sale under the Closing section. Outside Date means the outside date stated in Key Terms. The schedules form part of this Agreement. References to a schedule include its stated semantic title. Schedule descriptions and express operative terms control over summaries.
+
+{% /clause %}
+
+{% clause id="purchase-sale" %}
+### Purchase and Sale
+
+
+
+{% /clause %}
+
+{% clause id="sale-perimeter" level=1 %}
+#### Purchased and Excluded Assets
+
+At Closing, Company sells and transfers the Purchased Assets to Buyer. No shares, membership interests or other equity interests are transferred.
+
+Schedule A (Purchased Assets) identifies each transferred right and its owner. A right owned by another person transfers only under that person's signed instrument. The Excluded Assets remain with Company. Necessary rights in retained assets are licensed only as stated in Schedule D (Transfers and Consents).
+
+{% /clause %}
+
+{% clause id="liability-allocation" level=1 %}
+#### Assumed and Retained Liabilities
+
+Buyer assumes only liabilities expressly identified as assumed in Schedule C (Assumed Liabilities and Allocations), and only to the extent stated there. Company remains responsible for all other liabilities of Company and the Business, including obligations arising from Company's breach before Closing, except to the extent Schedule C (Assumed Liabilities and Allocations) expressly identifies and allocates a particular obligation otherwise. Transfer of an asset or delivery of a credential does not expand Buyer's assumption.
+
+Receipts and performance obligations are allocated as follows: {% field name="allocation_terms" /%} Schedule C (Assumed Liabilities and Allocations) identifies the applicable allocation for each assumed obligation and states how obligations spanning an allocation period are apportioned. These allocations do not change the time of Closing or the delivery and acceptance requirements in Schedule E (Closing Deliverables and Acceptance). Tax allocation and any purchase price adjustment are governed by their respective provisions. Each party shall forward any payment or demand belonging to the other under that allocation, provide supporting records, and settle amounts on the timetable in Schedule C (Assumed Liabilities and Allocations). No party may recover the same item twice through liability allocation, price adjustment, escrow or a claim.
+
+{% /clause %}
+
+{% clause id="purchase-price" %}
+### Purchase Price
+
+
+
+{% /clause %}
+
+{% clause id="price-payment" level=1 %}
+#### Payment
+
+The Purchase Price is the amount stated in Key Terms, modified only by the adjustment or earnout expressly included in this Agreement. Buyer shall pay Company in accordance with the Payment Terms in Key Terms. Before payment, Buyer shall call the verification telephone number stated in Key Terms to confirm the recipient and account instructions with the intended recipient. A change of payment destination requires the same telephone verification and the recipient's written confirmation. A telephone number supplied only in the change request is not the verification number. An unverified email alone does not change payment instructions.
+
+{% /clause %}
+
+{% clause id="price-adjustment" level=1 include-when="include_adjustment" %}
+#### Purchase Price Adjustment
+
+The parties shall calculate and settle the price adjustment under Schedule L (Purchase Price Adjustment). Each party shall provide the records required by those terms and may challenge a calculation through the stated process. An accounting determination resolves only matters assigned to that process; other disputes remain subject to the dispute provision.
+
+{% /clause %}
+
+{% clause id="earnout" level=1 include-when="include_earnout" %}
+#### Earnout
+
+Buyer shall calculate and pay contingent consideration under Schedule M (Earnout). The stated operating obligations, reporting access and dispute process govern the measurement periods. No projection or historical result guarantees an earnout payment. Changes in ownership, operations or accounting affect the earnout only as those terms provide.
+
+{% /clause %}
+
+{% clause id="escrow" level=1 include-when="include_escrow" %}
+#### Purchase Price Escrow and Holdback
+
+The parties shall fund and administer the purchase-price escrow or holdback under Schedule N (Purchase Price Escrow and Holdback). Schedule N (Purchase Price Escrow and Holdback) identifies separately any price-adjustment reserve, indemnity reserve or payment held pending transfer acceptance. Source-code custody or transaction escrow is governed only by the separate instructions identified in Schedule H (Related Agreements). This Agreement imposes no obligation on an escrow agent beyond those the agent accepts in signed instructions. Those instructions and Schedule H (Related Agreements) shall resolve any inconsistency before funding. A transfer test is satisfied only under Schedule E (Closing Deliverables and Acceptance); delivery of a password alone is not acceptance. Release of funds does not waive a surviving claim unless Schedule K (Liability Limits and Remedies) expressly provides that result.
+
+{% /clause %}
+
+{% clause id="taxes-reporting" level=1 %}
+#### Taxes and Reporting
+
+The parties allocate transfer taxes, purchase-price reporting and related cooperation as follows: {% field name="tax_allocation" /%} Each shall provide the information needed for the agreed reporting and notify the other of a material inconsistency or challenge affecting that allocation. Contractual allocation between the parties does not release any party from an obligation owed to a taxing authority.
+
+{% /clause %}
+
+{% clause id="representations" %}
+### Representations and Warranties
+
+
+
+{% /clause %}
+
+{% clause id="title-authority" level=1 %}
+#### Company and Seller Representations
+
+Company and Seller each represent that they have authority to execute and perform this Agreement and have obtained the approvals required from their governing persons, if any. Company represents that it owns the rights identified as owned in Schedule A (Purchased Assets), has identified licensed rights separately, and can convey the owned Purchased Assets free of liens other than those Buyer accepts in Schedule F (Disclosure Exceptions). Company shall deliver releases for other liens at Closing.
+
+Seller represents that Seller owns the interest in Company disclosed in Schedule F (Disclosure Exceptions) and that the information Seller personally provides for the schedules is materially accurate and complete within their stated scope. Seller shall perform Seller's assigned transfer and cooperation obligations. The parties allocate Seller's personal liability as follows: {% field name="seller_liability_terms" /%}
+
+{% /clause %}
+
+{% clause id="buyer-representations" level=1 %}
+#### Buyer Representations
+
+Buyer represents that it has authority to execute and perform this Agreement, has obtained its required internal approvals, and, except as an expressly elected financing condition provides, has the funds needed to make the payments due at Closing. Buyer's execution and performance do not violate its organizational documents or any agreement binding on Buyer in a way that prevents this transaction.
+
+{% /clause %}
+
+{% clause id="ip-rights" level=1 %}
+#### Intellectual Property and Dependencies
+
+Company shall deliver the assignments identified in Schedule E (Closing Deliverables and Acceptance) for the intellectual-property rights purchased, together with the ownership evidence identified in Schedule A (Purchased Assets). Schedule F (Disclosure Exceptions) discloses incomplete employee, founder or contractor assignments and claims affecting those rights. Company represents that Schedule A (Purchased Assets) distinguishes its owned work from third-party materials and that Schedule D (Transfers and Consents) identifies the licenses and retained rights on which continued operation depends, including material open-source obligations. No third-party license is enlarged by this Agreement. Any Company-retained right needed by Buyer shall be licensed under the expressly completed terms in Schedule D (Transfers and Consents); no license is supplied merely by labeling an asset transferable.
+
+{% /clause %}
+
+{% clause id="revenue-evidence" level=1 %}
+#### Financial Information
+
+Schedule G (Financial Information) states the financial and operating measures on which the parties agree to rely, their periods and definitions, and the supporting exports and reconciliations. Company represents that the information it provides for that schedule is materially accurate and complete within the stated definitions, except as specifically disclosed in Schedule F (Disclosure Exceptions). Company shall identify unresolved differences rather than netting them away without explanation. Partial-period results, projections and seller explanations shall be identified separately from reconciled completed-period results. Buyer shall receive the review access specified in Schedule G (Financial Information), subject to the data and security controls in this Agreement.
+
+{% /clause %}
+
+{% clause id="disclosures" level=1 %}
+#### Disclosures and Changes
+
+Schedule F (Disclosure Exceptions) identifies each exception by the representation or obligation it qualifies and describes it sufficiently to disclose the relevant matter. A document dump or link alone does not qualify a representation. Company shall disclose material claims, security incidents and transfer restrictions affecting the Purchased Assets in the corresponding entries. Each party shall correct material changes in information it supplies before releasing its signature. A notice does not amend a representation, waive a condition or change the price without the affected party's express written agreement.
+
+{% /clause %}
+
+{% clause id="seller-qualifiers" level=1 include-when="include_seller_qualifiers" %}
+#### Elected Seller Qualifiers
+
+Only the representations expressly identified in the following completed terms are qualified, and only by the stated standard: {% field name="seller_qualifier_terms" /%} No knowledge or materiality qualification applies to authority, title, ownership or the express asset and liability perimeter. No other provision is qualified unless those completed terms identify it specifically. A knowledge standard must identify the knowledge holder and required inquiry.
+
+{% /clause %}
+
+{% clause id="closing-transfer" %}
+### Closing and Transfers
+
+
+
+{% /clause %}
+
+{% clause id="closing" level=1 %}
+#### Closing; Conditions and Consummation
+
+The parties enter into this binding Agreement on the Agreement Date. They shall conduct Closing on the Scheduled Closing stated in Key Terms, by {% field name="closing_method" /%}, if the applicable conditions in Schedule E (Closing Deliverables and Acceptance) have been satisfied or waived by the party entitled to waive them. Closing does not occur merely because a signature, credential, provisional access or escrow deposit is delivered. At consummation, the parties shall release the payments and Closing deliveries, title and risk to the Purchased Assets pass to Buyer, and Buyer assumes the Assumed Liabilities, in each case as this Agreement provides. The parties shall record the actual Closing time.
+
+Schedule E classifies every item as closing-condition, escrow-release-condition or post-closing-obligation and states the responsible party, due date, evidence, affirmative test, reviewer, defect notice, cure, retest and failure consequence. No classification is inferred. Provisional access before Closing is limited to the stated evaluation or preparation purpose and does not transfer title, risk, operational responsibility or acceptance. Company shall perform the agreed corrections. Silence does not constitute acceptance unless Schedule E expressly provides otherwise. Technical acceptance does not enlarge assumed liabilities or release surviving claims. No party can waive a legal prohibition or a nonparty's rights.
+
+{% /clause %}
+
+{% clause id="buyer-financing-condition" level=1 include-when="include_buyer_financing_condition" %}
+#### Elected Buyer Financing Condition
+
+Buyer's obligation to close is subject to the following expressly elected financing condition: {% field name="buyer_financing_condition" /%} No financing condition applies when this section is not elected, and a change in Buyer's financing arrangements does not excuse performance except as these completed terms expressly provide.
+
+{% /clause %}
+
+{% clause id="domains" level=1 include-when="domains_included" %}
+#### Domain Transfer
+
+For each purchased domain, Schedule D (Transfers and Consents) identifies its registrar, registrant, expiration, locks and required transfer procedure. Company shall initiate the permitted registrar process, provide the required authorizations through a secure channel, and cooperate until Buyer is recorded as registrant with working administrative and recovery control. Schedule E (Closing Deliverables and Acceptance) specifies DNS, certificate, email and continuity tests. A domain is not accepted solely because its website remains accessible.
+
+{% /clause %}
+
+{% clause id="software-delivery" level=1 include-when="code_included" %}
+#### Software and Released Versions
+
+Company shall deliver the identified repository contents, history, build instructions, dependencies, deployment configuration and documentation listed in Schedule A (Purchased Assets) and Schedule E (Closing Deliverables and Acceptance), excluding secrets transferred separately through the approved secure process. Those schedules shall distinguish the delivered source revision, production build, store release and any pending replacement. Company shall identify discrepancies in Schedule F (Disclosure Exceptions). Buyer shall perform the agreed build, deployment and functional tests under Schedule E (Closing Deliverables and Acceptance); submission for third-party approval is not approval or deployment.
+
+{% /clause %}
+
+{% clause id="provider-transfers" level=1 include-when="accounts_included" %}
+#### Accounts, Contracts and Consents
+
+Schedule D (Transfers and Consents) identifies each assigned contract and affected provider account, transfer restrictions, consent status and approved transfer or migration method. Company shall request the required permissions and perform its assigned steps. Buyer shall establish the receiving accounts and permissions assigned to it. No party is required to share a personal identity, misrepresent ownership or violate a provider restriction to effect a transfer.
+
+No restricted right passes in breach of the applicable restriction. For any missing permission, Schedule D (Transfers and Consents) shall state whether the affected item is a Closing condition, excluded with an agreed price consequence, deferred under a specifically permitted arrangement, or a reason not to consummate the transaction. Buyer shall not be deemed to accept a substitute or a liability because it receives temporary access. A deferred arrangement requires written agreement on rights, costs, responsibility, deadline and failure consequences and any necessary third-party permission.
+
+{% /clause %}
+
+{% clause id="data-transfer" level=1 include-when="personal_data_included" %}
+#### Data Transfer and Retained Copies
+
+Schedule I (Data Transfer and Retention) controls which personal information may transfer, its permitted purposes and the notices, consents or other transfer basis applicable to each category. Before migration the parties shall complete the permissions and safeguards specified there. Information without a completed permitted transfer route shall be excluded or held back under an expressly agreed plan; operational convenience alone does not authorize its transfer.
+
+Each party shall use the secure migration, access and incident procedures in Schedule I (Data Transfer and Retention). Company shall segregate any permitted retained copy, limit its use to the stated purpose and delete it on the stated timetable, subject to the specified retention basis. Company's retained email contents do not transfer merely because an address or support function transfers. Buyer shall apply the agreed access controls and purpose restrictions after receipt.
+
+{% /clause %}
+
+{% clause id="subscriptions" level=1 include-when="subscriptions_included" %}
+#### Subscriptions and Customer Obligations
+
+Schedule C (Assumed Liabilities and Allocations) allocates prepaid service obligations, unused credits, refunds, payment disputes, chargebacks and customer entitlements by the stated cutoff or other specified rule. Schedule D (Transfers and Consents) identifies any customer or processor approval needed for continuity. The parties shall reconcile the opening customer obligations and processor balances with supporting records under Schedule E (Closing Deliverables and Acceptance). A replacement account, clone or new merchant arrangement shall not be treated as preserving existing subscriptions until the agreed continuity tests pass.
+
+{% /clause %}
+
+{% clause id="access-security" level=1 %}
+#### Secure Handover
+
+The parties shall exchange credentials and recovery material through the secure method identified in Schedule E (Closing Deliverables and Acceptance), separately from public schedules. Buyer shall establish its own administrator, billing, multifactor and recovery control. Company shall remove its access, delegated permissions and reusable tokens as required by the tested handover sequence, retaining only the limited access expressly needed for transition services. The parties shall confirm revocation and backup or recovery tests before declaring the related transfer complete. No party shall destroy records that the other is entitled to receive under this Agreement.
+
+{% /clause %}
+
+{% clause id="covenants" %}
+### Covenants
+
+
+
+{% /clause %}
+
+{% clause id="interim-operations" level=1 %}
+#### Interim Operations
+
+From the Agreement Date until Closing or earlier termination, Company and Seller shall comply with the following completed interim covenants: {% field name="interim_covenants" /%} Any consent right applies only to the actions identified there and may not be used to control ordinary operations beyond the agreed scope. Company shall preserve the Business and Purchased Assets, pursue the assigned consents and notify Buyer of developments affecting a Closing condition, subject to the completed qualifications and exceptions.
+
+{% /clause %}
+
+{% clause id="transition" level=1 include-when="include_transition" %}
+#### Transition Services
+
+Company shall provide the services and documentation in Schedule J (Transition Services). Access shall be limited to those services and expire on the stated exit date. Work outside the stated scope requires agreement on scope, price and timing before it begins. The parties shall follow the escalation and exit procedure in Schedule J (Transition Services), including revocation of transition access and delivery of unfinished work.
+
+{% /clause %}
+
+{% clause id="further-cooperation" level=1 %}
+#### Cooperation
+
+After Closing, each party shall provide reasonably requested records and execute the additional instruments needed to complete the transfers and allocations expressly agreed here. This obligation does not add assets, enlarge assumed liabilities, create an unagreed license or require violation of a third-party restriction. Additional services and out-of-pocket costs shall be handled under the agreed transition terms or a separate written agreement.
+
+{% /clause %}
+
+{% clause id="confidentiality" level=1 %}
+#### Confidentiality
+
+Each party shall protect nonpublic information received from the other for this transaction and use it only to evaluate or perform the transaction, except for acquired information Buyer may use to operate the acquired Business within its permitted rights. A party may disclose information to advisers who need it and are bound to protect it, or as required by legal process, with notice to the other party when permitted. Information demonstrably public without breach, already lawfully held, independently developed or lawfully received without restriction is excluded. Continuing confidentiality instruments and their priority are identified in Schedule H (Related Agreements).
+
+{% /clause %}
+
+{% clause id="termination" level=1 %}
+#### Termination Before Closing
+
+Before Closing, this Agreement may be terminated only under the following completed terms: {% field name="termination_terms" /%} Those completed terms must state whether either party may terminate if Closing has not occurred by the Outside Date and must state any exception to that right. Termination must address any surviving confidentiality and dispute terms, deposited funds, provisional access, credentials, copied data, partially performed transfer work, costs and return or destruction duties. On termination, each party shall revoke access it granted for preparation or inspection and follow the agreed secure return, deletion or release procedure. Termination does not itself release an accrued claim or bind an escrow agent or other nonparty.
+
+{% /clause %}
+
+{% clause id="seller-representative" level=1 include-when="include_seller_representative" %}
+#### Seller Representative
+
+Seller appoints a representative only on the following completed terms: {% field name="seller_representative_terms" /%} The appointment does not expand Seller's substantive obligations or authorize amendment of another party's rights. Buyer may rely only on actions within the stated authority. Replacement and notice become effective only under the completed procedure.
+
+{% /clause %}
+
+{% clause id="remedies" %}
+### Indemnification and Remedies
+
+
+
+{% /clause %}
+
+{% clause id="indemnity" level=1 include-when="include_indemnity" %}
+#### Indemnification
+
+The parties shall indemnify the identified beneficiaries for the claims and losses expressly allocated in Schedule O (Indemnification). Claims shall follow Schedule P (Claims Procedure). Schedule K (Liability Limits and Remedies) governs limitations, survival and interaction with other remedies. No settlement may impose a nonmonetary obligation or admission on a person without that person's written consent. Amounts paid for the same loss through another remedy shall be credited to prevent duplicate recovery.
+
+{% /clause %}
+
+{% clause id="remedy-elections" level=1 %}
+#### Survival and Remedies
+
+The parties' agreed treatment of survival, caps, thresholds, excluded losses, exclusivity, fraud and setoff is stated in Schedule K (Liability Limits and Remedies). Acceptance of an asset, payment of the price or release from escrow does not itself waive a claim. A waiver requires the affected party's signed writing identifying the claim or right waived. Nothing in this Agreement authorizes any party to bind a nonparty to a release or limitation.
+
+{% /clause %}
+
+{% clause id="general-provisions" %}
+### General Provisions
+
+
+
+{% /clause %}
+
+{% clause id="priority" level=1 %}
+#### Entire Agreement and Amendments
+
+The related-instrument register and agreed priority are set out in Schedule H (Related Agreements). For each provider form, marketplace purchase agreement, escrow instruction, letter of intent or other related instrument, Schedule H must identify its title, parties, date and version, state whether it continues, is incorporated or is superseded, and identify the provisions displaced or controlling in a conflict. As between the parties, this Agreement controls the asset purchase to the extent Schedule H expressly gives it priority. This priority does not amend or release a nonparty's rights without that person's agreement. This Agreement and its completed schedules constitute the parties' agreement on the asset purchase, together with the instruments expressly incorporated or continued there. Earlier proposals or diligence responses do not modify these terms solely because they were exchanged. An amendment must identify the provision changed and be signed by the parties bound by that change. Any overlapping payment or recovery under a related instrument shall be credited against recovery for the same loss or obligation under this Agreement.
+
+{% /clause %}
+
+{% clause id="law-disputes" level=1 %}
+#### Governing Law and Disputes
+
+This Agreement is governed by the Governing Law stated in Key Terms. Disputes, including requests for interim relief and service, are governed by the Dispute Resolution terms stated there.
+
+{% /clause %}
+
+{% clause id="notices" level=1 %}
+#### Notices
+
+Notices shall be delivered to the applicable Notice Address in Key Terms. Delivery and effectiveness are governed by {% field name="notice_effectiveness" /%}. Each party may change its Notice Address by notice under this section. Operational messages do not amend this Agreement.
+
+{% /clause %}
+
+{% clause id="general" level=1 %}
+#### Assignment and Counterparts
+
+Buyer may collaterally assign its rights under this Agreement to a lender financing the acquisition without the other parties' consent. That assignment does not delegate Buyer's obligations, release Buyer or impose new obligations on Company or Seller. Any other assignment or delegation requires the other parties' written consent. A release of the original obligor must be express.
+
+This Agreement benefits the parties and their permitted successors and assigns. Any indemnity beneficiaries must be identified in the indemnity terms. If a provision cannot be enforced, the remaining provisions continue to the extent the agreed transaction can still be performed. The parties may sign counterparts and exchange electronic signatures, which together form one instrument.
+
+{% /clause %}
+
+{% clause id="schedule-assets" type="schedule" %}
+### Schedule A (Purchased Assets)
+
+{% field name="schedule_assets" /%}
+
+{% /clause %}
+
+{% clause id="schedule-exclusions" type="schedule" %}
+### Schedule B (Excluded Assets)
+
+{% field name="schedule_exclusions" /%}
+
+{% /clause %}
+
+{% clause id="schedule-liabilities" type="schedule" %}
+### Schedule C (Assumed Liabilities and Allocations)
+
+{% field name="schedule_liabilities" /%}
+
+{% /clause %}
+
+{% clause id="schedule-transfers" type="schedule" %}
+### Schedule D (Transfers and Consents)
+
+{% field name="schedule_transfers" /%}
+
+{% /clause %}
+
+{% clause id="schedule-deliverables" type="schedule" %}
+### Schedule E (Closing Deliverables and Acceptance)
+
+{% field name="schedule_deliverables" /%}
+
+{% /clause %}
+
+{% clause id="schedule-disclosures" type="schedule" %}
+### Schedule F (Disclosure Exceptions)
+
+{% field name="schedule_disclosures" /%}
+
+{% /clause %}
+
+{% clause id="schedule-revenue" type="schedule" %}
+### Schedule G (Financial Information)
+
+{% field name="schedule_revenue" /%}
+
+{% /clause %}
+
+{% clause id="schedule-priority" type="schedule" %}
+### Schedule H (Related Agreements)
+
+{% field name="schedule_priority" /%}
+
+{% /clause %}
+
+{% clause id="schedule-data" include-when="personal_data_included" type="schedule" %}
+### Schedule I (Data Transfer and Retention)
+
+{% field name="schedule_data" /%}
+
+{% /clause %}
+
+{% clause id="schedule-transition" include-when="include_transition" type="schedule" %}
+### Schedule J (Transition Services)
+
+{% field name="schedule_transition" /%}
+
+{% /clause %}
+
+{% clause id="schedule-remedies" type="schedule" %}
+### Schedule K (Liability Limits and Remedies)
+
+{% field name="schedule_remedies" /%}
+
+{% /clause %}
+
+{% clause id="schedule-adjustment" include-when="include_adjustment" type="schedule" %}
+### Schedule L (Purchase Price Adjustment)
+
+{% field name="schedule_adjustment" /%}
+
+{% /clause %}
+
+{% clause id="schedule-earnout" include-when="include_earnout" type="schedule" %}
+### Schedule M (Earnout)
+
+{% field name="schedule_earnout" /%}
+
+{% /clause %}
+
+{% clause id="schedule-escrow" include-when="include_escrow" type="schedule" %}
+### Schedule N (Purchase Price Escrow and Holdback)
+
+{% field name="schedule_escrow" /%}
+
+{% /clause %}
+
+{% clause id="schedule-indemnity" include-when="include_indemnity" type="schedule" %}
+### Schedule O (Indemnification)
+
+{% field name="schedule_indemnity" /%}
+
+{% /clause %}
+
+{% clause id="schedule-claims" include-when="include_indemnity" type="schedule" %}
+### Schedule P (Claims Procedure)
+
+{% field name="schedule_claims" /%}
+
+{% /clause %}
+
+{% /agreement-section %}
+
+{% agreement-section type="signature" %}
+## Signatures
+
+{% signature-block arrangement="buyer-company-seller" %}
+
+**Buyer**: {% field name="buyer_name" /%}
+
+Signature: ____________________
+
+Signatory: {% field name="buyer_signer" /%}
+
+Title: {% field name="buyer_signer_capacity" /%}
+
+Date and time: ____________________
+
+**Company**: {% field name="company_name" /%}
+
+Signature: ____________________
+
+Signatory: {% field name="company_signer" /%}
+
+Title: {% field name="company_signer_capacity" /%}
+
+Date and time: ____________________
+
+**Seller**: {% field name="seller_name" /%}
+
+Signature: ____________________
+
+Date and time: ____________________
+
+{% /signature-block %}
+{% /agreement-section %}

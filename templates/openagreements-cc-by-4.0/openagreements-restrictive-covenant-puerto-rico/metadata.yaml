@@ -2,7 +2,7 @@ name: Employee Restrictive Covenant (Puerto Rico)
 category: non-compete
 description: Puerto Rico-specific employee restrictive covenant agreement with modular covenant structure. Reflects the twelve-month maximum and reasonableness requirements described in Arthur Young & Co. v. Vega, 136 D.P.R. 157 (1994). Drafted as a starting point for review by licensed Puerto Rico counsel.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-master
-version: '2.0'
+version: 0.20.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
