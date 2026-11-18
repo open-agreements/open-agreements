@@ -172,8 +172,9 @@ def leakage_snapshot(source_repo,out):
  dump(out/'leakage-inputs-manifest.json',dict(source_repository='https://github.com/open-agreements/harvey-labs-openagreements',commit=SOURCE,tasks=manifest))
  return tasks
 
-def leakage(api,source_repo):
+def leakage(api,source_repo,task_regex=None):
  for task in leakage_snapshot(source_repo,api.out):
+  if task_regex and not re.search(task_regex,task): continue
   source=api.out/'leakage-inputs'/task
   config=json.loads((source/'task.json').read_text()); inputs={str(p.relative_to(source)):p.read_text() for p in sorted((source/'documents').rglob('*')) if p.is_file()}
   for model in MODELS:
@@ -181,7 +182,7 @@ def leakage(api,source_repo):
    if (dest/'status.json').exists(): continue
    dest.mkdir(parents=True,exist_ok=True); outputs={}
    system='You are an AI agent executing a legal drafting task in a workspace. Use only the provided workspace documents; do not conduct external research. documents/ is read-only. Write deliverables as Markdown under output/. Use list_files, read, search and write to complete the task. The task rubric is not accessible. When every deliverable is written, stop calling tools and provide a short completion message.'
-   request=dict(systemInstruction=dict(parts=[dict(text=system)]),contents=[dict(role='user',parts=[dict(text=config['instructions'])])],tools=[dict(functionDeclarations=TOOL_SCHEMAS)],generationConfig=dict(temperature=0,maxOutputTokens=16384))
+   request=dict(systemInstruction=dict(parts=[dict(text=system)]),contents=[dict(role='user',parts=[dict(text=config['instructions'])])],tools=[dict(functionDeclarations=TOOL_SCHEMAS)],generationConfig=dict(temperature=0,maxOutputTokens=32768,thinkingConfig=dict(thinkingLevel='LOW')))
    start_spend=api.spent; finished=False; error=None
    for turn in range(80):
     if api.spent-start_spend>3.5:
@@ -219,6 +220,7 @@ def leakage(api,source_repo):
 
 def main():
  p=argparse.ArgumentParser(); p.add_argument('command',choices=['prepare','fill','leakage']); p.add_argument('--out',type=pathlib.Path,required=True); p.add_argument('--budget',type=float,default=75); p.add_argument('--repeats',type=int,default=3); p.add_argument('--source-repo',type=pathlib.Path)
+ p.add_argument('--task-regex',help='Run only matching frozen leakage instances (for independent budgeted shards)')
  a=p.parse_args(); a.out=a.out.resolve(); a.out.mkdir(parents=True,exist_ok=True)
  if a.command=='prepare': prepare(a.out)
  else:
@@ -226,5 +228,5 @@ def main():
   if a.command=='fill': fill(api,a.repeats)
   else:
    if not a.source_repo: p.error('--source-repo required for leakage')
-   leakage(api,a.source_repo.resolve())
+   leakage(api,a.source_repo.resolve(),a.task_regex)
 if __name__=='__main__': main()
