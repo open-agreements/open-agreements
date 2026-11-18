@@ -8,7 +8,7 @@ description: >-
   document(s).
 citation: 'Gimbel v. Signal Cos., 316 A.2d 599 (Del. Ch. 1974).'
 resource: 'https://www.courtlistener.com/opinion/2324516/gimbel-v-signal-companies-inc/'
-timestamp: '2026-10-05'
+timestamp: '2026-11-14'
 document_references:
   - type: Law Topic
     resource: >-

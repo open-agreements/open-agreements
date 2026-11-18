@@ -6,7 +6,7 @@ description: >-
   document(s).
 citation: 'Gaver v. Schneider''s O.K. Tire Co., 289 Neb. 491 (2014).'
 resource: 'https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/'
-timestamp: '2026-07-02'
+timestamp: '2026-10-15'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'

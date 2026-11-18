@@ -2,6 +2,7 @@
 
 ## Sections
 
+* [Asset Purchase](asset-purchase/)
 * [Corporate Governance](corporate-governance/)
 * [Employment Offer Letter](employment-offer-letter/)
 * [Founder Separation](founder-separation/)

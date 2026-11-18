@@ -1,5 +1,14 @@
 # Us Update Log
 
+## 2026-11-14
+* **Update**: Survey bookmark follow-ups: non-compete seller column by default and map caption counted against the table; privacy opens on who each law covers and dates upcoming laws; invention-assignment plain-English intro, note first, and the Nevada/North Dakota count explained; Texas sale covenant cell says the burden makes it easier to enforce (37a1210)
+* **Update**: Drop the Texas sale-of-business rewording (that column moves to fixed categories in a separate PR); keep URL sync quiet during Next navigation; give a column swapped in for the summary the summary cell's width rules (7082625)
+* **Update**: Texas sale covenant cell keeps the primary-purpose condition; invention intro and Nevada sentence tightened (Codex round 1) (ab80d27)
+
+## 2026-11-10
+* **Update**: Nebraska LB921: definition includes health care technology platforms (dd64c97)
+* **Update**: Nebraska LB921: fix sentence split around definition chip (f12df14)
+
 ## 2026-10-19
 * **Update**: content(non-compete): quote California Health and Safety Code 1191(d)'s scope and sale-of-business exception in full (#3492 peer review round 24) (1fe0b44)
 
@@ -8,6 +17,7 @@
 * **Update**: content(non-compete/ftc-rule-status): mark claims, roles and source edges (structured analysis) (1020941)
 * **Update**: content(non-compete/ohio): mark claims, roles and source edges (structured analysis) (993cee9)
 * **Update**: content(non-compete/south-carolina): mark claims, roles and source edges (structured analysis) (ae90f2c)
+* **Update**: content(non-compete/nebraska): flag LB921's July 1, 2027 health care staffing agency non-compete ban (b7fc1ff)
 
 ## 2026-10-10
 * **Update**: content(non-compete): state Alabama's training exception and California's 16600.1 notice duty with their statutory limits (#3492 peer review round 23) (1b79455)

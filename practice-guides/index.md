@@ -12,6 +12,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 
 ## Documents
 
+* [Acquisition Financing](acquisition-financing/)
 * [Ai Hiring](ai-hiring/)
 * [Ai Layoffs](ai-layoffs/)
 * [Ai Policies](ai-policies/)

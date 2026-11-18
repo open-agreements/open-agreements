@@ -8,7 +8,7 @@ citation: >-
   Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437
   (2015).
 resource: 'https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/'
-timestamp: '2026-06-12'
+timestamp: '2026-10-15'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'

@@ -7,7 +7,7 @@ description: >-
 citation: 'Mertz v. Pharmacists Mut. Ins. Co., 261 Neb. 704, 710, 625 N.W.2d 197 (2001).'
 resource: >-
   https://www.courtlistener.com/opinion/1245316/mertz-v-pharmacists-mutual-insurance/
-timestamp: '2026-06-12'
+timestamp: '2026-10-15'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'

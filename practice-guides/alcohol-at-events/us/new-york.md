@@ -195,7 +195,7 @@ The event file can contain the following records.
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-10-08. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Liquor Liability and Alcohol Permits for Events in New York*, OpenAgreements (last updated October 8, 2026), https://openagreements.org/practice-guides/alcohol-at-events/us/new-york.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-10-08. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Liquor Liability and Alcohol Permits for Events in New York*, OpenAgreements (last updated October 8, 2026), https://openagreements.org/practice-guides/alcohol-at-events/us/new-york.
 
 [^abc-100-unlicensed-retail-sale-barred]: **N.Y. Alco. Bev. Cont. Law § 100(1) — Sale without a license** — "No person shall manufacture for sale or sell at wholesale or retail any alcoholic beverage within the state without obtaining the appropriate license therefor required by this chapter." *N.Y. Alco. Bev. Cont. Law § 100(1) (2026).* <https://www.nysenate.gov/legislation/laws/ABC/100>
 

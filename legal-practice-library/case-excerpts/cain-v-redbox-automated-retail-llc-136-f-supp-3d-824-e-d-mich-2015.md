@@ -7,7 +7,7 @@ description: >-
 citation: 'Cain v. Redbox Automated Retail, LLC, 136 F. Supp. 3d 824 (E.D. Mich. 2015).'
 resource: >-
   https://www.courtlistener.com/opinion/7316121/cain-v-redbox-automated-retail-llc/
-timestamp: '2026-06-11'
+timestamp: '2026-10-19'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'

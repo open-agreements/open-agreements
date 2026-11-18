@@ -5,6 +5,7 @@ import { existsSync } from 'node:fs';
 import { ExternalMetadataSchema } from '../src/core/metadata.js';
 import { validateExternal } from '../src/core/validation/external.js';
 import { listExternalEntries } from '../src/utils/paths.js';
+import { seconds } from './helpers/timeouts.js';
 import {
   allureAttachment,
   allureJsonAttachment,
@@ -130,6 +131,8 @@ describe('External template validation', () => {
 });
 
 describe('External fill end-to-end', () => {
+  // Each CLI subprocess has a 30s deadline; allow it to finish before Vitest's
+  // deadline, including Allure attachments and the shared coverage multiplier.
   itFilling('fills yc-safe-valuation-cap with sample values', async () => {
     const output = '/tmp/test-ext-valuation-cap.docx';
     const command =
@@ -158,7 +161,7 @@ describe('External fill end-to-end', () => {
       expect(result).toContain(output);
       expect(existsSync(output)).toBe(true);
     });
-  });
+  }, seconds(45));
 
   itFilling('fills yc-safe-pro-rata-side-letter with sample values', async () => {
     const output = '/tmp/test-ext-pro-rata.docx';
@@ -184,7 +187,7 @@ describe('External fill end-to-end', () => {
       expect(result).toContain('Filled');
       expect(existsSync(output)).toBe(true);
     });
-  });
+  }, seconds(45));
 });
 
 describe('list includes external templates', () => {

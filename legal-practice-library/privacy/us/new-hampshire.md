@@ -9,7 +9,7 @@ description: >-
   General with no private right of action and a cure period that became
   discretionary after 2025.
 resource: 'https://openagreements.org/practice-guides/privacy/us/new-hampshire'
-timestamp: '2026-06-06'
+timestamp: '2026-10-15'
 tags:
   - privacy
   - New Hampshire
@@ -43,6 +43,8 @@ Section 507-H:7 then specifies the required terms: instructions for processing, 
 
 This is the opt-in model shared by Virginia, Connecticut, and Colorado — the opposite of Utah's notice-and-opt-out approach to sensitive data. New Hampshire also requires controllers to recognize a universal opt-out preference signal for the sale of personal data and targeted advertising, so a New Hampshire program cannot rely on its own opt-out mechanisms alone. Consent must be a freely given, specific, informed, and unambiguous affirmative act, and dark-pattern agreements do not count.
 
+Two rules about young consumers sit beside the consent duty. Starting January 1, 2027, paragraph I(e-1) of the same section will bar a controller from selling a child's personal data at all, with no consent exception [^stat-507h6-child-sale]. Already in force, paragraph I(g) bars a controller that has actual knowledge, and wilfully disregards, that a consumer is at least 13 but younger than 16 from processing that consumer's personal data for targeted advertising, or selling it, without the consumer's consent [^stat-507h6-teen].
+
 ## Can a consumer sue your business under the New Hampshire Privacy Act? {#consumer-lawsuit}
 
 **Short answer.** No. The Attorney General has exclusive authority to enforce ch. 507-H [^stat-507h11-enforce], and the statute expressly provides no private right of action for consumers [^stat-507h11-no-pra].
@@ -51,7 +53,7 @@ The cure period worked differently before and after 2025. Through December 31, 2
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Hampshire. This article synthesizes New Hampshire primary law and is not legal advice from a New Hampshire-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *New Hampshire Consumer Privacy Law (NHPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/new-hampshire.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-10-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Hampshire. This article synthesizes New Hampshire primary law and is not legal advice from a New Hampshire-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *New Hampshire Consumer Privacy Law (NHPA)*, OpenAgreements (last updated October 15, 2026), https://openagreements.org/practice-guides/privacy/us/new-hampshire.
 
 [^stat-507h2-apply]: **N.H. Rev. Stat. Ann. § 507-H:2** — "This chapter applies to persons that conduct business in this state or persons that produce products or services that are targeted to residents of this state that during a one year period: (a) Controlled or processed the personal data of not less than 35,000 unique consumers, excluding personal data controlled or processed solely for the purpose of completing a payment transaction; or (b) Controlled or processed the personal data of not less than 10,000 unique consumers and derived more than 25 percent of their gross revenue from the sale of personal data." *N.H. Rev. Stat. Ann. § 507-H:2, I.* <https://gc.nh.gov/rsa/html/LII/507-H/507-H-2.htm>
 
@@ -66,6 +68,10 @@ The cure period worked differently before and after 2025. Through December 31, 2
 [^stat-507h7-terms]: **N.H. Rev. Stat. Ann. § 507-H:7** — "The contract shall also require that the processor: (a) Ensure that each person processing personal data is subject to a duty of confidentiality with respect to the data; (b) At the controller's direction, delete or return all personal data to the controller as requested at the end of the provision of services, unless retention of the personal data is required by law; (c) Upon the reasonable request of the controller, make available to the controller all information in its possession necessary to demonstrate the processor's compliance with the obligations in this chapter; (d) After providing the controller an opportunity to object, engage any subcontractor pursuant to a written contract that requires the subcontractor to meet the obligations of the processor with respect to the personal data; and (e) Allow, and cooperate with, reasonable assessments by the controller or the controller's designated assessor, or the processor may arrange for a qualified and independent assessor to conduct an assessment of the processor's policies and technical and organizational measures in support of the obligations under this chapter, using an appropriate and accepted control standard or framework and assessment procedure for such assessments." *N.H. Rev. Stat. Ann. § 507-H:7, II(a)-(e).* <https://gc.nh.gov/rsa/html/LII/507-H/507-H-7.htm>
 
 [^stat-507h6-consent]: **N.H. Rev. Stat. Ann. § 507-H:6** — "Not process sensitive data concerning a consumer without obtaining the consumer's consent, or, in the case of the processing of sensitive data concerning a known child, without processing such data in accordance with COPPA;" *N.H. Rev. Stat. Ann. § 507-H:6, I(d).* <https://gc.nh.gov/rsa/html/LII/507-H/507-H-6.htm>
+
+[^stat-507h6-child-sale]: **2026 N.H. Laws ch. 168 (HB 1460-FN)** — "Not sell a child's personal data; 168:2 Effective Date. This act takes effect January 1, 2027." *2026 N.H. Laws ch. 168, §§ 168:1–168:2 (adding RSA 507-H:6, I(e-1)).* <https://gc.nh.gov/bill_Status/pdf.aspx?id=33954&q=billVersion>
+
+[^stat-507h6-teen]: **N.H. Rev. Stat. Ann. § 507-H:6** — "Not process the personal data of a consumer for purposes of targeted advertising, or sell the consumer's personal data without the consumer's consent, under circumstances where a controller has actual knowledge, and wilfully disregards, that the consumer is at least 13 years of age but younger than 16 years of age." *N.H. Rev. Stat. Ann. § 507-H:6, I(g).* <https://gc.nh.gov/rsa/html/LII/507-H/507-H-6.htm>
 
 [^stat-507h11-enforce]: **N.H. Rev. Stat. Ann. § 507-H:11** — "The attorney general shall have exclusive authority to enforce violations under this chapter." *N.H. Rev. Stat. Ann. § 507-H:11, I.* <https://gc.nh.gov/rsa/html/LII/507-H/507-H-11.htm>
 

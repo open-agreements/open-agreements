@@ -9,7 +9,7 @@ citation: >-
   571.
 resource: >-
   https://www.courtlistener.com/opinion/6657038/associated-mgmt-servs-inc-v-ruff/
-timestamp: '2026-07-02'
+timestamp: '2026-11-14'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/invention-assignment/us/montana'
@@ -34,6 +34,24 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - source_cards: `ruff-recites-employer-acquisition`
 - cited_by: [Employee Invention Assignment in Montana](../invention-assignment/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6657038/associated-mgmt-servs-inc-v-ruff/#:~:text=Moreover%2C%20except%20for%20compensation%20due%2C,acquires%20by%20virtue%20of%20employment>
+
+### associated-mgmt-servs-inc-v-ruff-nothing-in-the-plain-meaning-of-8edaa5bf {#associated-mgmt-servs-inc-v-ruff-nothing-in-the-plain-meaning-of-8edaa5bf}
+
+> Nothing in the plain meaning of the express language of the employment contracts evinces any provision or intent to include software development as part of Daniel's AMS employment duties or responsibilities.
+
+- supports: `default-ownership`
+- source_cards: `ruff-no-software-duty`
+- cited_by: [Employee Invention Assignment in Montana](../invention-assignment/us/montana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/6657038/associated-mgmt-servs-inc-v-ruff/#:~:text=Nothing%20in%20the%20plain%20meaning,AMS%20employment%20duties%20or%20responsibilities.>
+
+### associated-mgmt-servs-inc-v-ruff-pursuant-to-the-plain-meaning-of-80e487d5 {#associated-mgmt-servs-inc-v-ruff-pursuant-to-the-plain-meaning-of-80e487d5}
+
+> Pursuant to the plain meaning of its clear and unequivocal language, this employment contract provision applied only to materials and files prepared by Daniel within the scope of his contract-defined employment as an AMS Support Services Specialist.
+
+- supports: `default-ownership`
+- source_cards: `ruff-contract-defined-scope`
+- cited_by: [Employee Invention Assignment in Montana](../invention-assignment/us/montana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/6657038/associated-mgmt-servs-inc-v-ruff/#:~:text=Pursuant%20to%20the%20plain%20meaning,an%20AMS%20Support%20Services%20Specialist.>
 
 ### associated-mgmt-servs-inc-v-ruff-though-we-have-not-heretofore-construed-b7b584fc {#associated-mgmt-servs-inc-v-ruff-though-we-have-not-heretofore-construed-b7b584fc}
 

@@ -2,10 +2,10 @@
 jurisdiction: "Kentucky"
 slug: kentucky
 countryCode: US
-content_packaged_at: "2026-11-05"
-law_checked_through: "2026-06-06"
+content_packaged_at: "2026-11-14"
+law_checked_through: "2026-10-15"
 human_reviewed_at: null
-next_review_due: "2026-12-03"
+next_review_due: "2027-04-13"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/kentucky
 license: CC BY 4.0
 stale: false
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kentucky · **Snapshot as of:** 2026-11-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kentucky · **Snapshot as of:** 2026-11-14 · License: CC BY 4.0 · © openagreements.org
 
 # Kentucky Consumer Privacy Law (KCDPA)[^about]
 
@@ -39,6 +39,7 @@ The Kentucky Consumer Data Protection Act, effective January 1, 2026, gives Kent
 | **Browser opt-out signals?** | Not required |
 | **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | Kentucky Attorney General (exclusive) |
+| **Upcoming changes** | Consent to collect automatic content recognition data (2026 Ky. Acts ch. 118) [KRS 367.3617(1)(e)–(f) (eff. July 1, 2027). 2026 Ky. Acts ch. 118, § 3.], effective 2027-07-01 — From July 1, 2027, a controller needs consent to collect automatic content recognition data as defined in KRS 367.3611(3); no survey value changes. |
 
 ## Does the Kentucky Consumer Data Protection Act apply to your business? {#does-kcdpa-apply}
 
@@ -64,13 +65,15 @@ KRS 367.3619 then specifies the required terms: processing instructions, the nat
 
 This is the opt-in model shared by Virginia, California, Colorado, and Texas — the opposite of Utah's notice-and-opt-out approach. Kentucky does not, however, require honoring a universal opt-out preference signal the way California, Colorado, and Connecticut do, so a Kentucky-only program can rely on its own opt-out mechanisms — though a multi-state template generally has to support universal signals to stay compliant elsewhere.
 
+A second opt-in consent duty is coming. Starting July 1, 2027 [^stat-ky-acts-118-effective], a new paragraph (1)(f) will bar a controller from collecting automatic content recognition data without the consumer's consent, as a duty separate from the sensitive-data rule [^stat-3617-acr-consent]. That term will cover data about a consumer's viewing history that technology on an internet-connected smart television or smart monitor collects by identifying, in real time, the content on screen through audio or video fingerprinting, watermark detection, or similar techniques. It will exclude data about the consumer's interactions with content provided by the controller's own services, data generated in providing a feature or service the consumer requested, and data collected to enforce terms of service [^stat-3611-acr-def].
+
 ## Can a consumer sue your business under the KCDPA? {#consumer-lawsuit}
 
 **Short answer.** No. The Attorney General has exclusive authority to enforce the KCDPA [^stat-3627-enforce], so there is no private right of action for consumers [^stat-3627-no-pra]. Before suing, the Attorney General must give 30 days' written notice of the specific alleged violations and a chance to cure [^stat-3627-cure].
 
 Like Virginia, and unlike Colorado and Connecticut, Kentucky's 30-day cure period has not sunset — it remains a permanent, built-in off-ramp. A controller that cures within the window and certifies it in writing avoids the action; an uncured violation exposes it to damages of up to $7,500 per continued violation, plus the Attorney General's expenses and costs. The practical posture is still to build the notice, consent, and contracting controls up front, but a covered business that receives a notice has a genuine window to fix the issue.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Kentucky Consumer Privacy Law (KCDPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/kentucky.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last updated 2026-10-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. Source excerpts and linked materials belong to their owners. CC BY 4.0. Cite as Steven Obiajulu, *Kentucky Consumer Privacy Law (KCDPA)*, OpenAgreements (last updated October 15, 2026), https://openagreements.org/practice-guides/privacy/us/kentucky.
 
 [^stat-3613-apply]: **KRS 367.3613** — "KRS 367.3611 to 367.3629 apply to persons that conduct business in the Commonwealth or produce products or services that are targeted to residents of the Commonwealth and that during a calendar year control or process personal data of at least: (a) One hundred thousand (100,000) consumers; or (b) Twenty-five thousand (25,000) consumers and derive over fifty percent (50%) of gross revenue from the sale of personal data." *KRS 367.3613(1).* <https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=56648>
 
@@ -81,6 +84,12 @@ Like Virginia, and unlike Colorado and Connecticut, Kentucky's 30-day cure perio
 [^stat-3619-terms]: **KRS 367.3619** — "The contract shall be binding and shall clearly set forth instructions for processing personal data, the nature and purpose of processing, the type of data subject to processing, the duration of processing, and the rights and obligations of both parties. The contract shall also include requirements that the processor shall: (a) Ensure that each person processing personal data is subject to a duty of confidentiality with respect to the data; (b) At the controller's direction, delete or return all personal data to the controller as requested at the end of the provision of services, unless retention of the personal data is required by law; (c) Upon the reasonable request of the controller, make available to the controller all information in its possession necessary to demonstrate the processor's compliance with the obligations prescribed in KRS 367.3611 to 367.3629; (d) Allow, and cooperate with, reasonable assessments by the controller or the controller's designated assessor. Alternatively, the processor may arrange for a qualified and independent assessor to conduct an assessment of the processor's policies and technical and organizational measures in support of the obligations in KRS 367.3611 to 367.3629 using an appropriate and accepted control standard or framework and assessment procedure for assessments. The processor shall provide a report of the assessment to the controller upon request; and (e) Engage any subcontractor pursuant to a written contract in accordance with this section that requires the subcontractor to meet the obligations of the processor with respect to the personal data." *KRS 367.3619(2).* <https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55840>
 
 [^stat-3617-consent]: **KRS 367.3617** — "Not process sensitive data concerning a consumer without obtaining the consumer's consent, or, in the case of the processing of sensitive data collected from a known child, process the data in accordance with the federal Children's Online Privacy Protection Act, 15 U.S.C. sec. 6501 et seq." *KRS 367.3617(1)(e).* <https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55839>
+
+[^stat-ky-acts-118-effective]: **2026 Ky. Acts ch. 118 (HB 692), § 3** — "This Act takes effect July 1, 2027." *2026 Ky. Acts ch. 118, § 3.* <https://apps.legislature.ky.gov/law/acts/26RS/documents/0118.pdf>
+
+[^stat-3617-acr-consent]: **KRS 367.3617 (effective July 1, 2027)** — "Not process sensitive data concerning a consumer without obtaining the consumer's consent, or, in the case of the processing of sensitive data collected from a known child, process the data in accordance with the federal Children's Online Privacy Protection Act, 15 U.S.C. sec. 6501 et seq.; and (f) Not collect automatic content recognition data without a consumer's consent." *KRS 367.3617(1)(e)–(f) (eff. July 1, 2027).* <https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=58309>
+
+[^stat-3611-acr-def]: **KRS 367.3611 (effective July 1, 2027)** — "Means data about a consumer's content viewing history collected through the use of technology that is embedded or operated through a smart television or smart monitor, integrated with internet connectivity and an operating system that identifies, in real time, the specific content displayed by analyzing audio or video fingerprints, including but not limited to content received through broadcast, cable, satellite, streaming services, or external inputs, through digital fingerprinting, watermark detection, or similar comparison techniques; and (b) Does not include data: 1. Collected about a consumer's interactions with content provided by the controller's own services; 2. Generated in the course of providing a feature or service requested by a consumer; or 3. Collected for the purpose of enforcing terms of service;" *KRS 367.3611(3) (eff. July 1, 2027).* <https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=58308>
 
 [^stat-3627-enforce]: **KRS 367.3627** — "The Attorney General shall have exclusive authority to enforce violations of KRS 367.3611 to 367.3629." *KRS 367.3627(1).* <https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55844>
 
