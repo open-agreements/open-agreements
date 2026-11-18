@@ -24,7 +24,7 @@ const ID = /^[a-z][a-z0-9_-]{0,159}$/;
 const ATTRIBUTES: Record<string, string[]> = {
   'agreement-section': ['type'], 'cover-terms': [],
   'cover-term': ['kind', 'label', 'field', 'include-when', 'include-when-any'],
-  clause: ['id', 'type', 'include-when', 'confirm'], field: ['name'],
+  clause: ['id', 'type', 'include-when', 'confirm', 'level'], field: ['name'],
   'field-note': ['as_of', 'eyebrow', 'field'], requirement: ['id', 'value'],
   'signature-block': ['arrangement'], signer: ['id', 'kind', 'capacity', 'label'], repeat: ['field'],
 };
@@ -228,19 +228,22 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
   const paragraph = (runs: TextRun[], extra: ConstructorParameters<typeof Paragraph>[0] = {}) => new Paragraph({
     style: 'OABody', ...(tagStack.includes('signer') ? { keepNext: true } : {}), children: runs, ...(typeof extra === 'object' ? extra : {}),
   });
-  const blocks = (nodes: Node[], inClause = false): Block[] => nodes.flatMap(node => {
+  const blocks = (nodes: Node[], clause?: Node): Block[] => nodes.flatMap(node => {
     if (node.errors.length) throw new Error(`Malformed Markdoc: ${node.errors.map(error => error.message).join('; ')}`);
     if (node.type === 'document') return blocks(node.children);
     if (node.type === 'paragraph' || node.type === 'inline') return [paragraph(inline(node.children))];
     if (node.type === 'heading') {
       const level = node.attributes.level;
-      if (![1, 2, 3].includes(level)) throw new Error(`Unsupported heading level: ${level}`);
+      const subsection = clause?.attributes.level === 1;
+      const numbered = clause && clause.attributes.type !== 'schedule'
+        && (subsection ? node === clause.children.find(child => child.type === 'heading') : level === 3);
+      if (![1, 2, 3, 4].includes(level)) throw new Error(`Unsupported heading level: ${level}`);
       return [paragraph(inline(node.children, { font: level === 1 ? 'Georgia' : 'Arial',
         size: level === 1 ? 52 : level === 2 ? 30 : 24, bold: level !== 1, color: level === 2 ? '117086' : '1D2021' }), {
         style: level === 1 ? 'OATitle' : level === 2 ? 'OASectionHeading' : 'OASubHeading',
-        heading: level === 1 ? HeadingLevel.TITLE : level === 2 ? HeadingLevel.HEADING_1 : HeadingLevel.HEADING_2,
+        heading: level === 1 ? HeadingLevel.TITLE : level === 2 ? HeadingLevel.HEADING_1 : level === 3 ? HeadingLevel.HEADING_2 : HeadingLevel.HEADING_3,
         keepNext: true,
-        ...(inClause && level === 3 ? { numbering: { reference: 'oa-clause', level: 0 } } : {}),
+        ...(numbered ? { numbering: { reference: 'oa-clause', level: subsection ? 1 : 0 } } : {}),
       })];
     }
     if (node.type === 'list') {
@@ -290,7 +293,7 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
       const field = attr(node, 'field', true)!; const definition = requireField(field, 'repeat');
       if (definition.type !== 'array' || !definition.items?.length || scopes.length) throw new Error('Unsupported repeat shape');
       const scope = { field, item: `${field}_item`, fields: new Map(definition.items.map(item => [item.name, item])), used: new Set<string>() };
-      scopes.push(scope); tagStack.push(name); const contents = blocks(node.children, inClause); tagStack.pop(); scopes.pop();
+      scopes.push(scope); tagStack.push(name); const contents = blocks(node.children, clause); tagStack.pop(); scopes.pop();
       const binding: OriginalRenderBinding = { kind: 'array', field, item: scope.item, itemFields: [...scope.used].sort() };
       bindings.push(binding); sourceBindings.push(binding);
       return [command(`FOR ${scope.item} IN ${field}`), ...contents, command(`END-FOR ${scope.item}`)];
@@ -308,11 +311,14 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
       const id = attr(node, 'id', true)!;
       if (!ID.test(id) || clauseIds.has(id)) throw new Error(`Invalid/duplicate clause id: ${id}`);
       clauseIds.add(id); const type = attr(node, 'type');
-      if (type !== undefined && type !== 'definitions') throw new Error('Unsupported clause type');
+      if (type !== undefined && type !== 'definitions' && type !== 'schedule') throw new Error('Unsupported clause type');
+      const level = node.attributes.level;
+      if (level !== undefined && level !== 0 && level !== 1) throw new Error('Unsupported clause level');
+      if (type === 'schedule' && level === 1) throw new Error('A schedule cannot be a subsection');
       clauses.push({ id, ...(node.attributes['include-when'] ? { condition: String(node.attributes['include-when']) } : {}), bodyLiteral: definedTerms(literal(node)) });
     } else if (name === 'signature-block') {
       if (parent !== 'agreement-section' || sectionStack.at(-1) !== 'signature') throw new Error('signature-block must be a signature-section child');
-      if (!['stacked-consent-signers', 'entity-plus-individual'].includes(attr(node, 'arrangement', true)!)) throw new Error('Unsupported signature arrangement');
+      if (!['stacked-consent-signers', 'entity-plus-individual', 'buyer-company-seller'].includes(attr(node, 'arrangement', true)!)) throw new Error('Unsupported signature arrangement');
     } else if (name === 'signer') {
       const id = attr(node, 'id', true)!;
       if (!ID.test(id) || signerIds.has(id) || !['entity', 'individual'].includes(attr(node, 'kind', true)!) ||
@@ -329,7 +335,8 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
     const selectedChildren = traditional && name === 'agreement-section' && attr(node, 'type') === 'standard_terms'
       && node.children[0]?.type === 'heading' && literal(node.children[0]).trim() === meta.title
       ? node.children.slice(1) : node.children;
-    const contents = blocks(selectedChildren, inClause || name === 'clause'); definitionScopes.pop(); tagStack.pop();
+    const contents = blocks(selectedChildren, name === 'clause' ? node : clause);
+    definitionScopes.pop(); tagStack.pop();
     if (name === 'agreement-section') sectionStack.pop();
     // Corrected 2026-09-17: continuous operative sections must not erase the
     // canonical dedicated signature page. Contact-only sections (e.g. privacy
@@ -392,7 +399,7 @@ export async function renderOriginalMarkdoc(source: string, fields: FieldDefinit
       { id: 'OASectionHeading', name: 'OA Section Heading', basedOn: 'Normal', next: 'OABody', run: { font: 'Arial', size: 30, bold: true, color: '117086' }, paragraph: { keepNext: true, spacing: { before: 240, after: 120, line: 340 }, alignment: AlignmentType.LEFT } },
       { id: 'OASubHeading', name: 'OA Sub Heading', basedOn: 'Normal', next: 'OABody', run: { font: 'Arial', size: 24, bold: true, color: '1D2021' }, paragraph: { keepNext: true, spacing: { before: 320, after: 120, line: 340 }, alignment: AlignmentType.LEFT } },
     ] },
-    numbering: { config: [{ reference: 'oa-clause', levels: [{ level: 0, format: LevelFormat.DECIMAL, text: '%1.', alignment: AlignmentType.START }] }, ...listNumbering] },
+    numbering: { config: [{ reference: 'oa-clause', levels: [{ level: 0, format: LevelFormat.DECIMAL, text: '%1.', alignment: AlignmentType.START }, { level: 1, format: LevelFormat.DECIMAL, text: '%1.%2.', alignment: AlignmentType.START }] }, ...listNumbering] },
     // A single neutral source-title header avoids publisher attribution in a
     // filled artifact while preserving continuous source flow across sections.
     sections: [{ properties: { type: SectionType.CONTINUOUS, page },

@@ -19,6 +19,35 @@ afterEach(() => { for (const path of temporary.splice(0)) rmSync(path, { recursi
 const copiedPrivacy = () => { const path = join(temp(), 'privacy'); cpSync(PRIVACY, path, { recursive: true }); return path; };
 
 describe('original source contracts', () => {
+  it('numbers conditional subsections separately and leaves schedule headings unnumbered', async () => {
+    const fixture = join(temp(), 'offer');
+    cpSync(OFFER, fixture, { recursive: true });
+    const source = join(fixture, 'template.mdoc');
+    writeFileSync(source, readFileSync(source, 'utf8')
+      .replace('id="bonus-opportunity"', 'id="bonus-opportunity" level=1')
+      .replace('### Bonus Opportunity', '#### Bonus Opportunity')
+      .replace('id="equity-opportunity"', 'id="equity-opportunity" type="schedule"'));
+    const contract = await compileOriginalContract(fixture);
+    for (const enabled of [true, false]) {
+      const path = output();
+      await fillOriginalContract(fixture, contract, {
+        bonus_terms: enabled ? 'Annual bonus' : '',
+        equity_terms: 'Stock options',
+      }, path);
+      const docx = new AdmZip(path);
+      const paragraphs = docx.readAsText('word/document.xml').match(/<w:p(?:\s[^>]*)?>[\s\S]*?<\/w:p>/g)!;
+      const heading = (text: string) => paragraphs.find(paragraph => paragraph.includes(`>${text}<`));
+      expect(heading('Base Compensation and Payroll')).toContain('<w:ilvl w:val="0"');
+      expect(heading('Equity Opportunity')).not.toContain('<w:numPr>');
+      if (enabled) {
+        expect(heading('Bonus Opportunity')).toContain('<w:ilvl w:val="1"');
+        expect(docx.readAsText('word/numbering.xml')).toContain('w:val="%1.%2."');
+      } else {
+        expect(heading('Bonus Opportunity')).toBeUndefined();
+      }
+    }
+  });
+
   it('preserves literal false text in string-gated clauses without treating it as Boolean false', async () => {
     const contract = await compileOriginalContract(OFFER);
     for (const text of ['false', ' false ', '0']) {
