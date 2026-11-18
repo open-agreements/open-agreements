@@ -9,7 +9,7 @@ import { FilesystemProvider } from '../src/core/filesystem-provider.js';
 import { MemoryProvider } from '../src/core/memory-provider.js';
 import { initializeWorkspace } from '../src/core/workspace-structure.js';
 import { lintWorkspace } from '../src/core/lint.js';
-import { hasExecutedMarker, hasPartiallyExecutedMarker, collectWorkspaceDocuments } from '../src/core/indexer.js';
+import { hasExecutedMarker, hasPartiallyExecutedMarker, collectWorkspaceDocuments, buildStatusIndex } from '../src/core/indexer.js';
 
 const tempDirs: string[] = [];
 const it = itAllure.epic('Platform & Distribution');
@@ -180,8 +180,44 @@ describe('convention-aware lint', () => {
 });
 
 describe('convention-aware indexer', () => {
+  for (const [pattern, signedName, partialPattern, partialName] of [
+    ['_signed', 'acme_signed.pdf', '_partially_signed', 'beta_partially_signed.pdf'],
+    ['_SIGNED', 'acme_signed.pdf', '_PARTIALLY_SIGNED', 'beta_partially_signed.pdf'],
+    ['(Executed)', 'acme (executed).pdf', '(Partially Executed)', 'beta (partially executed).pdf'],
+    ['_executed', 'acme_partially_executed.pdf', '_partial', 'beta_partial.pdf'],
+  ]) {
+    it(`indexes configured marker ${pattern} consistently with lint`, () => {
+      const provider = new MemoryProvider('/test');
+      const config = defaultConventions();
+      config.executed_marker.pattern = pattern;
+      config.executed_marker.partially_executed_marker = { pattern: partialPattern, location: 'before_extension' };
+      writeConventions(provider, config);
+      provider.seed(`executed/${signedName}`, 'pdf');
+      provider.seed(`executed/${partialName}`, 'pdf');
+      provider.seed('executed/globex_unsigned.pdf', 'pdf');
+      if (pattern.toLowerCase() !== '_executed') {
+        provider.seed('executed/globex_executed.pdf', 'pdf');
+      }
+
+      const documents = collectWorkspaceDocuments('/test', provider);
+      expect(documents.find((doc) => doc.file_name === signedName)).toMatchObject({
+        executed: true, partially_executed: false, status: 'executed',
+      });
+      expect(documents.find((doc) => doc.file_name === partialName)).toMatchObject({
+        executed: false, partially_executed: true, status: 'partially_executed',
+      });
+      const lint = lintWorkspace('/test', provider);
+      expect(lint.findings.filter((f) => f.code === 'missing-executed-marker').map((f) => f.path).sort())
+        .toEqual(documents.filter((doc) => doc.status === 'pending').map((doc) => doc.path).sort());
+      expect(buildStatusIndex('/test', documents, lint).summary).toMatchObject({
+        executed_documents: 1, partially_executed_documents: 1, pending_documents: documents.length - 2,
+      });
+    });
+  }
+
   it('hasExecutedMarker accepts custom pattern', () => {
     expect(hasExecutedMarker('contract_signed.docx', '_signed')).toBe(true);
+    expect(hasExecutedMarker('contract_signed.docx', '_SIGNED')).toBe(true);
     expect(hasExecutedMarker('contract_executed.docx', '_signed')).toBe(false);
     expect(hasExecutedMarker('NDA (fully executed).pdf', '(fully executed)')).toBe(true);
   });
