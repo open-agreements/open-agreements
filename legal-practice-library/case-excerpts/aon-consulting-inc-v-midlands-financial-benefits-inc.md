@@ -9,7 +9,7 @@ citation: >-
   626 (2008).
 resource: >-
   https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/
-timestamp: '2026-07-02'
+timestamp: '2026-10-15'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'

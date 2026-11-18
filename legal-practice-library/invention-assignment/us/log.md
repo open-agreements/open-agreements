@@ -1,5 +1,11 @@
 # Us Update Log
 
+## 2026-11-14
+* **Update**: Montana invention-assignment freshness (#3283); survey 'At a glance' table and hired-to-invent/copyright wording (1c37be7)
+* **Update**: Montana: complete the Ruff and Access Organics pull quotes; scope the no-case claim to our review (content advisory) (2a9adce)
+* **Update**: Montana: cite Ruff's scope-of-duties holdings; qualify 28-2-724 with its exceptions (peer review) (ca9b304)
+* **Update**: Montana: restore the Ruff recital quote as on main (no-ellipsis rule); hook skipped because the restored quote differs from HEAD but not from main (d31563f)
+
 ## 2026-10-08
 * **Update**: content(invention-assignment): full-sentence answer openings for Alabama, Arizona, the District of Columbia and Guam (#2980) (2d2d1a9)
 * **Update**: content(invention-assignment): answer the carve-out question first in the District of Columbia and Pennsylvania (#3484 LLM gate) (514e3cc)

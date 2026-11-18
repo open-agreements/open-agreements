@@ -7,7 +7,7 @@ description: >-
 citation: 'Boelter v. Hearst Commc''ns, Inc., 192 F. Supp. 3d 427 (S.D.N.Y. 2016).'
 resource: >-
   https://www.courtlistener.com/opinion/7320807/boelter-v-hearst-communications-inc/
-timestamp: '2026-06-11'
+timestamp: '2026-10-19'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'

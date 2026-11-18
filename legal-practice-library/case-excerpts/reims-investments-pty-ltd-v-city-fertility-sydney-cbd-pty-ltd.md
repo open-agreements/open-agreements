@@ -8,7 +8,7 @@ citation: >-
   Reims Investments Pty Ltd v City Fertility Sydney CBD Pty Ltd [2025] QCA 243
   (Doyle JA).
 resource: 'https://archive.sclqld.org.au/qjudgment/2025/QCA25-243.pdf'
-timestamp: '2026-06-10'
+timestamp: '2026-10-15'
 document_references:
   - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'

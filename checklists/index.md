@@ -12,6 +12,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 
 ## Documents
 
+* [Asset Purchase](asset-purchase/)
 * [Corporate Governance](corporate-governance/)
 * [Employment Offer Letter](employment-offer-letter/)
 * [Founder Separation](founder-separation/)

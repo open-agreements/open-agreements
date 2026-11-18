@@ -6,7 +6,7 @@ description: >-
   in 1 document(s).
 citation: 'Fish v. Amsted Indus., Inc., 126 Wis. 2d 293, 376 N.W.2d 820 (1985).'
 resource: 'https://www.courtlistener.com/opinion/1755821/fish-v-amsted-industries-inc/'
-timestamp: '2026-09-28'
+timestamp: '2026-11-14'
 document_references:
   - type: Law Topic
     resource: >-

@@ -6,7 +6,7 @@ description: >-
   quoted in 2 document(s).
 citation: 'Chambers-Dobson, Inc. v. Squier, 238 Neb. 748, 756, 472 N.W.2d 391 (1991).'
 resource: 'https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-squier/'
-timestamp: '2026-06-12'
+timestamp: '2026-10-15'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'
