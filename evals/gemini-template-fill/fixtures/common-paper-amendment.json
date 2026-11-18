@@ -1,0 +1,23 @@
+{
+  "template": "common-paper-amendment",
+  "deal": "Cedar Signal Inc. signs through Mira Patel, Chief Executive Officer, with notices to legal@cedarsignal.example. Harbor Works LLC signs through Owen Brooks, Chief Operating Officer, with notices to legal@harborworks.example. Both sign as entities. Cedar is party 1, Harbor party 2. Amend their \"Cloud Service Agreement\", dated \"June 1, 2026\", effective November 20, 2026. The amendment topic is \"Subscription extension\". Insert this exact operative change: \"The subscription end date is extended to May 31, 2027. All other terms remain unchanged.\"",
+  "expected": {
+    "party_1": "Cedar Signal Inc.",
+    "party_2": "Harbor Works LLC",
+    "agreement_name": "Cloud Service Agreement",
+    "agreement_date": "June 1, 2026",
+    "amendment_effective_date": "November 20, 2026",
+    "amendment_topic": "Subscription extension",
+    "amendment_details": "The subscription end date is extended to May 31, 2027. All other terms remain unchanged.",
+    "party_1_signatory_type": "entity",
+    "party_1_signatory_name": "Mira Patel",
+    "party_1_signatory_title": "Chief Executive Officer",
+    "party_1_signatory_company": "Cedar Signal Inc.",
+    "party_1_signatory_email": "legal@cedarsignal.example",
+    "party_2_signatory_type": "entity",
+    "party_2_signatory_name": "Owen Brooks",
+    "party_2_signatory_title": "Chief Operating Officer",
+    "party_2_signatory_company": "Harbor Works LLC",
+    "party_2_signatory_email": "legal@harborworks.example"
+  }
+}

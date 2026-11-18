@@ -1,0 +1,21 @@
+{
+  "template": "openagreements-employment-offer-letter",
+  "deal": "Cedar Signal Inc. offers Alex Rivera a full-time position as \"Senior Product Designer\", starting December 7, 2026, reporting to \"Mira Patel\" in \"Austin, Texas\". The employer signs through Mira Patel, Chief Executive Officer. Salary wording: \"$145,000 per year, paid semi-monthly\". Bonus wording: \"Eligible for a discretionary annual bonus of up to 10% of base salary.\" Equity wording: \"Subject to board approval, an option to purchase 12,000 shares, vesting over four years with a one-year cliff.\" Texas law applies; do not include California-specific terms. The offer expires November 27, 2026.",
+  "expected": {
+    "employer_name": "Cedar Signal Inc.",
+    "employer_signatory_name": "Mira Patel",
+    "employer_signatory_title": "Chief Executive Officer",
+    "employee_name": "Alex Rivera",
+    "position_title": "Senior Product Designer",
+    "employment_type": "full-time",
+    "start_date": "December 7, 2026",
+    "reporting_manager": "Mira Patel",
+    "base_salary": "$145,000 per year, paid semi-monthly",
+    "bonus_terms": "Eligible for a discretionary annual bonus of up to 10% of base salary.",
+    "equity_terms": "Subject to board approval, an option to purchase 12,000 shares, vesting over four years with a one-year cliff.",
+    "work_location": "Austin, Texas",
+    "governing_law": "Texas",
+    "california_specific_terms": false,
+    "offer_expiration_date": "November 27, 2026"
+  }
+}

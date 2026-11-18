@@ -1,0 +1,24 @@
+{
+  "template": "common-paper-mutual-nda",
+  "deal": "Cedar Signal Inc. signs through Mira Patel, Chief Executive Officer, with notices to legal@cedarsignal.example. Harbor Works LLC signs through Owen Brooks, Chief Operating Officer, with notices to legal@harborworks.example. Both sign as entities. The parties evaluate a warehouse forecasting integration. Use the purpose wording \"Evaluating a warehouse forecasting integration\". The effective date is November 20, 2026. Information sharing lasts \"2 years\"; confidentiality lasts \"5 years\" from \"Effective Date\". Delaware law and New Castle County, Delaware courts apply. There are no standard-term changes; record \"None.\". Cedar is party 1 and Harbor party 2.",
+  "expected": {
+    "purpose": "Evaluating a warehouse forecasting integration",
+    "effective_date": "November 20, 2026",
+    "mnda_term": "2 years",
+    "confidentiality_term": "5 years",
+    "confidentiality_term_start": "Effective Date",
+    "governing_law": "Delaware",
+    "jurisdiction": "New Castle County, Delaware",
+    "changes_to_standard_terms": "None.",
+    "party_1_type": "entity",
+    "party_1_name": "Mira Patel",
+    "party_1_title": "Chief Executive Officer",
+    "party_1_company": "Cedar Signal Inc.",
+    "party_1_email": "legal@cedarsignal.example",
+    "party_2_type": "entity",
+    "party_2_name": "Owen Brooks",
+    "party_2_title": "Chief Operating Officer",
+    "party_2_company": "Harbor Works LLC",
+    "party_2_email": "legal@harborworks.example"
+  }
+}

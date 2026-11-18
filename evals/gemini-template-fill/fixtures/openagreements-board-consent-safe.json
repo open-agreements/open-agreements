@@ -1,0 +1,19 @@
+{
+  "template": "openagreements-board-consent-safe",
+  "deal": "Cedar Signal Inc., a Delaware corporation, approves an aggregate SAFE financing of $750,000 by unanimous board consent effective November 20, 2026. Directors are Mira Patel and Leah Torres, in that order; both sign November 20, 2026. The template already supplies the dollar sign before the purchase amount.",
+  "expected": {
+    "company_name": "Cedar Signal Inc.",
+    "effective_date": "November 20, 2026",
+    "purchase_amount": "750,000",
+    "board_members": [
+      {
+        "name": "Mira Patel",
+        "signing_date": "November 20, 2026"
+      },
+      {
+        "name": "Leah Torres",
+        "signing_date": "November 20, 2026"
+      }
+    ]
+  }
+}

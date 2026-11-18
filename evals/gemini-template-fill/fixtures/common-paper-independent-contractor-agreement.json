@@ -1,0 +1,25 @@
+{
+  "template": "common-paper-independent-contractor-agreement",
+  "deal": "Cedar Signal Inc., 120 Congress Avenue, Austin, TX 78701, engages Leah Torres, an individual at 85 Oak Street, Austin, TX 78702. Cedar signs through Mira Patel, Chief Executive Officer, with notices to legal@cedarsignal.example. Leah signs individually and receives notices at leah@torres.example; leave her title and company fields empty. Services: \"Create interface mockups for the warehouse forecasting dashboard.\" Rates and fees: \"$125 per hour, not to exceed $10,000\". Payment terms: \"Monthly invoices payable within 30 days of receipt.\" Timeline: \"December 1, 2026 through January 31, 2027\". Other terms: \"Only pre-approved expenses reimbursed at cost.\" Texas law; jurisdiction place name: \"Travis County, Texas\".",
+  "expected": {
+    "company_name_and_address": "Cedar Signal Inc., 120 Congress Avenue, Austin, TX 78701",
+    "contractor_name_and_address": "Leah Torres, 85 Oak Street, Austin, TX 78702",
+    "services_description": "Create interface mockups for the warehouse forecasting dashboard.",
+    "rates_and_fees": "$125 per hour, not to exceed $10,000",
+    "payment_terms": "Monthly invoices payable within 30 days of receipt.",
+    "timeline": "December 1, 2026 through January 31, 2027",
+    "other_terms": "Only pre-approved expenses reimbursed at cost.",
+    "governing_law": "Texas",
+    "jurisdiction": "Travis County, Texas",
+    "company_signatory_type": "entity",
+    "company_signatory_name": "Mira Patel",
+    "company_signatory_title": "Chief Executive Officer",
+    "company_signatory_company": "Cedar Signal Inc.",
+    "company_signatory_email": "legal@cedarsignal.example",
+    "contractor_signatory_type": "individual",
+    "contractor_signatory_name": "Leah Torres",
+    "contractor_signatory_title": "",
+    "contractor_signatory_company": "",
+    "contractor_signatory_email": "leah@torres.example"
+  }
+}
