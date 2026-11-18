@@ -1,0 +1,650 @@
+[
+  {
+    "model": "gemini-3.8-flash",
+    "template": "common-paper-order-form",
+    "changed_correct": 7,
+    "changed_total": 7,
+    "expected": {
+      "provider_name": "Cedar Signal Inc.",
+      "customer_name": "Harbor Works LLC",
+      "key_terms_effective_date": "November 20, 2026",
+      "cloud_service": "Cedar Forecast Cloud",
+      "custom_start_date": "December 1, 2026",
+      "subscription_period": "12 months",
+      "pilot_period": "45 days",
+      "fees": "$34",
+      "fee_unit": "active user per month",
+      "custom_fee_structure": "",
+      "use_limitations": "Up to 40 active users",
+      "professional_services_billing": "Billed separately under SOW CS-014",
+      "payment_frequency": "monthly",
+      "payment_terms_days": "30",
+      "payment_due_from": "invoice date",
+      "sla_terms": "99.9% monthly uptime",
+      "technical_support": "Email support on business days, 9am to 5pm Central",
+      "professional_services_description": "",
+      "professional_services_reference": "SOW CS-014 dated December 1, 2026",
+      "pilot_has_fee": false,
+      "fee_is_per_unit": true,
+      "fee_is_other": false,
+      "fee_may_increase": false,
+      "fee_will_increase": true,
+      "fee_increase_max_percent": "",
+      "fee_increase_percent": "3",
+      "fee_inclusive_of_taxes": false,
+      "payment_by_invoice": true,
+      "no_auto_renew": true,
+      "professional_services_by_reference": true,
+      "professional_services_described": false,
+      "professional_services_payment": true,
+      "provider_signatory_type": "entity",
+      "provider_signatory_name": "Mira Patel",
+      "provider_signatory_title": "Chief Executive Officer",
+      "provider_signatory_company": "Cedar Signal Inc.",
+      "provider_signatory_email": "legal@cedarsignal.example",
+      "customer_signatory_type": "entity",
+      "customer_signatory_name": "Owen Brooks",
+      "customer_signatory_title": "Chief Operating Officer",
+      "customer_signatory_company": "Harbor Works LLC",
+      "customer_signatory_email": "legal@harborworks.example"
+    },
+    "actual": {
+      "provider_name": "Cedar Signal Inc.",
+      "customer_name": "Harbor Works LLC",
+      "key_terms_effective_date": "November 20, 2026",
+      "cloud_service": "Cedar Forecast Cloud",
+      "custom_start_date": "December 1, 2026",
+      "subscription_period": "12 months",
+      "pilot_period": "45 days",
+      "fees": "$34",
+      "fee_unit": "active user per month",
+      "custom_fee_structure": "",
+      "use_limitations": "Up to 40 active users",
+      "professional_services_billing": "Billed separately under SOW CS-014",
+      "payment_frequency": "monthly",
+      "payment_terms_days": "30",
+      "payment_due_from": "invoice date",
+      "sla_terms": "99.9% monthly uptime",
+      "technical_support": "Email support on business days, 9am to 5pm Central",
+      "professional_services_description": "",
+      "professional_services_reference": "SOW CS-014 dated December 1, 2026",
+      "pilot_has_fee": false,
+      "fee_is_per_unit": true,
+      "fee_is_other": false,
+      "fee_may_increase": false,
+      "fee_will_increase": true,
+      "fee_increase_max_percent": "",
+      "fee_increase_percent": "3",
+      "fee_inclusive_of_taxes": false,
+      "payment_by_invoice": true,
+      "no_auto_renew": true,
+      "professional_services_by_reference": true,
+      "professional_services_described": false,
+      "professional_services_payment": true,
+      "provider_signatory_type": "entity",
+      "provider_signatory_name": "Mira Patel",
+      "provider_signatory_title": "Chief Executive Officer",
+      "provider_signatory_company": "Cedar Signal Inc.",
+      "provider_signatory_email": "legal@cedarsignal.example",
+      "customer_signatory_type": "entity",
+      "customer_signatory_name": "Owen Brooks",
+      "customer_signatory_title": "Chief Operating Officer",
+      "customer_signatory_company": "Harbor Works LLC",
+      "customer_signatory_email": "legal@harborworks.example"
+    },
+    "exact_document": true,
+    "usage": {
+      "promptTokenCount": 3022,
+      "candidatesTokenCount": 595,
+      "totalTokenCount": 10393,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 3022
+        }
+      ],
+      "thoughtsTokenCount": 6776,
+      "serviceTier": "standard"
+    },
+    "cost_usd": 0.02990775
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "template": "common-paper-statement-of-work",
+    "changed_correct": 4,
+    "changed_total": 4,
+    "expected": {
+      "provider_name": "Cedar Signal Inc.",
+      "customer_name": "Harbor Works LLC",
+      "key_terms_effective_date": "November 20, 2026",
+      "sow_number": "CS-014",
+      "custom_sow_date": "December 1, 2026",
+      "custom_end_date": "March 17, 2027",
+      "term_duration_unit": "",
+      "payment_terms": "Net 30 days from invoice date",
+      "services_description": "Configure and deploy the warehouse forecasting dashboard.",
+      "fee_description": "$20,575 fixed fee",
+      "invoice_cadence": "Monthly in arrears",
+      "customer_obligations": "Provide weekly inventory exports and one project lead.",
+      "term_duration_value": "",
+      "rejection_period_value": "15",
+      "resubmission_period_value": "3",
+      "changes_to_standard_terms": "None.",
+      "invoice_frequency_unit": "days",
+      "travel_expense_policy": "Only pre-approved expenses reimbursed at cost.",
+      "include_in_progress_deliverables": true,
+      "deliverables_meet_specs": true,
+      "deliverables_acceptance_process": true,
+      "ownership_upon_payment": true,
+      "no_third_party_materials": true,
+      "has_third_party_materials": false,
+      "provider_procures_materials": false,
+      "customer_procures_materials": false,
+      "customer_owned_deliverables": "Dashboard configuration and deployment documentation",
+      "provider_signatory_type": "entity",
+      "provider_signatory_name": "Mira Patel",
+      "provider_signatory_title": "Chief Executive Officer",
+      "provider_signatory_company": "Cedar Signal Inc.",
+      "provider_signatory_email": "legal@cedarsignal.example",
+      "customer_signatory_type": "entity",
+      "customer_signatory_name": "Owen Brooks",
+      "customer_signatory_title": "Chief Operating Officer",
+      "customer_signatory_company": "Harbor Works LLC",
+      "customer_signatory_email": "legal@harborworks.example"
+    },
+    "actual": {
+      "provider_name": "Cedar Signal Inc.",
+      "customer_name": "Harbor Works LLC",
+      "key_terms_effective_date": "November 20, 2026",
+      "sow_number": "CS-014",
+      "custom_sow_date": "December 1, 2026",
+      "custom_end_date": "March 17, 2027",
+      "term_duration_unit": "",
+      "payment_terms": "Net 30 days from invoice date",
+      "services_description": "Configure and deploy the warehouse forecasting dashboard.",
+      "fee_description": "$20,575 fixed fee",
+      "invoice_cadence": "Monthly in arrears",
+      "customer_obligations": "Provide weekly inventory exports and one project lead.",
+      "term_duration_value": "",
+      "rejection_period_value": "15",
+      "resubmission_period_value": "3",
+      "changes_to_standard_terms": "None.",
+      "invoice_frequency_unit": "days",
+      "travel_expense_policy": "Only pre-approved expenses reimbursed at cost.",
+      "include_in_progress_deliverables": true,
+      "deliverables_meet_specs": true,
+      "deliverables_acceptance_process": true,
+      "ownership_upon_payment": true,
+      "no_third_party_materials": true,
+      "has_third_party_materials": false,
+      "provider_procures_materials": false,
+      "customer_procures_materials": false,
+      "customer_owned_deliverables": "Dashboard configuration and deployment documentation",
+      "provider_signatory_type": "entity",
+      "provider_signatory_name": "Mira Patel",
+      "provider_signatory_title": "Chief Executive Officer",
+      "provider_signatory_company": "Cedar Signal Inc.",
+      "provider_signatory_email": "legal@cedarsignal.example",
+      "customer_signatory_type": "entity",
+      "customer_signatory_name": "Owen Brooks",
+      "customer_signatory_title": "Chief Operating Officer",
+      "customer_signatory_company": "Harbor Works LLC",
+      "customer_signatory_email": "legal@harborworks.example"
+    },
+    "exact_document": true,
+    "usage": {
+      "promptTokenCount": 2815,
+      "candidatesTokenCount": 551,
+      "totalTokenCount": 4956,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 2815
+        }
+      ],
+      "thoughtsTokenCount": 1590,
+      "serviceTier": "standard"
+    },
+    "cost_usd": 0.01014
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "template": "openagreements-board-consent-safe",
+    "changed_correct": 3,
+    "changed_total": 3,
+    "expected": {
+      "company_name": "Cedar Signal Inc.",
+      "effective_date": "December 3, 2026",
+      "purchase_amount": "878,500",
+      "board_members": [
+        {
+          "name": "Mira Patel",
+          "signing_date": "December 1, 2026"
+        },
+        {
+          "name": "Leah Torres",
+          "signing_date": "December 2, 2026"
+        }
+      ]
+    },
+    "actual": {
+      "company_name": "Cedar Signal Inc.",
+      "effective_date": "December 3, 2026",
+      "purchase_amount": "878,500",
+      "board_members": [
+        {
+          "name": "Mira Patel",
+          "signing_date": "December 1, 2026"
+        },
+        {
+          "name": "Leah Torres",
+          "signing_date": "December 2, 2026"
+        }
+      ]
+    },
+    "exact_document": true,
+    "usage": {
+      "promptTokenCount": 702,
+      "candidatesTokenCount": 126,
+      "totalTokenCount": 1482,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 702
+        }
+      ],
+      "thoughtsTokenCount": 654,
+      "serviceTier": "standard"
+    },
+    "cost_usd": 0.0034515
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "template": "openagreements-employment-offer-letter",
+    "changed_correct": 4,
+    "changed_total": 4,
+    "expected": {
+      "employer_name": "Cedar Signal Inc.",
+      "employer_signatory_name": "Mira Patel",
+      "employer_signatory_title": "Chief Executive Officer",
+      "employee_name": "Alex Rivera",
+      "position_title": "Senior Product Designer",
+      "employment_type": "full-time",
+      "start_date": "December 28, 2026",
+      "reporting_manager": "Mira Patel",
+      "base_salary": "$156,000 per year, paid semi-monthly",
+      "bonus_terms": "Eligible for a discretionary annual bonus of up to 10% of base salary.",
+      "equity_terms": "Subject to board approval, an option to purchase 14,000 shares, vesting over four years with a one-year cliff.",
+      "work_location": "Austin, Texas",
+      "governing_law": "Texas",
+      "california_specific_terms": false,
+      "offer_expiration_date": "December 18, 2026"
+    },
+    "actual": {
+      "employer_name": "Cedar Signal Inc.",
+      "employer_signatory_name": "Mira Patel",
+      "employer_signatory_title": "Chief Executive Officer",
+      "employee_name": "Alex Rivera",
+      "position_title": "Senior Product Designer",
+      "employment_type": "full-time",
+      "start_date": "December 28, 2026",
+      "reporting_manager": "Mira Patel",
+      "base_salary": "$156,000 per year, paid semi-monthly",
+      "bonus_terms": "Eligible for a discretionary annual bonus of up to 10% of base salary.",
+      "equity_terms": "Subject to board approval, an option to purchase 14,000 shares, vesting over four years with a one-year cliff.",
+      "work_location": "Austin, Texas",
+      "governing_law": "Texas",
+      "california_specific_terms": false,
+      "offer_expiration_date": "December 18, 2026"
+    },
+    "exact_document": true,
+    "usage": {
+      "promptTokenCount": 1412,
+      "candidatesTokenCount": 252,
+      "totalTokenCount": 2470,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1412
+        }
+      ],
+      "thoughtsTokenCount": 806,
+      "serviceTier": "standard"
+    },
+    "cost_usd": 0.0050265
+  },
+  {
+    "model": "gemini-4-argon",
+    "template": "common-paper-order-form",
+    "changed_correct": 7,
+    "changed_total": 7,
+    "expected": {
+      "provider_name": "Cedar Signal Inc.",
+      "customer_name": "Harbor Works LLC",
+      "key_terms_effective_date": "November 20, 2026",
+      "cloud_service": "Cedar Forecast Cloud",
+      "custom_start_date": "December 1, 2026",
+      "subscription_period": "12 months",
+      "pilot_period": "45 days",
+      "fees": "$34",
+      "fee_unit": "active user per month",
+      "custom_fee_structure": "",
+      "use_limitations": "Up to 40 active users",
+      "professional_services_billing": "Billed separately under SOW CS-014",
+      "payment_frequency": "monthly",
+      "payment_terms_days": "30",
+      "payment_due_from": "invoice date",
+      "sla_terms": "99.9% monthly uptime",
+      "technical_support": "Email support on business days, 9am to 5pm Central",
+      "professional_services_description": "",
+      "professional_services_reference": "SOW CS-014 dated December 1, 2026",
+      "pilot_has_fee": false,
+      "fee_is_per_unit": true,
+      "fee_is_other": false,
+      "fee_may_increase": false,
+      "fee_will_increase": true,
+      "fee_increase_max_percent": "",
+      "fee_increase_percent": "3",
+      "fee_inclusive_of_taxes": false,
+      "payment_by_invoice": true,
+      "no_auto_renew": true,
+      "professional_services_by_reference": true,
+      "professional_services_described": false,
+      "professional_services_payment": true,
+      "provider_signatory_type": "entity",
+      "provider_signatory_name": "Mira Patel",
+      "provider_signatory_title": "Chief Executive Officer",
+      "provider_signatory_company": "Cedar Signal Inc.",
+      "provider_signatory_email": "legal@cedarsignal.example",
+      "customer_signatory_type": "entity",
+      "customer_signatory_name": "Owen Brooks",
+      "customer_signatory_title": "Chief Operating Officer",
+      "customer_signatory_company": "Harbor Works LLC",
+      "customer_signatory_email": "legal@harborworks.example"
+    },
+    "actual": {
+      "provider_name": "Cedar Signal Inc.",
+      "customer_name": "Harbor Works LLC",
+      "key_terms_effective_date": "November 20, 2026",
+      "cloud_service": "Cedar Forecast Cloud",
+      "custom_start_date": "December 1, 2026",
+      "subscription_period": "12 months",
+      "pilot_period": "45 days",
+      "fees": "$34",
+      "fee_unit": "active user per month",
+      "custom_fee_structure": "",
+      "use_limitations": "Up to 40 active users",
+      "professional_services_billing": "Billed separately under SOW CS-014",
+      "payment_frequency": "monthly",
+      "payment_terms_days": "30",
+      "payment_due_from": "invoice date",
+      "sla_terms": "99.9% monthly uptime",
+      "technical_support": "Email support on business days, 9am to 5pm Central",
+      "professional_services_description": "",
+      "professional_services_reference": "SOW CS-014 dated December 1, 2026",
+      "pilot_has_fee": false,
+      "fee_is_per_unit": true,
+      "fee_is_other": false,
+      "fee_may_increase": false,
+      "fee_will_increase": true,
+      "fee_increase_max_percent": "",
+      "fee_increase_percent": "3",
+      "fee_inclusive_of_taxes": false,
+      "payment_by_invoice": true,
+      "no_auto_renew": true,
+      "professional_services_by_reference": true,
+      "professional_services_described": false,
+      "professional_services_payment": true,
+      "provider_signatory_type": "entity",
+      "provider_signatory_name": "Mira Patel",
+      "provider_signatory_title": "Chief Executive Officer",
+      "provider_signatory_company": "Cedar Signal Inc.",
+      "provider_signatory_email": "legal@cedarsignal.example",
+      "customer_signatory_type": "entity",
+      "customer_signatory_name": "Owen Brooks",
+      "customer_signatory_title": "Chief Operating Officer",
+      "customer_signatory_company": "Harbor Works LLC",
+      "customer_signatory_email": "legal@harborworks.example"
+    },
+    "exact_document": true,
+    "usage": {
+      "promptTokenCount": 3110,
+      "candidatesTokenCount": 511,
+      "totalTokenCount": 3621,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 3110
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 511
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "cost_usd": 0.01133
+  },
+  {
+    "model": "gemini-4-argon",
+    "template": "common-paper-statement-of-work",
+    "changed_correct": 4,
+    "changed_total": 4,
+    "expected": {
+      "provider_name": "Cedar Signal Inc.",
+      "customer_name": "Harbor Works LLC",
+      "key_terms_effective_date": "November 20, 2026",
+      "sow_number": "CS-014",
+      "custom_sow_date": "December 1, 2026",
+      "custom_end_date": "March 17, 2027",
+      "term_duration_unit": "",
+      "payment_terms": "Net 30 days from invoice date",
+      "services_description": "Configure and deploy the warehouse forecasting dashboard.",
+      "fee_description": "$20,575 fixed fee",
+      "invoice_cadence": "Monthly in arrears",
+      "customer_obligations": "Provide weekly inventory exports and one project lead.",
+      "term_duration_value": "",
+      "rejection_period_value": "15",
+      "resubmission_period_value": "3",
+      "changes_to_standard_terms": "None.",
+      "invoice_frequency_unit": "days",
+      "travel_expense_policy": "Only pre-approved expenses reimbursed at cost.",
+      "include_in_progress_deliverables": true,
+      "deliverables_meet_specs": true,
+      "deliverables_acceptance_process": true,
+      "ownership_upon_payment": true,
+      "no_third_party_materials": true,
+      "has_third_party_materials": false,
+      "provider_procures_materials": false,
+      "customer_procures_materials": false,
+      "customer_owned_deliverables": "Dashboard configuration and deployment documentation",
+      "provider_signatory_type": "entity",
+      "provider_signatory_name": "Mira Patel",
+      "provider_signatory_title": "Chief Executive Officer",
+      "provider_signatory_company": "Cedar Signal Inc.",
+      "provider_signatory_email": "legal@cedarsignal.example",
+      "customer_signatory_type": "entity",
+      "customer_signatory_name": "Owen Brooks",
+      "customer_signatory_title": "Chief Operating Officer",
+      "customer_signatory_company": "Harbor Works LLC",
+      "customer_signatory_email": "legal@harborworks.example"
+    },
+    "actual": {
+      "provider_name": "Cedar Signal Inc.",
+      "customer_name": "Harbor Works LLC",
+      "key_terms_effective_date": "November 20, 2026",
+      "sow_number": "CS-014",
+      "custom_sow_date": "December 1, 2026",
+      "custom_end_date": "March 17, 2027",
+      "term_duration_unit": "",
+      "payment_terms": "Net 30 days from invoice date",
+      "services_description": "Configure and deploy the warehouse forecasting dashboard.",
+      "fee_description": "$20,575 fixed fee",
+      "invoice_cadence": "Monthly in arrears",
+      "customer_obligations": "Provide weekly inventory exports and one project lead.",
+      "term_duration_value": "",
+      "rejection_period_value": "15",
+      "resubmission_period_value": "3",
+      "changes_to_standard_terms": "None.",
+      "invoice_frequency_unit": "days",
+      "travel_expense_policy": "Only pre-approved expenses reimbursed at cost.",
+      "include_in_progress_deliverables": true,
+      "deliverables_meet_specs": true,
+      "deliverables_acceptance_process": true,
+      "ownership_upon_payment": true,
+      "no_third_party_materials": true,
+      "has_third_party_materials": false,
+      "provider_procures_materials": false,
+      "customer_procures_materials": false,
+      "customer_owned_deliverables": "Dashboard configuration and deployment documentation",
+      "provider_signatory_type": "entity",
+      "provider_signatory_name": "Mira Patel",
+      "provider_signatory_title": "Chief Executive Officer",
+      "provider_signatory_company": "Cedar Signal Inc.",
+      "provider_signatory_email": "legal@cedarsignal.example",
+      "customer_signatory_type": "entity",
+      "customer_signatory_name": "Owen Brooks",
+      "customer_signatory_title": "Chief Operating Officer",
+      "customer_signatory_company": "Harbor Works LLC",
+      "customer_signatory_email": "legal@harborworks.example"
+    },
+    "exact_document": true,
+    "usage": {
+      "promptTokenCount": 2897,
+      "candidatesTokenCount": 477,
+      "totalTokenCount": 3374,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 2897
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 477
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "cost_usd": 0.010564
+  },
+  {
+    "model": "gemini-4-argon",
+    "template": "openagreements-board-consent-safe",
+    "changed_correct": 3,
+    "changed_total": 3,
+    "expected": {
+      "company_name": "Cedar Signal Inc.",
+      "effective_date": "December 3, 2026",
+      "purchase_amount": "878,500",
+      "board_members": [
+        {
+          "name": "Mira Patel",
+          "signing_date": "December 1, 2026"
+        },
+        {
+          "name": "Leah Torres",
+          "signing_date": "December 2, 2026"
+        }
+      ]
+    },
+    "actual": {
+      "company_name": "Cedar Signal Inc.",
+      "effective_date": "December 3, 2026",
+      "purchase_amount": "878,500",
+      "board_members": [
+        {
+          "name": "Mira Patel",
+          "signing_date": "December 1, 2026"
+        },
+        {
+          "name": "Leah Torres",
+          "signing_date": "December 2, 2026"
+        }
+      ]
+    },
+    "exact_document": true,
+    "usage": {
+      "promptTokenCount": 794,
+      "candidatesTokenCount": 131,
+      "totalTokenCount": 925,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 794
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 131
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "cost_usd": 0.002898
+  },
+  {
+    "model": "gemini-4-argon",
+    "template": "openagreements-employment-offer-letter",
+    "changed_correct": 4,
+    "changed_total": 4,
+    "expected": {
+      "employer_name": "Cedar Signal Inc.",
+      "employer_signatory_name": "Mira Patel",
+      "employer_signatory_title": "Chief Executive Officer",
+      "employee_name": "Alex Rivera",
+      "position_title": "Senior Product Designer",
+      "employment_type": "full-time",
+      "start_date": "December 28, 2026",
+      "reporting_manager": "Mira Patel",
+      "base_salary": "$156,000 per year, paid semi-monthly",
+      "bonus_terms": "Eligible for a discretionary annual bonus of up to 10% of base salary.",
+      "equity_terms": "Subject to board approval, an option to purchase 14,000 shares, vesting over four years with a one-year cliff.",
+      "work_location": "Austin, Texas",
+      "governing_law": "Texas",
+      "california_specific_terms": false,
+      "offer_expiration_date": "December 18, 2026"
+    },
+    "actual": {
+      "employer_name": "Cedar Signal Inc.",
+      "employer_signatory_name": "Mira Patel",
+      "employer_signatory_title": "Chief Executive Officer",
+      "employee_name": "Alex Rivera",
+      "position_title": "Senior Product Designer",
+      "employment_type": "full-time",
+      "start_date": "December 28, 2026",
+      "reporting_manager": "Mira Patel",
+      "base_salary": "$156,000 per year, paid semi-monthly",
+      "bonus_terms": "Eligible for a discretionary annual bonus of up to 10% of base salary.",
+      "equity_terms": "Subject to board approval, an option to purchase 14,000 shares, vesting over four years with a one-year cliff.",
+      "work_location": "Austin, Texas",
+      "governing_law": "Texas",
+      "california_specific_terms": false,
+      "offer_expiration_date": "December 18, 2026"
+    },
+    "exact_document": true,
+    "usage": {
+      "promptTokenCount": 1498,
+      "candidatesTokenCount": 219,
+      "totalTokenCount": 1717,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1498
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 219
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "cost_usd": 0.005186
+  }
+]
