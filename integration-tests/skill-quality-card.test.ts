@@ -114,6 +114,17 @@ describe('non-compete quality card', () => {
     expect(validate(mutate({ content_packaged_at: '2026-13-45' }))).toBe(false);
   });
 
+  it('accepts a card that makes no lawyer-review claim', () => {
+    const validate = compile();
+    const { review: _dropped, ...withoutClaim } = card;
+    expect(validate(withoutClaim)).toBe(true);
+  });
+
+  it('requires evidence when a lawyer-review claim is present', () => {
+    const validate = compile();
+    expect(validate(mutate({ review: { claim: 'lawyer-reviewed' } }))).toBe(false);
+  });
+
   it('rejects an uncontrolled review claim', () => {
     const validate = compile();
     expect(

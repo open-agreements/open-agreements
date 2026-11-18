@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { compileSelectionContract } from '../src/core/selection-contract.js';
 import { selectionReferenceInputs, verifyThirdpartyTemplate } from './verify-thirdparty-contracts.js';
+import { seconds } from '../integration-tests/helpers/timeouts.js';
 
 const orderForm = resolve('templates/common-paper-cc-by-4.0/common-paper-order-form');
 const businessAssociate = resolve('templates/common-paper-cc-by-4.0/common-paper-business-associate-agreement');
@@ -75,5 +76,5 @@ describe('explicit-empty legacy selection reference inputs', () => {
     expect(emptyDefaults?.reference_sha256).toMatch(/^[a-f0-9]{64}$/);
     expect(emptyDefaults?.legacy_sha256).toMatch(/^[a-f0-9]{64}$/);
     expect(emptyDefaults?.reference_sha256).not.toBe(emptyDefaults?.legacy_sha256);
-  }, 60_000);
+  }, seconds(60));
 });
