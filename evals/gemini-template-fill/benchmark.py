@@ -3,8 +3,21 @@
 No credentials are persisted. Raw provider requests/responses are append-only.
 """
 
-import argparse, datetime as dt, difflib, fnmatch, hashlib, json, os
-import pathlib, re, subprocess, tarfile, tempfile, time, urllib.request, urllib.error
+import argparse
+import datetime as dt
+import difflib
+import fnmatch
+import hashlib
+import json
+import os
+import pathlib
+import re
+import subprocess
+import tarfile
+import tempfile
+import time
+import urllib.error
+import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -13,22 +26,22 @@ ROOT = HERE.parent.parent
 MODELS = ("gemini-3.8-flash", "gemini-4-argon")
 SOURCE = "2f4dd6e072219a573b581ab5de18b43c4d8ba967"
 PRICES = {
-    "gemini-3.8-flash": dict(
-        input=0.75,
-        output=3.75,
-        cached=0.075,
-        list_input=1.5,
-        list_output=7.5,
-        expires="2026-12-31",
-    ),
-    "gemini-4-argon": dict(
-        input=2.0,
-        output=10.0,
-        cached=0.10,
-        list_input=4.0,
-        list_output=20.0,
-        expires="2026-11-30",
-    ),
+    "gemini-3.8-flash": {
+        "input": 0.75,
+        "output": 3.75,
+        "cached": 0.075,
+        "list_input": 1.5,
+        "list_output": 7.5,
+        "expires": "2026-12-31",
+    },
+    "gemini-4-argon": {
+        "input": 2.0,
+        "output": 10.0,
+        "cached": 0.10,
+        "list_input": 4.0,
+        "list_output": 20.0,
+        "expires": "2026-11-30",
+    },
 }
 W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 
@@ -67,7 +80,7 @@ def key():
 def bridge(name, **args):
     p = subprocess.run(
         ["node", str(HERE / "mcp-bridge.mjs")],
-        input=json.dumps(dict(name=name, args=args)),
+        input=json.dumps({"name": name, "args": args}),
         text=True,
         capture_output=True,
         cwd=ROOT,
@@ -130,7 +143,10 @@ class API:
         self.budget = budget
         self.ledger = out / "calls.jsonl"
         self.spent = (
-            sum(json.loads(l)["cost_usd"] for l in self.ledger.read_text().splitlines())
+            sum(
+                json.loads(line)["cost_usd"]
+                for line in self.ledger.read_text().splitlines()
+            )
             if self.ledger.exists()
             else 0.0
         )
@@ -165,7 +181,7 @@ class API:
         ) / 1e6
         if self.spent + reserve > self.budget:
             raise RuntimeError("Budget reservation refused")
-        stamp = dt.datetime.now(dt.timezone.utc).isoformat()
+        stamp = dt.datetime.now(dt.UTC).isoformat()
         start = time.monotonic()
         ordinal = (
             len(list((self.out / "api").glob("*.request.json")))
@@ -176,7 +192,7 @@ class API:
         dump(req_path, request)
         dump(
             self.out / "api" / f"{ordinal:04d}.count.json",
-            dict(totalTokens=count, reserved_max_list_cost_usd=reserve),
+            {"totalTokens": count, "reserved_max_list_cost_usd": reserve},
         )
         try:
             response = post(base + ":generateContent", request)
@@ -191,17 +207,17 @@ class API:
         amount = cost(model, usage)
         self.spent += amount
         dump(self.out / "api" / f"{ordinal:04d}.response.json", response)
-        entry = dict(
-            cell=cell,
-            model=model,
-            at=stamp,
-            request_sha256=sha(req_path.read_bytes()),
-            response_file=f"api/{ordinal:04d}.response.json",
-            usage=usage,
-            cost_usd=amount,
-            list_cost_usd=cost(model, usage, True),
-            elapsed_seconds=time.monotonic() - start,
-        )
+        entry = {
+            "cell": cell,
+            "model": model,
+            "at": stamp,
+            "request_sha256": sha(req_path.read_bytes()),
+            "response_file": f"api/{ordinal:04d}.response.json",
+            "usage": usage,
+            "cost_usd": amount,
+            "list_cost_usd": cost(model, usage, True),
+            "elapsed_seconds": time.monotonic() - start,
+        }
         with self.ledger.open("a") as f:
             f.write(json.dumps(entry) + "\n")
         print(
@@ -245,13 +261,13 @@ def prepare(out):
             "\n".join(s + "\n" + "\n".join(p) for s, p in parts.items())
         )
         fixtures.append(
-            dict(
-                template=f["template"],
-                fixture_sha256=sha(path.read_bytes()),
-                fields=len(names),
-                gold_stories_sha256=sha(json.dumps(parts, sort_keys=True).encode()),
-                warnings=r.get("warnings", []),
-            )
+            {
+                "template": f["template"],
+                "fixture_sha256": sha(path.read_bytes()),
+                "fields": len(names),
+                "gold_stories_sha256": sha(json.dumps(parts, sort_keys=True).encode()),
+                "warnings": r.get("warnings", []),
+            }
         )
     dump(out / "fixtures-manifest.json", fixtures)
     inputs = {}
@@ -261,20 +277,20 @@ def prepare(out):
                 inputs[str(p.relative_to(ROOT))] = sha(p.read_bytes())
     dump(
         out / "provenance.json",
-        dict(
-            repository_commit=subprocess.check_output(
+        {
+            "repository_commit": subprocess.check_output(
                 ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
             ).strip(),
-            template_files=inputs,
-            prices=PRICES,
-            pricing_source="https://aistudio.google.com/docs/pricing",
-            pricing_checked="2026-11-18",
-            generation=dict(
-                temperature=0,
-                thinking="provider default; usage includes thoughtsTokenCount",
-            ),
-            backend="Gemini Developer API, existing Azure Key Vault key; standard tier",
-        ),
+            "template_files": inputs,
+            "prices": PRICES,
+            "pricing_source": "https://aistudio.google.com/docs/pricing",
+            "pricing_checked": "2026-11-18",
+            "generation": {
+                "temperature": 0,
+                "thinking": "provider default; usage includes thoughtsTokenCount",
+            },
+            "backend": "Gemini Developer API, existing Azure Key Vault key; standard tier",
+        },
     )
     return fixtures
 
@@ -298,14 +314,14 @@ def fill(api, repeats):
                     + "\n\nDEAL NARRATIVE:\n"
                     + fixture["deal"]
                 )
-                request = dict(
-                    contents=[dict(role="user", parts=[dict(text=prompt)])],
-                    generationConfig=dict(
-                        temperature=0,
-                        maxOutputTokens=8192,
-                        responseMimeType="application/json",
-                    ),
-                )
+                request = {
+                    "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                    "generationConfig": {
+                        "temperature": 0,
+                        "maxOutputTokens": 8192,
+                        "responseMimeType": "application/json",
+                    },
+                }
                 response = api.call(model, request, cell)
                 candidate = response.get("candidates", [{}])[0]
                 raw = "".join(
@@ -315,7 +331,7 @@ def fill(api, repeats):
                 )
                 dump(
                     dest / "output.json",
-                    dict(text=raw, finishReason=candidate.get("finishReason")),
+                    {"text": raw, "finishReason": candidate.get("finishReason")},
                 )
                 expected = fixture["expected"]
                 generated = {}
@@ -325,7 +341,7 @@ def fill(api, repeats):
                 try:
                     generated = json.loads(raw)
                     assert isinstance(generated, dict)
-                    result = bridge(
+                    bridge(
                         "fill_template",
                         template=template,
                         values=generated,
@@ -345,67 +361,69 @@ def fill(api, repeats):
                             tofile="generated",
                         )
                     )
-                except Exception as e:
+                except Exception as e:  # noqa: BLE001 - preserve per-cell/tool failures in the evidence
                     error = str(e)
                 if not isinstance(generated, dict):
                     generated = {}
                 failures = {
-                    k: dict(expected=v, actual=generated.get(k, "<MISSING>"))
+                    k: {"expected": v, "actual": generated.get(k, "<MISSING>")}
                     for k, v in expected.items()
                     if k not in generated
-                    or type(generated[k]) != type(v)
+                    or type(generated[k]) is not type(v)
                     or generated[k] != v
                 }
                 extras = sorted(set(generated) - set(expected))
                 complete = candidate.get("finishReason") == "STOP"
                 dump(
                     dest / "score.json",
-                    dict(
-                        fields=len(expected),
-                        correct=len(expected) - len(failures),
-                        failures=failures,
-                        extra_fields=extras,
-                        rendered_document_exact=rendered,
-                        all_fields_exact=not failures and not extras and complete,
-                        error=error,
-                        complete=complete,
-                    ),
+                    {
+                        "fields": len(expected),
+                        "correct": len(expected) - len(failures),
+                        "failures": failures,
+                        "extra_fields": extras,
+                        "rendered_document_exact": rendered,
+                        "all_fields_exact": not failures and not extras and complete,
+                        "error": error,
+                        "complete": complete,
+                    },
                 )
                 (dest / "document.diff").write_text(story_diff + "\n")
 
 
 # Closed-universe tools. No task config/rubric, arbitrary shell, or external access.
 TOOL_SCHEMAS = [
-    dict(
-        name="list_files",
-        description="List all document paths, optionally filtered by a glob.",
-        parameters=dict(type="OBJECT", properties=dict(pattern=dict(type="STRING"))),
-    ),
-    dict(
-        name="read",
-        description="Read a UTF-8 workspace document or output. Paths start documents/ or output/.",
-        parameters=dict(
-            type="OBJECT", properties=dict(path=dict(type="STRING")), required=["path"]
-        ),
-    ),
-    dict(
-        name="search",
-        description="Search workspace document text with a case-insensitive literal string. Returns matching paths and lines.",
-        parameters=dict(
-            type="OBJECT",
-            properties=dict(query=dict(type="STRING")),
-            required=["query"],
-        ),
-    ),
-    dict(
-        name="write",
-        description="Write a complete Markdown deliverable under output/.",
-        parameters=dict(
-            type="OBJECT",
-            properties=dict(path=dict(type="STRING"), content=dict(type="STRING")),
-            required=["path", "content"],
-        ),
-    ),
+    {
+        "name": "list_files",
+        "description": "List all document paths, optionally filtered by a glob.",
+        "parameters": {"type": "OBJECT", "properties": {"pattern": {"type": "STRING"}}},
+    },
+    {
+        "name": "read",
+        "description": "Read a UTF-8 workspace document or output. Paths start documents/ or output/.",
+        "parameters": {
+            "type": "OBJECT",
+            "properties": {"path": {"type": "STRING"}},
+            "required": ["path"],
+        },
+    },
+    {
+        "name": "search",
+        "description": "Search workspace document text with a case-insensitive literal string. Returns matching paths and lines.",
+        "parameters": {
+            "type": "OBJECT",
+            "properties": {"query": {"type": "STRING"}},
+            "required": ["query"],
+        },
+    },
+    {
+        "name": "write",
+        "description": "Write a complete Markdown deliverable under output/.",
+        "parameters": {
+            "type": "OBJECT",
+            "properties": {"path": {"type": "STRING"}, "content": {"type": "STRING"}},
+            "required": ["path", "content"],
+        },
+    },
 ]
 
 
@@ -453,14 +471,14 @@ def leakage_snapshot(source_repo, out):
             cwd=source_repo,
             text=True,
         ).strip()
-        manifest.append(dict(task=task, git_tree=tree, files=files))
+        manifest.append({"task": task, "git_tree": tree, "files": files})
     dump(
         out / "leakage-inputs-manifest.json",
-        dict(
-            source_repository="https://github.com/open-agreements/harvey-labs-openagreements",
-            commit=SOURCE,
-            tasks=manifest,
-        ),
+        {
+            "source_repository": "https://github.com/open-agreements/harvey-labs-openagreements",
+            "commit": SOURCE,
+            "tasks": manifest,
+        },
     )
     return tasks
 
@@ -484,16 +502,18 @@ def leakage(api, source_repo, task_regex=None):
             dest.mkdir(parents=True, exist_ok=True)
             outputs = {}
             system = "You are an AI agent executing a legal drafting task in a workspace. Use only the provided workspace documents; do not conduct external research. documents/ is read-only. Write deliverables as Markdown under output/. Use list_files, read, search and write to complete the task. The task rubric is not accessible. When every deliverable is written, stop calling tools and provide a short completion message."
-            request = dict(
-                systemInstruction=dict(parts=[dict(text=system)]),
-                contents=[dict(role="user", parts=[dict(text=config["instructions"])])],
-                tools=[dict(functionDeclarations=TOOL_SCHEMAS)],
-                generationConfig=dict(
-                    temperature=0,
-                    maxOutputTokens=32768,
-                    thinkingConfig=dict(thinkingLevel="LOW"),
-                ),
-            )
+            request = {
+                "systemInstruction": {"parts": [{"text": system}]},
+                "contents": [
+                    {"role": "user", "parts": [{"text": config["instructions"]}]}
+                ],
+                "tools": [{"functionDeclarations": TOOL_SCHEMAS}],
+                "generationConfig": {
+                    "temperature": 0,
+                    "maxOutputTokens": 32768,
+                    "thinkingConfig": {"thinkingLevel": "LOW"},
+                },
+            }
             start_spend = api.spent
             finished = False
             error = None
@@ -503,11 +523,11 @@ def leakage(api, source_repo, task_regex=None):
                     break
                 try:
                     response = api.call(model, request, cell)
-                except Exception as e:
+                except Exception as e:  # noqa: BLE001 - preserve per-cell/tool failures in the evidence
                     error = str(e)
                     break
                 candidate = response.get("candidates", [{}])[0]
-                content = candidate.get("content", dict(role="model", parts=[]))
+                content = candidate.get("content", {"role": "model", "parts": []})
                 calls = [
                     p["functionCall"]
                     for p in content.get("parts", [])
@@ -573,30 +593,31 @@ def leakage(api, source_repo, task_regex=None):
                             result = "Written " + p
                         else:
                             result = "ERROR: unknown tool"
-                    except Exception as e:
+                    except Exception as e:  # noqa: BLE001 - preserve per-cell/tool failures in the evidence
                         result = "ERROR: " + str(e)
                     results.append(
-                        dict(
-                            functionResponse=dict(
-                                name=name, response=dict(result=result)
-                            )
-                        )
+                        {
+                            "functionResponse": {
+                                "name": name,
+                                "response": {"result": result},
+                            }
+                        }
                     )
-                request["contents"].append(dict(role="user", parts=results))
+                request["contents"].append({"role": "user", "parts": results})
             expected = set(config["deliverables"])
             missing = sorted(
                 expected - {pathlib.PurePosixPath(p).name for p in outputs}
             )
             dump(
                 dest / "status.json",
-                dict(
-                    finished=finished,
-                    missing=missing,
-                    error=error,
-                    turns=turn + 1,
-                    cost_usd=api.spent - start_spend,
-                    valid=finished and not missing and not error,
-                ),
+                {
+                    "finished": finished,
+                    "missing": missing,
+                    "error": error,
+                    "turns": turn + 1,
+                    "cost_usd": api.spent - start_spend,
+                    "valid": finished and not missing and not error,
+                },
             )
 
 

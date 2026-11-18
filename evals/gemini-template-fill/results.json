@@ -1,0 +1,1747 @@
+{
+  "models": {
+    "gemini-3.8-flash": {
+      "documents": 21,
+      "correct_fields": 456,
+      "fields": 456,
+      "exact_documents": 21,
+      "exact_field_maps": 21,
+      "fill_cost_usd": 0.15840705,
+      "fill_mean_usd": 0.0075431928571428565,
+      "fill_mean_without_promo_usd": 0.015086385714285713,
+      "fill_usage": {
+        "promptTokenCount": 36522,
+        "cachedContentTokenCount": 3514,
+        "candidatesTokenCount": 7290,
+        "thoughtsTokenCount": 28280
+      },
+      "templates": [
+        {
+          "template": "common-paper-amendment",
+          "fields": 51,
+          "correct": 51,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.00873175
+        },
+        {
+          "template": "common-paper-independent-contractor-agreement",
+          "fields": 57,
+          "correct": 57,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.012906500000000001
+        },
+        {
+          "template": "common-paper-mutual-nda",
+          "fields": 54,
+          "correct": 54,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.00576475
+        },
+        {
+          "template": "common-paper-order-form",
+          "fields": 126,
+          "correct": 126,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.00859075
+        },
+        {
+          "template": "common-paper-statement-of-work",
+          "fields": 111,
+          "correct": 111,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.00859235
+        },
+        {
+          "template": "openagreements-board-consent-safe",
+          "fields": 12,
+          "correct": 12,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.0025317499999999997
+        },
+        {
+          "template": "openagreements-employment-offer-letter",
+          "fields": 45,
+          "correct": 45,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.0056844999999999994
+        }
+      ],
+      "leakage": [
+        {
+          "task": "three-state-offer-restrictive-covenant-package",
+          "label": "leak",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 0.47225625,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "three-state-offer-restrictive-covenant-package",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "bob-chen-offer-letter.md": "06fcddc8547e3d22e0d6d000f19e413e19312cf4a8b4c3da7109b395e1950b63",
+                "bob-chen-restrictive-covenant-agreement.md": "d3a45c1aa8e55533c93af5925e5bcb2c984d85ea6cedf3c0cd02d6674d6c2b0d",
+                "frank-rivera-offer-letter.md": "5311ff8a0769b5c732130b14193ef5618e1dcc5f07de4a28a4f00f685be168fa",
+                "frank-rivera-restrictive-covenant-agreement.md": "08e116c69b853d2e2c304e9cf269d16bff1f13e1a8a8047f7e42fb6ad612f5b6",
+                "jim-wallace-offer-letter.md": "1c9d41ba80f1f0221485b8da5ab31074b171bf8b6042fee894941474169dd06c",
+                "jim-wallace-restrictive-covenant-agreement.md": "d8b3e6634bfcc09439f9adcbd0fedf105a012feed1534c1136a1c94c52e924cd"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "Under the criterion, operative agreement bodies must contain only operative drafting text, whereas threshold calculations and explanations of why a restriction was omitted belong in client-email.md or rationale.md rather than the agreement itself. In `frank-rivera-restrictive-covenant-agreement.md`, the Cover Terms include explanatory legal analysis and threshold calculations explaining why covenants were omitted (e.g., stating ineligibility under C.R.S. § 8-2-113 and citing the statutory dollar thresholds of $78,008.40 and $130,014).",
+                "evidence": [
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Customer Non-Solicitation\n\nDuration\n: None (Ineligible under C.R.S. § 8-2-113(2)(d); annualized compensation below the statutory threshold of $78,008.40)",
+                    "explanation": "This text provides drafting commentary, statutory threshold calculations, and an explanation of why a restriction was omitted directly inside an operative agreement file."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Non-Competition\n\nDuration\n: None (Ineligible under C.R.S. § 8-2-113(2)(b); annualized compensation below the statutory threshold of $130,014)",
+                    "explanation": "This text includes statutory threshold explanations and commentary justifying the omission of the non-compete covenant inside the agreement body."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "three-state-offer-restrictive-covenant-package",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "bob-chen-offer-letter.md": "06fcddc8547e3d22e0d6d000f19e413e19312cf4a8b4c3da7109b395e1950b63",
+                "bob-chen-restrictive-covenant-agreement.md": "d3a45c1aa8e55533c93af5925e5bcb2c984d85ea6cedf3c0cd02d6674d6c2b0d",
+                "frank-rivera-offer-letter.md": "5311ff8a0769b5c732130b14193ef5618e1dcc5f07de4a28a4f00f685be168fa",
+                "frank-rivera-restrictive-covenant-agreement.md": "08e116c69b853d2e2c304e9cf269d16bff1f13e1a8a8047f7e42fb6ad612f5b6",
+                "jim-wallace-offer-letter.md": "1c9d41ba80f1f0221485b8da5ab31074b171bf8b6042fee894941474169dd06c",
+                "jim-wallace-restrictive-covenant-agreement.md": "d8b3e6634bfcc09439f9adcbd0fedf105a012feed1534c1136a1c94c52e924cd"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The file `frank-rivera-restrictive-covenant-agreement.md` fails the criterion because its Cover Terms contain drafting explanations and legal rationale explaining why certain restrictive covenants were omitted or set to 'None', citing statutory provisions and threshold figures (e.g., explaining that the employee is ineligible under C.R.S. § 8-2-113(2)(d) and (2)(b) because annualized compensation is below the statutory thresholds of $78,008.40 and $130,014). The evaluation instructions explicitly state that explanations of why a restriction was omitted in a signed agreement fail.",
+                "evidence": [
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Advance Notice Date\n: None (Not applicable; no non-compete or customer non-solicitation covenants are included)",
+                    "explanation": "Includes drafting commentary explaining why the Advance Notice Date is omitted rather than purely operative text."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Customer Non-Solicitation\n\nDuration\n: None (Ineligible under C.R.S. § 8-2-113(2)(d); annualized compensation below the statutory threshold of $78,008.40)",
+                    "explanation": "Explains why the customer non-solicitation restriction was omitted by citing statutory ineligibility and compensation threshold analysis inside the signed agreement."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Non-Competition\n\nDuration\n: None (Ineligible under C.R.S. § 8-2-113(2)(b); annualized compensation below the statutory threshold of $130,014)",
+                    "explanation": "Explains why the non-competition restriction was omitted by citing statutory ineligibility and compensation threshold analysis inside the signed agreement."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "No Business with Covered Customers\n\nDuration\n: None (Ineligible under C.R.S. § 8-2-113(2)(d))\n\nNon-Investment\n\nDuration\n: None (Ineligible under C.R.S. § 8-2-113(2)(b))",
+                    "explanation": "Includes legal commentary explaining why these restrictions were omitted from the agreement."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-01-washington-illinois-georgia",
+          "label": "clean",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 0.5223195749999999,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-01-washington-illinois-georgia",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "sara-lindqvist-offer-letter.md": "a882476fc8229a45a624d9947d2a15a50decfc46a41003c59210a14b397497c9",
+                "sara-lindqvist-restrictive-covenant-agreement.md": "1a24d4884426b2c38c4240949336288fb94fd2ec020992d14301337a04001b96",
+                "marcus-bell-offer-letter.md": "446257749854c2ac83c1e634cd9524867468703ad445259135589750cd983c62",
+                "marcus-bell-restrictive-covenant-agreement.md": "4352812a4760d04e68903d5ff5ce882bb308166ef2d14a2b3d268a39702c7da2",
+                "alicia-grant-offer-letter.md": "45f199d001f980cf7a465055eb00b7def236602ed70d6da3a747a1f541a60995",
+                "alicia-grant-restrictive-covenant-agreement.md": "4e635c65dac621800e8999a0cc6e220c12fbd51ec1e33dcad8f13311cb2b6a38"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "All six outward-facing legal drafting files (offer letters and restrictive covenant agreements) consist strictly of operative contractual provisions, cover terms, definitions, and standard legally operative statutory notices (such as RCW 49.44.140, 765 ILCS 1060/2, Defend Trade Secrets Act notices, and statutory condition language). There are no practice-guide path citations, drafting commentary, explanations of why provisions were changed/omitted, client advice, or court-enforceability analyses in any of the agreement bodies.",
+                "evidence": [],
+                "verdict": "pass"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-01-washington-illinois-georgia",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "sara-lindqvist-offer-letter.md": "a882476fc8229a45a624d9947d2a15a50decfc46a41003c59210a14b397497c9",
+                "sara-lindqvist-restrictive-covenant-agreement.md": "1a24d4884426b2c38c4240949336288fb94fd2ec020992d14301337a04001b96",
+                "marcus-bell-offer-letter.md": "446257749854c2ac83c1e634cd9524867468703ad445259135589750cd983c62",
+                "marcus-bell-restrictive-covenant-agreement.md": "4352812a4760d04e68903d5ff5ce882bb308166ef2d14a2b3d268a39702c7da2",
+                "alicia-grant-offer-letter.md": "45f199d001f980cf7a465055eb00b7def236602ed70d6da3a747a1f541a60995",
+                "alicia-grant-restrictive-covenant-agreement.md": "4e635c65dac621800e8999a0cc6e220c12fbd51ec1e33dcad8f13311cb2b6a38"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "All six outward-facing drafting files (three offer letters and three restrictive covenant agreements) contain only operative contractual language, standard defined terms, cover terms, signature blocks, and required statutory notices (such as DTSA, Washington RCW 49.44.140 / chapter 49.62 RCW conditions, and Illinois 765 ILCS 1060/2 / 820 ILCS 90 conditions). None of the files contain practice-guide paths, threshold calculations, explanations of why restrictions were omitted or changed, court-enforceability analysis, or advisory commentary directed to the client.",
+                "evidence": [],
+                "verdict": "pass"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-02-minnesota-florida-ohio",
+          "label": "review",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 0.65023995,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-02-minnesota-florida-ohio",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "david-okonkwo-offer-letter.md": "94889e3944d044d48da66261ce8bc0d83338c96d43f183f853be0ea3dbd26453",
+                "david-okonkwo-restrictive-covenant-agreement.md": "f446721213b3b1b350dee3748253d65f28233c6332c59f9aa795c27086115dd4",
+                "renata-silva-offer-letter.md": "8b3ceffe77920b47f5cbbef6615b74c3f84332b96cde1f242e1291544b0bbadd",
+                "renata-silva-restrictive-covenant-agreement.md": "9488ea2209472f49ff4d6c6584763359555b27ace3dff5f2e51b97de16803458",
+                "greg-paulsen-offer-letter.md": "dff507bb7ab1066c09a6d26eac89a53c1311831f4926081cc2c013a6292bc146",
+                "greg-paulsen-restrictive-covenant-agreement.md": "f5bc14e4b769c833c07db0539d761f3109b729cec9d7f498e54ce294ff363755"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The operative restrictive covenant agreements contain extensive legal case citations and court-enforceability analysis woven into the operative agreement body text (e.g., citing Raimonde v. Van Vlerah, Lake Land Employment Group, Homan, Inc., and Acordia of Ohio to justify consideration, blue-penciling, tolling, and assignability), which constitutes legal analysis and commentary that belongs in an advisory rationale or email rather than an operative drafting file.",
+                "evidence": [
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "The parties acknowledge and agree that, in accordance with the standards of *Raimonde v. Van Vlerah*, 42 Ohio St. 2d 21 (1975), each covenant is reasonable in time, territory, and scope, is no greater than required for the protection of Employer's legitimate business interests, does not impose undue hardship on Employee, and is not injurious to the public.",
+                    "explanation": "Includes court enforceability standards and formal legal case citation within the operative agreement recitals."
+                  },
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "If Employee is an existing at-will employee, Employer's continuation of Employee's at-will employment is exchanged for Employee's assent to the covenants, which constitutes valid and sufficient consideration under Ohio law pursuant to *Lake Land Employment Group of Akron, LLC v. Columber*, 101 Ohio St. 3d 242 (2004).",
+                    "explanation": "Includes legal justification, enforceability analysis, and case citations discussing consideration inside the agreement terms."
+                  },
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, up to the original Restricted Period, in accordance with the principles articulated in *Homan, Inc. v. A1 AG Services, L.L.C.*, 175 Ohio App. 3d 51, 2008-Ohio-277.",
+                    "explanation": "Includes case law citations and court doctrinal analysis inside the operative tolling clause."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-02-minnesota-florida-ohio",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "david-okonkwo-offer-letter.md": "94889e3944d044d48da66261ce8bc0d83338c96d43f183f853be0ea3dbd26453",
+                "david-okonkwo-restrictive-covenant-agreement.md": "f446721213b3b1b350dee3748253d65f28233c6332c59f9aa795c27086115dd4",
+                "renata-silva-offer-letter.md": "8b3ceffe77920b47f5cbbef6615b74c3f84332b96cde1f242e1291544b0bbadd",
+                "renata-silva-restrictive-covenant-agreement.md": "9488ea2209472f49ff4d6c6584763359555b27ace3dff5f2e51b97de16803458",
+                "greg-paulsen-offer-letter.md": "dff507bb7ab1066c09a6d26eac89a53c1311831f4926081cc2c013a6292bc146",
+                "greg-paulsen-restrictive-covenant-agreement.md": "f5bc14e4b769c833c07db0539d761f3109b729cec9d7f498e54ce294ff363755"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "All six outward-facing legal drafting files (three offer letters and three restrictive covenant agreements) contain only operative contractual language, recitals, acknowledgements, and legally required statutory notices (such as Minn. Stat. § 181.78, Defend Trade Secrets Act notices, and Florida statutory acknowledgements). Although the Ohio restrictive covenant agreement cites leading Ohio cases (such as Raimonde, Lake Land, Homan, and Acordia) within operative recitals and clauses, it does so as part of the contractual stipulations and acknowledgements between the parties rather than as advisory commentary, threshold calculations, practice-guide paths, or explanations of why a restriction was omitted or changed. None of the files contain client advice, drafting notes, or source-path references that belong in a client email or rationale document.",
+                "evidence": [],
+                "verdict": "pass"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-03-massachusetts-nevada-virginia",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.2739326,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-03-massachusetts-nevada-virginia",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "nadia-ferreira-offer-letter.md": "b7f699186ebab132ed5a089c5fbc0d4d98a55a47532b054ca2b5cdcec74a7218",
+                "nadia-ferreira-restrictive-covenant-agreement.md": "3ca7d03afb825c0d99cc235639d631bdff5fcbaa0e43a091eeba63a740dec28d",
+                "trevor-marsh-offer-letter.md": "92051126c98c13198aa4d323787bbcc551d498c2eb4fe9886a74d8c6406de668",
+                "trevor-marsh-restrictive-covenant-agreement.md": "3e32f7ca52deaf167d5790c43eeec490f9ae2c7ba142dc827502abf9cb5a73b7",
+                "whitney-lam-offer-letter.md": "0281f7ab5b4c70e32dba66f5bd12693e4f26746e73e7c49a2e9b203b6e1a9981",
+                "whitney-lam-restrictive-covenant-agreement.md": "d9ec501224ed495a7d0e0f8f117ab4eed69ec0b867e618f24cd646ee8f131c2c"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The drafting file 'whitney-lam-restrictive-covenant-agreement.md' contains drafting commentary, reference annotations, and statutory threshold calculations ('Virginia statutory gate — Low-Wage Threshold (Average Weekly Earnings): $1,507.01 per week', 'Reference only — not part of this agreement.') in the body of the agreement rather than keeping advisory explanations in client-email.md or rationale.md. Furthermore, multiple sections explain why restrictions were omitted (e.g., explaining why non-solicitation of employees and no-business restrictions were omitted/inapplicable under Virginia law). Under the criterion, threshold calculations, explanations of why a restriction was omitted, advice, and commentary in outward-facing drafting files fail.",
+                "evidence": [
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "> **ⓘ Virginia statutory gate — Low-Wage Threshold (Average Weekly Earnings): $1,507.01 per week**  \n> _Reference only — not part of this agreement._  \n> $1,507.01 per week ($78,364.52 annualized) is the 2026 low-wage threshold published by the Virginia Department of Workforce Development and Advancement under Va. Code § 40.1-28.7:8. An employee earning an annualized base salary of $61,000 earns approximately $1,173.08 per week, falling squarely within the statutory definition of a protected \"low-wage employee.\" Under Va. Code § 40.1-28.7:8(B), employers are prohibited from entering into, enforcing, or threatening to enforce a covenant not to compete against any low-wage employee.",
+                    "explanation": "Includes an explicit threshold calculation and non-operative advisory/reference commentary directly in the agreement body."
+                  },
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee is a protected low-wage employee under Va. Code § 40.1-28.7:8, and consistent with Virginia law treating employee non-solicitation covenants as unenforceable covenants not to compete when applied to protected workers, no employee non-solicitation restriction is imposed on Employee, and \"None\" is specified in Cover Terms.",
+                    "explanation": "Contains explanatory legal analysis and justification for why a restriction was omitted, which belongs in rationale.md or client-email.md rather than an operative agreement body."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-03-massachusetts-nevada-virginia",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "nadia-ferreira-offer-letter.md": "b7f699186ebab132ed5a089c5fbc0d4d98a55a47532b054ca2b5cdcec74a7218",
+                "nadia-ferreira-restrictive-covenant-agreement.md": "3ca7d03afb825c0d99cc235639d631bdff5fcbaa0e43a091eeba63a740dec28d",
+                "trevor-marsh-offer-letter.md": "92051126c98c13198aa4d323787bbcc551d498c2eb4fe9886a74d8c6406de668",
+                "trevor-marsh-restrictive-covenant-agreement.md": "3e32f7ca52deaf167d5790c43eeec490f9ae2c7ba142dc827502abf9cb5a73b7",
+                "whitney-lam-offer-letter.md": "0281f7ab5b4c70e32dba66f5bd12693e4f26746e73e7c49a2e9b203b6e1a9981",
+                "whitney-lam-restrictive-covenant-agreement.md": "d9ec501224ed495a7d0e0f8f117ab4eed69ec0b867e618f24cd646ee8f131c2c"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The outward-facing restrictive covenant agreements include internal drafting commentary, threshold calculations, and legal analysis explaining why certain covenants were omitted or modified. Specifically, Whitney Lam's restrictive covenant agreement contains an explicitly non-operative 'Reference only' callout box performing the Virginia low-wage statutory threshold calculation, repeats that threshold calculation in the body, and includes drafting rationales explaining why employee non-solicitation, customer non-dealing, and severance commitments were omitted under Virginia law. Similar parenthetical explanations of why covenants are omitted or inapplicable appear in the cover terms of the restrictive covenant agreements for Nadia Ferreira and Trevor Marsh. These explanations belong in the client email or rationale file rather than in a signed agreement.",
+                "evidence": [
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "> **ⓘ Virginia statutory gate — Low-Wage Threshold (Average Weekly Earnings): $1,507.01 per week**  \n> _Reference only — not part of this agreement._  \n> $1,507.01 per week ($78,364.52 annualized) is the 2026 low-wage threshold published by the Virginia Department of Workforce Development and Advancement under Va. Code § 40.1-28.7:8. An employee earning an annualized base salary of $61,000 earns approximately $1,173.08 per week, falling squarely within the statutory definition of a protected \"low-wage employee.\" Under Va. Code § 40.1-28.7:8(B), employers are prohibited from entering into, enforcing, or threatening to enforce a covenant not to compete against any low-wage employee.",
+                    "explanation": "Includes an advisory reference note and statutory low-wage threshold calculation directly inside the signed agreement."
+                  },
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "(a) Pursuant to Va. Code § 40.1-28.7:8, no covenant not to compete applies to Employee, and Employer shall not enter into, enforce, or threaten to enforce any covenant not to compete against Employee, because Employee's compensation ($61,000 annualized, or approximately $1,173.08 per week) is below the Virginia statutory threshold ($1,507.01 per week for 2026), qualifying Employee as a protected \"low-wage employee.\"",
+                    "explanation": "Embeds the weekly wage threshold calculation and legal explanation for why the non-compete is omitted into the operative text."
+                  },
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee is a protected low-wage employee under Va. Code § 40.1-28.7:8, and consistent with Virginia law treating employee non-solicitation covenants as unenforceable covenants not to compete when applied to protected workers, no employee non-solicitation restriction is imposed on Employee, and \"None\" is specified in Cover Terms.",
+                    "explanation": "Explains the legal analysis and rationale for why the employee non-solicitation covenant was omitted."
+                  },
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "Because an absolute ban on doing business with unsolicited customers violates the statutory customer-service safe harbor under Va. Code § 40.1-28.7:8(A), no non-dealing restriction is imposed, and \"None\" is specified in Cover Terms.",
+                    "explanation": "Provides legal commentary explaining why a customer non-dealing restriction was omitted from the agreement."
+                  },
+                  {
+                    "file": "nadia-ferreira-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee is classified as nonexempt under federal wage-and-hour law, no non-compete restriction is imposed or enforceable against Employee pursuant to Mass. Gen. Laws ch. 149, § 24L(c)(i).",
+                    "explanation": "Explains why the non-compete restriction was omitted for this specific employee rather than simply stating the operative terms."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-04-oregon-louisiana-north-carolina",
+          "label": "clean",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 0.8061801749999999,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-04-oregon-louisiana-north-carolina",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "hannah-voss-offer-letter.md": "96f0d27b02e1bbb1ff538264e3b5b0c537713feb061cbcb1273fd31ba6f29e55",
+                "hannah-voss-restrictive-covenant-agreement.md": "4a028760637232d15eeee86d2f65f545f6394e74f86f8068e9a85cc154c2a8ae",
+                "jerome-baptiste-offer-letter.md": "864cd39ffb28bbab4449470bc3b7c24346ad3da0c5f9c568db272c3665e69a78",
+                "jerome-baptiste-restrictive-covenant-agreement.md": "8f97b245556468afe23fa29ba7895e728e770b7c1dcb955a934f387fb78a11e8",
+                "meredith-boyd-offer-letter.md": "5299e57a42e93b3f123b8f6990b784bd6985873fef3b2d87ea400366d92f5224",
+                "meredith-boyd-restrictive-covenant-agreement.md": "abc0f778598a72a7c1842455471e7d32a2a09c3580e0373288bc8dfcd7000c70"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "All six outward-facing legal drafting files (offer letters and restrictive covenant agreements for Hannah Voss, Jerome Baptiste, and Meredith Boyd) consist solely of operative contractual terms, definitions, recitals, and legally operative statutory notices. There are no practice-guide path citations, drafting commentary, advisory explanations of why terms were omitted or altered, or court-enforceability advice meant for client communications.",
+                "evidence": [],
+                "verdict": "pass"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-04-oregon-louisiana-north-carolina",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "hannah-voss-offer-letter.md": "96f0d27b02e1bbb1ff538264e3b5b0c537713feb061cbcb1273fd31ba6f29e55",
+                "hannah-voss-restrictive-covenant-agreement.md": "4a028760637232d15eeee86d2f65f545f6394e74f86f8068e9a85cc154c2a8ae",
+                "jerome-baptiste-offer-letter.md": "864cd39ffb28bbab4449470bc3b7c24346ad3da0c5f9c568db272c3665e69a78",
+                "jerome-baptiste-restrictive-covenant-agreement.md": "8f97b245556468afe23fa29ba7895e728e770b7c1dcb955a934f387fb78a11e8",
+                "meredith-boyd-offer-letter.md": "5299e57a42e93b3f123b8f6990b784bd6985873fef3b2d87ea400366d92f5224",
+                "meredith-boyd-restrictive-covenant-agreement.md": "abc0f778598a72a7c1842455471e7d32a2a09c3580e0373288bc8dfcd7000c70"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "All six outward-facing legal drafting files (three offer letters and three restrictive covenant agreements) contain only operative contractual language and legally appropriate statutory references and notices. None of the files contain practice-guide paths, threshold calculations, explanations of why provisions were changed or omitted, court-enforceability analysis, or advisory commentary directed at the client.",
+                "evidence": [],
+                "verdict": "pass"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-05-tennessee-arizona-new-jersey",
+          "label": "review",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 1.60277925,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-05-tennessee-arizona-new-jersey",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "colin-reyes-offer-letter.md": "3d3f23073663357530b0cce578994676ec14b1c50f7c1ff2bf07bef741dff48d",
+                "colin-reyes-restrictive-covenant-agreement.md": "ba5c24b2cb3d492bd37b39fe081052da6fdb9e151af706ebe5092951d9dc5d36",
+                "simone-walker-offer-letter.md": "d2d645924f02dbd078eeb70341c8be1f060fb50bffc7e9df97823ac5a9f29a27",
+                "simone-walker-restrictive-covenant-agreement.md": "95545607d1e52f2c21a64d63a2e827a98186a13f12d240b872446ec59a6347c3",
+                "omar-haddad-offer-letter.md": "e597364ddf554917fa56ebbef6d4753b08a1f4d9149aa0a89db9fbdc3b3ddd47",
+                "omar-haddad-restrictive-covenant-agreement.md": "aea35c894285cd874da658cd8591944f291ef831a2320bb94b59427ac8ef410f"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "In colin-reyes-restrictive-covenant-agreement.md, the cover terms and operative sections include statutory explanations and threshold calculations explaining why covenants were omitted or restricted (e.g., 'Inapplicable pursuant to Tenn. Code Ann. § 50-1-211' in Cover Terms, and standard section 'Compensation Threshold and Workers Exempt from the Non-Compete' which includes explicit statutory threshold calculations: 'For this purpose, annualized compensation includes wages, salary, commissions, nondiscretionary bonuses, and other remuneration, and for an hourly employee is calculated by multiplying the hourly rate by forty and multiplying the product by fifty-two'). Under the criterion, threshold calculations and explanations of why a restriction was omitted in an operative signed agreement fail.",
+                "evidence": [
+                  {
+                    "file": "colin-reyes-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: None (Inapplicable pursuant to Tenn. Code Ann. § 50-1-211)",
+                    "explanation": "Includes an explanatory legal rationale/statutory citation explaining why the non-competition covenant was omitted in the agreement body/cover terms."
+                  },
+                  {
+                    "file": "colin-reyes-restrictive-covenant-agreement.md",
+                    "quote": "Notwithstanding any other provision of this agreement, the non-compete restriction in this agreement does not apply to, and is void against, Employee if Employee's annualized compensation is less than $70,000. For this purpose, annualized compensation includes wages, salary, commissions, nondiscretionary bonuses, and other remuneration, and for an hourly employee is calculated by multiplying the hourly rate by forty and multiplying the product by fifty-two.",
+                    "explanation": "Contains explicit statutory threshold calculations and enforceability carve-out explanations directly in the agreement body."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-05-tennessee-arizona-new-jersey",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "colin-reyes-offer-letter.md": "3d3f23073663357530b0cce578994676ec14b1c50f7c1ff2bf07bef741dff48d",
+                "colin-reyes-restrictive-covenant-agreement.md": "ba5c24b2cb3d492bd37b39fe081052da6fdb9e151af706ebe5092951d9dc5d36",
+                "simone-walker-offer-letter.md": "d2d645924f02dbd078eeb70341c8be1f060fb50bffc7e9df97823ac5a9f29a27",
+                "simone-walker-restrictive-covenant-agreement.md": "95545607d1e52f2c21a64d63a2e827a98186a13f12d240b872446ec59a6347c3",
+                "omar-haddad-offer-letter.md": "e597364ddf554917fa56ebbef6d4753b08a1f4d9149aa0a89db9fbdc3b3ddd47",
+                "omar-haddad-restrictive-covenant-agreement.md": "aea35c894285cd874da658cd8591944f291ef831a2320bb94b59427ac8ef410f"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "All six outward-facing legal drafting files (three offer letters and three restrictive covenant agreements) contain only operative contractual language, recitals, cover terms, and legally required statutory notices (such as DTSA and NLRA carve-outs). In colin-reyes-restrictive-covenant-agreement.md, the Cover Terms note 'None (Inapplicable pursuant to Tenn. Code Ann. § 50-1-211)' for the Non-Competition duration and the body contains an operative compensation-threshold exclusion clause, without embedding employee-specific threshold math, practice-guide file paths, drafting commentary, court-enforceability analysis, or client advice. None of the files contain advisory material that belongs in client-email.md or rationale.md.",
+                "evidence": [],
+                "verdict": "pass"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-06-oklahoma-north-dakota-new-york",
+          "label": "clean",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 0.75902805,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-06-oklahoma-north-dakota-new-york",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "trent-okafor-offer-letter.md": "93645c53d2c01127f83ee77e5d139556df5a448b5151cc4d092eede21e540608",
+                "trent-okafor-restrictive-covenant-agreement.md": "0107faa78a3f27d0aee3bce112774dd417ce156590f8d2d3b8c56df3156b1fdd",
+                "sonja-larsen-offer-letter.md": "0f75e72747a0589b5b25d7286186fd70adb747920b1e11f7d738c9ae059a6c76",
+                "sonja-larsen-restrictive-covenant-agreement.md": "6b9d48b6ab3de24bb4a9e92bcc6c16692c82ef8f50ea4c81c392a261e6920ac6",
+                "rachel-stein-offer-letter.md": "3f10d95083084e6cd6882cb0d956d6adffa9dc3d54e4124b2f347ec31814c243",
+                "rachel-stein-restrictive-covenant-agreement.md": "2b5b68116c1c4db486d9e432e3bca05890a87f49fb81b7fa84c07ecd8350a792"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "All six offer letters and restrictive covenant agreements contain operative contractual text, standard cover terms, definitions, boilerplate, and legally operative statutory notices (such as DTSA whistleblowing carveouts). None of the files contain practice-guide citations, drafting commentary, advice to the client, enforceability analysis, or explanations of why provisions were omitted or altered.",
+                "evidence": [],
+                "verdict": "pass"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-06-oklahoma-north-dakota-new-york",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "trent-okafor-offer-letter.md": "93645c53d2c01127f83ee77e5d139556df5a448b5151cc4d092eede21e540608",
+                "trent-okafor-restrictive-covenant-agreement.md": "0107faa78a3f27d0aee3bce112774dd417ce156590f8d2d3b8c56df3156b1fdd",
+                "sonja-larsen-offer-letter.md": "0f75e72747a0589b5b25d7286186fd70adb747920b1e11f7d738c9ae059a6c76",
+                "sonja-larsen-restrictive-covenant-agreement.md": "6b9d48b6ab3de24bb4a9e92bcc6c16692c82ef8f50ea4c81c392a261e6920ac6",
+                "rachel-stein-offer-letter.md": "3f10d95083084e6cd6882cb0d956d6adffa9dc3d54e4124b2f347ec31814c243",
+                "rachel-stein-restrictive-covenant-agreement.md": "2b5b68116c1c4db486d9e432e3bca05890a87f49fb81b7fa84c07ecd8350a792"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "All six outward-facing legal drafting files (three offer letters and three restrictive covenant agreements) contain purely operative contractual drafting text and standard statutory notices (such as DTSA and NLRA Section 7 disclosures). None of the files contain practice-guide paths, drafting commentary, threshold calculations, explanations of why provisions were omitted or changed, court-enforceability analyses, or institutional advice to the client.",
+                "evidence": [],
+                "verdict": "pass"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-07-maine-wisconsin-michigan",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.016795175,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-07-maine-wisconsin-michigan",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "molly-cormier-offer-letter.md": "7c44a494c0cf74713e3b3804c308b6c29584c641b560e5fe4ad8356d25fc6740",
+                "molly-cormier-restrictive-covenant-agreement.md": "6d88bddb9423fd7e959d782c5fadf0106cb0571016a4044f1436d023b191b9bc",
+                "derek-kowalski-offer-letter.md": "7ed03a96f2d50e3f05c65112c1aa08e2b29cedba0b7b812fd77c5cee1e514c46",
+                "derek-kowalski-restrictive-covenant-agreement.md": "7ec9c0f8059e8efc11ce8baf93064c5363bdf1462cbbe7880352d7fa2cf5e7df",
+                "nina-petrov-offer-letter.md": "5f8deb51d658e7b95fcff5510b8b0f094d3dc27111afbdd7a2369d9833098afc",
+                "nina-petrov-restrictive-covenant-agreement.md": "0e3548599331b7a4352ffac81bee40199f1515382f36cac4b5ce9cbcba968175"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "In `molly-cormier-restrictive-covenant-agreement.md`, an advisory drafting note and threshold calculation explaining why a non-competition restriction was omitted is embedded directly in the agreement body (\"Maine statutory gate — Non-Compete Wage Floor: 400% of the federal poverty level... Reference only — not part of this agreement...\"). Such explanations of why a restriction was omitted and threshold calculations in an agreement body are explicitly prohibited by the criterion.",
+                "evidence": [
+                  {
+                    "file": "molly-cormier-restrictive-covenant-agreement.md",
+                    "quote": "> **ⓘ Maine statutory gate — Non-Compete Wage Floor: 400% of the federal poverty level**\n> _Reference only — not part of this agreement._\n>\n> Maine bans a non-compete for an employee earning wages at or below 400% of the federal poverty level (26 M.R.S. § 599-A(3)). In accordance with Maine law, because Employee's annualized base compensation of $52,000 is below the statutory wage floor, no non-competition covenant is imposed under this agreement.",
+                    "explanation": "This is non-operative drafting commentary, an advisory explanation, and a statutory threshold calculation explaining why a restriction was omitted, which belongs in client-email.md or rationale.md rather than the agreement body."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-07-maine-wisconsin-michigan",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "molly-cormier-offer-letter.md": "7c44a494c0cf74713e3b3804c308b6c29584c641b560e5fe4ad8356d25fc6740",
+                "molly-cormier-restrictive-covenant-agreement.md": "6d88bddb9423fd7e959d782c5fadf0106cb0571016a4044f1436d023b191b9bc",
+                "derek-kowalski-offer-letter.md": "7ed03a96f2d50e3f05c65112c1aa08e2b29cedba0b7b812fd77c5cee1e514c46",
+                "derek-kowalski-restrictive-covenant-agreement.md": "7ec9c0f8059e8efc11ce8baf93064c5363bdf1462cbbe7880352d7fa2cf5e7df",
+                "nina-petrov-offer-letter.md": "5f8deb51d658e7b95fcff5510b8b0f094d3dc27111afbdd7a2369d9833098afc",
+                "nina-petrov-restrictive-covenant-agreement.md": "0e3548599331b7a4352ffac81bee40199f1515382f36cac4b5ce9cbcba968175"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The file `molly-cormier-restrictive-covenant-agreement.md` fails the criterion because it includes drafting commentary, threshold/wage-floor analysis, and explanations of why the non-competition and non-investment restrictions were omitted directly inside the signed agreement body. Specifically, it includes a reference-only informational callout block comparing the employee's $52,000 compensation to the 400% federal poverty level threshold under 26 M.R.S. § 599-A(3), as well as explanations in the Cover Terms and Standard Terms explaining why the covenants are not applicable.",
+                "evidence": [
+                  {
+                    "file": "molly-cormier-restrictive-covenant-agreement.md",
+                    "quote": "> **ⓘ Maine statutory gate — Non-Compete Wage Floor: 400% of the federal poverty level**\n> _Reference only — not part of this agreement._\n>\n> Maine bans a non-compete for an employee earning wages at or below 400% of the federal poverty level (26 M.R.S. § 599-A(3)). In accordance with Maine law, because Employee's annualized base compensation of $52,000 is below the statutory wage floor, no non-competition covenant is imposed under this agreement.",
+                    "explanation": "Includes an advisory/reference callout note with wage-floor threshold analysis and an explanation of why the non-competition restriction was omitted in the operative agreement file."
+                  },
+                  {
+                    "file": "molly-cormier-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not Applicable (statutory wage-floor exclusion under 26 M.R.S. § 599-A(3))",
+                    "explanation": "Explains the legal rationale for omitting the non-compete duration in the Cover Terms of the agreement."
+                  },
+                  {
+                    "file": "molly-cormier-restrictive-covenant-agreement.md",
+                    "quote": "### Non-Competition\n\nBecause Employee's earnings are at or below 400% of the federal poverty level, in compliance with 26 M.R.S. § 599-A(3), no post-employment non-competition covenant is required of or applicable to Employee under this agreement.\n\n### Non-Investment\n\nBecause Employee is excluded from non-competition restrictions under 26 M.R.S. § 599-A(3), no post-employment non-investment covenant is applicable to Employee under this agreement. Passive Public Holdings are permitted.",
+                    "explanation": "Includes explanations inside the agreement body of why the non-competition and non-investment restrictions were omitted based on statutory wage-floor exclusions."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-08-new-hampshire-alabama-utah",
+          "label": "leak",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 0.385466025,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-08-new-hampshire-alabama-utah",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "tyler-boudreau-offer-letter.md": "482c2711a4637194d6daa42494bf690512dfc87b9cf138cb16ef405ceeb8357d",
+                "tyler-boudreau-restrictive-covenant-agreement.md": "40534ab509cd1910ba47fbdaefc0f3f8fd300524b94a93b3e7b1f47e9bee95bd",
+                "marcus-whitfield-offer-letter.md": "3bd3639e52e23bf8f5dffee57ccf0da6cfbaf2e49e459d5eec78bd0b23accdbd",
+                "marcus-whitfield-restrictive-covenant-agreement.md": "c86280f934b15865490bd0406db2adf1ca3767d7bd6fa1c92bcbf9696ba93549",
+                "jenna-park-offer-letter.md": "c1972e0458fde83b7cb3d784dc2ad61a427a80a7fb1c27bb745b1f7c0e96f02d",
+                "jenna-park-restrictive-covenant-agreement.md": "a27e5fea11562554f5aeefddb7ff96fd337585eb60155526f377ac8793cdfe3e"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The drafting files contain explanatory statutory threshold calculations and justifications directly inside operative agreement text rather than keeping them in advisory documents. Specifically, Tyler Boudreau's Restrictive Covenant Agreement includes explicit threshold calculations explaining why non-compete and non-investment restrictions were omitted under N.H. RSA 275:70-a.",
+                "evidence": [
+                  {
+                    "file": "tyler-boudreau-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee earns an hourly rate of $14.00, which is less than or equal to 200 percent of the federal minimum wage of $7.25 per hour ($14.50 per hour), Employer imposes no post-employment non-competition restriction on Employee, and the duration in Cover Terms is specified as None.",
+                    "explanation": "This sentence includes a threshold calculation and drafting explanation for why the covenant was omitted, which constitutes advisory drafting rationale that belongs in client-email.md or rationale.md rather than operative agreement text."
+                  },
+                  {
+                    "file": "tyler-boudreau-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee earns an hourly rate of $14.00, which is less than or equal to 200 percent of the federal minimum wage of $7.25 per hour ($14.50 per hour), Employer imposes no post-employment non-investment restriction on Employee, and the duration in Cover Terms is specified as None.",
+                    "explanation": "This sentence contains legal threshold calculations and commentary explaining the omission of the restriction within the body of the signed agreement."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-08-new-hampshire-alabama-utah",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "tyler-boudreau-offer-letter.md": "482c2711a4637194d6daa42494bf690512dfc87b9cf138cb16ef405ceeb8357d",
+                "tyler-boudreau-restrictive-covenant-agreement.md": "40534ab509cd1910ba47fbdaefc0f3f8fd300524b94a93b3e7b1f47e9bee95bd",
+                "marcus-whitfield-offer-letter.md": "3bd3639e52e23bf8f5dffee57ccf0da6cfbaf2e49e459d5eec78bd0b23accdbd",
+                "marcus-whitfield-restrictive-covenant-agreement.md": "c86280f934b15865490bd0406db2adf1ca3767d7bd6fa1c92bcbf9696ba93549",
+                "jenna-park-offer-letter.md": "c1972e0458fde83b7cb3d784dc2ad61a427a80a7fb1c27bb745b1f7c0e96f02d",
+                "jenna-park-restrictive-covenant-agreement.md": "a27e5fea11562554f5aeefddb7ff96fd337585eb60155526f377ac8793cdfe3e"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The prompt requires that operative drafting files contain only operative drafting text and legally required statutory notices, and explicitly states that 'Threshold calculations, explanations of why a restriction was omitted, advice, practice-guide paths and court-enforceability analysis in a signed agreement fail.' In `tyler-boudreau-restrictive-covenant-agreement.md`, under the Non-Competition and Non-Investment sections, the agreement includes an explicit threshold calculation ($14.00 vs. 200% of $7.25 = $14.50) and an explanation of why those restrictions were omitted (Duration set to None). This commentary belongs in the rationale or client email, not in the signed agreement body.",
+                "evidence": [
+                  {
+                    "file": "tyler-boudreau-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee earns an hourly rate of $14.00, which is less than or equal to 200 percent of the federal minimum wage of $7.25 per hour ($14.50 per hour), Employer imposes no post-employment non-competition restriction on Employee, and the duration in Cover Terms is specified as None.",
+                    "explanation": "Contains a statutory wage threshold calculation and an explanation of why the non-competition restriction was omitted in the operative agreement text."
+                  },
+                  {
+                    "file": "tyler-boudreau-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee earns an hourly rate of $14.00, which is less than or equal to 200 percent of the federal minimum wage of $7.25 per hour ($14.50 per hour), Employer imposes no post-employment non-investment restriction on Employee, and the duration in Cover Terms is specified as None.",
+                    "explanation": "Contains a statutory wage threshold calculation and an explanation of why the non-investment restriction was omitted in the operative agreement text."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-09-maryland-indiana-missouri",
+          "label": "leak",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 1.177609575,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-09-maryland-indiana-missouri",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "keisha-boone-offer-letter.md": "26718fc1d529ae893fdf5494813cfb19f446937d8e91e3c536ae76c2bf984f74",
+                "keisha-boone-restrictive-covenant-agreement.md": "dd795e9a74e1de81593892779df49a3e2bedc1a805b9618d94dd855f28de1cb9",
+                "blake-emerson-offer-letter.md": "b0e5c759f8b562331bd1a02fbf6623cef5af4f12b2612503744975d599c19779",
+                "blake-emerson-restrictive-covenant-agreement.md": "41fa8125646c294d7fabf84993119eccb5ec5ac9dd932c2296f62a407a73a972",
+                "carlos-rueda-offer-letter.md": "b8b92fc7da5fa9aca8fa464b80ca8219fd8bc62447f36cb3ddccd8d9fd86a5a8",
+                "carlos-rueda-restrictive-covenant-agreement.md": "e11ae239bd9777dfe57811e889a22097d89ea567d8d4c1483f7aee56310f970b"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The drafting file 'keisha-boone-restrictive-covenant-agreement.md' includes drafting commentary, threshold calculations, and explanatory justification for why the non-competition covenant was omitted ('Because Employee's hourly wage of $21.00 per hour is equal to or less than 150% of the Maryland minimum wage rate (which is $22.50 per hour based on the $15.00 per hour State minimum wage), any post-employment non-competition covenant is null, void, and excluded from this agreement pursuant to Md. Code Ann., Lab. & Empl. § 3-716.'). Such explanatory advice and threshold calculations belong in rationale.md or client-email.md, not inside the body of an operative agreement. Similarly, under Non-Solicitation of Employees in 'carlos-rueda-restrictive-covenant-agreement.md', the text includes legal intent commentary ('This covenant is intended to fall within the safe harbor of Mo. Rev. Stat. § 431.202.').",
+                "evidence": [
+                  {
+                    "file": "keisha-boone-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee's hourly wage of $21.00 per hour is equal to or less than 150% of the Maryland minimum wage rate (which is $22.50 per hour based on the $15.00 per hour State minimum wage), any post-employment non-competition covenant is null, void, and excluded from this agreement pursuant to Md. Code Ann., Lab. & Empl. § 3-716.",
+                    "explanation": "This text contains threshold calculations and an explanatory justification for why a restriction was omitted, which constitutes legal analysis/commentary that belongs in rationale.md or client-email.md rather than an operative agreement body."
+                  },
+                  {
+                    "file": "carlos-rueda-restrictive-covenant-agreement.md",
+                    "quote": "This covenant is intended to fall within the safe harbor of Mo. Rev. Stat. § 431.202.",
+                    "explanation": "This sentence provides statutory drafting rationale/commentary on legal enforceability strategy directly in the covenant text."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-3.8-flash",
+              "task": "leakage-variant-09-maryland-indiana-missouri",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "keisha-boone-offer-letter.md": "26718fc1d529ae893fdf5494813cfb19f446937d8e91e3c536ae76c2bf984f74",
+                "keisha-boone-restrictive-covenant-agreement.md": "dd795e9a74e1de81593892779df49a3e2bedc1a805b9618d94dd855f28de1cb9",
+                "blake-emerson-offer-letter.md": "b0e5c759f8b562331bd1a02fbf6623cef5af4f12b2612503744975d599c19779",
+                "blake-emerson-restrictive-covenant-agreement.md": "41fa8125646c294d7fabf84993119eccb5ec5ac9dd932c2296f62a407a73a972",
+                "carlos-rueda-offer-letter.md": "b8b92fc7da5fa9aca8fa464b80ca8219fd8bc62447f36cb3ddccd8d9fd86a5a8",
+                "carlos-rueda-restrictive-covenant-agreement.md": "e11ae239bd9777dfe57811e889a22097d89ea567d8d4c1483f7aee56310f970b"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The file `keisha-boone-restrictive-covenant-agreement.md` fails the criterion because it embeds statutory threshold calculations and explanations of why the non-competition restriction was omitted directly inside the signed operative agreement body, rather than confining that legal analysis and explanation to the rationale or client email.",
+                "evidence": [
+                  {
+                    "file": "keisha-boone-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee's hourly wage of $21.00 per hour is equal to or less than 150% of the Maryland minimum wage rate (which is $22.50 per hour based on the $15.00 per hour State minimum wage), any post-employment non-competition covenant is null, void, and excluded from this agreement pursuant to Md. Code Ann., Lab. & Empl. § 3-716.",
+                    "explanation": "This text performs a statutory wage threshold calculation ($21.00/hr vs. $22.50/hr based on the $15.00/hr minimum wage) and explains why the non-competition covenant was omitted/excluded inside the operative contract body."
+                  },
+                  {
+                    "file": "keisha-boone-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee is a low-wage worker under Md. Code Ann., Lab. & Empl. § 3-716 earning equal to or less than 150% of the State minimum wage, no post-employment non-competition restriction applies to Employee.",
+                    "explanation": "This clause explains the statutory reason why the non-competition restriction was omitted for this employee inside the signed agreement."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "gemini-4-argon": {
+      "documents": 21,
+      "correct_fields": 455,
+      "fields": 456,
+      "exact_documents": 20,
+      "exact_field_maps": 20,
+      "fill_cost_usd": 0.1381206,
+      "fill_mean_usd": 0.006577171428571429,
+      "fill_mean_without_promo_usd": 0.013154342857142858,
+      "fill_usage": {
+        "promptTokenCount": 38382,
+        "cachedContentTokenCount": 2586,
+        "candidatesTokenCount": 6627,
+        "thoughtsTokenCount": 0
+      },
+      "templates": [
+        {
+          "template": "common-paper-amendment",
+          "fields": 51,
+          "correct": 51,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.005719333333333333
+        },
+        {
+          "template": "common-paper-independent-contractor-agreement",
+          "fields": 57,
+          "correct": 56,
+          "exact_documents": 2,
+          "documents": 3,
+          "mean_cost_usd": 0.006512666666666667
+        },
+        {
+          "template": "common-paper-mutual-nda",
+          "fields": 54,
+          "correct": 54,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.00561
+        },
+        {
+          "template": "common-paper-order-form",
+          "fields": 126,
+          "correct": 126,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.010590133333333333
+        },
+        {
+          "template": "common-paper-statement-of-work",
+          "fields": 111,
+          "correct": 111,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.0099714
+        },
+        {
+          "template": "openagreements-board-consent-safe",
+          "fields": 12,
+          "correct": 12,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.002590666666666667
+        },
+        {
+          "template": "openagreements-employment-offer-letter",
+          "fields": 45,
+          "correct": 45,
+          "exact_documents": 3,
+          "documents": 3,
+          "mean_cost_usd": 0.005046
+        }
+      ],
+      "leakage": [
+        {
+          "task": "three-state-offer-restrictive-covenant-package",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.4245847999999999,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "three-state-offer-restrictive-covenant-package",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "bob-chen-offer-letter.md": "7532a275681b2d7289307dc361dc2ebf0e2fe9ac6f8e310142378a27516d7f8b",
+                "bob-chen-restrictive-covenant-agreement.md": "129256a32e4dc5c7053f149979532425505df9fa59cbf1ed392bacf97d76754d",
+                "frank-rivera-offer-letter.md": "3a25e570bd5187f8c91cb0d28b73349606c1747bd9a03e5e30ea896d2b03a286",
+                "frank-rivera-restrictive-covenant-agreement.md": "ed2299e17fb4cbc5840a1b2f4d0712f8e69b0aa6221f7bddd4e01a78e8b5d4b9",
+                "jim-wallace-offer-letter.md": "d3420f6869b6fa0436a74b470e4f2a0e63ed00a19bc2f0a27b58230e324885b7",
+                "jim-wallace-restrictive-covenant-agreement.md": "bff82a1637e48db57c3a64acaa27c27f387acbf5a6069e76be63c9cc41a764b2"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The operative drafting file 'frank-rivera-restrictive-covenant-agreement.md' contains specific statutory threshold calculations and legal explanations explaining why non-competition and customer non-solicitation restrictions were omitted (citing the 2026 Colorado Highly Compensated Worker Threshold of $130,014 and the 60% threshold of $78,008.40) directly within the Cover Terms and Standard Terms. It also includes court-enforceability case law analysis ('Consistent with Colorado law (*Phoenix Capital, Inc. v. Dowell*)...'). Under the criterion, threshold calculations, explanations of why a restriction was omitted, and court-enforceability analysis in an agreement fail.",
+                "evidence": [
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable (omitted in accordance with C.R.S. § 8-2-113 because this position's annualized cash compensation of $72,000 is below the 2026 Colorado Highly Compensated Worker Threshold of $130,014)",
+                    "explanation": "Includes threshold calculations and legal explanation in the agreement body of why a restriction was omitted."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Employer and Employee expressly acknowledge that because Employee's annualized cash compensation ($72,000 per year) is below Colorado's 2026 statutory earnings thresholds for post-employment non-competition covenants ($130,014) and customer non-solicitation covenants ($78,008.40) under C.R.S. § 8-2-113(2)(b) and (2)(d), this agreement does not include, present, or impose any post-employment covenant not to compete or post-employment covenant not to solicit or deal with customers.",
+                    "explanation": "Includes statutory threshold calculations and an advisory legal explanation of why provisions were omitted directly in the operative agreement text."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with Colorado law (*Phoenix Capital, Inc. v. Dowell*), this restriction is strictly limited to initiating contact with or actively soliciting Covered Employees;",
+                    "explanation": "Cites and discusses court case law / legal enforceability analysis inside an operative contractual restriction."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "three-state-offer-restrictive-covenant-package",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "bob-chen-offer-letter.md": "7532a275681b2d7289307dc361dc2ebf0e2fe9ac6f8e310142378a27516d7f8b",
+                "bob-chen-restrictive-covenant-agreement.md": "129256a32e4dc5c7053f149979532425505df9fa59cbf1ed392bacf97d76754d",
+                "frank-rivera-offer-letter.md": "3a25e570bd5187f8c91cb0d28b73349606c1747bd9a03e5e30ea896d2b03a286",
+                "frank-rivera-restrictive-covenant-agreement.md": "ed2299e17fb4cbc5840a1b2f4d0712f8e69b0aa6221f7bddd4e01a78e8b5d4b9",
+                "jim-wallace-offer-letter.md": "d3420f6869b6fa0436a74b470e4f2a0e63ed00a19bc2f0a27b58230e324885b7",
+                "jim-wallace-restrictive-covenant-agreement.md": "bff82a1637e48db57c3a64acaa27c27f387acbf5a6069e76be63c9cc41a764b2"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The prompt requires that operative drafting files contain only operative drafting text and legally required statutory notices, and states that 'Threshold calculations, explanations of why a restriction was omitted, advice, practice-guide paths and court-enforceability analysis in a signed agreement fail.' Both Bob Chen's and Frank Rivera's restrictive covenant agreements contain explicit explanations of why restrictions were omitted, statutory threshold calculations, and case-law/enforceability commentary within the signed agreement text (e.g., in Cover Terms and body sections).",
+                "evidence": [
+                  {
+                    "file": "bob-chen-restrictive-covenant-agreement.md",
+                    "quote": "Post-Employment Non-Competition\n: Not applicable (omitted in accordance with California Business and Professions Code Section 16600)\n\nPost-Employment Customer Non-Solicitation\n: Not applicable (omitted in accordance with California Business and Professions Code Section 16600)\n\nPost-Employment Employee Non-Solicitation / No-Hire\n: Not applicable (omitted in accordance with California Business and Professions Code Section 16600 and applicable California case law)",
+                    "explanation": "The Cover Terms of the signed agreement include drafting commentary explaining why specific post-employment restrictions were omitted under California statute and case law."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Post-Employment Non-Competition\n: Not applicable (omitted in accordance with C.R.S. § 8-2-113 because this position's annualized cash compensation of $72,000 is below the 2026 Colorado Highly Compensated Worker Threshold of $130,014)\n\nPost-Employment Customer Non-Solicitation / No-Business\n: Not applicable (omitted in accordance with C.R.S. § 8-2-113 because this position's annualized cash compensation of $72,000 is below the 2026 Colorado 60% Customer Non-Solicitation Threshold of $78,008.40)",
+                    "explanation": "The Cover Terms include threshold calculations and explanations of why non-competition and customer non-solicitation restrictions were omitted."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Employer and Employee expressly acknowledge that because Employee's annualized cash compensation ($72,000 per year) is below Colorado's 2026 statutory earnings thresholds for post-employment non-competition covenants ($130,014) and customer non-solicitation covenants ($78,008.40) under C.R.S. § 8-2-113(2)(b) and (2)(d), this agreement does not include, present, or impose any post-employment covenant not to compete or post-employment covenant not to solicit or deal with customers.",
+                    "explanation": "The body of the agreement includes statutory compensation threshold comparisons and explains why covenants were omitted."
+                  },
+                  {
+                    "file": "frank-rivera-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with Colorado law (*Phoenix Capital, Inc. v. Dowell*), this restriction is strictly limited to initiating contact with or actively soliciting Covered Employees",
+                    "explanation": "The operative employee non-solicitation clause cites case law (*Phoenix Capital, Inc. v. Dowell*) to explain the scope of the restriction, which belongs in the legal rationale rather than the signed contract."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-01-washington-illinois-georgia",
+          "label": "review",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.4897075,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-01-washington-illinois-georgia",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "sara-lindqvist-offer-letter.md": "2d8bc4618e491aa08a157f11c834c82834dee8d695386bf3746a50bf8a563979",
+                "sara-lindqvist-restrictive-covenant-agreement.md": "5920732102293d38034a3870fb641912ee171784062722291110ab5302da34d2",
+                "marcus-bell-offer-letter.md": "fa24be822131adcc9c31a3b25cb239214a878456e3c09de3f2633c0ea33bd5e5",
+                "marcus-bell-restrictive-covenant-agreement.md": "2f92b36f586ab108559bb39e526dcedc5ebf5c39855c454acbaac5a2bd3e1648",
+                "alicia-grant-offer-letter.md": "fae412700335b286b23e2c3a84cfb7677fb8fb31defe8bdeb6b283648bb69892",
+                "alicia-grant-restrictive-covenant-agreement.md": "bf926f2c70c3a6843c78468b1d6712217cf8c3aabfee67e727e7f802aa900837"
+              },
+              "valid": false,
+              "result": {
+                "reasoning": "The drafting files contain extensive legal explanations, threshold calculations, rationale for why covenants were omitted, and citations to court enforceability decisions within the operative agreement bodies (e.g., case law analysis, parenthetical statutory explanations of why non-competes were omitted, etc.).",
+                "evidence": [
+                  {
+                    "file": "sara-lindqvist-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable (omitted because Employee's annualized earnings at hire are below the 2026 Washington statutory earnings threshold of $126,858.83 under RCW 49.62.020(1)(b) and RCW 49.62.040; additionally, all Washington employee noncompetition covenants become void on June 30, 2027 pursuant to ESHB 1155, ch. 149, Laws of 2026)",
+                    "explanation": "Includes statutory threshold calculations and advisory legal explanations for why a non-competition restriction was omitted directly inside the agreement cover terms."
+                  },
+                  {
+                    "file": "marcus-bell-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable (omitted because Employee's annualized rate of earnings of $68,000 per year does not exceed the $75,000 per year statutory threshold required for a covenant not to compete under the Illinois Freedom to Work Act, 820 ILCS 90/10(a))",
+                    "explanation": "Explains why a restriction was omitted citing threshold calculations inside the agreement."
+                  },
+                  {
+                    "file": "alicia-grant-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with Georgia law (*Belt Power, LLC v. Reed*; *North American Senior Benefits, LLC v. Wimmer*), this covenant is limited to Covered Employees with whom Employee actually worked or whom Employee managed during the 12 months before termination, and no express geographic territory is required.",
+                    "explanation": "Includes case law citations and court enforceability analysis inside the standard terms of the agreement."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-01-washington-illinois-georgia",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "sara-lindqvist-offer-letter.md": "2d8bc4618e491aa08a157f11c834c82834dee8d695386bf3746a50bf8a563979",
+                "sara-lindqvist-restrictive-covenant-agreement.md": "5920732102293d38034a3870fb641912ee171784062722291110ab5302da34d2",
+                "marcus-bell-offer-letter.md": "fa24be822131adcc9c31a3b25cb239214a878456e3c09de3f2633c0ea33bd5e5",
+                "marcus-bell-restrictive-covenant-agreement.md": "2f92b36f586ab108559bb39e526dcedc5ebf5c39855c454acbaac5a2bd3e1648",
+                "alicia-grant-offer-letter.md": "fae412700335b286b23e2c3a84cfb7677fb8fb31defe8bdeb6b283648bb69892",
+                "alicia-grant-restrictive-covenant-agreement.md": "bf926f2c70c3a6843c78468b1d6712217cf8c3aabfee67e727e7f802aa900837"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The outward-facing restrictive covenant agreements fail the criterion because they incorporate drafting commentary, statutory threshold calculations, explanations of why certain restrictions were omitted, and case law citations analyzing court enforceability directly into the signed agreements instead of keeping this legal analysis and rationale in the separate rationale or client email documents.",
+                "evidence": [
+                  {
+                    "file": "sara-lindqvist-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable (omitted because Employee's annualized earnings at hire are below the 2026 Washington statutory earnings threshold of $126,858.83 under RCW 49.62.020(1)(b) and RCW 49.62.040; additionally, all Washington employee noncompetition covenants become void on June 30, 2027 pursuant to ESHB 1155, ch. 149, Laws of 2026)",
+                    "explanation": "Includes threshold calculations, explanations of why a restriction was omitted, and statutory legal analysis in the Cover Terms of a signed agreement."
+                  },
+                  {
+                    "file": "sara-lindqvist-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable (omitted; treated as a noncompetition covenant under RCW 49.62.010(4))",
+                    "explanation": "Explains why a provision was omitted and provides legal analysis of how the statute classifies the covenant."
+                  },
+                  {
+                    "file": "marcus-bell-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable (omitted because Employee's annualized rate of earnings of $68,000 per year does not exceed the $75,000 per year statutory threshold required for a covenant not to compete under the Illinois Freedom to Work Act, 820 ILCS 90/10(a))",
+                    "explanation": "Includes earnings threshold calculations and an explanation of why the non-competition covenant was omitted directly in the agreement."
+                  },
+                  {
+                    "file": "marcus-bell-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable (omitted to avoid characterization as an unauthorized restraint on competition under 820 ILCS 90/10(a) and 90/15)",
+                    "explanation": "Includes drafting commentary explaining why the restriction was omitted to avoid adverse legal characterization."
+                  },
+                  {
+                    "file": "marcus-bell-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with 820 ILCS 90/10(b), this covenant applies only because Employee's actual or expected annualized rate of earnings exceeds the applicable statutory threshold ($45,000 per year in 2026; $47,500 per year effective January 1, 2027), which Employee's $68,000 annual base salary satisfies.",
+                    "explanation": "Includes statutory threshold calculations and legal analysis in the operative body of the agreement."
+                  },
+                  {
+                    "file": "marcus-bell-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee's annualized rate of earnings at hire ($68,000 per year) does not exceed the $75,000 per year statutory threshold under the Illinois Freedom to Work Act (820 ILCS 90/10(a)), this agreement does **not** include a post-employment covenant not to compete, a no-business-with-covered-customers covenant, or a post-employment non-investment covenant.",
+                    "explanation": "Explains why provisions were omitted based on statutory earnings threshold calculations inside the operative agreement body."
+                  },
+                  {
+                    "file": "alicia-grant-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with the Georgia Restrictive Covenants Act (*Belt Power, LLC v. Reed*; *North American Senior Benefits, LLC v. Wimmer*), this covenant is limited to Covered Employees with whom Employee actually worked or whom Employee managed during the 12 months before termination, and no express geographic territory is required.",
+                    "explanation": "Cites case law and provides legal analysis regarding court enforceability requirements inside the operative contract text."
+                  },
+                  {
+                    "file": "alicia-grant-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with Georgia law (*Daneshgari v. Patriot Towing Services, LLC*), each Restricted Period begins when Employee's employment ends and expires on its stated end date (12 months after termination of employment), without reliance on equitable extension beyond the contractual expiration date.",
+                    "explanation": "Cites case law and discusses how Georgia courts analyze tolling/equitable extension of covenants inside the operative agreement."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-02-minnesota-florida-ohio",
+          "label": "leak",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 0.8191761,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-02-minnesota-florida-ohio",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "david-okonkwo-offer-letter.md": "af2969a5565566584db49deb13350a3d19e54a91b94fd629b5b745feb2e5e118",
+                "david-okonkwo-restrictive-covenant-agreement.md": "f34dc0b84f2bef5ba3e30c97149b713625161522311cc3725cc857c8ee325d4d",
+                "renata-silva-offer-letter.md": "bdaef280c1a1256abc599711b3acd62ae1b31d68f0e6f6740eac9298b645e274",
+                "renata-silva-restrictive-covenant-agreement.md": "93dedb643a0da3f5abae57e5e2a8031ff10435ad0dd8d923d53892957e7d5d9d",
+                "greg-paulsen-offer-letter.md": "8188f81d157bdaec686a9320b4ecd227a574e7546792492ae63feeac1c7e294a",
+                "greg-paulsen-restrictive-covenant-agreement.md": "7ead73eb0bce8e6d1c6a8f4304752c365a82c5d44da25eda63f0fb703b6013df"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The drafting files, specifically greg-paulsen-restrictive-covenant-agreement.md, contain extensive legal case citations and enforceability analysis woven directly into the agreement body (e.g., citing Raimonde v. Van Vlerah, Lake Land Employment Group of Akron, LLC v. Columber, Precision Strip, Inc. v. Dircksen, GTI Corp. v. Calhoon, Acordia of Ohio, L.L.C. v. Fishel, and Homan, Inc. v. A1 AG Services, L.L.C. along with explanations of case law holdings). Under the criterion, operative drafting files fail if they discuss how courts analyze covenants, cite case law/practice-guide commentary, or include legal analysis that belongs in rationale.md or client-email.md.",
+                "evidence": [
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "The parties acknowledge that each covenant is narrowly tailored to Employee's Customer Success Manager role under the three-part reasonableness standard of *Raimonde v. Van Vlerah*, 42 Ohio St. 2d 21 (1975)—specifically, that each covenant is no greater than is required for the protection of Employer's legitimate business interests, does not impose undue hardship on Employee's ability to earn a livelihood, and is not injurious to the public.",
+                    "explanation": "Incorporates judicial case law citations and court-enforceability analysis directly into the agreement recitals."
+                  },
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "Employer's continuation of Employee's at-will employment relationship also constitutes sufficient consideration under *Lake Land Employment Group of Akron, LLC v. Columber*, 101 Ohio St. 3d 242, 2004-Ohio-786).",
+                    "explanation": "Includes case law citation and legal enforceability analysis regarding at-will consideration in the contract body."
+                  },
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "To avoid any unreasonable post-employment restraint (*GTI Corp. v. Calhoon*, 309 F. Supp. 762 (S.D. Ohio 1969)), this agreement does not require Employee to assign any invention first conceived after the termination of Employee's employment with Employer.",
+                    "explanation": "Contains drafting commentary explaining why a restriction was omitted/limited along with legal case citations."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-02-minnesota-florida-ohio",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "david-okonkwo-offer-letter.md": "af2969a5565566584db49deb13350a3d19e54a91b94fd629b5b745feb2e5e118",
+                "david-okonkwo-restrictive-covenant-agreement.md": "f34dc0b84f2bef5ba3e30c97149b713625161522311cc3725cc857c8ee325d4d",
+                "renata-silva-offer-letter.md": "bdaef280c1a1256abc599711b3acd62ae1b31d68f0e6f6740eac9298b645e274",
+                "renata-silva-restrictive-covenant-agreement.md": "93dedb643a0da3f5abae57e5e2a8031ff10435ad0dd8d923d53892957e7d5d9d",
+                "greg-paulsen-offer-letter.md": "8188f81d157bdaec686a9320b4ecd227a574e7546792492ae63feeac1c7e294a",
+                "greg-paulsen-restrictive-covenant-agreement.md": "7ead73eb0bce8e6d1c6a8f4304752c365a82c5d44da25eda63f0fb703b6013df"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The outward-facing restrictive covenant agreements contain extensive drafting commentary, explanations of why restrictions were omitted, and court-enforceability / case-law analysis embedded directly inside the signed contract text. Specifically, David Okonkwo's agreement explains in the Cover Terms why the post-employment non-compete was omitted ('None (omitted in compliance with Minn. Stat. § 181.988)'). Renata Silva's agreement includes statutory presumption analysis ('which is well within the two-year statutory presumption window of Fla. Stat. § 542.335(1)(d)1') and irrelevant statutory commentary regarding physician exemptions ('and health care practitioners as defined in Fla. Stat. § 456.001 are excluded from the CHOICE Act covered-employee definitions. (The parties acknowledge that Employee is not a physician or health care practitioner.)'). Most egregiously, Greg Paulsen's agreement embeds numerous Ohio court-enforceability analyses and case citations directly into the operative clauses, citing Raimonde v. Van Vlerah, Lake Land Employment Group of Akron, LLC v. Columber, Precision Strip, Inc. v. Dircksen, GTI Corp. v. Calhoon, Homan, Inc. v. A1 AG Services, L.L.C., and Acordia of Ohio, L.L.C. v. Fishel to explain how Ohio courts analyze consideration, invention assignment, undue hardship, tolling, and merger/asset-sale assignment. This legal analysis and drafting commentary belongs in the rationale or client email, not in the signed agreements.",
+                "evidence": [
+                  {
+                    "file": "david-okonkwo-restrictive-covenant-agreement.md",
+                    "quote": "Post-Employment Non-Competition\n: None (omitted in compliance with Minn. Stat. § 181.988)",
+                    "explanation": "Explains why a restriction was omitted directly in the Cover Terms of a signed agreement rather than keeping the explanation in the rationale or client email."
+                  },
+                  {
+                    "file": "renata-silva-restrictive-covenant-agreement.md",
+                    "quote": "The restraints in this agreement (including their 12-month duration, which is well within the two-year statutory presumption window of Fla. Stat. § 542.335(1)(d)1) are appropriate to protect these Protected Interests and are limited to the scope reasonably necessary to do so.",
+                    "explanation": "Includes court-enforceability analysis regarding Florida's two-year statutory presumption window inside the recitals of the operative agreement."
+                  },
+                  {
+                    "file": "renata-silva-restrictive-covenant-agreement.md",
+                    "quote": "If Employee is a physician and one entity, directly or through related entities, employs or contracts with all physicians practicing Employee's specialty in the county, the non-compete does not apply (Fla. Stat. § 542.336), and health care practitioners as defined in Fla. Stat. § 456.001 are excluded from the CHOICE Act covered-employee definitions. (The parties acknowledge that Employee is not a physician or health care practitioner.)",
+                    "explanation": "Includes practice-guide / legal-analysis commentary about physician and health care practitioner exclusions in a Regional Sales Manager's agreement, along with a parenthetical acknowledging the clause does not even apply to the employee."
+                  },
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "The parties acknowledge that each covenant is narrowly tailored to Employee's Customer Success Manager role under the three-part reasonableness standard of *Raimonde v. Van Vlerah*, 42 Ohio St. 2d 21 (1975)—specifically, that each covenant is no greater than is required for the protection of Employer's legitimate business interests, does not impose undue hardship on Employee's ability to earn a livelihood, and is not injurious to the public.",
+                    "explanation": "Discusses how Ohio courts analyze restrictive covenants under the Raimonde v. Van Vlerah case standard directly inside the agreement body."
+                  },
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "(and if signed or reaffirmed during employment, Employer's continuation of Employee's at-will employment relationship also constitutes sufficient consideration under *Lake Land Employment Group of Akron, LLC v. Columber*, 101 Ohio St. 3d 242, 2004-Ohio-786).",
+                    "explanation": "Includes legal analysis and case citation regarding how Ohio courts analyze at-will employment consideration inside the operative agreement."
+                  },
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "To avoid any unreasonable post-employment restraint (*GTI Corp. v. Calhoon*, 309 F. Supp. 762 (S.D. Ohio 1969)), this agreement does not require Employee to assign any invention first conceived after the termination of Employee's employment with Employer.",
+                    "explanation": "Explains drafting rationale and cites federal case law inside the operative invention-assignment provision."
+                  },
+                  {
+                    "file": "greg-paulsen-restrictive-covenant-agreement.md",
+                    "quote": "Employer may expressly assign this agreement and all covenants in it to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets (whether by statutory merger, consolidation, asset purchase, or other transaction, so that any assignee or successor may enforce this agreement in an asset transaction as well as a statutory merger under *Acordia of Ohio, L.L.C. v. Fishel*, 133 Ohio St. 3d 356, 2012-Ohio-4648).",
+                    "explanation": "Embeds drafting commentary and case law analysis on Ohio assignment enforceability inside the assignment clause of the signed agreement."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-03-massachusetts-nevada-virginia",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.6820365000000002,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-03-massachusetts-nevada-virginia",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "nadia-ferreira-offer-letter.md": "3fd97015afc4a84fea7c5d01168b236cb815f978134a772c03bce1c325d409a6",
+                "nadia-ferreira-restrictive-covenant-agreement.md": "697723fc7f200028c5203021932cea6a045923f108ab3c49e2318be9b363d0f7",
+                "trevor-marsh-offer-letter.md": "56ac30e73452827c1bf6ffe0eef705e2554b67caf8dcf42c76ae70e55c0eefac",
+                "trevor-marsh-restrictive-covenant-agreement.md": "701c1eafc99c62535947c035a493997bbfb9dfe322ef82e3eaa97ab0463f7125",
+                "whitney-lam-offer-letter.md": "75577b0c5e621bf9e5d4702bdd8d4e57226a4d3132753c69cbe2ecffa9834807",
+                "whitney-lam-restrictive-covenant-agreement.md": "43d131a08b2a9f50cfb5bbe6fe557ec278ff5edcf2953fd3656aae729eb89ad1"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The drafting file `whitney-lam-restrictive-covenant-agreement.md` includes case citations, statutory threshold calculations, and explanatory commentary explaining why certain covenants (employee non-solicitation and non-competition) were omitted or excluded based on court decisions and statutory wage thresholds. Under the criterion, operative agreement files must contain operative text and keep explanations, threshold calculations, and enforceability analysis out of the agreement body.",
+                "evidence": [
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable — Omitted pursuant to Va. Code § 40.1-28.7:8 (see *Sentry Force Security, LLC v. Barrera*, Record No. 1405-24-4 (Va. Ct. App. Jan. 27, 2026)). Because Employee's average weekly earnings ($1,173.08 per week) are below the 2026 Virginia statutory low-wage threshold ($1,507.01 per week), no post-employment employee non-solicitation or no-hire restriction applies to Employee.",
+                    "explanation": "This text contains explanatory commentary, case law analysis/citation, and wage threshold calculations explaining why the restriction was omitted, which belongs in rationale/email rather than the operative agreement."
+                  },
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable — Excluded by Statute (Va. Code § 40.1-28.7:8(B)). Because Employee's compensation ($61,000 per year / $1,173.08 per week) is below the 2026 Virginia average weekly wage threshold of $1,507.01 per week ($78,364.52 per year), Employer does not enter into, and will never enforce or threaten to enforce, any post-employment covenant not to compete against Employee.",
+                    "explanation": "This entry includes threshold math calculations and advisory explanations justifying why a non-compete covenant is omitted from the contract."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-03-massachusetts-nevada-virginia",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "nadia-ferreira-offer-letter.md": "3fd97015afc4a84fea7c5d01168b236cb815f978134a772c03bce1c325d409a6",
+                "nadia-ferreira-restrictive-covenant-agreement.md": "697723fc7f200028c5203021932cea6a045923f108ab3c49e2318be9b363d0f7",
+                "trevor-marsh-offer-letter.md": "56ac30e73452827c1bf6ffe0eef705e2554b67caf8dcf42c76ae70e55c0eefac",
+                "trevor-marsh-restrictive-covenant-agreement.md": "701c1eafc99c62535947c035a493997bbfb9dfe322ef82e3eaa97ab0463f7125",
+                "whitney-lam-offer-letter.md": "75577b0c5e621bf9e5d4702bdd8d4e57226a4d3132753c69cbe2ecffa9834807",
+                "whitney-lam-restrictive-covenant-agreement.md": "43d131a08b2a9f50cfb5bbe6fe557ec278ff5edcf2953fd3656aae729eb89ad1"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The outward-facing restrictive covenant agreements for Nadia Ferreira and Whitney Lam improperly contain drafting commentary, threshold calculations, case law citations, and explanations of why certain restrictions were omitted, rather than keeping such legal analysis and rationale in the client email or rationale document. Specifically, Whitney Lam's agreement explicitly cites a Virginia Court of Appeals case, shows weekly wage threshold math, and explains why employee non-solicitation, non-competition, no-business, and post-employment holdover clauses were omitted. Nadia Ferreira's agreement similarly includes explanations in the Cover Terms and body detailing why non-competition, no-business, and non-investment restrictions were omitted.",
+                "evidence": [
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable — Omitted pursuant to Va. Code § 40.1-28.7:8 (see *Sentry Force Security, LLC v. Barrera*, Record No. 1405-24-4 (Va. Ct. App. Jan. 27, 2026)). Because Employee's average weekly earnings ($1,173.08 per week) are below the 2026 Virginia statutory low-wage threshold ($1,507.01 per week), no post-employment employee non-solicitation or no-hire restriction applies to Employee.",
+                    "explanation": "Includes case law citation, statutory wage threshold calculations, and an explanation of why the employee non-solicitation restriction was omitted directly inside the signed agreement."
+                  },
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable — Excluded by Statute (Va. Code § 40.1-28.7:8(B)). Because Employee's compensation ($61,000 per year / $1,173.08 per week) is below the 2026 Virginia average weekly wage threshold of $1,507.01 per week ($78,364.52 per year), Employer does not enter into, and will never enforce or threaten to enforce, any post-employment covenant not to compete against Employee.",
+                    "explanation": "Includes statutory wage threshold calculations and an explanation of why the non-competition covenant was omitted in the Cover Terms of the signed agreement."
+                  },
+                  {
+                    "file": "whitney-lam-restrictive-covenant-agreement.md",
+                    "quote": "**No post-employment trailing or holdover assignment of inventions conceived after termination of employment is imposed by this agreement**, ensuring that this section operates purely to allocate title to during-employment inventions and does not restrict Employee's post-employment mobility under Va. Code § 40.1-28.7:8.",
+                    "explanation": "Contains drafting commentary and legal rationale explaining why a post-employment holdover assignment was not included."
+                  },
+                  {
+                    "file": "nadia-ferreira-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable — Excluded by Statute (Mass. Gen. Laws ch. 149, § 24L(c)(i)). Because Employee is classified as non-exempt under the Fair Labor Standards Act (29 U.S.C. §§ 201–219), no post-employment non-competition covenant applies to Employee under this agreement.",
+                    "explanation": "Explains why the non-competition restriction was omitted in the Cover Terms of an outward-facing agreement."
+                  },
+                  {
+                    "file": "nadia-ferreira-restrictive-covenant-agreement.md",
+                    "quote": "No Business with Covered Customers\n\nDuration\n: Not applicable (omitted; Employee's customer restriction is limited to direct or indirect solicitation of Covered Customers).",
+                    "explanation": "Includes drafting commentary explaining that the restriction was omitted and summarizing the remaining scope."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-04-oregon-louisiana-north-carolina",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.4121909,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-04-oregon-louisiana-north-carolina",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "hannah-voss-offer-letter.md": "3730247f6f753b3b572eaf9a85b8b715a2720a9e4727510b4727fc6732940a0a",
+                "hannah-voss-restrictive-covenant-agreement.md": "981320f3ac09a980a2a3ac80a81fa8796d490820ed90d16aa5425b510c1c9088",
+                "jerome-baptiste-offer-letter.md": "3e2f716a3f8a359a772aecc56864778677959688d57262e92acf554f6b513ebb",
+                "jerome-baptiste-restrictive-covenant-agreement.md": "d161f4a6408fee176d75615814acf21b5a83fd118e378eb8c1431b4ca7acc084",
+                "meredith-boyd-offer-letter.md": "772d61b1019d758efcde321eb48e84211d32be12a65de6e58f6949a729c32de3",
+                "meredith-boyd-restrictive-covenant-agreement.md": "eee0fb3cb17d79b37465f9854f959c2d6ffcd4a14cdc683882a1e21acf6bc512"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "In jerome-baptiste-restrictive-covenant-agreement.md, the Cover Terms include an explanatory rationale for omitting a restriction ('omitted pursuant to La. R.S. 23:921(A)(1) and (C)'), which constitutes advisory drafting explanation rather than operative contractual restriction. In hannah-voss-restrictive-covenant-agreement.md, the Cover Terms and Section 'Garden-Leave Payment Commitment (Oregon)' include threshold calculations ('which threshold is $119,541 for 2026') and commentary. Furthermore, in meredith-boyd-restrictive-covenant-agreement.md, the Enforceability and Severability section discusses judicial doctrine ('Consistent with North Carolina's strict blue-pencil doctrine...').",
+                "evidence": [
+                  {
+                    "file": "jerome-baptiste-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable (omitted pursuant to La. R.S. 23:921(A)(1) and (C))",
+                    "explanation": "This text provides an advisory explanation of why a restriction was omitted rather than operative contractual terms."
+                  },
+                  {
+                    "file": "hannah-voss-restrictive-covenant-agreement.md",
+                    "quote": "(which threshold is $119,541 for 2026)",
+                    "explanation": "This includes an advisory threshold calculation directly in the operative agreement text."
+                  },
+                  {
+                    "file": "meredith-boyd-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with North Carolina's strict blue-pencil doctrine, if any distinctly separable provision or geographic sub-part is held unenforceable, it shall be severed and the remaining provisions and geographic sub-parts shall remain in full force and effect.",
+                    "explanation": "This includes drafting commentary and court-enforceability analysis citing judicial doctrine inside the agreement body."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-04-oregon-louisiana-north-carolina",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "hannah-voss-offer-letter.md": "3730247f6f753b3b572eaf9a85b8b715a2720a9e4727510b4727fc6732940a0a",
+                "hannah-voss-restrictive-covenant-agreement.md": "981320f3ac09a980a2a3ac80a81fa8796d490820ed90d16aa5425b510c1c9088",
+                "jerome-baptiste-offer-letter.md": "3e2f716a3f8a359a772aecc56864778677959688d57262e92acf554f6b513ebb",
+                "jerome-baptiste-restrictive-covenant-agreement.md": "d161f4a6408fee176d75615814acf21b5a83fd118e378eb8c1431b4ca7acc084",
+                "meredith-boyd-offer-letter.md": "772d61b1019d758efcde321eb48e84211d32be12a65de6e58f6949a729c32de3",
+                "meredith-boyd-restrictive-covenant-agreement.md": "eee0fb3cb17d79b37465f9854f959c2d6ffcd4a14cdc683882a1e21acf6bc512"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The evaluation checks whether the six outward-facing legal drafting files contain only operative contractual text and required statutory notices, avoiding internal drafting commentary, threshold calculations, explanations of why a restriction was omitted, client advice, practice-guide paths, or court-enforceability analysis. In `hannah-voss-restrictive-covenant-agreement.md`, the agreement includes parenthetical commentary calculating the 2026 inflation-indexed statutory threshold ('which threshold is $119,541 for 2026'). In `jerome-baptiste-restrictive-covenant-agreement.md`, the Cover Terms explicitly include an explanation of why the 'No Business with Covered Customers' restriction was omitted ('Not applicable (omitted pursuant to La. R.S. 23:921(A)(1) and (C))'). In `meredith-boyd-restrictive-covenant-agreement.md`, the text contains drafting commentary and court-enforceability analysis regarding judicial modification ('Consistent with North Carolina's strict blue-pencil doctrine...') and survival mechanics ('Each covenant states its own survival so that its duration is independently determinable'). Because the prompt and criterion strictly forbid threshold calculations, explanations of why a restriction was omitted, and drafting commentary/court-enforceability analysis inside the signed agreements, the files fail the criterion.",
+                "evidence": [
+                  {
+                    "file": "jerome-baptiste-restrictive-covenant-agreement.md",
+                    "quote": "No Business with Covered Customers\n\nDuration\n: Not applicable (omitted pursuant to La. R.S. 23:921(A)(1) and (C))",
+                    "explanation": "The agreement body contains an explicit drafting explanation of why a restriction was omitted, which belongs in the rationale or client email rather than a signed agreement."
+                  },
+                  {
+                    "file": "hannah-voss-restrictive-covenant-agreement.md",
+                    "quote": "($100,533 adjusted annually for inflation pursuant to the Consumer Price Index for All Urban Consumers, West Region (All Items), as published by the Bureau of Labor Statistics of the United States Department of Labor immediately preceding the calendar year of Employee's termination, which threshold is $119,541 for 2026)",
+                    "explanation": "Includes an advisory 2026 statutory threshold calculation note inside the operative agreement text (appears in both Cover Terms and the Garden-Leave Payment Commitment section)."
+                  },
+                  {
+                    "file": "meredith-boyd-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with North Carolina's strict blue-pencil doctrine, if any distinctly separable provision or geographic sub-part is held unenforceable, it shall be severed and the remaining provisions and geographic sub-parts shall remain in full force and effect.",
+                    "explanation": "References judicial enforceability doctrine ('North Carolina's strict blue-pencil doctrine') as drafting commentary inside the operative severability clause."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-05-tennessee-arizona-new-jersey",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 0.7424988,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-05-tennessee-arizona-new-jersey",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "colin-reyes-offer-letter.md": "ea3c4d8f6beed5e0769fe0b4237aec16e36392dc45041755bcb2894479ebfe8c",
+                "colin-reyes-restrictive-covenant-agreement.md": "e383a027b1e783ef42f878527ee23c6048f596a9118bf1f6ebf34477a4f87e70",
+                "simone-walker-offer-letter.md": "03d08d897641cfdb084269408927f5e690effbd5b5aaa63303d011c149f14a5d",
+                "simone-walker-restrictive-covenant-agreement.md": "ff7e33de98d05faf854768a599b43da11a66065732b46a1f7c5431ba307a837a",
+                "omar-haddad-offer-letter.md": "54689fcef7f236ccabec20f18499a71030d80dc276eb20ede080ca335adabb76",
+                "omar-haddad-restrictive-covenant-agreement.md": "b04a6d78101f1172aec6319c035e8bf8b52525499f719140c961dff8e30d7a45"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The drafting files contain multiple instances of explanatory drafting commentary, statutory threshold calculations explaining why a restriction was omitted, and court-enforceability analysis embedded directly in operative agreements instead of being kept in rationale.md or client-email.md. Specifically, colin-reyes-restrictive-covenant-agreement.md includes statutory threshold explanations for why covenants were omitted in its Cover Terms and body, and simone-walker-restrictive-covenant-agreement.md includes commentary explaining why a covenant was omitted under Arizona's strict blue-pencil rule.",
+                "evidence": [
+                  {
+                    "file": "colin-reyes-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable (omitted pursuant to Tenn. Code Ann. § 50-1-211, effective July 1, 2026, which prohibits requesting, requiring, or enforcing a non-compete agreement where annualized compensation is less than $70,000)",
+                    "explanation": "Includes statutory threshold calculations and drafting rationale explaining why a non-compete restriction was omitted directly within the operative agreement's Cover Terms."
+                  },
+                  {
+                    "file": "colin-reyes-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable (omitted to avoid operating as a de facto non-compete under Tenn. Code Ann. §§ 50-1-210 and 50-1-211)",
+                    "explanation": "Provides legal drafting explanation and commentary explaining why a restriction was omitted rather than operative contractual terms."
+                  },
+                  {
+                    "file": "simone-walker-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable (omitted to avoid overbreadth under Arizona's strict blue-pencil rule; customer relationships are protected through the 12-month Customer Non-Solicitation covenant)",
+                    "explanation": "Embeds court-enforceability analysis and drafting rationale regarding Arizona's strict blue-pencil rule inside the agreement Cover Terms."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-05-tennessee-arizona-new-jersey",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "colin-reyes-offer-letter.md": "ea3c4d8f6beed5e0769fe0b4237aec16e36392dc45041755bcb2894479ebfe8c",
+                "colin-reyes-restrictive-covenant-agreement.md": "e383a027b1e783ef42f878527ee23c6048f596a9118bf1f6ebf34477a4f87e70",
+                "simone-walker-offer-letter.md": "03d08d897641cfdb084269408927f5e690effbd5b5aaa63303d011c149f14a5d",
+                "simone-walker-restrictive-covenant-agreement.md": "ff7e33de98d05faf854768a599b43da11a66065732b46a1f7c5431ba307a837a",
+                "omar-haddad-offer-letter.md": "54689fcef7f236ccabec20f18499a71030d80dc276eb20ede080ca335adabb76",
+                "omar-haddad-restrictive-covenant-agreement.md": "b04a6d78101f1172aec6319c035e8bf8b52525499f719140c961dff8e30d7a45"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The criterion and instructions state that threshold calculations, explanations of why a restriction was omitted, drafting commentary, and court-enforceability analysis in a signed agreement fail. Specifically, two of the restrictive covenant agreements include explicit drafting commentary and legal analysis in the Cover Terms and body text explaining why certain restrictions were omitted (e.g., citing the $70,000 compensation threshold under Tennessee law, avoiding a 'de facto non-compete', and avoiding overbreadth under Arizona's 'strict blue-pencil rule'). This commentary belongs in the rationale or client email, not in the operative agreements.",
+                "evidence": [
+                  {
+                    "file": "colin-reyes-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable (omitted pursuant to Tenn. Code Ann. § 50-1-211, effective July 1, 2026, which prohibits requesting, requiring, or enforcing a non-compete agreement where annualized compensation is less than $70,000)",
+                    "explanation": "Explains why a restriction was omitted and discusses the statutory compensation threshold in the Cover Terms of the signed agreement."
+                  },
+                  {
+                    "file": "colin-reyes-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable (omitted to avoid operating as a de facto non-compete under Tenn. Code Ann. §§ 50-1-210 and 50-1-211)",
+                    "explanation": "Includes drafting commentary and legal analysis explaining why the No Business with Covered Customers restriction was omitted."
+                  },
+                  {
+                    "file": "colin-reyes-restrictive-covenant-agreement.md",
+                    "quote": "In compliance with Tenn. Code Ann. § 50-1-211 (2026 Tenn. Pub. Acts, ch. 934, effective July 1, 2026), because the annualized compensation for Employee's role is less than $70,000, Employer does not request, require, or impose any post-employment non-competition covenant, non-dealing covenant, or post-employment non-investment covenant on Employee.",
+                    "explanation": "Explains inside the agreement body why the non-competition covenant was omitted based on the statutory compensation threshold."
+                  },
+                  {
+                    "file": "colin-reyes-restrictive-covenant-agreement.md",
+                    "quote": "(so that total duration does not exceed the two-year presumptive reasonableness window under Tenn. Code Ann. § 50-1-210(b)(1))",
+                    "explanation": "Includes legal analysis and drafting commentary explaining the reason for the tolling cap."
+                  },
+                  {
+                    "file": "simone-walker-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable (omitted to avoid overbreadth under Arizona's strict blue-pencil rule; customer relationships are protected through the 12-month Customer Non-Solicitation covenant)",
+                    "explanation": "Explains why a restriction was omitted and discusses court-enforceability analysis (Arizona's strict blue-pencil rule) directly in the Cover Terms of the signed agreement."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-06-oklahoma-north-dakota-new-york",
+          "label": "leak",
+          "first_pass_valid": true,
+          "delivery_continuation": false,
+          "cost_usd": 0.8089315,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-06-oklahoma-north-dakota-new-york",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "trent-okafor-offer-letter.md": "8604b77c7ffa4624f399bed1070b4478e7061bf288d2ce5f9611531c909ed71e",
+                "trent-okafor-restrictive-covenant-agreement.md": "03a24d28d1a915e6ac87858b9bf5285dfe20b1db7404d7389897a66af871fb0b",
+                "sonja-larsen-offer-letter.md": "f0c6ca5fcb371b853e0a197c6a44c290422626004e6155018da711c76571d0f7",
+                "sonja-larsen-restrictive-covenant-agreement.md": "2c620a7b2a3d555f9a60ca3abe35f89ecdffe0a4b04f1e354f74de968fa420ef",
+                "rachel-stein-offer-letter.md": "da515aebbd0830290e6d9ec651ef8c876987da4ac2ad57d396d390bc2620f1b9",
+                "rachel-stein-restrictive-covenant-agreement.md": "800e214ef745eece8dd49f4f62861cca795e2bd42794b9195b46e498c43eb0fc"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The operative drafting files (specifically the restrictive covenant agreements for Sonja Larsen and Trent Okafor) inappropriately embed explanatory legal analysis, case law citations, and justifications for why provisions were omitted or modified within the contract terms themselves (e.g., citing cases like Amoco Production Co. v. Lindley, Warner & Co. v. Solberg, Biever, Drees & Nordell v. Coutts, and explaining statutory exclusions/standards within operative contractual definitions and covenants rather than confining such advisory rationale to the separate rationale/client email files).",
+                "evidence": [
+                  {
+                    "file": "sonja-larsen-restrictive-covenant-agreement.md",
+                    "quote": "Although North Dakota law does not mandate a statutory own-time invention carve-out, as a matter of contract the assignment above does not apply to, and Covered Inventions do not include, any invention that Employee develops entirely on Employee's own time without using Employer's equipment, supplies, facilities, or Trade Secret information",
+                    "explanation": "Contains advisory legal explanation of state statutory requirements and drafting commentary explaining why the provision was included as a matter of contract."
+                  },
+                  {
+                    "file": "sonja-larsen-restrictive-covenant-agreement.md",
+                    "quote": "In accordance with North Dakota law (*Warner & Co. v. Solberg*), this covenant is narrowly drawn to penalize only active solicitation or influence of Covered Employees with whom Employee actually worked or whom Employee supervised",
+                    "explanation": "Contains court enforceability analysis, legal rationale, and case citations within the operative contract body."
+                  },
+                  {
+                    "file": "trent-okafor-restrictive-covenant-agreement.md",
+                    "quote": "Notice is explicitly taken of Oklahoma law (*Amoco Production Co. v. Lindley*), and the parties expressly agree that Covered Inventions include both patentable and unpatentable subject matter, including software, data models, sales and pricing frameworks, documentation, know-how, and works of authorship.",
+                    "explanation": "Includes case law citation and legal drafting commentary within the assignment clause."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-06-oklahoma-north-dakota-new-york",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "trent-okafor-offer-letter.md": "8604b77c7ffa4624f399bed1070b4478e7061bf288d2ce5f9611531c909ed71e",
+                "trent-okafor-restrictive-covenant-agreement.md": "03a24d28d1a915e6ac87858b9bf5285dfe20b1db7404d7389897a66af871fb0b",
+                "sonja-larsen-offer-letter.md": "f0c6ca5fcb371b853e0a197c6a44c290422626004e6155018da711c76571d0f7",
+                "sonja-larsen-restrictive-covenant-agreement.md": "2c620a7b2a3d555f9a60ca3abe35f89ecdffe0a4b04f1e354f74de968fa420ef",
+                "rachel-stein-offer-letter.md": "da515aebbd0830290e6d9ec651ef8c876987da4ac2ad57d396d390bc2620f1b9",
+                "rachel-stein-restrictive-covenant-agreement.md": "800e214ef745eece8dd49f4f62861cca795e2bd42794b9195b46e498c43eb0fc"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The three restrictive covenant agreements impermissibly incorporate case law citations, legal analysis, and drafting commentary into the operative contract text, rather than confining such legal rationale and court-enforceability analysis to the client email or rationale document. For example, the agreements cite appellate decisions such as Amoco Production Co. v. Lindley, Biever, Drees & Nordell v. Coutts, Warner & Co. v. Solberg, Reed, Roberts Associates, Inc. v. Strauman, Brown & Brown, Inc. v. Johnson, BDO Seidman v. Hirshberg, Arthur J. Gallagher & Co. v. Marchese, De Long Corp. v. Lucas, and Mohawk Maintenance Co. v. Kessler, and include commentary explaining why provisions were drafted or included (e.g., 'Although North Dakota law does not mandate a statutory own-time invention carve-out, as a matter of contract...').",
+                "evidence": [
+                  {
+                    "file": "trent-okafor-restrictive-covenant-agreement.md",
+                    "quote": "Notice is explicitly taken of Oklahoma law (*Amoco Production Co. v. Lindley*), and the parties expressly agree that Covered Inventions include both patentable and unpatentable subject matter",
+                    "explanation": "Cites case law authority inside the operative invention assignment clause, which belongs in legal rationale rather than a signed agreement."
+                  },
+                  {
+                    "file": "sonja-larsen-restrictive-covenant-agreement.md",
+                    "quote": "Although North Dakota law does not mandate a statutory own-time invention carve-out, as a matter of contract the assignment above does not apply to, and Covered Inventions do not include, any invention that Employee develops entirely on Employee's own time",
+                    "explanation": "Includes drafting commentary and legal analysis explaining the absence of a statutory requirement under North Dakota law."
+                  },
+                  {
+                    "file": "sonja-larsen-restrictive-covenant-agreement.md",
+                    "quote": "In accordance with North Dakota law (*Warner & Co. v. Solberg*), this covenant is narrowly drawn to penalize only active solicitation or influence of Covered Employees with whom Employee actually worked or whom Employee supervised",
+                    "explanation": "Cites case law and explains how the covenant is drawn to satisfy court-enforceability standards."
+                  },
+                  {
+                    "file": "rachel-stein-restrictive-covenant-agreement.md",
+                    "quote": "[[Protected Interests]] means Employer's legitimate business interests recognized under New York law (*BDO Seidman v. Hirshberg* and *Arthur J. Gallagher & Co. v. Marchese*)",
+                    "explanation": "Embeds New York case law citations regarding court analysis of protectable interests directly into a contract definition."
+                  },
+                  {
+                    "file": "rachel-stein-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with New York law (*Brown & Brown, Inc. v. Johnson* and *Mohawk Maintenance Co. v. Kessler*), this covenant reaches only Covered Customers with whom Employee had material contact or responsibility during the 12-month look-back period",
+                    "explanation": "Cites judicial precedent inside the customer non-solicitation clause to justify the scope of the restriction."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-07-maine-wisconsin-michigan",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.4857801,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-07-maine-wisconsin-michigan",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "molly-cormier-offer-letter.md": "de1235c96a32f85b0318a71ea79301021881e3d9e4f5261ea823b1b35755802c",
+                "molly-cormier-restrictive-covenant-agreement.md": "f7c10a6a755dc45147c92f69f1b43558cdb78a6a94b949af905832a2b285d5ac",
+                "derek-kowalski-offer-letter.md": "319e6cca62020a492605d329bd0d1b552ba51914703d254d39df7c4ef7702a70",
+                "derek-kowalski-restrictive-covenant-agreement.md": "7e60d10fc6444a8828a0aa6f101888797c707eeef541ec03b5f7a9279660afc2",
+                "nina-petrov-offer-letter.md": "6e00b167486e0a2bdd7539a090df334218ceeb763cc073e41f8d9ab61e43b005",
+                "nina-petrov-restrictive-covenant-agreement.md": "7269ce73bb153821d581b4668ec62ff594c10c25a4740a2652f0735cbfc394e6"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "In `molly-cormier-restrictive-covenant-agreement.md`, the Cover Terms section contains an explanatory legal justification explaining why a non-compete restriction was omitted under Maine statutory law (26 M.R.S. § 599-A(3)(A)), citing the statutory threshold calculation and explaining how employer interests are protected instead. Under the criterion, explanations of why a restriction was omitted, threshold calculations, and advisory commentary belong in client-email.md or rationale.md, and their inclusion in an operative drafting file constitutes a failure.",
+                "evidence": [
+                  {
+                    "file": "molly-cormier-restrictive-covenant-agreement.md",
+                    "quote": "Status\n: Not Applicable / Omitted Pursuant to Maine Law (26 M.R.S. § 599-A(3)(A) prohibits requiring or permitting a non-compete agreement for an employee earning wages at or below 400% of the federal poverty level; accordingly, no post-employment non-compete or non-investment covenant is included in this agreement, and Employer's Protected Interests are protected through the confidentiality, invention assignment, and non-solicitation covenants herein as contemplated by 26 M.R.S. § 599-A(2)).",
+                    "explanation": "This text provides legal commentary and an advisory explanation of why a non-competition covenant was omitted pursuant to Maine statutory salary threshold calculations (400% of FPL), rather than maintaining strictly operative contract text."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-07-maine-wisconsin-michigan",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "molly-cormier-offer-letter.md": "de1235c96a32f85b0318a71ea79301021881e3d9e4f5261ea823b1b35755802c",
+                "molly-cormier-restrictive-covenant-agreement.md": "f7c10a6a755dc45147c92f69f1b43558cdb78a6a94b949af905832a2b285d5ac",
+                "derek-kowalski-offer-letter.md": "319e6cca62020a492605d329bd0d1b552ba51914703d254d39df7c4ef7702a70",
+                "derek-kowalski-restrictive-covenant-agreement.md": "7e60d10fc6444a8828a0aa6f101888797c707eeef541ec03b5f7a9279660afc2",
+                "nina-petrov-offer-letter.md": "6e00b167486e0a2bdd7539a090df334218ceeb763cc073e41f8d9ab61e43b005",
+                "nina-petrov-restrictive-covenant-agreement.md": "7269ce73bb153821d581b4668ec62ff594c10c25a4740a2652f0735cbfc394e6"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The evaluation checks whether all six outward-facing legal drafting files contain only operative contractual text and statutory notices, avoiding drafting commentary, explanations of why restrictions were omitted, threshold explanations, source-path references, or court-enforceability analysis. In 'molly-cormier-restrictive-covenant-agreement.md', under the Cover Terms for 'Post-Employment Non-Competition', the document includes an explicit legal explanation of why the non-compete restriction was omitted, citing the statutory wage threshold (400% of the federal poverty level under 26 M.R.S. § 599-A(3)(A)) and explaining the drafting strategy. Additionally, in the 'Recitals and Protected Interest' section of the same file, it reiterates this statutory omission rationale. The prompt explicitly states that 'explanations of why a restriction was omitted... in a signed agreement fail' and that the drafting files 'should not... explain why provisions were changed'. Therefore, the submission fails.",
+                "evidence": [
+                  {
+                    "file": "molly-cormier-restrictive-covenant-agreement.md",
+                    "quote": "Not Applicable / Omitted Pursuant to Maine Law (26 M.R.S. § 599-A(3)(A) prohibits requiring or permitting a non-compete agreement for an employee earning wages at or below 400% of the federal poverty level; accordingly, no post-employment non-compete or non-investment covenant is included in this agreement, and Employer's Protected Interests are protected through the confidentiality, invention assignment, and non-solicitation covenants herein as contemplated by 26 M.R.S. § 599-A(2)).",
+                    "explanation": "This text in the Cover Terms of a signed agreement explains why the non-compete restriction was omitted and discusses the statutory wage threshold under Maine law, which belongs in the rationale or client email rather than the operative contract."
+                  },
+                  {
+                    "file": "molly-cormier-restrictive-covenant-agreement.md",
+                    "quote": "In accordance with 26 M.R.S. § 599-A(2) and (3)(A), Employer relies on the confidentiality, invention assignment, and targeted non-solicitation covenants in this agreement, and does not impose any post-employment non-competition restraint on Employee.",
+                    "explanation": "This recital explains the legal reasoning and statutory basis for omitting a post-employment non-competition restraint."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-08-new-hampshire-alabama-utah",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.0767864,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-08-new-hampshire-alabama-utah",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "tyler-boudreau-offer-letter.md": "f4a8c05a3f62c29e8a3b06b37d8943f54c3d35b5d6436c3bf67cd48069041734",
+                "tyler-boudreau-restrictive-covenant-agreement.md": "3d496936ba68614a234b1eafa927a5ea26c685aa3b74ebce68d9b24aa22f7e7b",
+                "marcus-whitfield-offer-letter.md": "58df4798c02152ed969b439dd9026c448e5629992e9af42244ab39089d92fbe4",
+                "marcus-whitfield-restrictive-covenant-agreement.md": "a65c4b0c842c516dcd0d559fccb9ed94453380f6dbb8e6c7fab159539c9f163b",
+                "jenna-park-offer-letter.md": "68ad09c30aefb0b5c4b441fd509e6092b3b48dcd4b3778b9e198670446ba51f8",
+                "jenna-park-restrictive-covenant-agreement.md": "21d20eef4a8728de6f737f20369a4a8bc90183b5cff9f195555dee825797953f"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "Several operative drafting files contain improper drafting commentary, practice/case law legal analysis, statutory threshold calculations, and drafting advice/instructions embedded in the agreement text rather than being restricted to client-email.md or rationale.md. For example, Tyler Boudreau's restrictive covenant agreement includes specific statutory threshold calculations and explanations of why provisions were omitted under N.H. RSA 275:70-a ('Pursuant to N.H. RSA 275:70-a, because Employee's base hourly rate is at or below two hundred percent (200%) of the federal minimum wage (currently $14.50 per hour)...'). Marcus Whitfield's agreement contains legal enforceability case law analysis explaining why the agreement is structured as it is ('To ensure compliance with Alabama law requiring an existing employer-employee relationship at the time restrictive covenants are executed (see Ala. Code § 8-1-190(b)(4)–(5) and Pitney Bowes, Inc. v. Berney Office Solutions)...') as well as an execution instruction block. Jenna Park's agreement discusses case law enforceability standards ('In accordance with Utah's common-law reasonableness standard (Allen v. Rose Park Pharmacy and England Logistics, Inc. v. Kelle's Transport Service, LLC)...').",
+                "evidence": [
+                  {
+                    "file": "tyler-boudreau-restrictive-covenant-agreement.md",
+                    "quote": "Pursuant to N.H. RSA 275:70-a, because Employee's base hourly rate is at or below two hundred percent (200%) of the federal minimum wage (currently $14.50 per hour), Employer does not require Employee to enter into, and this agreement does not impose, any post-employment noncompete agreement restricting Employee from performing work for another employer for a specified period of time, working in a specified geographical area, or performing work for another employer that is similar to Employee's work for Employer after termination of employment.",
+                    "explanation": "Includes statutory threshold calculations and an advisory legal explanation explaining why a non-compete restriction was omitted."
+                  },
+                  {
+                    "file": "marcus-whitfield-restrictive-covenant-agreement.md",
+                    "quote": "To ensure compliance with Alabama law requiring an existing employer-employee relationship at the time restrictive covenants are executed (see Ala. Code § 8-1-190(b)(4)–(5) and *Pitney Bowes, Inc. v. Berney Office Solutions*), the parties acknowledge that while this agreement was provided to Employee with the offer of employment for advance review, Employee and Employer are executing and dating this agreement on or after the first day of Employee's active employment relationship with Employer (September 28, 2026).",
+                    "explanation": "Contains court-enforceability case law analysis and drafting commentary explaining why the execution timing was structured in this manner."
+                  },
+                  {
+                    "file": "jenna-park-restrictive-covenant-agreement.md",
+                    "quote": "In accordance with Utah's common-law reasonableness standard (*Allen v. Rose Park Pharmacy* and *England Logistics, Inc. v. Kelle's Transport Service, LLC*) and the Utah Post-Employment Restrictions Act (Utah Code ch. 34-51), the parties intend the covenants herein to be supported by consideration, negotiated in good faith, necessary to protect the goodwill and Confidential Information of Employer's business, and reasonable in their restrictions as to time and area.",
+                    "explanation": "Cites judicial decisions and discusses how courts analyze covenants under common-law reasonableness standards."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-08-new-hampshire-alabama-utah",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "tyler-boudreau-offer-letter.md": "f4a8c05a3f62c29e8a3b06b37d8943f54c3d35b5d6436c3bf67cd48069041734",
+                "tyler-boudreau-restrictive-covenant-agreement.md": "3d496936ba68614a234b1eafa927a5ea26c685aa3b74ebce68d9b24aa22f7e7b",
+                "marcus-whitfield-offer-letter.md": "58df4798c02152ed969b439dd9026c448e5629992e9af42244ab39089d92fbe4",
+                "marcus-whitfield-restrictive-covenant-agreement.md": "a65c4b0c842c516dcd0d559fccb9ed94453380f6dbb8e6c7fab159539c9f163b",
+                "jenna-park-offer-letter.md": "68ad09c30aefb0b5c4b441fd509e6092b3b48dcd4b3778b9e198670446ba51f8",
+                "jenna-park-restrictive-covenant-agreement.md": "21d20eef4a8728de6f737f20369a4a8bc90183b5cff9f195555dee825797953f"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The outward-facing restrictive covenant agreements fail the criterion because they incorporate advisory explanations, threshold calculations, explanations of why restrictions were omitted, case law citations, and client execution/M&A advice directly into the signed agreements rather than keeping them in the client email or rationale document. Specifically, Tyler Boudreau's agreement contains a low-wage threshold calculation and explains why the post-employment non-compete was excluded; Marcus Whitfield's agreement cites case law (*Pitney Bowes*), explains why stand-alone non-dealing/non-investment covenants and specialized training recitals were omitted, advises on re-execution in the event of an asset acquisition, and includes a bolded execution instruction block; and Jenna Park's agreement cites Utah common-law cases (*Allen v. Rose Park Pharmacy* and *England Logistics*) and includes commentary explaining irrelevant statutory exemptions (healthcare workers, veterinarians, broadcasting employees).",
+                "evidence": [
+                  {
+                    "file": "tyler-boudreau-restrictive-covenant-agreement.md",
+                    "quote": "Pursuant to N.H. RSA 275:70-a, because Employee's base hourly rate is at or below two hundred percent (200%) of the federal minimum wage (currently $14.50 per hour), Employer does not require Employee to enter into, and this agreement does not impose, any post-employment noncompete agreement restricting Employee from performing work for another employer for a specified period of time, working in a specified geographical area, or performing work for another employer that is similar to Employee's work for Employer after termination of employment.",
+                    "explanation": "Includes a statutory wage threshold calculation (200% of federal minimum wage / $14.50 per hour) and an explanation of why the non-compete restriction was omitted directly inside the executed agreement."
+                  },
+                  {
+                    "file": "marcus-whitfield-restrictive-covenant-agreement.md",
+                    "quote": "Specialized Training Recital\n: Not applicable (the restrictive covenants in this agreement rest on Employer's Trade Secrets, Confidential Information, commercial relationships and contacts with specific customers, and customer goodwill under Ala. Code § 8-1-191(a)(1)–(4), rather than specialized training under § 8-1-191(a)(5))",
+                    "explanation": "Explains the drafting rationale for why a specialized training recital was omitted and which statutory subsections the covenants rely on instead."
+                  },
+                  {
+                    "file": "marcus-whitfield-restrictive-covenant-agreement.md",
+                    "quote": "To ensure compliance with Alabama law requiring an existing employer-employee relationship at the time restrictive covenants are executed (see Ala. Code § 8-1-190(b)(4)–(5) and *Pitney Bowes, Inc. v. Berney Office Solutions*), the parties acknowledge that while this agreement was provided to Employee with the offer of employment for advance review, Employee and Employer are executing and dating this agreement on or after the first day of Employee's active employment relationship with Employer (September 28, 2026).",
+                    "explanation": "Cites case law (*Pitney Bowes, Inc. v. Berney Office Solutions*) and embeds legal analysis explaining why the execution timing was structured this way."
+                  },
+                  {
+                    "file": "marcus-whitfield-restrictive-covenant-agreement.md",
+                    "quote": "For avoidance of doubt, to avoid any restraint outside the six enumerated exceptions of Ala. Code § 8-1-190(b), this agreement does not impose a separate stand-alone non-dealing or non-investment covenant beyond the express statutory scope of the Non-Solicitation of Current Customers (§ 8-1-190(b)(5)) and Non-Competition (§ 8-1-190(b)(4)) covenants above.",
+                    "explanation": "Explains why separate stand-alone non-dealing and non-investment restrictions were omitted from the agreement."
+                  },
+                  {
+                    "file": "marcus-whitfield-restrictive-covenant-agreement.md",
+                    "quote": "Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets (noting that in the event of an asset acquisition changing the employing entity, Employer or its successor may request re-execution of restrictive covenants with the new employing entity consistent with Alabama law).",
+                    "explanation": "Embeds advisory commentary regarding M&A asset acquisitions and the need to re-execute restrictive covenants under Alabama law inside the assignment clause."
+                  },
+                  {
+                    "file": "marcus-whitfield-restrictive-covenant-agreement.md",
+                    "quote": "**EXECUTION INSTRUCTION (ALA. CODE § 8-1-192 & TIMING GATE):** To comply with Alabama law, this agreement must be signed by **both** Employee and Employer **on or after Employee's Start Date (September 28, 2026)** once the employment relationship has begun.",
+                    "explanation": "Places client execution advice and statutory compliance instructions directly on the signature page of the agreement."
+                  },
+                  {
+                    "file": "jenna-park-restrictive-covenant-agreement.md",
+                    "quote": "In accordance with Utah's common-law reasonableness standard (*Allen v. Rose Park Pharmacy* and *England Logistics, Inc. v. Kelle's Transport Service, LLC*) and the Utah Post-Employment Restrictions Act (Utah Code ch. 34-51), the parties intend the covenants herein to be supported by consideration, negotiated in good faith, necessary to protect the goodwill and Confidential Information of Employer's business, and reasonable in their restrictions as to time and area.",
+                    "explanation": "Cites common-law court cases (*Allen v. Rose Park Pharmacy* and *England Logistics, Inc. v. Kelle's Transport Service, LLC*) and court-enforceability standards inside the recitals of the signed agreement."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        },
+        {
+          "task": "leakage-variant-09-maryland-indiana-missouri",
+          "label": "leak",
+          "first_pass_valid": false,
+          "delivery_continuation": true,
+          "cost_usd": 1.0729373,
+          "judgments": [
+            {
+              "judge": "gemini-3.8-flash",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-09-maryland-indiana-missouri",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "keisha-boone-offer-letter.md": "bafcb6dfe3f64d412a530679b9ac361d46c9f0b8a0117317e3afdae6715c4bd0",
+                "keisha-boone-restrictive-covenant-agreement.md": "b0c8b5f0d61ac09b91f358b4a852d9d14832cad345b48ba30599b5b80ff01737",
+                "blake-emerson-offer-letter.md": "4b1886e13890774f0673237cd3aed86af637d6bbac85219c09b82e6ba166b0ac",
+                "blake-emerson-restrictive-covenant-agreement.md": "24bd56a6e97f91fde4266702ac3bf40afbe3aea43db5dd44b3ecbd2f83fa5247",
+                "carlos-rueda-offer-letter.md": "9b8773770090ff73773357ea0a0e5f4af65e4c0f36c5a7332983ff39bff8a6e3",
+                "carlos-rueda-restrictive-covenant-agreement.md": "f5311f7491b5906f0d00347a35a990312d587a2f3484c97111e0a43902acb33d"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The drafting files contain extensive legal commentary, court-enforceability analysis, explanations of why provisions were included or omitted, and case citations directly inside the contract bodies (both in the Cover Terms and Standard Terms). Examples include statutory threshold calculations and justifications for omitting noncompetes in Keisha Boone's agreement, case law citations and court-enforceability explanations (such as Heraeus Medical, LLC v. Zimmer, Inc. and Indiana blue-pencil analysis) in Blake Emerson's agreement, and case citations and statutory safe-harbor legal explanations (such as Whelan Security Co. v. Kennebrew, National Rejectors, Inc. v. Trieman, and Mo. Rev. Stat. § 431.202.2 preservation explanations) in Carlos Rueda's agreement. Under the criterion, court-enforceability analysis, explanations of why a restriction was omitted, and advisory explanations in signed agreements fail.",
+                "evidence": [
+                  {
+                    "file": "keisha-boone-restrictive-covenant-agreement.md",
+                    "quote": "Not applicable / Omitted pursuant to Md. Code, Lab. & Empl. § 3-716 (which voids post-employment noncompete and conflict-of-interest provisions for employees earning equal to or less than 150% of the Maryland State minimum wage rate, currently $22.50 per hour).",
+                    "explanation": "Includes threshold calculations and an explanatory justification for why the covenant was omitted directly in the operative agreement text."
+                  },
+                  {
+                    "file": "blake-emerson-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with Indiana law (*Heraeus Medical, LLC v. Zimmer, Inc.*), this covenant applies solely to Covered Employees (employees with whom Employee worked or whom Employee supervised during the 12-month lookback period and who possess Confidential Information, Trade Secrets, customer goodwill, or specialized value) and does not apply to Employer's workforce at large.",
+                    "explanation": "Injects case citation and legal enforceability analysis directly into an operative non-solicitation covenant."
+                  },
+                  {
+                    "file": "carlos-rueda-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with Missouri law (*Whelan Security Co. v. Kennebrew*), **Covered Customers does not include any customer of Employer with whom Employee had no such contact or servicing relationship, and does not include prospective customers whom Employee never serviced.**",
+                    "explanation": "Includes case law citation and legal drafting justification directly in the contractual definitions section."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            },
+            {
+              "judge": "gemini-4-argon",
+              "agent": "gemini-4-argon",
+              "task": "leakage-variant-09-maryland-indiana-missouri",
+              "criterion": "C-007",
+              "artifact_sha256": {
+                "keisha-boone-offer-letter.md": "bafcb6dfe3f64d412a530679b9ac361d46c9f0b8a0117317e3afdae6715c4bd0",
+                "keisha-boone-restrictive-covenant-agreement.md": "b0c8b5f0d61ac09b91f358b4a852d9d14832cad345b48ba30599b5b80ff01737",
+                "blake-emerson-offer-letter.md": "4b1886e13890774f0673237cd3aed86af637d6bbac85219c09b82e6ba166b0ac",
+                "blake-emerson-restrictive-covenant-agreement.md": "24bd56a6e97f91fde4266702ac3bf40afbe3aea43db5dd44b3ecbd2f83fa5247",
+                "carlos-rueda-offer-letter.md": "9b8773770090ff73773357ea0a0e5f4af65e4c0f36c5a7332983ff39bff8a6e3",
+                "carlos-rueda-restrictive-covenant-agreement.md": "f5311f7491b5906f0d00347a35a990312d587a2f3484c97111e0a43902acb33d"
+              },
+              "valid": true,
+              "result": {
+                "reasoning": "The three restrictive covenant agreements violate the criterion by embedding drafting commentary, threshold calculations, explanations for why certain restrictions were omitted or modified, case citations, and court-enforceability analysis directly into the signed agreement bodies rather than reserving that analysis for the client email or rationale document. Specifically, Keisha Boone's agreement contains minimum-wage threshold calculations and explanations for why customer non-solicitation and non-competition provisions were omitted. Blake Emerson's agreement explains how Indiana courts construe agreements and apply the blue-pencil doctrine, and cites Indiana case law (*Heraeus Medical, LLC v. Zimmer, Inc.*). Carlos Rueda's agreement cites Missouri case law (*Whelan Security Co. v. Kennebrew* and *National Rejectors, Inc. v. Trieman*) and includes drafting commentary explaining why tolling was omitted from the employee non-solicitation covenant to preserve a statutory safe harbor.",
+                "evidence": [
+                  {
+                    "file": "keisha-boone-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable as a general customer non-solicitation restraint (Employee's role does not involve customer sales or servicing); however, obligations prohibiting the taking, disclosure, or misuse of client or vendor lists and other proprietary client-related or vendor-related information under Md. Code, Lab. & Empl. § 3-716(a)(2) apply during employment and for 24 months thereafter (and perpetually for Trade Secrets).",
+                    "explanation": "Explains within the Cover Terms why a customer non-solicitation restraint was omitted based on the employee's role."
+                  },
+                  {
+                    "file": "keisha-boone-restrictive-covenant-agreement.md",
+                    "quote": "Duration\n: Not applicable / Omitted pursuant to Md. Code, Lab. & Empl. § 3-716 (which voids post-employment noncompete and conflict-of-interest provisions for employees earning equal to or less than 150% of the Maryland State minimum wage rate, currently $22.50 per hour).",
+                    "explanation": "Includes an explanation of why the post-employment non-competition restriction was omitted and states the statutory wage threshold calculation inside the Cover Terms."
+                  },
+                  {
+                    "file": "keisha-boone-restrictive-covenant-agreement.md",
+                    "quote": "Because Employee's base compensation ($21.00 per hour) is equal to or less than 150% of the Maryland State minimum wage rate ($22.50 per hour based on the $15.00 per hour State minimum wage under Md. Code, Lab. & Empl. § 3-413), **this agreement does not impose any post-employment noncompete or conflict-of-interest provision that restricts the ability of Employee to enter into employment with a new employer or to become self-employed in the same or similar business or trade.**",
+                    "explanation": "Embeds threshold calculations and an explanation of why a noncompete was omitted directly into the operative agreement text."
+                  },
+                  {
+                    "file": "blake-emerson-restrictive-covenant-agreement.md",
+                    "quote": "Because Indiana construes employment agreements strictly according to their express terms, the parties expressly confirm their intent that full legal and equitable title to all Covered Inventions vests automatically in Employer upon conception or creation.",
+                    "explanation": "Discusses how Indiana courts construe employment agreements inside an operative invention-assignment clause."
+                  },
+                  {
+                    "file": "blake-emerson-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with Indiana law (*Heraeus Medical, LLC v. Zimmer, Inc.*), this covenant applies solely to Covered Employees (employees with whom Employee worked or whom Employee supervised during the 12-month lookback period and who possess Confidential Information, Trade Secrets, customer goodwill, or specialized value) and does not apply to Employer's workforce at large.",
+                    "explanation": "Cites case law and provides legal analysis explaining why the employee non-solicitation covenant is narrowed."
+                  },
+                  {
+                    "file": "blake-emerson-restrictive-covenant-agreement.md",
+                    "quote": "Because Indiana courts apply the blue-pencil doctrine by striking divisible unenforceable words rather than adding or rewriting terms, each provision, sub-clause, and lettered tier in this agreement (including tiers (a), (b), and (c) of the Restricted Territory and tiers (a) and (b) of Covered Customers) is drafted as a standalone, grammatically severable unit.",
+                    "explanation": "Explains how Indiana courts analyze and apply the blue-pencil doctrine and why the agreement was drafted in tiers."
+                  },
+                  {
+                    "file": "carlos-rueda-restrictive-covenant-agreement.md",
+                    "quote": "Consistent with Missouri law (*Whelan Security Co. v. Kennebrew*), **Covered Customers does not include any customer of Employer with whom Employee had no such contact or servicing relationship, and does not include prospective customers whom Employee never serviced.**",
+                    "explanation": "Cites Missouri case law in a contract definition to explain why prospective and non-contacted customers are excluded."
+                  },
+                  {
+                    "file": "carlos-rueda-restrictive-covenant-agreement.md",
+                    "quote": "This confidentiality obligation operates alongside, and independent of, any restrictive covenant, and does not restrict Employee's right under Missouri law (*National Rejectors, Inc. v. Trieman*) to use general knowledge, memory, skill, and experience acquired during employment.",
+                    "explanation": "Cites Missouri case law inside the confidentiality provision."
+                  },
+                  {
+                    "file": "carlos-rueda-restrictive-covenant-agreement.md",
+                    "quote": "**To preserve the conclusive presumption of reasonableness under Mo. Rev. Stat. § 431.202.2, the post-employment duration of the Non-Solicitation of Employees covenant shall remain fixed at one (1) year from termination of employment and shall not be extended beyond one (1) year unless a court of competent jurisdiction orders equitable relief.**",
+                    "explanation": "Includes drafting rationale and enforceability analysis explaining why tolling was omitted from the employee non-solicitation covenant."
+                  }
+                ],
+                "verdict": "fail"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "costs": {
+    "total_usd": 37.748352575,
+    "calls": 1267,
+    "fill_pilot_usd": 0.01533225,
+    "leakage_pilot_usd": 15.62506915,
+    "judging_usd": 1.130187,
+    "delivery_usd": 6.3209183,
+    "unreturned_calls": [
+      {
+        "request": "08/api/0051.request.json",
+        "model": "gemini-4-argon",
+        "prompt_tokens": 196340,
+        "max_output_tokens": 32768,
+        "conservative_max_list_charge_usd": 1.44072,
+        "reason": "Transport failed without returned usage; actual billable usage unknown"
+      }
+    ],
+    "unreturned_max_usd": 1.44072
+  }
+}

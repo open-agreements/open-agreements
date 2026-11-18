@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Run the fixed ten-instance matrix as independently budgeted subprocesses."""
 
-import argparse, concurrent.futures, pathlib, subprocess, sys
+import argparse
+import concurrent.futures
+import pathlib
+import subprocess
+import sys
 
 p = argparse.ArgumentParser()
 p.add_argument("--out", type=pathlib.Path, required=True)
@@ -42,6 +46,7 @@ def run(i):
                 "--task-regex",
                 pattern,
             ],
+            check=False,
             stdout=log,
             stderr=subprocess.STDOUT,
         )

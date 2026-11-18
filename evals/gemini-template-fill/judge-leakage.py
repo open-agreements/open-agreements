@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Two disclosed model judges for C-007; missing outputs never score clean."""
 
-import argparse, json, pathlib
+import argparse
+import json
+import pathlib
+
 from benchmark import API, MODELS, dump, sha
 
 p = argparse.ArgumentParser()
@@ -46,15 +49,15 @@ for status_path in sorted(a.runs.glob("*/leakage/*/*/status.json")):
         )
         r = api.call(
             judge,
-            dict(
-                contents=[dict(role="user", parts=[dict(text=prompt)])],
-                generationConfig=dict(
-                    temperature=0,
-                    maxOutputTokens=4096,
-                    thinkingConfig=dict(thinkingLevel="LOW"),
-                    responseMimeType="application/json",
-                ),
-            ),
+            {
+                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                "generationConfig": {
+                    "temperature": 0,
+                    "maxOutputTokens": 4096,
+                    "thinkingConfig": {"thinkingLevel": "LOW"},
+                    "responseMimeType": "application/json",
+                },
+            },
             "judge/" + cell,
         )
         c = r["candidates"][0]
@@ -80,13 +83,13 @@ for status_path in sorted(a.runs.glob("*/leakage/*/*/status.json")):
                 valid = False
         dump(
             result_path,
-            dict(
-                judge=judge,
-                agent=model,
-                task=task,
-                criterion="C-007",
-                artifact_sha256=hashes,
-                valid=valid,
-                result=result,
-            ),
+            {
+                "judge": judge,
+                "agent": model,
+                "task": task,
+                "criterion": "C-007",
+                "artifact_sha256": hashes,
+                "valid": valid,
+                "result": result,
+            },
         )

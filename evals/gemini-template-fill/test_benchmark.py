@@ -1,4 +1,9 @@
-import importlib.util, json, pathlib, tempfile, unittest, zipfile
+import importlib.util
+import json
+import pathlib
+import tempfile
+import unittest
+import zipfile
 
 spec = importlib.util.spec_from_file_location(
     "benchmark", pathlib.Path(__file__).with_name("benchmark.py")
@@ -9,12 +14,12 @@ spec.loader.exec_module(b)
 
 class BenchmarkTests(unittest.TestCase):
     def test_cost_includes_thinking_and_cached_tokens(self):
-        usage = dict(
-            promptTokenCount=1000,
-            cachedContentTokenCount=200,
-            candidatesTokenCount=300,
-            thoughtsTokenCount=400,
-        )
+        usage = {
+            "promptTokenCount": 1000,
+            "cachedContentTokenCount": 200,
+            "candidatesTokenCount": 300,
+            "thoughtsTokenCount": 400,
+        }
         self.assertAlmostEqual(
             b.cost("gemini-4-argon", usage), (0.8 * 2 + 0.2 * 0.1 + 0.7 * 10) / 1000
         )

@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Recompute accuracy and costs from recorded data without any model calls."""
 
-import argparse, json, pathlib
+import argparse
+import json
+import pathlib
+
 from benchmark import HERE, MODELS, cost, docx_parts, sha
 
 p = argparse.ArgumentParser()
@@ -39,7 +42,7 @@ for model in MODELS:
             correct += len(expected) - len(wrong)
             fields += len(expected)
             exact += int(rendered == gold and output["finishReason"] == "STOP")
-    cc = [json.loads(l) for l in (root / "calls.jsonl").read_text().splitlines()]
+    cc = [json.loads(line) for line in (root / "calls.jsonl").read_text().splitlines()]
     cc = [c for c in cc if c["model"] == model and c["cell"].split("/")[2] in fixtures]
     assert len(cc) == 21
     for c in cc:
