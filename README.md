@@ -104,6 +104,8 @@ and [security policy](https://github.com/open-agreements/open-agreements/blob/ma
 
 - [Safe Clause](https://safeclause.deltaxy.ai) — AI-powered contract platform for startups. [#1 on vibecode.law, March 2026](https://vibecode.law/showcase/safe-clause-317416).
 
+- [goHeather](https://goheather.io) — AI-powered contract platform with an [open contract template library](https://github.com/Tally-Works/contract-templates) built in part on OpenAgreements.
+
 *Building on OpenAgreements? Open a PR to add your project.*
 
 ## License
