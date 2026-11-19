@@ -1,4 +1,41 @@
 # Us Update Log
 
+## 2026-11-19
+* **Update**: Address peer review round 3: built-in metatarsal, tools-of-trade scope, nonwaiver qualifier (17a7505)
+* **Update**: Italicize 303 Beauty Bar case name in source-card propositions (1b29eda)
+* **Update**: content(expense-reimbursement): qualify Texas waiver opening and support remote-work floor (2812e1e)
+* **Update**: content(expense-reimbursement): address Arizona peer review round 2 (2d103ee)
+* **Update**: content(expense-reimbursement): add Tucson and Flagstaff floors, drug-test costs to Arizona guide (36c9e85)
+* **Update**: Address peer review round 6: nonspecialty eyewear (3f16e53)
+* **Update**: Colorado expense draft: apply 2026 SB 26-160 amendments to 8-4-105 (WIP, quotes pending source publication) (5a39931)
+* **Update**: Add Colorado expense reimbursement guide (6b05a28)
+* **Update**: Draft Colorado expense reimbursement guide (WIP) (6f35161)
+* **Update**: content(expense-reimbursement): address Arizona peer review round 1 (753140b)
+* **Update**: Address peer review round 5: uniform exceptions card in duty answer; phone personal-use condition (77afa09)
+* **Update**: content(expense-reimbursement): draft Arizona guide (8c92045)
+* **Update**: content(expense-reimbursement): scope Texas covered-expenses absence claim (a4dc7ec)
+* **Update**: content(expense-reimbursement): cite 40 TAC 821.25(d) for Texas reimbursements not being wages (a7dc348)
+* **Update**: Address peer review round 7: narrow waiver opening, standalone local-wage opening (a9b66eb)
+* **Update**: content(expense-reimbursement): tighten Texas federal-floor and PPE wording (aa2bae3)
+* **Update**: content(expense-reimbursement): use a complete TWC sentence for the Texas remote-work wage-floor card (ba1b2f3)
+* **Update**: content(expense-reimbursement): scope Texas absence claims to general private-employer statutes (cf92d7d)
+* **Update**: Cite CDLE INFO #16 as non-binding guidance; remove ellipsis quotes (d262eed)
+* **Update**: content(expense-reimbursement): add OSHA PPE payment rule to Texas covered expenses (d414646)
+* **Update**: content(expense-reimbursement): address Texas peer-review round 1 (e186314)
+* **Update**: Address peer review round 2: scope absence claims, separate federal and state mechanisms (e6c7ab6)
+* **Update**: Address peer review round 1: qualify uniform duty, cite (1)(a), (a.5), (d), drop unsupported unsettled claim (e7ce80d)
+* **Update**: Complete PPE exclusion quote with the (12.5)(a) definition sentence (f505b21)
+* **Update**: content(expense-reimbursement): fix Arizona quote shapes; regenerate library search index (faf9d23)
+
+## 2026-11-18
+* **Update**: Address peer review round 4: qualify waiver opening (1eaef91)
+* **Update**: Address peer review round 3: local 198-c(2) support, narrow NYC delivery sentence (34ae267)
+* **Update**: Address peer review round 5: state 198-c exclusion in waiver answer (5c345b3)
+* **Update**: Add New York expense reimbursement guide (6493986)
+* **Update**: content(expense-reimbursement): add Texas guide (86dfd33)
+* **Update**: Address peer review round 2: CBA exception, absence markers, waiver limits, vest quote (ade8305)
+* **Update**: Address peer review: cite 198-c subsections in each answer, qualify openings (bee7965)
+* **Update**: Draft New York expense reimbursement guide (WIP) (f41c878)
+
 ## 2026-10-03
 * **Update**: Expense reimbursement: 50-state survey topic, first batch (CA, IL, IA, MT, NH, ND, SD) and pillar (#3179) (bf61447)

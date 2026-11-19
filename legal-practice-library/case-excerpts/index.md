@@ -5,6 +5,7 @@
 * [1st American Systems, Inc. v. Rezatto](1st-american-systems-inc-v-rezatto.md) - 1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51 (S.D. 1981) (quoting Blake, Employee Agreements Not to Compete, 73 Harv. L. Rev. 625 (1960)). — quoted in 3 document(s).
 * [205 Corp. v. Brandow](205-corp-v-brandow.md) - 205 Corp. v. Brandow, 517 N.W.2d 548 (Iowa 1994). — quoted in 2 document(s).
 * [23 LTD v. Herman](23-ltd-v-herman.md) - 23 LTD v. Herman, 2019 COA 113. — quoted in 3 document(s).
+* [303 Beauty Bar LLC v. Division of Labor Standards & Statistics](303-beauty-bar-llc-v-division-of-labor-standards-statistics.md) - 303 Beauty Bar LLC v. Div. of Lab. Standards & Stats., 2025 COA 20, ¶ 1 — quoted in 1 document(s).
 * [7's Enterprises, Inc. v. Del Rosario](7-s-enterprises-inc-v-del-rosario.md) - 7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006). — quoted in 3 document(s).
 * [80P2L LLC v. U.S. Bank Trust, N.A.](80p2l-llc-v-u-s-bank-trust-n-a.md) - 80P2L LLC v. U.S. Bank Trust, N.A., 2021 NY Slip Op 03275 (1st Dep't May 25, 2021). — quoted in 1 document(s).
 * [A & C Engineering Co. v. Atherholt](a-c-engineering-co-v-atherholt.md) - A & C Engineering Co. v. Atherholt, 355 Mich. 677, 95 N.W.2d 871 (1959). — quoted in 1 document(s).
@@ -75,6 +76,7 @@
 * [Banks v. International Rental & Leasing Corp.](banks-v-international-rental-leasing-corp.md) - Banks v. Int'l Rental & Leasing Corp., 55 V.I. 967 (V.I. 2011). — quoted in 2 document(s).
 * [Banks v. Unisys Corp.](banks-v-unisys-corp.md) - Banks v. Unisys Corp., 228 F.3d 1357 (Fed. Cir. 2000). — quoted in 4 document(s).
 * [Barlow & Seelig Manufacturing Co. v. Patch](barlow-seelig-manufacturing-co-v-patch.md) - Barlow & Seelig Mfg. Co. v. Patch, 232 Wis. 220, 286 N.W. 577 (1939). — quoted in 1 document(s).
+* [Barnhill v. Robert Saunders & Co. (1981) 125 Cal.App.3d 1](barnhill-v-robert-saunders-co-1981-125-cal-app-3d-1.md) - Barnhill v. Robert Saunders & Co. (1981) 125 Cal.App.3d 1. — quoted in 1 document(s).
 * [Barrentine v. Arkansas-Best Freight System, Inc.](barrentine-v-arkansas-best-freight-system-inc.md) - Barrentine v. Arkansas-Best Freight System, Inc., 450 U.S. 728, 740 (1981). — quoted in 1 document(s).
 * [Barshaw v. Allegheny Performance Plastics, LLC](barshaw-v-allegheny-performance-plastics-llc.md) - Barshaw v. Allegheny Performance Plastics, LLC, 334 Mich. App. 741 (2020). — quoted in 2 document(s).
 * [Bartkowiak v. St. Adalbert's Roman Catholic Church Society](bartkowiak-v-st-adalbert-s-roman-catholic-church-society.md) - Bartkowiak v. St. Adalbert's Roman Catholic Church Society, 40 A.D.2d 306 (4th Dep't 1973). — quoted in 1 document(s).
@@ -359,6 +361,7 @@
 * [Hutton v. City of Omaha](hutton-v-city-of-omaha.md) - Hutton v. City of Omaha, 111 Neb. 850, 198 N.W. 146 (1924). — quoted in 1 document(s).
 * [Hydron Pty Ltd v Harous](hydron-pty-ltd-v-harous.md) - Hydron Pty Ltd v Harous [2005] SASC 176 (Bleby J). — quoted in 1 document(s).
 * [Idbeis v. Wichita Surgical Specialists, P.A.](idbeis-v-wichita-surgical-specialists-p-a.md) - Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005). — quoted in 2 document(s).
+* [In re Acknowledgment Cases (2015) 239 Cal.App.4th 1498](in-re-acknowledgment-cases-2015-239-cal-app-4th-1498.md) - In re Acknowledgment Cases (2015) 239 Cal.App.4th 1498. — quoted in 2 document(s).
 * [In re Anselmi](in-re-anselmi.md) - In re Anselmi, 52 B.R. 479, 490 (Bankr. D. Wyo. 1985). — quoted in 1 document(s).
 * [In re AutoNation, Inc.](in-re-autonation-inc.md) - In re AutoNation, Inc., 228 S.W.3d 663 (Tex. 2007). — quoted in 2 document(s).
 * [In re California Pizza Kitchen, Inc., 129 F.4th 667 (9th Cir. 2025)](in-re-california-pizza-kitchen-inc-129-f-4th-667-9th-cir-2025.md) - In re California Pizza Kitchen, Inc., 129 F.4th 667 (9th Cir. 2025). — quoted in 1 document(s).
@@ -506,6 +509,7 @@
 * [National Graphics Co. v. Dilley](national-graphics-co-v-dilley.md) - Nat'l Graphics Co. v. Dilley, 681 P.2d 546 (Colo. App. 1984). — quoted in 1 document(s).
 * [National Rejectors, Inc. v. Trieman](national-rejectors-inc-v-trieman.md) - National Rejectors, Inc. v. Trieman, 409 S.W.2d 1 (Mo. banc 1966). — quoted in 1 document(s).
 * [Natural Organics, Inc. v. Kirkendall](natural-organics-inc-v-kirkendall.md) - Natural Organics, Inc. v. Kirkendall, 52 A.D.3d 488 (2d Dep't 2008). — quoted in 2 document(s).
+* [Naugle v. Beech Grove City Schools](naugle-v-beech-grove-city-schools.md) - Naugle v. Beech Grove City Schools, 864 N.E.2d 1058 (Ind. 2007) — quoted in 1 document(s).
 * [Nelson v. Eighth Judicial District Court](nelson-v-eighth-judicial-district-court.md) - Nelson v. Eighth Judicial Dist. Ct. (Nev. Apr. 1, 2021) (granting writ of mandamus). — quoted in 1 document(s).
 * [Netter v. Netter](netter-v-netter.md) - Netter v. Netter, 235 Conn. App. 774 (2025). — quoted in 1 document(s).
 * [Neville Jeffress Advertising Pty Ltd v Barlow (No 2)](neville-jeffress-advertising-pty-ltd-v-barlow-no-2.md) - Neville Jeffress Advertising Pty Ltd v Barlow (No 2) [1993] TASSC 113 (Zeeman J), citing Herbert Morris Ltd v Saxelby [1916] 1 AC 688 and Lindner v Murdock's Garage (1950) 83 CLR 628. — quoted in 1 document(s).
@@ -696,6 +700,7 @@
 * [Spellman v. Ruhde](spellman-v-ruhde.md) - Spellman v. Ruhde, 28 Wis. 2d 599, 137 N.W.2d 425 (1965). — quoted in 1 document(s).
 * [Sphere Drake Insurance Co. v. Block 7206 Corp.](sphere-drake-insurance-co-v-block-7206-corp.md) - Sphere Drake Insurance Co. v. Block 7206 Corp., 265 A.D.2d 78 (2d Dep't 2000). — quoted in 2 document(s).
 * [St. Clair Medical, P.C. v. Borgiel](st-clair-medical-p-c-v-borgiel.md) - St. Clair Medical, P.C. v. Borgiel, 270 Mich. App. 260, 715 N.W.2d 914 (2006). — quoted in 3 document(s).
+* [St. Vincent Hospital & Health Care Center, Inc. v. Steele](st-vincent-hospital-health-care-center-inc-v-steele.md) - St. Vincent Hospital & Health Care Center, Inc. v. Steele, 766 N.E.2d 699 (Ind. 2002) — quoted in 1 document(s).
 * [STAAR Surgical Co. v. Waggoner, 588 A.2d 1130 (Del. 1991) — stock issued without authority is void](staar-surgical-co-v-waggoner-588-a-2d-1130-del-1991-stock-issued-without-authori.md) - Staar Surgical Co. v. Waggoner, 588 A.2d 1130 (Del. 1991). — quoted in 2 document(s).
 * [Standard Register Co. v. Kerrigan](standard-register-co-v-kerrigan.md) - Standard Register Co. v. Kerrigan, 238 S.C. 54, 119 S.E.2d 533 (1961). — quoted in 2 document(s).
 * [Star Direct, Inc. v. Dal Pra](star-direct-inc-v-dal-pra.md) - Star Direct, Inc. v. Dal Pra, 2009 WI 76, 319 Wis. 2d 274, 767 N.W.2d 898. — quoted in 2 document(s).
@@ -737,6 +742,7 @@
 * [Thea v. Kleinhandler](thea-v-kleinhandler.md) - Thea v. Kleinhandler, 807 F.3d 492, 498 (2d Cir. 2015). — quoted in 1 document(s).
 * [Thoma v. Oxford Performance Materials, Inc.](thoma-v-oxford-performance-materials-inc.md) - Thoma v. Oxford Performance Materials, Inc., 153 Conn. App. 50 (2014). — quoted in 2 document(s).
 * [Thompson v. Toluao](thompson-v-toluao.md) - Thompson v. Toluao, 24 A.S.R.2d 127 (Land & Titles Div. 1993). — quoted in 1 document(s).
+* [Tianti v. William Raveis Real Estate, Inc.](tianti-v-william-raveis-real-estate-inc.md) - Tianti v. William Raveis Real Estate, Inc., 231 Conn. 690 (1995) — quoted in 1 document(s).
 * [Ticor Title Insurance Co. v. Cohen](ticor-title-insurance-co-v-cohen.md) - Ticor Title Ins. Co. v. Cohen, 173 F.3d 63 (2d Cir. 1999). — quoted in 2 document(s).
 * [Timber Lake Foods, Inc. v. Estess](timber-lake-foods-inc-v-estess.md) - Timber Lake Foods, Inc. v. Estess, 72 So. 3d 521 (Miss. Ct. App. 2011). — quoted in 2 document(s).
 * [Tims v. Black Horse Carriers, Inc., 2023 IL 127801](tims-v-black-horse-carriers-inc-2023-il-127801.md) - Tims v. Black Horse Carriers, Inc., 2023 IL 127801, ¶ 42. — quoted in 1 document(s).
@@ -749,6 +755,7 @@
 * [Traffic Control Servs., Inc. v. United Rentals Nw., Inc.](traffic-control-servs-inc-v-united-rentals-nw-inc.md) - Traffic Control Servs., Inc. v. United Rentals Nw., Inc., 120 Nev. 168, 87 P.3d 1054 (2004). — quoted in 2 document(s).
 * [Transparent Ruler Co. v. C-Thru Ruler Co.](transparent-ruler-co-v-c-thru-ruler-co.md) - Transparent Ruler Co. v. C-Thru Ruler Co., 129 Conn. 369, 28 A.2d 232 (1942). — quoted in 1 document(s).
 * [Tribeca Broadway Associates, LLC v. Mount Vernon Fire Insurance Co.](tribeca-broadway-associates-llc-v-mount-vernon-fire-insurance-co.md) - Tribeca Broadway Assocs., LLC v. Mount Vernon Fire Ins. Co., 5 A.D.3d 198 (1st Dep't 2004). — quoted in 1 document(s).
+* [Truelove v. Northeast Capital & Advisory, Inc., 95 N.Y.2d 220 (2000)](truelove-v-northeast-capital-advisory-inc-95-n-y-2d-220-2000.md) - Truelove v. Northeast Capital & Advisory, Inc., 95 N.Y.2d 220, 225 (2000). — quoted in 2 document(s).
 * [Tung v. Ah Sam](tung-v-ah-sam.md) - Tung v. Ah Sam, 4 A.S.R. 764 (Trial Div. 1971). — quoted in 2 document(s).
 * [United Cancer Council, Inc. v. Commissioner (7th Cir. 1999)](united-cancer-council-inc-v-commissioner-7th-cir-1999.md) - United Cancer Council, Inc. v. Commissioner, 165 F.3d 1173, 1176 (7th Cir. 1999). — quoted in 2 document(s).
 * [United Laboratories, Inc. v. Kuykendall](united-laboratories-inc-v-kuykendall.md) - United Laboratories, Inc. v. Kuykendall, 322 N.C. 643 (1988). — quoted in 3 document(s).
@@ -766,6 +773,7 @@
 * [University Patents, Inc. v. Kligman](university-patents-inc-v-kligman.md) - University Patents, Inc. v. Kligman, 762 F. Supp. 1212 (E.D. Pa. 1991). — quoted in 1 document(s).
 * [Unlimited Opportunity, Inc. v. Waadah](unlimited-opportunity-inc-v-waadah.md) - Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437 (2015). — quoted in 2 document(s).
 * [Upjohn Co. v. United States, 449 U.S. 383 (1981)](upjohn-co-v-united-states-449-u-s-383-1981.md) - Upjohn Co. v. United States, 449 U.S. 383 (1981). — quoted in 1 document(s).
+* [USS-POSCO Industries v. Case (2016) 244 Cal.App.4th 197](uss-posco-industries-v-case-2016-244-cal-app-4th-197.md) - USS-POSCO Industries v. Case (2016) 244 Cal.App.4th 197. — quoted in 2 document(s).
 * [UZ Engineered Products Co. v. Midwest Motor Supply Co.](uz-engineered-products-co-v-midwest-motor-supply-co.md) - UZ Engineered Prods. Co. v. Midwest Motor Supply Co., No. 01AP-551, 2001-Ohio-8779 (Ohio Ct. App. 10th Dist.). — quoted in 1 document(s).
 * [V.R.W., Inc. v Klein](v-r-w-inc-v-klein.md) - V.R.W., Inc. v Klein, 68 NY2d 560, 565 (1986). — quoted in 1 document(s).
 * [Valley Medical Specialists v. Farber](valley-medical-specialists-v-farber.md) - Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999). — quoted in 3 document(s).

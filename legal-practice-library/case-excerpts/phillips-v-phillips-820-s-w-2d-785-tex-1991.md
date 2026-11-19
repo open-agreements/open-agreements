@@ -21,11 +21,11 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
-### phillips-v-phillips-820-s-w-2d-785-tex-1991-to-be-enforceable-as-liquidated-damages-ed3d3a11 {#phillips-v-phillips-820-s-w-2d-785-tex-1991-to-be-enforceable-as-liquidated-damages-ed3d3a11}
+### phillips-v-phillips-820-s-w-2d-785-tex-1991-all-agree-that-to-be-enforceable-ef3296c0 {#phillips-v-phillips-820-s-w-2d-785-tex-1991-all-agree-that-to-be-enforceable-ef3296c0}
 
-> to be enforceable as liquidated damages the damages must be uncertain and the stipulation must be reasonable
+> All agree that to be enforceable as liquidated damages the damages must be uncertain and the stipulation must be reasonable.
 
 - supports: `penalty-limit`
 - source_cards: `phillips-v-phillips-1991`
 - cited_by: [Stay-or-Pay and Employee Repayment in Texas](../stay-or-pay/us/texas.md)
-- link_to_source: <https://www.courtlistener.com/opinion/1522113/phillips-v-phillips/#:~:text=to%20be%20enforceable%20as%20liquidated,the%20stipulation%20must%20be%20reasonable>
+- link_to_source: <https://www.courtlistener.com/opinion/1522113/phillips-v-phillips/#:~:text=All%20agree%20that%20to%20be,the%20stipulation%20must%20be%20reasonable.>

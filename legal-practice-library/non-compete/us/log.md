@@ -1,5 +1,12 @@
 # Us Update Log
 
+## 2026-11-18
+* **Update**: content(stay-or-pay/california): § 16608-specific absence statements, AB 1697 liability chip, concrete cautions with the grant-bonus exception (peer review round 3) (01f0076)
+* **Update**: content(stay-or-pay/california): Lab. Code § 2802.1 hospital training rule; scoped 2027 void sentence; shorter openings; drafting-defect caution (peer review round 1) (6222550)
+* **Update**: content(stay-or-pay/california): survey values and bottom line state current law for contracts signed before 2027; the § 16608 ban moves to futureEffective (#3287) (6ccbe13)
+* **Update**: content(stay-or-pay/california): name the cases in prose, full § 925(a) quote, standalone out-of-state opening, specific safest heading (content advisory) (82a52da)
+* **Update**: content(stay-or-pay/california): neutral safest-structure summary; scope exception wording to the digest; § 16608 timing chip on the non-compete page (peer review round 5) (e8a0bc4)
+
 ## 2026-11-14
 * **Update**: Survey bookmark follow-ups: non-compete seller column by default and map caption counted against the table; privacy opens on who each law covers and dates upcoming laws; invention-assignment plain-English intro, note first, and the Nevada/North Dakota count explained; Texas sale covenant cell says the burden makes it easier to enforce (37a1210)
 * **Update**: Drop the Texas sale-of-business rewording (that column moves to fixed categories in a separate PR); keep URL sync quiet during Next navigation; give a column swapped in for the summary the summary cell's width rules (7082625)
@@ -11,6 +18,9 @@
 
 ## 2026-10-19
 * **Update**: content(non-compete): quote California Health and Safety Code 1191(d)'s scope and sale-of-business exception in full (#3492 peer review round 24) (1fe0b44)
+* **Update**: content(stay-or-pay/california): AB 1697 moves the ban to contracts from Jan 1, 2027 and opens the bonus exception to retention pay (#3287) (3dc0d78)
+* **Update**: content(stay-or-pay/california): shorter openings, each AB 1697 claim cited to its text, exceptions not exclusive (peer review round 1, #3287) (63a0585)
+* **Update**: content(non-compete/california): penalty card quotes all of section 16608(b)(1) (peer review round 3, #3287) (9b9737b)
 
 ## 2026-10-15
 * **Update**: content(non-compete/nevada): mark claims, roles and source edges (structured analysis) (08023d1)

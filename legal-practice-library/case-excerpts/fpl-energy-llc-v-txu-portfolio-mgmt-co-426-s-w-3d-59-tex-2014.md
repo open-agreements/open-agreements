@@ -26,11 +26,11 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
-### fpl-energy-llc-v-txu-portfolio-mgmt-co-426-s-w-3d-59-tex-2014-the-amount-of-liquidated-damages-called-d1d2b9b6 {#fpl-energy-llc-v-txu-portfolio-mgmt-co-426-s-w-3d-59-tex-2014-the-amount-of-liquidated-damages-called-d1d2b9b6}
+### fpl-energy-llc-v-txu-portfolio-mgmt-co-426-s-w-3d-59-tex-2014-in-phillips-v-phillips-we-acknowledged-4eeb3b01 {#fpl-energy-llc-v-txu-portfolio-mgmt-co-426-s-w-3d-59-tex-2014-in-phillips-v-phillips-we-acknowledged-4eeb3b01}
 
-> the amount of liquidated damages called for is a reasonable forecast of just compensation
+> In Phillips v. Phillips, we acknowledged this principle and restated the two indispensable findings a court must make to enforce contractual damages provisions: (1) “the harm caused by the breach is incapable or difficult of estimation,” and (2) “the amount of liquidated damages called for is a reasonable forecast of just compensation.”
 
 - supports: `drafting-spine`, `penalty-limit`, `repayment-enforceability`, `safest-structure`, `three-regimes`
 - source_cards: `fpl-energy-v-txu-2014`, `fpl-energy-v-txu-2014-drafting`, `fpl-energy-v-txu-2014-penalty`, `fpl-energy-v-txu-2014-safest`
 - cited_by: [Stay-or-Pay and Employee Repayment: When a Worker Can Be Made to Pay an Employer Back Across the United States](../stay-or-pay/us.md), [Stay-or-Pay and Employee Repayment in Texas](../stay-or-pay/us/texas.md)
-- link_to_source: <https://www.courtlistener.com/opinion/5286853/fpl-energy-llc-v-txu-portfolio-management-co/#:~:text=the%20amount%20of%20liquidated%20damages,reasonable%20forecast%20of%20just%20compensation>
+- link_to_source: <https://www.courtlistener.com/opinion/5286853/fpl-energy-llc-v-txu-portfolio-management-co/#:~:text=In%20Phillips%20v.%20Phillips%2C%20we,reasonable%20forecast%20of%20just%20compensation.%E2%80%9D>
