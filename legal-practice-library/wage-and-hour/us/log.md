@@ -1,5 +1,26 @@
 # Us Update Log
 
+## 2026-11-18
+* **Update**: content(wage-and-hour): Minnesota enforcement heading and explicit comparator (content advisory) (046d7b4)
+* **Update**: Address peer review round 6: fringe-benefit card in enforcement (057a5d2)
+* **Update**: content(wage-and-hour): Minnesota meal-break denial remedy (peer-review minor) (11a7b0f)
+* **Update**: Address peer review round 9: hospital 14-day overtime, pay-code contact information (36b8efb)
+* **Update**: Address peer review: records, exemptions, pay-code posting, classification course, penalties (45c0d7f)
+* **Update**: Address peer review round 3 (5ba18e6)
+* **Update**: content(wage-and-hour): Minnesota 2027 minimum and training wage as future-effective law (61318f7)
+* **Update**: Address peer review round 4: pay-schedule exceptions, effective-date support (6fff242)
+* **Update**: Address peer review round 5: good-faith signal, construction exclusions (9785261)
+* **Update**: Address peer review round 2: Tianti ABC test for wage claims, domestic service, openings (ad92fa2)
+* **Update**: Indiana wage-hour: elide 2026 Code page headers in six pull quotes (b42c932)
+* **Update**: content(wage-and-hour): Minnesota misclassification daily-violation rule and written resignation demand (peer review) (b4fd3bb)
+* **Update**: Address peer review round 8: meal timing in bottom line (b670128)
+* **Update**: Declare the no-statute absence for daily overtime (baea2d4)
+* **Update**: content(wage-and-hour): Minnesota classification opening scoped to non-construction work; 181.723 intervening-entity exception (peer review) (d408e36)
+* **Update**: Indiana wage-hour: fee-card propositions track the split quote; state the conservative limitations course (ef1bd48)
+* **Update**: Add Connecticut wage and hour practice guide (#1882) (ef7a5df)
+* **Update**: Resolve per-question source cards and regenerate library index (f857e97)
+* **Update**: Indiana wage-hour: split six cards at 2026 Code page headers into contiguous quotes (f90f957)
+
 ## 2026-11-10
 * **Update**: Wisconsin W&H: condition the tipped rate in the minimum-wage opening (peer review round 11) (1fc0b44)
 
@@ -9,17 +30,29 @@
 * **Update**: Wisconsin W&H: scope final pay to ch. 109 employees; add private-school CBA limit (peer review round 9) (c77b962)
 
 ## 2026-10-15
+* **Update**: content(wage-and-hour): Indiana guide peer-review round 3 fixes (0259b52)
+* **Update**: content(wage-and-hour): Minnesota — tip-credit opening tracks the statute's wording (202af74)
 * **Update**: content(wage-and-hour): Wisconsin guide links 893.44 to its served page (21e33fa)
+* **Update**: content(wage-and-hour): Minnesota — peer-review round 1 fixes (3fda7bd)
 * **Update**: content(wage-and-hour): add Wisconsin wage-and-hour guide (427335d)
+* **Update**: content(wage-and-hour): Minnesota — peer-review round 2 fixes (5f0ffb4)
+* **Update**: content(wage-and-hour): Minnesota — peer-review round 3 fix (7493837)
+* **Update**: content(wage-and-hour): Indiana guide peer-review round 5 fix (8371446)
+* **Update**: content(wage-and-hour): Indiana guide quote and case-citation fixes for validate (88427f5)
 * **Update**: content(wage-and-hour): Wisconsin guide peer-review round 7 fixes (95fb666)
 * **Update**: content(wage-and-hour): Wisconsin guide peer-review round 2 fix (966c19d)
 * **Update**: content(wage-and-hour): Wisconsin guide peer-review round 1 fixes (a71b570)
+* **Update**: content(wage-and-hour): Indiana guide peer-review round 2 fixes (ade8be3)
 * **Update**: content(wage-and-hour): Missouri federal-guide links in neutral register (peer review, #1882) (b61d5be)
+* **Update**: content(wage-and-hour): Indiana guide peer-review round 1 fixes (c2c70ee)
 * **Update**: content(wage-and-hour): Wisconsin guide peer-review round 5 fix (d16d83a)
 * **Update**: content(wage-and-hour): Missouri classification answer states the wage-law employee test (peer review, #1882) (d5763f9)
+* **Update**: content(wage-and-hour): add Minnesota wage-and-hour guide (daf3823)
 * **Update**: content(wage-and-hour): Wisconsin guide peer-review round 3 fixes (dd64eea)
 * **Update**: content(wage-and-hour): Missouri — attribute every source-card proposition to its authority (e26f2ad)
+* **Update**: content(wage-and-hour): add Indiana wage-and-hour guide (e63f07b)
 * **Update**: content(wage-and-hour): Wisconsin guide peer-review round 4 fix (e8f7d1b)
+* **Update**: content(wage-and-hour): state Indiana's break-statute absence flatly (fe89ed4)
 
 ## 2026-10-09
 * **Update**: content(wage-and-hour): Louisiana — peer-review round-15 fix (638862c)
