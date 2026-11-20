@@ -2,26 +2,29 @@
 type: Case Excerpt
 title: 'Earthworks, Inc. v. Sehn'
 description: >-
-  Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 493 (N.D. 1996). — quoted in 2
+  Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 493 (N.D. 1996). — quoted in 3
   document(s).
 citation: 'Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 493 (N.D. 1996).'
 resource: 'https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/'
-timestamp: '2026-06-11'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-dakota'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/north-dakota'
 tags:
   - case-law
   - non-compete
+  - stay-or-pay
 ---
 
 # Earthworks, Inc. v. Sehn
 
 *Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 493 (N.D. 1996).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -38,9 +41,9 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The statute represents one of the oldest and most continuous applications of public policy in contract law, and it invalidates provisions in employment contracts prohibiting an employee from working for a competitor after completion of his employment or imposing a penalty if he does so.
 
-- supports: `forfeiture-for-competition`, `north-dakota-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
-- source_cards: `earthworks-penalty-restraint`, `nd-earthworks-penalty-cov`, `nd-earthworks-penalty-gate`, `nd-earthworks-penalty-toll`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- supports: `forfeiture-for-competition`, `north-dakota-statutory-gates`, `repayment-enforceability`, `restrictive-covenants-each-independently-includable`, `safest-structure`, `tolling-during-breach`, `training-repayment`
+- source_cards: `earthworks-penalty-restraint`, `nd-earthworks-penalty-cov`, `nd-earthworks-penalty-for-competing`, `nd-earthworks-penalty-gate`, `nd-earthworks-penalty-toll`, `nd-earthworks-structure-penalty`, `nd-earthworks-training-penalty`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md), [Stay-or-Pay and Employee Repayment in North Dakota](../stay-or-pay/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=The%20statute%20represents%20one%20of,penalty%20if%20he%20does%20so.>
 
 ### earthworks-inc-v-sehn-this-non-competition-agreement-in-0beb2f88 {#earthworks-inc-v-sehn-this-non-competition-agreement-in-0beb2f88}

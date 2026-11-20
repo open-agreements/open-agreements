@@ -3,10 +3,10 @@ type: Case Excerpt
 title: 'Hess v. Gebhard & Co., Inc.'
 description: >-
   Hess v. Gebhard & Co., Inc., 570 Pa. 148, 808 A.2d 912 (Pa. 2002). — quoted in
-  4 document(s).
+  5 document(s).
 citation: 'Hess v. Gebhard & Co., Inc., 570 Pa. 148, 808 A.2d 912 (Pa. 2002).'
 resource: 'https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/'
-timestamp: '2026-07-03'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
@@ -17,17 +17,20 @@ document_references:
       https://openagreements.org/practice-guides/invention-assignment/us/pennsylvania
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/pennsylvania'
 tags:
   - case-law
   - invention-assignment
   - non-compete
+  - stay-or-pay
 ---
 
 # Hess v. Gebhard & Co., Inc.
 
 *Hess v. Gebhard & Co., Inc., 570 Pa. 148, 808 A.2d 912 (Pa. 2002).*
 
-Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 5 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -35,9 +38,9 @@ Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements l
 
 > However, restrictive covenants are not favored in Pennsylvania and have been historically viewed as a trade restraint that prevents a former employee from earning a living.
 
-- supports: `holdover-clause-limit`
-- source_cards: `hess-covenants-disfavored`
-- cited_by: [Employee Invention Assignment in Pennsylvania](../invention-assignment/us/pennsylvania.md)
+- supports: `holdover-clause-limit`, `repayment-enforceability`
+- source_cards: `hess-covenants-disfavored`, `pa-sop-hess-disfavored-enf`
+- cited_by: [Employee Invention Assignment in Pennsylvania](../invention-assignment/us/pennsylvania.md), [Stay-or-Pay and Employee Repayment in Pennsylvania](../stay-or-pay/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/#:~:text=However%2C%20restrictive%20covenants%20are%20not,employee%20from%20earning%20a%20living.>
 
 ### hess-v-gebhard-co-inc-in-pennsylvania-restrictive-covenants-641348e4 {#hess-v-gebhard-co-inc-in-pennsylvania-restrictive-covenants-641348e4}

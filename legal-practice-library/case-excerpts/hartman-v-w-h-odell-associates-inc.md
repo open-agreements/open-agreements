@@ -2,27 +2,30 @@
 type: Case Excerpt
 title: 'Hartman v. W.H. Odell & Associates, Inc.'
 description: >-
-  Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994). — quoted in 2
+  Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994). — quoted in 3
   document(s).
 citation: 'Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994).'
 resource: >-
   https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/
-timestamp: '2026-06-12'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/north-carolina'
 tags:
   - case-law
   - non-compete
+  - stay-or-pay
 ---
 
 # Hartman v. W.H. Odell & Associates, Inc.
 
 *Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -43,6 +46,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `nc-hartman-customer-territory`, `nc-hartman-territory`, `q3-hartman-territory`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=A%20restriction%20as%20to%20territory,employer%20in%20maintaining%20%5Bits%5D%20customers.>
+
+### hartman-v-w-h-odell-associates-inc-if-a-contract-by-an-employee-a8aefaa8 {#hartman-v-w-h-odell-associates-inc-if-a-contract-by-an-employee-a8aefaa8}
+
+> If a contract by an employee in restraint of competition is too broad to be a reasonable protection to the employer’s business it will not be enforced.
+
+- supports: `repayment-enforceability`
+- source_cards: `nc-sop-hartman-too-broad`
+- cited_by: [Stay-or-Pay and Employee Repayment in North Carolina](../stay-or-pay/us/north-carolina.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=If%20a%20contract%20by%20an,it%20will%20not%20be%20enforced.>
 
 ### hartman-v-w-h-odell-associates-inc-the-party-who-seeks-the-enforcement-8e7b878a {#hartman-v-w-h-odell-associates-inc-the-party-who-seeks-the-enforcement-8e7b878a}
 

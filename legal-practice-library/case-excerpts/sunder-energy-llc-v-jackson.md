@@ -2,27 +2,30 @@
 type: Case Excerpt
 title: 'Sunder Energy, LLC v. Jackson'
 description: >-
-  Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024). — quoted in 2
+  Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024). — quoted in 3
   document(s).
 citation: 'Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024).'
 resource: >-
   https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/
-timestamp: '2026-06-12'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/delaware'
 tags:
   - case-law
   - non-compete
+  - stay-or-pay
 ---
 
 # Sunder Energy, LLC v. Jackson
 
 *Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -34,6 +37,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `de-cust-sunder-restriction`
 - cited_by: [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=The%202019%20LLC%20Agreement%20further,Sunder%E2%80%99s%20customers%20(the%20%E2%80%9CCustomer%20Restriction%E2%80%9D)>
+
+### sunder-energy-llc-v-jackson-the-court-of-chancery-did-not-b122c6da {#sunder-energy-llc-v-jackson-the-court-of-chancery-did-not-b122c6da}
+
+> The Court of Chancery did not abuse its discretion by refusing to blue pencil the restrictive covenants.
+
+- supports: `repayment-enforceability`
+- source_cards: `de-sunder-no-blue-pencil`
+- cited_by: [Stay-or-Pay and Employee Repayment in Delaware](../stay-or-pay/us/delaware.md)
+- link_to_source: <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=The%20Court%20of%20Chancery%20did,blue%20pencil%20the%20restrictive%20covenants.>
 
 ### sunder-energy-llc-v-jackson-the-court-of-chancery-was-well-1791d94b {#sunder-energy-llc-v-jackson-the-court-of-chancery-was-well-1791d94b}
 

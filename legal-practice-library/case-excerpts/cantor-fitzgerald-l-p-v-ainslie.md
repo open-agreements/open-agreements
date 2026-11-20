@@ -3,25 +3,28 @@ type: Case Excerpt
 title: 'Cantor Fitzgerald, L.P. v. Ainslie'
 description: >-
   Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 690 (Del. 2024). — quoted in
-  2 document(s).
+  3 document(s).
 citation: 'Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 690 (Del. 2024).'
 resource: 'https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/'
-timestamp: '2026-06-12'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/delaware'
 tags:
   - case-law
   - non-compete
+  - stay-or-pay
 ---
 
 # Cantor Fitzgerald, L.P. v. Ainslie
 
 *Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 690 (Del. 2024).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -51,3 +54,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `ainslie-summary-rule`, `de-ainslie-summary-gate`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=To%20sum%20up%2C%20we%20disagree,subject%20to%20review%20for%20reasonableness.>
+
+### cantor-fitzgerald-l-p-v-ainslie-unlike-in-halpen-and-wark-the-ff533335 {#cantor-fitzgerald-l-p-v-ainslie-unlike-in-halpen-and-wark-the-ff533335}
+
+> Unlike in Halpen and Wark, the provision at issue here is not a penalty enforced against an employee based on the breach of a restrictive covenant; it is a condition precedent that excuses Cantor Fitzgerald from its duty to pay if the plaintiffs fail to satisfy the condition to which they agreed to be bound in order to receive a deferred financial benefit.
+
+- supports: `repayment-enforceability`
+- source_cards: `de-cantor-condition-not-penalty`
+- cited_by: [Stay-or-Pay and Employee Repayment in Delaware](../stay-or-pay/us/delaware.md)
+- link_to_source: <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=Unlike%20in%20Halpen%20and%20Wark%2C,receive%20a%20deferred%20financial%20benefit.>

@@ -3,12 +3,12 @@ type: Case Excerpt
 title: 'Dominic Wenzell, DMD PC v. Ingrim'
 description: >-
   Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103 (Alaska 2010) (quoting
-  Restatement (Second) of Contracts § 188(1)). — quoted in 3 document(s).
+  Restatement (Second) of Contracts § 188(1)). — quoted in 4 document(s).
 citation: >-
   Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103 (Alaska 2010) (quoting
   Restatement (Second) of Contracts § 188(1)).
 resource: 'https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/'
-timestamp: '2026-07-03'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/alaska'
@@ -16,17 +16,20 @@ document_references:
     resource: 'https://openagreements.org/practice-guides/invention-assignment/us/alaska'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/alaska'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/alaska'
 tags:
   - case-law
   - invention-assignment
   - non-compete
+  - stay-or-pay
 ---
 
 # Dominic Wenzell, DMD PC v. Ingrim
 
 *Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103 (Alaska 2010) (quoting Restatement (Second) of Contracts § 188(1)).*
 
-Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -48,6 +51,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=In%20such%20a%20case%2C%20competition,presumed%20and%20must%20be%20proven.>
 
+### dominic-wenzell-dmd-pc-v-ingrim-indeed-wenzell-stated-that-the-250-000-305ded78 {#dominic-wenzell-dmd-pc-v-ingrim-indeed-wenzell-stated-that-the-250-000-305ded78}
+
+> Indeed, Wenzell stated that the $250,000 figure was selected because it represents half of the purchase price, essentially conceding that it was not a forecast of actual damages.
+
+- supports: `repayment-enforceability`, `safest-structure`
+- source_cards: `ak-wenzell-caution`, `ak-wenzell-no-forecast`, `ak-wenzell-structure`
+- cited_by: [Stay-or-Pay and Employee Repayment in Alaska](../stay-or-pay/us/alaska.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=Indeed%2C%20Wenzell%20stated%20that%20the,a%20forecast%20of%20actual%20damages.>
+
 ### dominic-wenzell-dmd-pc-v-ingrim-it-appears-from-the-record-that-70ea65f9 {#dominic-wenzell-dmd-pc-v-ingrim-it-appears-from-the-record-that-70ea65f9}
 
 > It appears from the record that Ingrim is employed by an organization providing an important, low-cost service to a population in need of such care.
@@ -56,6 +68,15 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 - source_cards: `ak-wenzell-lowcost-gate`, `ak-wenzell-public-interest-phys`, `wenzell-public-interest-low-cost`
 - cited_by: [Non-Compete Agreement Reviewer Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=It%20appears%20from%20the%20record,in%20need%20of%20such%20care.>
+
+### dominic-wenzell-dmd-pc-v-ingrim-section-18-also-includes-the-following-478b839e {#dominic-wenzell-dmd-pc-v-ingrim-section-18-also-includes-the-following-478b839e}
+
+> Section 18 also includes the following liquidated damages provision: The covenant not to compete and/or solicit is of material significance to Buyer.
+
+- supports: `repayment-enforceability`
+- source_cards: `ak-wenzell-clause`
+- cited_by: [Stay-or-Pay and Employee Repayment in Alaska](../stay-or-pay/us/alaska.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=Section%2018%20also%20includes%20the,of%20material%20significance%20to%20Buyer.>
 
 ### dominic-wenzell-dmd-pc-v-ingrim-the-enforceability-of-a-non-competition-1d9de1e1 {#dominic-wenzell-dmd-pc-v-ingrim-the-enforceability-of-a-non-competition-1d9de1e1}
 
