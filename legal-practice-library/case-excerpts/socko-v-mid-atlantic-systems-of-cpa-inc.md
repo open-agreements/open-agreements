@@ -3,13 +3,13 @@ type: Case Excerpt
 title: 'Socko v. Mid-Atlantic Systems of CPA, Inc.'
 description: >-
   Socko v. Mid-Atlantic Systems of CPA, Inc., 633 Pa. 555, 126 A.3d 1266 (Pa.
-  2015). — quoted in 3 document(s).
+  2015). — quoted in 4 document(s).
 citation: >-
   Socko v. Mid-Atlantic Systems of CPA, Inc., 633 Pa. 555, 126 A.3d 1266 (Pa.
   2015).
 resource: >-
   https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/
-timestamp: '2026-07-03'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
@@ -18,17 +18,20 @@ document_references:
       https://openagreements.org/practice-guides/invention-assignment/us/pennsylvania
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/pennsylvania'
 tags:
   - case-law
   - invention-assignment
   - non-compete
+  - stay-or-pay
 ---
 
 # Socko v. Mid-Atlantic Systems of CPA, Inc.
 
 *Socko v. Mid-Atlantic Systems of CPA, Inc., 633 Pa. 555, 126 A.3d 1266 (Pa. 2015).*
 
-Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -36,9 +39,9 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Consistent with this legal background, currently in Pennsylvania, restrictive covenants are enforceable only if they are: (1) ancillary to an employment relationship between an employee and an employer; (2) supported by adequate consideration; (3) the restrictions are reasonably limited in duration and geographic extent; and (4) the restrictions are designed to protect the legitimate interests of the employer.
 
-- supports: `employee-non-compete-enforceability`, `pennsylvania-statutory-gates`, `restrictive-covenants-each-independently-includable`
-- source_cards: `pa-socko-four-part-gate`, `pa-socko-test-covs`, `socko-four-part-test`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- supports: `employee-non-compete-enforceability`, `pennsylvania-statutory-gates`, `repayment-enforceability`, `restrictive-covenants-each-independently-includable`, `safest-structure`
+- source_cards: `pa-socko-four-part-gate`, `pa-socko-test-covs`, `pa-sop-socko-test-enf`, `pa-sop-socko-test-safe`, `socko-four-part-test`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md), [Stay-or-Pay and Employee Repayment in Pennsylvania](../stay-or-pay/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=Consistent%20with%20this%20legal%20background%2C,legitimate%20interests%20of%20the%20employer.>
 
 ### socko-v-mid-atlantic-systems-of-cpa-inc-in-the-context-of-requiring-an-68fe583e {#socko-v-mid-atlantic-systems-of-cpa-inc-in-the-context-of-requiring-an-68fe583e}

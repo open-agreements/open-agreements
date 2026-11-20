@@ -2,12 +2,12 @@
 type: Case Excerpt
 title: Whittaker General Medical Corp. v. Daniel
 description: >-
-  Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989). — quoted in 3
+  Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989). — quoted in 4
   document(s).
 citation: 'Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).'
 resource: >-
   https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/
-timestamp: '2026-06-30'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
@@ -16,17 +16,20 @@ document_references:
       https://openagreements.org/practice-guides/invention-assignment/us/north-carolina
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/north-carolina'
 tags:
   - case-law
   - invention-assignment
   - non-compete
+  - stay-or-pay
 ---
 
 # Whittaker General Medical Corp. v. Daniel
 
 *Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).*
 
-Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -52,9 +55,9 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Such covenants are enforceable in this state if they are (1) in writing, (2) made part of a contract of employment, (3) based on valuable consideration, (4) reasonable both as to time and territory, and (5) not against public policy.
 
-- supports: `employee-non-compete-enforceability`, `north-carolina-statutory-gates`
-- source_cards: `nc-daniel-five-factor`, `q1-daniel-five-factor`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- supports: `employee-non-compete-enforceability`, `north-carolina-statutory-gates`, `repayment-enforceability`
+- source_cards: `nc-daniel-five-factor`, `nc-sop-whittaker-covenant-elements`, `q1-daniel-five-factor`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md), [Stay-or-Pay and Employee Repayment in North Carolina](../stay-or-pay/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=Such%20covenants%20are%20enforceable%20in,(5)%20not%20against%20public%20policy.>
 
 ### whittaker-general-medical-corp-v-daniel-the-courts-will-not-rewrite-a-9c8344c0 {#whittaker-general-medical-corp-v-daniel-the-courts-will-not-rewrite-a-9c8344c0}
