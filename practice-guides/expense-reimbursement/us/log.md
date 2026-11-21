@@ -1,6 +1,14 @@
 # Us Update Log
 
+## 2026-11-20
+* **Update**: content(expense-reimbursement): Nevada practice guide (160be03)
+* **Update**: content(expense-reimbursement): Nevada peer review round 2 (4af3a3b)
+* **Update**: content(expense-reimbursement): Nevada peer review round 3 (a65ad75)
+* **Update**: content(expense-reimbursement): Nevada advisory fix, conservative course for open wage point (bfd89df)
+* **Update**: content(expense-reimbursement): Nevada peer review round 1 (dc534c1)
+
 ## 2026-11-19
+* **Update**: content(expense-reimbursement): Maryland peer review round 2 (0962ea7)
 * **Update**: content: Alabama expense: peer review round 3 (narrow federal-floor claims to tools of the trade) (0e7c3c3)
 * **Update**: content: Alaska expense: peer review round 2 (separate 8 AAC 15.165 grounds and 15.160 exceptions) (0f2bd00)
 * **Update**: content(expense-reimbursement): Ohio peer review round 5 (105fc8f)
@@ -12,6 +20,7 @@
 * **Update**: content: North Carolina expense reimbursement guide (1c55731)
 * **Update**: content: NC expense guide — address peer review round 1 (23a0bea)
 * **Update**: content(expense-reimbursement): shorten Delaware covered-expenses opening (peer review minor) (26d6c22)
+* **Update**: content(expense-reimbursement): Maryland: name cases in prose (advisory) (2720f73)
 * **Update**: content(expense-reimbursement): qualify Texas waiver opening and support remote-work floor (2812e1e)
 * **Update**: content(expense-reimbursement): Washington: peer review round 4 (narrow federal-floor deduction sentence) (281f806)
 * **Update**: content(expense-reimbursement): address Arizona peer review round 2 (2d103ee)
@@ -51,6 +60,7 @@
 * **Update**: content: Massachusetts expense: peer review round 2 (remedies opening, tolling) (9c6c13a)
 * **Update**: content: add Alaska expense reimbursement guide (9d08380)
 * **Update**: content(expense-reimbursement): Kentucky guide (9dd9f77)
+* **Update**: content(expense-reimbursement): Maryland peer review round 1 (9f0aadf)
 * **Update**: content(expense-reimbursement): Kentucky open point states conservative course (9f82352)
 * **Update**: content(expense-reimbursement): scope Texas covered-expenses absence claim (a4dc7ec)
 * **Update**: content(expense-reimbursement): cite 40 TAC 821.25(d) for Texas reimbursements not being wages (a7dc348)
@@ -62,6 +72,7 @@
 * **Update**: content(expense-reimbursement): use a complete TWC sentence for the Texas remote-work wage-floor card (ba1b2f3)
 * **Update**: content(expense-reimbursement): Washington: peer review round 5 (full RCW 49.52.050 quote) (bc0c0cd)
 * **Update**: content(expense-reimbursement): add Delaware guide draft (bf4790f)
+* **Update**: content(expense-reimbursement): Maryland practice guide (c904648)
 * **Update**: content(expense-reimbursement): Washington: peer review round 2 (PPE payment scope, contract claim) (c955303)
 * **Update**: content(expense-reimbursement): address Delaware peer review round 1 (cf44eb0)
 * **Update**: content(expense-reimbursement): scope Texas absence claims to general private-employer statutes (cf92d7d)

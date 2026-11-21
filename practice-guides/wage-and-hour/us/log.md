@@ -1,15 +1,19 @@
 # Us Update Log
 
 ## 2026-11-19
+* **Update**: content(wage-and-hour): Kentucky peer review round 5 fixes (federal overtime qualification) (051e6f6)
 * **Update**: content(wage-and-hour): North Dakota peer review round 3 (05ddfa0)
+* **Update**: content(wage-and-hour): Kentucky peer review round 2 fixes (18d9723)
 * **Update**: content(wage-and-hour): Iowa peer review round 11 (clothing-or-fabrics exception, agricultural employee exclusions) (2035990)
 * **Update**: content(wage-and-hour): North Dakota peer review round 6 (28e509d)
+* **Update**: content(wage-and-hour): Kentucky guide validate fixes (question-local cards, contiguous tipped quotes) (351eaa8)
 * **Update**: content(wage-and-hour): North Dakota peer review round 5 (3d56a01)
 * **Update**: content(wage-and-hour): Iowa peer review round 6 (direct-deposit choice, Miller approval, record-duty card) (40bc9cc)
 * **Update**: content(wage-and-hour): Iowa peer review round 5 (Miller right-to-control test, daily-overtime absence) (4e3c441)
 * **Update**: content(wage-and-hour): Alaska peer review round 6 (commissioner actions, settlement approval) (501e069)
 * **Update**: content(wage-and-hour): Iowa no-statute absences; regenerate library search index (520b935)
 * **Update**: content(wage-and-hour): North Dakota peer review round 4 (53aab9d)
+* **Update**: content(wage-and-hour): Kentucky peer review round 7 fixes (5a36bdc)
 * **Update**: content(wage-and-hour): Iowa tip-credit rate card in its own question (5d2549a)
 * **Update**: content(wage-and-hour): Alaska advisory fix (complete Jeffcoat factor quote) (6220f5b)
 * **Update**: content(wage-and-hour): North Dakota wage and hour guide (draft) (629fd4c)
@@ -20,6 +24,7 @@
 * **Update**: content(wage-and-hour): Iowa peer review round 4 (pay-frequency variance in opening, 91A classification course) (7f74161)
 * **Update**: content(wage-and-hour): Iowa peer review round 3 (commission exception in opening, nonexempt overtime, 91A.6(4)(c) as applicable) (826fc99)
 * **Update**: content(wage-and-hour): Iowa peer review round 12 (92.17 child labor exceptions) (84525d2)
+* **Update**: content(wage-and-hour): Kentucky peer review round 1 fixes (88505c3)
 * **Update**: content(wage-and-hour): North Dakota peer review round 1 (8f00a1e)
 * **Update**: content(wage-and-hour): Alaska peer review round 4 (91d62a0)
 * **Update**: content(wage-and-hour): North Dakota TNC driver rule; regenerate index (a4a2205)
@@ -32,10 +37,14 @@
 * **Update**: content(wage-and-hour): Alaska peer review round 1 (local support, deduction categories, qualified openings) (c2a4167)
 * **Update**: content(wage-and-hour): Iowa peer review round 2 (federal floor, pumping breaks, federal youth hours, openings) (c3c4ca5)
 * **Update**: content(wage-and-hour): Iowa bottom line scopes the break absence to statutes (peer review round 13) (d24a4a4)
+* **Update**: content(wage-and-hour): Kentucky peer review round 3 fixes (d613210)
 * **Update**: content(wage-and-hour): Iowa tip deduction-bar card quotes the operative lead-in (content advisory) (d760d19)
 * **Update**: content(wage-and-hour): Alaska peer review round 3 (d991796)
 * **Update**: content(wage-and-hour): Iowa peer review round 7 (final-pay chips, federal tip shortfall) (ee00807)
+* **Update**: content(wage-and-hour): Kentucky peer review round 4 fixes (f09ea59)
 * **Update**: content(wage-and-hour): Iowa two-year wage limitation and unemployment right-to-control test (f7ee892)
+* **Update**: content(wage-and-hour): Kentucky peer review round 6 fixes (Mouanda economic-realities test) (fcd6640)
+* **Update**: content(wage-and-hour): Kentucky wage and hour guide (ff6bca4)
 
 ## 2026-11-18
 * **Update**: content(wage-and-hour): Minnesota enforcement heading and explicit comparator (content advisory) (046d7b4)
