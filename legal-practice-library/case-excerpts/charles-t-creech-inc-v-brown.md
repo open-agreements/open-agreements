@@ -2,11 +2,11 @@
 type: Case Excerpt
 title: 'Charles T. Creech, Inc. v. Brown'
 description: >-
-  Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014). — quoted in 3
+  Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014). — quoted in 4
   document(s).
 citation: 'Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014).'
 resource: 'https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/'
-timestamp: '2026-07-03'
+timestamp: '2026-11-19'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/kentucky'
@@ -15,17 +15,20 @@ document_references:
       https://openagreements.org/practice-guides/invention-assignment/us/kentucky
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/kentucky'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/stay-or-pay/us/kentucky'
 tags:
   - case-law
   - invention-assignment
   - non-compete
+  - stay-or-pay
 ---
 
 # Charles T. Creech, Inc. v. Brown
 
 *Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014).*
 
-Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -33,9 +36,9 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Because the Agreement did not require Creech to forbear the exercise of some legal right or otherwise result in some detriment to Creech, there was no consideration.
 
-- supports: `consideration`, `employee-non-solicitation`, `entire-agreement-amendment-waiver-e-signatures`, `restrictive-covenants-each-independently-includable`, `timing-and-execution-acknowledgements`
-- source_cards: `creech-no-consideration`, `ky-creech-covs`, `ky-creech-entire`, `ky-creech-forbearance-timing`, `ky-ens-creech`
-- cited_by: [Non-Compete Agreement Reviewer Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
+- supports: `consideration`, `employee-non-solicitation`, `entire-agreement-amendment-waiver-e-signatures`, `repayment-enforceability`, `restrictive-covenants-each-independently-includable`, `safest-structure`, `timing-and-execution-acknowledgements`
+- source_cards: `creech-no-consideration`, `ky-creech-covs`, `ky-creech-entire`, `ky-creech-forbearance-timing`, `ky-ens-creech`, `ky-sop-creech-consideration-enf`, `ky-sop-creech-consideration-safe`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md), [Stay-or-Pay and Employee Repayment in Kentucky](../stay-or-pay/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=Because%20the%20Agreement%20did%20not,Creech%2C%20there%20was%20no%20consideration.>
 
 ### charles-t-creech-inc-v-brown-because-we-hold-that-this-agreement-2fb4922a {#charles-t-creech-inc-v-brown-because-we-hold-that-this-agreement-2fb4922a}

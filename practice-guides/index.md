@@ -47,6 +47,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Privacy](privacy/)
 * [Privacy Policy](privacy-policy/)
 * [School Governance](school-governance/)
+* [School Policy Compliance](school-policy-compliance/)
 * [Security Compliance Program](security-compliance-program/)
 * [Sell Side Transaction Readiness](sell-side-transaction-readiness/)
 * [Selling An App Business](selling-an-app-business/)
