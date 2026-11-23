@@ -210,7 +210,7 @@ jobs:
       - name: Test
         run: npx vitest run
 
-      # Reused by the deploy-allure job (main-only) so it doesn't re-run vitest.
+      # Reused by the main-only Allure Report workflow so it doesn't re-run vitest.
       # Node-20 leg only: upload-artifact@v4 rejects duplicate names across matrix legs.
       - name: Upload Allure results
         if: matrix.node-version == 20 && github.ref == 'refs/heads/main'
@@ -258,99 +258,6 @@ jobs:
           files: ./coverage/junit.xml
           use_oidc: true
           fail_ci_if_error: true
-
-  deploy-allure:
-    if: github.ref == 'refs/heads/main'
-    needs: [test]
-    runs-on: ubuntu-latest
-    env:
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_TESTS_OPENAGREEMENTS }}
-      VERCEL_DEPLOY_ENABLED: >-
-        ${{
-          secrets.VERCEL_TOKEN != '' &&
-          secrets.VERCEL_ORG_ID != '' &&
-          secrets.VERCEL_PROJECT_ID_TESTS_OPENAGREEMENTS != ''
-        }}
-    concurrency:
-      group: deploy-allure-vercel
-      cancel-in-progress: true
-    steps:
-      - uses: actions/checkout@v5
-
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies (retry)
-        uses: ./.github/actions/npm-ci-retry
-
-      # Reuse the test job's results instead of re-running vitest here — the second
-      # run was the source of an intermittent ESM transform race that reddened main.
-      # continue-on-error: a missing artifact must not fail this (correctness was
-      # already gated by `needs: [test]`); use `outcome` (pre-continue-on-error) below.
-      - name: Download Allure results
-        id: allure-results
-        continue-on-error: true
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-results
-          path: allure-results/
-
-      - name: Warn if Allure results unavailable
-        if: steps.allure-results.outcome != 'success'
-        run: |
-          echo "::warning::Allure results artifact unavailable; skipping report generation and Vercel deploy."
-          echo "Allure results artifact unavailable; report deploy skipped." >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Generate and brand Allure report
-        if: steps.allure-results.outcome == 'success'
-        run: npm run report:allure
-
-      - name: Prepare static Vercel build output
-        if: ${{ steps.allure-results.outcome == 'success' && env.VERCEL_DEPLOY_ENABLED == 'true' }}
-        run: |
-          output_dir="$RUNNER_TEMP/allure-vercel/.vercel/output"
-          rm -rf "$RUNNER_TEMP/allure-vercel"
-          mkdir -p "$output_dir/static"
-          cp -R allure-report/. "$output_dir/static/"
-          printf '%s\n' '{"version":3}' > "$output_dir/config.json"
-
-      - name: Verify Allure Vercel project access
-        if: ${{ steps.allure-results.outcome == 'success' && env.VERCEL_DEPLOY_ENABLED == 'true' }}
-        run: |
-          status=$(curl --silent --show-error --max-time 30 --output /dev/null \
-            --write-out '%{http_code}' \
-            --header "Authorization: Bearer $VERCEL_TOKEN" \
-            "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID?teamId=$VERCEL_ORG_ID")
-          case "$status" in
-            200) ;;
-            401|403)
-              echo "::error::Vercel denied access to the Allure project (HTTP $status). Check the expiry and UseJunior team scope of the VERCEL_TOKEN Actions secret."
-              exit 1
-              ;;
-            404)
-              echo "::error::Vercel could not find the Allure project. Check VERCEL_PROJECT_ID_TESTS_OPENAGREEMENTS, VERCEL_ORG_ID, and the token's project access."
-              exit 1
-              ;;
-            *)
-              echo "::error::Vercel project access check returned HTTP $status."
-              exit 1
-              ;;
-          esac
-
-      - name: Install Vercel CLI
-        if: ${{ steps.allure-results.outcome == 'success' && env.VERCEL_DEPLOY_ENABLED == 'true' }}
-        run: npm install --global vercel@latest
-
-      - name: Deploy Allure report to Vercel (tests-openagreements)
-        if: ${{ steps.allure-results.outcome == 'success' && env.VERCEL_DEPLOY_ENABLED == 'true' }}
-        run: |
-          cd "$RUNNER_TEMP/allure-vercel"
-          vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
-          vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
 
   source-drift-canary:
     runs-on: ubuntu-latest
