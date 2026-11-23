@@ -318,6 +318,29 @@ jobs:
           cp -R allure-report/. "$output_dir/static/"
           printf '%s\n' '{"version":3}' > "$output_dir/config.json"
 
+      - name: Verify Allure Vercel project access
+        if: ${{ steps.allure-results.outcome == 'success' && env.VERCEL_DEPLOY_ENABLED == 'true' }}
+        run: |
+          status=$(curl --silent --show-error --max-time 30 --output /dev/null \
+            --write-out '%{http_code}' \
+            --header "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID?teamId=$VERCEL_ORG_ID")
+          case "$status" in
+            200) ;;
+            401|403)
+              echo "::error::Vercel denied access to the Allure project (HTTP $status). Check the expiry and UseJunior team scope of the VERCEL_TOKEN Actions secret."
+              exit 1
+              ;;
+            404)
+              echo "::error::Vercel could not find the Allure project. Check VERCEL_PROJECT_ID_TESTS_OPENAGREEMENTS, VERCEL_ORG_ID, and the token's project access."
+              exit 1
+              ;;
+            *)
+              echo "::error::Vercel project access check returned HTTP $status."
+              exit 1
+              ;;
+          esac
+
       - name: Install Vercel CLI
         if: ${{ steps.allure-results.outcome == 'success' && env.VERCEL_DEPLOY_ENABLED == 'true' }}
         run: npm install --global vercel@latest
