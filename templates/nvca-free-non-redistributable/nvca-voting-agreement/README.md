@@ -1,6 +1,6 @@
 # NVCA Model Voting Agreement
 
-Field-selector for the NVCA Model Voting Agreement (version 10-1-2025).
+Field-selector for the NVCA Model Voting Agreement (version 6-17-2026, NVCA’s June 2026 update).
 
 ## Source
 
