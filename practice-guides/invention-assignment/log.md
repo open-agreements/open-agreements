@@ -1,5 +1,16 @@
 # Invention Assignment Update Log
 
+## 2026-11-23
+* **Update**: content(guide): describe the founder template's scope instead of an execution requirement (peer review) (429601e)
+* **Update**: content(guide): drop two uncited contract-scope sentences (peer review) (d91cb46)
+* **Update**: content(guide): add the California work-made-for-hire paragraph (Lab. Code 3351.5(c), UI Code 686), sources now published (dfd9000)
+
+## 2026-11-20
+* **Update**: content(guide): drop the intro paragraph outside a question (the touched guide loses its baseline exemption) (3c96317)
+* **Update**: content(guide): contractor and founder assignments question in the invention-assignment guide (529521b)
+* **Update**: content(guide): ground the contractor and founder answer in ownership and transfer sources (peer review) (61d38f4)
+* **Update**: content: apply peer review round 2 (ownership wording, scope description, field note points to the guide) (e141f43)
+
 ## 2026-09-30
 * **Update**: Add the federal whistleblower notice and pay-discussion question to U.S. invention-assignment and non-compete guides (#2948) (6c393c5)
 

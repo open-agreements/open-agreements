@@ -1,5 +1,31 @@
 # Us Update Log
 
+## 2026-11-23
+* **Update**: content(stay-or-pay): Georgia peer review round 2 (02ba61d)
+* **Update**: content(stay-or-pay): Connecticut peer review round 1 (07522b8)
+* **Update**: content(stay-or-pay): Connecticut guide (0c04e38)
+* **Update**: content(stay-or-pay): Georgia peer review round 6 (25860f3)
+* **Update**: content(stay-or-pay): DC peer review round 5 (3c30f5f)
+* **Update**: content(stay-or-pay): Connecticut peer review round 3 (PA 26-122 H-1B exclusion, Weems form qualification) (46e22c2)
+* **Update**: content(stay-or-pay): DC peer review round 2 (4bff52c)
+* **Update**: content(stay-or-pay): DC peer review round 4 (5bde17d)
+* **Update**: content(stay-or-pay): Connecticut peer review round 2 (5d9c7f9)
+* **Update**: content(stay-or-pay): Georgia peer review round 7 (5ee9ad7)
+* **Update**: content(stay-or-pay): Georgia peer review round 4 (5f8de44)
+* **Update**: content(stay-or-pay): Connecticut peer review round 6 (693ab9a)
+* **Update**: content(stay-or-pay): Georgia peer review round 3 (75c3a74)
+* **Update**: content(stay-or-pay): DC peer review round 7 minors (772312b)
+* **Update**: content(stay-or-pay): DC peer review round 6 (8ad8a70)
+* **Update**: content(stay-or-pay): District of Columbia guide (8ef63df)
+* **Update**: content(stay-or-pay): Connecticut peer review round 5 (a4b1b77)
+* **Update**: content(stay-or-pay): DC peer review round 3 (abecdbb)
+* **Update**: content(stay-or-pay): Georgia practice guide (b2d5078)
+* **Update**: content(stay-or-pay): Connecticut peer review round 7 (b607e7b)
+* **Update**: content(stay-or-pay): Georgia advisory fix, declare no-statute absence on enforceability (c777a7a)
+* **Update**: content(stay-or-pay): Connecticut peer review round 4 (e228b52)
+* **Update**: content(stay-or-pay): DC peer review round 1 — OAG TRAP enforcement position, clawback support (ee83221)
+* **Update**: content(stay-or-pay): Georgia peer review round 1 (f5fb667)
+
 ## 2026-11-20
 * **Update**: content(stay-or-pay): Nevada practice guide (02b09fb)
 * **Update**: content(stay-or-pay): Maryland peer review round 5 (0f78420)

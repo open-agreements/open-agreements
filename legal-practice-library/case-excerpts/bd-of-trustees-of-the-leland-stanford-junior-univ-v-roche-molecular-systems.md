@@ -30,8 +30,8 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > In contrast to the CPA, the VCA’s language of “do hereby assign” effected a present assignment of Holodniy’s future inventions to Cetus.
 
-- supports: `default-ownership`, `federal-transfer-formalities`
-- source_cards: `ia-cafc-present-default`, `ia-fed-cafc-present`
+- supports: `contractor-and-founder-assignments`, `default-ownership`, `federal-transfer-formalities`
+- source_cards: `ia-cafc-present-default`, `ia-cf-present`, `ia-fed-cafc-present`
 - cited_by: [Employee Invention-Assignment Agreements](../invention-assignment/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/207967/board-of-trustees-of-the-leland-stanford-junior-university-v-roche/#:~:text=In%20contrast%20to%20the%20CPA%2C,Holodniy%E2%80%99s%20future%20inventions%20to%20Cetus.>
 
