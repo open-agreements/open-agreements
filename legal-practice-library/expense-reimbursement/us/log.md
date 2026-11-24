@@ -1,11 +1,20 @@
 # Us Update Log
 
 ## 2026-11-20
+* **Update**: content(expense-reimbursement): Connecticut travel-expense quote without ellipsis (14f89b9)
 * **Update**: content(expense-reimbursement): Nevada practice guide (160be03)
+* **Update**: content(expense-reimbursement): Connecticut peer review round 1 (1a3d9d3)
 * **Update**: content(expense-reimbursement): Nevada peer review round 2 (4af3a3b)
+* **Update**: content(expense-reimbursement): Georgia peer review round 1 (narrow contract and waiver claims) (73f12ca)
+* **Update**: content(expense-reimbursement): Georgia practice guide (8707e0a)
+* **Update**: content(expense-reimbursement): Connecticut peer review round 3 (892d1f5)
+* **Update**: content(expense-reimbursement): Connecticut peer review round 5 (8dd8af4)
+* **Update**: content(expense-reimbursement): Connecticut practice guide (9386d1a)
 * **Update**: content(expense-reimbursement): Nevada peer review round 3 (a65ad75)
 * **Update**: content(expense-reimbursement): Nevada advisory fix, conservative course for open wage point (bfd89df)
+* **Update**: content(expense-reimbursement): drop Connecticut workers' compensation exam sentence (c6e605d)
 * **Update**: content(expense-reimbursement): Nevada peer review round 1 (dc534c1)
+* **Update**: content(expense-reimbursement): Connecticut peer review round 4 (e8c223a)
 
 ## 2026-11-19
 * **Update**: content(expense-reimbursement): Maryland peer review round 2 (0962ea7)

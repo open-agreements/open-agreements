@@ -2,13 +2,13 @@
 jurisdiction: "Minnesota"
 slug: minnesota
 countryCode: US
-content_packaged_at: "2026-11-20"
+content_packaged_at: "2026-11-24"
 law_checked_through: "2026-05-27"
 human_reviewed_at: null
 next_review_due: "2026-11-23"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/minnesota
 license: CC BY 4.0
-stale: false
+stale: true
 ---
 
 > [!IMPORTANT]
@@ -17,7 +17,10 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/minnesota · **Snapshot as of:** 2026-11-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/minnesota · **Snapshot as of:** 2026-11-24 · License: CC BY 4.0 · © openagreements.org
+
+> [!WARNING]
+> This area may have changed since the snapshot date — verify against the live version at https://openagreements.org/practice-guides/non-compete/us/minnesota.
 
 # Employment Non-Competes in Minnesota[^about]
 
