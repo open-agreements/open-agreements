@@ -59,7 +59,10 @@ fields:
     section: Inventions
   - name: governing_law
     type: string
-    description: Governing law state
+    description: >-
+      State whose law governs the agreement. No default: invention-assignment
+      limits vary by state (e.g. Cal. Lab. Code 2870), so choose the employee's
+      work state deliberately.
     section: Legal
   - name: venue
     type: string
@@ -80,7 +83,13 @@ fields:
     default: true
     default_value_rationale: 'True preserves the form''s existing output: the clause renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed.'
     section: Post-Employment Restraints
-priority_fields: []
+priority_fields:
+  - company_name
+  - company_signatory_name
+  - company_signatory_title
+  - employee_name
+  - effective_date
+  - governing_law
 artifact_kind: agreement
 capabilities:
   - create
