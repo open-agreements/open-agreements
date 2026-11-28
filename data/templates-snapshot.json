@@ -16758,11 +16758,147 @@
       ]
     },
     {
+      "name": "openagreements-contractor-ip-assignment-agreement",
+      "tier": "internal",
+      "display_name": "Contractor IP Assignment Agreement",
+      "category": "invention-assignment",
+      "description": "Intellectual property assignment for an independent contractor, consultant or freelancer who creates code, designs, content or other work for a company. Present assignment of the work product, optional work-made-for-hire language with an assignment backstop, moral-rights waiver, further assurances and power of attorney, a prior-inventions schedule with a license for background IP the contractor builds into the deliverables, and confidentiality. Companion to the Founder IP Assignment Agreement.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-contractor-ip-assignment-agreement",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Legal name of the company receiving the assignment",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "contractor_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the contractor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Timing",
+          "description": "Date this agreement takes effect",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "services_description",
+          "type": "string",
+          "required": true,
+          "section": "Scope",
+          "description": "Services and deliverables the contractor provides",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "services_agreement_reference",
+          "type": "string",
+          "required": false,
+          "section": "Scope",
+          "description": "Services agreement or statement of work, or None",
+          "default": "None",
+          "default_value_rationale": null
+        },
+        {
+          "name": "work_start_date",
+          "type": "date",
+          "required": true,
+          "section": "Timing",
+          "description": "Date the contractor first began work for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "consideration_description",
+          "type": "string",
+          "required": false,
+          "section": "Scope",
+          "description": "What the contractor receives in exchange for the assignment",
+          "default": "the fees paid and payable under the Services Agreement and the additional payment of $1.00, the receipt and sufficiency of which the Contractor acknowledges",
+          "default_value_rationale": null
+        },
+        {
+          "name": "prior_inventions_disclosure",
+          "type": "string",
+          "required": false,
+          "section": "Background IP",
+          "description": "Intellectual property the contractor owned before the work and keeps, or None",
+          "default": "None",
+          "default_value_rationale": null
+        },
+        {
+          "name": "work_made_for_hire_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Work Made for Hire",
+          "description": "Whether the clause calling qualifying deliverables works made for hire is included. A false value omits the clause and leaves the present assignment in place. For the federal limits on contractor work made for hire, and the California workers' compensation and unemployment insurance provisions on signed work-made-for-hire agreements, see the invention-assignment guide's contractor and founder section. Not shown as a cover-term row.",
+          "display_label": "Work-Made-for-Hire Clause Included",
+          "default": "true",
+          "default_value_rationale": "True keeps the common belt-and-braces structure: work-made-for-hire language for deliverables that qualify, backed by a present assignment for everything else."
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing law state",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "venue",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Venue for disputes",
+          "default": "state and federal courts in the governing law state",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-due-diligence-request-list",
       "tier": "internal",
       "display_name": "Legal Due Diligence Request List",
       "category": "deals-partnerships",
-      "description": "Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. Four optional industry riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, and cross-border / trade compliance. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused.",
+      "description": "Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. A small-business core set names the requests to send first. Five optional riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, cross-border / trade compliance, and asset-heavy operations. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused.",
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-due-diligence-request-list",
       "source": "OpenAgreements",
@@ -16921,6 +17057,15 @@
           "required": true,
           "section": "Industry Riders",
           "description": "Enable Section S (Cross-Border / Trade Compliance rider) covering sanctions/OFAC screening, export-control classifications, AML/KYC, FCPA compliance, government-customer exposure, and foreign-investment- screening filings. Recommended on whenever the target has foreign subsidiaries, foreign customers, government customers, or sensitive- jurisdiction exposure. Increasingly mandatory after the 2023 DOJ M&A Safe Harbor Policy.",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "asset_heavy_rider_enabled",
+          "type": "boolean",
+          "required": true,
+          "section": "Industry Riders",
+          "description": "Enable Section T (Asset-Heavy Operations rider) covering fixed-asset and equipment schedules, vehicle titles and registrations, inventory, lien and UCC searches against the operating assets, real property lease assignment, and transport operating authority. Recommended on for trucking, logistics, construction, manufacturing, distribution, and other targets whose value sits in equipment, vehicles, inventory, or leased sites.",
           "default": "false",
           "default_value_rationale": null
         }
@@ -18115,6 +18260,141 @@
           "section": "Timing",
           "description": "Date by which the offer must be accepted",
           "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
+      "name": "openagreements-founder-ip-assignment-agreement",
+      "tier": "internal",
+      "display_name": "Founder IP Assignment Agreement",
+      "category": "invention-assignment",
+      "description": "Intellectual property assignment by a founder to the company of code, designs, content, domain names and other work the founder created before the company was formed or before the founder signed an invention assignment. Consideration recital tied to the founder's stock or other value, present assignment, moral-rights waiver, further assurances and power of attorney, an excluded-IP schedule with a license for anything the company's products use, and confidentiality. Companion to the Contractor IP Assignment Agreement.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-ip-assignment-agreement",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Legal name of the company receiving the assignment",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_jurisdiction",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "State where the company is organized",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_entity_type",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Type of entity",
+          "default": "corporation",
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the officer signing for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the officer signing for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "founder_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the founder assigning the IP",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Timing",
+          "description": "Date this agreement takes effect",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "business_description",
+          "type": "string",
+          "required": false,
+          "section": "Scope",
+          "description": "The company's business as planned when the founder did the work",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "assigned_ip_description",
+          "type": "string",
+          "required": true,
+          "section": "Scope",
+          "description": "Specific code, designs, content, domain names, accounts and marks being assigned",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "consideration_description",
+          "type": "string",
+          "required": true,
+          "section": "Scope",
+          "description": "What the founder receives in exchange for the assignment",
+          "default": "the issuance to the Founder of shares of the Company's common stock under the Founder's stock purchase agreement with the Company, and other good and valuable consideration, the receipt and sufficiency of which the Founder acknowledges",
+          "default_value_rationale": null
+        },
+        {
+          "name": "excluded_ip_disclosure",
+          "type": "string",
+          "required": false,
+          "section": "Excluded IP",
+          "description": "Intellectual property the founder keeps, or None",
+          "default": "None",
+          "default_value_rationale": null
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing law state",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "venue",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Venue for disputes",
+          "default": "state and federal courts in the governing law state",
           "default_value_rationale": null
         }
       ]

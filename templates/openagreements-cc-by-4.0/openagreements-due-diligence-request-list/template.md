@@ -49,6 +49,19 @@ This request list opens the legal due diligence phase of the contemplated transa
 
 **Supplemental requests.** The requesting party may issue supplemental requests after reviewing each production.
 
+### Small-Business Core Set
+
+Where the target is a small, owner-run business, produce these requests first. They come from the full list below, and the remaining requests follow as the requesting party asks for them.
+
+- **Who owns it and can sell it:** A.1, A.2, A.5, B.1.
+- **The money:** D.1 (where the target has no audit, its internal or reviewed financial statements for the same periods), D.2, D.3.
+- **What it owes and what is pledged:** E.1, E.2, E.3.
+- **Customers, suppliers and consents:** F.2, F.3, F.5.
+- **Where it operates and what it uses:** G.2, G.3, G.4.
+- **People:** J.2, J.5.
+- **Permits, claims and insurance:** L.1, K.1, M.1.
+- **Dealings with the owners:** N.1, N.2.
+
 ### Section A — Corporate Organization, Authority, and Governance
 
 A.1 Certificate of Incorporation, all amendments, and the current certified or filed version.
@@ -324,3 +337,23 @@ S.6 Government-customer relationships (federal, state, local, or foreign), inclu
 S.7 Operations or sales in higher-risk corruption-index jurisdictions; specify each country of operation, sale, or employee presence.
 
 S.8 Foreign-investment-screening filings (CFIUS, foreign FDI regimes), including any prior CFIUS reviews of the target or its subsidiaries.
+
+### Section T — Asset-Heavy Operations Rider
+
+The following requests apply only if a material part of the target's value or operations sits in equipment, vehicles, inventory, or leased operating sites (for example, trucking, logistics, construction, manufacturing, or distribution). They extend Sections E and G.
+
+T.1 Fixed-asset register listing each material item of equipment and each vehicle, with serial or VIN number, location, owned or leased status, and book value.
+
+T.2 Certificates of title and current registrations for all titled vehicles, trailers, and other titled equipment, identifying any lienholder noted on the title.
+
+T.3 UCC, federal and state tax lien, and judgment lien searches against the target in each state of organization and operation, with payoff letters or release terms for each lien to be released at closing (cross-reference E.3).
+
+T.4 Equipment financing agreements, equipment leases, and vehicle leases, identifying any purchase option, balloon payment, early-termination charge, or consent required for assignment or change of control.
+
+T.5 Maintenance, inspection, and repair records for material equipment and vehicles for the past {lookback_years} years, and any open manufacturer recalls.
+
+T.6 Most recent inventory count and valuation, with the counting method, any consigned or third-party-owned inventory held by the target, and any obsolete or slow-moving stock.
+
+T.7 For each leased operating site (yard, warehouse, plant, shop), the lease and all amendments, the landlord-consent requirement for assignment or change of control, and any estoppel or subordination agreements previously delivered.
+
+T.8 Where the target operates commercial motor vehicles, its USDOT number and any operating authority, safety rating, compliance reviews or audits, roadside-inspection and crash history, and driver qualification file procedures for the past {lookback_years} years.

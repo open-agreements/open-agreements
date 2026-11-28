@@ -1,8 +1,8 @@
 name: Legal Due Diligence Request List
 category: deals-partnerships
-description: 'Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. Four optional industry riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, and cross-border / trade compliance. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused.'
+description: 'Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. A small-business core set names the requests to send first. Five optional riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, cross-border / trade compliance, and asset-heavy operations. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-due-diligence-request-list
-version: 0.10.0
+version: 0.11.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
@@ -93,6 +93,11 @@ fields:
     description: Enable Section S (Cross-Border / Trade Compliance rider) covering sanctions/OFAC screening, export-control classifications, AML/KYC, FCPA compliance, government-customer exposure, and foreign-investment- screening filings. Recommended on whenever the target has foreign subsidiaries, foreign customers, government customers, or sensitive- jurisdiction exposure. Increasingly mandatory after the 2023 DOJ M&A Safe Harbor Policy.
     default: false
     section: Industry Riders
+  - name: asset_heavy_rider_enabled
+    type: boolean
+    description: Enable Section T (Asset-Heavy Operations rider) covering fixed-asset and equipment schedules, vehicle titles and registrations, inventory, lien and UCC searches against the operating assets, real property lease assignment, and transport operating authority. Recommended on for trucking, logistics, construction, manufacturing, distribution, and other targets whose value sits in equipment, vehicles, inventory, or leased sites.
+    default: false
+    section: Industry Riders
 priority_fields:
   - target_company_name
   - requesting_firm_name
@@ -100,6 +105,7 @@ priority_fields:
   - life_sciences_rider_enabled
   - healthcare_provider_rider_enabled
   - cross_border_rider_enabled
+  - asset_heavy_rider_enabled
   - materiality_threshold_usd
   - lookback_years
 artifact_kind: checklist
