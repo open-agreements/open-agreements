@@ -72,9 +72,11 @@
 * [Auto Parts Group Pty Ltd v Cooper](auto-parts-group-pty-ltd-v-cooper.md) - Auto Parts Group Pty Ltd v Cooper [2015] QSC 155, quoting Vision Eye Institute Ltd v Kitchen [2014] QSC 260. — quoted in 1 document(s).
 * [Automile Holdings, LLC v. McGovern](automile-holdings-llc-v-mcgovern.md) - Automile Holdings, LLC v. McGovern, 483 Mass. 797 (2020). — quoted in 2 document(s).
 * [Autry v. Acosta, Inc.](autry-v-acosta-inc.md) - Autry v. Acosta, Inc., 2018 OK CIV APP 8, 410 P.3d 1017. — quoted in 3 document(s).
+* [Avila v. Sanofi-Aventis U.S., 90 So. 3d 1132 (La. App. 5 Cir. 2012)](avila-v-sanofi-aventis-u-s-90-so-3d-1132-la-app-5-cir-2012.md) - Avila v. Sanofi-Aventis U.S., 11-661 (La. App. 5 Cir. 3/13/12), 90 So. 3d 1132. — quoted in 1 document(s).
 * [Avtec Systems, Inc. v. Peiffer (E.D. Va.)](avtec-systems-inc-v-peiffer-e-d-va.md) - Avtec Sys., Inc. v. Peiffer, 805 F. Supp. 1312 (E.D. Va. 1992) (quoting Cal. E. Labs., Inc. v. Gould, 896 F.2d 400, 402 (9th Cir. 1990)). — quoted in 1 document(s).
 * [Avtec Systems, Inc. v. Peiffer](avtec-systems-inc-v-peiffer.md) - Avtec Sys., Inc. v. Peiffer, 21 F.3d 568 (4th Cir. 1994) (quoting Restatement (Second) of Agency § 228 (1958)). — quoted in 1 document(s).
 * [Awuah v. Coverall North America, Inc.](awuah-v-coverall-north-america-inc.md) - Awuah v. Coverall N. Am., Inc., 460 Mass. 484 (2011) — quoted in 1 document(s).
+* [Ayala v. Culbertsons LLC, 354 Or. App. 54 (2026)](ayala-v-culbertsons-llc-354-or-app-54-2026.md) - Ayala v. Culbertsons LLC, 354 Or. App. 54 (2026). — quoted in 1 document(s).
 * [Baker v. Bristol Care, Inc.](baker-v-bristol-care-inc.md) - Baker v. Bristol Care, Inc., 450 S.W.3d 770 (Mo. banc 2014). — quoted in 2 document(s).
 * [Baker v. Starkey](baker-v-starkey.md) - Baker v. Starkey, 144 N.W.2d 889 (Iowa 1966). — quoted in 2 document(s).
 * [Balasco v. Gulf Auto Holding, Inc.](balasco-v-gulf-auto-holding-inc.md) - Balasco v. Gulf Auto Holding, Inc., 707 So. 2d 858 (Fla. 2d DCA 1998). — quoted in 2 document(s).
@@ -132,6 +134,7 @@
 * [Brignull v. Albert](brignull-v-albert.md) - Brignull v. Albert, 666 A.2d 82 (Me. 1995). — quoted in 3 document(s).
 * [Brock Services, L.L.C. v. Rogillio](brock-services-l-l-c-v-rogillio.md) - Brock Servs., L.L.C. v. Rogillio, 936 F.3d 290 (5th Cir. 2019). — quoted in 2 document(s).
 * [Brooklyn Savings Bank v. O'Neil](brooklyn-savings-bank-v-o-neil.md) - Brooklyn Savings Bank v. O'Neil, 324 U.S. 697, 707 (1945). — quoted in 1 document(s).
+* [Brooks v. Bankson, 248 Va. 197 (1994)](brooks-v-bankson-248-va-197-1994.md) - Brooks v. Bankson, 248 Va. 197, 445 S.E.2d 473 (1994). — quoted in 1 document(s).
 * [Brown & Brown, Inc. v. Johnson](brown-brown-inc-v-johnson.md) - Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015). — quoted in 6 document(s).
 * [Brown & Root Industrial Services, LLC v. Farris](brown-root-industrial-services-llc-v-farris.md) - Brown & Root Indus. Servs., LLC v. Farris, 392 So. 3d 424 (La. Ct. App. 2024). — quoted in 2 document(s).
 * [Brown v. Best Home Health & Hospice, LLC](brown-v-best-home-health-hospice-llc.md) - Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021. — quoted in 2 document(s).
@@ -152,6 +155,7 @@
 * [Camco, Inc. v. Baker](camco-inc-v-baker.md) - Camco, Inc. v. Baker, 113 Nev. 512, 936 P.2d 829 (1997). — quoted in 2 document(s).
 * [Cannata v. Catholic Diocese of Austin](cannata-v-catholic-diocese-of-austin.md) - Cannata v. Catholic Diocese of Austin, 700 F.3d 169 (5th Cir. 2012). — quoted in 1 document(s).
 * [Cantor Fitzgerald, L.P. v. Ainslie](cantor-fitzgerald-l-p-v-ainslie.md) - Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 690 (Del. 2024). — quoted in 3 document(s).
+* [Capistrant v. Lifetouch National School Studios, Inc., 916 N.W.2d 23 (Minn. 2018)](capistrant-v-lifetouch-national-school-studios-inc-916-n-w-2d-23-minn-2018.md) - Capistrant v. Lifetouch National School Studios, Inc., 916 N.W.2d 23 (Minn. 2018). — quoted in 1 document(s).
 * [Cardoni v. Prosperity Bank](cardoni-v-prosperity-bank.md) - Cardoni v. Prosperity Bank, 805 F.3d 573 (5th Cir. 2015). — quoted in 3 document(s).
 * [Caring Hearts Personal Home Services, Inc. v. Hobley](caring-hearts-personal-home-services-inc-v-hobley.md) - Caring Hearts Personal Home Servs., Inc. v. Hobley, 35 Kan. App. 2d 345, 130 P.3d 1215 (2006). — quoted in 2 document(s).
 * [Carr-Gottstein Properties, Ltd. Partnership v. Benedict](carr-gottstein-properties-ltd-partnership-v-benedict.md) - Carr-Gottstein Props., Ltd. P'ship v. Benedict, 72 P.3d 308 (Alaska 2003) — quoted in 1 document(s).
@@ -179,13 +183,16 @@
 * [City of Creston v. Barney](city-of-creston-v-barney.md) - City of Creston v. Barney, No. 1-951 / 11-1154 (Iowa Ct. App. Feb. 15, 2012) — quoted in 1 document(s).
 * [City of Fargo v. Case Development Co.](city-of-fargo-v-case-development-co.md) - City of Fargo v. Case Dev. Co., 401 N.W.2d 529 (N.D. 1987) — quoted in 1 document(s).
 * [City of Pembroke v. Hagin, 194 Ga. App. 642 (1990)](city-of-pembroke-v-hagin-194-ga-app-642-1990.md) - City of Pembroke v. Hagin, 194 Ga. App. 642, 391 S.E.2d 465 (1990). — quoted in 1 document(s).
+* [City of South Miami v. Dembinsky, 423 So. 2d 988 (Fla. 3d DCA 1982)](city-of-south-miami-v-dembinsky-423-so-2d-988-fla-3d-dca-1982.md) - City of South Miami v. Dembinsky, 423 So. 2d 988 (Fla. 3d DCA 1982). — quoted in 1 document(s).
 * [City Slickers, Inc. v. Douglas](city-slickers-inc-v-douglas.md) - City Slickers, Inc. v. Douglas, 73 Ark. App. 64, 40 S.W.3d 805 (2001). — quoted in 1 document(s).
 * [CLAAS Medical Centre Pte Ltd v Ng Boon Ching](claas-medical-centre-pte-ltd-v-ng-boon-ching.md) - CLAAS Medical Centre Pte Ltd v Ng Boon Ching [2010] SGCA 3; [2010] 2 SLR 386. — quoted in 1 document(s).
 * [Clark's Sales and Service, Inc. v. Smith](clark-s-sales-and-service-inc-v-smith.md) - Clark's Sales and Service, Inc. v. Smith, 4 N.E.3d 772 (Ind. Ct. App. 2014). — quoted in 2 document(s).
+* [Clark v. CHRISTUS Health Northern Louisiana, 47 So. 3d 1135 (La. App. 2 Cir. 2010)](clark-v-christus-health-northern-louisiana-47-so-3d-1135-la-app-2-cir-2010.md) - Clark v. CHRISTUS Health N. La., 47 So. 3d 1135 (La. App. 2 Cir. 2010). — quoted in 1 document(s).
 * [Coast Hotels & Casinos, Inc. v. Nevada State Labor Commission, 117 Nev. 835, 34 P.3d 546 (2001)](coast-hotels-casinos-inc-v-nevada-state-labor-commission-117-nev-835-34-p-3d-546.md) - Coast Hotels & Casinos, Inc. v. Nevada State Labor Commission, 117 Nev. 835, 34 P.3d 546 (2001). — quoted in 1 document(s).
 * [Coates v. Bastian Brothers, Inc.](coates-v-bastian-brothers-inc.md) - Coates v. Bastian Bros., Inc., 276 Mich. App. 498 (2007). — quoted in 2 document(s).
 * [Cochran v. Schwan's Home Service, Inc., 228 Cal. App. 4th 1137 (2014)](cochran-v-schwan-s-home-service-inc-228-cal-app-4th-1137-2014.md) - Cochran v. Schwan's Home Service, Inc., 228 Cal. App. 4th 1137 (2014). — quoted in 2 document(s).
 * [Columbus Medical Services, LLC v. Thomas](columbus-medical-services-llc-v-thomas.md) - Columbus Medical Services, LLC v. Thomas, 308 S.W.3d 368, 374 (Tenn. Ct. App. 2009). — quoted in 2 document(s).
+* [Commercial Real Estate Investment, L.C. v. Comcast of Utah II, Inc., 2012 UT 49, 285 P.3d 1193](commercial-real-estate-investment-l-c-v-comcast-of-utah-ii-inc-2012-ut-49-285-p-.md) - Commercial Real Estate Investment, L.C. v. Comcast of Utah II, Inc., 2012 UT 49, 285 P.3d 1193. — quoted in 1 document(s).
 * [Commissioner v. Bollinger (U.S. 1988), ownership and agency](commissioner-v-bollinger-u-s-1988-ownership-and-agency.md) - Commissioner v. Bollinger, 485 U.S. 340, 348 (1988). — quoted in 2 document(s).
 * [Commodity Futures Trading Comm'n v. Weintraub, 471 U.S. 343 (1985)](commodity-futures-trading-comm-n-v-weintraub-471-u-s-343-1985.md) - Commodity Futures Trading Comm'n v. Weintraub, 471 U.S. 343 (1985). — quoted in 1 document(s).
 * [Communication Technical Sys., Inc. v. Densmore](communication-technical-sys-inc-v-densmore.md) - Communication Technical Sys., Inc. v. Densmore, 1998 S.D. 87, ¶ 27, 583 N.W.2d 125. — quoted in 2 document(s).
@@ -205,6 +212,7 @@
 * [County of Erie v. Gateway-Longview, Inc.](county-of-erie-v-gateway-longview-inc.md) - County of Erie v. Gateway-Longview, Inc., 193 A.D.3d 1336 (4th Dep't 2021). — quoted in 1 document(s).
 * [County of Schenectady v. Travelers Insurance Co.](county-of-schenectady-v-travelers-insurance-co.md) - County of Schenectady v. Travelers Insurance Co., 48 A.D.2d 299 (3d Dep't 1975). — quoted in 1 document(s).
 * [Courington v. Birmingham Trust National Bank, 347 So. 2d 377 (Ala. 1977)](courington-v-birmingham-trust-national-bank-347-so-2d-377-ala-1977.md) - Courington v. Birmingham Trust Nat'l Bank, 347 So. 2d 377 (Ala. 1977). — quoted in 1 document(s).
+* [Cox v. Town of Rome City, 764 N.E.2d 242 (Ind. Ct. App. 2002)](cox-v-town-of-rome-city-764-n-e-2d-242-ind-ct-app-2002.md) - Cox v. Town of Rome City, 764 N.E.2d 242, 250 (Ind. Ct. App. 2002). — quoted in 1 document(s).
 * [*Craig v. FedEx Ground Package System, Inc.*](craig-v-fedex-ground-package-system-inc.md) - *Craig v. FedEx Ground Package System, Inc.*, 300 Kan. 788, 335 P.3d 66 (2014). — quoted in 1 document(s).
 * [Cranston Print Works Co. v. Pothier](cranston-print-works-co-v-pothier.md) - Cranston Print Works Co. v. Pothier, 848 A.2d 213 (R.I. 2004). — quoted in 3 document(s).
 * [Cream v Bushcolt Pty Ltd](cream-v-bushcolt-pty-ltd.md) - Cream v Bushcolt Pty Ltd [2004] WASCA 82 (Malcolm CJ; Miller and McKechnie JJ agreeing). — quoted in 1 document(s).
@@ -246,9 +254,11 @@
 * [DeVoe v. Cheatham](devoe-v-cheatham.md) - DeVoe v. Cheatham, 413 So. 2d 1141 (Ala. 1982). — quoted in 1 document(s).
 * [Dewey v. American Stair Glide Corp.](dewey-v-american-stair-glide-corp.md) - Dewey v. American Stair Glide Corp., 557 S.W.2d 643 (Mo. Ct. App. 1977). — quoted in 1 document(s).
 * [Diamond Assets LLC v. Godina](diamond-assets-llc-v-godina.md) - Diamond Assets LLC v. Godina, 2022 WI App 47. — quoted in 2 document(s).
+* [Diaz v. Dr. Bertram P. Shapiro, P.A., 605 So. 2d 966 (Fla. 3d DCA 1992)](diaz-v-dr-bertram-p-shapiro-p-a-605-so-2d-966-fla-3d-dca-1992.md) - Diaz v. Dr. Bertram P. Shapiro, P.A., 605 So. 2d 966 (Fla. 3d DCA 1992). — quoted in 1 document(s).
 * [Dicen v. New Sesco, Inc.](dicen-v-new-sesco-inc.md) - Dicen v. New Sesco, Inc., 839 N.E.2d 684 (Ind. 2005). — quoted in 2 document(s).
 * [Dick v. Geist](dick-v-geist.md) - Dick v. Geist, 107 Idaho 931, 693 P.2d 1133 (Ct. App. 1985). — quoted in 2 document(s).
 * [District Cablevision Ltd. P'ship v. Bassin, 828 A.2d 714 (D.C. 2003)](district-cablevision-ltd-p-ship-v-bassin-828-a-2d-714-d-c-2003.md) - District Cablevision Ltd. P'ship v. Bassin, 828 A.2d 714 (D.C. 2003). — quoted in 1 document(s).
+* [DiTommaso Realty, Inc. v. Moak Motorcycles, Inc., 309 Or. 190 (1990)](ditommaso-realty-inc-v-moak-motorcycles-inc-309-or-190-1990.md) - DiTommaso Realty, Inc. v. Moak Motorcycles, Inc., 309 Or. 190, 785 P.2d 343 (1990). — quoted in 1 document(s).
 * [Doan Family Corp. v. Arnberger](doan-family-corp-v-arnberger.md) - Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022). — quoted in 2 document(s).
 * [Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson](dobbins-deguire-tucker-p-c-v-rutherford-macdonald-olson.md) - Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson, 218 Mont. 392, 708 P.2d 577 (1985). — quoted in 2 document(s).
 * [Dobson Bay Club II DD, LLC v. La Sonrisa de Siena, LLC, 242 Ariz. 108 (2017)](dobson-bay-club-ii-dd-llc-v-la-sonrisa-de-siena-llc-242-ariz-108-2017.md) - Dobson Bay Club II DD, LLC v. La Sonrisa de Siena, LLC, 242 Ariz. 108, 393 P.3d 449 (2017). — quoted in 1 document(s).
@@ -295,12 +305,16 @@
 * [Environmental Services, Inc. v. Carter](environmental-services-inc-v-carter.md) - Env't Servs., Inc. v. Carter, 9 So. 3d 1258 (Fla. 5th DCA 2009). — quoted in 2 document(s).
 * [Epic Systems Corp. v. Lewis](epic-systems-corp-v-lewis.md) - Epic Systems Corp. v. Lewis, 584 U.S. 497 (2018). — quoted in 1 document(s).
 * [Episcopal Diocese of Southern Virginia v. Marshall](episcopal-diocese-of-southern-virginia-v-marshall.md) - Episcopal Diocese of S. Va. v. Marshall, Record No. 1955-23-2 (Va. Ct. App. July 16, 2024) (published). — quoted in 1 document(s).
+* [ERA Helicopters, LLC v. Amegin, 181 So. 3d 241 (La. App. 3 Cir. 2015)](era-helicopters-llc-v-amegin-181-so-3d-241-la-app-3-cir-2015.md) - ERA Helicopters, LLC v. Amegin, 15-753 (La. App. 3 Cir. 12/9/15), 181 So. 3d 241, 243. — quoted in 1 document(s).
+* [Erdman v. Jovoco, Inc., 181 Wis. 2d 736, 512 N.W.2d 487 (1994)](erdman-v-jovoco-inc-181-wis-2d-736-512-n-w-2d-487-1994.md) - Erdman v. Jovoco, Inc., 181 Wis. 2d 736, 752, 512 N.W.2d 487 (1994). — quoted in 1 document(s).
 * [Erie Railroad Co. v. Tompkins](erie-railroad-co-v-tompkins.md) - Erie R.R. Co. v. Tompkins, 304 U.S. 64 (1938). — quoted in 5 document(s).
 * [Ex parte Curry, 607 So. 2d 230 (Ala. 1992)](ex-parte-curry-607-so-2d-230-ala-1992.md) - Ex parte Curry, 607 So. 2d 230 (Ala. 1992) — quoted in 1 document(s).
+* [Excel Corp. v. Kansas Department of Human Resources, 12 Kan. App. 2d 417, 747 P.2d 179 (1987)](excel-corp-v-kansas-department-of-human-resources-12-kan-app-2d-417-747-p-2d-179.md) - Excel Corp. v. Kansas Department of Human Resources, 12 Kan. App. 2d 417, 747 P.2d 179 (1987). — quoted in 1 document(s).
 * [Exxon Mobil Corp. v. Drennen, 452 S.W.3d 319 (Tex. 2014)](exxon-mobil-corp-v-drennen-452-s-w-3d-319-tex-2014.md) - Exxon Mobil Corp. v. Drennen, 452 S.W.3d 319 (Tex. 2014). — quoted in 1 document(s).
 * [F.A. Bartlett Tree Expert Co. v. Barrington](f-a-bartlett-tree-expert-co-v-barrington.md) - F.A. Bartlett Tree Expert Co. v. Barrington, 353 Mass. 585 (1968). — quoted in 2 document(s).
 * [F.P.P. Enterprises v. United States](f-p-p-enterprises-v-united-states.md) - F.P.P. Enterprises v. United States, 646 F. Supp. 713 (D. Neb. 1986). — quoted in 1 document(s).
 * [Falconi-Sachs v. LPF Senate Square, LLC, 142 A.3d 550 (D.C. 2016)](falconi-sachs-v-lpf-senate-square-llc-142-a-3d-550-d-c-2016.md) - Falconi-Sachs v. LPF Senate Square, LLC, 142 A.3d 550 (D.C. 2016). — quoted in 1 document(s).
+* [Farady-Sultze v. Aurora Medical Center of Oshkosh, Inc., 2010 WI App 99, 327 Wis. 2d 110](farady-sultze-v-aurora-medical-center-of-oshkosh-inc-2010-wi-app-99-327-wis-2d-1.md) - Farady-Sultze v. Aurora Med. Ctr. of Oshkosh, Inc., 2010 WI App 99, ¶ 12, 327 Wis. 2d 110. — quoted in 1 document(s).
 * [Faragher v. City of Boca Raton](faragher-v-city-of-boca-raton-034ce4.md) - Faragher v. City of Boca Raton, 524 U.S. 775 (1998). — quoted in 1 document(s).
 * [Faragher v. City of Boca Raton](faragher-v-city-of-boca-raton-532414.md) - Faragher v. City of Boca Raton, 524 U.S. 775, 807 (1998). — quoted in 1 document(s).
 * [Faragher v. City of Boca Raton](faragher-v-city-of-boca-raton.md) - Faragher v. City of Boca Raton, 524 U.S. 775 (1998). — quoted in 1 document(s).
@@ -313,6 +327,7 @@
 * [Ferrazzini v. Gsell](ferrazzini-v-gsell.md) - Ferrazzini v. Gsell, G.R. No. L-10712, Aug. 10, 1916. — quoted in 1 document(s).
 * [Fifield v. Premier Dealer Services, Inc.](fifield-v-premier-dealer-services-inc.md) - Fifield v. Premier Dealer Services, Inc., 2013 IL App (1st) 120327. — quoted in 2 document(s).
 * [Fillpoint, LLC v. Maas](fillpoint-llc-v-maas.md) - Fillpoint, LLC v. Maas, 208 Cal. App. 4th 1170 (2012). — quoted in 3 document(s).
+* [Fin. Oversight & Mgmt. Bd. for P.R. v. Hernández-Montañez, No. 23-1267 (1st Cir. Aug. 10, 2023)](fin-oversight-mgmt-bd-for-p-r-v-hern-ndez-monta-ez-no-23-1267-1st-cir-aug-10-202.md) - Fin. Oversight & Mgmt. Bd. for P.R. v. Hernández-Montañez, No. 23-1267 (1st Cir. Aug. 10, 2023) — quoted in 1 document(s).
 * [Fine Foods, Inc. v. Dahlin](fine-foods-inc-v-dahlin.md) - Fine Foods, Inc. v. Dahlin, 147 Vt. 599, 523 A.2d 1228 (1986). — quoted in 2 document(s).
 * [First American Bank West v. Berdahl](first-american-bank-west-v-berdahl.md) - First American Bank West v. Berdahl, 556 N.W.2d 63 (N.D. 1996). — quoted in 1 document(s).
 * [First National Trust Co. v. English](first-national-trust-co-v-english.md) - First National Trust Co. v. English, No. 1109 WDA 2025 (Pa. Super. Feb. 18, 2026) (non-precedential). — quoted in 2 document(s).
@@ -344,7 +359,9 @@
 * [Friger Salgueiro v. Mech-Tech College, LLC](friger-salgueiro-v-mech-tech-college-llc.md) - Friger Salgueiro v. Mech-Tech College, LLC, 2026 TSPR 30, 218 DPR ___ (2026). — quoted in 1 document(s).
 * [Gaines v. Bellino](gaines-v-bellino.md) - Gaines v. Bellino, 173 N.J. 301 (2002). — quoted in 1 document(s).
 * [Galetta v. Galetta](galetta-v-galetta.md) - Galetta v. Galetta, 21 N.Y.3d 186 (2013). — quoted in 1 document(s).
+* [Gallo v. Greenpath International, Inc., No. 2021-CA-0313 (La. App. 4 Cir. 2021)](gallo-v-greenpath-international-inc-no-2021-ca-0313-la-app-4-cir-2021.md) - Gallo v. Greenpath Int'l, Inc., 2021-0313 (La. App. 4 Cir. 12/16/21). — quoted in 1 document(s).
 * [Gann v. Morris](gann-v-morris.md) - Gann v. Morris, 122 Ariz. 517, 596 P.2d 43 (Ct. App. 1979). — quoted in 2 document(s).
+* [Garage Solutions, LLC v. Person, 201 So. 3d 962 (La. App. 3 Cir. 2016)](garage-solutions-llc-v-person-201-so-3d-962-la-app-3-cir-2016.md) - Garage Solutions, LLC v. Person, 16-286 (La. App. 3 Cir. 9/28/16), 201 So. 3d 962, 965. — quoted in 1 document(s).
 * [Garcia v. American Furniture Co., 101 N.M. 785, 689 P.2d 934 (Ct. App. 1984)](garcia-v-american-furniture-co-101-n-m-785-689-p-2d-934-ct-app-1984.md) - Garcia v. American Furniture Co., 101 N.M. 785, 689 P.2d 934 (Ct. App. 1984) — quoted in 1 document(s).
 * [Garcia v. Salvation Army](garcia-v-salvation-army.md) - Garcia v. Salvation Army, 918 F.3d 997 (9th Cir. 2019). — quoted in 1 document(s).
 * [Gattuso v. Harte-Hanks Shoppers, Inc., 42 Cal. 4th 554 (2007)](gattuso-v-harte-hanks-shoppers-inc-42-cal-4th-554-2007.md) - Gattuso v. Harte-Hanks Shoppers, Inc., 42 Cal. 4th 554 (2007). — quoted in 2 document(s).
@@ -362,9 +379,11 @@
 * [Goh Seng Heng v RSP Investments Pte Ltd](goh-seng-heng-v-rsp-investments-pte-ltd.md) - Goh Seng Heng v RSP Investments Pte Ltd [2016] SGHC 275; [2017] 3 SLR 657. — quoted in 1 document(s).
 * [Golden Road Motor Inn, Inc. v. Islam](golden-road-motor-inn-inc-v-islam.md) - Golden Road Motor Inn, Inc. v. Islam, 132 Nev. 476, 376 P.3d 151 (2016). — quoted in 1 document(s).
 * [Golden State Bottling Co. v. NLRB (U.S. 1973), continuity](golden-state-bottling-co-v-nlrb-u-s-1973-continuity.md) - Golden State Bottling Co. v. NLRB, 414 U.S. 168, 184 (1973). — quoted in 1 document(s).
+* [Gorco Construction Co. v. Stein, 256 Minn. 476 (1959)](gorco-construction-co-v-stein-256-minn-476-1959.md) - Gorco Construction Co. v. Stein, 256 Minn. 476, 99 N.W.2d 69 (1959). — quoted in 1 document(s).
 * [Gosselin v. Archibald](gosselin-v-archibald.md) - Gosselin v. Archibald, 121 N.H. 1016 (1981). — quoted in 2 document(s).
 * [Gould & Lamb, LLC v. D'Alusio](gould-lamb-llc-v-d-alusio.md) - Gould & Lamb, LLC v. D'Alusio, 949 So. 2d 1212 (Fla. 2d DCA 2007). — quoted in 1 document(s).
 * [Government of the Virgin Islands v. Connor](government-of-the-virgin-islands-v-connor.md) - Gov't of the V.I. v. Connor, 60 V.I. 597 (V.I. 2014). — quoted in 2 document(s).
+* [Grand Bissell Towers, Inc. v. Joan Gagnon Enterprises, Inc., 657 S.W.2d 378 (Mo. App. E.D. 1983)](grand-bissell-towers-inc-v-joan-gagnon-enterprises-inc-657-s-w-2d-378-mo-app-e-d.md) - Grand Bissell Towers, Inc. v. Joan Gagnon Enterprises, Inc., 657 S.W.2d 378 (Mo. App. E.D. 1983). — quoted in 1 document(s).
 * [Great Northern Insurance Co. v. Interior Construction Corp.](great-northern-insurance-co-v-interior-construction-corp.md) - Great N. Ins. Co. v. Interior Constr. Corp., 7 N.Y.3d 412 (2006). — quoted in 1 document(s).
 * [Greenwich Trust Co. v. Tyson](greenwich-trust-co-v-tyson.md) - Greenwich Trust Co. v. Tyson, 129 Conn. 211 (1942). — quoted in 1 document(s).
 * [Gregg v. Central Transport LLC (7th Cir. Apr. 1, 2026)](gregg-v-central-transport-llc-7th-cir-apr-1-2026.md) - Gregg v. Central Transport LLC, Nos. 25-2185, 25-2761, 25-2762 (7th Cir. Apr. 1, 2026). — quoted in 1 document(s).
@@ -395,6 +414,7 @@
 * [HD Supply Facilities Maint., Ltd. v. Bymoen](hd-supply-facilities-maint-ltd-v-bymoen.md) - HD Supply Facilities Maint., Ltd. v. Bymoen, 125 Nev. 200, 210 P.3d 183 (2009). — quoted in 2 document(s).
 * [Healthcare Services of the Ozarks, Inc. v. Copeland](healthcare-services-of-the-ozarks-inc-v-copeland.md) - Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006). — quoted in 2 document(s).
 * [Hebb v. Stump, Harvey & Cook, Inc.](hebb-v-stump-harvey-cook-inc.md) - Hebb v. Stump, Harvey & Cook, Inc., 25 Md. App. 478 (1975). — quoted in 2 document(s).
+* [Heder v. City of Two Rivers, 295 F.3d 777 (7th Cir. 2002)](heder-v-city-of-two-rivers-295-f-3d-777-7th-cir-2002.md) - Heder v. City of Two Rivers, 295 F.3d 777, 780 (7th Cir. 2002). — quoted in 1 document(s).
 * [Hejl v. Hood, Hargett & Associates, Inc.](hejl-v-hood-hargett-associates-inc.md) - Hejl v. Hood, Hargett & Assocs., 196 N.C. App. 299 (2009). — quoted in 2 document(s).
 * [Helms Boys, Inc. v. Brady](helms-boys-inc-v-brady.md) - Helms Boys, Inc. v. Brady, 171 W. Va. 66, 297 S.E.2d 840 (1982). — quoted in 2 document(s).
 * [Henao v. Professional Shoe Repair, Inc.](henao-v-professional-shoe-repair-inc.md) - Henao v. Prof'l Shoe Repair, Inc., 929 So. 2d 723 (Fla. 5th DCA 2006). — quoted in 1 document(s).
@@ -438,6 +458,7 @@
 * [Hyman v. Rosenbaum Yeshiva of North Jersey (App. Div. 2023)](hyman-v-rosenbaum-yeshiva-of-north-jersey-app-div-2023.md) - Hyman v. Rosenbaum Yeshiva of N. Jersey, 474 N.J. Super. 561 (App. Div. 2023). — quoted in 1 document(s).
 * [Hyman v. Rosenbaum Yeshiva of North Jersey (N.J. 2024)](hyman-v-rosenbaum-yeshiva-of-north-jersey-n-j-2024.md) - Hyman v. Rosenbaum Yeshiva of N. Jersey, No. A-11-23 (N.J. July 24, 2024) (per curiam). — quoted in 1 document(s).
 * [Idbeis v. Wichita Surgical Specialists, P.A.](idbeis-v-wichita-surgical-specialists-p-a.md) - Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005). — quoted in 2 document(s).
+* [Illingworth v. Bushong, 297 Or. 675 (1984)](illingworth-v-bushong-297-or-675-1984.md) - Illingworth v. Bushong, 297 Or. 675, 688 P.2d 379 (1984). — quoted in 1 document(s).
 * [In re Acknowledgment Cases (2015) 239 Cal.App.4th 1498](in-re-acknowledgment-cases-2015-239-cal-app-4th-1498.md) - In re Acknowledgment Cases (2015) 239 Cal.App.4th 1498. — quoted in 2 document(s).
 * [In re Anselmi](in-re-anselmi.md) - In re Anselmi, 52 B.R. 479, 490 (Bankr. D. Wyo. 1985). — quoted in 1 document(s).
 * [In re AutoNation, Inc.](in-re-autonation-inc.md) - In re AutoNation, Inc., 228 S.W.3d 663 (Tex. 2007). — quoted in 2 document(s).
@@ -470,6 +491,7 @@
 * [Jacobsen v. Katzer, 535 F.3d 1373 (Fed. Cir. 2008)](jacobsen-v-katzer-535-f-3d-1373-fed-cir-2008.md) - Jacobsen v. Katzer, 535 F.3d 1373, 1380-81 (Fed. Cir. 2008). — quoted in 1 document(s).
 * [Jeffcoat v. State, Department of Labor, 732 P.2d 1073 (Alaska 1987)](jeffcoat-v-state-department-of-labor-732-p-2d-1073-alaska-1987.md) - Jeffcoat v. State, Dep't of Labor, 732 P.2d 1073, 1075 (Alaska 1987) — quoted in 1 document(s).
 * [Jennings v. Minco Technology Labs, Inc.](jennings-v-minco-technology-labs-inc.md) - Jennings v. Minco Tech. Labs, Inc., 765 S.W.2d 497 (Tex. App.—Austin 1989). — quoted in 1 document(s).
+* [Jensen v. Fremont Motors Cody, Inc., 2002 WY 173, 58 P.3d 322](jensen-v-fremont-motors-cody-inc-2002-wy-173-58-p-3d-322.md) - Jensen v. Fremont Motors Cody, Inc., 2002 WY 173, ¶ 30, 58 P.3d 322 — quoted in 1 document(s).
 * [Johnson v. Peterbilt of Fargo, Inc.](johnson-v-peterbilt-of-fargo-inc.md) - Johnson v. Peterbilt of Fargo, Inc., 438 N.W.2d 162 (N.D. 1989) — quoted in 1 document(s).
 * [JumboSack Corp. v. Buyck](jumbosack-corp-v-buyck.md) - JumboSack Corp. v. Buyck, 407 S.W.3d 51 (Mo. App. E.D. 2013). — quoted in 2 document(s).
 * [Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, Uithoven, Riekenberg, P.C.](junkermier-clark-campanella-stevens-p-c-v-alborn-uithoven-riekenberg-p-c.md) - Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, Uithoven, Riekenberg, P.C., 2016 MT 218, 384 Mont. 464, 380 P.3d 747. — quoted in 2 document(s).
@@ -481,6 +503,7 @@
 * [Karlin v. Weinberg](karlin-v-weinberg.md) - Karlin v. Weinberg, 77 N.J. 408, 390 A.2d 1161 (1978). — quoted in 1 document(s).
 * [*Karnes v. Happy Trails RV Park, LLC*](karnes-v-happy-trails-rv-park-llc.md) - *Karnes v. Happy Trails RV Park, LLC*, 361 F. Supp. 3d 921 (W.D. Mo. 2019). — quoted in 1 document(s).
 * [Karp v. Federated Department Stores, Inc.](karp-v-federated-department-stores-inc.md) - Karp v. Federated Dep't Stores, Inc., 301 A.D.2d 574 (2d Dep't 2003). — quoted in 1 document(s).
+* [Kearney v. Lee Medical International, Inc., 951 So. 2d 417 (La. App. 5 Cir. 2007)](kearney-v-lee-medical-international-inc-951-so-2d-417-la-app-5-cir-2007.md) - Kearney v. Lee Med. Int'l, Inc., 06-597 (La. App. 5 Cir. 1/16/07), 951 So. 2d 417, 420, writ denied, 07-344 (La. 3/30/07), 953 So. 2d 70. — quoted in 1 document(s).
 * [Kegel v. Tillotson](kegel-v-tillotson.md) - Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009). — quoted in 2 document(s).
 * [Keller v. Clark Equipment Co.](keller-v-clark-equipment-co.md) - Keller v. Clark Equipment Co., 715 F.2d 1280 (8th Cir. 1983), cert. denied, 464 U.S. 1044 (1984). — quoted in 1 document(s).
 * [Kelly v. Marx](kelly-v-marx.md) - Kelly v. Marx, 428 Mass. 877 (1999) — quoted in 1 document(s).
@@ -504,7 +527,9 @@
 * [Lane v. Barker](lane-v-barker.md) - Lane v. Barker, 241 A.D.2d 739 (3d Dep't 1997). — quoted in 1 document(s).
 * [Larson Latham Huettl LLP v. Iversen](larson-latham-huettl-llp-v-iversen.md) - Larson Latham Huettl LLP v. Iversen, 2023 ND 16 — quoted in 1 document(s).
 * [Leaana v. Laban](leaana-v-laban.md) - Leaana v. Laban, 12 A.S.R.2d 93 (Land & Titles Div. 1989). — quoted in 1 document(s).
+* [Lefemine v. Baron, 573 So. 2d 326 (Fla. 1991)](lefemine-v-baron-573-so-2d-326-fla-1991.md) - Lefemine v. Baron, 573 So. 2d 326 (Fla. 1991). — quoted in 1 document(s).
 * [Lefever v. K.P. Hovnanian Enterprises, Inc., 160 N.J. 307 (1999) — the general rule and its four traditional exceptions](lefever-v-k-p-hovnanian-enterprises-inc-160-n-j-307-1999-the-general-rule-and-it.md) - Lefever v. K.P. Hovnanian Enters., Inc., 160 N.J. 307, 734 A.2d 290 (1999). — quoted in 1 document(s).
+* [Leprettre v. RCS, LLC, 206 So. 3d 1215 (La. App. 3 Cir. 2016)](leprettre-v-rcs-llc-206-so-3d-1215-la-app-3-cir-2016.md) - Leprettre v. RCS, LLC, 16-382 (La. App. 3 Cir. 11/16/16), 206 So. 3d 1215, 1219. — quoted in 1 document(s).
 * [Light v. Centel Cellular Co. of Texas](light-v-centel-cellular-co-of-texas.md) - Light v. Centel Cellular Co. of Tex., 883 S.W.2d 642 (Tex. 1994). — quoted in 2 document(s).
 * [Limestone Products Distribution, Inc. v. McNamara](limestone-products-distribution-inc-v-mcnamara.md) - Limestone Products Distribution, Inc. v. McNamara, 71 S.W.3d 308, 312 (Tex. 2002). — quoted in 1 document(s).
 * [Lindgren v. Betham](lindgren-v-betham.md) - Lindgren v. Betham, 20 A.S.R.2d 98 (App. Div. 1992). — quoted in 2 document(s).
@@ -516,6 +541,7 @@
 * [Lucht's Concrete Pumping, Inc. v. Horner](lucht-s-concrete-pumping-inc-v-horner.md) - Lucht's Concrete Pumping, Inc. v. Horner, 255 P.3d 1058 (Colo. 2011). — quoted in 2 document(s).
 * [MacIntosh v. Brunswick Corp.](macintosh-v-brunswick-corp.md) - MacIntosh v. Brunswick Corp., 241 Md. 24, 215 A.2d 222 (1965). — quoted in 1 document(s).
 * [Madore v. Kennebec Heights Country Club, 2007 ME 92, 926 A.2d 1180](madore-v-kennebec-heights-country-club-2007-me-92-926-a-2d-1180.md) - Madore v. Kennebec Heights Country Club, 2007 ME 92, ¶ 13, 926 A.2d 1180 — quoted in 1 document(s).
+* [Magic Valley Truck Brokers, Inc. v. Meyer, 133 Idaho 110, 982 P.2d 945 (Ct. App. 1999)](magic-valley-truck-brokers-inc-v-meyer-133-idaho-110-982-p-2d-945-ct-app-1999.md) - Magic Valley Truck Brokers, Inc. v. Meyer, 133 Idaho 110, 982 P.2d 945 (Ct. App. 1999). — quoted in 1 document(s).
 * [Magliarditi v. TransFirst Group, Inc.](magliarditi-v-transfirst-group-inc.md) - Magliarditi v. TransFirst Grp., Inc., No. 73889 (Nev. Oct. 21, 2019) (order answering certified questions and remanding). — quoted in 1 document(s).
 * [Mainland Industries, Inc. v. Timberland Machines & Engineering Corp.](mainland-industries-inc-v-timberland-machines-engineering-corp.md) - Mainland Industries, Inc. v. Timberland Machines & Engineering Corp., 58 Or. App. 585, 649 P.2d 613 (Or. Ct. App. 1982). — quoted in 1 document(s).
 * [Maintenance Specialties, Inc. v. Gottus](maintenance-specialties-inc-v-gottus.md) - Maintenance Specialties, Inc. v. Gottus, 314 A.2d 279 (Pa. 1974). — quoted in 2 document(s).
@@ -531,6 +557,7 @@
 * [Marine Midland Bank v. Portnoy (In re Portnoy)](marine-midland-bank-v-portnoy-in-re-portnoy.md) - Marine Midland Bank v. Portnoy (In re Portnoy), 201 B.R. 685, 700 (Bankr. S.D.N.Y. 1996). — quoted in 1 document(s).
 * [Marsh USA Inc. v. Cook](marsh-usa-inc-v-cook.md) - Marsh USA Inc. v. Cook, 354 S.W.3d 764 (Tex. 2011). — quoted in 3 document(s).
 * [Marshall v. Safeway, Inc., 437 Md. 542 (2014)](marshall-v-safeway-inc-437-md-542-2014.md) - Marshall v. Safeway, Inc., 437 Md. 542 (2014) — quoted in 2 document(s).
+* [Martco Partnership v. Frazier, 787 So. 2d 1196 (La. App. 3 Cir. 2001)](martco-partnership-v-frazier-787-so-2d-1196-la-app-3-cir-2001.md) - Martco P'ship v. Frazier, 01-72 (La. App. 3 Cir. 6/6/01), 787 So. 2d 1196. — quoted in 1 document(s).
 * [Mason v. Fakhimi, 109 Nev. 1153, 865 P.2d 333 (1993)](mason-v-fakhimi-109-nev-1153-865-p-2d-333-1993.md) - Mason v. Fakhimi, 109 Nev. 1153, 865 P.2d 333 (1993). — quoted in 1 document(s).
 * [Mata v. Avianca, Inc., 678 F. Supp. 3d 443 (S.D.N.Y. 2023)](mata-v-avianca-inc-678-f-supp-3d-443-s-d-n-y-2023.md) - Mata v. Avianca, Inc., 678 F. Supp. 3d 443 (S.D.N.Y. 2023). — quoted in 1 document(s).
 * [Mathews v. Happy Valley Conference Center, Inc.](mathews-v-happy-valley-conference-center-inc.md) - Mathews v. Happy Valley Conference Center, Inc., Nos. H043723 & H044098 (Cal. Ct. App. Dec. 12, 2019) (certified for publication). — quoted in 1 document(s).
@@ -561,6 +588,7 @@
 * [McGirr v. Zurbrick](mcgirr-v-zurbrick.md) - McGirr v. Zurbrick, 2023 NY Slip Op 03568 (4th Dep't 2023). — quoted in 1 document(s).
 * [McGlynn v. St. Andrew the Apostle Church](mcglynn-v-st-andrew-the-apostle-church.md) - McGlynn v. St. Andrew the Apostle Church, 304 A.D.2d 372 (1st Dep't 2003). — quoted in 1 document(s).
 * [McKeon v. Mercy Healthcare Sacramento, 19 Cal. 4th 321 (1998)](mckeon-v-mercy-healthcare-sacramento-19-cal-4th-321-1998.md) - McKeon v. Mercy Healthcare Sacramento, 19 Cal. 4th 321 (1998). — quoted in 1 document(s).
+* [McLaurin v. Frisella Moving & Storage Co., 355 S.W.2d 360 (Mo. App. 1962)](mclaurin-v-frisella-moving-storage-co-355-s-w-2d-360-mo-app-1962.md) - McLaurin v. Frisella Moving & Storage Co., 355 S.W.2d 360 (Mo. App. 1962). — quoted in 1 document(s).
 * [Meacham v. Knolls Atomic Power Laboratory, 554 U.S. 84 (2008)](meacham-v-knolls-atomic-power-laboratory-554-u-s-84-2008-3f6e29.md) - Meacham v. Knolls Atomic Power Laboratory, 554 U.S. 84 (2008). — quoted in 1 document(s).
 * [Meacham v. Knolls Atomic Power Laboratory, 554 U.S. 84 (2008)](meacham-v-knolls-atomic-power-laboratory-554-u-s-84-2008.md) - Meacham v. Knolls Atomic Power Laboratory, 554 U.S. 84 (2008). — quoted in 1 document(s).
 * [Med-1 Solutions, LLC v. Taylor](med-1-solutions-llc-v-taylor.md) - Med-1 Solutions, LLC v. Taylor, No. 24A-PL-450 (Ind. Ct. App. Nov. 25, 2024). — quoted in 2 document(s).
@@ -621,10 +649,12 @@
 * [Neville v. Eighth Judicial District Court, 133 Nev. 777 (2017)](neville-v-eighth-judicial-district-court-133-nev-777-2017.md) - Neville v. Eighth Judicial Dist. Court, 133 Nev. 777, 406 P.3d 499 (2017) — quoted in 3 document(s).
 * [New Enterprise Associates v. Rich — intentional-harm limit](new-enterprise-associates-v-rich-intentional-harm-limit.md) - New Enterprise Associates 14, L.P. v. Rich (Del. Ch. 2023), concluding covenant analysis — quoted in 2 document(s).
 * [New Haven Trolley & Bus Employees Credit Union v. Hill](new-haven-trolley-bus-employees-credit-union-v-hill.md) - New Haven Trolley & Bus Employees Credit Union v. Hill, 145 Conn. 332 (1958). — quoted in 1 document(s).
+* [New Jersey Transit Authority v. New Jersey Transit PBA, 314 N.J. Super. 129 (App. Div. 1998)](new-jersey-transit-authority-v-new-jersey-transit-pba-314-n-j-super-129-app-div-.md) - New Jersey Transit Authority v. New Jersey Transit PBA, 314 N.J. Super. 129, 714 A.2d 329 (App. Div. 1998). — quoted in 1 document(s).
 * [New Prime Inc. v. Oliveira](new-prime-inc-v-oliveira.md) - New Prime Inc. v. Oliveira, 586 U.S. 105 (2019). — quoted in 1 document(s).
 * [New York Mutual Underwriters v. Burdick](new-york-mutual-underwriters-v-burdick.md) - New York Mutual Underwriters v. Burdick, 196 A.D.2d 668 (3d Dep't 1993). — quoted in 1 document(s).
 * [New York State Courts, Kliger v. Fairmont Ins. Brokers LLC](new-york-state-courts-kliger-v-fairmont-ins-brokers-llc.md) - New York State Courts, Kliger v. Fairmont Ins. Brokers LLC. — quoted in 1 document(s).
 * [New York State Liquor Authority v. Sutton Social Club, Inc.](new-york-state-liquor-authority-v-sutton-social-club-inc.md) - New York State Liquor Auth. v. Sutton Social Club, Inc., 93 Misc. 2d 1024, 403 N.Y.S.2d 443 (Sup. Ct. 1978). — quoted in 1 document(s).
+* [Newsom v. Global Data Systems, Inc., 107 So. 3d 781 (La. App. 3 Cir. 2012)](newsom-v-global-data-systems-inc-107-so-3d-781-la-app-3-cir-2012.md) - Newsom v. Global Data Sys., Inc., 12-412 (La. App. 3 Cir. 12/12/12), 107 So. 3d 781, 789, writ denied, 13-0429 (La. 4/5/13), 110 So. 3d 595. — quoted in 1 document(s).
 * [Nieto v. Clark's Market, Inc.](nieto-v-clark-s-market-inc.md) - Nieto v. Clark's Mkt., Inc., 2021 CO 48, ¶ 3, 488 P.3d 1140 — quoted in 1 document(s).
 * [Nike, Inc. v. McCarthy](nike-inc-v-mccarthy.md) - Nike, Inc. v. McCarthy, 379 F.3d 576 (9th Cir. 2004). — quoted in 2 document(s).
 * [Niranjan Shankar Golikari v. Century Spinning & Mfg. Co.](niranjan-shankar-golikari-v-century-spinning-mfg-co.md) - Niranjan Shankar Golikari v. Century Spinning & Mfg. Co., AIR 1967 SC 1098. — quoted in 1 document(s).
@@ -677,6 +707,7 @@
 * [Pearson v HRX Holdings Pty Ltd](pearson-v-hrx-holdings-pty-ltd.md) - Pearson v HRX Holdings Pty Ltd [2012] FCAFC 111. — quoted in 1 document(s).
 * [Pemco Corp. v. Rose](pemco-corp-v-rose.md) - Pemco Corp. v. Rose, 163 W. Va. 420, 257 S.E.2d 885 (1979). — quoted in 3 document(s).
 * [People v. Hardy](people-v-hardy.md) - People v. Hardy, 47 N.Y.2d 500, 392 N.E.2d 1233, 419 N.Y.S.2d 49 (1979). — quoted in 1 document(s).
+* [Pepsi Midamerica v. Harris, 232 S.W.3d 648 (Mo. App. S.D. 2007)](pepsi-midamerica-v-harris-232-s-w-3d-648-mo-app-s-d-2007.md) - Pepsi Midamerica v. Harris, 232 S.W.3d 648 (Mo. App. S.D. 2007). — quoted in 1 document(s).
 * [Percept D'Mark (India) Pvt. Ltd. v. Zaheer Khan](percept-d-mark-india-pvt-ltd-v-zaheer-khan.md) - Percept D'Mark (India) Pvt. Ltd. v. Zaheer Khan, (2006) 4 SCC 227. — quoted in 1 document(s).
 * [Perlin v. Time Inc., 237 F. Supp. 3d 623 (E.D. Mich. 2017)](perlin-v-time-inc-237-f-supp-3d-623-e-d-mich-2017.md) - Perlin v. Time Inc., 237 F. Supp. 3d 623 (E.D. Mich. 2017). — quoted in 1 document(s).
 * [Perpetual Limited v Maglis](perpetual-limited-v-maglis.md) - Perpetual Limited v Maglis [2025] QSC 71 (Bowskill CJ). — quoted in 1 document(s).
@@ -701,6 +732,7 @@
 * [Pratt v. KSE Sportsman Media, Inc., 586 F. Supp. 3d 666 (E.D. Mich. 2022)](pratt-v-kse-sportsman-media-inc-586-f-supp-3d-666-e-d-mich-2022.md) - Pratt v. KSE Sportsman Media, Inc., 586 F. Supp. 3d 666 (E.D. Mich. 2022). — quoted in 1 document(s).
 * [Precision Strip, Inc. v. Dircksen](precision-strip-inc-v-dircksen.md) - Precision Strip, Inc. v. Dircksen, 2020-Ohio-6668 (3d Dist.). — quoted in 1 document(s).
 * [Preferred Systems Solutions, Inc. v. GP Consulting, LLC](preferred-systems-solutions-inc-v-gp-consulting-llc.md) - Preferred Sys. Sols., Inc. v. GP Consulting, LLC, 284 Va. 382 (2012). — quoted in 2 document(s).
+* [Press-A-Dent, Inc. v. Weigel, 849 N.E.2d 661 (Ind. Ct. App. 2006)](press-a-dent-inc-v-weigel-849-n-e-2d-661-ind-ct-app-2006.md) - Press-A-Dent, Inc. v. Weigel, 849 N.E.2d 661, 670 (Ind. Ct. App. 2006). — quoted in 1 document(s).
 * [Pressed Steel Car Co. v. Hansen](pressed-steel-car-co-v-hansen.md) - Pressed Steel Car Co. v. Hansen, 137 F. 403 (3d Cir. 1905). — quoted in 1 document(s).
 * [Preston v. Marathon Oil Co. (Fed. Cir.)](preston-v-marathon-oil-co-fed-cir.md) - Preston v. Marathon Oil Co., 684 F.3d 1276 (Fed. Cir. 2012). — quoted in 1 document(s).
 * [Preston v. Marathon Oil Co.](preston-v-marathon-oil-co.md) - Preston v. Marathon Oil Co., 2012 WY 66, 277 P.3d 81 (Wyo. 2012). — quoted in 1 document(s).
@@ -748,6 +780,7 @@
 * [Rohlin Construction Co. v. City of Hinton](rohlin-construction-co-v-city-of-hinton.md) - Rohlin Constr. Co. v. City of Hinton, 476 N.W.2d 78 (Iowa 1991) — quoted in 1 document(s).
 * [Roley v. National Professional Exchange, Inc., No. TDC-18-0152 (D. Md. July 22, 2020)](roley-v-national-professional-exchange-inc-no-tdc-18-0152-d-md-july-22-2020.md) - Roley v. Nat'l Prof'l Exch., Inc., No. TDC-18-0152 (D. Md. July 22, 2020) — quoted in 1 document(s).
 * [Romano v. Stanley](romano-v-stanley.md) - Romano v. Stanley, 90 N.Y.2d 444 (1997). — quoted in 1 document(s).
+* [Rosen v. Smith Barney, Inc., 195 N.J. 423 (2008)](rosen-v-smith-barney-inc-195-n-j-423-2008.md) - Rosen v. Smith Barney, Inc., 195 N.J. 423, 950 A.2d 205 (2008). — quoted in 1 document(s).
 * [Rosenbach v. Six Flags Ent. Corp., 2019 IL 123186](rosenbach-v-six-flags-ent-corp-2019-il-123186.md) - Rosenbach v. Six Flags Ent. Corp., 2019 IL 123186. — quoted in 1 document(s).
 * [Rosenbach v. Six Flags Entertainment Corp., 2019 IL 123186](rosenbach-v-six-flags-entertainment-corp-2019-il-123186.md) - Rosenbach v. Six Flags Entertainment Corp., 2019 IL 123186, ¶ 40. — quoted in 2 document(s).
 * [Rosenfeld v Brody](rosenfeld-v-brody.md) - Rosenfeld v Brody, 2025 NY Slip Op 03091, *2 (2d Dept May 21, 2025). — quoted in 1 document(s).
@@ -774,6 +807,7 @@
 * [Sanborn Manufacturing Co. v. Currie](sanborn-manufacturing-co-v-currie.md) - Sanborn Mfg. Co. v. Currie, 500 N.W.2d 161 (Minn. Ct. App. 1993). — quoted in 2 document(s).
 * [Sander v. Westchester Reform Temple](sander-v-westchester-reform-temple.md) - Sander v. Westchester Reform Temple, 2025 NY Slip Op 06958 (N.Y. Dec. 16, 2025). — quoted in 1 document(s).
 * [Sanders v. Future Com, Ltd., No. 02-15-00077-CV (Tex. App.—Fort Worth May 18, 2017)](sanders-v-future-com-ltd-no-02-15-00077-cv-tex-app-fort-worth-may-18-2017.md) - Sanders v. Future Com, Ltd., No. 02-15-00077-CV, 2017 WL 2180706 (Tex. App.—Fort Worth May 18, 2017, no pet.). — quoted in 1 document(s).
+* [Sands Appliance Services, Inc. v. Wilson, 463 Mich. 231 (2000)](sands-appliance-services-inc-v-wilson-463-mich-231-2000.md) - Sands Appliance Services, Inc. v. Wilson, 463 Mich. 231, 615 N.W.2d 241 (2000). — quoted in 1 document(s).
 * [Sattin v. Brooks (In re Brooks)](sattin-v-brooks-in-re-brooks.md) - In re Brooks, 217 B.R. 98 (Bankr. D. Conn. 1998). — quoted in 1 document(s).
 * [Savage v. Township of Neptune](savage-v-township-of-neptune.md) - Savage v. Township of Neptune, 257 N.J. 204 (2024). — quoted in 3 document(s).
 * [Schatz v. Allen Matkins Leck Gamble & Mallory LLP, 45 Cal. 4th 557 (2009)](schatz-v-allen-matkins-leck-gamble-mallory-llp-45-cal-4th-557-2009.md) - Schatz v. Allen Matkins Leck Gamble & Mallory LLP, 45 Cal. 4th 557 (2009). — quoted in 1 document(s).
@@ -790,6 +824,7 @@
 * [Sentry Force Security, LLC v. Barrera](sentry-force-security-llc-v-barrera.md) - Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 14 (Va. Ct. App. Jan. 27, 2026) (unpublished). — quoted in 2 document(s).
 * [Senture, LLC v. Dietrich](senture-llc-v-dietrich.md) - Senture, LLC v. Dietrich, 575 F. Supp. 2d 724 (E.D. Va. 2008). — quoted in 2 document(s).
 * [Sermons v. Caine & Estes Insurance Agency, Inc.](sermons-v-caine-estes-insurance-agency-inc.md) - Sermons v. Caine & Estes Ins. Agency, Inc., 275 S.C. 506, 273 S.E.2d 338 (1980) (quoting Oxman v. Sherman, 239 S.C. 218, 122 S.E.2d 559 (1961)). — quoted in 1 document(s).
+* [Service Investors, Ltd. v. Scully, 9 So. 3d 910 (La. App. 3 Cir. 2009)](service-investors-ltd-v-scully-9-so-3d-910-la-app-3-cir-2009.md) - Service Investors, Ltd. v. Scully, 08-1062 (La. App. 3 Cir. 3/4/09), 9 So. 3d 910. — quoted in 1 document(s).
 * [Sevenson Environmental Services, Inc. v. Sirius America Insurance Co.](sevenson-environmental-services-inc-v-sirius-america-insurance-co.md) - Sevenson Envtl. Servs., Inc. v. Sirius Am. Ins. Co., 74 A.D.3d 1751 (4th Dep't 2010). — quoted in 1 document(s).
 * [Shatto v. McLeod Regional Medical Center, 406 S.C. 470, 753 S.E.2d 416 (2013)](shatto-v-mcleod-regional-medical-center-406-s-c-470-753-s-e-2d-416-2013.md) - Shatto v. McLeod Reg'l Med. Ctr., 406 S.C. 470, 475–76, 753 S.E.2d 416 (2013) — quoted in 1 document(s).
 * [Sheehy v. Big Flats Community Day, Inc.](sheehy-v-big-flats-community-day-inc.md) - Sheehy v. Big Flats Community Day, Inc., 73 N.Y.2d 629 (1989). — quoted in 1 document(s).
@@ -814,6 +849,7 @@
 * [Smith, Bell & Hauck, Inc. v. Cullins](smith-bell-hauck-inc-v-cullins.md) - Smith, Bell & Hauck, Inc. v. Cullins, 123 Vt. 96, 183 A.2d 528 (1962). — quoted in 1 document(s).
 * [Smith v. City of Jackson, 544 U.S. 228 (2005)](smith-v-city-of-jackson-544-u-s-228-2005.md) - Smith v. City of Jackson, 544 U.S. 228 (2005). — quoted in 1 document(s).
 * [Smith v. Globe Life Insurance Co., 460 Mich. 446 (1999)](smith-v-globe-life-insurance-co-460-mich-446-1999.md) - Smith v. Globe Life Ins. Co., 460 Mich. 446 (1999), overruled by Attorney General v. Eli Lilly & Co., No. 165961 (Mich. July 31, 2026). — quoted in 1 document(s).
+* [Smith v. Kriska, 113 S.W.3d 293 (Mo. App. E.D. 2003)](smith-v-kriska-113-s-w-3d-293-mo-app-e-d-2003.md) - Smith v. Kriska, 113 S.W.3d 293 (Mo. App. E.D. 2003). — quoted in 1 document(s).
 * [Smith v Nomad Modular Building Pty Ltd](smith-v-nomad-modular-building-pty-ltd.md) - Smith v Nomad Modular Building Pty Ltd [2007] WASCA 169 (Pullin JA). — quoted in 1 document(s).
 * [Snyder v. Beam Technologies, Inc., No. 24-1136 (10th Cir. Aug. 5, 2025)](snyder-v-beam-technologies-inc-no-24-1136-10th-cir-aug-5-2025.md) - Snyder v. Beam Technologies, Inc., No. 24-1136 (10th Cir. Aug. 5, 2025). — quoted in 1 document(s).
 * [Socko v. Mid-Atlantic Systems of CPA, Inc.](socko-v-mid-atlantic-systems-of-cpa-inc.md) - Socko v. Mid-Atlantic Systems of CPA, Inc., 633 Pa. 555, 126 A.3d 1266 (Pa. 2015). — quoted in 4 document(s).
@@ -867,6 +903,8 @@
 * [Tarrant County College District v. Sims](tarrant-county-college-district-v-sims.md) - Tarrant Cnty. Coll. Dist. v. Sims, No. 05-20-00351-CV (Tex. App.—Dallas Mar. 10, 2021). — quoted in 1 document(s).
 * [Tatge v. Chambers & Owen, Inc.](tatge-v-chambers-owen-inc.md) - Tatge v. Chambers & Owen, Inc., 219 Wis. 2d 99, 579 N.W.2d 217 (1998). — quoted in 2 document(s).
 * [Tavai v. Silao](tavai-v-silao.md) - Tavai v. Silao, 2 A.S.R.2d 1 (Land & Titles Div. 1981). — quoted in 1 document(s).
+* [Taylor v. Sanders, 233 Va. 73 (1987)](taylor-v-sanders-233-va-73-1987.md) - Taylor v. Sanders, 233 Va. 73, 353 S.E.2d 745 (1987). — quoted in 1 document(s).
+* [Taylor v. Werner Enterprises, Inc., 329 Or. 461 (1999)](taylor-v-werner-enterprises-inc-329-or-461-1999.md) - Taylor v. Werner Enterprises, Inc., 329 Or. 461, 988 P.2d 384 (1999). — quoted in 1 document(s).
 * [Team Environmental Services, Inc. v. Addison](team-environmental-services-inc-v-addison.md) - Team Envtl. Servs., Inc. v. Addison, 2 F.3d 124 (5th Cir. 1993). — quoted in 2 document(s).
 * [Team IA, Inc. v. Lucas](team-ia-inc-v-lucas.md) - Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011). — quoted in 2 document(s).
 * [Technicolor, Inc. v. Traeger](technicolor-inc-v-traeger.md) - Technicolor, Inc. v. Traeger, 57 Haw. 113, 551 P.2d 163 (1976). — quoted in 2 document(s).
@@ -896,6 +934,8 @@
 * [Troy Ventures, LLC v. Kosloski](troy-ventures-llc-v-kosloski.md) - Troy Ventures, LLC v. Kosloski, C.A. No. N23C-01-183 PAW (Del. Super. Ct. Apr. 21, 2025) — quoted in 1 document(s).
 * [Truelove v. Northeast Capital & Advisory, Inc., 95 N.Y.2d 220 (2000)](truelove-v-northeast-capital-advisory-inc-95-n-y-2d-220-2000.md) - Truelove v. Northeast Capital & Advisory, Inc., 95 N.Y.2d 220, 225 (2000). — quoted in 2 document(s).
 * [Tung v. Ah Sam](tung-v-ah-sam.md) - Tung v. Ah Sam, 4 A.S.R. 764 (Trial Div. 1971). — quoted in 2 document(s).
+* [UAW-GM Human Resource Center v. KSL Recreation Corp., 228 Mich. App. 486 (1998)](uaw-gm-human-resource-center-v-ksl-recreation-corp-228-mich-app-486-1998.md) - UAW-GM Human Resource Center v. KSL Recreation Corp., 228 Mich. App. 486, 579 N.W.2d 411 (1998). — quoted in 1 document(s).
+* [Unified School District No. 315 v. DeWerff, 6 Kan. App. 2d 77, 626 P.2d 1206 (1981)](unified-school-district-no-315-v-dewerff-6-kan-app-2d-77-626-p-2d-1206-1981.md) - Unified School District No. 315 v. DeWerff, 6 Kan. App. 2d 77, 626 P.2d 1206 (1981). — quoted in 1 document(s).
 * [United Assn. Local 168, Apprentice Educational Fund v. Robinson](united-assn-local-168-apprentice-educational-fund-v-robinson.md) - United Assn. Local 168, Apprentice Educational Fund v. Robinson, 2025-Ohio-2421 (4th Dist.) — quoted in 1 document(s).
 * [United Cancer Council, Inc. v. Commissioner (7th Cir. 1999)](united-cancer-council-inc-v-commissioner-7th-cir-1999.md) - United Cancer Council, Inc. v. Commissioner, 165 F.3d 1173, 1176 (7th Cir. 1999). — quoted in 2 document(s).
 * [United Laboratories, Inc. v. Kuykendall](united-laboratories-inc-v-kuykendall.md) - United Laboratories, Inc. v. Kuykendall, 322 N.C. 643 (1988). — quoted in 3 document(s).
@@ -945,6 +985,8 @@
 * [Warner and Co. v. Solberg](warner-and-co-v-solberg.md) - Warner and Co. v. Solberg, 2001 ND 156, 634 N.W.2d 65. — quoted in 3 document(s).
 * [Warner v. Gilbarco, Inc. (E.D. Mich.)](warner-v-gilbarco-inc-e-d-mich.md) - Warner v. Gilbarco, Inc., No. 2:24-cv-12333, 2026 WL 373043 (E.D. Mich. Feb. 10, 2026). — quoted in 1 document(s).
 * [Warner v. Gilbarco Inc. et al. (E.D. Mich.)](warner-v-gilbarco-inc-et-al-e-d-mich.md) - Warner v. Gilbarco Inc. et al., Case No. 2:24-cv-12333 (E.D. Mich. Feb. 10, 2026). — quoted in 2 document(s).
+* [Wassenaar v. Panos, 111 Wis. 2d 518, 331 N.W.2d 357 (1983)](wassenaar-v-panos-111-wis-2d-518-331-n-w-2d-357-1983.md) - Wassenaar v. Panos, 111 Wis. 2d 518, 529, 331 N.W.2d 357 (1983). — quoted in 1 document(s).
+* [Wasserman's Inc. v. Township of Middletown, 137 N.J. 238 (1994)](wasserman-s-inc-v-township-of-middletown-137-n-j-238-1994.md) - Wasserman's Inc. v. Township of Middletown, 137 N.J. 238, 645 A.2d 100 (1994). — quoted in 1 document(s).
 * [Watercolor Salon, LLC v. Hixon](watercolor-salon-llc-v-hixon.md) - Watercolor Salon, LLC v. Hixon, No. 2021-IA-01151-SCT (Miss. 2022). — quoted in 2 document(s).
 * [Waterjet Technology, Inc. v. Flow International Corp.](waterjet-technology-inc-v-flow-international-corp.md) - Waterjet Tech., Inc. v. Flow Int'l Corp., 140 Wn.2d 313 (2000). — quoted in 1 document(s).
 * [Waters v. City of Pioneer Village, 299 S.W.3d 278 (Ky. Ct. App. 2009)](waters-v-city-of-pioneer-village-299-s-w-3d-278-ky-ct-app-2009.md) - Waters v. City of Pioneer Village, 299 S.W.3d 278 (Ky. Ct. App. 2009). — quoted in 1 document(s).
@@ -954,6 +996,7 @@
 * [Weddell v. H2O, Inc.](weddell-v-h2o-inc.md) - Weddell v. H2O, Inc., 128 Nev. 94, 97, 271 P.3d 743 (2012). — quoted in 1 document(s).
 * [Weems v. Citigroup Inc.](weems-v-citigroup-inc-d19d6d.md) - Weems v. Citigroup Inc., 453 Mass. 147 (2009) — quoted in 1 document(s).
 * [Weems v. Citigroup Inc.](weems-v-citigroup-inc.md) - Weems v. Citigroup Inc., 289 Conn. 769, 961 A.2d 349 (2008) — quoted in 1 document(s).
+* [Weinzirl v. The Wells Group, Inc., 234 Kan. 1016, 677 P.2d 1004 (1984)](weinzirl-v-the-wells-group-inc-234-kan-1016-677-p-2d-1004-1984.md) - Weinzirl v. The Wells Group, Inc., 234 Kan. 1016, 677 P.2d 1004 (1984). — quoted in 1 document(s).
 * [Welco Industries, Inc. v. Applied Cos., 67 Ohio St. 3d 344 (1993) — the four exceptions for contract claims](welco-industries-inc-v-applied-cos-67-ohio-st-3d-344-1993-the-four-exceptions-fo.md) - Welco Indus., Inc. v. Applied Cos., 67 Ohio St. 3d 344, 349 (1993). — quoted in 1 document(s).
 * [Werlinger v. Mutual Service Casualty Insurance Co.](werlinger-v-mutual-service-casualty-insurance-co.md) - Werlinger v. Mut. Serv. Cas. Ins. Co., 496 N.W.2d 26, 27 (N.D. 1993). — quoted in 3 document(s).
 * [Wesco Autobody Supply, Inc. v. Ernest](wesco-autobody-supply-inc-v-ernest.md) - Wesco Autobody Supply, Inc. v. Ernest, 149 Idaho 881, 243 P.3d 1069 (2010). — quoted in 1 document(s).
