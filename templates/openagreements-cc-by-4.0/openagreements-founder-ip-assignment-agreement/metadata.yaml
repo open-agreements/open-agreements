@@ -1,0 +1,86 @@
+name: Founder IP Assignment Agreement
+category: invention-assignment
+description: Intellectual property assignment by a founder to the company of code, designs, content, domain names and other work the founder created before the company was formed or before the founder signed an invention assignment. Consideration recital tied to the founder's stock or other value, present assignment, moral-rights waiver, further assurances and power of attorney, an excluded-IP schedule with a license for anything the company's products use, and confidentiality. Companion to the Contractor IP Assignment Agreement.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-ip-assignment-agreement
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_name
+    type: string
+    description: Legal name of the company receiving the assignment
+    section: Parties
+  - name: company_jurisdiction
+    type: string
+    description: State where the company is organized
+    section: Parties
+  - name: company_entity_type
+    type: string
+    description: Type of entity
+    default: corporation
+    section: Parties
+  - name: company_signatory_name
+    type: string
+    description: Full name of the officer signing for the company
+    section: Parties
+  - name: company_signatory_title
+    type: string
+    description: Title of the officer signing for the company
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full legal name of the founder assigning the IP
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date this agreement takes effect
+    section: Timing
+  - name: business_description
+    type: string
+    description: The company's business as planned when the founder did the work
+    section: Scope
+  - name: assigned_ip_description
+    type: string
+    description: Specific code, designs, content, domain names, accounts and marks being assigned
+    section: Scope
+  - name: consideration_description
+    type: string
+    description: What the founder receives in exchange for the assignment
+    default: the issuance to the Founder of shares of the Company's common stock under the Founder's stock purchase agreement with the Company, and other good and valuable consideration, the receipt and sufficiency of which the Founder acknowledges
+    section: Scope
+  - name: excluded_ip_disclosure
+    type: string
+    description: Intellectual property the founder keeps, or None
+    default: None
+    section: Excluded IP
+  - name: governing_law
+    type: string
+    description: Governing law state
+    section: Legal
+  - name: venue
+    type: string
+    description: Venue for disputes
+    default: state and federal courts in the governing law state
+    section: Legal
+priority_fields:
+  - company_name
+  - founder_name
+  - assigned_ip_description
+  - consideration_description
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+  - founder
+signature_roles:
+  - company
+  - founder
+mutation_policy: fields_only
+maturity: experimental

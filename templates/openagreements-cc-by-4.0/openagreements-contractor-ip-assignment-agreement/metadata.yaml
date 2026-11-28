@@ -1,0 +1,89 @@
+name: Contractor IP Assignment Agreement
+category: invention-assignment
+description: Intellectual property assignment for an independent contractor, consultant or freelancer who creates code, designs, content or other work for a company. Present assignment of the work product, optional work-made-for-hire language with an assignment backstop, moral-rights waiver, further assurances and power of attorney, a prior-inventions schedule with a license for background IP the contractor builds into the deliverables, and confidentiality. Companion to the Founder IP Assignment Agreement.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-contractor-ip-assignment-agreement
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_name
+    type: string
+    description: Legal name of the company receiving the assignment
+    section: Parties
+  - name: company_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the company
+    section: Parties
+  - name: company_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the company
+    section: Parties
+  - name: contractor_name
+    type: string
+    description: Full legal name of the contractor
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date this agreement takes effect
+    section: Timing
+  - name: services_description
+    type: string
+    description: Services and deliverables the contractor provides
+    section: Scope
+  - name: services_agreement_reference
+    type: string
+    description: Services agreement or statement of work, or None
+    default: None
+    section: Scope
+  - name: work_start_date
+    type: date
+    description: Date the contractor first began work for the company
+    section: Timing
+  - name: consideration_description
+    type: string
+    description: What the contractor receives in exchange for the assignment
+    default: the fees paid and payable under the Services Agreement and the additional payment of $1.00, the receipt and sufficiency of which the Contractor acknowledges
+    section: Scope
+  - name: prior_inventions_disclosure
+    type: string
+    description: Intellectual property the contractor owned before the work and keeps, or None
+    default: None
+    section: Background IP
+  - name: work_made_for_hire_included
+    type: boolean
+    display_label: Work-Made-for-Hire Clause Included
+    description: Whether the clause calling qualifying deliverables works made for hire is included. A false value omits the clause and leaves the present assignment in place. For the federal limits on contractor work made for hire, and the California workers' compensation and unemployment insurance provisions on signed work-made-for-hire agreements, see the invention-assignment guide's contractor and founder section. Not shown as a cover-term row.
+    default: true
+    default_value_rationale: 'True keeps the common belt-and-braces structure: work-made-for-hire language for deliverables that qualify, backed by a present assignment for everything else.'
+    section: Work Made for Hire
+  - name: governing_law
+    type: string
+    description: Governing law state
+    section: Legal
+  - name: venue
+    type: string
+    description: Venue for disputes
+    default: state and federal courts in the governing law state
+    section: Legal
+priority_fields:
+  - company_name
+  - contractor_name
+  - services_description
+  - work_start_date
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+  - contractor
+signature_roles:
+  - company
+  - contractor
+mutation_policy: fields_only
+maturity: experimental
